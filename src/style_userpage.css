@@ -1,4 +1,4 @@
-/* style_quicksearch.css */
+/* style_userpage.css */
 
 /* Container and navigation bar style */
 
@@ -61,7 +61,7 @@ body {
 }
 
 .headbar_item {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 2.7vh;
     font-weight: bold;
@@ -75,7 +75,7 @@ body {
 .headbar_logo {
     font-size: 3vh;
     font-weight: bold;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -83,7 +83,7 @@ body {
     max-width: 50px;
     max-height: 50px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
 }
 
@@ -96,7 +96,7 @@ body {
     align-self: center;
     margin-top: 4%;
     max-width: 90%;
-    border: solid 3px black;
+    border: solid 3px #383838;
     padding: 5%;
     border-radius: 5%;
     background-color: #ffffff;
@@ -111,7 +111,7 @@ body {
 
 h1 {
     font-weight: 100;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     color: #000000;
 }
 
@@ -127,7 +127,7 @@ h1 {
 
 .user-img {
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid #ffffff;
     outline: 1px solid #dddddd;
     width: 20vw;
     height: 20vw;
@@ -231,8 +231,8 @@ label {
 }
 
 #reset-button {
-    border: solid 1px #dddddd;
-    background-color: #dddddd;
+    border: solid 1px #383838;
+    background-color: #383838;
 }
 
 #save-button:active, #reset-button:active {
@@ -245,8 +245,8 @@ label {
 }
 
 #reset-button:hover {
-    background-color: #c7b9b9;
-    border-color: #c7b9b9;
+    background-color: #282626;
+    border-color: #282626;
 }
 
 .button_group {

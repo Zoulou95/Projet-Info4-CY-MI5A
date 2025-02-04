@@ -27,13 +27,13 @@ and remain on a single page (userpage.html)-->
         </div>
         <div class="headbar_right">
             <a class="headbar_item" href="userpage.html">Mon espace</a>
-            <a href="userpage.html"><img  class="user-img-nav" src="../assets/base_pfp.jpg" /></a>
+            <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
         </div>
     </div>
     <div class="user-container">
     <div class="left-info">
         <h1>Bienvenue <b>Prénom</b> !</h1>
-        <img  class="user-img" src="../assets/base_pfp.jpg" />
+        <img  class="user-img" src="../assets/example_pfp.jpg" />
         <!-- Mettre les limitations de taille des images en JavaScript -->
         <p>Changer votre photo de profil</p>
         <input type="file" accept=".png, .jpg, .jpeg" />
@@ -54,15 +54,15 @@ and remain on a single page (userpage.html)-->
         <form method="post" action="userpage.html">
             <div>
                 <label for="last_name">Mot de passe actuel</label><br><br>
-                <input type="text" id="last_name" maxlength="20" />
+                <input type="password" id="last_name" maxlength="20" />
             </div>
             <div>
                 <label for="first_name">Nouveau mot de passe</label><br><br>
-                <input type="text" id="first_name" maxlength="20" />
+                <input type="password" id="first_name" maxlength="20" />
             </div>
             <div>
                 <label for="first_name">Confirmer le mot de passe</label><br><br>
-                <input type="text" id="first_name" maxlength="20" />
+                <input type="password" id="first_name" maxlength="20" />
             </div>
             <div class="button_group">
                 <button type="submit" id="save-button" value="Sauvegarder">Sauvegarder</button>
