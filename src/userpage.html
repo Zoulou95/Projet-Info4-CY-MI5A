@@ -1,0 +1,77 @@
+<!-- userpage.html : allow the user to see his personal informations and modify it-->
+
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <title>CyLanta</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="CyLanta user informations page" />
+    <meta name="author" content="Developped by MI5-A TEAM" />
+    <meta name="keywords" content="travel, travel agency" />
+    <link rel="icon" type="image/png" href="../assets/ico_island.png" />
+    <link rel="stylesheet" type="text/css" href="style_userpage.css" />
+</head>
+<body>
+    <div class="container">
+    <div class="headbar">
+        <div class="headbar_left">
+            <a href="../welcome.html">
+            <img class="logo-img" src="../assets/cylanta_logo.png" alt="SOURCE" />
+        </div>
+        <div class="headbar_rest">
+            <a class="headbar_item" href="quicksearch.html">Destinations</a>
+            <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+            <a class ="headbar_item" href="lien fictif">Inspirations</a>
+        </div>
+        <div class="headbar_right">
+            <a class="headbar_item" href="userpage.html">Mon espace</a>
+            <a href="userpage.html"><img  class="user-img-nav" src="../assets/base_pfp.jpg" /></a>
+        </div>
+    </div>
+    <div class="user-container">
+    <div class="left-info">
+        <h1>Bienvenue <b>Prénom</b> !</h1>
+        <img  class="user-img" src="../assets/base_pfp.jpg" />
+        <!-- Mettre les limitations de taille des images en JavaScript -->
+        <p>Changer votre photo de profil</p>
+        <input type="file" accept=".png, .jpg, .jpeg" />
+        <table class="subscription-table">
+            <tr><td class="cell1">Statut</td></tr>
+            <tr><td class="cell2">VIP</td></tr>
+        </table>
+    </div>
+    <!-- User personal informations menu (name, email, etc.)-->
+    <div class="user-informations">
+        <ul>
+            <li id="info-link"><a href="userpage.html">Informations</a></li>
+            <li id="security-link"><a href="userpage_security.html">Sécurité</a></li>
+            <!-- NOTE : "userpage_security.html" will be removed when we code in javascript to navigate between the various menus (“information” and “securité”)
+            and remain on a single page (userpage.html)-->
+        </ul>
+        <hr>
+        <form method="post" action="userpage.html">
+            <div>
+                <label for="last_name">Nom</label><br><br>
+                <input type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="Dupont" />
+            </div>
+            <div>
+                <label for="first_name">Prénom</label><br><br>
+                <input type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="Jojo" />
+            </div>
+            <div>
+                <label for="email">E-mail</label><br><br>
+                <input type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="jojodupont@gmail.com" />
+            </div>
+            <div>
+                <label for="tel_number">Numéro de téléphone</label><br><br>
+                <!-- To remove the ability to enter digits, you'll need to code a JavaScript function-->
+                <input type="tel" id="tel_number" placeholder="Entrez votre mobile" maxlength="10" value="0707070707" /><br><br>
+            </div>
+            <div class="button_group">
+                <button type="submit" id="save-button" value="Sauvegarder">Sauvegarder</button>
+                <button type="reset" id="reset-button" value="Réinitialiser">Réinitialiser</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

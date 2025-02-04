@@ -1,0 +1,258 @@
+/* style_quicksearch.css */
+
+/* Container and navigation bar style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #87c2e7;
+}
+
+.container {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Navigation bar style */
+
+.headbar {
+    width: 100%; 
+    height: 9vh; 
+    background-color: #21a9ff; 
+    display: flex;
+    align-items: center;
+    padding: 0 1.5%; 
+    box-shadow: 0 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    z-index:1;
+}
+
+.logo-img {
+    height: 9vh;
+}
+
+.headbar_left {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.headbar_rest {
+    flex: 8; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6vw;
+}
+
+.headbar_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5vw;
+}
+
+.headbar_item {
+    color: white;
+    text-decoration: none;
+    font-size: 2.7vh;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.headbar_item:hover {
+    text-decoration: underline;
+}
+
+.headbar_logo {
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.user-img-nav {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 1px solid #dddddd;
+}
+
+/* Userpage style */
+
+.user-container {
+    display: flex;
+    gap: 15vh;
+    justify-content: center;
+    align-self: center;
+    margin-top: 4%;
+    max-width: 90%;
+    border: solid 3px black;
+    padding: 5%;
+    border-radius: 5%;
+    background-color: #ffffff;
+    margin-bottom: 4%;
+}
+
+.user-informations {
+    flex-direction: column;
+    display: flex;
+    gap: 1.5vh;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 1.5vw;
+    color: #000000;
+}
+
+.left-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    width: 30%;
+    text-align: center;
+}
+
+.user-img {
+    border-radius: 50%;
+    border: 4px solid white;
+    outline: 1px solid #dddddd;
+    width: 20vw;
+    height: 20vw;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2vh;
+}
+
+li {
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+
+li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+.subscription-table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    overflow: visible;
+    width: 15vw;
+    font-size: large;
+}
+
+.subscription-table td, .statut-table th {
+    padding: 8%;
+    text-align: center;
+}
+
+.cell1 {
+    background-color: #dddddd;
+}
+
+.cell2 {
+    color: #d4af37;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    background-color: #eeeeee;
+}
+
+hr {
+    border: 1.5px solid #21a9ff;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    font-size: 18px;
+}
+
+#last_name, #first_name, #tel_number, #email {
+    border: solid 1px gray;
+    border-radius: 4px;
+    height: 50px;
+    width: 250px;
+    font-size: 18px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    padding-left: 5%;
+}
+
+#last_name:focus, #first_name:focus, #tel_number:focus, #email:focus {
+    border: solid 1.5px #21a9ff;
+    outline: none;
+}
+
+#save-button, #reset-button {
+    height: 50px;
+    width: 50%;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#save-button:active, #reset-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#save-button {
+    border: solid 1px #21a9ff;
+    background-color: #21a9ff;
+}
+
+#reset-button {
+    border: solid 1px #dddddd;
+    background-color: #dddddd;
+}
+
+#save-button:active, #reset-button:active {
+    border: solid 10px #000000;
+}
+
+#save-button:hover {
+    background-color: #1a89ce;
+    border-color: #1a89ce;
+}
+
+#reset-button:hover {
+    background-color: #c7b9b9;
+    border-color: #c7b9b9;
+}
+
+.button_group {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+/* Security menu style */
