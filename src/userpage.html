@@ -31,7 +31,10 @@
     <div class="user-container">
     <div class="left-info">
         <h1>Bienvenue <b>Prénom</b> !</h1>
-        <img  class="user-img" src="../assets/example_pfp.jpg" />
+        <input type="file" id="file-input" accept=".png, .jpg, .jpeg" style="display: none;">
+        <label for="file-input">
+            <img class="user-img" src="../assets/example_pfp.jpg" />
+        </label>
         <!-- Mettre les limitations de taille des images en JavaScript -->
         <p>Changer votre photo de profil</p>
         <input type="file" accept=".png, .jpg, .jpeg" />

@@ -87,53 +87,19 @@ body {
     outline: 1px solid #dddddd;
 }
 
-/* Userpage informations menu style */
+/* Userpage security menu style */
 
 .user-container {
-    width: 90%;
+    width: 50%;
     display: flex;
-    gap: 15vh;
     justify-content: center;
     align-self: center;
     margin-top: 4%;
     border: solid 3px #383838;
     padding: 5%;
-    border-radius: 3.5%;
+    border-radius: 5%;
     background-color: #ffffff;
     margin-bottom: 4%;
-}
-
-.user-informations {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5vh;
-}
-
-h1 {
-    font-weight: 100;
-    font-size: 1.75vw;
-    color: #10689f;
-}
-
-.left-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 30%;
-}
-
-.user-img {
-    border-radius: 50%;
-    border: 4px solid #ffffff;
-    outline: 1px solid #dddddd;
-    width: 20vw;
-    height: 20vw;
-    max-width: 250px;
-    max-height: 250px;
-    cursor: pointer;
 }
 
 ul {
@@ -157,38 +123,16 @@ li:hover {
     color: #10689f;
 }
 
-.subscription-table {
-    border-collapse: collapse;
-    border-radius: 10px;
-    border: 1px solid #dddddd;
-    overflow: visible;
-    width: 15vw;
-    font-size: large;
-}
-
-.subscription-table td, .statut-table th {
-    padding: 8%;
-    text-align: center;
-}
-
-.cell1 {
-    background-color: #dddddd;
-}
-
-.cell2 {
-    color: #d4af37;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-    background-color: #eeeeee;
-}
-
 hr {
     border: 1.5px solid #21a9ff;
+    margin-bottom: 10vh;
+    margin-top: 1.4vh;
 }
 
 form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 5vh;
     max-width: 600px;
     margin: auto;
 }
@@ -197,7 +141,7 @@ label {
     font-size: 18px;
 }
 
-#last_name, #first_name, #tel_number, #email {
+#current_password, #new_password, #confirmation_password {
     border: solid 1px gray;
     border-radius: 4px;
     height: 50px;
@@ -207,7 +151,7 @@ label {
     padding-left: 5%;
 }
 
-#last_name:focus, #first_name:focus, #tel_number:focus, #email:focus {
+#current_password:focus, #new_password:focus, #confirmation_password:focus {
     border: solid 1.5px #21a9ff;
     outline: none;
 }
@@ -256,5 +200,3 @@ label {
     justify-content: center;
     gap: 5%;
 }
-
-/* Security menu style */

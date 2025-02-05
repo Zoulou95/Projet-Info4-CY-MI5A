@@ -11,7 +11,7 @@ and remain on a single page (userpage.html)-->
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="style_userpage.css" />
+    <link rel="stylesheet" type="text/css" href="style_userpage_security.css" />
 </head>
 <body>
     <div class="container">
@@ -31,17 +31,6 @@ and remain on a single page (userpage.html)-->
         </div>
     </div>
     <div class="user-container">
-    <div class="left-info">
-        <h1>Bienvenue <b>Prénom</b> !</h1>
-        <img  class="user-img" src="../assets/example_pfp.jpg" />
-        <!-- Mettre les limitations de taille des images en JavaScript -->
-        <p>Changer votre photo de profil</p>
-        <input type="file" accept=".png, .jpg, .jpeg" />
-        <table class="subscription-table">
-            <tr><td class="cell1">Statut</td></tr>
-            <tr><td class="cell2">VIP</td></tr>
-        </table>
-    </div>
     <div class="user-informations">
         <ul>
             <li id="info-link"><a href="userpage.html">Informations</a></li>
@@ -51,18 +40,18 @@ and remain on a single page (userpage.html)-->
     <!-- User security menu (password)-->
     <div class="user-security-menu">
         <div class="password-fields">
-        <form method="post" action="userpage.html">
+        <form method="post" action="userpage_security.html">
             <div>
-                <label for="last_name">Mot de passe actuel</label><br><br>
-                <input type="password" id="last_name" maxlength="20" />
+                <label for="current_password">Mot de passe actuel</label><br><br>
+                <input type="password" id="current_password" maxlength="30" />
             </div>
             <div>
-                <label for="first_name">Nouveau mot de passe</label><br><br>
-                <input type="password" id="first_name" maxlength="20" />
+                <label for="new_password">Nouveau mot de passe</label><br><br>
+                <input type="password" id="new_password" maxlength="30" />
             </div>
             <div>
-                <label for="first_name">Confirmer le mot de passe</label><br><br>
-                <input type="password" id="first_name" maxlength="20" />
+                <label for="confirmation_password">Confirmer le mot de passe</label><br><br>
+                <input type="password" id="confirmation_password"" maxlength="30" />
             </div>
             <div class="button_group">
                 <button type="submit" id="save-button" value="Sauvegarder">Sauvegarder</button>
