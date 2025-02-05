@@ -11,3 +11,20 @@
 ## Prerequisites
 
 ## Overview
+
+C'est un test :
+
+```📦 Projet
+├── 📄 homepage.html
+└── 📂 src
+    ├── 📄 quicksearch.html
+    ├── 📄 advanced_search.html
+    ├── 📄 userpage.html
+    ├── 📄 userpage_security.html (temporary)
+    ├── 🎨 style_quicksearch.css
+    ├── 🎨 style_advanced_search.css
+    ├── 🎨 style_userpage.css
+    ├── 🎨 style_userpage_security.css (temporary)
+    └── 📂 assets
+        ├── 🖼️ images
+        ├── 🎬 videos
