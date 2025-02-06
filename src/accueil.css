@@ -68,6 +68,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 6vw;
+    margin-left: 10vh;
 }
 
 .headbar_right {
@@ -81,7 +82,7 @@
 .headbar_item {
     color: white;
     text-decoration: none;
-    font-size: 2.25vh;
+    font-size: 2.7vh;
     font-weight: bold;
 }
 
@@ -119,7 +120,7 @@
 
 .voyagebar {
     width: 75%; /* Ajuste la largeur selon besoin */
-    height: 130vh; /* Hauteur totale */
+    height: 120vh; /* Hauteur totale */
     background-color: #21a9ff; 
     display: flex;
     flex-direction: column; /* Empile les blocs verticalement */
@@ -131,7 +132,7 @@
     border-radius: 3%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     max-width: 1200px;
 }
 
@@ -209,15 +210,15 @@
 
 .text_overlay {
     position: absolute;
-    bottom: 18vh; 
+    bottom: 24vh; 
     left: 50%;
     transform: translateX(-50%); 
-    background: rgba(0, 0, 0, 0.6); 
     padding: 1.25%;
     border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 1.25%;
+    font-size: 3vh;
 }
 
 .text_above {
@@ -225,6 +226,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
     color: white;
     padding: 2.5%;
     text-align: center;
@@ -233,28 +235,33 @@
     font-size: 6vh;
     font-style: italic;
     font-weight: bold;
+    animation: fadeInUp 1.5s;
 }
 
-.text_input {
-    padding: 2%;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 2vh;
+@keyframes fadeInUp {
+    0% {
+        transform: translate(-50%, 20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 
-.btn_validate {
-    padding: 2%;
-    border: none;
-    background: orange;
-    color: white;
-    font-size: 2vh;
-    cursor: pointer;
-    border-radius: 5px;
+.btn-explorer {
+    display: inline-block;
+    background: #21a9ff;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn_validate:hover {
-    background: darkorange;
+.btn-explorer:hover {
+    background: #198fd9;
 }
 
 
@@ -272,6 +279,7 @@ footer {
     align-items: center;
     box-shadow: 0px -0.5vh 0.75vh rgba(0, 0, 0, 0.4);
     z-index:1;
+    
 }
 
 .footer-section {
@@ -292,6 +300,7 @@ footer {
 .footer-section p, .footer-section ul {
     font-size: 0.9em;
     color: #bbb;
+
 }
 
 .footer-section ul {
@@ -390,7 +399,5 @@ body.no-scroll {
     text-decoration: underline;
 }
 
-
-}
 
 
