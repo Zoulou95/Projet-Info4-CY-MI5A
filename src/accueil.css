@@ -209,6 +209,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 2;
+    filter: brightness(65%);
 }
 
 .text_overlay {
