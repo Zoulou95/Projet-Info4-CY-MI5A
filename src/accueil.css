@@ -120,21 +120,24 @@
 
 .voyagebar {
     width: 75%; /* Ajuste la largeur selon besoin */
-    height: 120vh; /* Hauteur totale */
+    max-width: 1200px; /* Empêche d'être trop large */
+    height: 80vh; /* Hauteur totale */
     background-color: #21a9ff; 
-    display: flex;
-    flex-direction: column; /* Empile les blocs verticalement */
-    justify-content: space-between; /* Espacement entre les blocs */
-    align-items: center;
-    padding: 1.5%;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
-    gap: 1vh; /* Espacement entre les blocs */
     border-radius: 3%;
+    padding: 1.5%;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 4vh; /* Espacement entre les blocs */
+
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .card {
     width: 350px;
