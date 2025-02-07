@@ -1,3 +1,5 @@
+<!-- homepage.html -->
+
 <!DOCTYPE html> 
 <html>
     <head>
@@ -6,10 +8,11 @@
         <meta name="author" content="Developped by MI5-A TEAM" />
         <meta name="keywords" content="travel, travel agency" />
         <link rel="icon" type="image/png" href="assets/ico_island.png" />
-        <link rel="stylesheet" type="text/css" href="src/style_homepage.css" />
+        <link rel="stylesheet" type="text/css" href="src/base_style.css" />
+        <link rel="stylesheet" type="text/css" href="src/homepage_style.css" />
     </head>
     <body>
-        <div class="container">
+     <div class="container">
         <div class="headbar">
             <div class="headbar_left">
                 <a href="homepage.html">
@@ -18,7 +21,7 @@
             </div>
             <div class="headbar_rest">
                 <a class="headbar_item" href="homepage.html">Accueil</a>
-                <a class="headbar_item" href="src/quicksearch.html">Destinations</a>
+                <a class="headbar_item" href="src/search.html">Destinations</a>
                 <a class ="headbar_item" href="src/advanced_search.html">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
@@ -28,10 +31,9 @@
         </div>
         <div class="image_container">
             <img src="assets/img_island.jpg" alt="falaise">
-            <div class="text_above">Où souhaitez-vous voyager ?</div>
+            <div class="text_above">Cap sur vos envies, direction le sur-mesure !</div>
             <div class="text_overlay">
-                <input type="text" placeholder="Entrez votre destination..." class="text_input">
-                   <button class="btn_validate">Rechercher</button>
+                <a href="#" class="btn-explorer">Explorer</a>
             </div>
         </div>
         <div class="secondbar">
@@ -42,50 +44,50 @@
         <div class="whitebar"></div>
         <div class="voyagebar">
             <div class="card">
-                <img src="assets/img_island.jpg" alt="Méditerranée">
+                <img src="assets/bora-bora-vue-avion.jpg" alt="bora-bora">
                 <div class="card-content">
-                    <h2>MÉDITERRANÉE</h2>
-                    <p>Découvrez la Méditerranée et ses sites classés au patrimoine mondial de l'UNESCO.</p>
+                    <h2>PERLE DU PACIFIQUE</h2>
+                    <p>Découvrez un écrin de beauté au cœur de la Perle du Pacifique</p>
                     <a href="#" class="explore">➤ Découvrir</a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img_island.jpg" alt="Polynésie">
+                <img src="assets/toopua-iti.jpg" alt="toopua-iti">
                 <div class="card-content">
-                    <h2>POLYNÉSIE FRANÇAISE</h2>
-                    <p>Plages paradisiaques et eaux turquoise vous attendent en Polynésie française.</p>
+                    <h2>TOOPUA ITI</h2>
+                    <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img_island.jpg" alt="Bali">
+                <img src="assets/motu-tapu.jpg" alt="motu-tapu">
                 <div class="card-content">
-                    <h2>BALI</h2>
-                    <p>Plongez dans la culture balinaise et explorez ses paysages spectaculaires.</p>
+                    <h2>MOTU TAPU</h2>
+                    <p>Explorez un îlot préservé, entouré d’un lagon aux eaux cristallines.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img_island.jpg" alt="Maldives">
+                <img src="assets/MOTU-TO'OPUA.jpg" alt="MOTU-TO'OPUA">
                 <div class="card-content">
-                    <h2>MALDIVES</h2>
-                    <p>Un séjour de rêve vous attend sur les plages immaculées des Maldives.</p>
+                    <h2>MOTU TO'OPUA</h2>
+                    <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img_island.jpg" alt="Thaïlande">
+                <img src="assets/MOTU-TEVAIROA.jpg" alt="MOTU-TEVAIROA">
                 <div class="card-content">
-                    <h2>THAÏLANDE</h2>
-                    <p>Explorez les temples et les marchés flottants de la Thaïlande.</p>
+                    <h2>MOTU TEVAIROA</h2>
+                    <p>Vivez une escapade inoubliable au sein d'un lagon aux mille nuances de bleu.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img_island.jpg" alt="Grèce">
+                <img src="assets/MOTO-PITI-AAU.jpg" alt="MOTO-PITI-AAU">
                 <div class="card-content">
-                    <h2>GRÈCE</h2>
-                    <p>Admirez les ruines antiques et les îles ensoleillées de la Grèce.</p>
+                    <h2>MOTO PITI AAU</h2>
+                    <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu'un.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
                 </div>
             </div>
@@ -95,14 +97,13 @@
             <div class="footer-section">
                 <h3>À Propos</h3>
                 <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
-                Passionnés d’évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
+                Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
                 Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
                 </p>
             </div>
-    
             <div class="footer-section">
                 <h3>Nos Contacts</h3>
-                <ul>
+                <ul class="autre">
                     <li>Email: CyLanta@cy-tech.fr</li>
                     <li>Téléphone: +33 1 23 45 67 89</li>
                     <li>Adresse: Av. du Parc, 95000 Cergy</li>

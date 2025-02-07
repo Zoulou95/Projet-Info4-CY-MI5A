@@ -9,7 +9,8 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="style_quicksearch.css" />
+    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="search_style.css" />
 </head>
 <body>
     <div class="container">
@@ -21,7 +22,7 @@
         </div>
         <div class="headbar_rest">
             <a class="headbar_item" href="../homepage.html">Accueil</a>
-            <a class="headbar_item" href="quicksearch.html">Destinations</a>
+            <a class="headbar_item" href="search.html">Destinations</a>
             <a class ="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
         </div>
         <div class="headbar_right">
@@ -29,32 +30,34 @@
             <a class="headbar_item" href="lien fictif">S'inscrire</a>
         </div>
     </div>
-    <video autoplay muted loop id="background-video"><source src="../assets/island_loop.mp4" type="video/mp4">
-        Peace Motions Music : Sea Island Loop Video 4K (YouTube)
+    <video autoplay muted loop id="background-video"><source src="../assets/island_loop_video.mp4" type="video/mp4">
+        <p class="error_text">Votre navigateur ne supporte pas la vidéo</p>
     </video>
     <div class="text_above">L'aventure vous attend, où allons-nous ?</div>
     <div class="search_overlay">
-        <form class="search-form" action="recherche_resultats.html" method="get">
-        <input class="search_input" list="destinations" placeholder="Où souhaitez-vous aller ? 🔎" aria-label="Rechercher une destination" />
+        <form class="search-form" action="search_result.html" method="get">
+        <input class="search_input" list="destinations" placeholder="Où souhaitez-vous aller ? 🔎" />
         <datalist id="destinations">
-            <option value="Perle du Pacifique">
-            <option value="Toopua iti">
-            <option value="Motu Tapu">
-            <option value="Motu To'opua">
-            <option value="Motu Tevairoa">
-            <option value="Motu Piti Aau>
+            <option value="Tahiti"></option>
+            <option value="Bora Bora"></option>
+            <option value="Moorea"></option>
+            <option value="Huahine"></option>
+            <option value="Raiatea"></option>
+            <option value="Taha'a"></option>
             </datalist>
         <button class="button_validate" type="submit">Rechercher</button>
         </form>
     </div>
     </div>
     <div class="advanced_search_block">
-        <img class="trip_img" src="../assets/trip_img.jpg" alt="Pixabay : https://pixabay.com/fr/images/search/voyage/" />
+        <img class="trip_img" src="../assets/trip_img.jpg" alt="Image of a hotel in Bora Bora" />
         <div class="advanced_search_text">
             <p>Vous cherchez un voyage en particulier ?</p>
-            <a href="advanced_search.html">Cliquez ici pour accéder à la recherche avancée 🔎</a>
+            <button class="advanced_search_button">
+                <a href="advanced_search.html">Cliquez ici pour accéder à la recherche avancée</a>
+                <img class="advanced_search_image" src="../assets/magnifying_glass.png" />
+            </button>
         </div>
-    </div>
     </div>
 </body>
 </html>

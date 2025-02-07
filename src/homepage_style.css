@@ -1,0 +1,227 @@
+/* homepage_style.css */
+
+/* Voyage */
+
+.voyagebar {
+    width: 75%; /* Ajuste la largeur selon besoin */
+    max-width: 1200px; /* Empêche d'être trop large */
+    height: 80vh; /* Hauteur totale */
+    background-color: #21a9ff; 
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    border-radius: 3%;
+    padding: 1.5%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 4vh; /* Espacement entre les blocs */
+
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 20px;
+}
+.card h2 {
+    margin: 0;
+    color: #333;
+}
+.card p {
+    font-size: 1.5vh;
+    color: #555;
+    margin: 10px 0;
+}
+.explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Autre */
+
+.information {
+    width: 100%; 
+    height: 50vh; 
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5%;
+}
+
+.left_infobox {
+    position: inherit;
+    float: left;
+    width: 50%; 
+    height: 12.5vh; 
+    background-color: #FFFFFF; 
+    padding: 0 1.5%;
+    border: 0.25vh solid black;
+}
+
+/* Image */
+.image_container {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+}
+
+.image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    filter: brightness(65%);
+}
+
+.text_overlay {
+    position: absolute;
+    bottom: 24vh; 
+    left: 50%;
+    transform: translateX(-50%); 
+    padding: 1.25%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1.25%;
+    font-size: 3vh;
+}
+
+.text_above {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2.5%;
+    text-align: center;
+    border-radius: 10px;
+    width: 50%; 
+    font-size: 6vh;
+    font-style: italic;
+    font-weight: bold;
+    animation: fadeInUp 1.5s;
+}
+
+.btn-explorer {
+    display: inline-block;
+    background: #21a9ff;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-explorer:hover {
+    background: #198fd9;
+}
+
+/*Overlay*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background: #21a9ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Script Connexion inscription*/
+.switch-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.switch-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate(-50%, 20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
