@@ -4,15 +4,28 @@ body {
     background-color: #87c2e7;
 }
 
-/* Conteneur principal */
+/* Main container */
+
+.background_img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1; /* Places image in background */
+}
+
 .search_bar {
-    margin-top: 25%;
+    width: 93em;
     background-color: #2c3e50;
     padding: 1%;
     border-radius: 7px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
+}
+
+.text_above {
+    animation: fadeInUp 1.5s;
 }
 
 /* Table pour organiser les éléments */
@@ -30,12 +43,17 @@ body {
 
 /* Champ texte */
 .search_bar_input {
-    width: 300px;
-    height: 60px;
+    width: 27vw;
+    height: 65px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 0 10px;
     font-size: 2.5vh;
+}
+
+.search_bar_input:focus {
+    border: solid 2px #21a9ff;
+    outline: none;
 }
 
 /* Dropdown */
@@ -44,7 +62,7 @@ body {
 }
 
 .dropdown-button {
-    height: 60px;
+    height: 65px;
     padding: 0 30px;
     background-color: #21a9ff;
     color: white;
@@ -55,11 +73,21 @@ body {
     white-space: nowrap;
 }
 
+.dropdown-button:focus, .dropdown-button:active {
+    border: solid 2px #ffffff;
+    outline: none;
+}
+
+.type-button::after, .price-button::after {
+    content: " ⏷"; /* Down arrow added */
+    color: #ffffff;
+}
+
 .dropdown-content {
     position: absolute;
     top: 45px; /* Décale sous le bouton */
     left: 0;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -84,7 +112,7 @@ body {
 
 /* Bouton "Rechercher" */
 .search_bar_submit {
-    height: 60px;
+    height: 65px;
     padding: 0 30px;
     background-color: #e67e22;
     color: white;
@@ -98,6 +126,10 @@ body {
     animation: pulse 1.5s infinite;
 }
 
+.search_bar_submit:active {
+    border: solid 2px #ffffff;
+}
+
 /* Conteneur pour le champ date */
 .date-container {
     display: flex;
@@ -108,8 +140,8 @@ body {
 /* Rectangle bleu englobant */
 .date-box {
     border-radius: 8px; /* Coins arrondis */
-    height: 60px; /* Même hauteur que les autres boutons */
-    width: 160px; /* Largeur ajustée */
+    height: 65px; /* Même hauteur que les autres boutons */
+    width: 10vw; /* Largeur ajustée */
     font-size: 2.5vh;
 }
 
@@ -126,14 +158,22 @@ body {
     cursor: pointer; /* Ajoute un curseur interactif */
 }
 
-@keyframes pulse {
+/* Footer */
+
+footer {
+    margin-top: 18.5vh;
+}
+
+/* Animations */
+
+/* Dynamically display the central text bit by bit */
+@keyframes fadeInUp {
     0% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(1.11);
+        opacity: 0;
+        transform: translateY(30px);
     }
     100% {
-        transform: scale(1.1);
+        opacity: 1;
+        transform: translateY(0);
     }
 }

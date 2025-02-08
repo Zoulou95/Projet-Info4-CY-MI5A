@@ -1,3 +1,5 @@
+/* homepage.style.css */
+
 /* Voyage style */
 
 .centerbar {
@@ -24,16 +26,6 @@
     align-items: center;
     padding: 0 1.5%;
 }
-
-.separate {
-    width: 100%; 
-    height: 18vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5%;
-}
-
 
 .voyagebar {
     width: 75%; /* Ajuste la largeur selon besoin */
@@ -152,18 +144,6 @@
     animation: fadeInUp 1.5s;
 }
 
-
-@keyframes fadeInUp {
-    0% {
-        transform: translate(-50%, 20%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
-}
-
 .btn-explorer {
     display: inline-block;
     background: #21a9ff;
@@ -235,9 +215,8 @@ body.no-scroll {
     overflow: hidden;
 }
 
-
-
 /* Script Connexion inscription*/
+
 .switch-text {
     font-size: 14px;
     margin-top: 10px;
@@ -251,6 +230,19 @@ body.no-scroll {
 
 .switch-text a:hover {
     text-decoration: underline;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate(-50%, 20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 
 

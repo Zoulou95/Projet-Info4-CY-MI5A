@@ -13,7 +13,7 @@ This travel agency website offers trips to the islands of French Polynesia.
 
 ## Prerequisites
 
-- A web browser that supports HTML5 and CSS3 (Chrome, Firefox, ...).
+- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
 
 ## Installation
 

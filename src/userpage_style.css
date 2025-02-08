@@ -53,13 +53,13 @@ h1 {
     cursor: pointer;
 }
 
-ul {
+.menu_navigation {
     display: flex;
     list-style: none;
     gap: 2vh;
 }
 
-li {
+.info_link, .security_link {
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -69,7 +69,7 @@ li a {
     text-decoration: none;
 }
 
-li:hover {
+.info_link:hover, .security_link:hover {
     text-decoration: underline;
     color: #10689f;
 }

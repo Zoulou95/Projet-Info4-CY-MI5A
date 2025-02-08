@@ -99,6 +99,15 @@
     text-decoration: none;
 }
 
+.separate {
+    width: 100%; 
+    height: 18vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5%;
+}
+
 /* If the user is logged in */
 
 .headbar_my_space {
@@ -109,12 +118,20 @@
     white-space: nowrap;
 }
 
+.headbar_my_space:hover {
+    text-decoration: underline;
+}
+
 .user-img-nav {
     max-width: 50px;
     max-height: 50px;
     border-radius: 50%;
     border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
+}
+
+.user-img-nav:active {
+    outline: 2px solid #000000;
 }
 
 /* Text style */
@@ -143,7 +160,6 @@ footer {
     align-items: center;
     box-shadow: 0px -0.5vh 0.75vh rgba(0, 0, 0, 0.4);
     z-index:1;
-    
 }
 
 .footer-section {

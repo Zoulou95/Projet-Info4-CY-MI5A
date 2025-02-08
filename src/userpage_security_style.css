@@ -4,14 +4,6 @@ body {
     background-color: #87c2e7;
 }
 
-.headbar_item {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 2.7vh;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
 /* Userpage security menu style */
 
 .user-container {
@@ -27,13 +19,13 @@ body {
     margin-bottom: 4%;
 }
 
-ul {
+.menu_navigation {
     display: flex;
     list-style: none;
     gap: 2vh;
 }
 
-li {
+.info_link, .security_link {
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -43,10 +35,11 @@ li a {
     text-decoration: none;
 }
 
-li:hover {
+.info_link:hover, .security_link:hover {
     text-decoration: underline;
     color: #10689f;
 }
+
 
 hr {
     border: 1.5px solid #21a9ff;
