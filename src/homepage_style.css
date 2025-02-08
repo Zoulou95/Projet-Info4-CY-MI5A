@@ -1,6 +1,6 @@
 /* homepage_style.css */
 
-/* Voyage */
+/* Voyage style */
 
 .voyagebar {
     width: 75%; /* Ajuste la largeur selon besoin */
@@ -21,7 +21,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .card {
     width: 350px;
@@ -57,9 +56,7 @@
     transform: scale(1.05);
 }
 
-
-
-/* Autre */
+/* Other*/
 
 .information {
     width: 100%; 
@@ -81,7 +78,8 @@
     border: 0.25vh solid black;
 }
 
-/* Image */
+/* Image style */
+
 .image_container {
     position: relative;
     width: 100%;
@@ -141,7 +139,7 @@
     background: #198fd9;
 }
 
-/*Overlay*/
+/* Overlay style */
 
 .overlay {
     position: fixed;
@@ -197,7 +195,8 @@ body.no-scroll {
     overflow: hidden;
 }
 
-/* Script Connexion inscription*/
+/* Sign in and login script style */
+
 .switch-text {
     font-size: 14px;
     margin-top: 10px;

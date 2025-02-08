@@ -1,6 +1,9 @@
 # Click-journeY
 
-**PREING-2 INFORMATIQUE IV PROJECT. Developed by MI-5 group A**
+This travel agency website offers trips to the islands of French Polynesia.
+
+**PREING-2 INFORMATIQUE IV PROJECT**.  
+**Developed by MI-5 group A**.
 
 ## Contributors
 
@@ -10,21 +13,42 @@
 
 ## Prerequisites
 
-## Overview
+- A web browser that supports HTML5 and CSS3 (Chrome, Firefox, ...).
 
-C'est un test :
+## Installation
 
-```📦 Projet
+To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4-CY-MI5A`.
+
+## Languages used
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Project structure
+
+```📦 Project
 ├── 📄 homepage.html
 └── 📂 src
-    ├── 📄 quicksearch.html
     ├── 📄 advanced_search.html
+    ├── 📄 search.html
     ├── 📄 userpage.html
     ├── 📄 userpage_security.html (temporary)
-    ├── 🎨 style_quicksearch.css
-    ├── 🎨 style_advanced_search.css
-    ├── 🎨 style_userpage.css
-    ├── 🎨 style_userpage_security.css (temporary)
+    ├── 🎨 advanced_search_style.css
+    ├── 🎨 search_style.css
+    ├── 🎨 userpage_security_style.css (temporary)
+    ├── 🎨 userpage_style.css
     └── 📂 assets
         ├── 🖼️ images
         ├── 🎬 videos
+```
+
+## Overview
+
+- The page `homepage.html`
+
+- `search.html` 
+
+- `userpage.html`
+
+- `userpage_security.html`
