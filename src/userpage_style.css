@@ -1,96 +1,13 @@
-/* style_userpage.css */
-
-/* Container and navigation bar style */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+/* userpage_style.css */
 
 body {
     background-color: #87c2e7;
 }
 
-.container {
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-/* Navigation bar style */
-
-.headbar {
-    width: 100%; 
-    height: 9vh; 
-    background-color: #21a9ff; 
-    display: flex;
-    align-items: center;
-    padding: 0 1.5%; 
-    box-shadow: 0 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
-    z-index:1;
-}
-
-.logo-img {
-    height: 9vh;
-}
-
-.headbar_left {
-    flex: 1; 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.headbar_rest {
-    flex: 8; 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 6vw;
-}
-
-.headbar_right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2.5vw;
-}
-
-.headbar_item {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 2.7vh;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.headbar_item:hover {
-    text-decoration: underline;
-}
-
-.headbar_logo {
-    font-size: 3vh;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.user-img-nav {
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    outline: 1px solid #dddddd;
-}
-
 /* Userpage informations menu style */
 
 .user-container {
-    width: 90%;
+    width: 70%;
     display: flex;
     gap: 15vh;
     justify-content: center;
@@ -98,7 +15,7 @@ body {
     margin-top: 4%;
     border: solid 3px #383838;
     padding: 5%;
-    border-radius: 3.5%;
+    border-radius: 20px;
     background-color: #ffffff;
     margin-bottom: 4%;
 }
@@ -136,13 +53,13 @@ h1 {
     cursor: pointer;
 }
 
-ul {
+.menu_navigation {
     display: flex;
     list-style: none;
     gap: 2vh;
 }
 
-li {
+.info_link, .security_link {
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -152,7 +69,7 @@ li a {
     text-decoration: none;
 }
 
-li:hover {
+.info_link:hover, .security_link:hover {
     text-decoration: underline;
     color: #10689f;
 }
@@ -256,5 +173,3 @@ label {
     justify-content: center;
     gap: 5%;
 }
-
-/* Security menu style */

@@ -1,5 +1,5 @@
 <!-- userpage_security.html : allow the user to modify his password-->
-<!-- NOTE : This page will be removed when we code in javascript to navigate between the various menus (“information” and “securité”)
+<!-- NOTE : This page will be removed when we code in javascript to navigate between the various menus ("information" and "securité")
 and remain on a single page (userpage.html)-->
 
 <!DOCTYPE html> 
@@ -11,32 +11,34 @@ and remain on a single page (userpage.html)-->
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="style_userpage_security.css" />
+    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="userpage_security_style.css" />
 </head>
 <body>
     <div class="container">
     <div class="headbar">
         <div class="headbar_left">
-            <a href="../welcome.html">
+            <a href="../homepage.html">
             <img class="logo-img" src="../assets/cylanta_logo.png" alt="SOURCE" />
+            </a>
         </div>
         <div class="headbar_rest">
-            <a class="headbar_item" href="quicksearch.html">Destinations</a>
-            <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
-            <a class ="headbar_item" href="lien fictif">Inspirations</a>
+            <a class="headbar_item" href="../homepage.html">Accueil</a>
+            <a class="headbar_item" href="search.html">Destinations</a>
+            <a class ="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
         </div>
         <div class="headbar_right">
-            <a class="headbar_item" href="userpage.html">Mon espace</a>
+            <a class="headbar_my_space" href="userpage.html">Mon espace</a>
             <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
         </div>
     </div>
     <div class="user-container">
     <div class="user-informations">
-        <ul>
-            <li id="info-link"><a href="userpage.html">Informations</a></li>
-            <li id="security-link"><a href="userpage_security.html">Sécurité</a></li>
+        <ul class="menu_navigation">
+            <li class="info_link" id="info_link"><a href="userpage.html">Informations</a></li>
+            <li class="security_link" id="security_link"><a href="userpage_security.html">Sécurité</a></li>
         </ul>
-        <hr>
+    <hr>
     <!-- User security menu (password)-->
     <div class="user-security-menu">
         <div class="password-fields">
@@ -60,5 +62,32 @@ and remain on a single page (userpage.html)-->
         </div>
         </form>
     </div>
+</div>
+</div>
+<footer>
+    <div class="footer-section">
+        <h3>À Propos</h3>
+        <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
+        Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
+        Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
+        </p>
+    </div>
+    <div class="footer-section">
+        <h3>Nos Contacts</h3>
+        <ul class="other">
+            <li>Email: CyLanta@cy-tech.fr</li>
+            <li>Téléphone: +33 1 23 45 67 89</li>
+            <li>Adresse: Av. du Parc, 95000 Cergy</li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Nos Partenaires</h3>
+        <div class="partners">
+            <img src="../assets/favicon.png" alt="Partenaire 1">
+            <img src="../assets/cytech_icon.png" alt="Partenaire 2">
+            <img src="../assets/cergy_ville.jpg" alt="Partenaire 3">
+        </div>
+    </div>
+</footer>
 </body>
 </html>

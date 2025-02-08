@@ -1,3 +1,5 @@
+<!-- advanced_search.html : -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,8 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="style_advanced_search.css" />
+    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="advanced_search_style.css" />
 </head>
 <body>
     <div class="container">
@@ -19,23 +22,32 @@
         </div>
         <div class="headbar_rest">
             <a class="headbar_item" href="../homepage.html">Accueil</a>
-            <a class="headbar_item" href="quicksearch.html">Destinations</a>
+            <a class="headbar_item" href="search.html">Destinations</a>
             <a class ="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
         </div>
         <div class="headbar_right">
-            <a class="headbar_item" href="lien fictif">Connexion</a>
-            <a class="headbar_item" href="lien fictif">S'inscrire</a>
+            <a class="headbar_my_space" href="userpage.html">Mon espace</a>
+            <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
         </div>
     </div>
+    <img class="background_img" src="../assets/tahiti_beach.jpg" />
+    <div class="text_above">Trouvez votre escapade idéale en quelques clics</div>
     <div class="search_bar">
         <form class="search_bar_form" method="get">
             <table class="search_bar_tab">
                 <tr>
                     <!-- Champ texte pour la recherche -->
                     <td>
-                        <input class="search_bar_input" type="text" name="search" placeholder="Rechercher..."/>
+                        <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une destination..." />
+                        <datalist id="destinations">
+                            <option value="Tahiti"></option>
+                            <option value="Bora Bora"></option>
+                            <option value="Moorea"></option>
+                            <option value="Huahine"></option>
+                            <option value="Raiatea"></option>
+                            <option value="Taha'a"></option>
+                        </datalist>
                     </td>
-                    
                     <!-- Dropdown pour la sélection des prix -->
                     <td>
                         <div class="dropdown">
@@ -67,6 +79,12 @@
                                 <label>
                                     <input type="checkbox" name="travel_type" value="famille"> Voyage à plusieurs
                                 </label>
+                                <label>
+                                    <input type="checkbox" name="travel_type" value="famille"> Voyage en famille
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="travel_type" value="famille"> Séjour de luxe
+                                </label>
                             </div>
                         </div>
                     </td>
@@ -97,6 +115,31 @@
             </table>
         </form>
     </div>
+    <footer>
+        <div class="footer-section">
+            <h3>À Propos</h3>
+            <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
+            Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
+            Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
+            </p>
+        </div>
+        <div class="footer-section">
+            <h3>Nos Contacts</h3>
+            <ul class="autre">
+                <li>Email: CyLanta@cy-tech.fr</li>
+                <li>Téléphone: +33 1 23 45 67 89</li>
+                <li>Adresse: Av. du Parc, 95000 Cergy</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Nos Partenaires</h3>
+            <div class="partners">
+                <img src="../assets/favicon.png" alt="Partenaire 1">
+                <img src="../assets/cytech_icon.png" alt="Partenaire 2">
+                <img src="../assets/cergy_ville.jpg" alt="Partenaire 3">
+            </div>
+        </div>
+    </footer>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -134,11 +177,6 @@
             setupDropdown("type-button", "type-content");
             setupDropdown("duration-button", "duration-content");
         });
-    </script>
-    <script>
-        document.querySelector('.date-input').addEventListener('click', function () {
-            this.showPicker(); // Force l'ouverture du menu contextuel (compatible navigateurs modernes)
-        });
-     </script>        
+    </script>      
 </body>
 </html>

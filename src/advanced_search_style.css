@@ -1,0 +1,179 @@
+/* advanced_search_style.css */
+
+body {
+    background-color: #87c2e7;
+}
+
+/* Main container */
+
+.background_img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1; /* Places image in background */
+}
+
+.search_bar {
+    width: 93em;
+    background-color: #2c3e50;
+    padding: 1%;
+    border-radius: 7px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.text_above {
+    animation: fadeInUp 1.5s;
+}
+
+/* Table pour organiser les éléments */
+.search_bar_tab {
+    border-collapse: collapse; /* Supprime les bordures doubles */
+    width: 100%;
+    text-align: center; /* Centre les éléments dans les cellules */
+}
+
+/* Cellules du tableau */
+.search_bar_tab td {
+    padding: 5px; /* Espacement entre les éléments */
+    vertical-align: middle; /* Aligne les éléments verticalement */
+}
+
+/* Champ texte */
+.search_bar_input {
+    width: 27vw;
+    height: 65px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 2.5vh;
+}
+
+.search_bar_input:focus {
+    border: solid 2px #21a9ff;
+    outline: none;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    height: 65px;
+    padding: 0 30px;
+    background-color: #21a9ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 2.5vh;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-button:focus, .dropdown-button:active {
+    border: solid 2px #ffffff;
+    outline: none;
+}
+
+.type-button::after, .price-button::after {
+    content: " ⏷"; /* Down arrow added */
+    color: #ffffff;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 45px; /* Décale sous le bouton */
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Affiche le menu au survol */
+}
+
+/* Style des labels et checkboxes */
+.dropdown-content label {
+    display: flex;
+    align-items: center; /* Aligne verticalement les cases et le texte */
+    gap: 8px; /* Espacement entre la case et le texte */
+    margin-bottom: 10px; /* Espacement entre les labels */
+    font-size: 1em;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Bouton "Rechercher" */
+.search_bar_submit {
+    height: 65px;
+    padding: 0 30px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+.search_bar_submit:hover {
+    animation: pulse 1.5s infinite;
+}
+
+.search_bar_submit:active {
+    border: solid 2px #ffffff;
+}
+
+/* Conteneur pour le champ date */
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rectangle bleu englobant */
+.date-box {
+    border-radius: 8px; /* Coins arrondis */
+    height: 65px; /* Même hauteur que les autres boutons */
+    width: 10vw; /* Largeur ajustée */
+    font-size: 2.5vh;
+}
+
+/* Style du champ date */
+.date-input {
+    width: 100%; /* Adapte à la largeur du conteneur */
+    height: 100%; /* Remplit la hauteur du conteneur */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1.07em;
+    text-align: center; /* Centre le texte dans la case */
+    background-color: #21a9ff; /* Fond bleu */
+    color: white; /* Texte blanc */
+    cursor: pointer; /* Ajoute un curseur interactif */
+}
+
+/* Footer */
+
+footer {
+    margin-top: 18.5vh;
+}
+
+/* Animations */
+
+/* Dynamically display the central text bit by bit */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
