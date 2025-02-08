@@ -36,9 +36,16 @@
                 <tr>
                     <!-- Champ texte pour la recherche -->
                     <td>
-                        <input class="search_bar_input" type="text" name="search" placeholder="Recherche..."/>
+                        <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une destination..." />
+                        <datalist id="destinations">
+                            <option value="Tahiti"></option>
+                            <option value="Bora Bora"></option>
+                            <option value="Moorea"></option>
+                            <option value="Huahine"></option>
+                            <option value="Raiatea"></option>
+                            <option value="Taha'a"></option>
+                        </datalist>
                     </td>
-                    
                     <!-- Dropdown pour la sélection des prix -->
                     <td>
                         <div class="dropdown">
@@ -137,11 +144,6 @@
             setupDropdown("type-button", "type-content");
             setupDropdown("duration-button", "duration-content");
         });
-    </script>
-    <script>
-        document.querySelector('.date-input').addEventListener('click', function () {
-            this.showPicker(); // Force l'ouverture du menu contextuel (compatible navigateurs modernes)
-        });
-     </script>        
+    </script>      
 </body>
 </html>

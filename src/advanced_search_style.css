@@ -6,13 +6,13 @@ body {
 
 /* Conteneur principal */
 .search_bar {
-    position: absolute;
-    width: 55%;
-    bottom: 25vh;
+    margin-top: 25%;
     background-color: #2c3e50;
-    padding: 1.25%;
+    padding: 1%;
     border-radius: 7px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
 }
 
 /* Table pour organiser les éléments */
@@ -24,18 +24,18 @@ body {
 
 /* Cellules du tableau */
 .search_bar_tab td {
-    padding: 10px; /* Espacement entre les éléments */
+    padding: 5px; /* Espacement entre les éléments */
     vertical-align: middle; /* Aligne les éléments verticalement */
 }
 
 /* Champ texte */
 .search_bar_input {
     width: 300px;
-    height: 40px;
+    height: 60px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 0 10px;
-    font-size: 1em;
+    font-size: 2.5vh;
 }
 
 /* Dropdown */
@@ -44,13 +44,13 @@ body {
 }
 
 .dropdown-button {
-    height: 40px;
-    padding: 0 15px;
+    height: 60px;
+    padding: 0 30px;
     background-color: #21a9ff;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 2.5vh;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -84,14 +84,18 @@ body {
 
 /* Bouton "Rechercher" */
 .search_bar_submit {
-    height: 40px;
-    padding: 0 15px;
+    height: 60px;
+    padding: 0 30px;
     background-color: #e67e22;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 2.5vh;
     cursor: pointer;
+}
+
+.search_bar_submit:hover {
+    animation: pulse 1.5s infinite;
 }
 
 /* Conteneur pour le champ date */
@@ -104,8 +108,9 @@ body {
 /* Rectangle bleu englobant */
 .date-box {
     border-radius: 8px; /* Coins arrondis */
-    height: 40px; /* Même hauteur que les autres boutons */
+    height: 60px; /* Même hauteur que les autres boutons */
     width: 160px; /* Largeur ajustée */
+    font-size: 2.5vh;
 }
 
 /* Style du champ date */
@@ -119,4 +124,16 @@ body {
     background-color: #21a9ff; /* Fond bleu */
     color: white; /* Texte blanc */
     cursor: pointer; /* Ajoute un curseur interactif */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.11);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
