@@ -1,0 +1,147 @@
+<!-- advanced_search.html : -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CyLanta</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="CyLanta travel agency website" />
+    <meta name="author" content="Developped by MI5-A TEAM" />
+    <meta name="keywords" content="travel, travel agency" />
+    <link rel="icon" type="image/png" href="../assets/ico_island.png" />
+    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="advanced_search_style.css" />
+</head>
+<body>
+    <div class="container">
+    <div class="headbar">
+        <div class="headbar_left">
+            <a href="../homepage.html">
+            <img class="logo-img" src="../assets/cylanta_logo.png" alt="Logo created by MI-A team" />
+            </a>
+        </div>
+        <div class="headbar_rest">
+            <a class="headbar_item" href="../homepage.html">Accueil</a>
+            <a class="headbar_item" href="search.html">Destinations</a>
+            <a class ="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+        </div>
+        <div class="headbar_right">
+            <a class="headbar_my_space" href="userpage.html">Mon espace</a>
+            <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
+        </div>
+    </div>
+    <div class="search_bar">
+        <form class="search_bar_form" method="get">
+            <table class="search_bar_tab">
+                <tr>
+                    <!-- Champ texte pour la recherche -->
+                    <td>
+                        <input class="search_bar_input" type="text" name="search" placeholder="Recherche..."/>
+                    </td>
+                    
+                    <!-- Dropdown pour la sélection des prix -->
+                    <td>
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button price-button">Prix</button>
+                            <div class="dropdown-content price-content">
+                                <label>
+                                    <input type="checkbox" name="price_range" value="moins_500"> Moins de 500€
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="price_range" value="500_1000"> 500€ - 1000€
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="price_range" value="1000_2000"> 1000€ - 2000€
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="price_range" value="plus_2000"> Plus de 2000€
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- Type du séjour -->
+                    <td>
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button type-button">Type de voyage</button>
+                            <div class="dropdown-content type-content">
+                                <label>
+                                    <input type="checkbox" name="travel_type" value="noces"> Voyage de Noces
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="travel_type" value="famille"> Voyage à plusieurs
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- Date -->
+                    <td>
+                        <div class="date-container">
+                            <div class="date-box">
+                                <input type="date" name="date" id="date-input" class="date-input"/>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- Durée -->
+                    <td>
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button duration-button">Durée</button>
+                            <div class="dropdown-content duration-content">
+                                <label>
+                                    <input type="number" name="travel_length" value="duree" min="3" max="20" step="1">
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- Bouton de soumission -->
+                    <td>
+                        <button type="submit" class="search_bar_submit">Rechercher</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fonction pour gérer l'affichage des dropdowns
+            function setupDropdown(buttonClass, contentClass) {
+                const dropdownButton = document.querySelector(`.${buttonClass}`);
+                const dropdownContent = document.querySelector(`.${contentClass}`);
+    
+                if (dropdownButton && dropdownContent) {
+                    dropdownButton.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Empêche la fermeture immédiate
+                        const isVisible = dropdownContent.style.display === "block";
+                        closeAllDropdowns(); // Ferme tous les autres menus
+                        dropdownContent.style.display = isVisible ? "none" : "block"; // Toggle affichage
+                    });
+    
+                    dropdownContent.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Empêche la fermeture lors d'un clic interne
+                    });
+                }
+            }
+    
+            // Fonction pour fermer tous les dropdowns
+            function closeAllDropdowns() {
+                document.querySelectorAll(".dropdown-content").forEach(content => {
+                    content.style.display = "none";
+                });
+            }
+    
+            // Fermer les menus si on clique ailleurs
+            document.addEventListener("click", closeAllDropdowns);
+    
+            // Initialiser les dropdowns
+            setupDropdown("price-button", "price-content");
+            setupDropdown("type-button", "type-content");
+            setupDropdown("duration-button", "duration-content");
+        });
+    </script>
+    <script>
+        document.querySelector('.date-input').addEventListener('click', function () {
+            this.showPicker(); // Force l'ouverture du menu contextuel (compatible navigateurs modernes)
+        });
+     </script>        
+</body>
+</html>

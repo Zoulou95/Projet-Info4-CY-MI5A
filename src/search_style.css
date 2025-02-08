@@ -12,17 +12,6 @@
 
 /* Central text style */
 
-.text_above {
-    width: 80%; 
-    padding: 8%;
-    color: white;
-    text-align: center;
-    font-size: 11vh;
-    font-weight: bold;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    animation: fadeInUp 1.5s ease-out forwards;
-}
-
 .error_text {
     display: flex;
     font-size: 5vh;
@@ -34,16 +23,12 @@
 /* Quicksearch overlay style */
 
 .search_overlay {
-    display: flex;
     position: absolute;
     width: 55%;
-    bottom: 25vh; 
-    left: 50%;
-    transform: translateX(-50%); 
+    bottom: 25vh;
     background: rgba(0, 0, 0, 0.6); 
     padding: 1.25%;
-    border-radius: 5px;
-    align-items: center;
+    border-radius: 7px;
 }
 
 .search-form {

@@ -27,7 +27,8 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 
 ## Project structure
 
-```📦 Project
+```
+📦 Project folder
 ├── 📄 homepage.html
 └── 📂 src
     ├── 📄 advanced_search.html
@@ -48,6 +49,8 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 - The page `homepage.html`
 
 - `search.html` 
+
+- `advanced_search.html`
 
 - `userpage.html`
 

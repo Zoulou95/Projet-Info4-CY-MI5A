@@ -99,6 +99,37 @@
     text-decoration: none;
 }
 
+/* If the user is logged in */
+
+.headbar_my_space {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.7vh;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.user-img-nav {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    outline: 1px solid #dddddd;
+}
+
+/* Text style */
+
+.text_above {
+    width: 80%; 
+    padding: 8%;
+    color: white;
+    text-align: center;
+    font-size: 11vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
 /* Footer style */
 
 footer {
