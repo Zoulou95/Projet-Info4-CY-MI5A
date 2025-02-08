@@ -121,6 +121,7 @@ body {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .dropdown-content {
@@ -147,6 +148,7 @@ body {
     margin-bottom: 10px; /* Espacement entre les labels */
     font-size: 1em;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 /* Bouton "Rechercher" */
@@ -161,13 +163,6 @@ body {
     cursor: pointer;
 }
 
-.date-title {
-    margin-bottom: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #333;
-}
-
 /* Conteneur pour le champ date */
 .date-container {
     display: flex;
@@ -177,28 +172,21 @@ body {
 
 /* Rectangle bleu englobant */
 .date-box {
-    background-color: #21a9ff; /* Bleu pour le fond */
-    padding: 10px;
     border-radius: 8px; /* Coins arrondis */
-    display: flex;
-    flex-direction: column; /* Aligne le label et l'input en colonne */
-    align-items: center; /* Centre horizontalement le contenu */
-    gap: 5px; /* Espace entre le texte et l'input */
-}
-
-/* Style du label */
-.date-label {
-    font-size: 1em;
-    font-weight: bold;
-    color: white; /* Texte blanc pour contraster avec le bleu */
+    height: 40px; /* Même hauteur que les autres boutons */
+    width: 160px; /* Largeur ajustée */
 }
 
 /* Style du champ date */
 .date-input {
-    width: 150px;
-    height: 35px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0 10px;
-    font-size: 1em;
+    width: 100%; /* Adapte à la largeur du conteneur */
+    height: 100%; /* Remplit la hauteur du conteneur */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1.07em;
+    text-align: center; /* Centre le texte dans la case */
+    background-color: #21a9ff; /* Fond bleu */
+    color: white; /* Texte blanc */
+    cursor: pointer; /* Ajoute un curseur interactif */
 }
+
