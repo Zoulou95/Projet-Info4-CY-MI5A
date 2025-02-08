@@ -39,8 +39,8 @@
                     <!-- Dropdown pour la sélection des prix -->
                     <td>
                         <div class="dropdown">
-                            <button type="button" class="dropdown-button">Prix</button>
-                            <div class="dropdown-content">
+                            <button type="button" class="dropdown-button price-button">Prix</button>
+                            <div class="dropdown-content price-content">
                                 <label>
                                     <input type="checkbox" name="price_range" value="moins_500"> Moins de 500€
                                 </label>
@@ -59,8 +59,8 @@
                     <!-- Type du séjour -->
                     <td>
                         <div class="dropdown">
-                            <button type="button" class="dropdown-button">Type de voyage</button>
-                            <div class="dropdown-content">
+                            <button type="button" class="dropdown-button type-button">Type de voyage</button>
+                            <div class="dropdown-content type-content">
                                 <label>
                                     <input type="checkbox" name="travel_type" value="noces"> Voyage de Noces
                                 </label>
@@ -74,14 +74,20 @@
                     <td>
                         <div class="date-container">
                             <div class="date-box">
-                                <label for="date-input" class="date-label">À partir du</label>
                                 <input type="date" name="date" id="date-input" class="date-input"/>
                             </div>
                         </div>
                     </td>
                     <!-- Durée -->
                     <td>
-                        
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-button duration-button">Durée</button>
+                            <div class="dropdown-content duration-content">
+                                <label>
+                                    <input type="number" name="travel_length" value="duree" min="3" max="20" step="1">
+                                </label>
+                            </div>
+                        </div>
                     </td>
                     <!-- Bouton de soumission -->
                     <td>
@@ -94,24 +100,45 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const dropdownButton = document.querySelector(".dropdown-button");
-            const dropdownContent = document.querySelector(".dropdown-content");
-        
-            dropdownButton.addEventListener("click", function (event) {
-                event.stopPropagation(); // Empêche la fermeture immédiate
-                dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
-            });
-        
-            // Fermer le menu si on clique ailleurs
-            document.addEventListener("click", function () {
-                dropdownContent.style.display = "none";
-            });
-        
-            // Empêcher la fermeture si on clique dans le menu
-            dropdownContent.addEventListener("click", function (event) {
-                event.stopPropagation();
-            });
+            // Fonction pour gérer l'affichage des dropdowns
+            function setupDropdown(buttonClass, contentClass) {
+                const dropdownButton = document.querySelector(`.${buttonClass}`);
+                const dropdownContent = document.querySelector(`.${contentClass}`);
+    
+                if (dropdownButton && dropdownContent) {
+                    dropdownButton.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Empêche la fermeture immédiate
+                        const isVisible = dropdownContent.style.display === "block";
+                        closeAllDropdowns(); // Ferme tous les autres menus
+                        dropdownContent.style.display = isVisible ? "none" : "block"; // Toggle affichage
+                    });
+    
+                    dropdownContent.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Empêche la fermeture lors d'un clic interne
+                    });
+                }
+            }
+    
+            // Fonction pour fermer tous les dropdowns
+            function closeAllDropdowns() {
+                document.querySelectorAll(".dropdown-content").forEach(content => {
+                    content.style.display = "none";
+                });
+            }
+    
+            // Fermer les menus si on clique ailleurs
+            document.addEventListener("click", closeAllDropdowns);
+    
+            // Initialiser les dropdowns
+            setupDropdown("price-button", "price-content");
+            setupDropdown("type-button", "type-content");
+            setupDropdown("duration-button", "duration-content");
         });
-    </script>        
+    </script>
+    <script>
+        document.querySelector('.date-input').addEventListener('click', function () {
+            this.showPicker(); // Force l'ouverture du menu contextuel (compatible navigateurs modernes)
+        });
+     </script>        
 </body>
 </html>
