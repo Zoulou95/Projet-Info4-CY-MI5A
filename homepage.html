@@ -1,3 +1,5 @@
+<!-- homepage.html -->
+
 <!DOCTYPE html> 
 <html>
     <head>
@@ -6,19 +8,20 @@
         <meta name="author" content="Developped by MI5-A TEAM" />
         <meta name="keywords" content="travel, travel agency" />
         <link rel="icon" type="image/png" href="assets/ico_island.png" />
-        <link rel="stylesheet" type="text/css" href="src/accueil.css" />
+        <link rel="stylesheet" type="text/css" href="src/base_style.css" />
+        <link rel="stylesheet" type="text/css" href="src/homepage_style.css" />
     </head>
     <body>
      <div class="container">
         <div class="headbar">
             <div class="headbar_left">
                 <a href="homepage.html">
-                <img class="logo-img" src="assets/cylanta_logo.png" alt="Logo created by MI-A team" />
+                <img class="logo_img" src="assets/cylanta_logo.png" alt="Logo created by MI-A team" />
                 </a>
             </div>
             <div class="headbar_rest">
                 <a class="headbar_item" href="homepage.html">Accueil</a>
-                <a class="headbar_item" href="src/quicksearch.html">Destinations</a>
+                <a class="headbar_item" href="src/search.html">Destinations</a>
                 <a class ="headbar_item" href="src/advanced_search.html">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
@@ -30,7 +33,7 @@
             <img src="assets/img_island.jpg" alt="falaise">
             <div class="text_above">Cap sur vos envies, direction le sur-mesure !</div>
             <div class="text_overlay">
-                <a href="#" class="btn-explorer">Explorer</a>
+                <a href="src/search.html" class="btn_explorer">Explorer</a>
             </div>
         </div>
         <div class="secondbar">
@@ -39,12 +42,10 @@
             </div>
         </div>
         <div class="whitebar"></div>
-        
-
         <div class="voyagebar">
             <div class="card">
                 <img src="assets/toopua-iti.jpg" alt="tahiti">
-                <div class="card-content">
+                <div class="card_content">
                     <h2>TAHITI</h2>
                     <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
@@ -52,7 +53,7 @@
             </div>
             <div class="card">
                 <img src="assets/bora-bora-vue-avion.jpg" alt="bora-bora">
-                <div class="card-content">
+                <div class="card_content">
                     <h2>BORA BORA</h2>
                     <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
@@ -60,7 +61,7 @@
             </div>
             <div class="card">
                 <img src="assets/motu-tapu.jpg" alt="moorea">
-                <div class="card-content">
+                <div class="card_content">
                     <h2>MOOREA</h2>
                     <p>Explorez un îlot préservé, entouré d’un lagon aux eaux cristallines.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
@@ -68,7 +69,7 @@
             </div>
             <div class="card">
                 <img src="assets/MOTU-TO'OPUA.jpg" alt="huahine">
-                <div class="card-content">
+                <div class="card_content">
                     <h2>HUAHINE</h2>
                     <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
@@ -76,7 +77,7 @@
             </div>
             <div class="card">
                 <img src="assets/MOTU-TEVAIROA.jpg" alt="raiatea">
-                <div class="card-content">
+                <div class="card_content">
                     <h2>RAIATEA</h2>
                     <p>Vivez une escapade inoubliable au sein d’un lagon aux mille nuances de bleu.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
@@ -84,7 +85,7 @@
             </div>
             <div class="card">
                 <img src="assets/MOTO-PITI-AAU.jpg" alt="taha-a">
-                <div class="card-content">
+                <div class="card_content">
                     <h2>TAHA'A</h2>
                     <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu’un.</p>
                     <a href="#" class="explore">➤ Découvrir</a>
@@ -93,15 +94,15 @@
         </div>
         <div class="separate"></div>
         <footer>
-            <div class="footer-section">
+            <div class="footer_section">
                 <h3>À Propos</h3>
                 <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
-                Passionnés d’évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
+                Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
                 Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
                 </p>
             </div>
     
-            <div class="footer-section">
+            <div class="footer_section">
                 <h3>Nos Contacts</h3>
                 <ul class="autre">
                     <li>Email: CyLanta@cy-tech.fr</li>
@@ -110,18 +111,18 @@
                 </ul>
             </div>
     
-            <div class="footer-section">
+            <div class="footer_section">
                 <h3>Nos Partenaires</h3>
                 <div class="partners">
-                    <img src="assets/favicon.png" alt="Partenaire 1">
-                    <img src="assets/cytech_icon.png" alt="Partenaire 2">
-                    <img src="assets/cergy_ville.jpg" alt="Partenaire 3">
+                    <a href="https://www.cyu.fr/" target="_blank"><img src="assets/favicon.png" alt="Partenaire 1"></a>
+                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="assets/cytech_icon.png" alt="Partenaire 2"></a>
+                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="assets/cergy_ville.jpg" alt="Partenaire 3"></a>
                 </div>
             </div>
         </footer>
         <div class="overlay" id="signupOverlay">
-            <div class="overlay-content">
-                <span class="close-btn" onclick="closeSignUpOverlay()">&times;</span>
+            <div class="overlay_content">
+                <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
                 <h2>Inscription</h2>
                 <form>
                     <input type="text" placeholder="Prénom" required>
@@ -130,7 +131,7 @@
                     <input type="password" placeholder="Mot de passe" required>
                     <input type="tel" placeholder="Numéro de téléphone" required>
                     <button type="submit">S'inscrire</button>
-                    <p class="switch-text">
+                    <p class="switch_text">
                         Vous avez deja un compte ?
                         <a href="#" onclick="switchToSignIn()">Se connecter</a>
                     </p>
@@ -139,14 +140,14 @@
         </div>
         
         <div class="overlay" id="signinOverlay">
-            <div class="overlay-content">
-                <span class="close-btn" onclick="closeSignInOverlay()">&times;</span>
+            <div class="overlay_content">
+                <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
                 <h2>Connexion</h2>
                 <form>
                     <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Mot de passe" required>
                     <button type="submit">Se connecter</button>
-                    <p class="switch-text">
+                    <p class="switch_text">
                         Vous n'avez pas de compte ?
                         <a href="#" onclick="switchToSignUp()">S'inscrire</a>
                     </p>
@@ -187,6 +188,9 @@
                 }
             </script>
         </div>
+      </div>
+    </body>
+</html>
       </div>
     </body>
 </html>
