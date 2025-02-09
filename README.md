@@ -1,6 +1,6 @@
 # Click-journeY
 
-This travel agency website offers trips to the islands of French Polynesia.
+The website of CyLanta, a travel agency based in Cergy, offers trips to the islands of French Polynesia.
 
 **PREING-2 INFORMATIQUE IV PROJECT**.  
 **Developed by MI-5 group A**.
@@ -29,7 +29,9 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 
 ```
 📦 Project folder
+├── 📄 CyLanta_Graphic_Chart.pdf
 ├── 📄 homepage.html
+├── 📂 test
 └── 📂 src
     ├── 📄 advanced_search.html
     ├── 📄 search.html
@@ -45,13 +47,16 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 ```
 
 ## Overview
+ 
+- The page `homepage.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 
-- The page `homepage.html`
+- `admin_panel.html` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
-- `search.html` 
+- `advanced_search.html` is a travel search page with several filter fields (dates, locations, options, price, etc.).
 
-- `advanced_search.html`
+- `search.html` includes an integrated quick-search field for sorting trips by destination.
 
-- `userpage.html`
+- `userpage.html` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
 
-- `userpage_security.html`
+- `userpage_security.html` allows the user to modify his password.
+**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript)

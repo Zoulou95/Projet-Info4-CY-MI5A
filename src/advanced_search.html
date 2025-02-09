@@ -1,4 +1,4 @@
-<!-- advanced_search.html : -->
+<!-- advanced_search.html -->
 
 <!DOCTYPE html>
 <html>
@@ -14,10 +14,11 @@
 </head>
 <body>
     <div class="container">
+    <!-- Navigation bar -->
     <div class="headbar">
         <div class="headbar_left">
             <a href="../homepage.html">
-            <img class="logo-img" src="../assets/cylanta_logo.png" alt="Logo created by MI-A team" />
+            <img class="logo_img" src="../assets/cylanta_logo.png" alt="Logo created by MI-A team" />
             </a>
         </div>
         <div class="headbar_rest">
@@ -27,7 +28,7 @@
         </div>
         <div class="headbar_right">
             <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-            <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
+            <a href="userpage.html"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
         </div>
     </div>
     <img class="background_img" src="../assets/tahiti_beach.jpg" />
@@ -78,6 +79,9 @@
                                 </label>
                                 <label>
                                     <input type="checkbox" name="travel_type" value="famille"> Voyage à plusieurs
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="travel_type" value="famille"> Voyage entre amis
                                 </label>
                                 <label>
                                     <input type="checkbox" name="travel_type" value="famille"> Voyage en famille
@@ -134,13 +138,15 @@
         <div class="footer-section">
             <h3>Nos Partenaires</h3>
             <div class="partners">
-                <img src="../assets/favicon.png" alt="Partenaire 1">
-                <img src="../assets/cytech_icon.png" alt="Partenaire 2">
-                <img src="../assets/cergy_ville.jpg" alt="Partenaire 3">
+                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/favicon.png" alt="Partenaire 1"></a>
+                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2"></a>
+                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3"></a>
             </div>
         </div>
     </footer>
     </div>
+
+    <!-- Input fields script -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Fonction pour gérer l'affichage des dropdowns

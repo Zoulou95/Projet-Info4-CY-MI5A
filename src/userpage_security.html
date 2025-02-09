@@ -1,4 +1,4 @@
-<!-- userpage_security.html : allow the user to modify his password-->
+<!-- userpage_security.html : allow the user to modify his password -->
 <!-- NOTE : This page will be removed when we code in javascript to navigate between the various menus ("information" and "securité")
 and remain on a single page (userpage.html)-->
 
@@ -16,10 +16,11 @@ and remain on a single page (userpage.html)-->
 </head>
 <body>
     <div class="container">
+    <!-- Navigation bar -->
     <div class="headbar">
         <div class="headbar_left">
             <a href="../homepage.html">
-            <img class="logo-img" src="../assets/cylanta_logo.png" alt="SOURCE" />
+            <img class="logo_img" src="../assets/cylanta_logo.png" alt="SOURCE" />
             </a>
         </div>
         <div class="headbar_rest">
@@ -29,20 +30,21 @@ and remain on a single page (userpage.html)-->
         </div>
         <div class="headbar_right">
             <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-            <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
+            <a href="userpage.html"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
         </div>
     </div>
-    <div class="user-container">
-    <div class="user-informations">
+    <div class="user_container">
+    <div class="user_informations">
         <ul class="menu_navigation">
             <li class="info_link" id="info_link"><a href="userpage.html">Informations</a></li>
             <li class="security_link" id="security_link"><a href="userpage_security.html">Sécurité</a></li>
         </ul>
     <hr>
-    <!-- User security menu (password)-->
-    <div class="user-security-menu">
-        <div class="password-fields">
-        <form method="post" action="userpage_security.html">
+
+    <!-- User security menu (password) -->
+    <div class="user_security-menu">
+        <div class="password_fields">
+        <form method="post" action="#">
             <div>
                 <label for="current_password">Mot de passe actuel</label><br><br>
                 <input type="password" id="current_password" maxlength="30" />
@@ -56,14 +58,16 @@ and remain on a single page (userpage.html)-->
                 <input type="password" id="confirmation_password"" maxlength="30" />
             </div>
             <div class="button_group">
-                <button type="submit" id="save-button" value="Sauvegarder">Sauvegarder</button>
-                <button type="reset" id="reset-button" value="Réinitialiser">Réinitialiser</button>
+                <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
+                <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
             </div>
         </div>
         </form>
     </div>
+    </div>
 </div>
-</div>
+
+<!-- Footer -->
 <footer>
     <div class="footer-section">
         <h3>À Propos</h3>
@@ -83,9 +87,9 @@ and remain on a single page (userpage.html)-->
     <div class="footer-section">
         <h3>Nos Partenaires</h3>
         <div class="partners">
-            <img src="../assets/favicon.png" alt="Partenaire 1">
-            <img src="../assets/cytech_icon.png" alt="Partenaire 2">
-            <img src="../assets/cergy_ville.jpg" alt="Partenaire 3">
+            <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/favicon.png" alt="Partenaire 1"></a>
+            <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2"></a>
+            <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3"></a>
         </div>
     </div>
 </footer>

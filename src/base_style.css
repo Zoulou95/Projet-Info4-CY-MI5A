@@ -1,6 +1,6 @@
 /* base_style.css : navigation bar and footer style (common to all files) */
 
-/* Main container and navigation bar style */
+/* Main container and navigation bar */
 
 * {
     margin: 0;
@@ -28,7 +28,7 @@
     z-index:1;
 }
 
-.logo-img {
+.logo_img {
     height: 9vh;
 }
 
@@ -122,19 +122,19 @@
     text-decoration: underline;
 }
 
-.user-img-nav {
-    max-width: 50px;
-    max-height: 50px;
+.user_img_nav {
+    max-width: 55px;
+    max-height: 55px;
     border-radius: 50%;
     border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
 }
 
-.user-img-nav:active {
+.user_img_nav:active {
     outline: 2px solid #000000;
 }
 
-/* Text style */
+/* Text display */
 
 .text_above {
     width: 80%; 
@@ -144,7 +144,43 @@
     font-size: 11vh;
     font-weight: bold;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Card presenting destinations */
+
+.card {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 18vh;
+    object-fit: cover;
+}
+.card-content {
+    padding: 20px;
+}
+.card h2 {
+    margin: 0;
+    color: #333;
+}
+.card p {
+    font-size: 1.5vh;
+    color: #555;
+    margin: 10px 0;
+}
+
+.explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -203,4 +239,19 @@ footer {
     height: auto;
     border-radius: 5px;
     margin-top: 2vh;
+}
+
+/* Animations */
+
+/* Animate the quick search button */
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }

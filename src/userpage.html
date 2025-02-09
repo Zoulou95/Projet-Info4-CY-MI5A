@@ -1,4 +1,4 @@
-<!-- userpage.html : allow the user to see his personal informations and modify it-->
+<!-- userpage.html : allow the user to see his personal informations and modify it -->
 
 <!DOCTYPE html> 
 <html lang="fr">
@@ -7,17 +7,18 @@
     <meta charset="utf-8" />
     <meta name="description" content="CyLanta user informations page" />
     <meta name="author" content="Developped by MI5-A TEAM" />
-    <meta name="keywords" content="travel, travel agency" />
+    <meta name="keywords" content="userpage, personal informations" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="userpage_style.css" />
 </head>
 <body>
     <div class="container">
+    <!-- Navigation bar -->
     <div class="headbar">
         <div class="headbar_left">
             <a href="../homepage.html">
-            <img class="logo-img" src="../assets/cylanta_logo.png" alt="SOURCE" />
+            <img class="logo_img" src="../assets/cylanta_logo.png" alt="SOURCE" />
             </a>
         </div>
         <div class="headbar_rest">
@@ -27,31 +28,31 @@
         </div>
         <div class="headbar_right">
             <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-            <a href="userpage.html"><img  class="user-img-nav" src="../assets/example_pfp.jpg" /></a>
+            <a href="userpage.html"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
         </div>
     </div>
     <div class="user-container">
-    <div class="left-info">
+    <div class="left_informations">
         <h1>Bienvenue <b>Prénom</b> !</h1>
         <input type="file" id="file-input" accept=".png, .jpg, .jpeg" style="display: none;">
         <label for="file-input">
-            <img class="user-img" src="../assets/example_pfp.jpg" />
+            <img class="user_img" src="../assets/example_pfp.jpg" />
         </label>
-        <!-- We will set image size limitations in JavaScript -->
         <p>Changer votre photo de profil</p>
-        <input type="file" accept=".png, .jpg, .jpeg" />
+        <input type="file" accept=".png, .jpg, .jpeg" /> <!-- We will set image size limitations in JavaScript -->
+
+        <!-- Table showing user status (e.g. VIP, admin, etc.) -->
         <table class="subscription-table">
             <tr><td class="cell1">Statut</td></tr>
             <tr><td class="cell2">VIP</td></tr>
         </table>
     </div>
+
     <!-- User personal informations menu (name, email, etc.)-->
-    <div class="user-informations">
+    <div class="user_informations">
         <ul class="menu_navigation">
             <li class="info_link" id="info_link"><a href="userpage.html">Informations</a></li>
             <li class="security_link" id="security_link"><a href="userpage_security.html">Sécurité</a></li>
-            <!-- NOTE : "userpage_security.html" will be removed when we code in javascript to navigate between the various menus (“information” and “securité”)
-            and remain on a single page (userpage.html)-->
         </ul>
         <hr>
         <form method="post" action="userpage.html">
@@ -73,37 +74,39 @@
                 <input type="tel" id="tel_number" placeholder="Entrez votre mobile" maxlength="10" value="0707070707" /><br><br>
             </div>
             <div class="button_group">
-                <button type="submit" id="save-button" value="Sauvegarder">Sauvegarder</button>
-                <button type="reset" id="reset-button" value="Réinitialiser">Réinitialiser</button>
+                <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
+                <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
             </div>
         </form>
     </div>
     </div>
+</div>
+    
+<!-- Footer -->
+<footer>
+    <div class="footer-section">
+        <h3>À Propos</h3>
+        <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
+        Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
+        Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
+        </p>
     </div>
-    <footer>
-        <div class="footer-section">
-            <h3>À Propos</h3>
-            <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
-            Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
-            Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
-            </p>
+    <div class="footer-section">
+        <h3>Nos Contacts</h3>
+        <ul class="autre">
+            <li>Email: CyLanta@cy-tech.fr</li>
+            <li>Téléphone: +33 1 23 45 67 89</li>
+            <li>Adresse: Av. du Parc, 95000 Cergy</li>
+        </ul>
+     </div>
+    <div class="footer-section">
+        <h3>Nos Partenaires</h3>
+        <div class="partners">
+            <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/favicon.png" alt="Partenaire 1"></a>
+            <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2"></a>
+            <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3"></a>
         </div>
-        <div class="footer-section">
-            <h3>Nos Contacts</h3>
-            <ul class="autre">
-                <li>Email: CyLanta@cy-tech.fr</li>
-                <li>Téléphone: +33 1 23 45 67 89</li>
-                <li>Adresse: Av. du Parc, 95000 Cergy</li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Nos Partenaires</h3>
-            <div class="partners">
-                <img src="../assets/favicon.png" alt="Partenaire 1">
-                <img src="../assets/cytech_icon.png" alt="Partenaire 2">
-                <img src="../assets/cergy_ville.jpg" alt="Partenaire 3">
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>

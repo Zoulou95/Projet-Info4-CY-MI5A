@@ -28,20 +28,23 @@ body {
     animation: fadeInUp 1.5s;
 }
 
-/* Table pour organiser les éléments */
+/* Table for organizing elements */
+
 .search_bar_tab {
-    border-collapse: collapse; /* Supprime les bordures doubles */
+    border-collapse: collapse; /* Removes double borders */
     width: 100%;
-    text-align: center; /* Centre les éléments dans les cellules */
+    text-align: center;
 }
 
-/* Cellules du tableau */
+/* Table cells  */
+
 .search_bar_tab td {
-    padding: 5px; /* Espacement entre les éléments */
-    vertical-align: middle; /* Aligne les éléments verticalement */
+    padding: 5px;
+    vertical-align: middle;
 }
 
-/* Champ texte */
+/* Search bar style */
+
 .search_bar_input {
     width: 27vw;
     height: 65px;
@@ -56,7 +59,8 @@ body {
     outline: none;
 }
 
-/* Dropdown */
+/* Dropdown menu */
+
 .dropdown {
     position: relative;
 }
@@ -85,21 +89,23 @@ body {
 
 .dropdown-content {
     position: absolute;
-    top: 45px; /* Décale sous le bouton */
+    top: 7vh; /* Shift under the button */
     left: 0;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: none;
-    z-index: 1000;
+    z-index: 10;
+    font-size: 2vh;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block; /* Affiche le menu au survol */
+    display: block; /* Display menu on hover */
 }
 
 /* Style des labels et checkboxes */
+
 .dropdown-content label {
     display: flex;
     align-items: center; /* Aligne verticalement les cases et le texte */
@@ -114,7 +120,7 @@ body {
 .search_bar_submit {
     height: 65px;
     padding: 0 30px;
-    background-color: #e67e22;
+    background-color: #ffa500;
     color: white;
     border: none;
     border-radius: 5px;
@@ -124,6 +130,7 @@ body {
 
 .search_bar_submit:hover {
     animation: pulse 1.5s infinite;
+    background-color: #ff8c00;
 }
 
 .search_bar_submit:active {
