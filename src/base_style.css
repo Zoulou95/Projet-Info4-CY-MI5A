@@ -1,0 +1,258 @@
+/* base_style.css : navigation bar and footer style (common to all files) */
+
+/* Main container and navigation bar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.headbar {
+    width: 100%; 
+    height: 9vh; 
+    background-color: #21a9ff; 
+    display: flex;
+    align-items: center;
+    padding: 0 1.5%; 
+    box-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    z-index:1;
+}
+
+.logo_img {
+    height: 9vh;
+}
+
+.secondbar {
+    width: 100%; 
+    height: 18vh; 
+    background-color: #21a9ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5%;
+}
+
+.centerbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerbar_text {
+    color: white;
+    text-decoration: none;
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+.headbar_left {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.headbar_rest {
+    flex: 8; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6vw;
+    margin-left: 10vh;
+}
+
+.headbar_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5vw;
+}
+
+.headbar_item {
+    color: white;
+    text-decoration: none;
+    font-size: 2.7vh;
+    font-weight: bold;
+}
+
+.headbar_item:hover {
+    text-decoration: underline;
+}
+
+.headbar_logo {
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.separate {
+    width: 100%; 
+    height: 18vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5%;
+}
+
+/* If the user is logged in */
+
+.headbar_my_space {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.7vh;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.headbar_my_space:hover {
+    text-decoration: underline;
+}
+
+.user_img_nav {
+    max-width: 55px;
+    max-height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    outline: 1px solid #dddddd;
+}
+
+.user_img_nav:active {
+    outline: 2px solid #000000;
+}
+
+/* Text display */
+
+.text_above {
+    width: 80%; 
+    padding: 8%;
+    color: white;
+    text-align: center;
+    font-size: 11vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Card presenting destinations */
+
+.card {
+    width: 38vh;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: 35vh;
+}
+.card img {
+    width: 100%;
+    height: 23vh;
+    object-fit: cover;
+}
+.card_content {
+    padding: 10px;
+}
+.card h2 {
+    margin: 0;
+    color: #333;
+}
+.card p {
+    font-size: 1.5vh;
+    color: #555;
+    margin: 15  px 0;
+}
+
+.explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+
+footer {
+    background-color: #21a9ff;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 40vh;
+    align-items: center;
+    box-shadow: 0px -0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    z-index:1;
+}
+
+.footer_section {
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 10px;
+    width: 25%;
+    height: 25vh;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 3);
+}
+
+.footer_section h3 {
+    margin-bottom: 20px;
+    font-size: 3vh;
+}
+
+.footer_section p, .footer-section ul {
+    font-size: 1.5vh;
+    color: #bbb;
+
+}
+
+.footer_section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_section ul li {
+    margin-bottom: 10px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.partners img {
+    width: 7.5vh;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 2vh;
+}
+
+/* Animations */
+
+/* Animate the quick search button */
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
