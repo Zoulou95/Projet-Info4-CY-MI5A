@@ -2,96 +2,103 @@
 <!-- NOTE : This page will be removed when we code in javascript to navigate between the various menus ("information" and "securité")
 and remain on a single page (userpage.html)-->
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>CyLanta</title>
     <meta charset="utf-8" />
     <meta name="description" content="CyLanta user informations page" />
     <meta name="author" content="Developped by MI5-A TEAM" />
-    <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="userpage_security_style.css" />
 </head>
+
 <body>
     <div class="container">
-    <!-- Navigation bar -->
-    <div class="headbar">
-        <div class="headbar_left">
-            <a href="../homepage.html">
-            <img class="logo_img" src="../assets/cylanta_logo.png" alt="SOURCE" />
-            </a>
+        <!-- Navigation bar -->
+        <div class="headbar">
+            <div class="headbar_left">
+                <a href="../homepage.html">
+                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="SOURCE" />
+                </a>
+            </div>
+            <div class="headbar_rest">
+                <a class="headbar_item" href="../homepage.html">Accueil</a>
+                <a class="headbar_item" href="search.html">Destinations</a>
+                <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+            </div>
+            <div class="headbar_right">
+                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
+                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+            </div>
         </div>
-        <div class="headbar_rest">
-            <a class="headbar_item" href="../homepage.html">Accueil</a>
-            <a class="headbar_item" href="search.html">Destinations</a>
-            <a class ="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
-        </div>
-        <div class="headbar_right">
-            <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-            <a href="userpage.html"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
-        </div>
-    </div>
-    <div class="user_container">
-    <div class="user_informations">
-        <ul class="menu_navigation">
-            <li class="info_link" id="info_link"><a href="userpage.html">Informations</a></li>
-            <li class="security_link" id="security_link"><a href="userpage_security.html">Sécurité</a></li>
-        </ul>
-    <hr>
+        <div class="user_container">
+            <div class="user_informations">
+                <ul class="menu_navigation">
+                    <li class="info_link" id="info_link"><a href="userpage.html">Informations</a></li>
+                    <li class="security_link" id="security_link"><a href="userpage_security.html">Sécurité</a></li>
+                </ul>
+                <hr>
 
-    <!-- User security menu (password) -->
-    <div class="user_security-menu">
-        <div class="password_fields">
-        <form method="post" action="#">
-            <div>
-                <label for="current_password">Mot de passe actuel</label><br><br>
-                <input type="password" id="current_password" maxlength="30" />
-            </div>
-            <div>
-                <label for="new_password">Nouveau mot de passe</label><br><br>
-                <input type="password" id="new_password" maxlength="30" />
-            </div>
-            <div>
-                <label for="confirmation_password">Confirmer le mot de passe</label><br><br>
-                <input type="password" id="confirmation_password"" maxlength="30" />
-            </div>
-            <div class="button_group">
-                <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
-                <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
+                <!-- User security menu (password) -->
+                <div class="user_security_menu">
+                    <div class="password_fields">
+                        <form method="post" action="#">
+                            <div>
+                                <label for="current_password">Mot de passe actuel</label><br><br>
+                                <input type="password" id="current_password" maxlength="30" />
+                            </div>
+                            <div>
+                                <label for="new_password">Nouveau mot de passe</label><br><br>
+                                <input type="password" id="new_password" maxlength="30" />
+                            </div>
+                            <div>
+                                <label for="confirmation_password">Confirmer le mot de passe</label><br><br>
+                                <input type="password" id="confirmation_password"" maxlength=" 30" />
+                            </div>
+                            <div class="button_group">
+                                <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
+                                <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
             </div>
         </div>
-        </form>
-    </div>
-    </div>
-</div>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-section">
-        <h3>À Propos</h3>
-        <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies. 
-        Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures adresses et activités exclusives. 
-        Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres détails. Votre aventure commence ici !
-        </p>
-    </div>
-    <div class="footer-section">
-        <h3>Nos Contacts</h3>
-        <ul class="other">
-            <li>Email: CyLanta@cy-tech.fr</li>
-            <li>Téléphone: +33 1 23 45 67 89</li>
-            <li>Adresse: Av. du Parc, 95000 Cergy</li>
-        </ul>
-    </div>
-    <div class="footer-section">
-        <h3>Nos Partenaires</h3>
-        <div class="partners">
-            <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/favicon.png" alt="Partenaire 1"></a>
-            <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2"></a>
-            <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3"></a>
-        </div>
-    </div>
-</footer>
+        <!-- Footer -->
+        <footer>
+            <div class="footer_section">
+                <h3>À Propos</h3>
+                <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
+                    Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les
+                    meilleures adresses et activités exclusives.
+                    Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les
+                    moindres détails. Votre aventure commence ici !
+                </p>
+            </div>
+            <div class="footer_section">
+                <h3>Nos Contacts</h3>
+                <ul class="other">
+                    <li>Email: CyLanta@cy-tech.fr</li>
+                    <li>Téléphone: +33 1 23 45 67 89</li>
+                    <li>Adresse: Av. du Parc, 95000 Cergy</li>
+                </ul>
+            </div>
+            <div class="footer_section">
+                <h3>Nos Partenaires</h3>
+                <div class="partners">
+                    <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/cy_favicon.png"
+                            alt="Partenaire 1"></a>
+                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png"
+                            alt="Partenaire 2"></a>
+                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg"
+                            alt="Partenaire 3"></a>
+                </div>
+            </div>
+        </footer>
 </body>
+
 </html>

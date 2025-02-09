@@ -6,7 +6,7 @@ body {
 
 /* Userpage informations */
 
-.user-container {
+.user_container {
     display: flex;
     width: 70%;
     gap: 15vh;
@@ -88,7 +88,7 @@ li a {
 
 /* Table showing user status (e.g. VIP, admin, etc.) */
 
-.subscription-table {
+.subscription_table {
     border-collapse: collapse;
     border-radius: 10px;
     border: 1px solid #dddddd;
@@ -97,7 +97,7 @@ li a {
     overflow: visible;
 }
 
-.subscription-table td {
+.subscription_table td {
     text-align: center;
     padding: 8%;
 }

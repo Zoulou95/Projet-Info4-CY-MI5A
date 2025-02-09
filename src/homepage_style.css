@@ -18,28 +18,27 @@
 }
 
 .whitebar {
-    width: 100%; 
-    height: 18vh; 
-    background-color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; 
+    height: 18vh; 
+    background-color: white; 
     padding: 0 1.5%;
 }
 
 .voyagebar {
-    width: 75%; /* Ajuste la largeur selon besoin */
-    max-width: 1200px; /* Empêche d'être trop large */
-    height: 80vh; /* Hauteur totale */
+    width: 75%;
+    max-width: 1200px;
+    height: 80vh;
     background-color: #21a9ff; 
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
     border-radius: 3%;
     padding: 1.5%;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    gap: 5vh; /* Espacement entre les blocs */
-
+    grid-template-columns: repeat(3, 1fr); /* Display in 3 equal columns */
+    gap: 5vh; /* Block spacing */
 
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -47,17 +46,7 @@
     margin-right: auto;
 }
 
-/* Autre */
-
-.information {
-    width: 100%; 
-    height: 50vh; 
-    background-color: brown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5%;
-}
+/* Other */
 
 .left_infobox {
     position: inherit;
@@ -70,6 +59,7 @@
 }
 
 /* Image */
+
 .image_container {
     position: relative;
     width: 100%;
@@ -81,7 +71,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 2;
-    filter: brightness(65%);
+    filter: brightness(92.5%);
 }
 
 .text_overlay {
@@ -109,19 +99,24 @@
     animation: fadeInUp 1.5s;
 }
 
-.btn-explorer {
+.btn_explorer {
     display: inline-block;
     background: #21a9ff;
     color: #fff;
-    padding: 10px 30px;
+    padding: 15px 45px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    font-size:4vh;
 }
 
-.btn-explorer:hover {
+.btn_explorer:hover {
     background: #198fd9;
+}
+
+.btn_explorer:active {
+    border: 2.5px solid #ffffff;
 }
 
 /*Overlay*/
@@ -140,11 +135,13 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 .overlay.active {
     visibility: visible;
     opacity: 1;
 }
-.overlay-content {
+
+.overlay_content {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -152,13 +149,15 @@
     text-align: center;
     position: relative;
 }
-.close-btn {
+
+.close_btn {
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 18px;
     cursor: pointer;
 }
+
 input {
     width: 100%;
     padding: 8px;
@@ -166,6 +165,12 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+input:focus {
+    border: 2px solid #21a9ff;
+    outline: none;
+}
+
 button {
     background: #21a9ff;
     color: white;
@@ -176,29 +181,38 @@ button {
     width: 100%;
 }
 
+button:hover {
+    background: #1a89ce;
+}
+
+button:active {
+    border: 1px solid #000000;
+}
+
 body.no-scroll {
     overflow: hidden;
 }
 
-/* Script Connexion inscription*/
+/* Script for login in sign in */
 
-.switch-text {
+.switch_text {
     font-size: 14px;
     margin-top: 10px;
 }
 
-.switch-text a {
+.switch_text a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.switch-text a:hover {
+.switch_text a:hover {
     text-decoration: underline;
 }
 
 /* Animations */
 
+/* Dynamically display the central text bit by bit */
 @keyframes fadeInUp {
     0% {
         transform: translate(-50%, 20%);
@@ -209,6 +223,3 @@ body.no-scroll {
         opacity: 1;
     }
 }
-
-
-

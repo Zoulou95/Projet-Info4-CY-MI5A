@@ -65,7 +65,7 @@ body {
     position: relative;
 }
 
-.dropdown-button {
+.dropdown_button {
     height: 65px;
     padding: 0 30px;
     background-color: #21a9ff;
@@ -77,17 +77,17 @@ body {
     white-space: nowrap;
 }
 
-.dropdown-button:focus, .dropdown-button:active {
+.dropdown_button:focus, .dropdown_button:active {
     border: solid 2px #ffffff;
     outline: none;
 }
 
-.type-button::after, .price-button::after {
-    content: " ⏷"; /* Down arrow added */
+.type_button::after, .price_button::after {
+    content: " ⏷"; /* Down arrow added to indicate that this is a drop-down list */
     color: #ffffff;
 }
 
-.dropdown-content {
+.dropdown_content {
     position: absolute;
     top: 7vh; /* Shift under the button */
     left: 0;
@@ -100,23 +100,24 @@ body {
     font-size: 2vh;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block; /* Display menu on hover */
+.dropdown:hover .dropdown_content {
+    display: block;
 }
 
-/* Style des labels et checkboxes */
+/* Style of labels and checkboxes */
 
-.dropdown-content label {
+.dropdown_content label {
     display: flex;
-    align-items: center; /* Aligne verticalement les cases et le texte */
-    gap: 8px; /* Espacement entre la case et le texte */
-    margin-bottom: 10px; /* Espacement entre les labels */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
     font-size: 1em;
     cursor: pointer;
     white-space: nowrap;
 }
 
-/* Bouton "Rechercher" */
+/* "Search" button */
+
 .search_bar_submit {
     height: 65px;
     padding: 0 30px;
@@ -137,32 +138,35 @@ body {
     border: solid 2px #ffffff;
 }
 
-/* Conteneur pour le champ date */
-.date-container {
+/* Container for date field */
+
+.date_container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Rectangle bleu englobant */
-.date-box {
-    border-radius: 8px; /* Coins arrondis */
-    height: 65px; /* Même hauteur que les autres boutons */
-    width: 10vw; /* Largeur ajustée */
+/* Blue rectangle enclosing */
+
+.date_box {
+    border-radius: 8px;
+    height: 65px;
+    width: 10vw;
     font-size: 2.5vh;
 }
 
-/* Style du champ date */
-.date-input {
-    width: 100%; /* Adapte à la largeur du conteneur */
-    height: 100%; /* Remplit la hauteur du conteneur */
-    border: none; /* Supprime la bordure */
-    border-radius: 5px; /* Coins arrondis */
+/* Date field style */
+
+.date_input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
     font-size: 1.07em;
-    text-align: center; /* Centre le texte dans la case */
-    background-color: #21a9ff; /* Fond bleu */
-    color: white; /* Texte blanc */
-    cursor: pointer; /* Ajoute un curseur interactif */
+    text-align: center;
+    background-color: #21a9ff;
+    color: white;
+    cursor: pointer; /* Adds an interactive cursor */
 }
 
 /* Footer */

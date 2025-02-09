@@ -19,6 +19,10 @@ The website of CyLanta, a travel agency based in Cergy, offers trips to the isla
 
 To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4-CY-MI5A`.
 
+## Utilisation
+
+To explore the site, you can open the `homepage.html` file, which will redirect you to other pages.
+
 ## Languages used
 
 - HTML5
@@ -31,7 +35,7 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 📦 Project folder
 ├── 📄 CyLanta_Graphic_Chart.pdf 
 ├── 📄 homepage.html
-├── 📂 test
+├── 📂 tests
 ├── 📂 assets
 │   ├── 🖼️ images
 │   └── 🎬 video
