@@ -29,21 +29,23 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 
 ```
 📦 Project folder
-├── 📄 CyLanta_Graphic_Chart.pdf
+├── 📄 CyLanta_Graphic_Chart.pdf 
 ├── 📄 homepage.html
 ├── 📂 test
-└── 📂 src
-    ├── 📄 advanced_search.html
-    ├── 📄 search.html
-    ├── 📄 userpage.html
-    ├── 📄 userpage_security.html (temporary)
-    ├── 🎨 advanced_search_style.css
-    ├── 🎨 search_style.css
-    ├── 🎨 userpage_security_style.css (temporary)
-    ├── 🎨 userpage_style.css
-    └── 📂 assets
-        ├── 🖼️ images
-        ├── 🎬 videos
+├── 📂 assets
+│   ├── 🖼️ images
+│   └── 🎬 video
+├── 📂 src
+│   ├── 📄 admin_panel.html
+│   ├── 📄 advanced_search.html
+│   ├── 📄 search.html
+│   ├── 📄 userpage.html
+│   ├── 📄 userpage_security.html
+│   ├── 🎨 admin_panel_style.css
+│   ├── 🎨 advanced_search_style.css
+│   ├── 🎨 search_style.css
+│   ├── 🎨 userpage_security_style.css
+│   ├── 🎨 userpage_style.css
 ```
 
 ## Overview
@@ -59,4 +61,4 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 - `userpage.html` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
 
 - `userpage_security.html` allows the user to modify his password.
-**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript)
+**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript).
