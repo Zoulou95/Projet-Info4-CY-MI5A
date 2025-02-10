@@ -1,0 +1,222 @@
+<!-- advanced_search.html : search for a trip based on specific characteristics -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>CyLanta</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="CyLanta travel agency website" />
+    <meta name="author" content="Developped by MI5-A TEAM" />
+    <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
+    <link rel="icon" type="image/png" href="../assets/ico_island.png" />
+    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="advanced_search_style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation bar -->
+        <div class="headbar">
+            <div class="headbar_left">
+                <a href="../homepage.html">
+                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="Logo created by MI-A team" />
+                </a>
+            </div>
+            <div class="headbar_rest">
+                <a class="headbar_item" href="../homepage.html">Accueil</a>
+                <a class="headbar_item" href="search.html">Destinations</a>
+                <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+            </div>
+            <div class="headbar_right">
+                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
+                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+            </div>
+        </div>
+        <img class="background_img" src="../assets/tahiti_beach.jpg" />
+        <div class="text_above">Trouvez votre escapade idéale en quelques clics</div>
+        <div class="search_bar">
+            <form class="search_bar_form" method="get">
+                <table class="search_bar_tab">
+                    <tr>
+                        <!-- Search bar -->
+                        <td>
+                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une destination..." />
+                            <datalist id="destinations">
+                                <option value="Tahiti"></option>
+                                <option value="Bora Bora"></option>
+                                <option value="Moorea"></option>
+                                <option value="Huahine"></option>
+                                <option value="Raiatea"></option>
+                                <option value="Taha'a"></option>
+                            </datalist>
+                        </td>
+                        <!-- Drop-down list to select a trip -->
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="dropdown_button price_button">Prix</button>
+                                <div class="dropdown_content price_content">
+                                    <label>
+                                        <input type="checkbox" name="price_range" value="moins_500" /> Moins de 500€
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="price_range" value="500_1000" /> 500€ - 1000€
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="price_range" value="1000_2000" /> 1000€ - 2000€
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="price_range" value="plus_2000" /> Plus de 2000€
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <!-- Type of trip selection -->
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="dropdown_button type_button">Type de voyage</button>
+                                <div class="dropdown_content type_content">
+                                    <label>
+                                        <input type="checkbox" name="travel_type" value="noces" /> Voyage de Noces
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="travel_type" value="famille" /> Voyage à plusieurs
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="travel_type" value="famille" /> Voyage entre amis
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="travel_type" value="famille" /> Voyage en famille
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="travel_type" value="famille" /> Séjour de luxe
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <!-- Date selection -->
+                        <td>
+                            <div class="date_container">
+                                <div class="date_box">
+                                    <input type="date" name="date" id="date_input" class="date_input" />
+                                </div>
+                            </div>
+                        </td>
+                        <!-- Duration selection -->
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="dropdown_button duration_button">Durée</button>
+                                <div class="dropdown_content duration_content">
+                                    <label>
+                                        <input type="number" name="travel_length" value="duree" min="3" max="15" step="1" />
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <!-- Submit button -->
+                        <td>
+                            <button type="submit" class="search_bar_submit">Rechercher</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <footer>
+            <div class="footer_section">
+                <h3>À Propos</h3>
+                <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
+                    Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les
+                    meilleures adresses et activités exclusives.
+                    Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les
+                    moindres détails. Votre aventure commence ici !
+                </p>
+            </div>
+            <div class="footer_section">
+                <h3>Nos Contacts</h3>
+                <ul class="autre">
+                    <li>Email: CyLanta@cy-tech.fr</li>
+                    <li>Téléphone: +33 1 23 45 67 89</li>
+                    <li>Adresse: Av. du Parc, 95000 Cergy</li>
+                </ul>
+            </div>
+            <div class="footer_section">
+                <h3>Nos Partenaires</h3>
+                <div class="partners">
+                    <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/cy_favicon.png" alt="Partenaire 1" /></a>
+                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2" /></a>
+                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3" /></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script to display drop-down lists -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to manage the display of drop-down lists
+            function setupDropdown(buttonClass, contentClass) {
+                const dropdownButton = document.querySelector(`.${buttonClass}`);
+                const dropdownContent = document.querySelector(`.${contentClass}`);
+
+                if (dropdownButton && dropdownContent) {
+                    dropdownButton.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Prevents immediate closing
+                        const isVisible = dropdownContent.style.display === "block";
+                        closeAllDropdowns(); // Closes all other menus
+                        dropdownContent.style.display = isVisible ? "none" : "block"; // Toggle display
+                    });
+
+                    dropdownContent.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Prevents closing on internal click
+                    });
+                }
+            }
+
+            // Function to close all dropdowns
+            function closeAllDropdowns() {
+                document.querySelectorAll(".dropdown_content").forEach(content => {
+                    content.style.display = "none";
+                });
+            }
+
+            // Close menus when clicked elsewhere
+            document.addEventListener("click", closeAllDropdowns);
+
+            // Initialize dropdowns
+            setupDropdown("price_button", "price_content");
+            setupDropdown("type_button", "type_content");
+            setupDropdown("duration_button", "duration_content");
+        });
+    </script>
+
+    <!-- Script for entering a valid travel time -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const durationInput = document.querySelector('input[name="travel_length"]');
+            const durationButton = document.querySelector('.duration_button');
+
+            // Updates the button with the selected duration
+            durationInput.addEventListener("input", function () {
+                let value = parseInt(durationInput.value, 10);
+
+                // Check that the value is a number between 3 and 15
+                if (!isNaN(value)) {
+                    if (value < 3) {
+                        durationInput.value = 3;
+                    }
+                    else if (value > 15) {
+                        durationInput.value = 15;
+                    }
+                }
+
+                // Updates the button when a number of days is entered
+                if (durationInput.value) {
+                    durationButton.textContent = durationInput.value + " J";
+                } else {
+                    durationButton.textContent = "Durée";
+                }
+            });
+        });
+    </script>
+
+</html>

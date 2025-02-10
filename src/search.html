@@ -1,0 +1,144 @@
+<!-- search.html : allow the user to search for a non-specific trip using a destination -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>CyLanta</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="CyLanta travel agency website" />
+    <meta name="author" content="Developped by MI5-A TEAM" />
+    <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
+    <link rel="icon" type="image/png" href="../assets/ico_island.png" />
+    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="search_style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation bar -->
+        <div class="headbar">
+            <div class="headbar_left">
+                <a href="../homepage.html">
+                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="Logo created by MI-A team" />
+                </a>
+            </div>
+            <div class="headbar_rest">
+                <a class="headbar_item" href="../homepage.html">Accueil</a>
+                <a class="headbar_item" href="search.html">Destinations</a>
+                <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+            </div>
+            <div class="headbar_right">
+                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
+                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+            </div>
+        </div>
+
+        <!-- Quick search implementation -->
+        <video autoplay muted loop id="background-video">
+            <source src="../assets/island_loop_video.mp4" type="video/mp4">
+            <p class="error_text">Votre navigateur ne supporte pas la vidéo</p>
+        </video>
+        <div class="text_above">L'aventure vous attend, où allons-nous ?</div>
+        <div class="search_overlay">
+            <form class="search_form" method="get">
+                <input class="search_input" list="destinations" placeholder="Où souhaitez-vous aller ? 🔎" />
+                <datalist id="destinations">
+                    <option value="Tahiti"></option>
+                    <option value="Bora Bora"></option>
+                    <option value="Moorea"></option>
+                    <option value="Huahine"></option>
+                    <option value="Raiatea"></option>
+                    <option value="Taha'a"></option>
+                </datalist>
+                <button class="button_validate" type="submit">Rechercher</button>
+            </form>
+        </div>
+    </div>
+    <div class="advanced_search_block">
+        <img class="trip_img" src="../assets/trip_img.jpg" alt="Image of a hotel in Bora Bora" />
+        <div class="advanced_search_text">
+            <p>Vous cherchez un voyage en particulier ?</p>
+            <button class="advanced_search_button">
+                <a href="advanced_search.html">Cliquez ici pour accéder à la recherche avancée</a>
+                <img class="advanced_search_image" src="../assets/magnifying_glass_logo.png" />
+            </button>
+        </div>
+    </div>
+
+    <!-- Quick access to destinations -->
+    <div class="whitebar_destination">
+        <div class="card">
+            <img src="../assets/tahiti_img.jpg" alt="tahiti" />
+            <div class="card_content">
+                <h2>TAHITI</h2>
+                <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
+                <a href="#" class="explore">➤ Découvrir</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/borabora_img.jpg" alt="bora-bora" />
+            <div class="card_content">
+                <h2>BORA BORA</h2>
+                <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
+                <a href="#" class="explore">➤ Découvrir</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/huahine_img.jpg" alt="huahine" />
+            <div class="card_content">
+                <h2>HUAHINE</h2>
+                <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
+                <a href="#" class="explore">➤ Découvrir</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/raiatea_img.jpg" alt="raiatea" />
+            <div class="card_content">
+                <h2>RAIATEA</h2>
+                <p>Vivez une escapade inoubliable au sein d'un lagon aux mille nuances de bleu.</p>
+                <a href="#" class="explore">➤ Découvrir</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/taha-a_img.jpg" alt="taha-a" />
+            <div class="card_content">
+                <h2>TAHA'A</h2>
+                <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu'un.</p>
+                <a href="#" class="explore">➤ Découvrir</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_section">
+            <h3>À Propos</h3>
+            <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
+                Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures
+                adresses et activités exclusives.
+                Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres
+                détails. Votre aventure commence ici !
+            </p>
+        </div>
+        <div class="footer_section">
+            <h3>Nos Contacts</h3>
+            <ul class="autre">
+                <li>Email: CyLanta@cy-tech.fr</li>
+                <li>Téléphone: +33 1 23 45 67 89</li>
+                <li>Adresse: Av. du Parc, 95000 Cergy</li>
+            </ul>
+        </div>
+        <div class="footer_section">
+            <h3>Nos Partenaires</h3>
+            <div class="partners">
+                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/cy_favicon.png" alt="Partenaire 1" /></a>
+                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2" /></a>
+                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3" /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
