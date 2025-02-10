@@ -59,7 +59,7 @@ h1 {
     gap: 2vh;
 }
 
-.info_link, .security_link {
+.info_link, .security_link, .admin_pannel_link {
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -69,7 +69,7 @@ li a {
     text-decoration: none;
 }
 
-.info_link:hover, .security_link:hover {
+.info_link:hover, .security_link:hover, .admin_pannel_link:hover {
     text-decoration: underline;
     color: #10689f;
 }
