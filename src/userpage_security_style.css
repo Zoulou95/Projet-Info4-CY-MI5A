@@ -23,9 +23,6 @@ body {
     display: flex;
     list-style: none;
     gap: 2vh;
-}
-
-.info_link, .security_link {
     font-size: 1.5vw;
     font-weight: 100;
 }

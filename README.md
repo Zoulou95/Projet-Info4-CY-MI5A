@@ -33,7 +33,7 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 
 ```
 📦 Project folder
-├── 📄 CyLanta_Graphic_Chart.pdf 
+├── 📄 CyLanta_Charte_Graphique.pdf 
 ├── 📄 homepage.html
 ├── 📂 tests
 ├── 📂 assets
