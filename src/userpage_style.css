@@ -69,6 +69,9 @@ h1 {
     display: flex;
     list-style: none;
     gap: 2vh;
+}
+
+.info_link, .security_link, .admin_panel_link {
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -78,9 +81,9 @@ li a {
     text-decoration: none;
 }
 
-.info_link:hover, .security_link:hover {
-    color: #10689f;
+.info_link:hover, .security_link:hover, .admin_panel_link:hover {
     text-decoration: underline;
+    color: #10689f;
 }
 
 /* Table showing user status (e.g. VIP, admin, etc.) */
@@ -104,7 +107,7 @@ li a {
 }
 
 .cell2 {
-    color: #d4af37;
+    color: red;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
     background-color: #eeeeee;
 }
