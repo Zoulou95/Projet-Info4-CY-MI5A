@@ -6,7 +6,7 @@
     <title>CyLanta</title>
     <meta name="description" content="CyLanta travel agency website" />
     <meta name="author" content="Developped by MI5-A TEAM" />
-    <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances" />
+    <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, CyLanta, voyage Cergy" />
     <link rel="icon" type="image/png" href="assets/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="src/base_style.css" />
     <link rel="stylesheet" type="text/css" href="src/homepage_style.css" />
@@ -125,11 +125,11 @@
             <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
             <h2>Inscription</h2>
             <form>
-                <input type="text" placeholder="Prénom" required>
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mot de passe" required>
-                <input type="tel" placeholder="Numéro de téléphone" required>
+                <input type="text" placeholder="Prénom" required />
+                <input type="text" placeholder="Nom" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Mot de passe" required />
+                <input type="tel" placeholder="Numéro de téléphone" required />
                 <button type="submit">S'inscrire</button>
                 <p class="switch_text">
                     Vous avez deja un compte ?
@@ -144,8 +144,8 @@
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
             <form>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mot de passe" required>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Mot de passe" required />
                 <button type="submit">Se connecter</button>
                 <p class="switch_text">
                     Vous n'avez pas de compte ?
@@ -155,9 +155,11 @@
         </div>
     </div>
         <script>
+            //Functions for displaying the registration and login overlay
+
             function openSignUpOverlay(event) {
-                if (event) event.preventDefault(); // Empêche le changement de page
-                closeSignInOverlay(); // Ferme l'autre overlay
+                if (event) event.preventDefault(); // Prevents page change
+                closeSignInOverlay(); // Close the other overlay
                 document.getElementById("signupOverlay").classList.add("active");
                 document.body.classList.add("no-scroll");
             }
@@ -166,10 +168,10 @@
                 document.getElementById("signupOverlay").classList.remove("active");
                 document.body.classList.remove("no-scroll");
             }
-
+            
             function openSignInOverlay(event) {
-                if (event) event.preventDefault(); // Empêche le changement de page
-                closeSignUpOverlay(); // Ferme l'autre overlay
+                if (event) event.preventDefault(); // Prevents page change
+                closeSignUpOverlay(); // Close the other overlay
                 document.getElementById("signinOverlay").classList.add("active");
                 document.body.classList.add("no-scroll");
             }
@@ -178,13 +180,15 @@
                 document.getElementById("signinOverlay").classList.remove("active");
                 document.body.classList.remove("no-scroll");
             }
+
             function switchToSignUp() {
-                closeSignInOverlay(); // Ferme l'overlay de connexion
-                openSignUpOverlay();  // Ouvre l'overlay d'inscription
+                closeSignInOverlay(); // // Close the login overlay
+                openSignUpOverlay(); // Open registration overlay 
             }
+
             function switchToSignIn() {
-                closeSignUpOverlay(); // Ferme l'overlay d'inscription
-                openSignInOverlay();  // Ouvre l'overlay de connexion       
+                closeSignUpOverlay(); // Close registration overlay
+                openSignInOverlay();  // Open login overlay    
             }
         </script>
     </div>
