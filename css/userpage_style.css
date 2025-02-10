@@ -71,7 +71,11 @@ h1 {
     gap: 2vh;
 }
 
+<<<<<<< HEAD:css/userpage_style.css
 .info_link, .security_link, .admin_panel_link {
+=======
+.info_link, .security_link, .admin_pannel_link {
+>>>>>>> 4b02307 (Admin pannel v1 on va dire):src/userpage_style.css
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -81,7 +85,11 @@ li a {
     text-decoration: none;
 }
 
+<<<<<<< HEAD:css/userpage_style.css
 .info_link:hover, .security_link:hover, .admin_panel_link:hover {
+=======
+.info_link:hover, .security_link:hover, .admin_pannel_link:hover {
+>>>>>>> 4b02307 (Admin pannel v1 on va dire):src/userpage_style.css
     text-decoration: underline;
     color: #10689f;
 }
