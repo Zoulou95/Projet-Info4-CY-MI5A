@@ -123,8 +123,8 @@
 }
 
 .user_img_nav {
-    max-width: 55px;
-    max-height: 55px;
+    max-width: 7vh;
+    max-height: 7vh;
     border-radius: 50%;
     border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
