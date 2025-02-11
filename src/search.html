@@ -2,7 +2,6 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <title>CyLanta</title>
     <meta charset="utf-8" />
@@ -13,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="search_style.css" />
 </head>
-
 <body>
     <div class="container">
         <!-- Navigation bar -->
@@ -55,11 +53,14 @@
             </form>
         </div>
     </div>
+    
     <div class="advanced_search_block">
         <img class="trip_img" src="../assets/trip_img.jpg" alt="Image of a hotel in Bora Bora" />
         <div class="advanced_search_text">
             <p>Vous cherchez un voyage en particulier ?</p>
-            <button class="advanced_search_button">
+
+            <!-- We use 'oneclick' so when the button is clicked, it takes you to advanced_search.html -->
+            <button class="advanced_search_button" onclick="window.location.href='advanced_search.html'">
                 <a href="advanced_search.html">Cliquez ici pour accéder à la recherche avancée</a>
                 <img class="advanced_search_image" src="../assets/magnifying_glass_logo.png" />
             </button>

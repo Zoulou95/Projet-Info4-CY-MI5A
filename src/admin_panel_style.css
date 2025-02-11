@@ -6,31 +6,30 @@ body {
 
 /* Admin panel style */
 
+/* We use Flexbox for efficient and responsive element alignment */
 .user_container {
-    width: 70%;
     display: flex;
-    gap: 10vh;
-    justify-content: center;
-    align-self: center;
-    margin-top: 4%;
-    border: solid 3px #383838;
-    padding: 5%;
-    border-radius: 20px;
-    background-color: #ffffff;
-    margin-bottom: 4%;
     flex-direction: column;
+    padding: 5%;
+    width: 70%;
+    gap: 10vh;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: solid 3px #383838; /* anthracite */
+    border-radius: 20px;
+    background-color: #ffffff; /* white */
 }
 
 .user {
-    background-color: #21a9ff;
-    padding: 25px;
-    border-radius: 50px;
     display: flex;
     align-items: center;
+    background-color: #21a9ff; /* light blue */
+    padding: 25px;
+    border-radius: 50px;
     gap: 7vh;
     color: white;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 3.5vh;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -47,8 +46,6 @@ body {
     outline: 1px solid #dddddd;
     width: 5vw;
     height: 5vw;
-    max-width: 250px;
-    max-height: 250px;
     cursor: pointer;
 }
 
@@ -56,12 +53,13 @@ body {
     width: 15vh;
     height: 8vh;
     font-family: Arial;
-    background-color: #ff0000;
+    background-color: #ff0000; /* red */
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 2vh;
 }
 
 .user_ban_button:hover {
@@ -77,9 +75,10 @@ body {
 .user_privilege_dropdown {
     width: 20vh;
     height: 3.2vh;
+    font-size: 2.25vh;
 }
-/* NOTE : We need javascript to make the colors differ on the dropdown menu according to the user's rank (red for admin, ...) */
 
+/* NOTE : We need javascript to make the colors differ on the dropdown menu according to the user's rank (red for admin, ...) */
 /* Text color */
 
 .admin_text {
@@ -87,5 +86,5 @@ body {
 }
 
 .vip_text {
-    color: #ffff00;
+    color: #ffff00; /* yellow */
 }
