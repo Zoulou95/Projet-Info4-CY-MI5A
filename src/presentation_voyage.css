@@ -1,4 +1,3 @@
-/* Conteneur parent pour aligner l'image et la description */
 .image-container {
     display: flex;
     align-items: center; /* Centre verticalement l'image et le texte */
@@ -25,6 +24,38 @@
 /* Ajustement du h2 pour l'aligner avec l'image */
 .description h2 {
     text-align: center;
-    margin-top: 0; /* Supprime l’espace au-dessus du h2 */
+
+    margin-bottom: 6vh;
 }
 
+.tableau {
+    float: left; /* Place le tableau à gauche */
+    margin-top: 20px; /* Espacement avec l'image */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tableau table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size:2.2vh;
+}
+
+.tableau th {
+    background-color: #21a9ff; /* Bleu en accord avec la barre de navigation */
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px 5px 0 0;
+}
+
+.tableau td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.tableau tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
