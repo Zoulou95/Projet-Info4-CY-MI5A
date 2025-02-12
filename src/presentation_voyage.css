@@ -1,0 +1,30 @@
+/* Conteneur parent pour aligner l'image et la description */
+.image-container {
+    display: flex;
+    align-items: center; /* Centre verticalement l'image et le texte */
+    justify-content: flex-start; /* Garde l'alignement à gauche */
+    padding-left: 40px; /* Ajoute un espace à gauche pour éloigner l'image du bord */
+}
+
+/* Style de l'image */
+.tahiti_img {
+    width: 50%; /* Ajuste la taille selon tes besoins */
+    height: 60vh;
+    border-radius: 20px;
+    margin-right: 40px; /* Augmente l'espace entre l'image et le texte */
+}
+
+/* Style du texte */
+.description {
+    flex: 1; /* Permet au texte de prendre l'espace restant */
+    text-align: left; /* Alignement du texte à gauche */
+    font-size:2.5vh;
+    margin-right:10px;
+}
+
+/* Ajustement du h2 pour l'aligner avec l'image */
+.description h2 {
+    text-align: center;
+    margin-top: 0; /* Supprime l’espace au-dessus du h2 */
+}
+
