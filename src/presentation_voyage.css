@@ -70,3 +70,11 @@
     padding: 0 1.5%;
 }
 
+.tableau select, 
+.tableau input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+

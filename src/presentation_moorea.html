@@ -50,22 +50,42 @@
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Prix</th>
+                        <th>Chambre</th>
+                        <th>Pension</th>
                         <th>Spécialité</th>
-                        <th>Note de CyLanta</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>N/A</td>
-                        <td>400€</td>
-                        <td>Noces</td>
-                        <td>⭐ 4/5</td>
+                        <td>
+                            <input type="date" name="date_voyage">
+                        </td>
+                        <td>
+                            <select name="chambre">
+                                <option value="1_lit">1 lit</option>
+                                <option value="2_lits">2 lits</option>
+                                <option value="3_lits">3 lits</option>
+                                <option value="4_lits">4 lits</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pension">
+                                <option value="petit_dejeuner">Petit déjeuner</option>
+                                <option value="pension_complete">Pension complète</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="specialite">
+                                <option value="noces">Noces</option>
+                                <option value="amis">Voyage entre amis</option>
+                            </select>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    
 
       </div>       
     <!-- Footer -->
