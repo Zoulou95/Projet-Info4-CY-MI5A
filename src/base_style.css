@@ -122,8 +122,8 @@
 }
 
 .user_img_nav {
-    max-width: 7vh;
-    max-height: 7vh;
+    max-width: 6.5vw;
+    max-height: 6.5vh;
     border-radius: 50%;
     border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
@@ -238,7 +238,7 @@ footer {
 }
 
 .partners img {
-    width: 7.5vh;
+    width: 4vw;
     height: auto;
     border-radius: 5px;
     margin-top: 2vh;
