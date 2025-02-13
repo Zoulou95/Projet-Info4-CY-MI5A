@@ -16,9 +16,10 @@
 /* Style du texte */
 .description {
     flex: 1; /* Permet au texte de prendre l'espace restant */
-    text-align: left; /* Alignement du texte à gauche */
+    text-align: justify; /* Alignement du texte à gauche */
     font-size:2.5vh;
     margin-right:10px;
+
 }
 
 /* Ajustement du h2 pour l'aligner avec l'image */
@@ -59,3 +60,13 @@
 .tableau tbody tr:hover {
     background-color: rgba(0, 123, 255, 0.1);
 }
+
+.separate_presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 21vh; 
+    padding: 0 1.5%;
+}
+
