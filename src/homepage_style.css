@@ -110,7 +110,7 @@
     font-weight: bold;
     transition: 0.3s;
     font-size:4vh;
-    width: 20vw;
+    width: 40vh;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -211,6 +211,13 @@ body.no-scroll {
 
 .switch_text a:hover {
     text-decoration: underline;
+}
+
+.signin_radio {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+    gap: 1.5rem;
 }
 
 /* Animations */

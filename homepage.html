@@ -124,7 +124,15 @@
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
             <h2>Inscription</h2>
-            <form>
+            <form><br />
+                <div class="signin_radio">
+                    <input type="radio" id="homme" name="contact" />
+                    <label for="homme">Homme</label>
+                    <input type="radio" id="femme" name="contact" />
+                    <label for="femme">Femme</label>
+                    <input type="radio" id="autre" name="contact" />
+                    <label for="autre">Autre</label>
+                </div>
                 <input type="text" placeholder="Prénom" required />
                 <input type="text" placeholder="Nom" required />
                 <input type="email" placeholder="Email" required />
