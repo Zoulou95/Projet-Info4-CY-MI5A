@@ -21,7 +21,7 @@ To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4
 
 ## Utilisation
 
-To explore the site, you can open the `homepage.html` file, which will redirect you to other pages.
+To explore the site, you can open the `homepage.html` file, which will redirect you to all the other pages.
 
 ## Languages used
 
@@ -32,13 +32,13 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 ## Project structure
 
 ```
-📦 Project folder
-├── 📄 CyLanta_Charte_Graphique.pdf 
-├── 📄 homepage.html
-├── 📂 tests
 ├── 📂 assets
 │   ├── 🖼️ images
 │   └── 🎬 video
+├── 📂 destinations
+│   ├── 📄 presentation_tahiti.html
+│   ├── 📄 presentation_travel_style.css
+│   └── ....
 ├── 📂 src
 │   ├── 📄 admin_panel.html
 │   ├── 📄 advanced_search.html
@@ -47,12 +47,22 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 │   ├── 📄 userpage_security.html
 │   ├── 🎨 admin_panel_style.css
 │   ├── 🎨 advanced_search_style.css
+│   ├── 🎨 base_style.css
 │   ├── 🎨 search_style.css
 │   ├── 🎨 userpage_security_style.css
 │   ├── 🎨 userpage_style.css
+├── 📂 tests
+│   ├── 🖼️ screenshots
+├── 📄 CyLanta_Charte_Graphique.pdf
+├── 📄 homepage.html
+├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
 ## Overview
+
+- `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
+
+- `presentation_travel_style.css` is the default style sheet for all presentation pages located in `/destination`.
  
 - The page `homepage.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 
@@ -66,3 +76,5 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 
 - `userpage_security.html` allows the user to modify his password.
 **NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript).
+
+- The presentations pages in the `/destinations` folder are used to display and present the various holidays available and their characteristics (price, user ratings, etc.).
