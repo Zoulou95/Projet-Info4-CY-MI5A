@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    object-fit: cover;
+    object-fit: cover; /* Makes an image fill its container without distortion */
     z-index: -1; /* Places video in background */
 }
 
@@ -24,7 +24,7 @@
     animation: fadeInUp 1.5s ease-out forwards;
 }
 
-/* Quicksearch overlay style */
+/* Destination search overlay style */
 
 .search_overlay {
     position: absolute;

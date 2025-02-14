@@ -155,9 +155,9 @@ button {
     width: 50%;
     height: 10vh;
 
-    border: solid orange;
+    border: solid #ffa500;
+    background-color: #ffa500;
     border-radius: 10px;
-    background-color: orange;
 
     text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
 
@@ -180,8 +180,9 @@ button:active {
 }
 
 button:hover {
-    background-color: darkorange;
-    border: solid darkorange;
+    background-color: #ff8c00; /* dark orange color */
+    border: solid #ff8c00;
     animation: pulse 1.5s infinite;
     cursor: pointer;
 }
+

@@ -1,7 +1,8 @@
 /* advanced_search_style.css */
 
 body {
-    background-color: #87c2e7;
+    background: url("../assets/tahiti_beach.jpg") center fixed; /* Set an image as the background */
+    background-size: cover;
 }
 
 /* Main container */

@@ -48,7 +48,7 @@
 }
 
 .centerbar_text {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 4vh;
     font-weight: bold;
@@ -81,10 +81,10 @@
 }
 
 .headbar_item {
-    color: white;
-    text-decoration: none;
+    color: #ffffff;
     font-size: 2.7vh;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .headbar_item:hover {
@@ -94,7 +94,7 @@
 .headbar_logo {
     font-size: 3vh;
     font-weight: bold;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -145,11 +145,11 @@
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Card presenting destinations */
+/* Card presenting destinations (present on homepage.html and search.html)  */
 
 .card {
     width: 350px;
-    background: white;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -192,7 +192,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #21a9ff;
-    color: white;
+    color: #ffffff;
     padding: 20px 10%;
     width:100%;
     height: 40vh;
@@ -218,8 +218,7 @@ footer {
 
 .footer_section p, .footer_section ul {
     font-size: 1.6vh;
-    color: #bbb;
-
+    color: #ffffff;
 }
 
 .footer_section ul {
@@ -242,6 +241,15 @@ footer {
     height: auto;
     border-radius: 5px;
     margin-top: 2vh;
+}
+
+.other a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.other a:hover{
+    text-decoration: underline;
 }
 
 /* Animation */
