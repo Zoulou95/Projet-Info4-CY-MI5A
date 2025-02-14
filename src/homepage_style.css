@@ -102,7 +102,7 @@
 .btn_explorer {
     display: inline-block;
     text-align: center;
-    background: #21a9ff;
+    background: orange;
     color: #fff;
     padding: 15px 45px;
     border-radius: 25px;
@@ -115,7 +115,7 @@
 }
 
 .btn_explorer:hover {
-    background: #198fd9;
+    background: darkorange;
 }
 
 .btn_explorer:active {

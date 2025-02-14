@@ -37,7 +37,7 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 │   └── 🎬 video
 ├── 📂 destinations
 │   ├── 📄 presentation_tahiti.html
-│   ├── 📄 presentation_travel_style.css
+│   ├── 📄 presentation_style.css
 │   └── ....
 ├── 📂 src
 │   ├── 📄 admin_panel.html
@@ -62,7 +62,7 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 
 - `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
 
-- `presentation_travel_style.css` is the default style sheet for all presentation pages located in `/destination`.
+- `presentation_style.css` is the default style sheet for all presentation pages located in `/destination`.
  
 - The page `homepage.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 

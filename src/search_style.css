@@ -130,6 +130,7 @@
 
 .advanced_search_button:hover {
     animation: pulse 1.5s infinite;
+    cursor: pointer;
 }
 
 .advanced_search_image {
