@@ -1,6 +1,6 @@
 # Click-journeY
 
-The website of CyLanta, a travel agency based in Cergy, offers trips to the islands of French Polynesia.
+The website of CyLanta, a travel agency based in Cergy.
 
 **PREING-2 INFORMATIQUE IV PROJECT**.  
 **Developed by MI-5 group A**.
@@ -11,23 +11,27 @@ The website of CyLanta, a travel agency based in Cergy, offers trips to the isla
 - Nathan CHOUPIN
 - Ziyad HADDADI
 
-## Prerequisites
+## About CyLanta
 
-- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
-
-## Installation
-
-To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4-CY-MI5A`.
-
-## Utilisation
-
-To explore the site, you can open the `homepage.html` file, which will redirect you to all the other pages.
+Our website is a travel agency website that allows you to book and pay for pseudo-made holidays to various destinations. Our travel agency is called “CyLanta” and is located in Cergy, France. We propose to book stays on the islands of French Polynesia (Bora-Bora, Tahiti, etc.). The customer can choose from several tours without being able to modify the steps, but can modify the options (restaurants, hotels, the number of people).
 
 ## Languages used
 
-- HTML5
-- CSS3
-- JavaScript
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+## Prerequisites
+
+A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
+
+## Installation
+
+To clone the repository, use the command `git clone https://github.com/Zoulou95/Projet-Info4-CY-MI5A` in your terminal.
+
+## Utilisation
+
+To explore the site, you can open `homepage.html`, which will redirect you to all the other pages.
 
 ## Project structure
 
@@ -36,13 +40,13 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 │   ├── 🖼️ images
 │   └── 🎬 video
 ├── 📂 destinations
-│   ├── 📄 presentation_tahiti.html
-│   ├── 📄 presentation_style.css
+│   ├── 📄 presentation_bora.html
 │   └── ....
 ├── 📂 src
 │   ├── 📄 admin_panel.html
 │   ├── 📄 advanced_search.html
 │   ├── 📄 search.html
+│   ├── 📄 presentation_style.css
 │   ├── 📄 userpage.html
 │   ├── 📄 userpage_security.html
 │   ├── 🎨 admin_panel_style.css
@@ -54,7 +58,7 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 ├── 📂 tests
 │   ├── 🖼️ screenshots
 ├── 📄 CyLanta_Charte_Graphique.pdf
-├── 📄 homepage.html
+├── 🏠 homepage.html
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
