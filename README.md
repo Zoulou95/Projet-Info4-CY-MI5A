@@ -31,7 +31,7 @@ To clone the repository, use the command `git clone https://github.com/Zoulou95/
 
 ## Utilisation
 
-To explore the site, you can open `homepage.html`, which will redirect you to all the other pages.
+To explore the site, you can open `index.html`, which will redirect you to all the other pages.
 
 ## Project structure
 
@@ -58,7 +58,7 @@ To explore the site, you can open `homepage.html`, which will redirect you to al
 ├── 📂 tests
 │   ├── 🖼️ screenshots
 ├── 📄 CyLanta_Charte_Graphique.pdf
-├── 🏠 homepage.html
+├── 🏠 index.html
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
@@ -68,7 +68,7 @@ To explore the site, you can open `homepage.html`, which will redirect you to al
 
 - `presentation_style.css` is the default style sheet for all presentation pages located in `/destination`.
  
-- The page `homepage.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
+- The page `index.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 
 - `admin_panel.html` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
