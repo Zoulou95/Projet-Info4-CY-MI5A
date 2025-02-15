@@ -1,3 +1,5 @@
+<!-- presentation_tahiti.html -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,9 +9,8 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
     <link rel="icon" type="image/png" href="../assets/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="base_style.css" />
-    <link rel="stylesheet" type="text/css" href="search_style.css" />
-    <link rel="stylesheet" type="text/css" href="presentation_voyage.css" />
+    <link rel="stylesheet" type="text/css" href="../src/base_style.css" />
+    <link rel="stylesheet" type="text/css" href="../src/presentation_style.css" />
 </head>
 <body>
     <div class="container">
@@ -22,37 +23,42 @@
             </div>
             <div class="headbar_rest">
                 <a class="headbar_item" href="../homepage.html">Accueil</a>
-                <a class="headbar_item" href="search.html">Destinations</a>
-                <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../src/search.html">Destinations</a>
+                <a class="headbar_item" href="../src/advanced_search.html">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a class="headbar_my_space" href="../src/userpage.html">Mon espace</a>
+                <a href="../src/userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
          </div>
          <div class="separate"></div>
 
 	<div class="image-container">
-    		<img class="presentation_img" src="../assets/toopua-iti.jpg" alt="tahiti">
+    		<img class="presentation_img" src="../assets/tahiti_img.jpg" alt="tahiti image" />
     			<div class="description">
         			<h2>Découvrez la magie de Tahiti, un véritable paradis sur terre 🌴✨</h2>
-        			<p>Plages de sable blanc, lagons aux eaux cristallines, couchers de soleil envoûtants... Tahiti vous invite à une escapade inoubliable au cœur du Pacifique. 
+        			<p>Plages de sable blanc, lagons aux eaux cristallines, couchers de soleil envoûtants... Tahiti vous invite à une escapade inoubliable au cœur du Pacifique.    
         			   Que vous soyez amateur de farniente, passionné de plongée ou en quête d'aventure, cette île enchanteresse saura combler toutes vos envies. 
         			   Explorez ses fonds marins spectaculaires, partez en randonnée à travers des paysages luxuriants et savourez la douceur de vivre polynésienne. 
-        			   Laissez-vous séduire par l’accueil chaleureux des habitants et la richesse culturelle unique de Tahiti.
+        			   Laissez-vous séduire par l'accueil chaleureux des habitants et la richesse culturelle unique de Tahiti.
         			</p>
+                    <br>
+                    <b>Note CyLanta : 4.3 ⭐</b>
         		</div>
 	</div>
-
-    <div class="separate">
-        <div class="tableau">
+    <div class="separate_img">
+        <br><br>
+        <form action="#.html" method="get">
+        <div class="board">
             <table>
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Chambre</th>
+                        <th>Disponibilité</th>
+                        <th>Hôtel</th>
                         <th>Pension</th>
+                        <th>Chambres</th>
                         <th>Spécialité</th>
+                        <th>Prix</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,33 +67,49 @@
                             <input type="date" name="date_voyage">
                         </td>
                         <td>
-                            <select name="chambre">
-                                <option value="1_lit">1 lit</option>
-                                <option value="2_lits">2 lits</option>
-                                <option value="3_lits">3 lits</option>
-                                <option value="4_lits">4 lits</option>
+                            <select name="Hôtel">
+                                <option value="1_lit">Tahiti Blue Haven (4⭐)</option>
+                                <option value="2_lits">Red Sunset Resort(4⭐)</option>
+                                <option value="3_lits">Le Pacifique (5⭐)</option>
                             </select>
                         </td>
                         <td>
-                            <select name="pension">
-                                <option value="petit_dejeuner">Petit déjeuner</option>
-                                <option value="pension_complete">Pension complète</option>
+                            <select name="Pension">
+                                <option value="1_lit">Petit déjeuner</option>
+                                <option value="1_lit">Déjeuner uniquement</option>
+                                <option value="2_lits">Demi-pension</option>
+                                <option value="3_lits">Tout inclus</option>
                             </select>
                         </td>
                         <td>
-                            <select name="specialite">
-                                <option value="noces">Noces</option>
-                                <option value="amis">Voyage entre amis</option>
+                            <select name="Chambres">
+                                <option value="2_lits">2 personnes</option>
+                                <option value="3_lits">3 personnes</option>
+                                <option value="4_lits">4 personnes</option>
+                                <option value="3_lits">5 personnes</option>
+                                <option value="4_lits">6 personnes</option>
                             </select>
+                        </td>
+                        <td>
+                            Séjour de luxe
+                        </td>
+                        <td>
+                            <!-- We will set an adaptive price during phase 2 -->
+                            7999.99€
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <button onclick="window.location.href='#.html'">
+            <a class="reservation_text" href="#".html">Réserver</a>
+        </button>
     </div>
-    
+    </form>  
+    </div>
 
-      </div>       
+    <div class="separate_footer"></div>
+       
     <!-- Footer -->
     <footer>
         <div class="footer_section">
@@ -119,3 +141,4 @@
 </body>
 
 </html>
+
