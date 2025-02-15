@@ -4,9 +4,9 @@ body {
     background-color: #87c2e7;
 }
 
-/* Userpage security menu style */
+/* Userpage security menu */
 
-.user-container {
+.user_container {
     width: 40%;
     display: flex;
     justify-content: center;
@@ -23,9 +23,6 @@ body {
     display: flex;
     list-style: none;
     gap: 2vh;
-}
-
-.info_link, .security_link {
     font-size: 1.5vw;
     font-weight: 100;
 }
@@ -40,6 +37,7 @@ li a {
     color: #10689f;
 }
 
+/* Separate the menu and the input fields */
 
 hr {
     border: 1.5px solid #21a9ff;
@@ -47,34 +45,45 @@ hr {
     margin-top: 1.4vh;
 }
 
+/* Password fields */
+
 form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 5vh;
     max-width: 600px;
-    margin: auto;
 }
 
 label {
     font-size: 18px;
 }
 
-#current_password, #new_password, #confirmation_password {
+input {
     border: solid 1px gray;
     border-radius: 4px;
     height: 50px;
-    width: 250px;
+    width: 30vw;
     font-size: 18px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
     padding-left: 5%;
 }
 
-#current_password:focus, #new_password:focus, #confirmation_password:focus {
+input:focus {
     border: solid 1.5px #21a9ff;
     outline: none;
 }
 
-#save-button, #reset-button {
+#save_button {
+    border: solid 1px #21a9ff;
+    background-color: #21a9ff;
+}
+
+#reset_button {
+    border: solid 1px #383838;
+    background-color: #383838;
+}
+
+#save_button, #reset_button {
     height: 50px;
     width: 50%;
     font-size: 18px;
@@ -84,31 +93,18 @@ label {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-#save-button:active, #reset-button:active {
+#save_button:active, #reset_button:active {
     transform: scale(0.95);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-#save-button {
-    border: solid 1px #21a9ff;
-    background-color: #21a9ff;
-}
-
-#reset-button {
-    border: solid 1px #383838;
-    background-color: #383838;
-}
-
-#save-button:active, #reset-button:active {
     border: solid 10px #000000;
 }
 
-#save-button:hover {
+#save_button:hover {
     background-color: #1a89ce;
     border-color: #1a89ce;
 }
 
-#reset-button:hover {
+#reset_button:hover {
     background-color: #282626;
     border-color: #282626;
 }

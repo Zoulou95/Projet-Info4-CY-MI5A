@@ -1,6 +1,6 @@
-/* base_style.css : navigation bar and footer style (common to all files) */
+/* base_style.css */
 
-/* Main container and navigation bar style */
+/* Main container and navigation bar */
 
 * {
     margin: 0;
@@ -10,35 +10,34 @@
 }
 
 .container {
-    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh; 
     width: 100%;
 }
 
 .headbar {
+    display: flex;
     width: 100%; 
     height: 9vh; 
-    background-color: #21a9ff; 
-    display: flex;
-    align-items: center;
     padding: 0 1.5%; 
     box-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
-    z-index:1;
+    background-color: #21a9ff; 
+    z-index:1; /* Bring the navigation bar to the foreground */
 }
 
-.logo-img {
+.logo_img {
     height: 9vh;
 }
 
 .secondbar {
-    width: 100%; 
-    height: 18vh; 
-    background-color: #21a9ff; 
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; 
+    height: 18vh; 
+    background-color: #21a9ff; 
     padding: 0 1.5%;
 }
 
@@ -65,8 +64,8 @@
 }
 
 .headbar_rest {
-    flex: 8; 
     display: flex;
+    flex: 8; /* The element will take up 8 shares of the available space */
     justify-content: flex-start;
     align-items: center;
     gap: 6vw;
@@ -74,8 +73,8 @@
 }
 
 .headbar_right {
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: flex-end;
     align-items: center;
     gap: 2.5vw;
@@ -100,11 +99,11 @@
 }
 
 .separate {
-    width: 100%; 
-    height: 18vh; 
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; 
+    height: 18vh; 
     padding: 0 1.5%;
 }
 
@@ -122,19 +121,19 @@
     text-decoration: underline;
 }
 
-.user-img-nav {
-    max-width: 50px;
-    max-height: 50px;
+.user_img_nav {
+    max-width: 6.5vw;
+    max-height: 6.5vh;
     border-radius: 50%;
     border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
 }
 
-.user-img-nav:active {
+.user_img_nav:active {
     outline: 2px solid #000000;
 }
 
-/* Text style */
+/* Text display */
 
 .text_above {
     width: 80%; 
@@ -144,17 +143,57 @@
     font-size: 11vh;
     font-weight: bold;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Card presenting destinations */
+
+.card {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 18vh;
+    object-fit: cover;
+}
+
+.card_content {
+    padding: 20px;
+}
+
+.card h2 {
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.6vh;
+    color: #555;
+    margin: 10px 0;
+}
+
+.explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 /* Footer */
 
 footer {
+    display: flex;
+    justify-content: space-between;
     background-color: #21a9ff;
     color: white;
     padding: 20px 10%;
-    display: flex;
-    justify-content: space-between;
     width:100%;
     height: 40vh;
     align-items: center;
@@ -162,7 +201,7 @@ footer {
     z-index:1;
 }
 
-.footer-section {
+.footer_section {
     background-color: #383838;
     padding: 20px;
     border-radius: 10px;
@@ -172,23 +211,23 @@ footer {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 3);
 }
 
-.footer-section h3 {
+.footer_section h3 {
     margin-bottom: 20px;
     font-size: 3vh;
 }
 
-.footer-section p, .footer-section ul {
-    font-size: 1.5vh;
+.footer_section p, .footer_section ul {
+    font-size: 1.6vh;
     color: #bbb;
 
 }
 
-.footer-section ul {
+.footer_section ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-section ul li {
+.footer_section ul li {
     margin-bottom: 10px;
 }
 
@@ -199,8 +238,23 @@ footer {
 }
 
 .partners img {
-    width: 7.5vh;
+    width: 4vw;
     height: auto;
     border-radius: 5px;
     margin-top: 2vh;
+}
+
+/* Animation */
+
+/* Animate the quick search button */
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
