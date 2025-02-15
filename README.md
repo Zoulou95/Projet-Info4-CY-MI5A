@@ -55,7 +55,7 @@ To explore the site, you can open `index.html`, which will redirect you to all t
 │   ├── 🎨 search_style.css
 │   ├── 🎨 userpage_security_style.css
 │   ├── 🎨 userpage_style.css
-├── 📂 tests
+├── 📂 presentation_phase1
 │   ├── 🖼️ screenshots
 ├── 📄 CyLanta_Charte_Graphique.pdf
 ├── 🏠 index.html
