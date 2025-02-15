@@ -1,6 +1,6 @@
 # Click-journeY
 
-The website of CyLanta, a travel agency based in Cergy, offers trips to the islands of French Polynesia.
+The website of CyLanta, a travel agency based in Cergy.
 
 **PREING-2 INFORMATIQUE IV PROJECT**.  
 **Developed by MI-5 group A**.
@@ -11,50 +11,64 @@ The website of CyLanta, a travel agency based in Cergy, offers trips to the isla
 - Nathan CHOUPIN
 - Ziyad HADDADI
 
-## Prerequisites
+## About CyLanta
 
-- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
-
-## Installation
-
-To clone the repository, use `git clone https://github.com/Zoulou95/Projet-Info4-CY-MI5A`.
-
-## Utilisation
-
-To explore the site, you can open the `homepage.html` file, which will redirect you to other pages.
+Our website is a travel agency website that allows you to book and pay for pseudo-made holidays to various destinations. Our travel agency is called “CyLanta” and is located in Cergy, France. We propose to book stays on the islands of French Polynesia (Bora-Bora, Tahiti, etc.). The customer can choose from several tours without being able to modify the steps, but can modify the options (restaurants, hotels, the number of people).
 
 ## Languages used
 
-- HTML5
-- CSS3
-- JavaScript
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+## Prerequisites
+
+A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
+
+## Installation
+
+To clone the repository, use the command `git clone https://github.com/Zoulou95/Projet-Info4-CY-MI5A` in your terminal.
+
+## Utilisation
+
+To explore the site, you can open `index.html`, which will redirect you to all the other pages.
 
 ## Project structure
 
 ```
-📦 Project folder
-├── 📄 CyLanta_Charte_Graphique.pdf 
-├── 📄 homepage.html
-├── 📂 tests
 ├── 📂 assets
 │   ├── 🖼️ images
 │   └── 🎬 video
+├── 📂 destinations
+│   ├── 📄 presentation_bora.html
+│   └── ....
 ├── 📂 src
 │   ├── 📄 admin_panel.html
 │   ├── 📄 advanced_search.html
 │   ├── 📄 search.html
+│   ├── 📄 presentation_style.css
 │   ├── 📄 userpage.html
 │   ├── 📄 userpage_security.html
 │   ├── 🎨 admin_panel_style.css
 │   ├── 🎨 advanced_search_style.css
+│   ├── 🎨 base_style.css
 │   ├── 🎨 search_style.css
 │   ├── 🎨 userpage_security_style.css
 │   ├── 🎨 userpage_style.css
+├── 📂 tests
+│   ├── 🖼️ screenshots
+├── 📄 CyLanta_Charte_Graphique.pdf
+├── 🏠 index.html
+├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
 ## Overview
+
+- `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
+
+- `presentation_style.css` is the default style sheet for all presentation pages located in `/destination`.
  
-- The page `homepage.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
+- The page `index.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 
 - `admin_panel.html` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
@@ -66,3 +80,5 @@ To explore the site, you can open the `homepage.html` file, which will redirect 
 
 - `userpage_security.html` allows the user to modify his password.
 **NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript).
+
+- The presentations pages in the `/destinations` folder are used to display and present the various holidays available and their characteristics (price, user ratings, etc.).

@@ -4,7 +4,6 @@ and remain on a single page (userpage.html)-->
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <title>CyLanta</title>
     <meta charset="utf-8" />
@@ -14,18 +13,17 @@ and remain on a single page (userpage.html)-->
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="userpage_security_style.css" />
 </head>
-
 <body>
     <div class="container">
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../homepage.html">
-                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="SOURCE" />
+                <a href="../index.html">
+                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../homepage.html">Accueil</a>
+                <a class="headbar_item" href="../index.html">Accueil</a>
                 <a class="headbar_item" href="search.html">Destinations</a>
                 <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
             </div>
@@ -34,6 +32,7 @@ and remain on a single page (userpage.html)-->
                 <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
         </div>
+        
         <div class="user_container">
             <div class="user_informations">
                 <ul class="menu_navigation">
@@ -49,18 +48,18 @@ and remain on a single page (userpage.html)-->
                         <form method="post" action="#">
                             <div>
                                 <label for="current_password">Mot de passe actuel</label><br><br>
-                                <input type="password" id="current_password" maxlength="30" />
+                                <input type="password" id="current_password" maxlength="30" required />
                             </div>
                             <div>
                                 <label for="new_password">Nouveau mot de passe</label><br><br>
-                                <input type="password" id="new_password" maxlength="30" />
+                                <input type="password" id="new_password" maxlength="30" required />
                             </div>
                             <div>
                                 <label for="confirmation_password">Confirmer le mot de passe</label><br><br>
-                                <input type="password" id="confirmation_password"" maxlength=" 30" />
+                                <input type="password" id="confirmation_password" maxlength="30" required />
                             </div>
                             <div class="button_group">
-                                <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
+                                <button type="submit" name="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
                                 <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
                             </div>
                     </div>
@@ -83,9 +82,9 @@ and remain on a single page (userpage.html)-->
             <div class="footer_section">
                 <h3>Nos Contacts</h3>
                 <ul class="other">
-                    <li>Email: CyLanta@cy-tech.fr</li>
-                    <li>Téléphone: +33 1 23 45 67 89</li>
-                    <li>Adresse: Av. du Parc, 95000 Cergy</li>
+                    <li><a href="mailto:CyLanta@cy-tech.fr">Email: CyLanta@cy-tech.fr</a></li>
+                    <li><a href="tel:+33123456789">Téléphone: +33 1 23 45 67 89</a></li>
+                    <li><a href="https://www.google.com/maps?q=49.035290202793036, 2.070567152915135" target="_BLANK">Adresse: Av. du Parc, 95000 Cergy</a></li>
                 </ul>
             </div>
             <div class="footer_section">
@@ -98,5 +97,4 @@ and remain on a single page (userpage.html)-->
             </div>
         </footer>
 </body>
-
 </html>

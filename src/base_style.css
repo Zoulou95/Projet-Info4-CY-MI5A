@@ -19,13 +19,12 @@
 
 .headbar {
     display: flex;
-    align-items: center;
     width: 100%; 
     height: 9vh; 
-    background-color: #21a9ff; 
     padding: 0 1.5%; 
     box-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
-    z-index:1;
+    background-color: #21a9ff; 
+    z-index:1; /* Bring the navigation bar to the foreground */
 }
 
 .logo_img {
@@ -49,7 +48,7 @@
 }
 
 .centerbar_text {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 4vh;
     font-weight: bold;
@@ -82,10 +81,10 @@
 }
 
 .headbar_item {
-    color: white;
-    text-decoration: none;
+    color: #ffffff;
     font-size: 2.7vh;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .headbar_item:hover {
@@ -95,7 +94,7 @@
 .headbar_logo {
     font-size: 3vh;
     font-weight: bold;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -123,8 +122,8 @@
 }
 
 .user_img_nav {
-    max-width: 55px;
-    max-height: 55px;
+    max-width: 6.5vw;
+    max-height: 6.5vh;
     border-radius: 50%;
     border: 2px solid #ffffff;
     outline: 1px solid #dddddd;
@@ -146,11 +145,11 @@
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Card presenting destinations */
+/* Card presenting destinations (present on homepage.html and search.html)  */
 
 .card {
     width: 350px;
-    background: white;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -172,7 +171,7 @@
 }
 
 .card p {
-    font-size: 1.5vh;
+    font-size: 1.6vh;
     color: #555;
     margin: 10px 0;
 }
@@ -193,7 +192,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #21a9ff;
-    color: white;
+    color: #ffffff;
     padding: 20px 10%;
     width:100%;
     height: 40vh;
@@ -218,9 +217,8 @@ footer {
 }
 
 .footer_section p, .footer_section ul {
-    font-size: 1.5vh;
-    color: #bbb;
-
+    font-size: 1.6vh;
+    color: #ffffff;
 }
 
 .footer_section ul {
@@ -239,13 +237,22 @@ footer {
 }
 
 .partners img {
-    width: 7.5vh;
+    width: 4vw;
     height: auto;
     border-radius: 5px;
     margin-top: 2vh;
 }
 
-/* Animations */
+.other a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.other a:hover{
+    text-decoration: underline;
+}
+
+/* Animation */
 
 /* Animate the quick search button */
 @keyframes pulse {
