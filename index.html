@@ -146,12 +146,12 @@
             <div class="overlay_content">
                 <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
                 <h2>Inscription</h2>
-                <form >
-                    <input type="text" placeholder="Prénom" required>
-                    <input type="text" placeholder="Nom" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Mot de passe" required>
-                    <input type="tel" placeholder="Numéro de téléphone" required>
+                <form action="inscription.php" method="post">
+                    <input type="text" placeholder="Prénom" name="prenom" required>
+                    <input type="text" placeholder="Nom" name="nom" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Mot de passe" name="password" required>
+                    <input type="tel" placeholder="Numéro de téléphone" name="telephone" required>
                     <button type="submit">S'inscrire</button>
                     <p class="switch_text">
                         Vous avez deja un compte ?
