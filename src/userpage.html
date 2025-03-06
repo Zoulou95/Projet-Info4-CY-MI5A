@@ -27,7 +27,7 @@
             </div>
             <div class="headbar_right">
                 <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
             </div>
         </div>
         
@@ -68,20 +68,20 @@
                 <form method="post" action="userpage.html">
                     <div>
                         <label for="last_name">Nom</label><br><br>
-                        <input type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="Dupont" />
+                        <input type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="Dupont" required />
                     </div>
                     <div>
                         <label for="first_name">Prénom</label><br><br>
-                        <input type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="Jojo" />
+                        <input type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="Jojo" required />
                     </div>
                     <div>
                         <label for="email">E-mail</label><br><br>
-                        <input type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="jojodupont@gmail.com" />
+                        <input type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="jojodupont@gmail.com" required />
                     </div>
                     <div>
                         <label for="tel_number">Numéro de téléphone</label><br><br>
-                        <!-- To remove the ability to enter digits, we will code a JavaScript function-->
-                        <input type="tel" id="tel_number" placeholder="Entrez votre mobile" maxlength="10" value="0707070707" /><br><br>
+                        <!-- To remove the ability to enter digits, we use a pattern attribute -->
+                        <input type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="0707070707" required /><br><br>
                     </div>
                     <div class="button_group">
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
