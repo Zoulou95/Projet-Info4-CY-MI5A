@@ -8,12 +8,12 @@
     <meta name="description" content="CyLanta travel agency website" />
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
-    <link rel="icon" type="image/png" href="../assets/ico_island.png" />
+    <link rel="icon" type="image/png" href="../assets/icons/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../src/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../src/presentation_style.css" />
 </head>
 <body>
-    <div class="container"> 
+    <div class="container">
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
@@ -30,113 +30,328 @@
                 <a class="headbar_my_space" href="../src/userpage.html">Mon espace</a>
                 <a href="../src/userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
-         </div>
-         <div class="separate"></div>
+        </div>
+        <div class="separate"></div>
 
-	<div class="image-container">   
-    		<img class="presentation_img" src="../assets/pres_bora-bora_img.jpg" alt="bora-bora image" />
-    			<div class="description">
-        			<h2>Découvrez la splendeur de Bora Bora, un joyau du Pacifique 🌺✨</h2>
-        			<p>Lagons d'un bleu éclatant, plages de sable fin, monts verdoyants… Bora Bora est une invitation au rêve et à l'évasion. 
-                        Entre plongée dans des eaux cristallines, balades en pirogue et instants de détente face à des couchers de soleil féeriques, chaque moment y est magique. 
-                        Aventurez-vous au sommet du mont Otemanu, nagez avec les raies manta ou laissez-vous bercer par la douceur de vivre polynésienne. 
-                        L'hospitalité légendaire des habitants et la beauté envoûtante de l'île feront de votre séjour une expérience inoubliable. 
-        			</p>
-                    <br>
-                    <b>Note CyLanta : 4.9 ⭐</b>
-        		</div>
-	</div>
-    <div class="separate_img">
-        <br><br>
-        <form action="#.html" method="post">
-        <div class="board">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Disponibilité</th>
-                        <th>Hôtel</th>
-                        <th>Pension</th>
-                        <th>Chambres</th>
-                        <th>Spécialité</th>
-                        <th>Prix</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input type="date" name="date_voyage">
-                        </td>
-                        <td>
-                            <select name="Hôtel">
-                                <option value="luxe_lagoon_resort">Luxe Lagoon Resort (4⭐)</option>
-                                <option value="oasis_des_iles">Oasis des Îles (5⭐)</option>
-                                <option value="etoile_bora_bora">Étoile Bora Bora (5⭐)</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select name="Pension">
-                                <option value="tout_inclus">Tout inclus</option>
-                                <option value="petit_dejeuner">Petit déjeuner uniquement</option>
-                                <option value="dejeuner">Déjeuner uniquement</option>
-                                <option value="demi_pension">Demi-pension</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select name="Chambres">
-                                <option value="2_personnes">2 personnes</option>
-                                <option value="3_personnes">3 personnes</option>
-                                <option value="4_personnes">4 personnes</option>
-                                <option value="5_personnes">5 personnes</option>
-                                <option value="6_personnes">6 personnes</option>
-                            </select>
-                        </td>
-                        <td>
-                            Noces
-                        </td>
-                        <td>
-                            <!-- We will set an adaptive price during phase 2 -->
-                            10299.99€
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="description">
+            <h2>Lune de Miel à Bora Bora ⭐⭐⭐⭐⭐</h2>
+            <h3>Polynésie française, île de Bora-Bora</h3>
+            <br>
         </div>
-        <button onclick="window.location.href='#.html'">
-            <a class="reservation_text" href="#".html">Réserver</a>
-        </button>
-    </div>
-    </form>  
-    </div>
 
-    <div class="separate_footer"></div>
-   
-    <!-- Footer -->
-    <footer>
-        <div class="footer_section">
-            <h3>À Propos</h3>
-            <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
-                Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures
-                adresses et activités exclusives.
-                Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres
-                détails. Votre aventure commence ici !
-            </p>
-        </div>
-        <div class="footer_section">
-            <h3>Nos Contacts</h3>
-            <ul class="other">
-                <li><a href="mailto:CyLanta@cy-tech.fr">Email: CyLanta@cy-tech.fr</a></li>
-                <li><a href="tel:+33123456789">Téléphone: +33 1 23 45 67 89</a></li>
-                <li><a href="https://www.google.com/maps?q=49.035290202793036, 2.070567152915135" target="_BLANK">Adresse: Av. du Parc, 95000 Cergy</a></li>
-            </ul>
-        </div>
-        <div class="footer_section">
-            <h3>Nos Partenaires</h3>
-            <div class="partners">
-                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/cy_favicon.png" alt="Partenaire 1" /></a>
-                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/cytech_icon.png" alt="Partenaire 2" /></a>
-                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/cergy_ville.jpg" alt="Partenaire 3" /></a>
+        <div class="image_container">
+            <img class="presentation_img" src="../assets/pres_bora-bora_img.jpg" alt="bora-bora image 1" />
+            <div class="side_images">
+                <img class="small_img bottom_img" src="../assets/pres_bora-bora_img_2.jpg" alt="bora-bora image 2" />
+                <img class="small_img top_img" src="../assets/pres_bora-bora_img_3.jpg" alt="bora-bora image 3" />
             </div>
         </div>
-    </footer>
+
+        <h3>Aperçu</h3>
+        <hr class="underline_info line" />
+
+        <div class="overview">
+            <div class="service_info">
+                <h4>Prestations</h4>
+                <!-- List of services -->
+                <ul class="service_list">
+                    <div class="left_column">
+                        <li><img class="service_icon" src="../assets/icons/pres_wifi_icon.png" alt="icon1" />WIFI</li>
+                        <li><img class="service_icon" src="../assets/icons/pres_sport_icon.png" alt="icon2" />Salle de sport</li>
+                        <li><img class="service_icon" src="../assets/icons/pres_love_icon.png" alt="icon3" />Décoration romantique</li>
+                    </div>
+                    <div class="right_column">
+                        <li><img class="service_icon" src="../assets/icons/pres_pool_icon.png" alt="icon4" />Piscine</li>
+                        <li><img class="service_icon" src="../assets/icons/pres_spa_icon.png" alt="icon5" />Spa et bien-être</li>
+                        <li><img class="service_icon" src="../assets/icons/pres_key_icon.png" alt="icon6" />Conciergerie personnelle</li>
+                    </div>
+                </ul>
+            </div>
+            <div class="location_info">
+                <h4>Emplacement</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13091.380342812002!2d-151.7444002!3d-16.5004127!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e6ad806717be0b9%3A0x8fa10a66f46f013!2sBora%20Bora%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr"
+                    width="400"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="voyage_info">
+                <h4>Informations</h4>
+                <ul class="info_list">
+                    <li>Durée du séjour : 7 jours / 6 nuits</li>
+                    <li>Spécificité : Noces</li>
+                    <li>Vue imprenable sur le lagon</li>
+                    <li>Climat tropical doux et ensoleillé</li>
+                    <li>Ambiance intime et privée</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Configuration des étapes</h3>
+        <hr class="underline_timeline line" />
+
+        <div class="steps">
+            <div class="timeline">
+                <div class="step active">1</div>
+                <div class="step_line"></div>
+                <div class="step">2</div>
+                <div class="step_line"></div>
+                <div class="step">3</div>
+            </div>
+        </div>
+
+        <form action="#.html" method="post">
+            <!-- First board -->
+            <div class="board">
+                <h3 class="legend">Étape 1</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Durée de l'étape</th>
+                            <th>Hôtel</th>
+                            <th>Pension</th>
+                            <th>Activité</th>
+                            <th>Participants</th>
+                            <th>Prix de l'étape</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 jours</td>
+                            <td>
+                                <select name="hotel_2">
+                                    <option value="luxe_lagoon_resort">Luxe Lagoon Resort (4⭐)</option>
+                                    <option value="oasis_des_iles">Oasis des Îles (5⭐)</option>
+                                    <option value="etoile_bora_bora">Étoile Bora Bora (5⭐)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="pension_2">
+                                    <option value="tout_inclus">Tout inclus</option>
+                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
+                                    <option value="dejeuner">Déjeuner uniquement</option>
+                                    <option value="demi_pension">Diner uniquement</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="activite_2">
+                                    <option value="massage_avec_vue">Massage avec vue</option>
+                                    <option value="randonnee_en_montagne">Randonnée en montagne</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="participants_2">
+                                    <option value="2_personnes">2 personnes</option>
+                                    <option value="3_personnes">3 personnes</option>
+                                    <option value="4_personnes">4 personnes</option>
+                                </select>
+                            </td>
+                            <td>600€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Second board -->
+            <div class="board">
+                <h3 class="legend">Étape 2</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Durée de l'étape</th>
+                            <th>Hôtel</th>
+                            <th>Pension</th>
+                            <th>Activité</th>
+                            <th>Participants</th>
+                            <th>Prix de l'étape</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3 jours</td>
+                            <td>
+                                <select name="hotel_2">
+                                    <option value="luxe_lagoon_resort">Luxe Lagoon Resort (4⭐)</option>
+                                    <option value="oasis_des_iles">Oasis des Îles (5⭐)</option>
+                                    <option value="etoile_bora_bora">Étoile Bora Bora (5⭐)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="pension_2">
+                                    <option value="tout_inclus">Tout inclus</option>
+                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
+                                    <option value="dejeuner">Déjeuner uniquement</option>
+                                    <option value="demi_pension">Diner uniquement</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="activite_2">
+                                    <option value="massage_avec_vue">Séance photo en plein air</option>
+                                    <option value="randonnee_en_montagne">Croisière privée</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="participants_2">
+                                    <option value="2_personnes">2 personnes</option>
+                                    <option value="3_personnes">3 personnes</option>
+                                    <option value="4_personnes">4 personnes</option>
+                                </select>
+                            </td>
+                            <td>600€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Third board -->
+            <div class="board">
+                <h3 class="legend">Étape 3</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Durée de l'étape</th>
+                            <th>Hôtel</th>
+                            <th>Pension</th>
+                            <th>Activité</th>
+                            <th>Participants</th>
+                            <th>Prix de l'étape</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 jours</td>
+                            <td>
+                                <select name="hotel_2">
+                                    <option value="luxe_lagoon_resort">Luxe Lagoon Resort (4⭐)</option>
+                                    <option value="oasis_des_iles">Oasis des Îles (5⭐)</option>
+                                    <option value="etoile_bora_bora">Étoile Bora Bora (5⭐)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="pension_2">
+                                    <option value="tout_inclus">Tout inclus</option>
+                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
+                                    <option value="dejeuner">Déjeuner uniquement</option>
+                                    <option value="demi_pension">Diner uniquement</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="activite_2">
+                                    <option value="massage_avec_vue">Plongée sous-marine</option>
+                                    <option value="randonnee_en_montagne">Voyage en hélicoptère</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="participants_2">
+                                    <option value="2_personnes">2 personnes</option>
+                                    <option value="3_personnes">3 personnes</option>
+                                    <option value="4_personnes">4 personnes</option>
+                                </select>
+                            </td>
+                            <td>600€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Availability Calendar Block -->
+            <h3 class="disponibility_text">Disponibilité des dates</h3>
+            <hr class="underline_disponibility line" />
+
+            <div class="calendar_availability">
+
+                <div class="calendar">
+                    <div class="month-header">
+                        <button class="prev-month">&#8249;</button> <!-- &#8249 for 'left arrow' caracter -->
+                        <h4>Avril 2025</h4>
+                        <button class="next-month">&#8250;</button>
+                    </div>
+
+                    <!-- LE FAIRE EN PHP -->
+                    <div class="days-of-week">
+                        <div class="day">Lun</div>
+                        <div class="day">Mar</div>
+                        <div class="day">Mer</div>
+                        <div class="day">Jeu</div>
+                        <div class="day">Ven</div>
+                        <div class="day">Sam</div>
+                        <div class="day">Dim</div>
+                    </div>
+
+                    <div class="days-grid">
+                        <div class="day-item available">1</div>
+                        <div class="day-item unavailable">2</div>
+                        <div class="day-item available">3</div>
+                        <div class="day-item unavailable">4</div>
+                        <div class="day-item available">5</div>
+                        <div class="day-item unavailable">6</div>
+                        <div class="day-item available">7</div>
+                        <div class="day-item available">8</div>
+                        <div class="day-item unavailable">9</div>
+                        <div class="day-item available">10</div>
+                        <div class="day-item available">11</div>
+                        <div class="day-item unavailable">12</div>
+                        <div class="day-item available">13</div>
+                        <div class="day-item available">14</div>
+                        <div class="day-item unavailable">15</div>
+                        <div class="day-item available">16</div>
+                        <div class="day-item unavailable">17</div>
+                        <div class="day-item available">18</div>
+                        <div class="day-item available">19</div>
+                        <div class="day-item unavailable">20</div>
+                        <div class="day-item available">21</div>
+                        <div class="day-item available">22</div>
+                        <div class="day-item unavailable">23</div>
+                        <div class="day-item available">24</div>
+                        <div class="day-item available">25</div>
+                        <div class="day-item unavailable">26</div>
+                        <div class="day-item available">27</div>
+                        <div class="day-item available">28</div>
+                        <div class="day-item unavailable">29</div>
+                        <div class="day-item available">30</div>
+                    </div>
+                </div>
+            </div>
+            <button class="reservation_button" type="submit">
+                <p class="reservation_text">Réserver</p>
+            </button>
+        </form>
+
+        <!-- Script to browse a timeline and select steps when choosing a trip -->
+        <script src="../scripts/timelineBrowse.js"></script>
+
+        <div class="separate_footer"></div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer_section">
+                <h3>À Propos</h3>
+                <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
+                    Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les
+                    meilleures
+                    adresses et activités exclusives.
+                    Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les
+                    moindres
+                    détails. Votre aventure commence ici !
+                </p>
+            </div>
+            <div class="footer_section">
+                <h3>Nos Contacts</h3>
+                <ul class="other">
+                    <li><a href="mailto:CyLanta@cy-tech.fr">Email: CyLanta@cy-tech.fr</a></li>
+                    <li><a href="tel:+33123456789">Téléphone: +33 1 23 45 67 89</a></li>
+                    <li><a href="https://www.google.com/maps?q=49.035290202793036, 2.070567152915135" target="_BLANK">Adresse: Av. du Parc, 95000 Cergy</a></li>
+                </ul>
+            </div>
+            <div class="footer_section">
+                <h3>Nos Partenaires</h3>
+                <div class="partners">
+                    <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/icons/cy_favicon.png" alt="Partenaire 1" /></a>
+                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/icons/cytech_icon.png" alt="Partenaire 2" /></a>
+                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/icons/cergy_ville.jpg" alt="Partenaire 3" /></a>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

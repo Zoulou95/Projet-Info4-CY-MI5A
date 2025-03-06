@@ -42,15 +42,9 @@ To explore the site, you can open `index.html`, which will redirect you to all t
 │   └── ....
 ├── 📂 src
 │   ├── 📄 admin_panel.html
-│   ├── 📄 advanced_search.html
-│   ├── 📄 search.html
-│   ├── 📄 presentation_style.css
-│   ├── 📄 userpage.html
-│   ├── 📄 userpage_security.html
+│   ├── 📄 ...
 │   ├── 🎨 admin_panel_style.css
-│   ├── 🎨 advanced_search_style.css
-│   ├── 🎨 base_style.css
-│   └── ...
+│   └── 🎨 ...
 ├── 📂 presentation_phase1
 │   └── 🖼️ screenshots
 ├── 📄 CyLanta_Charte_Graphique.pdf
