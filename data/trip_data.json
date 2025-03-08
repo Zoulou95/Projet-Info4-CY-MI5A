@@ -1,0 +1,1025 @@
+{
+    "trip": [
+      {
+        "id": "1",
+        "title": "Lune de Miel à Bora Bora ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Bora-Bora",
+        "presentation_img_1": "pres_bora-bora_img_1.jpg",
+        "presentation_img_2": "pres_bora-bora_img_2.jpg",
+        "presentation_img_3": "pres_bora-bora_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.7444002!3d-16.5004127!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e6ad806717be0b9%3A0x8fa10a66f46f013!2sBora%20Bora%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "08/08/2025",
+          "end_date": "15/08/2025",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Voyage de noces", "Vue imprenable sur le lagon", "Climat tropical doux et ensoleillé", "Ambiance intime et privée"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2500,
+        "total_price": 5000,
+        "hotel": ["Luxe Lagoon Resort (4⭐)", "Oasis des Îles (5⭐)", "Étoile Bora Bora (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et détente",
+          "dates": {
+            "arrival": "2025-04-01",
+            "departure": "2025-04-03",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.5004127, -151.7444002",
+          "activities": ["Aucune", "Massage avec vue", "Randonnée en montagne"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Exploration et aventure",
+          "dates": {
+            "arrival": "2025-04-03",
+            "departure": "2025-04-06",
+            "duration": "3 jours"
+          },
+          "coordinates": "-16.5005001, -151.7450002",
+          "activities": ["Aucune", "Séance photo", "Croisière privée"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Détente et retour",
+          "dates": {
+            "arrival": "2025-04-06",
+            "departure": "2025-04-07",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.5010002, -151.7465003",
+          "activities": ["Aucune", "Plongée sous-marine", "Voyage en hélicoptère"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "2",
+        "title": "Lune de Miel à Huahine ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Huahine",
+        "presentation_img_1": "pres_huahine_img_1.jpg",
+        "presentation_img_2": "pres_huahine_img_2.jpg",
+        "presentation_img_3": "pres_huahine_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.0142003!3d-16.7182002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bdb6c3f5f4a5d5%3A0x8fa10a66f46f013!2sHuahine%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "20/08/2025",
+          "end_date": "27/08/2025",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Voyage de noces", "Plages immaculées", "Climat tropical et calme", "Ambiance détendue et romantique"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2300,
+        "total_price": 4600,
+        "hotel": ["Huahine Paradise (4⭐)", "Fare Maeva (5⭐)", "Te Moana Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et détente",
+          "dates": {
+            "arrival": "2025-08-20",
+            "departure": "2025-08-22",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7182002, -151.0142003",
+          "activities": ["Aucune", "Bain de soleil", "Snorkeling dans le lagon"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Découverte de la nature",
+          "dates": {
+            "arrival": "2025-08-22",
+            "departure": "2025-08-25",
+            "duration": "3 jours"
+          },
+          "coordinates": "-16.7105001, -151.0195001",
+          "activities": ["Aucune", "Visite de la vallée de Faie", "Randonnée dans la forêt tropicale"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Repos et retour",
+          "dates": {
+            "arrival": "2025-08-25",
+            "departure": "2025-08-27",
+            "duration": "2 jours"
+        },
+          "coordinates": "-16.7070002, -151.0337003",
+          "activities": ["Aucune", "Plongée avec les raies", "Croisière au coucher du soleil"],
+          "user_choices": {
+          "accommodation": "",
+          "meal_plan": "",
+          "activities": ""
+          }
+        }
+      },
+      {
+        "id": "3",
+        "title": "Aventure à Moorea ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Moorea",
+        "presentation_img_1": "pres_moorea_img_1.jpg",
+        "presentation_img_2": "pres_moorea_img_2.jpg",
+        "presentation_img_3": "pres_moorea_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-149.8419!3d-17.5388!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bf69d41c8d5e3d%3A0x8fa10a66f46f013!2sMoorea%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "10/09/2025",
+          "end_date": "18/09/2025",
+          "duration": "9 jours / 8 nuits"
+        },
+        "special_features": ["Exploration de la nature", "Activités sportives", "Rencontre avec la culture locale", "Climat tropical"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 1800,
+        "total_price": 3600,
+        "hotel": ["Moorea Lagoon Lodge (3⭐)", "Aventure Nature Resort (4⭐)", "Blue Horizon Retreat (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Découverte de l'île et randonnées",
+          "dates": {
+            "arrival": "2025-09-10",
+            "departure": "2025-09-13",
+            "duration": "3 jours"
+          },
+          "coordinates": "-17.5388, -149.8419",
+          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Immersion culturelle et plongée",
+          "dates": {
+            "arrival": "2025-09-13",
+            "departure": "2025-09-16",
+            "duration": "3 jours"
+          },
+          "coordinates": "-17.5500, -149.8500",
+          "activities": ["Visite d'un village local", "Plongée sous-marine", "Cours de danse traditionnelle"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Repos et plage",
+          "dates": {
+            "arrival": "2025-09-16",
+            "departure": "2025-09-18",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5700, -149.8600",
+          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "4",
+        "title": "Séjour détente à Rangiroa ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, atoll de Rangiroa",
+        "presentation_img_1": "pres_rangiroa_img_1.jpg",
+        "presentation_img_2": "pres_rangiroa_img_2.jpg",
+        "presentation_img_3": "pres_rangiroa_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-147.6615!3d-15.1196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bfb5a8c6b4c3df%3A0x8fa10a66f46f013!2sRangiroa%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "05/10/2025",
+          "end_date": "12/10/2025",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Eau cristalline", "Plongée d'exception", "Expérience en bungalow sur pilotis", "Climat tropical"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2700,
+        "total_price": 5400,
+        "hotel": ["Rangiroa Pearl Beach (4⭐)", "Lagoon View Resort (5⭐)", "Blue Reef Retreat (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et détente sur le lagon",
+          "dates": {
+            "arrival": "2025-10-05",
+            "departure": "2025-10-07",
+            "duration": "2 jours"
+          },
+          "coordinates": "-15.1196, -147.6615",
+          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Exploration sous-marine et îlots",
+          "dates": {
+            "arrival": "2025-10-07",
+            "departure": "2025-10-10",
+            "duration": "3 jours"
+          },
+          "coordinates": "-15.1300, -147.6700",
+          "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Journées relaxantes et retour",
+          "dates": {
+            "arrival": "2025-10-10",
+            "departure": "2025-10-12",
+            "duration": "2 jours"
+          },
+          "coordinates": "-15.1400, -147.6800",
+          "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "5",
+        "title": "Séjour en famille à Moorea ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Moorea",
+        "presentation_img_1": "pres_moorea_img_4.jpg",
+        "presentation_img_2": "pres_moorea_img_5.jpg",
+        "presentation_img_3": "pres_moorea_img_6.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-149.8436!3d-17.4976!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b98b1beed764d7%3A0x4c1c2a255feb7f9!2sMoorea%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "01/12/2025",
+          "end_date": "07/12/2025",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Vue imprenable sur le lagon", "Plages à couper le souffle", "Riche culture locale", "Récifs coralliens protégés"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2", "Enfant 1", "Enfant 2"],
+        "price_per_person": 1900,
+        "total_price": 7600,
+        "hotel": ["Moorea Beach Resort (4⭐)", "Pearl Resort Moorea (5⭐)", "Intercontinental Moorea Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et installation",
+          "dates": {
+            "arrival": "2025-12-01",
+            "departure": "2025-12-03",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.4976, -149.8436",
+          "activities": ["Baignade en famille", "Visite d'un village traditionnel", "Plongée sous-marine"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Découverte de la faune et flore",
+          "dates": {
+            "arrival": "2025-12-03",
+            "departure": "2025-12-06",
+            "duration": "3 jours"
+          },
+          "coordinates": "-17.5050, -149.8390",
+          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Repos et retour",
+          "dates": {
+            "arrival": "2025-12-06",
+            "departure": "2025-12-07",
+            "duration": "1 jour"
+          },
+          "coordinates": "-17.5100, -149.8350",
+          "activities": ["Plage tranquille", "Dîner au coucher du soleil", "Balade en pirogue"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "6",
+        "title": "Aventure à Taha'a ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Taha'a",
+        "presentation_img_1": "pres_tahaa_img_1.jpg",
+        "presentation_img_2": "pres_tahaa_img_2.jpg",
+        "presentation_img_3": "pres_tahaa_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.4496!3d-16.6936!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bda8fba16ab32f%3A0x8fa10a66f46f013!2sTaha'a%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "10/11/2025",
+          "end_date": "17/11/2025",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Exclusivité de l'île", "Vie marine riche", "Plages tranquilles", "Un séjour intime et paisible"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 3000,
+        "total_price": 6000,
+        "hotel": ["Taha'a Pearl Beach Resort (5⭐)", "Le Taha'a Island Resort (5⭐)", "Vahine Island (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et immersion dans la nature",
+          "dates": {
+            "arrival": "2025-11-10",
+            "departure": "2025-11-12",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.6936, -151.4496",
+          "activities": ["Bain de soleil sur la plage", "Promenade à pied autour de l'île", "Coucher de soleil en bateau"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Séjour privé et détente",
+          "dates": {
+            "arrival": "2025-11-12",
+            "departure": "2025-11-15",
+            "duration": "3 jours"
+          },
+          "coordinates": "-16.7000, -151.4400",
+          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite d'une ferme perlière"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Derniers instants et retour",
+          "dates": {
+            "arrival": "2025-11-15",
+            "departure": "2025-11-17",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7100, -151.4500",
+          "activities": ["Plongée tranquille", "Dîner romantique", "Balade en vélo autour de l'île"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "7",
+        "title": "Évasion à Fakarava ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, atoll de Fakarava",
+        "presentation_img_1": "pres_fakarava_img_1.jpg",
+        "presentation_img_2": "pres_fakarava_img_2.jpg",
+        "presentation_img_3": "pres_fakarava_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-145.5566!3d-16.0399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b2fbb2832b8a1d%3A0x8fa10a66f46f013!2sFakarava%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "20/11/2025",
+          "end_date": "26/11/2025",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Coraux multicolores", "Lagons cristallins", "Île isolée", "Bungalows sur l'eau"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2500,
+        "total_price": 5000,
+        "hotel": ["Fakarava Lagoon Resort (4⭐)", "Atoll Paradise Resort (5⭐)", "Tikehau Pearl Beach Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et exploration",
+          "dates": {
+            "arrival": "2025-11-20",
+            "departure": "2025-11-22",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.0399, -145.5566",
+          "activities": ["Exploration de l'atoll", "Baignade dans le lagon", "Visite d'un site de surf"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Détente et nature préservée",
+          "dates": {
+            "arrival": "2025-11-22",
+            "departure": "2025-11-25",
+            "duration": "3 jours"
+          },
+          "coordinates": "-16.0500, -145.5500",
+          "activities": ["Plongée dans la passe", "Visite des îlots avoisinants", "Visite d'un village local"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Séjour final et départ",
+          "dates": {
+            "arrival": "2025-11-25",
+            "departure": "2025-11-26",
+            "duration": "1 jour"
+          },
+          "coordinates": "-16.0600, -145.5500",
+          "activities": ["Détente sur la plage", "Coucher du soleil sur l'océan", "Plongée avec les raies"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "8",
+        "title": "Séjour romantique à Bora Bora ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Bora Bora",
+        "presentation_img_1": "pres_bora-bora_img_4.jpg",
+        "presentation_img_2": "pres_bora-bora_img_5.jpg",
+        "presentation_img_3": "pres_bora-bora_img_6.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.7415!3d-16.5004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b8c604f2d3f5f7%3A0x28f1fbe85085f2b7!2sBora%20Bora%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "01/02/2026",
+          "end_date": "07/02/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Bungalows sur pilotis", "Vue imprenable sur le mont Otemanu", "Eaux turquoise", "Atmosphère intime et romantique"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 3500,
+        "total_price": 7000,
+        "hotel": ["Intercontinental Bora Bora Resort (5⭐)", "Four Seasons Bora Bora (5⭐)", "St. Regis Bora Bora Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et installation",
+          "dates": {
+            "arrival": "2026-02-01",
+            "departure": "2026-02-03",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.5004, -151.7415",
+          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Plongée et exploration de l'île",
+          "dates": {
+            "arrival": "2026-02-03",
+            "departure": "2026-02-05",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.5200, -151.7300",
+          "activities": ["Plongée dans le lagon", "Visite de l'île en 4x4", "Dégustation de vanille locale"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Séjour en amoureux et retour",
+          "dates": {
+            "arrival": "2026-02-05",
+            "departure": "2026-02-07",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.5400, -151.7500",
+          "activities": ["Coucher de soleil en bateau", "Dîner romantique sur l'eau", "Paddle sur le lagon"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "9",
+        "title": "Expérience inédite à Huahine ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Huahine",
+        "presentation_img_1": "pres_huahine_img_4.jpg",
+        "presentation_img_2": "pres_huahine_img_5.jpg",
+        "presentation_img_3": "pres_huahine_img_6.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.0330!3d-16.7001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b95f02d85a0981%3A0x4c5a5eae51fdadd!2sHuahine%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "15/02/2026",
+          "end_date": "21/02/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Île authentique et sauvage", "Plages de sable blanc", "Découverte de la culture locale", "Végétation luxuriante"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2900,
+        "total_price": 5800,
+        "hotel": ["Huahine Maitai Lapita Village (4⭐)", "Royal Huahine (5⭐)", "Te Tiare Beach Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et découverte de l'île",
+          "dates": {
+            "arrival": "2026-02-15",
+            "departure": "2026-02-17",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7001, -151.0330",
+          "activities": ["Balade en vélo autour de l'île", "Visite d'un marae ancien", "Dégustation de vanille locale"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Exploration des lagons et détente",
+          "dates": {
+            "arrival": "2026-02-17",
+            "departure": "2026-02-19",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7100, -151.0200",
+          "activities": ["Kayak dans les lagons", "Visite de l'île en bateau", "Dégustation de vanille locale"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Repos et retour",
+          "dates": {
+            "arrival": "2026-02-19",
+            "departure": "2026-02-21",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7400, -151.0000",
+          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "10",
+        "title": "Séjour d'aventure à Tahiti ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Tahiti",
+        "presentation_img_1": "pres_tahiti_img_1.jpg",
+        "presentation_img_2": "pres_tahiti_img_2.jpg",
+        "presentation_img_3": "pres_tahiti_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-149.5660!3d-17.6509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b8f83bfe62d557%3A0x6ff39ba65e63f5e2!2sTahiti%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "01/03/2026",
+          "end_date": "07/03/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Végétation luxuriante", "Volcans majestueux", "Plages de sable noir", "Accès aux cascades"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2200,
+        "total_price": 4400,
+        "hotel": ["Tahiti Pearl Beach Resort (4⭐)", "Le Meridien Tahiti (5⭐)", "Intercontinental Tahiti Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et exploration de Papeete",
+          "dates": {
+            "arrival": "2026-03-01",
+            "departure": "2026-03-03",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.6509, -149.5660",
+          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Aventure au coeur de l'île",
+          "dates": {
+            "arrival": "2026-03-03",
+            "departure": "2026-03-05",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.6200, -149.5500",
+          "activities": ["Randonnée vers les cascades", "Visite d'un site de surf", "Visite d'un village local"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Détente et retour",
+          "dates": {
+            "arrival": "2026-03-05",
+            "departure": "2026-03-07",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.6700, -149.5700",
+          "activities": ["Repos sur la plage", "Bain de soleil", "Visite d'une ferme perlière"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "11",
+        "title": "Voyage culturel à Raiatea ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Raiatea",
+        "presentation_img_1": "pres_raiatea_img_1.jpg",
+        "presentation_img_2": "pres_raiatea_img_2.jpg",
+        "presentation_img_3": "pres_raiatea_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.5016!3d-16.7669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bdbeb0f0001c91%3A0x5a91a35f12fa2d6!2sRaiatea%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "10/03/2026",
+          "end_date": "16/03/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Histoire ancienne", "Visite de marae", "Tranquillité de l'île", "Culture locale préservée"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2100,
+        "total_price": 4200,
+        "hotel": ["Raiatea Lodge Hotel (4⭐)", "Intercontinental Raiatea Resort (5⭐)", "Le Taha'a Island Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et immersion dans l'histoire",
+          "dates": {
+            "arrival": "2026-03-10",
+            "departure": "2026-03-12",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7669, -151.5016",
+          "activities": ["Visite du marae Taputapuātea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Exploration de l'île",
+          "dates": {
+            "arrival": "2026-03-12",
+            "departure": "2026-03-14",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7700, -151.5100",
+          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Repos et départ",
+          "dates": {
+            "arrival": "2026-03-14",
+            "departure": "2026-03-16",
+            "duration": "2 jours"
+          },
+          "coordinates": "-16.7600, -151.4800",
+          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "12",
+        "title": "Aventure éco-tourisme à Nuku Hiva ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Nuku Hiva",
+        "presentation_img_1": "pres_nuku_hiva_img_1.jpg",
+        "presentation_img_2": "pres_nuku_hiva_img_2.jpg",
+        "presentation_img_3": "pres_nuku_hiva_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-140.1006!3d-8.9288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b730b7d635ad89%3A0x7d010d4fa4c5c408!2sNuku%20Hiva%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "20/04/2026",
+          "end_date": "26/04/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Île préservée", "Faune et flore exceptionnelles", "Montagnes imposantes", "Vieilles traditions marquisiennes"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2100,
+        "total_price": 4200,
+        "hotel": ["Nuku Hiva Keikahanui Pearl Lodge (4⭐)", "Hiva Oa Pearl Lodge (4⭐)", "Hotel Relais Moana Nuku Hiva (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et immersion dans la culture locale",
+          "dates": {
+            "arrival": "2026-04-20",
+            "departure": "2026-04-22",
+            "duration": "2 jours"
+          },
+          "coordinates": "-8.9288, -140.1006",
+          "activities": ["Visite des anciens sites archéologiques", "Découverte des traditions marquisiennes", "Baignade en famille"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Randonnée et exploration de l'île",
+          "dates": {
+            "arrival": "2026-04-22",
+            "departure": "2026-04-24",
+            "duration": "2 jours"
+          },
+          "coordinates": "-8.9100, -140.1100",
+          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Détente et retour",
+          "dates": {
+            "arrival": "2026-04-24",
+            "departure": "2026-04-26",
+            "duration": "2 jours"
+          },
+          "coordinates": "-8.9300, -140.0900",
+          "activities": ["Bain de soleil sur la plage", "Relaxation au bord de l'eau", "Balade en bâteau"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "13",
+        "title": "Séjour de luxe à Tetiaroa ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île privée de Tetiaroa",
+        "presentation_img_1": "pres_tetiaroa_img_1.jpg",
+        "presentation_img_2": "pres_tetiaroa_img_2.jpg",
+        "presentation_img_3": "pres_tetiaroa_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-149.5740!3d-17.5150!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b9b6bcd34d3157%3A0x33075ff019dd5a1!2sTetiaroa%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "05/05/2026",
+          "end_date": "12/05/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Île privée et exclusive", "Plages immaculées", "Service de luxe personnalisé", "Séjour en villa sur pilotis"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 5000,
+        "total_price": 10000,
+        "hotel": ["The Brando Tetiaroa Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et installation dans la villa",
+          "dates": {
+            "arrival": "2026-05-05",
+            "departure": "2026-05-07",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5150, -149.5740",
+          "activities": ["Installation dans une villa privée", "Détente sur la plage", "Découverte des traditions polynésiennes"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Exploration et découvertes locales",
+          "dates": {
+            "arrival": "2026-05-07",
+            "departure": "2026-05-09",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5200, -149.5600",
+          "activities": ["Plongée dans le lagon", "Visite de l'île privée", "Détente à la plage"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Détente ultime et retour",
+          "dates": {
+            "arrival": "2026-05-09",
+            "departure": "2026-05-12",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5300, -149.5700",
+          "activities": ["Massage au spa", "Dîner privé sur la plage", "Dégustation de vanille locale"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "14",
+        "title": "Découverte culturelle à Moorea ⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, île de Moorea",
+        "presentation_img_1": "pres_moorea_img_7.jpg",
+        "presentation_img_2": "pres_moorea_img_8.jpg",
+        "presentation_img_3": "pres_moorea_img_9.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-149.8221!3d-17.5407!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b80d4a4d03d09f%3A0x44210c1710e440c!2sMoorea%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "10/06/2026",
+          "end_date": "16/06/2026",
+          "duration": "7 jours / 6 nuits"
+        },
+        "special_features": ["Île aux paysages époustouflants", "Vues imprenables sur le lagon", "Culture locale authentique", "Héritage polynésien préservé"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 2500,
+        "total_price": 5000,
+        "hotel": ["Moorea Pearl Resort & Spa (4⭐)", "Hilton Moorea Lagoon Resort & Spa (5⭐)", "Sofitel Moorea Ia Ora Beach Resort (5⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Arrivée et exploration de la culture locale",
+          "dates": {
+            "arrival": "2026-06-10",
+            "departure": "2026-06-12",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5407, -149.8221",
+          "activities": ["Visite du centre culturel de Moorea", "Découverte de l'artisanat local", "Visite d'un village traditionnel"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Randonnée et exploration des paysages",
+          "dates": {
+            "arrival": "2026-06-12",
+            "departure": "2026-06-14",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5500, -149.8100",
+          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Détente et retour",
+          "dates": {
+            "arrival": "2026-06-14",
+            "departure": "2026-06-16",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5600, -149.8200",
+          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      },
+      {
+        "id": "15",
+        "title": "Exploration Sous-Marine en Polynésie ⭐⭐⭐⭐⭐",
+        "subtitle": "Polynésie française, plusieurs îles",
+        "presentation_img_1": "pres_plongee_img_1.jpg",
+        "presentation_img_2": "pres_plongee_img_2.jpg",
+        "presentation_img_3": "pres_plongee_img_3.jpg",
+        "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-149.6000!3d-17.5000!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b735d0a1b39c73%3A0x4ef204ee58c9d3f8!2sIles%20de%20la%20Soci%C3%A9t%C3%A9%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
+        "dates": {
+          "start_date": "20/07/2026",
+          "end_date": "30/07/2026",
+          "duration": "11 jours / 10 nuits"
+        },
+        "special_features": ["Plongée d'exception", "Rencontre avec des requins", "Biodiversité marine exceptionnelle", "Accès direct à des spots de plongée"],
+        "status": "en cours de modification",
+        "guests": ["Personne 1", "Personne 2"],
+        "price_per_person": 6500,
+        "total_price": 13000,
+        "hotel": ["Bora Bora Lagoon Resort & Spa (5⭐)", "Le Méridien Tahiti (5⭐)", "Moorea Pearl Resort & Spa (4⭐)"],
+        "step_1": {
+          "id": 1,
+          "title": "Embarquement et découverte de Tahiti",
+          "dates": {
+            "arrival": "2026-07-20",
+            "departure": "2026-07-22",
+            "duration": "2 jours"
+          },
+          "coordinates": "-17.5000, -149.6000",
+          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_2": {
+          "id": 2,
+          "title": "Croisière et découverte de Bora Bora",
+          "dates": {
+            "arrival": "2026-07-22",
+            "departure": "2026-07-25",
+            "duration": "3 jours"
+          },
+          "coordinates": "-16.5000, -151.7000",
+          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        },
+        "step_3": {
+          "id": 3,
+          "title": "Dernière escale à Moorea et retour",
+          "dates": {
+            "arrival": "2026-07-25",
+            "departure": "2026-07-30",
+            "duration": "5 jours"
+          },
+          "coordinates": "-17.5407, -149.8221",
+          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"],
+          "user_choices": {
+            "accommodation": "",
+            "meal_plan": "",
+            "activities": ""
+          }
+        }
+      }
+    ]
+  }
+  

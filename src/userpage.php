@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="CyLanta user informations page" />
     <meta name="author" content="Developped by MI5-A TEAM" />
-    <link rel="icon" type="image/png" href="../assets/icons/ico_island.png" />
+    <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="userpage_style.css" />
 </head>
@@ -17,7 +17,7 @@
         <div class="headbar">
             <div class="headbar_left">
                 <a href="../index.php">
-                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
+                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
@@ -27,7 +27,7 @@
             </div>
             <div class="headbar_right">
                 <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
+                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
             </div>
         </div>
         
@@ -38,7 +38,7 @@
 
                 <input type="file" id="file_input" accept=".png, .jpg" style="display: none;">
                 <label for="file_input">
-                    <img class="user_img" src="../assets/example_pfp.jpg" />
+                    <img class="user_img" src="../assets/profile_pic/example_pfp.jpg" />
                 </label>
                 <p>Changer votre photo de profil</p>
                 <input type="file" accept=".png, .jpg, .jpeg" />
@@ -114,9 +114,9 @@
         <div class="footer_section">
             <h3>Nos Partenaires</h3>
             <div class="partners">
-                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/icons/cy_favicon.png" alt="Partenaire 1" /></a>
-                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/icons/cytech_icon.png"alt="Partenaire 2" /></a>
-                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/icons/cergy_ville.jpg" alt="Partenaire 3" /></a>
+                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/visuals/cy_favicon.png" alt="Partenaire 1" /></a>
+                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/visuals/cytech_icon.png"alt="Partenaire 2" /></a>
+                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/visuals/cergy_ville.jpg" alt="Partenaire 3" /></a>
             </div>
         </div>
     </footer>

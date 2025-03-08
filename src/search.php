@@ -8,7 +8,7 @@
     <meta name="description" content="CyLanta travel agency website" />
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
-    <link rel="icon" type="image/png" href="../assets/icons/ico_island.png" />
+    <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="search_style.css" />
 </head>
@@ -18,7 +18,7 @@
         <div class="headbar">
             <div class="headbar_left">
                 <a href="../index.php">
-                    <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
+                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
@@ -28,13 +28,13 @@
             </div>
             <div class="headbar_right">
                 <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
+                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
             </div>
         </div>
 
         <!-- Quick search implementation -->
         <video autoplay muted loop id="background-video">
-            <source src="../assets/island_loop_video.mp4" type="video/mp4">
+            <source src="../assets/presentation/island_loop_video.mp4" type="video/mp4">
             <p class="error_text">Votre navigateur ne supporte pas la vidéo !</p>
         </video>
         <div class="text_above">L'aventure vous attend, où allons-nous ?</div>
@@ -55,14 +55,14 @@
     </div>
     
     <div class="advanced_search_block">
-        <img class="trip_img" src="../assets/trip_img.jpg" alt="Image of a hotel in Bora Bora" />
+        <img class="trip_img" src="../assets/presentation/pres_trip_img.jpg" alt="Image of a hotel in Bora Bora" />
         <div class="advanced_search_text">
             <p>Vous cherchez un voyage en particulier ?</p>
 
             <!-- We use 'oneclick' so when the button is clicked, it takes you to advanced_search.php -->
             <button class="advanced_search_button" onclick="window.location.href='advanced_search.php'">
                 <a href="advanced_search.php">Cliquez ici pour accéder à la recherche avancée</a>
-                <img class="advanced_search_image" src="../assets/icons/magnifying_glass_logo.png" />
+                <img class="advanced_search_image" src="../assets/visuals/magnifying_glass_logo.png" />
             </button>
         </div>
     </div>
@@ -70,43 +70,43 @@
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
         <div class="card">
-            <img src="../assets/tahiti_img.jpg" alt="tahiti image" />
+            <img src="../assets/presentation/pres_tetiaroa_img_1.jpg" alt="Tetiaro image" />
             <div class="card_content">
-                <h2>TAHITI</h2>
-                <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
-                <a href="../destinations/presentation_tahiti.php" class="explore">➤ Découvrir</a>
+                <h2>Séjour de luxe à Tetiaroa</h2>
+                <p>Vivez l'exception, un séjour de luxe entre îles privées et paysages paradisiaques.</p>
+                <a href="../src/trip.php?id=13" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
-            <img src="../assets/borabora_img.jpg" alt="bora-bora image" />
+            <img src="../assets/presentation/pres_plongee_img_2.jpg" alt="Diving image" />
             <div class="card_content">
-                <h2>BORA BORA</h2>
-                <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
-                <a href="../destinations/presentation_bora.php" class="explore">➤ Découvrir</a>
+                <h2>Exploration Sous-Marine</h2>
+                <p>Explorez les fonds marins de la Polynésie, entre coraux et vie sauvage.</p>
+                <a href="../src/trip.php?id=15" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
-            <img src="../assets/huahine_img.jpg" alt="huahine image" />
+            <img src="../assets/presentation/pres_bora-bora_img_6.jpg" alt="Bora Bora image" />
             <div class="card_content">
-                <h2>HUAHINE</h2>
-                <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
-                <a href="../destinations/presentation_huahine.php" class="explore">➤ Découvrir</a>
+                <h2>Séjour romantique</h2>
+                <p>Vivez une escapade romantique à Bora Bora.</p>
+                <a href="../src/trip.php?id=8" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
-            <img src="../assets/raiatea_img.jpg" alt="raiatea image" />
+            <img src="../assets/presentation/pres_fakarava_img_2.jpg" alt="Fakarava image" />
             <div class="card_content">
-                <h2>RAIATEA</h2>
-                <p>Vivez une escapade inoubliable au sein d'un lagon aux mille nuances de bleu.</p>
-                <a href="../destinations/presentation_raiatea.php" class="explore">➤ Découvrir</a>
+                <h2>Évasion à Fakarava</h2>
+                <p>Évadez-vous dans un atoll préservé aux eaux cristallines.</p>
+                <a href="../src/trip.php?id=7" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
-            <img src="../assets/tahaa_img.jpg" alt="tahaa image" />
+            <img src="../assets/presentation/pres_tahaa_img_1.jpg" alt="Tahaa image" />
             <div class="card_content">
-                <h2>TAHA'A</h2>
-                <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu'un.</p>
-                <a href="../destinations/presentation_tahaa.php" class="explore">➤ Découvrir</a>
+                <h2>Aventure à Taha'a</h2>
+                <p>Vivez l'aventure à Taha'a, île secrète entre montagnes et plages désertes.</p>
+                <a href="../src/trip.php?id=6" class="explore">➤ Découvrir</a>
             </div>
         </div>
     </div>
@@ -134,9 +134,9 @@
         <div class="footer_section">
             <h3>Nos Partenaires</h3>
             <div class="partners">
-                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/icons/cy_favicon.png" alt="Partenaire 1" /></a>
-                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/icons/cytech_icon.png" alt="Partenaire 2" /></a>
-                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/icons/cergy_ville.jpg" alt="Partenaire 3" /></a>
+                <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/visuals/cy_favicon.png" alt="Partenaire 1" /></a>
+                <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/visuals/cytech_icon.png" alt="Partenaire 2" /></a>
+                <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/visuals/cergy_ville.jpg" alt="Partenaire 3" /></a>
             </div>
         </div>
     </footer>

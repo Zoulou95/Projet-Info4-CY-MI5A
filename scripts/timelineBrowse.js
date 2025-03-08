@@ -1,8 +1,8 @@
-// Script to browse a timeline and select steps when choosing a trip
+// timelineBrowse.js : script to browse a timeline and select steps when choosing a trip
 
 document.addEventListener('DOMContentLoaded', function () {
     const steps = document.querySelectorAll('.step');
-    const boards = document.querySelectorAll('.board');
+    const boards = document.querySelectorAll('.steps_board');
 
     // Function to hide all boards
     function hideAllBoards() {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to show the board corresponding to the step
     function showBoard(stepNumber) {
         hideAllBoards();
-        const boardToShow = document.querySelector(`.board:nth-of-type(${stepNumber})`);
+        const boardToShow = document.querySelector(`.steps_board:nth-of-type(${stepNumber})`);
         boardToShow.style.display = 'block';
     }
 

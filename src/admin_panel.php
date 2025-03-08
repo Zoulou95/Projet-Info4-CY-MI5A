@@ -8,7 +8,7 @@
     <meta name="description" content="CyLanta user informations page" />
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
-    <link rel="icon" type="image/png" href="../assets/icons/ico_island.png" />
+    <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="base_style.css" />
     <link rel="stylesheet" type="text/css" href="admin_panel_style.css" />
 </head>
@@ -17,7 +17,7 @@
         <div class="headbar">
             <div class="headbar_left">
                 <a href="../index.php">
-                <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
+                <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
@@ -27,14 +27,14 @@
             </div>
             <div class="headbar_right">
                 <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a href="userpage.php"><img  class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" /></a>
             </div>
         </div>
 
         <!-- Admin panel -->
         <div class="user_container">
             <div class="user">
-                    <img class="user_img" src="../assets/example_pfp.jpg" />
+                    <img class="user_img" src="../assets/profile_pic/example_pfp.jpg" />
                 <div class="user_name">
                     <p class="admin_text">Dupont Jojo</p>
                 </div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="user">
-                    <img class="user_img" src="../assets/example_pfp_2.jpg" />
+                    <img class="user_img" src="../assets/profile_pic/example_pfp_2.jpg" />
                 <div class="user_name">
                     <p class="vip_text">Amélie Lefevre</p>
                 </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="user">
-                    <img class="user_img" src="../assets/example_pfp_3.jpg" />
+                    <img class="user_img" src="../assets/profile_pic/example_pfp_3.jpg" />
                 <div class="user_name">Sophie Durand
                 </div>
                 <div class="user_privilege">

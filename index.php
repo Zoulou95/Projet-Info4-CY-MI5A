@@ -7,7 +7,7 @@
     <meta name="description" content="CyLanta travel agency website" />
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
-    <link rel="icon" type="image/png" href="assets/icons/ico_island.png" />
+    <link rel="icon" type="image/png" href="assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="src/base_style.css" />
     <link rel="stylesheet" type="text/css" href="src/index_style.css" />
 </head>
@@ -17,7 +17,7 @@
         <div class="headbar">
             <div class="headbar_left">
                 <a href="index.php">
-                    <img class="logo_img" src="assets/cylanta_logo.png" alt="Logo created by MI-A team" />
+                    <img class="logo_img" src="assets/visuals/cylanta_logo.png" alt="Logo created by MI-A team" />
                 </a>
             </div>
             <div class="headbar_rest">
@@ -33,7 +33,7 @@
 
         <!-- Homepage -->
         <div class="image_container">
-            <img src="assets/island_img.jpg" alt="falaise">
+            <img src="assets/presentation/welcome_img.jpg" alt="island welcome image">
             <div class="text_above">Cap sur vos envies, direction le sur-mesure !</div>
             <div class="text_overlay">
                 <a href="src/search.php" class="btn_explorer">Explorer</a>
@@ -46,64 +46,64 @@
         </div>
         <div class="whitebar"></div>
         <div class="voyagebar">
-            <div class="card">
-                <a href="destinations/presentation_tahiti.php" class="explore">
-                    <img src="assets/tahiti_img.jpg" alt="tahiti image">
-
-                    <div class="card_content">
-                        <h2>TAHITI</h2>
-                        <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
-                        <a href="destinations/presentation_tahiti.php" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="destinations/presentation_bora.php" class="explore">
-                    <img src="assets/pres_bora-bora_img_2.jpg" alt="bora-bora image">
+        <div class="card">
+                <a href="src/trip.php?id=1" class="explore">
+                    <img src="assets/presentation/pres_bora-bora_img_2.jpg" alt="Bora-bora image">
                     <div class="card_content">
                         <h2>Lune de Miel à Bora Bora</h2>
                         <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
-                        <a href="destinations/presentation_bora.php" class="explore">➤ Découvrir</a>
+                        <a href="src/trip.php?id=1" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_moorea.php" class="explore">
-                    <img src="assets/moorea_img.jpg" alt="moorea image">
+                <a href="src/trip.php?id=10" class="explore">
+                    <img src="assets/presentation/pres_tahiti_img_3.jpg" alt="Tahiti image">
+
                     <div class="card_content">
-                        <h2>MOOREA</h2>
-                        <p>Explorez un îlot préservé, entouré d'un lagon aux eaux cristallines.</p>
-                        <a href="destinations/presentation_moorea.php" class="explore">➤ Découvrir</a>
+                        <h2>Aventure à Tahiti</h2>
+                        <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
+                        <a href="src/trip.php?id=10" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_huahine.php" class="explore">
-                    <img src="assets/huahine_img.jpg" alt="huahine image">
+                <a href="src/trip.php?id=5" class="explore">
+                    <img src="assets/presentation/pres_moorea_img_5.jpg" alt="Moorea image">
                     <div class="card_content">
-                        <h2>HUAHINE</h2>
-                        <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
-                        <a href="destinations/presentation_huahine.php" class="explore">➤ Découvrir</a>
+                        <h2>Séjour en famille à Moorea</h2>
+                        <p>Explorez en famille un îlot préservé, entouré d'un lagon aux eaux cristallines.</p>
+                        <a href="src/trip.php?id=5" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_raiatea.php" class="explore">
-                    <img src="assets/raiatea_img.jpg" alt="raiatea image">
+                <a href="src/trip.php?id=9" class="explore">
+                    <img src="assets/presentation/pres_huahine_img_5.jpg" alt="Huahine image">
                     <div class="card_content">
-                        <h2>RAIATEA</h2>
-                        <p>Vivez une escapade inoubliable au sein d'un lagon aux mille nuances de bleu.</p>
-                        <a href="destinations/presentation_raiatea.php" class="explore">➤ Découvrir</a>
+                        <h2>Expérience inédite à Huahine</h2>
+                        <p>Vivez une expérience culturelle inédite à Huahine.</p>
+                        <a href="src/trip.php?id=9" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_tahaa.php" class="explore">
-                    <img src="assets/tahaa_img.jpg" alt="tahaa image">
+                <a href="src/trip.php?id=11" class="explore">
+                    <img src="assets/presentation/pres_raiatea_img_1.jpg" alt="Raiatea image">
                     <div class="card_content">
-                        <h2>TAHA'A</h2>
-                        <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu'un.</p>
-                        <a href="destinations/presentation_tahaa.php" class="explore">➤ Découvrir</a>
+                        <h2>Voyage culturel à Raiatea</h2>
+                        <p>Plongez dans l'histoire de Raiatea, entre traditions vivantes et paysages.</p>
+                        <a href="src/trip.php?id=11" class="explore">➤ Découvrir</a>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="src/trip.php?id=12" class="explore">
+                    <img src="assets/presentation/pres_nuku_hiva_img_1.jpg" alt="uku Hiva image">
+                    <div class="card_content">
+                        <h2>Aventure éco-tourisme à Nuku Hiva</h2>
+                        <p>Explorez un havre de biodiversité où nature et aventure se rencontrent.</p>
+                        <a href="src/trip.php?id=12" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
@@ -134,9 +134,9 @@
             <div class="footer_section">
                 <h3>Nos Partenaires</h3>
                 <div class="partners">
-                    <a href="https://www.cyu.fr/" target="_blank"><img src="assets/icons/cy_favicon.png" alt="Partenaire 1"></a>
-                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="assets/icons/cytech_icon.png"alt="Partenaire 2"></a>
-                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="assets/icons/cergy_ville.jpg" alt="Partenaire 3"></a>
+                    <a href="https://www.cyu.fr/" target="_blank"><img src="assets/visuals/cy_favicon.png" alt="Partenaire 1"></a>
+                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="assets/visuals/cytech_icon.png"alt="Partenaire 2"></a>
+                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="assets/visuals/cergy_ville.jpg" alt="Partenaire 3"></a>
                 </div>
             </div>
         </footer>
