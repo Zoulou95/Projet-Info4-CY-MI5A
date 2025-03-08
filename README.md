@@ -21,7 +21,8 @@ Our website is a travel agency website that allows you to book and pay for pseud
 
 ## Prerequisites
 
-A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
+- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
+- PHP and a local server are required to run the project locally.
 
 ## Installation
 
@@ -29,21 +30,54 @@ To clone the repository, use the command `git clone https://github.com/Zoulou95/
 
 ## Utilisation
 
-To explore the site, you can open `index.html`, which will redirect you to all the other pages.
+To explore the site, you need to open a local server on your machine.
+
+### On Debian (or similar Linux distributions):
+1. Ensure PHP is installed. You can install PHP by running: `sudo apt install php`
+
+2. Navigate to the project folder in the terminal.
+
+3. Start the PHP built-in server with the command: `php -S localhost:8000`
+
+4. Open your web browser and go to http://localhost:8000 to view the project.
+
+### On Windows:
+1. Install PHP from the official website: https://www.php.net/downloads.php
+
+2. Navigate to the project folder in the terminal.
+
+3. Start the PHP built-in server with the command: `php -S localhost:8000`
+
+4. Open your web browser and go to http://localhost:8000 to view the project.
+
+### On macOS:
+1. Install PHP via Homebrew, use `brew install php`.
+
+2. Navigate to the project folder in the terminal.
+
+3. Start the PHP built-in server with the command: `php -S localhost:8000`
+
+4. Open your web browser and go to http://localhost:8000 to view the project.
 
 ## Project structure
 
 ```
+📦 CyLanta Project
 ├── 📂 assets
 │   ├── 🖼️ images
 │   └── 🎬 video
-├── 📂 destinations
-│   ├── 📄 presentation_bora.html
-│   └── ....
+├── 📂 data
+│   ├── 🖼️ images
+│   └── 🎬 video
+├── 📂 scripts
+│   ├── 📊 trip_data.json
+│   └── 📊 ...
 ├── 📂 src
-│   ├── 📄 admin_panel.html
+│   ├── 📄 admin_panel.php
+│   ├── 📄 trip.php
 │   ├── 📄 ...
 │   ├── 🎨 admin_panel_style.css
+│   ├── 🎨 trip.css
 │   └── 🎨 ...
 ├── 📂 presentation_phase1
 │   └── 🖼️ screenshots
@@ -52,23 +86,23 @@ To explore the site, you can open `index.html`, which will redirect you to all t
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
-## Overview
+## Page overview
 
 - `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
 
-- `presentation_style.css` is the default style sheet for all presentation pages located in `/destination`.
+- `trip_style.css` is the default style sheet for all trips presentation pages.
  
-- The page `index.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
+- The page `index.php` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 
-- `admin_panel.html` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
+- `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
-- `advanced_search.html` is a travel search page with several filter fields (dates, locations, options, price, etc.).
+- `advanced_search.php` is a travel search page with several filter fields (dates, locations, options, price, etc.).
 
-- `search.html` includes an integrated quick-search field for sorting trips by destination.
+- `search.php` includes an integrated quick-search field for sorting trips by destination.
 
-- `userpage.html` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
+- `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed, present in the `trip_data.json` file.
 
-- `userpage_security.html` allows the user to modify his password.
-**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript).
+- `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
 
-- The presentations pages in the `/destinations` folder are used to display and present the various holidays available and their characteristics (price, user ratings, etc.).
+- `userpage_security.php` allows the user to modify his password.
+**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 3 (JavaScript).
