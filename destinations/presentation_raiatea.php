@@ -1,4 +1,4 @@
-<!-- presentation_huahine.html -->
+<!-- presentation_raiatea.php -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,37 +17,37 @@
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../index.html">Accueil</a>
-                <a class="headbar_item" href="../src/search.html">Destinations</a>
-                <a class="headbar_item" href="../src/advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../index.php">Accueil</a>
+                <a class="headbar_item" href="../src/search.php">Destinations</a>
+                <a class="headbar_item" href="../src/advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="../src/userpage.html">Mon espace</a>
-                <a href="../src/userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a class="headbar_my_space" href="../src/userpage.php">Mon espace</a>
+                <a href="../src/userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
          </div>
-         <div class="separate_presentation"></div>
+         <div class="separate"></div>
 
 	<div class="image_container">   
-    		<img class="presentation_img" src="../assets/pres_huahine_img.png" alt="huahine image" />
+    		<img class="presentation_img" src="../assets/raiatea_img.jpg" alt="raiatea image" />
     			<div class="description">
-        			<h2>Découvrez Huahine, l'île secrète de la Polynésie 🌊</h2>
-        			<p>Sauvage et authentique, Huahine vous plonge au cœur d'une nature préservée où lagons turquoise, plages désertes et montagnes luxuriantes s’entrelacent harmonieusement.
-                       Explorez ses vestiges archéologiques mystérieux, partez en pirogue à la rencontre des légendaires anguilles sacrées ou laissez-vous séduire par l’ambiance paisible de ses villages pittoresques.
-                       Entre aventures marines et balades à travers des paysages enchanteurs, cette île envoûtante vous promet un voyage hors du temps. Ressentez la magie polynésienne et vivez une expérience inoubliable à Huahine.
+        			<h2>Découvrez Raiatea, l'île sacrée de la Polynésie 🌺</h2>
+        			<p>Berceau légendaire de la culture polynésienne, Raiatea vous invite à un voyage entre histoire et nature préservée. 
+                       Plongez dans son lagon cristallin, naviguez vers les motus idylliques ou explorez le mythique marae Taputapuātea, classé au patrimoine mondial de l’UNESCO.
+                       Aventurez-vous sur les sentiers du mont Temehani, où fleurit la mystérieuse tiare 'apetahi, une fleur unique au monde. Entre lagon, montagnes et traditions vivantes, Raiatea vous promet une expérience inoubliable, empreinte d’authenticité et de spiritualité.
         			</p>
                     <br>
-                    <b>Note CyLanta : 4.83 ⭐</b>
+                    <b>Note CyLanta : 4.9 ⭐</b>
         		</div>
 	</div>
     <div class="separate_img">
         <br><br>
-        <form action="#.html" method="post">
+        <form action="#.php" method="post">
         <div class="board">
             <table>
                 <thead>
@@ -67,9 +67,9 @@
                         </td>
                         <td>
                             <select name="Hôtel">
-                                <option value="oasis_de_huahine">L'Oasis de Huahine (4⭐)</option>
-                                <option value="bora_nuit">Bora Nui (5⭐)</option>
-                                <option value="les_rives_du_vent">Les Rives du Vent (5⭐)</option>
+                                <option value="opoa_beach_hotel">Opoa Beach Hotel (5⭐)</option>
+                                <option value="raiatea_lodge_hotel">Raiatea Lodge Hotel (5⭐)</option>
+                                <option value="villa_tonoi">Villa Tonoi (5⭐)</option>
                             </select>
                         </td>
                         <td>
@@ -82,32 +82,32 @@
                         </td>
                         <td>
                             <select name="Chambres">
-                                <option value="1_personne">1 personne</option>
                                 <option value="2_personnes">2 personnes</option>
                                 <option value="3_personnes">3 personnes</option>
                                 <option value="4_personnes">4 personnes</option>
                                 <option value="5_personnes">5 personnes</option>
+                                <option value="6_personnes">6 personnes</option>
                             </select>
                         </td>
                         <td>
-                            Aventure
+                            Découverte
                         </td>
                         <td>
                             <!-- We will set an adaptive price during phase 2 -->
-                            11300€
+                            2599.99€
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <button onclick="window.location.href='#.html'">
-            <a class="reservation_text" href="#".html">Réserver</a>
+        <button onclick="window.location.href='#.php'">
+            <a class="reservation_text" href="#".php">Réserver</a>
         </button>
     </div>
     </form>  
     </div>
 
-    <div class="separate_footer"></div>  
+    <div class="separate_footer"></div>     
     
     <!-- Footer -->
     <footer>

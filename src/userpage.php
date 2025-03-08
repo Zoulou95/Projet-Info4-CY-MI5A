@@ -1,4 +1,4 @@
-<!-- userpage.html : allow the user to see his personal informations and modify it -->
+<!-- userpage.php : allow the user to see his personal informations and modify it -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,18 +16,18 @@
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../index.html">Accueil</a>
-                <a class="headbar_item" href="search.html">Destinations</a>
-                <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../index.php">Accueil</a>
+                <a class="headbar_item" href="search.php">Destinations</a>
+                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
+                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
+                <a href="userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
             </div>
         </div>
         
@@ -60,12 +60,12 @@
             <!-- User personal informations menu (name, email, etc.)-->
             <div class="user_informations">
                 <ul class="menu_navigation">
-                    <li class="info_link" id="info_link"><a href="userpage.html">Informations</a></li>
-                    <li class="security_link" id="security_link"><a href="userpage_security.html">Sécurité</a></li>
-                    <li class="admin_panel_link" id="admin_panel_link"><a href="admin_panel.html">Administration</a></li>
+                    <li class="info_link" id="info_link"><a href="userpage.php">Informations</a></li>
+                    <li class="security_link" id="security_link"><a href="userpage_security.php">Sécurité</a></li>
+                    <li class="admin_panel_link" id="admin_panel_link"><a href="admin_panel.php">Administration</a></li>
                 </ul>
                 <hr>
-                <form method="post" action="userpage.html">
+                <form method="post" action="userpage.php">
                     <div>
                         <label for="last_name">Nom</label><br><br>
                         <input type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="Dupont" required />

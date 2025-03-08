@@ -1,4 +1,4 @@
-<!-- presentation_moorea.html -->
+<!-- presentation_tahaa.php -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,38 +17,38 @@
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../index.html">Accueil</a>
-                <a class="headbar_item" href="../src/search.html">Destinations</a>
-                <a class="headbar_item" href="../src/advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../index.php">Accueil</a>
+                <a class="headbar_item" href="../src/search.php">Destinations</a>
+                <a class="headbar_item" href="../src/advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="../src/userpage.html">Mon espace</a>
-                <a href="../src/userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a class="headbar_my_space" href="../src/userpage.php">Mon espace</a>
+                <a href="../src/userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
          </div>
          <div class="separate"></div>
 
-         <div class="image_container">   
-    		<img class="presentation_img" src="../assets/moorea_img.jpg" alt="moorea" />
+	<div class="image_container">   
+    		<img class="presentation_img" src="../assets/tahaa_img.jpg" alt="tahaa image" />
     			<div class="description">
-        			<h2>Découvrez le charme envoûtant de Moorea, l'île aux mille merveilles 🌿✨</h2>
-        			<p>Entre lagons turquoise, montagnes majestueuses et nature luxuriante, Moorea vous promet une escapade paradisiaque. 
-                       Plongez dans des eaux cristallines aux côtés des raies et des requins, partez en randonnée à travers des panoramas à couper le souffle ou explorez ses plantations d’ananas parfumées.
-                       Que vous soyez amateur d'aventure ou en quête de sérénité, cette perle du Pacifique saura combler toutes vos envies. 
-                       Laissez-vous séduire par la douceur de vivre polynésienne et l'accueil chaleureux des habitants pour un voyage inoubliable.
+        			<h2>Découvrez Taha'a, l'île vanille de la Polynésie 🌿✨</h2>
+        			<p>Évadez-vous sur Taha'a, une île envoûtante où le parfum de la vanille flotte dans l'air. 
+                       Entourée d'un lagon émeraude et bordée de motus paradisiaques, elle est idéale pour une escapade entre luxe et authenticité. 
+                       Plongez dans ses jardins de corail spectaculaires, explorez ses plantations de vanille et laissez-vous séduire par son atmosphère paisible. 
+                       Ici, le temps s'écoule doucement au rythme polynésien, offrant une expérience unique entre nature préservée et traditions vivantes. Taha’a, un véritable havre de sérénité au cœur du Pacifique. 
         			</p>
                     <br>
-                    <b>Note CyLanta : 4.1 ⭐</b>
+                    <b>Note CyLanta : 4.7 ⭐</b>
         		</div>
 	</div>
     <div class="separate_img">
         <br><br>
-        <form action="#.html" method="post">
+        <form action="#.php" method="post">
         <div class="board">
             <table>
                 <thead>
@@ -68,9 +68,9 @@
                         </td>
                         <td>
                             <select name="Hôtel">
-                                <option value="ohana_island_lodge">Ohana Island Lodge (4⭐)</option>
-                                <option value="tama_lagoon_resort">Tama Lagoon Resort (4⭐)</option>
-                                <option value="moorea_family_paradise">Moorea Family Paradise (5⭐)</option>
+                                <option value="le_tahaa_by_pearl_resorts">Le Taha'a by Pearl Resorts (4⭐)</option>
+                                <option value="eden_private_island">Eden Private Island (5⭐)</option>
+                                <option value="fare_pea_iti">Fare Pea Iti (5⭐)</option>
                             </select>
                         </td>
                         <td>
@@ -91,25 +91,25 @@
                             </select>
                         </td>
                         <td>
-                            Voyage en famille
+                            Romantique
                         </td>
                         <td>
                             <!-- We will set an adaptive price during phase 2 -->
-                            7499.99€
+                            8000€
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <button onclick="window.location.href='#.html'">
-            <a class="reservation_text" href="#".html">Réserver</a>
+        <button onclick="window.location.href='#.php'">
+            <a class="reservation_text" href="#".php">Réserver</a>
         </button>
     </div>
     </form>  
     </div>
 
-    <div class="separate_footer"></div>    
-    
+    <div class="separate_footer"></div> 
+        
     <!-- Footer -->
     <footer>
         <div class="footer_section">

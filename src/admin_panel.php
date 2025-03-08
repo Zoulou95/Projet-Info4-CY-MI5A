@@ -1,4 +1,4 @@
-<!-- admin_panel.html : administrators' page where they can modify their privileges -->
+<!-- admin_panel.php : administrators' page where they can modify their privileges -->
 
 <!DOCTYPE html> 
 <html lang="fr">
@@ -16,18 +16,18 @@
     <div class="container">
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../index.html">
+                <a href="../index.php">
                 <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../index.html">Accueil</a>
-                <a class="headbar_item" href="search.html">Destinations</a>
-                <a class ="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../index.php">Accueil</a>
+                <a class="headbar_item" href="search.php">Destinations</a>
+                <a class ="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-                <a href="userpage.html"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
+                <a href="userpage.php"><img  class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
         </div>
 

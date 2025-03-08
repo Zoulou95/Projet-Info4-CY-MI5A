@@ -1,4 +1,4 @@
-<!-- presentation_bora.html -->
+<!-- presentation_bora.php -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,18 +17,18 @@
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../index.html">Accueil</a>
-                <a class="headbar_item" href="../src/search.html">Destinations</a>
-                <a class="headbar_item" href="../src/advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../index.php">Accueil</a>
+                <a class="headbar_item" href="../src/search.php">Destinations</a>
+                <a class="headbar_item" href="../src/advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="../src/userpage.html">Mon espace</a>
-                <a href="../src/userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
+                <a class="headbar_my_space" href="../src/userpage.php">Mon espace</a>
+                <a href="../src/userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" /></a>
             </div>
         </div>
         <div class="separate"></div>
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <form action="#.html" method="post">
+        <form action="#.php" method="post">
             <!-- First board -->
             <div class="board">
                 <h3 class="legend">Étape 1</h3>

@@ -1,4 +1,4 @@
-<!-- search.html : allow the user to search for a non-specific trip using a destination -->
+<!-- search.php : allow the user to search for a non-specific trip using a destination -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,18 +17,18 @@
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="logo_img" src="../assets/cylanta_logo.png" alt="CyLanta Logo" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="../index.html">Accueil</a>
-                <a class="headbar_item" href="search.html">Destinations</a>
-                <a class="headbar_item" href="advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="../index.php">Accueil</a>
+                <a class="headbar_item" href="search.php">Destinations</a>
+                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.html">Mon espace</a>
-                <a href="userpage.html"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
+                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
+                <a href="userpage.php"><img class="user_img_nav" src="../assets/example_pfp.jpg" alt="User's profile picture" /></a>
             </div>
         </div>
 
@@ -59,9 +59,9 @@
         <div class="advanced_search_text">
             <p>Vous cherchez un voyage en particulier ?</p>
 
-            <!-- We use 'oneclick' so when the button is clicked, it takes you to advanced_search.html -->
-            <button class="advanced_search_button" onclick="window.location.href='advanced_search.html'">
-                <a href="advanced_search.html">Cliquez ici pour accéder à la recherche avancée</a>
+            <!-- We use 'oneclick' so when the button is clicked, it takes you to advanced_search.php -->
+            <button class="advanced_search_button" onclick="window.location.href='advanced_search.php'">
+                <a href="advanced_search.php">Cliquez ici pour accéder à la recherche avancée</a>
                 <img class="advanced_search_image" src="../assets/icons/magnifying_glass_logo.png" />
             </button>
         </div>
@@ -74,7 +74,7 @@
             <div class="card_content">
                 <h2>TAHITI</h2>
                 <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
-                <a href="../destinations/presentation_tahiti.html" class="explore">➤ Découvrir</a>
+                <a href="../destinations/presentation_tahiti.php" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
@@ -82,7 +82,7 @@
             <div class="card_content">
                 <h2>BORA BORA</h2>
                 <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
-                <a href="../destinations/presentation_bora.html" class="explore">➤ Découvrir</a>
+                <a href="../destinations/presentation_bora.php" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
@@ -90,7 +90,7 @@
             <div class="card_content">
                 <h2>HUAHINE</h2>
                 <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
-                <a href="../destinations/presentation_huahine.html" class="explore">➤ Découvrir</a>
+                <a href="../destinations/presentation_huahine.php" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
@@ -98,7 +98,7 @@
             <div class="card_content">
                 <h2>RAIATEA</h2>
                 <p>Vivez une escapade inoubliable au sein d'un lagon aux mille nuances de bleu.</p>
-                <a href="../destinations/presentation_raiatea.html" class="explore">➤ Découvrir</a>
+                <a href="../destinations/presentation_raiatea.php" class="explore">➤ Découvrir</a>
             </div>
         </div>
         <div class="card">
@@ -106,7 +106,7 @@
             <div class="card_content">
                 <h2>TAHA'A</h2>
                 <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu'un.</p>
-                <a href="../destinations/presentation_tahaa.html" class="explore">➤ Découvrir</a>
+                <a href="../destinations/presentation_tahaa.php" class="explore">➤ Découvrir</a>
             </div>
         </div>
     </div>

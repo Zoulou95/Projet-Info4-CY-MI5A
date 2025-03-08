@@ -1,4 +1,4 @@
-<!-- index.html : user home and welcome page -->
+<!-- index.php : user home and welcome page -->
 
 <!DOCTYPE html>
 <html>
@@ -16,14 +16,14 @@
         <!-- Navigation bar -->
         <div class="headbar">
             <div class="headbar_left">
-                <a href="index.html">
+                <a href="index.php">
                     <img class="logo_img" src="assets/cylanta_logo.png" alt="Logo created by MI-A team" />
                 </a>
             </div>
             <div class="headbar_rest">
-                <a class="headbar_item" href="index.html">Accueil</a>
-                <a class="headbar_item" href="src/search.html">Destinations</a>
-                <a class="headbar_item" href="src/advanced_search.html">Rechercher un voyage</a>
+                <a class="headbar_item" href="index.php">Accueil</a>
+                <a class="headbar_item" href="src/search.php">Destinations</a>
+                <a class="headbar_item" href="src/advanced_search.php">Rechercher un voyage</a>
             </div>
             <div class="headbar_right">
                 <a class="headbar_item" href="#" onclick="openSignInOverlay()">Connexion</a>
@@ -36,7 +36,7 @@
             <img src="assets/island_img.jpg" alt="falaise">
             <div class="text_above">Cap sur vos envies, direction le sur-mesure !</div>
             <div class="text_overlay">
-                <a href="src/search.html" class="btn_explorer">Explorer</a>
+                <a href="src/search.php" class="btn_explorer">Explorer</a>
             </div>
         </div>
         <div class="secondbar">
@@ -47,63 +47,63 @@
         <div class="whitebar"></div>
         <div class="voyagebar">
             <div class="card">
-                <a href="destinations/presentation_tahiti.html" class="explore">
+                <a href="destinations/presentation_tahiti.php" class="explore">
                     <img src="assets/tahiti_img.jpg" alt="tahiti image">
 
                     <div class="card_content">
                         <h2>TAHITI</h2>
                         <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
-                        <a href="destinations/presentation_tahiti.html" class="explore">➤ Découvrir</a>
+                        <a href="destinations/presentation_tahiti.php" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_bora.html" class="explore">
+                <a href="destinations/presentation_bora.php" class="explore">
                     <img src="assets/pres_bora-bora_img_2.jpg" alt="bora-bora image">
                     <div class="card_content">
                         <h2>Lune de Miel à Bora Bora</h2>
                         <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
-                        <a href="destinations/presentation_bora.html" class="explore">➤ Découvrir</a>
+                        <a href="destinations/presentation_bora.php" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_moorea.html" class="explore">
+                <a href="destinations/presentation_moorea.php" class="explore">
                     <img src="assets/moorea_img.jpg" alt="moorea image">
                     <div class="card_content">
                         <h2>MOOREA</h2>
                         <p>Explorez un îlot préservé, entouré d'un lagon aux eaux cristallines.</p>
-                        <a href="destinations/presentation_moorea.html" class="explore">➤ Découvrir</a>
+                        <a href="destinations/presentation_moorea.php" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_huahine.html" class="explore">
+                <a href="destinations/presentation_huahine.php" class="explore">
                     <img src="assets/huahine_img.jpg" alt="huahine image">
                     <div class="card_content">
                         <h2>HUAHINE</h2>
                         <p>Plongez dans un paradis sauvage entre plages immaculées et récifs colorés.</p>
-                        <a href="destinations/presentation_huahine.html" class="explore">➤ Découvrir</a>
+                        <a href="destinations/presentation_huahine.php" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_raiatea.html" class="explore">
+                <a href="destinations/presentation_raiatea.php" class="explore">
                     <img src="assets/raiatea_img.jpg" alt="raiatea image">
                     <div class="card_content">
                         <h2>RAIATEA</h2>
                         <p>Vivez une escapade inoubliable au sein d'un lagon aux mille nuances de bleu.</p>
-                        <a href="destinations/presentation_raiatea.html" class="explore">➤ Découvrir</a>
+                        <a href="destinations/presentation_raiatea.php" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
             <div class="card">
-                <a href="destinations/presentation_tahaa.html" class="explore">
+                <a href="destinations/presentation_tahaa.php" class="explore">
                     <img src="assets/tahaa_img.jpg" alt="tahaa image">
                     <div class="card_content">
                         <h2>TAHA'A</h2>
                         <p>Admirez des paysages spectaculaires où nature et sérénité ne font qu'un.</p>
-                        <a href="destinations/presentation_tahaa.html" class="explore">➤ Découvrir</a>
+                        <a href="destinations/presentation_tahaa.php" class="explore">➤ Découvrir</a>
                     </div>
                 </a>
             </div>
