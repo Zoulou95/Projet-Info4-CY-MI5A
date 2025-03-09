@@ -39,7 +39,7 @@
                     <tr>
                         <!-- Search bar -->
                         <td>
-                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une destination... 🔎" />
+                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une destination... 🔎" name="destination" />
                             <datalist id="destinations">
                                 <option value="Tahiti"></option>
                                 <option value="Bora Bora"></option>
@@ -47,12 +47,17 @@
                                 <option value="Huahine"></option>
                                 <option value="Raiatea"></option>
                                 <option value="Taha'a"></option>
+                                <option value="Rangiroa"></option>
+                                <option value="Fakarava"></option>
+                                <option value="Nuku Hiva"></option>
+                                <option value="Rangiroa"></option>
+                                <option value="Tetiaroa"></option>
                             </datalist>
                         </td>
                         <!-- Drop-down list to select a trip -->
                         <td>
                             <div class="dropdown">
-                                <button type="button" class="dropdown_button price_button">Prix</button>
+                                <button type="button" class="dropdown_button price_button">Prix/pers</button>
                                 <div class="dropdown_content price_content">
                                     <label>
                                         <input type="checkbox" name="price_range" value="moins_1000" /> Moins de 1000€

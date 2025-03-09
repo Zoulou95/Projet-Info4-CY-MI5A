@@ -39,16 +39,8 @@
         </video>
         <div class="text_above">L'aventure vous attend, où allons-nous ?</div>
         <div class="search_overlay">
-            <form class="search_form" action="#" method="get">
-                <input class="search_input" list="destinations" placeholder="Où souhaitez-vous aller ? 🔎" />
-                <datalist id="destinations">
-                    <option value="Tahiti"></option>
-                    <option value="Bora Bora"></option>
-                    <option value="Moorea"></option>
-                    <option value="Huahine"></option>
-                    <option value="Raiatea"></option>
-                    <option value="Taha'a"></option>
-                </datalist>
+            <form class="search_form" action="result.php" method="get">
+                <input type="text" class="search_input" list="destinations" placeholder="Recherchez votre prochaine aventure... 🔎" name="tag" />
                 <button class="button_validate" type="submit">Rechercher</button>
             </form>
         </div>

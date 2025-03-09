@@ -67,11 +67,12 @@ To explore the site, you need to open a local server on your machine.
 │   ├── 🖼️ images
 │   └── 🎬 video
 ├── 📂 data
-│   ├── 🖼️ images
-│   └── 🎬 video
-├── 📂 scripts
+│   ├── 📊 bank_data.json
 │   ├── 📊 trip_data.json
-│   └── 📊 ...
+│   └── 📊 user_datajson
+├── 📂 scripts
+│   ├── 📄 timelineBrowse.js
+│   └── 📄 ...
 ├── 📂 src
 │   ├── 📄 admin_panel.php
 │   ├── 📄 trip.php
@@ -79,8 +80,6 @@ To explore the site, you need to open a local server on your machine.
 │   ├── 🎨 admin_panel_style.css
 │   ├── 🎨 trip.css
 │   └── 🎨 ...
-├── 📂 presentation_phase1
-│   └── 🖼️ screenshots
 ├── 📄 CyLanta_Charte_Graphique.pdf
 ├── 🏠 index.html
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
@@ -98,7 +97,11 @@ To explore the site, you need to open a local server on your machine.
 
 - `advanced_search.php` is a travel search page with several filter fields (dates, locations, options, price, etc.).
 
-- `search.php` includes an integrated quick-search field for sorting trips by destination.
+- `functions.php` groups the various functions common to php pages and which will be useful for processing `.json` files containing site data (user data, trip data, etc.).
+
+- `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
+
+- `search.php` includes an integrated quick-search field for sorting trips by a specific tag (e.g soleil, plongée, etc.).
 
 - `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed, present in the `trip_data.json` file.
 

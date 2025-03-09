@@ -14,7 +14,8 @@
 </head>
 <body>
 
-<?php // Script to retrieve useful data from 'trip_data.json file and display specific trip information
+<?php
+include("functions.php");
 
 // Get trip ID from URL
 if (isset($_GET['id'])) {
@@ -23,35 +24,10 @@ if (isset($_GET['id'])) {
     $trip_id = null;
 }
 
-// Read the 'trip_data.json' file and convert it into a PHP array
-$file = '../data/trip_data.json';
-if (file_exists($file)) {
-    $json_data = file_get_contents($file);
-    $data = json_decode($json_data, true); 
-} else {
-    header("Location: ../src/error_page.php");
-    exit();
-}
+$data_file = '../data/trip_data.json';
+$decodedData = dataDecode($data_file);
 
-// Verification of data structure
-if (!isset($data['trip']) || !is_array($data['trip'])) {
-    header("Location: ../src/error_page.php");
-    exit();
-}
-
-// Check that the trip matches the ID in 'trip_data.json'
-$trip = null;
-foreach ($data['trip'] as $journey) {
-    if ($journey['id'] == $trip_id) {
-        $trip = $journey;
-        break;
-    }
-}
-
-if ($trip === null) {
-    header("Location: ../src/error_page.php");
-    exit();
-}
+$trip = tripFinder($decodedData, $trip_id);
 ?>
 
     <div class="container">
