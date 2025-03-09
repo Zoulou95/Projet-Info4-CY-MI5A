@@ -61,47 +61,20 @@
 
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
-        <div class="card">
-            <img src="../assets/presentation/pres_tetiaroa_img_1.jpg" alt="Tetiaro image" />
-            <div class="card_content">
-                <h2>Séjour de luxe à Tetiaroa</h2>
-                <p>Vivez l'exception, un séjour de luxe entre îles privées et paysages paradisiaques.</p>
-                <a href="../src/trip.php?id=13" class="explore">➤ Découvrir</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/presentation/pres_plongee_img_2.jpg" alt="Diving image" />
-            <div class="card_content">
-                <h2>Exploration Sous-Marine</h2>
-                <p>Explorez les fonds marins de la Polynésie, entre coraux et vie sauvage.</p>
-                <a href="../src/trip.php?id=15" class="explore">➤ Découvrir</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/presentation/pres_bora-bora_img_6.jpg" alt="Bora Bora image" />
-            <div class="card_content">
-                <h2>Séjour romantique</h2>
-                <p>Vivez une escapade romantique à Bora Bora.</p>
-                <a href="../src/trip.php?id=8" class="explore">➤ Découvrir</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/presentation/pres_fakarava_img_2.jpg" alt="Fakarava image" />
-            <div class="card_content">
-                <h2>Évasion à Fakarava</h2>
-                <p>Évadez-vous dans un atoll préservé aux eaux cristallines.</p>
-                <a href="../src/trip.php?id=7" class="explore">➤ Découvrir</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/presentation/pres_tahaa_img_1.jpg" alt="Tahaa image" />
-            <div class="card_content">
-                <h2>Aventure à Taha'a</h2>
-                <p>Vivez l'aventure à Taha'a, île secrète entre montagnes et plages désertes.</p>
-                <a href="../src/trip.php?id=6" class="explore">➤ Découvrir</a>
-            </div>
-        </div>
-    </div>
+    <?php
+        include('trip_functions.php');
+        $data_file = '../data/trip_data.json';
+
+        // We choose the ids of the trips we want to display on our page
+        $id_list = array("13", "15", "8", "7", "6");
+        // id 13 => Séjour Tetiaroa
+        // id 15 => Exploration Sous-Marine
+        // id 8 => Séjour romantique Bora-Bora
+        // id 7 => Évasion à Fakarava
+        // id 6 => Aventure à Taha'a
+
+        displayCards($id_list, $data_file);
+    ?>
     </div>
 
     <!-- Footer -->

@@ -95,4 +95,26 @@ function displayTrip($data, $tag, $trip_number) {
         </button>';
     }
 }
+
+// Display trip presentation cards according to id provided
+function displayCards($id_list, $data_file) {
+
+    $data = dataDecode($data_file);
+
+    foreach ($id_list as $trip_id) {
+        $trip = tripFinder($data, $trip_id);
+        if(!$trip) {
+            header("Location: ../src/error_page.php?error=tripNotFound");
+        }
+        echo
+        '<div class="card">
+            <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
+            <div class="card_content">
+                <h2>' . $trip['presentation_title'] . '</h2>
+                <p>' . $trip['description'] . '</p>
+                <a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Découvrir</a>
+            </div>
+        </div>';
+    }
+}
 ?>

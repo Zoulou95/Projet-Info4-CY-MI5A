@@ -87,17 +87,19 @@ To explore the site, you need to open a local server on your machine.
 
 ## Page overview
 
-- `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
+- The page `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
 
 - `trip_style.css` is the default style sheet for all trips presentation pages.
  
-- The page `index.php` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
+- `index.php` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
 
 - `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
 - `advanced_search.php` is a travel search page with several filter fields (dates, locations, options, price, etc.).
 
-- `functions.php` groups the various functions common to php pages and which will be useful for processing `.json` files containing site data (user data, trip data, etc.).
+- `error_page.php`
+
+- `trip_functions.php` groups the various functions common to php pages and which will be useful for processing `.json` files containing site data (user data, trip data, etc.).
 
 - `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
 

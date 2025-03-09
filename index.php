@@ -45,69 +45,24 @@
             </div>
         </div>
         <div class="whitebar"></div>
-        <div class="voyagebar">
-        <div class="card">
-                <a href="src/trip.php?id=1" class="explore">
-                    <img src="assets/presentation/pres_bora-bora_img_2.jpg" alt="Bora-bora image">
-                    <div class="card_content">
-                        <h2>Lune de Miel à Bora Bora</h2>
-                        <p>Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.</p>
-                        <a href="src/trip.php?id=1" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="src/trip.php?id=10" class="explore">
-                    <img src="assets/presentation/pres_tahiti_img_3.jpg" alt="Tahiti image">
 
-                    <div class="card_content">
-                        <h2>Aventure à Tahiti</h2>
-                        <p>Découvrez un écrin de beauté au cœur de Tahiti et ses environs.</p>
-                        <a href="src/trip.php?id=10" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="src/trip.php?id=5" class="explore">
-                    <img src="assets/presentation/pres_moorea_img_5.jpg" alt="Moorea image">
-                    <div class="card_content">
-                        <h2>Séjour en famille à Moorea</h2>
-                        <p>Explorez en famille un îlot préservé, entouré d'un lagon aux eaux cristallines.</p>
-                        <a href="src/trip.php?id=5" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="src/trip.php?id=9" class="explore">
-                    <img src="assets/presentation/pres_huahine_img_5.jpg" alt="Huahine image">
-                    <div class="card_content">
-                        <h2>Expérience inédite à Huahine</h2>
-                        <p>Vivez une expérience culturelle inédite à Huahine.</p>
-                        <a href="src/trip.php?id=9" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="src/trip.php?id=11" class="explore">
-                    <img src="assets/presentation/pres_raiatea_img_1.jpg" alt="Raiatea image">
-                    <div class="card_content">
-                        <h2>Voyage culturel à Raiatea</h2>
-                        <p>Plongez dans l'histoire de Raiatea, entre traditions vivantes et paysages.</p>
-                        <a href="src/trip.php?id=11" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="src/trip.php?id=12" class="explore">
-                    <img src="assets/presentation/pres_nuku_hiva_img_1.jpg" alt="uku Hiva image">
-                    <div class="card_content">
-                        <h2>Aventure éco-tourisme à Nuku Hiva</h2>
-                        <p>Explorez un havre de biodiversité où nature et aventure se rencontrent.</p>
-                        <a href="src/trip.php?id=12" class="explore">➤ Découvrir</a>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <div class="voyagebar">
+    <?php
+    include('src/trip_functions.php');
+    $data_file = 'data/trip_data.json';
+
+    // We choose the ids of the trips we want to display on our page
+    $id_list = array("1", "10", "5", "9", "11", "12");
+    // id 1 => Lune de miel Bora-Bora
+    // id 10 => Aventure à Tahiti
+    // id 5 => Séjour en famille à Moorea
+    // id 9 => Expérience inédite à Huahine
+    // id 12 => Aventure éco-tourisme à Nuku Hiva
+
+    displayCards($id_list, $data_file);
+    ?>
+    </div>
+
         <div class="separate"></div>
 
         <!-- Footer -->

@@ -15,19 +15,19 @@
 <body>
 
 <?php
-include("functions.php");
+    include("trip_functions.php");
 
-// Get trip ID from URL
-if (isset($_GET['id'])) {
-    $trip_id = $_GET['id'];
-} else {
-    $trip_id = null;
-}
+    // Get trip ID from URL
+    if (isset($_GET['id'])) {
+        $trip_id = $_GET['id'];
+    } else {
+        $trip_id = null;
+    }
 
-$data_file = '../data/trip_data.json';
-$decodedData = dataDecode($data_file);
+    $data_file = '../data/trip_data.json';
+    $decodedData = dataDecode($data_file);
 
-$trip = tripFinder($decodedData, $trip_id);
+    $trip = tripFinder($decodedData, $trip_id);
 ?>
 
     <div class="container">
@@ -174,7 +174,7 @@ $trip = tripFinder($decodedData, $trip_id);
             </div>
             <!-- Second board -->
             <div class="board steps_board">
-                <h3 class="legend">Étape 2: Exploration et aventure</h3>
+                <h3 class="legend">Étape 1: <?php echo $trip['step_2']['title'];?></h3>
                 <table>
                     <thead>
                         <tr>
@@ -223,7 +223,7 @@ $trip = tripFinder($decodedData, $trip_id);
             </div>
             <!-- Third board -->
             <div class="board steps_board">
-                <h3 class="legend">Étape 3: Détente et retour</h3>
+                <h3 class="legend">Étape 3: <?php echo $trip['step_3']['title'];?></h3>
                 <table>
                     <thead>
                         <tr>
