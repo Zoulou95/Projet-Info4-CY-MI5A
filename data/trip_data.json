@@ -4,7 +4,7 @@
         "id": "1",
         "title": "Lune de Miel à Bora Bora ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Bora-Bora",
-        "tags": ["mer", "tropical", "soleil", "lunedemiel", "borabora", "romantique", "amoureux", "intime", "mariage", "massage", "massages", "randonnée", "photo"],
+        "tags": ["mer", "tropical", "soleil", "lunedemiel", "borabora", "romantique", "amoureux", "intime", "mariage", "massage", "massages", "randonnée", "photo", "amour"],
         "presentation_img_1": "pres_bora-bora_img_1.jpg",
         "presentation_img_2": "pres_bora-bora_img_2.jpg",
         "presentation_img_3": "pres_bora-bora_img_3.jpg",
@@ -73,7 +73,7 @@
         "id": "2",
         "title": "Lune de Miel à Huahine ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Huahine",
-        "tags": ["mer", "exotique", "lunedemiel", "huahine", "romantique", "amoureux", "intime", "mariage", "soleil", "snorkeling", "lagon", "coucherdesoleil"],
+        "tags": ["amour", "mer", "exotique", "lunedemiel", "huahine", "romantique", "amoureux", "intime", "mariage", "soleil", "snorkeling", "lagon", "coucherdesoleil"],
         "presentation_img_1": "pres_huahine_img_1.jpg",
         "presentation_img_2": "pres_huahine_img_2.jpg",
         "presentation_img_3": "pres_huahine_img_3.jpg",
@@ -211,7 +211,7 @@
         "id": "4",
         "title": "Séjour détente à Rangiroa ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, atoll de Rangiroa",
-        "tags": ["mer", "rangiroa", "chill", "spa", "bienetre", "zen", "soleil", "detente", "tranquille", "allinclusive", "massage", "massages", "snorkeling", "dauphins", "peche"],
+        "tags": ["archipel", "relaxation", "mer", "rangiroa", "chill", "spa", "bienetre", "zen", "soleil", "detente", "tranquille", "allinclusive", "massage", "massages", "snorkeling", "dauphins", "peche"],
         "presentation_img_1": "pres_rangiroa_img_1.jpg",
         "presentation_img_2": "pres_rangiroa_img_2.jpg",
         "presentation_img_3": "pres_rangiroa_img_3.jpg",
@@ -1037,4 +1037,3 @@
       }
     ]
   }
-  

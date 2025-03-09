@@ -107,49 +107,7 @@ $trip = tripFinder($decodedData, $trip_id);
             </div>
         </div>
 
-        <h3 class="planification_text">Planifier votre voyage</h3>
-        <hr class="underline_planification line" />
 
-        <!-- Planification board -->
-        <div class="board">
-        <table>
-            <thead>
-                <tr>
-                    <th>Début</th>
-                    <th>Fin</th>
-                    <th>Participants</th>
-                    <th>Transports</th>
-                    <th>Prix/pers</th>
-                    <th>Prix total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b><?php echo $trip['dates']['start_date'];?></b></td>
-                    <td><b><?php echo $trip['dates']['end_date'];?></b></td>
-                    <td>
-                        <select name="nombre_participants">
-                            <option value="2_personnes">2 personnes</option>
-                            <option value="3_personnes">3 personnes</option>
-                            <option value="4_personnes">4 personnes</option>
-                            <option value="4_personnes">5 personnes</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="transports">
-                            <option value="bâteau">Bâteau (100€/J)</option>
-                            <option value="velo">Vélo (30€/J)</option>
-                            <option value="voityre">Voiture (90€/J)</option>
-                            <option value="taxi">Taxi (150€/J)</option>
-                            <option value="hélicoptère">Hélicoptère (900€/J)</option>
-                        </select>
-                    </td>
-                    <td><?php echo $trip['price_per_person'];?>€</td>
-                    <td><?php echo $trip['total_price'];?>€</td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
 
         <h3>Configuration des étapes</h3>
         <hr class="underline_timeline line" />
@@ -164,7 +122,7 @@ $trip = tripFinder($decodedData, $trip_id);
             </div>
         </div>
 
-        <form action="validation.php" method="get">
+        <form action="validation.php" method="post">
             <!-- First board -->
             <div class="board steps_board">
                 <h3 class="legend">Étape 1: <?php echo $trip['step_1']['title'];?></h3>
@@ -311,6 +269,51 @@ $trip = tripFinder($decodedData, $trip_id);
                     </tbody>
                 </table>
             </div>
+            
+        <h3 class="planification_text">Planifiez votre voyage</h3>
+        <hr class="underline_planification line" />
+
+        <!-- Planification board -->
+        <div class="board">
+        <table>
+            <thead>
+                <tr>
+                    <th>Début</th>
+                    <th>Fin</th>
+                    <th>Participants</th>
+                    <th>Transports</th>
+                    <th>Prix/pers</th>
+                    <th>Prix total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b><?php echo $trip['dates']['start_date'];?></b></td>
+                    <td><b><?php echo $trip['dates']['end_date'];?></b></td>
+                    <td>
+                        <select name="nombre_participants">
+                            <option value="2_personnes">2 personnes</option>
+                            <option value="3_personnes">3 personnes</option>
+                            <option value="4_personnes">4 personnes</option>
+                            <option value="4_personnes">5 personnes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="transports">
+                            <option value="bâteau">Aucun</option>
+                            <option value="velo">Vélo (30€/J)</option>
+                            <option value="voityre">Voiture (90€/J)</option>
+                            <option value="bâteau">Bâteau (100€/J)</option>
+                            <option value="taxi">Chauffeur privé (500€/J)</option>
+                            <option value="hélicoptère">Hélicoptère (900€/J)</option>
+                        </select>
+                    </td>
+                    <td><?php echo $trip['price_per_person'];?>€</td>
+                    <td><?php echo $trip['total_price'];?>€</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
             <button class="reservation_button" type="submit">
                 <p class="reservation_text">Réserver</p>
             </button>
