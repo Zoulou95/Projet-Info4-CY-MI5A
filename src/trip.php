@@ -123,13 +123,16 @@
         </div>
 
         <form action="validation.php" method="post">
-            <!-- First board -->
-            <div class="board steps_board">
-                <h3 class="legend">Étape 1: <?php echo $trip['step_1']['title'];?></h3>
+        <div class="board steps_board">
+        <?php
+
+            for($i = 1; $i<4; $i++) {
+                echo
+                '<h3 class="legend">Étape ' . $i . ' : ' . $trip['step_' . $i]['title'] . '</h3>
                 <table>
                     <thead>
                         <tr>
-                            <th>Durée de l'étape</th>
+                            <th>Durée de l\'étape</th>
                             <th>Hôtel</th>
                             <th>Pension</th>
                             <th>Activité</th>
@@ -140,14 +143,14 @@
                         <tr>
                             <td>2 jours</td>
                             <td>
-                                <select name="hotel_1">
-                                    <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
-                                    <option value="<?php echo $trip['hotel'][1];?>"><?php echo $trip['hotel'][1];?></option>
-                                    <option value="<?php echo $trip['hotel'][2];?>"><?php echo $trip['hotel'][2];?></option>
+                                <select name="hotel_' . $i . '">
+                                    <option value="' . $trip['hotel'][0] . '">' . $trip['hotel'][0] . '</option>
+                                    <option value="' . $trip['hotel'][1] . '">' . $trip['hotel'][1] . '</option>
+                                    <option value="' . $trip['hotel'][2] . '">' . $trip['hotel'][2] . '</option>
                                 </select>
                             </td>
                             <td>
-                                <select name="pension_1">
+                                <select name="pension_' . $i . '">
                                     <option value="tout_inclus">Tout inclus</option>
                                     <option value="petit_dejeuner">Petit déjeuner uniquement</option>
                                     <option value="dejeuner">Déjeuner uniquement</option>
@@ -155,14 +158,14 @@
                                 </select>
                             </td>
                             <td>
-                                <select name="activite_1">
-                                <option value="<?php echo $trip['step_1']['activities'][0];?>"><?php echo $trip['step_1']['activities'][0];?></option>
-                                    <option value="<?php echo $trip['step_1']['activities'][1];?>"><?php echo $trip['step_1']['activities'][1];?></option>
-                                    <option value="<?php echo $trip['step_1']['activities'][2];?>"><?php echo $trip['step_1']['activities'][2];?></option>
+                                <select name="activite_' . $i . '">
+                                    <option value="' . $trip['step_' . $i]['activities'][0] . '">' . $trip['step_' . $i]['activities'][0] . '</option>
+                                    <option value="' . $trip['step_' . $i]['activities'][1] . '">' . $trip['step_' . $i]['activities'][1] . '</option>
+                                    <option value="' . $trip['step_' . $i]['activities'][2] . '">' . $trip['step_' . $i]['activities'][2] . '</option>
                                 </select>
                             </td>
                             <td>
-                                <select name="participants_1">
+                                <select name="participants_' . $i . '">
                                     <option value="2_personnes">2 personnes</option>
                                     <option value="3_personnes">3 personnes</option>
                                     <option value="4_personnes">4 personnes</option>
@@ -170,106 +173,11 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
-            </div>
-            <!-- Second board -->
-            <div class="board steps_board">
-                <h3 class="legend">Étape 1: <?php echo $trip['step_2']['title'];?></h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Durée de l'étape</th>
-                            <th>Hôtel</th>
-                            <th>Pension</th>
-                            <th>Activité</th>
-                            <th>Participants</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3 jours</td>
-                            <td>
-                            <select name="hotel_2">
-                                <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
-                                <option value="<?php echo $trip['hotel'][1];?>"><?php echo $trip['hotel'][1];?></option>
-                                <option value="<?php echo $trip['hotel'][2];?>"><?php echo $trip['hotel'][2];?></option>
-                            </select>
-                            </td>
-                            <td>
-                                <select name="pension_2">
-                                    <option value="tout_inclus">Tout inclus</option>
-                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
-                                    <option value="dejeuner">Déjeuner uniquement</option>
-                                    <option value="demi_pension">Diner uniquement</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="activite_2">
-                                    <option value="<?php echo $trip['step_2']['activities'][0];?>"><?php echo $trip['step_2']['activities'][0];?></option>
-                                    <option value="<?php echo $trip['step_2']['activities'][1];?>"><?php echo $trip['step_2']['activities'][1];?></option>
-                                    <option value="<?php echo $trip['step_2']['activities'][2];?>"><?php echo $trip['step_2']['activities'][2];?></option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="participants_2">
-                                    <option value="2_personnes">2 personnes</option>
-                                    <option value="3_personnes">3 personnes</option>
-                                    <option value="4_personnes">4 personnes</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Third board -->
-            <div class="board steps_board">
-                <h3 class="legend">Étape 3: <?php echo $trip['step_3']['title'];?></h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Durée de l'étape</th>
-                            <th>Hôtel</th>
-                            <th>Pension</th>
-                            <th>Activité</th>
-                            <th>Participants</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2 jours</td>
-                            <td>
-                            <select name="hotel_3">
-                                    <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
-                                    <option value="<?php echo $trip['hotel'][1];?>"><?php echo $trip['hotel'][1];?></option>
-                                    <option value="<?php echo $trip['hotel'][2];?>"><?php echo $trip['hotel'][2];?></option>
-                                </select>
-                            <td>
-                                <select name="pension_3">
-                                    <option value="tout_inclus">Tout inclus</option>
-                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
-                                    <option value="dejeuner">Déjeuner uniquement</option>
-                                    <option value="demi_pension">Diner uniquement</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="activite_3">
-                                    <option value="<?php echo $trip['step_3']['activities'][0];?>"><?php echo $trip['step_3']['activities'][0];?></option>
-                                    <option value="<?php echo $trip['step_3']['activities'][1];?>"><?php echo $trip['step_3']['activities'][1];?></option>
-                                    <option value="<?php echo $trip['step_3']['activities'][2];?>"><?php echo $trip['step_3']['activities'][2];?></option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="participants_3">
-                                    <option value="2_personnes">2 personnes</option>
-                                    <option value="3_personnes">3 personnes</option>
-                                    <option value="4_personnes">4 personnes</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+                </table>';
+            }
+        ?>
+        </div> 
+
         <h3 class="planification_text">Planifiez votre voyage</h3>
         <hr class="underline_planification line" />
 

@@ -34,8 +34,9 @@
     include("trip_functions.php");
 
     // If the tag is included in the url, the result requested by the user is a quick search
-    if (isset($_GET['tag'])) {
+    if (!empty($_GET['tag'])) {
         $tag = urldecode(trim($_GET['tag']));
+        $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters: XSS protection
         $tag = strtolower($tag);
         $tag = addslashes($tag);
         $tag = str_replace(' ', '', $tag);
@@ -49,6 +50,25 @@
         displayTrip($data, $tag, $trip_number);
     }
 
+    // Ici coder les fonctions récupérer les données de la recherche avancée pour la recherche avancée
+
+    else if (isValidAdvancedSearch()) {
+        echo "test : recherche valide<br>";
+        $destination = $_GET['destination'];
+        $price_range = $_GET['price_range'];
+        $travel_type = $_GET['travel_type'];
+        $date = $_GET['date'];
+        $travel_lenght = $_GET['travel_length'];
+
+        echo $destination . "<br>";
+        echo $price_range . "<br>";
+        echo $travel_type . "<br>";
+        echo $date . "<br>";
+        echo $travel_lenght . "<br>";
+
+    } else {
+        echo "test: Recherche non valide";
+    }
 
 ?>
 

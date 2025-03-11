@@ -34,12 +34,12 @@
 
         <div class="text_above">Trouvez votre escapade idéale en quelques clics</div>
         <div class="search_bar">
-            <form class="search_bar_form" method="get">
+            <form class="search_bar_form" action ="result.php" method="get">
                 <table class="search_bar_tab">
                     <tr>
                         <!-- Search bar -->
                         <td>
-                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une destination... 🔎" name="destination" />
+                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une île... 🔎" name="destination" required />
                             <datalist id="destinations">
                                 <option value="Tahiti"></option>
                                 <option value="Bora Bora"></option>
@@ -60,13 +60,13 @@
                                 <button type="button" class="dropdown_button price_button">Prix/pers</button>
                                 <div class="dropdown_content price_content">
                                     <label>
-                                        <input type="checkbox" name="price_range" value="moins_1000" /> Moins de 1000€
+                                        <input type="checkbox" name="price_range" value="moins_1000" /> Moins de 2000€
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="price_range" value="1000_2000" /> 1000€ - 2000€
+                                        <input type="checkbox" name="price_range" value="1000_2000" /> 2000€ - 3000€
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="price_range" value="2000_5000" /> 2000€ - 5000€
+                                        <input type="checkbox" name="price_range" value="2000_5000" /> 4000€ - 5000€
                                     </label>
                                     <label>
                                         <input type="checkbox" name="price_range" value="plus_5000" /> Plus de 5000€
@@ -92,6 +92,12 @@
                                         <input type="checkbox" name="travel_type" value="famille" /> Voyage en famille
                                     </label>
                                     <label>
+                                        <input type="checkbox" name="travel_type" value="aventure" /> Voyage d'aventure
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="travel_type" value="détente" /> Voyage détente
+                                    </label>
+                                    <label>
                                         <input type="checkbox" name="travel_type" value="luxe" /> Séjour de luxe
                                     </label>
                                 </div>
@@ -101,7 +107,7 @@
                         <td>
                             <div class="date_container">
                                 <div class="date_box">
-                                    <input type="date" name="date" id="date_input" class="date_input" />
+                                    <input type="date" name="date" id="date_input" class="date_input" required />
                                 </div>
                             </div>
                         </td>
@@ -111,7 +117,7 @@
                                 <button type="button" class="dropdown_button duration_button">Durée</button>
                                 <div class="dropdown_content duration_content">
                                     <label>
-                                        <input type="number" name="travel_length" min="3" max="15" step="1" />
+                                        <input type="number" name="travel_length" min="3" max="15" step="1" required />
                                     </label>
                                 </div>
                             </div>
@@ -204,10 +210,10 @@
             durationInput.addEventListener("input", function () {
                 let value = parseInt(durationInput.value, 10);
 
-                // Check that the value is a number between 3 and 15
+                // Check that the value is a number between 8 and 15
                 if (!isNaN(value)) {
-                    if (value < 3) {
-                        durationInput.value = 3;
+                    if (value < 8) {
+                        durationInput.value = 8;
                     }
                     else if (value > 15) {
                         durationInput.value = 15;

@@ -5,6 +5,7 @@
         "title": "Lune de Miel à Bora Bora ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Bora-Bora",
         "presentation_title": "Lune de Miel à Bora Bora",
+        "destination:" : "Bora-Bora",
         "description": "Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.",
         "tags": ["mer", "tropical", "soleil", "lunedemiel", "borabora", "romantique", "amoureux", "intime", "mariage", "massage", "massages", "randonnée", "photo", "amour"],
         "presentation_img_1": "pres_bora-bora_img_1.jpg",
@@ -12,9 +13,9 @@
         "presentation_img_3": "pres_bora-bora_img_3.jpg",
         "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.7444002!3d-16.5004127!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e6ad806717be0b9%3A0x8fa10a66f46f013!2sBora%20Bora%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
         "dates": {
-          "start_date": "08/08/2025",
-          "end_date": "15/08/2025",
-          "duration": "7 jours / 6 nuits"
+          "start_date": "2025-08-08",
+          "end_date": "2025-08-15",
+          "duration": "8 jours / 7 nuits"
         },
         "special_features": ["Voyage de noces", "Vue imprenable sur le lagon", "Climat tropical doux et ensoleillé", "Ambiance intime et privée", "plongée", "helicoptere"],
         "status": "en cours de modification",
@@ -26,9 +27,9 @@
           "id": 1,
           "title": "Arrivée et détente",
           "dates": {
-            "arrival": "2025-04-01",
-            "departure": "2025-04-03",
-            "duration": "2 jours"
+            "arrival": "2025-08-08",
+            "departure": "2025-08-10",
+            "duration": "3 jours"
           },
           "coordinates": "-16.5004127, -151.7444002",
           "activities": ["Aucune", "Massage avec vue", "Randonnée en montagne"],
@@ -42,8 +43,8 @@
           "id": 2,
           "title": "Exploration et aventure",
           "dates": {
-            "arrival": "2025-04-03",
-            "departure": "2025-04-06",
+            "arrival": "2025-08-11",
+            "departure": "2025-08-13",
             "duration": "3 jours"
           },
           "coordinates": "-16.5005001, -151.7450002",
@@ -58,8 +59,8 @@
           "id": 3,
           "title": "Détente et retour",
           "dates": {
-            "arrival": "2025-04-06",
-            "departure": "2025-04-07",
+            "arrival": "2025-08-14",
+            "departure": "/2025-08-15",
             "duration": "2 jours"
           },
           "coordinates": "-16.5010002, -151.7465003",
@@ -76,6 +77,7 @@
         "title": "Lune de Miel à Huahine ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Huahine",
         "presentation_title": "Lune de Miel à Huahine",
+        "destination:" : "Huahine",
         "description": "",
         "tags": ["amour", "mer", "exotique", "lunedemiel", "huahine", "romantique", "amoureux", "intime", "mariage", "soleil", "snorkeling", "lagon", "coucherdesoleil"],
         "presentation_img_1": "pres_huahine_img_1.jpg",
@@ -85,7 +87,7 @@
         "dates": {
           "start_date": "20/08/2025",
           "end_date": "27/08/2025",
-          "duration": "7 jours / 6 nuits"
+          "duration": "8 jours / 6 nuits"
         },
         "special_features": ["Voyage de noces", "Plages immaculées", "Climat tropical et calme", "Ambiance détendue et romantique"],
         "status": "en cours de modification",
@@ -97,9 +99,9 @@
           "id": 1,
           "title": "Arrivée et détente",
           "dates": {
-            "arrival": "2025-08-20",
-            "departure": "2025-08-22",
-            "duration": "2 jours"
+            "arrival": "20/08/2025",
+            "departure": "22/08/2025",
+            "duration": "3 jours"
           },
           "coordinates": "-16.7182002, -151.0142003",
           "activities": ["Aucune", "Bain de soleil", "Snorkeling dans le lagon"],
@@ -113,8 +115,8 @@
           "id": 2,
           "title": "Découverte de la nature",
           "dates": {
-            "arrival": "2025-08-22",
-            "departure": "2025-08-25",
+            "arrival": "23/08/2025",
+            "departure": "25/08/2025",
             "duration": "3 jours"
           },
           "coordinates": "-16.7105001, -151.0195001",
@@ -129,8 +131,8 @@
           "id": 3,
           "title": "Repos et retour",
           "dates": {
-            "arrival": "2025-08-25",
-            "departure": "2025-08-27",
+            "arrival": "26/08/2025",
+            "departure": "27/08/2025",
             "duration": "2 jours"
         },
           "coordinates": "-16.7070002, -151.0337003",
@@ -147,6 +149,7 @@
         "title": "Aventure à Moorea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Moorea",
         "presentation_title": "Aventure à Moorea",
+        "destination:" : "Moorea",
         "description": "",
         "tags": ["mer", "moorera", "exotique", "aventure", "moorea", "action", "randonnée", "exploration", "kayak", "visite", "village", "danse", "plongée"],
         "presentation_img_1": "pres_moorea_img_1.jpg",
@@ -202,7 +205,7 @@
           "dates": {
             "arrival": "2025-09-16",
             "departure": "2025-09-18",
-            "duration": "2 jours"
+            "duration": "3 jours"
           },
           "coordinates": "-17.5700, -149.8600",
           "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"],
@@ -218,6 +221,7 @@
         "title": "Séjour détente à Rangiroa ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, atoll de Rangiroa",
         "presentation_title": "Séjour détente à Rangiro",
+        "destination:" : "Rangiroa",
         "description": "",
         "tags": ["archipel", "relaxation", "mer", "rangiroa", "chill", "spa", "bienetre", "zen", "soleil", "detente", "tranquille", "allinclusive", "massage", "massages", "snorkeling", "dauphins", "peche"],
         "presentation_img_1": "pres_rangiroa_img_1.jpg",
@@ -227,7 +231,7 @@
         "dates": {
           "start_date": "05/10/2025",
           "end_date": "12/10/2025",
-          "duration": "7 jours / 6 nuits"
+          "duration": "11 jours / 10 nuits"
         },
         "special_features": ["Relaxation", "Plongée d'exception", "Expérience en bungalow sur pilotis", "Climat tropical"],
         "status": "en cours de modification",
@@ -241,7 +245,7 @@
           "dates": {
             "arrival": "2025-10-05",
             "departure": "2025-10-07",
-            "duration": "2 jours"
+            "duration": "4 jours"
           },
           "coordinates": "-15.1196, -147.6615",
           "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"],
@@ -257,7 +261,7 @@
           "dates": {
             "arrival": "2025-10-07",
             "departure": "2025-10-10",
-            "duration": "3 jours"
+            "duration": "4 jours"
           },
           "coordinates": "-15.1300, -147.6700",
           "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"],
@@ -273,7 +277,7 @@
           "dates": {
             "arrival": "2025-10-10",
             "departure": "2025-10-12",
-            "duration": "2 jours"
+            "duration": "3 jours"
           },
           "coordinates": "-15.1400, -147.6800",
           "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"],
@@ -289,6 +293,7 @@
         "title": "Séjour en famille à Moorea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Moorea",
         "presentation_title": "Séjour en famille à Moorea",
+        "destination:" : "Moorea",
         "description": "Explorez en famille un îlot préservé, entouré d'un lagon aux eaux cristallines.",
         "tags": ["mer", "moorea", "soleil", "famille", "familles", "enfants", "ados", "culture", "allinclusive", "plongée", "familial", "bateau", "pirogue", "randonnée", "baleines"],
         "presentation_img_1": "pres_moorea_img_4.jpg",
@@ -298,7 +303,7 @@
         "dates": {
           "start_date": "01/12/2025",
           "end_date": "07/12/2025",
-          "duration": "7 jours / 6 nuits"
+          "duration": "10 jours / 9 nuits"
         },
         "special_features": ["Voyage familial", "Plages à couper le souffle", "Riche culture locale", "Récifs coralliens protégés"],
         "status": "en cours de modification",
@@ -360,6 +365,7 @@
         "title": "Aventure à Taha'a ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Taha'a",
         "presentation_title": "Aventure à Taha'a",
+        "destination:" : "Taha'a",
         "description": "Vivez l'aventure à Taha'a, île secrète entre montagnes et plages désertes.",
         "tags": ["mer", "tahaa", "taha", "soleil", "aventure", "sauvage", "exploration", "explorer", "plages", "plage", "nature", "fermre", "balade"],
         "presentation_img_1": "pres_tahaa_img_1.jpg",
@@ -431,6 +437,7 @@
         "title": "Évasion à Fakarava ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, atoll de Fakarava",
         "presentation_title": "Évasion à Fakarava",
+        "destination:" : "Fakarava",
         "description": "Évadez-vous dans un atoll préservé aux eaux cristallines.",
         "tags": ["mer", "soleil", "fakarava", "évasion", "sérénité", "paradis", "lagon", "îlot", "nature", "authenticité", "exotisme", "calme", "bleu"],
         "presentation_img_1": "pres_fakarava_img_1.jpg",
@@ -502,8 +509,9 @@
         "title": "Séjour romantique à Bora Bora ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Bora Bora",
         "presentation_title": "Séjour romantique",
+        "destination:" : "Bora-Bora",
         "description": "Vivez une escapade romantique à Bora Bora.",
-        "tags": ["mer", "plage", "plages", "soleil", "borabora", "romantique", "luxe", "lagon", "intimité", "coucherdesoleil", "paradis", "calme", "exclusif", "évasion", "idyllique", "bungalowsurleau", "bienêtre", "vueimprenable", "tropical", "raffiné", "plongée", "degustation"],
+        "tags": ["mer", "plage", "plages", "soleil", "borabora", "romantique", "lagon", "intimité", "coucherdesoleil", "paradis", "calme", "exclusif", "évasion", "idyllique", "bungalowsurleau", "bienêtre", "vueimprenable", "tropical", "raffiné", "plongée", "degustation"],
         "presentation_img_1": "pres_bora-bora_img_4.jpg",
         "presentation_img_2": "pres_bora-bora_img_5.jpg",
         "presentation_img_3": "pres_bora-bora_img_6.jpg",
@@ -573,6 +581,7 @@
         "title": "Expérience inédite à Huahine ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Huahine",
         "presentation_title": "Expérience inédite à Huahine",
+        "destination:" : "Huahine",
         "description": "Vivez une expérience culturelle inédite à Huahine.",
         "presentation_img_1": "pres_huahine_img_4.jpg",
         "presentation_img_2": "pres_huahine_img_5.jpg",
@@ -644,6 +653,7 @@
         "title": "Séjour d'aventure à Tahiti ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Tahiti",
         "presentation_title" : "Aventure à Tahiti",
+        "destination:" : "Tahiti",
         "description": "Découvrez un écrin de beauté au cœur de Tahiti et ses environs.",
         "tags": ["mer", "plage", "plages", "soleil", "randonnée", "village", "tahiti", "aventure", "montagnes", "volcan", "sauvage", "exploration", "nature", "trekking", "lagon", "plages", "surf", "cascades", "découverte", "exotisme"],
         "presentation_img_1": "pres_tahiti_img_1.jpg",
@@ -715,6 +725,7 @@
         "title": "Voyage culturel à Raiatea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Raiatea",
         "presentation_title": "Voyage culturel à l'île de Raiatea",
+        "destination:" : "Raiatea",
         "description": "Plongez dans l'histoire de Raiatea, entre traditions vivantes et paysages.",
         "tags": ["mer", "soleil", "raiatea", "culture", "histoire", "tradition", "temples", "polynésie", "exploration", "archéologie", "légendes", "authenticité", "découverte", "sites historiques", "nature", "paysages", "art"],
         "presentation_img_1": "pres_raiatea_img_1.jpg",
@@ -786,6 +797,7 @@
         "title": "Aventure éco-tourisme à Nuku Hiva ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Nuku Hiva",
         "presentation_title": "Aventure éco-tourisme à Nuku Hiva",
+        "destination:" : "Nuku Hiva",
         "description": "Explorez un havre de biodiversité où nature et aventure se rencontrent.",
         "tags": ["mer", "famille", "soleil", "nuku Hiva", "éco-tourisme", "aventure", "nature", "exploration", "randonnée", "faune", "flore", "écologie", "paysages", "îles Marquises", "culture locale", "écosystème", "voyage responsable", "découverte"],
         "presentation_img_1": "pres_nuku_hiva_img_1.jpg",
@@ -857,6 +869,7 @@
         "title": "Séjour de luxe à Tetiaroa ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île privée de Tetiaroa",
         "presentation_title": "Séjour de luxe à Tetiaroa",
+        "destination:" : "Tetiaroa",
         "description": "Vivez l'exception, un séjour de luxe entre îles privées et paysages paradisiaques.",
         "tags": ["mer", "plages", "plage", "soleil", "tetiaroa", "luxe", "détente", "plageprivée", "privée", "borabora", "exclusivité", "villas", "prestige", "paradis", "calme", "riche", "relaxation", "îles polynésiennes", "5étoiles", "hautdegamme"],
         "presentation_img_1": "pres_tetiaroa_img_1.jpg",
@@ -928,6 +941,7 @@
         "title": "Découverte culturelle à Moorea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Moorea",
         "presentation_title": "",
+        "destination:" : "Moorea",
         "description": "",
         "tags": ["mer", "soleil", "moorea", "découverte", "culture", "traditions", "histoire", "îles polynésiennes", "paysages", "artisanat", "rencontres", "village", "exploration", "nature", "savoir-faire", "culinaire", "paysage"],
         "presentation_img_1": "pres_moorea_img_7.jpg",
@@ -999,6 +1013,7 @@
         "title": "Exploration Sous-Marine en Polynésie ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Tetiaroa",
         "presentation_title": "Exploration Sous-Marine",
+        "destination:" : "Tetiaroa",
         "description": "Explorez les fonds marins de la Polynésie, entre coraux et vie sauvage.",
         "tags": ["poisson", "poisson", "vagues", "mer", "tetiaroa", "famille", "familial", "amis", "raies", "jardins", "corail", "coraux", "apnée", "soleil", "plongée", "sousmarine", "polynésie", "faune marine", "îles", "océan", "découverte", "nature", "marin", "tropical", "merscristallines", "snorkeling", "plages", "sableblanc", "pêche", "exploration"],
         "presentation_img_1": "pres_plongee_img_1.jpg",

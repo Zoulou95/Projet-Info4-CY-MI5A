@@ -62,7 +62,7 @@ function displayTrip($data, $tag, $trip_number) {
         $plural = '';
     }
 
-    echo '<h2 class="result_text">Résultats de votre recherche (' . $trip_number . ' voyage' . $plural . ' trouvé' . $plural . ')</h2>';
+    echo '<h2 class="result_text">Résultats pour "' . $tag . '" (' . $trip_number . ' voyage' . $plural . ' trouvé' . $plural . ')</h2>';
 
     if($trip_number != 0) {
         echo '<div class="result_container">';
@@ -116,5 +116,9 @@ function displayCards($id_list, $data_file) {
             </div>
         </div>';
     }
+}
+
+function isValidAdvancedSearch() {
+    return !empty($_GET['destination']) && !empty($_GET['price_range']) && !empty($_GET['travel_type']) && !empty($_GET['date']) && !empty($_GET['travel_length']);
 }
 ?>
