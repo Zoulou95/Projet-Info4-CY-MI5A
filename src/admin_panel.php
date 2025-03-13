@@ -9,8 +9,8 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="base_style.css" />
-    <link rel="stylesheet" type="text/css" href="admin_panel_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin_panel_style.css" />
 </head>
 <body>
     <div class="container">

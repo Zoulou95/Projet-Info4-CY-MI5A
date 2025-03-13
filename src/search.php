@@ -9,8 +9,8 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="base_style.css" />
-    <link rel="stylesheet" type="text/css" href="search_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/search_style.css" />
 </head>
 <body>
     <div class="container">
@@ -62,7 +62,7 @@
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
     <?php
-        include('../scripts/trip_functions.php');
+        include('../includes/trip_functions.php');
         $data_file = '../data/trip_data.json';
 
         // We choose the ids of the trips we want to display on our page

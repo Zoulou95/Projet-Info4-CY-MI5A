@@ -8,8 +8,8 @@
     <meta name="description" content="CyLanta user informations page" />
     <meta name="author" content="Developped by MI5-A TEAM" />
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="base_style.css" />
-    <link rel="stylesheet" type="text/css" href="userpage_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/userpage_style.css" />
 </head>
 <body>
     <div class="container">

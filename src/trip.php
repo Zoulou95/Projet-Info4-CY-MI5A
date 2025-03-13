@@ -9,13 +9,13 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="../src/base_style.css" />
-    <link rel="stylesheet" type="text/css" href="../src/trip_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/trip_style.css" />
 </head>
 <body>
 
 <?php
-    include("../scripts/trip_functions.php");
+    include("../includes/trip_functions.php");
 
     // Get trip ID from URL
     if (isset($_GET['id'])) {
@@ -353,6 +353,6 @@
             </div>
         </footer>
     <!-- Script to browse a timeline and select steps when choosing a trip -->
-    <script src="../scripts/timelineBrowse.js"></script>
+    <script src="../includes/timelineBrowse.js"></script>
 </body>
 </html>

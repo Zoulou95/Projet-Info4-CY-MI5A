@@ -8,8 +8,8 @@
     <meta name="author" content="Developped by MI5-A TEAM" />
     <meta name="keywords" content="travel, travel agency" />
     <link rel="icon" type="image/png" href="assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="src/base_style.css" />
-    <link rel="stylesheet" type="text/css" href="src/index_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/base_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/index_style.css" />
 </head>
 <body>
     <div class="container">
@@ -48,7 +48,7 @@
 
         <div class="voyagebar">
     <?php
-    include('scripts/trip_functions.php');
+    include('includes/trip_functions.php');
     $data_file = 'data/trip_data.json';
 
     // We choose the ids of the trips we want to display on our page

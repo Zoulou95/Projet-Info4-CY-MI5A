@@ -8,7 +8,7 @@
     <meta name="description" content="CyLanta user informations page" />
     <meta name="author" content="Developped by MI5-A TEAM" />
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="base_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
 </head>
 <body>
     <div class="container">
@@ -31,7 +31,7 @@
         </div>
 
 <?php // Script to filter trips by a specific tag (quicksearch)
-    include("../scripts/trip_functions.php");
+    include("../includes/trip_functions.php");
 
     // If the tag is included in the url, the result requested by the user is a quick search
     if (!empty($_GET['tag'])) {
