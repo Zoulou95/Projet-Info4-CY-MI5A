@@ -66,20 +66,22 @@ To explore the site, you need to open a local server on your machine.
 ├── 📂 assets
 │   ├── 🖼️ images
 │   └── 🎬 video
+├── 📂 css
+│   ├── 🎨 admin_panel_style.css
+│   ├── 🎨 trip.css
+│   └── 🎨 ...
 ├── 📂 data
 │   ├── 📊 bank_data.json
 │   ├── 📊 trip_data.json
 │   └── 📊 user_datajson
-├── 📂 scripts
+├── 📂 includes
+│   ├── 📄 header.php
 │   ├── 📄 timelineBrowse.js
 │   └── 📄 ...
 ├── 📂 src
 │   ├── 📄 admin_panel.php
 │   ├── 📄 trip.php
-│   ├── 📄 ...
-│   ├── 🎨 admin_panel_style.css
-│   ├── 🎨 trip.css
-│   └── 🎨 ...
+│   └── 📄 ...
 ├── 📄 CyLanta_Charte_Graphique.pdf
 ├── 🏠 index.html
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
@@ -96,6 +98,8 @@ To explore the site, you need to open a local server on your machine.
 - `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
 - `advanced_search.php` is a travel search page with several filter fields (dates, locations, options, price, etc.).
+
+- `confirmation.php`
 
 - `error_page.php`
 

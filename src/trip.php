@@ -1,5 +1,12 @@
 <!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
 
+<?php
+    if (session_status() == PHP_SESSION_ACTIVE) {
+        session_destroy();
+    }
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -28,6 +35,9 @@
     $decodedData = dataDecode($data_file);
 
     $trip = tripFinder($decodedData, $trip_id);
+
+    $_SESSION['id'] = $trip['id'];
+    $_SESSION['price_per_person'] = $trip['price_per_person'];
 ?>
 
     <div class="container">
@@ -146,8 +156,8 @@
                             </td>
                             <td>
                                 <select name="pension_1">
-                                    <option value="tout_inclus">Tout inclus</option>
-                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
+                                    <option value="petit_dejeuner">Demi-pension (compris)</option>
+                                    <option value="tout_inclus">Tout inclus (+50€/pers)</option>
                                     <option value="dejeuner">Déjeuner uniquement</option>
                                     <option value="demi_pension">Diner uniquement</option>
                                 </select>
@@ -197,8 +207,8 @@
                             </td>
                             <td>
                                 <select name="pension_2">
-                                    <option value="tout_inclus">Tout inclus</option>
-                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
+                                    <option value="petit_dejeuner">Demi-pension (compris)</option>
+                                    <option value="tout_inclus">Tout inclus (+50€/pers)</option>
                                     <option value="dejeuner">Déjeuner uniquement</option>
                                     <option value="demi_pension">Diner uniquement</option>
                                 </select>
@@ -245,8 +255,8 @@
                                 </select>
                             <td>
                                 <select name="pension_3">
-                                    <option value="tout_inclus">Tout inclus</option>
-                                    <option value="petit_dejeuner">Petit déjeuner uniquement</option>
+                                    <option value="petit_dejeuner">Demi-pension (compris)</option>
+                                    <option value="tout_inclus">Tout inclus (+50€/pers)</option>
                                     <option value="dejeuner">Déjeuner uniquement</option>
                                     <option value="demi_pension">Diner uniquement</option>
                                 </select>
@@ -291,12 +301,12 @@
                     <td><b><?php echo $trip['dates']['start_date'];?></b></td>
                     <td><b><?php echo $trip['dates']['end_date'];?></b></td>
                     <td>
-                        <select name="nombre_participants">
-                            <option value="2_personnes">2 personnes</option>
-                            <option value="3_personnes">3 personnes</option>
-                            <option value="4_personnes">4 personnes</option>
-                            <option value="4_personnes">5 personnes</option>
-                            <option value="4_personnes">6 personnes</option>
+                        <select name="number_of_participants">
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="4">5 personnes</option>
+                            <option value="4">6 personnes</option>
                         </select>
                     </td>
                     <td>
@@ -310,6 +320,7 @@
                         </select>
                     </td>
                     <td><?php echo $trip['price_per_person'];?>€</td>
+                    <!-- Dynamic price will be set in JavaScript -->
                     <td><?php echo $trip['total_price'];?>€</td>
                 </tr>
             </tbody>
@@ -323,35 +334,8 @@
         <div class="separate_footer"></div>
 
         <!-- Footer -->
-        <footer>
-            <div class="footer_section">
-                <h3>À Propos</h3>
-                <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
-                    Passionnés d'évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les
-                    meilleures
-                    adresses et activités exclusives.
-                    Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les
-                    moindres
-                    détails. Votre aventure commence ici !
-                </p>
-            </div>
-            <div class="footer_section">
-                <h3>Nos Contacts</h3>
-                <ul class="other">
-                    <li><a href="mailto:CyLanta@cy-tech.fr">Email: CyLanta@cy-tech.fr</a></li>
-                    <li><a href="tel:+33123456789">Téléphone: +33 1 23 45 67 89</a></li>
-                    <li><a href="https://www.google.com/maps?q=49.035290202793036, 2.070567152915135" target="_BLANK">Adresse: Av. du Parc, 95000 Cergy</a></li>
-                </ul>
-            </div>
-            <div class="footer_section">
-                <h3>Nos Partenaires</h3>
-                <div class="partners">
-                    <a href="https://www.cyu.fr/" target="_blank"><img src="../assets/visuals/cy_favicon.png" alt="Partenaire 1" /></a>
-                    <a href="https://cytech.cyu.fr/" target="_blank"><img src="../assets/visuals/cytech_icon.png" alt="Partenaire 2" /></a>
-                    <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/visuals/cergy_ville.jpg" alt="Partenaire 3" /></a>
-                </div>
-            </div>
-        </footer>
+        <?php include('../includes/footer.php'); displayFooter();?>
+
     <!-- Script to browse a timeline and select steps when choosing a trip -->
     <script src="../includes/timelineBrowse.js"></script>
 </body>
