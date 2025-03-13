@@ -31,7 +31,7 @@
         </div>
 
 <?php // Script to filter trips by a specific tag (quicksearch)
-    include("trip_functions.php");
+    include("../scripts/trip_functions.php");
 
     // If the tag is included in the url, the result requested by the user is a quick search
     if (!empty($_GET['tag'])) {

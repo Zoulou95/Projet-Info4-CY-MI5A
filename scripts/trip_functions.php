@@ -62,7 +62,7 @@ function displayTrip($data, $tag, $trip_number) {
         $plural = '';
     }
 
-    echo '<h2 class="result_text">Résultats pour "' . $tag . '" (' . $trip_number . ' voyage' . $plural . ' trouvé' . $plural . ')</h2>';
+    echo '<h2 class="result_text">Résultat' . $plural . ' pour "' . $tag . '" (' . $trip_number . ' voyage' . $plural . ' trouvé' . $plural . ')</h2>';
 
     if($trip_number != 0) {
         echo '<div class="result_container">';
@@ -79,7 +79,7 @@ function displayTrip($data, $tag, $trip_number) {
                             <p>'. $journey['subtile'] . '</p>
                             <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
                             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-                            <p>Prix/personne : ' . $journey['price_per_person'] . '€</p>
+                            <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>
                             <a href="../src/trip.php?id=' . $journey['id'] . '" class="explore">➤ Découvrir</a>
                         </div>
                     </div>';

@@ -62,7 +62,7 @@
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
     <?php
-        include('trip_functions.php');
+        include('../scripts/trip_functions.php');
         $data_file = '../data/trip_data.json';
 
         // We choose the ids of the trips we want to display on our page

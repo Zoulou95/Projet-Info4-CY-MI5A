@@ -8,7 +8,7 @@ body {
 /* Main container */
 
 .search_bar {
-    width: 81.5vw;
+    width: fit-content;
     background-color: #2c3e50;
     padding: 1%;
     border-radius: 7px;
