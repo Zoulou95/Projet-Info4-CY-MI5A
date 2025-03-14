@@ -1,11 +1,6 @@
 <!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
 
-<?php
-    if (session_status() == PHP_SESSION_ACTIVE) {
-        session_destroy();
-    }
-    session_start();
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
