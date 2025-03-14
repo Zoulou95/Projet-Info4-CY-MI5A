@@ -9,13 +9,13 @@ function dataDecode($data_file) {
     }  
     else
     {
-        header("Location: ../src/error_page.php?error=dataNotFound");
+        header("Location: ../src/error_page.php");
         exit();
     }
 
     // Verification of data structure
     if (!isset($data['trip']) || !is_array($data['trip'])) {
-        header("Location: ../src/error_page.php?error=dataCorrupted");
+        header("Location: ../src/error_page.php");
         exit();
     }
 
@@ -33,12 +33,13 @@ function tripFinder($data, $trip_id) {
         }
     }
     if ($trip === null) {
-        header("Location: ../src/error_page.php?error=tripNotFound");
+        header("Location: ../src/error_page.php");
         exit();
     }
     return $trip;
 }
 
+// Retrieves the number of results found during a search (for aesthetic reasons)
 function getTripNumber($data, $tag) {
     $counter = 0;
     foreach ($data['trip'] as $journey) {
@@ -92,11 +93,7 @@ function displayByTag($data, $tag, $trip_number) {
         }
         echo '</div>';
     } else {
-        echo
-        '<h3 class="result_not_found">Aucun voyage ne correspond à votre recherche</h3>
-        <button class="back_to_search_button">
-            <a class="back_to_search_text" href="search.php">Cliquez ici pour retourner à la recherche</a>
-        </button>';
+        displayNoResult();
     }
 }
 
@@ -109,7 +106,7 @@ function displayByFilter($data) {
     $date = $_GET['date'];
     $travel_length = $_GET['travel_length'];
 
-    echo '<h2 class="result_text">Résultat pour votre recherche</h2>';
+    echo '<h2 class="result_text">Résultats pour votre recherche</h2>';
     echo '<div class="result_container">';
 
     $found = false;
@@ -148,11 +145,7 @@ function displayByFilter($data) {
     }
     echo '</div>';
     if($found == false) {
-        echo
-        '<h3 class="result_not_found">Aucun voyage ne correspond à votre recherche</h3>
-        <button class="back_to_search_button">
-            <a class="back_to_search_text" href="search.php">Cliquez ici pour retourner à la recherche</a>
-        </button>';
+        displayNoResult();
     }
 }
 
@@ -164,7 +157,7 @@ function displayCards($id_list, $data_file) {
     foreach ($id_list as $trip_id) {
         $trip = tripFinder($data, $trip_id);
         if(!$trip) {
-            header("Location: ../src/error_page.php?error=tripNotFound");
+            header("Location: ../src/error_page.php?");
         }
         echo
         '<div class="card">
@@ -178,10 +171,12 @@ function displayCards($id_list, $data_file) {
     }
 }
 
+// Check if the user's advanced search is valid
 function isValidAdvancedSearch() {
-    return !empty($_GET['destination']) && !empty($_GET['price_range']) && !empty($_GET['travel_type']) && !empty($_GET['date']) && !empty($_GET['travel_length']);
+    return !empty($_GET['destination']) || !empty($_GET['price_range']) || !empty($_GET['travel_type']) || !empty($_GET['date']) || !empty($_GET['travel_length']);
 }
 
+// Check if the user has configured his trip correctly
 function isConfigValid() {
     $res = 1; // 1 = OK ; 0 = ERROR
 
@@ -197,5 +192,19 @@ function isConfigValid() {
     }
 
     return $res;
+}
+
+function displayNoResult() {
+    echo
+    '<h3 class="result_not_found">Aucun voyage ne correspond à votre recherche</h3>
+    <button class="back_to_search_button">
+        <a class="back_to_search_text" href="search.php">Cliquez ici pour retourner à la recherche</a>
+    </button>';
+}
+
+function priceCalc($price_pers, $total_price) {
+    $total = intval($price_pers) * intval($total_price);
+
+    return $total;
 }
 ?>

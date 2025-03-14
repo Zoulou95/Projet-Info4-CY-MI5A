@@ -40,7 +40,7 @@
         <div class="text_above">L'aventure vous attend, où allons-nous ?</div>
         <div class="search_overlay">
             <form class="search_form" action="result.php" method="get">
-                <input type="text" class="search_input" list="destinations" placeholder="Recherchez votre prochaine aventure... 🔎" name="tag" />
+                <input type="text" class="search_input" list="destinations" placeholder="Recherchez un mot clé... 🔎" name="tag" />
                 <button class="button_validate" type="submit">Rechercher</button>
             </form>
         </div>

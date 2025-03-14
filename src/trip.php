@@ -151,10 +151,10 @@
                             </td>
                             <td>
                                 <select name="pension_1">
-                                    <option value="petit_dejeuner">Demi-pension (compris)</option>
+                                    <option value="demi_pension">Demi-pension (compris)</option>
                                     <option value="tout_inclus">Tout inclus (+50€/pers)</option>
                                     <option value="dejeuner">Déjeuner uniquement</option>
-                                    <option value="demi_pension">Diner uniquement</option>
+                                    <option value="diner">Diner uniquement</option>
                                 </select>
                             </td>
                             <td>

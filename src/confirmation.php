@@ -40,20 +40,19 @@
     if (isConfigValid()) {
 
         $id = $_SESSION['id'];
-        $price_pers = intval($_SESSION['price_per_person']);
+        $price_per_pers = intval($_SESSION['price_per_person']);
         $number_of_participants = intval($_POST['number_of_participants']);
 
-        // /!\ RAJOUTER PRIX DU TRANSPORT ET PARTICIPANTS ACTIVITES + prix repas et potentiellement hôtel
-        // Créer fonction priceCalc()
-        $total_price = $price_pers * $number_of_participants;
+        // aa
+        $total_price = priceCalc($price_per_pers, $number_of_participants);
 
         echo '<br> ID : ' . $id;
         echo '<br> Participants : ' . intval($_POST['number_of_participants']);
-        echo '<br> Prix/pers : ' . $price_pers;
+        echo '<br> Prix/pers : ' . $price_per_pers;
         echo '<br> Prix tot : ' . $total_price;
 
     } else {
-        header("Location: ../src/error_page.php?error=wrongTripConfig");
+        header("Location: ../src/error_page.php");
         exit;
     }
     ?>

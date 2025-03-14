@@ -55,7 +55,7 @@
         // Shows travel cards matching the search
         displayByFilter($data);
     } else {
-        echo "test: Recherche non valide";
+        displayNoResult();
     }
 
 ?>

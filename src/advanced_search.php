@@ -39,7 +39,7 @@
                     <tr>
                         <!-- Search bar -->
                         <td>
-                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une île... 🔎" name="destination" required />
+                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une île... 🔎" name="destination" />
                             <datalist id="destinations">
                                 <option value="Tahiti"></option>
                                 <option value="Bora-Bora"></option>
@@ -86,19 +86,13 @@
                                         <input type="checkbox" name="travel_type" value="noces" /> Voyage de Noces
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="travel_type" value="a_plusieurs" /> Voyage à plusieurs
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="travel_type" value="amis" /> Voyage entre amis
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="travel_type" value="famille" /> Voyage en famille
+                                        <input type="checkbox" name="travel_type" value="découverte" /> Voyage Découverte
                                     </label>
                                     <label>
                                         <input type="checkbox" name="travel_type" value="aventure" /> Voyage d'aventure
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="travel_type" value="détente" /> Voyage détente
+                                        <input type="checkbox" name="travel_type" value="détente" /> Voyage Détente
                                     </label>
                                     <label>
                                         <input type="checkbox" name="travel_type" value="luxe" /> Séjour de luxe
@@ -110,7 +104,7 @@
                         <td>
                             <div class="date_container">
                                 <div class="date_box">
-                                    <input type="date" name="date" id="date_input" class="date_input" required />
+                                    <input type="date" name="date" id="date_input" class="date_input" />
                                 </div>
                             </div>
                         </td>
@@ -120,7 +114,7 @@
                                 <button type="button" class="dropdown_button duration_button">Durée</button>
                                 <div class="dropdown_content duration_content">
                                     <label>
-                                        <input type="number" name="travel_length" min="3" max="15" step="1" required />
+                                        <input type="number" name="travel_length" min="8" max="12" step="1" />
                                     </label>
                                 </div>
                             </div>
@@ -191,8 +185,8 @@
                     if (value < 8) {
                         durationInput.value = 8;
                     }
-                    else if (value > 15) {
-                        durationInput.value = 15;
+                    else if (value > 12) {
+                        durationInput.value = 12;
                     }
                 }
 
