@@ -78,6 +78,6 @@
     </div>
 
     <!-- Footer -->
-    <?php include('../includes/footer.php'); displayFooter();?>
+    <?php displayFooter();?>
 </body>
 </html>

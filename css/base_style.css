@@ -198,16 +198,8 @@
     margin-bottom: 5vh;
 }
 
-.result_text, .invalid_page_text {
+.result_text, .invalid_page_text, .result_not_found {
     font-size: 45px;
-    text-align: center;
-    margin-bottom: 2vh;
-    color: #050552;
-    margin-top: 5vh;
-}
-
-.result_not_found {
-    font-size: 4vh;
     text-align: center;
     margin-bottom: 2vh;
     color: #050552;
@@ -224,11 +216,6 @@
     border-radius: 10px;
     text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 10vh;
-}
-
-.back_to_index_button {
-    margin-top: 11.5vh;
 }
 
 .back_to_search_button:hover {
@@ -309,6 +296,10 @@ footer {
 
 .other a:hover{
     text-decoration: underline;
+}
+
+.footer_separation {
+    margin-top: 50vh;
 }
 
 /* Animation */

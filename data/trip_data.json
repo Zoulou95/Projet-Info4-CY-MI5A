@@ -24,7 +24,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2500,
         "price_range": "2000-3000",
-        "total_price": 5000,
         "hotel": ["Lagoon Resort (4⭐)", "Oasis des Îles (5⭐)", "Étoile Bora (5⭐)"],
         "step_1": {
           "id": 1,
@@ -32,15 +31,10 @@
           "dates": {
             "arrival": "2025-07-05",
             "departure": "2025-07-06",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-16.5004127, -151.7444002",
-          "activities": ["Aucune", "Massage avec vue", "Randonnée en montagne"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Aucune", "Massage avec vue", "Randonnée en montagne"]
         },
         "step_2": {
           "id": 2,
@@ -48,15 +42,10 @@
           "dates": {
             "arrival": "2025-07-07",
             "departure": "2025-07-08",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-16.5005001, -151.7450002",
-          "activities": ["Aucune", "Séance photo", "Croisière privée"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Aucune", "Séance photo", "Croisière privée"]
         },
         "step_3": {
           "id": 3,
@@ -64,15 +53,10 @@
           "dates": {
             "arrival": "2025-07-09",
             "departure": "2025-07-12",
-            "duration": "4 jours"
+            "duration": 4
           },
           "coordinates": "-16.5010002, -151.7465003",
-          "activities": ["Aucune", "Plongée sous-marine", "Voyage en hélicoptère"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Aucune", "Plongée sous-marine", "Voyage en hélicoptère"]
         }
       },
       {
@@ -99,7 +83,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 1900,
         "price_range": "-2000",
-        "total_price": 4600,
         "hotel": ["Huahine Paradise (4⭐)", "Fare Maeva (5⭐)", "Moana Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -107,15 +90,10 @@
           "dates": {
             "arrival": "2025-07-20",
             "departure": "2025-07-21",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-16.7182002, -151.0142003",
-          "activities": ["Aucune", "Bain de soleil", "Snorkeling dans le lagon"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Aucune", "Bain de soleil", "Snorkeling dans le lagon"]
         },
         "step_2": {
           "id": 2,
@@ -123,15 +101,10 @@
           "dates": {
             "arrival": "2025-07-22",
             "departure": "2025-07-23",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-16.7105001, -151.0195001",
-          "activities": ["Aucune", "Visite de la vallée de Faie", "Randonnée dans la forêt tropicale"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Aucune", "Visite de la vallée de Faie", "Randonnée dans la forêt tropicale"]
         },
         "step_3": {
           "id": 3,
@@ -139,15 +112,10 @@
           "dates": {
             "arrival": "2025-07-24",
             "departure": "2025-07-27",
-            "duration": "4 jours"
+            "duration": 4
         },
           "coordinates": "-16.7070002, -151.0337003",
-          "activities": ["Aucune", "Plongée avec les raies", "Croisière au coucher du soleil"],
-          "user_choices": {
-          "accommodation": "",
-          "meal_plan": "",
-          "activities": ""
-          }
+          "activities": ["Aucune", "Plongée avec les raies", "Croisière au coucher du soleil"]
         }
       },
       {
@@ -174,7 +142,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 1800,
         "price_range": "-2000",
-        "total_price": 3600,
         "hotel": ["Moorea Lodge (3⭐)", "Aventure Resort (4⭐)", "Blue Horizon (5⭐)"],
         "step_1": {
           "id": 1,
@@ -182,15 +149,10 @@
           "dates": {
             "arrival": "2025-08-08",
             "departure": "2025-08-09",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-17.5388, -149.8419",
-          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"]
         },
         "step_2": {
           "id": 2,
@@ -198,15 +160,10 @@
           "dates": {
             "arrival": "2025-08-10",
             "departure": "2025-08-11",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-17.5500, -149.8500",
-          "activities": ["Visite d'un village local", "Plongée sous-marine", "Cours de danse traditionnelle"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Visite d'un village local", "Plongée sous-marine", "Cours de danse traditionnelle"]
         },
         "step_3": {
           "id": 3,
@@ -214,15 +171,10 @@
           "dates": {
             "arrival": "2025-08-12",
             "departure": "2025-08-17",
-            "duration": "6 jours"
+            "duration": 6
           },
           "coordinates": "-17.5700, -149.8600",
-          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"]
         }
       },
       {
@@ -249,7 +201,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2700,
         "price_range": "2000-3000",
-        "total_price": 5400,
         "hotel": ["Rangiroa Pearl (4⭐)", "Lagoon View (5⭐)", "Blue Reef (5⭐)"],
         "step_1": {
           "id": 1,
@@ -257,15 +208,10 @@
           "dates": {
             "arrival": "2025-08-22",
             "departure": "2025-08-23",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-15.1196, -147.6615",
-          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"]
         },
         "step_2": {
           "id": 2,
@@ -273,15 +219,10 @@
           "dates": {
             "arrival": "2025-08-24",
             "departure": "2025-08-25",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-15.1300, -147.6700",
-          "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"]
         },
         "step_3": {
           "id": 3,
@@ -289,15 +230,10 @@
           "dates": {
             "arrival": "2025-08-26",
             "departure": "2025-09-02",
-            "duration": "7 jours"
+            "duration": 7
           },
           "coordinates": "-15.1400, -147.6800",
-          "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"]
         }
       },
       {
@@ -324,7 +260,6 @@
         "guests": ["Personne 1", "Personne 2", "Enfant 1", "Enfant 2"],
         "price_per_person": 4000,
         "price_range": "4000-5000",
-        "total_price": 7600,
         "hotel": ["Moorea Beach Resort (4⭐)", "Pearl Resort Moorea (5⭐)", "Luxe Moorea Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -332,15 +267,10 @@
           "dates": {
             "arrival": "2025-09-05",
             "departure": "2025-09-06",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-17.4976, -149.8436",
-          "activities": ["Baignade en famille", "Visite d'un village traditionnel", "Plongée sous-marine"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Baignade en famille", "Visite d'un village traditionnel", "Plongée sous-marine"]
         },
         "step_2": {
           "id": 2,
@@ -348,15 +278,10 @@
           "dates": {
             "arrival": "2025-09-07",
             "departure": "2025-09-08",
-            "duration": "7 jours"
+            "duration": 7
           },
           "coordinates": "-17.5050, -149.8390",
-          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"]
         },
         "step_3": {
           "id": 3,
@@ -364,15 +289,10 @@
           "dates": {
             "arrival": "2025-09-09",
             "departure": "2025-09-15",
-            "duration": "7 jours"
+            "duration": 7
           },
           "coordinates": "-17.5100, -149.8350",
-          "activities": ["Plage tranquille", "Dîner au coucher du soleil", "Balade en pirogue"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plage tranquille", "Dîner au coucher du soleil", "Balade en pirogue"]
         }
       },
       {
@@ -399,7 +319,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 3000,
         "price_range": "3000-4000",
-        "total_price": 6000,
         "hotel": ["Taha'a Resort (5⭐)", "Le Taha'a Island (5⭐)", "Vahine Island (5⭐)"],
         "step_1": {
           "id": 1,
@@ -407,15 +326,10 @@
           "dates": {
             "arrival": "2025-07-05",
             "departure": "2025-07-07",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.6936, -151.4496",
-          "activities": ["Bain de soleil sur la plage", "Promenade à pied autour de l'île", "Coucher de soleil en bateau"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Bain de soleil sur la plage", "Promenade à pied autour de l'île", "Coucher de soleil en bateau"]
         },
         "step_2": {
           "id": 2,
@@ -423,15 +337,10 @@
           "dates": {
             "arrival": "2025-07-08",
             "departure": "2025-07-09",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-16.7000, -151.4400",
-          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite d'une ferme perlière"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite d'une ferme perlière"]
         },
         "step_3": {
           "id": 3,
@@ -439,15 +348,10 @@
           "dates": {
             "arrival": "2025-07-10",
             "departure": "2025-07-12",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.7100, -151.4500",
-          "activities": ["Plongée tranquille", "Dîner romantique", "Balade en vélo autour de l'île"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée tranquille", "Dîner romantique", "Balade en vélo autour de l'île"]
         }
       },
       {
@@ -474,7 +378,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2500,
         "price_range": "2000-3000",
-        "total_price": 5000,
         "hotel": ["Fakarava Resort (4⭐)", "Atoll Paradise (5⭐)", "Pearl Beach Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -482,15 +385,10 @@
           "dates": {
             "arrival": "2025-07-20",
             "departure": "2025-07-22",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.0399, -145.5566",
-          "activities": ["Exploration de l'atoll", "Baignade dans le lagon", "Visite d'un site de surf"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Exploration de l'atoll", "Baignade dans le lagon", "Visite d'un site de surf"]
         },
         "step_2": {
           "id": 2,
@@ -498,15 +396,10 @@
           "dates": {
             "arrival": "2025-07-23",
             "departure": "2025-07-24",
-            "duration": "2 jours"
+            "duration": 2
           },
           "coordinates": "-16.0500, -145.5500",
-          "activities": ["Plongée dans la passe", "Visite des îlots avoisinants", "Visite d'un village local"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée dans la passe", "Visite des îlots avoisinants", "Visite d'un village local"]
         },
         "step_3": {
           "id": 3,
@@ -514,15 +407,10 @@
           "dates": {
             "arrival": "2025-07-25",
             "departure": "2025-07-27",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.0600, -145.5500",
-          "activities": ["Détente sur la plage", "Coucher du soleil sur l'océan", "Plongée avec les raies"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Détente sur la plage", "Coucher du soleil sur l'océan", "Plongée avec les raies"]
         }
       },
       {
@@ -549,7 +437,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 3500,
         "price_range": "3000-4000",
-        "total_price": 7000,
         "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St. Regis Bora Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -557,15 +444,10 @@
           "dates": {
             "arrival": "2025-08-08",
             "departure": "2025-08-10",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.5004, -151.7415",
-          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"]
         },
         "step_2": {
           "id": 2,
@@ -573,15 +455,10 @@
           "dates": {
             "arrival": "2025-08-11",
             "departure": "2025-08-13",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.5200, -151.7300",
-          "activities": ["Plongée dans le lagon", "Visite de l'île en 4x4", "Dégustation de vanille locale"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée dans le lagon", "Visite de l'île en 4x4", "Dégustation de vanille locale"]
         },
         "step_3": {
           "id": 3,
@@ -589,15 +466,10 @@
           "dates": {
             "arrival": "2025-08-14",
             "departure": "2025-08-17",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.5400, -151.7500",
-          "activities": ["Coucher de soleil en bateau", "Dîner romantique sur l'eau", "Paddle sur le lagon"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Coucher de soleil en bateau", "Dîner romantique sur l'eau", "Paddle sur le lagon"]
         }
       },
       {
@@ -624,7 +496,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 4900,
         "price_range": "4000-5000",
-        "total_price": 5800,
         "hotel": ["Lapita Village (4⭐)", "Royal Huahine (5⭐)", "Te Tiare Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -632,15 +503,10 @@
           "dates": {
             "arrival": "2025-08-22",
             "departure": "2025-08-25",
-            "duration": "4 jours"
+            "duration": 4
           },
           "coordinates": "-16.7001, -151.0330",
-          "activities": ["Balade en vélo autour de l'île", "Visite d'un marae ancien", "Dégustation de vanille locale"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Balade en vélo autour de l'île", "Visite d'un marae ancien", "Dégustation de vanille locale"]
         },
         "step_2": {
           "id": 2,
@@ -648,15 +514,10 @@
           "dates": {
             "arrival": "2025-08-26",
             "departure": "2025-08-28",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.7100, -151.0200",
-          "activities": ["Kayak dans les lagons", "Visite de l'île en bateau", "Dégustation de vanille locale"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Kayak dans les lagons", "Visite de l'île en bateau", "Dégustation de vanille locale"]
         },
         "step_3": {
           "id": 3,
@@ -664,15 +525,10 @@
           "dates": {
             "arrival": "2025-08-29",
             "departure": "2025-09-02",
-            "duration": "5 jours"
+            "duration": 5
           },
           "coordinates": "-16.7400, -151.0000",
-          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"]
         }
       },
       {
@@ -699,7 +555,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2200,
         "price_range": "2000-3000",
-        "total_price": 4400,
         "hotel": ["Tahiti Pearl (4⭐)", "Le Meridien (5⭐)", "Tahiti Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -707,15 +562,10 @@
           "dates": {
             "arrival": "2025-09-05",
             "departure": "2025-09-07",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-17.6509, -149.5660",
-          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"]
         },
         "step_2": {
           "id": 2,
@@ -723,15 +573,10 @@
           "dates": {
             "arrival": "2025-09-08",
             "departure": "2025-09-10",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-17.6200, -149.5500",
-          "activities": ["Randonnée vers les cascades", "Visite d'un site de surf", "Visite d'un village local"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Randonnée vers les cascades", "Visite d'un site de surf", "Visite d'un village local"]
         },
         "step_3": {
           "id": 3,
@@ -739,15 +584,10 @@
           "dates": {
             "arrival": "2025-09-11",
             "departure": "2025-09-15",
-            "duration": "4 jours"
+            "duration": 4
           },
           "coordinates": "-17.6700, -149.5700",
-          "activities": ["Repos sur la plage", "Bain de soleil", "Visite d'une ferme perlière"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Repos sur la plage", "Bain de soleil", "Visite d'une ferme perlière"]
         }
       },
       {
@@ -774,7 +614,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 4100,
         "price_range": "4000-5000",
-        "total_price": 4200,
         "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Taha'a Resort (5⭐)"],
         "step_1": {
           "id": 1,
@@ -782,15 +621,10 @@
           "dates": {
             "arrival": "2025-09-25",
             "departure": "2025-09-27",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.7669, -151.5016",
-          "activities": ["Visite du marae Taputapuātea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Visite du marae Taputapuātea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"]
         },
         "step_2": {
           "id": 2,
@@ -798,15 +632,10 @@
           "dates": {
             "arrival": "2025-09-28",
             "departure": "2025-09-30",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.7700, -151.5100",
-          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"]
         },
         "step_3": {
           "id": 3,
@@ -814,15 +643,10 @@
           "dates": {
             "arrival": "2025-10-01",
             "departure": "2025-10-05",
-            "duration": "5 jours"
+            "duration": 5
           },
           "coordinates": "-16.7600, -151.4800",
-          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"]
         }
       },
       {
@@ -849,7 +673,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2100,
         "price_range": "2000-3000",
-        "total_price": 4200,
         "hotel": ["Nuku Hiva Keikahanui (4⭐)", "Hiva Oa Lodge (4⭐)", "Hotel Relais Hiva (5⭐)"],
         "step_1": {
           "id": 1,
@@ -857,15 +680,10 @@
           "dates": {
             "arrival": "2025-12-01",
             "departure": "2025-12-03",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-8.9288, -140.1006",
-          "activities": ["Visite des anciens sites archéologiques", "Découverte des traditions marquisiennes", "Baignade en famille"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Visite des sites archéologiques", "Découverte des traditions", "Baignade en famille"]
         },
         "step_2": {
           "id": 2,
@@ -873,15 +691,10 @@
           "dates": {
             "arrival": "2025-12-04",
             "departure": "2025-12-06",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-8.9100, -140.1100",
-          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"]
         },
         "step_3": {
           "id": 3,
@@ -889,15 +702,10 @@
           "dates": {
             "arrival": "2025-12-07",
             "departure": "2025-12-09",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-8.9300, -140.0900",
-          "activities": ["Bain de soleil sur la plage", "Relaxation au bord de l'eau", "Balade en bâteau"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Bain de soleil sur la plage", "Relaxation au bord de l'eau", "Balade en bâteau"]
         }
       },
       {
@@ -908,7 +716,7 @@
         "destination" : "Tetiaroa",
         "description": "Vivez l'exception, un séjour de luxe entre îles privées et paysages paradisiaques.",
         "specificity": "luxe",
-        "tags": ["mer", "plages", "plage", "soleil", "tetiaroa", "luxe", "détente", "plageprivée", "privée", "borabora", "exclusivité", "villas", "prestige", "paradis", "calme", "riche", "relaxation", "îles polynésiennes", "5étoiles", "hautdegamme"],
+        "tags": ["jetski", "mer", "plages", "plage", "soleil", "tetiaroa", "luxe", "détente", "plageprivée", "privée", "borabora", "exclusivité", "villas", "prestige", "paradis", "calme", "riche", "relaxation", "îles polynésiennes", "5étoiles", "hautdegamme"],
         "presentation_img_1": "pres_tetiaroa_img_1.jpg",
         "presentation_img_2": "pres_tetiaroa_img_2.jpg",
         "presentation_img_3": "pres_tetiaroa_img_3.jpg",
@@ -924,23 +732,17 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 8000,
         "price_range": "+5000",
-        "total_price": 16000,
-        "hotel": ["The Brando Tetiaroa Resort (6⭐)", "Polynesia hotel (5⭐)", "Atoll Paradise (5⭐)"],
+        "hotel": ["The Brando Resort (6⭐)", "Polynesia hotel (5⭐)", "Atoll Paradise (5⭐)"],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation dans la villa",
           "dates": {
             "arrival": "2025-04-10",
             "departure": "2025-04-13",
-            "duration": "4 jours"
+            "duration": 4
           },
           "coordinates": "-17.5150, -149.5740",
-          "activities": ["Installation dans une villa privée", "Détente sur la plage", "Découverte des traditions polynésiennes"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Jetski sur le lagon", "Détente sur la plage", "Découverte des traditions"]
         },
         "step_2": {
           "id": 2,
@@ -948,15 +750,10 @@
           "dates": {
             "arrival": "2025-04-14",
             "departure": "2025-04-16",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-17.5200, -149.5600",
-          "activities": ["Plongée dans le lagon", "Visite de l'île privée", "Détente à la plage"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée dans le lagon", "Visite de l'île privée", "Détente à la plage"]
         },
         "step_3": {
           "id": 3,
@@ -964,15 +761,10 @@
           "dates": {
             "arrival": "2025-04-17",
             "departure": "2025-04-22",
-            "duration": "5 jours"
+            "duration": 5
           },
           "coordinates": "-17.5300, -149.5700",
-          "activities": ["Massage au spa", "Dîner privé sur la plage", "Dégustation de vanille locale"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Massage au spa", "Dîner privé sur la plage", "Dégustation de vanille locale"]
         }
       },
       {
@@ -999,7 +791,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2500,
         "price_range": "2000-3000",
-        "total_price": 5000,
         "hotel": ["Moorea Pearl Resort (4⭐)", "Hilton Resort & Spa (5⭐)", "Sofitel Moorea (5⭐)"],
         "step_1": {
           "id": 1,
@@ -1007,15 +798,10 @@
           "dates": {
             "arrival": "2025-10-15",
             "departure": "2025-10-17",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-17.5407, -149.8221",
-          "activities": ["Visite du centre culturel de Moorea", "Découverte de l'artisanat local", "Visite d'un village traditionnel"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Visite du centre culturel", "Découverte de l'artisanat local", "Visite d'un village traditionnel"]
         },
         "step_2": {
           "id": 2,
@@ -1023,15 +809,10 @@
           "dates": {
             "arrival": "2025-10-18",
             "departure": "2025-10-20",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-17.5500, -149.8100",
-          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"]
         },
         "step_3": {
           "id": 3,
@@ -1039,15 +820,10 @@
           "dates": {
             "arrival": "2025-10-21",
             "departure": "2025-10-25",
-            "duration": "5 jours"
+            "duration": 5
           },
           "coordinates": "-17.5600, -149.8200",
-          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"]
         }
       },
       {
@@ -1074,7 +850,6 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 6500,
         "price_range": "+5000",
-        "total_price": 13000,
         "hotel": ["Bora Lagoon Resort (5⭐)", "Le Méridien (5⭐)", "Moorea Pearl Resort (4⭐)"],
         "step_1": {
           "id": 1,
@@ -1082,15 +857,10 @@
           "dates": {
             "arrival": "2025-06-15",
             "departure": "2025-06-17",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-17.5000, -149.6000",
-          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"]
         },
         "step_2": {
           "id": 2,
@@ -1098,15 +868,10 @@
           "dates": {
             "arrival": "2025-06-18",
             "departure": "2025-06-20",
-            "duration": "3 jours"
+            "duration": 3
           },
           "coordinates": "-16.5000, -151.7000",
-          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"]
         },
         "step_3": {
           "id": 3,
@@ -1114,15 +879,10 @@
           "dates": {
             "arrival": "2025-06-21",
             "departure": "2025-06-25",
-            "duration": "4 jours"
+            "duration": 4
           },
           "coordinates": "-17.5407, -149.8221",
-          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"],
-          "user_choices": {
-            "accommodation": "",
-            "meal_plan": "",
-            "activities": ""
-          }
+          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"]
         }
       }
     ]

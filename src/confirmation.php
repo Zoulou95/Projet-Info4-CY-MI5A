@@ -12,7 +12,7 @@
     <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/trip_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/confirmation_style.css" />
 </head>
 <body>
     <div class="container">
@@ -38,27 +38,70 @@
     include('../includes/trip_functions.php');
 
     if (isConfigValid()) {
-
-        $id = $_SESSION['id'];
-        $price_per_pers = intval($_SESSION['price_per_person']);
+        $trip = $_SESSION['trip'];
         $number_of_participants = intval($_POST['number_of_participants']);
 
         // Calculate the total price
-        $total_price = priceCalc($price_per_pers, $number_of_participants);
-
-        echo '<br> ID : ' . $id;
-        echo '<br> Participants : ' . intval($_POST['number_of_participants']);
-        echo '<br> Prix/pers : ' . $price_per_pers;
-        echo '<br> Prix tot : ' . $total_price;
-
+        $total_price = priceCalc($trip, $number_of_participants);
+        $_SESSION['to_be_paid'] = $total_price;
     } else {
-        header("Location: ../src/error_page.php");
+        displayError("Invalid trip configuration.");
         exit;
     }
     ?>
 
+    <!-- Trip recapitulation -->
+    <header class="recap_header">
+        <h1>Récapitulatif de votre Voyage</h1>
+        <p>Voici les détails complets de votre aventure à venir</p>
+    </header>
+
+    <!-- General informations -->
+    <section class="recap_general_info">
+        <h2>Informations Générales</h2>
+        <div class="recap_info_box">
+            <p><strong>Nombre de participants : </strong><?php echo $number_of_participants; ?> personnes</p>
+            <p><strong>Transport : </strong><?php echo $_POST['transports']; ?></p>
+            <p><strong>Prix total : </strong><?php echo $total_price; ?>€</p>
+            <p><strong>Prix par personne : </strong><?php echo $total_price / $number_of_participants; ?>€</p>
+            <p><strong>Date de départ : </strong><?php echo $trip['dates']['start_date']; ?></p>
+            <p><strong>Date de retour : </strong><?php echo $trip['dates']['end_date']; ?></p>
+        </div>
+    </section>
+
+    <section class="recap_trip_steps">
+    <h2>Étapes du Voyage</h2>
+
+    <?php
+        $nb_steps = 4;
+        for($i=1; $i<$nb_steps; $i++) {
+            echo
+            '
+            <div class="recap_step">
+                <h3>Étape ' . $i . ' : ' . $trip['step_' . $i]['title'] . '</h3>
+                <div class="recap_step_details">
+                    <p><strong>Hôtel : </strong>' . $_POST['hotel_' . $i] . '</p>
+                    <p><strong>Pension : </strong>' . $_POST['pension_' . $i] . '</p>
+                    <p><strong>Activité choisie : </strong>' . $_POST['activite_' . $i] . '</p>
+                    <p><strong>Nombre de participants à l’activité : </strong>' . $_POST['participants_' . $i] . ' personnes</p>
+                </div>
+            </div>
+            ';
+        }
+    ?>
+    </section>
+
+    <!-- Payement -->
+    <section class="recap_payment">
+        <h2>Paiement</h2>
+        <div class="recap_payment_details">
+            <p><b>Montant total à payer : </b><?php echo $total_price; ?>€</p>
+            <button class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <?php include('../includes/footer.php'); displayFooter();?>
+    <?php displayFooter();?>
 </div>
 </body>
 </html>

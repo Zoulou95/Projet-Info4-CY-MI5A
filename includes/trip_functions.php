@@ -1,5 +1,6 @@
 <?php
 include('../src/error.php');
+
 // Function to retrieve useful data from 'trip_data.json file and display specific trip information
 function dataDecode($data_file) {
     // Read the 'trip_data.json' file and convert it into a PHP array
@@ -32,7 +33,6 @@ function tripFinder($data, $trip_id) {
     }
     if ($trip === null) {
         displayError("trip not found.");
-        exit();
     }
     return $trip;
 }
@@ -58,7 +58,7 @@ function printCard($journey) {
         <img src="../assets/presentation/' . $journey['presentation_img_1'] . '" alt="Card presentation image" />
         <div class="card_content">
             <h2>'. $journey['title'] . '</h2>
-            <p>'. $journey['subtile'] . '</p>
+            <p>'. $journey['subtitle'] . '</p>
             <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
             <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>
@@ -71,7 +71,7 @@ function printCard($journey) {
 function displayByTag($data, $tag, $trip_number) {
 
     // Manage display when only one result is obtained
-    if($trip_number > 1) {
+    if ($trip_number > 1) {
         $plural = 's';
     } else {
         $plural = '';
@@ -79,7 +79,7 @@ function displayByTag($data, $tag, $trip_number) {
 
     echo '<h2 class="result_text">Résultat' . $plural . ' pour "' . $tag . '" (' . $trip_number . ' voyage' . $plural . ' trouvé' . $plural . ')</h2>';
 
-    if($trip_number != 0) {
+    if ($trip_number != 0) {
         echo '<div class="result_container">';
         foreach ($data['trip'] as $journey) {
             foreach ($journey['tags'] as $keyword) {
@@ -142,7 +142,7 @@ function displayByFilter($data) {
         }
     }
     echo '</div>';
-    if($found == false) {
+    if ($found == false) {
         displayNoResult();
     }
 }
@@ -154,7 +154,7 @@ function displayCards($id_list, $data_file) {
 
     foreach ($id_list as $trip_id) {
         $trip = tripFinder($data, $trip_id);
-        if(!$trip) {
+        if (!$trip) {
             displayError("trip not found on cards display.");
         }
         echo
@@ -178,14 +178,14 @@ function isValidAdvancedSearch() {
 function isConfigValid() {
     $res = 1; // 1 = OK ; 0 = ERROR
 
-    for($i=1; $i<4; $i++) {
-        if(!isset($_POST['hotel_' . $i]) || !isset($_POST['pension_' . $i]) || !isset($_POST['activite_' . $i]) || !isset($_POST['participants_' . $i])) {
+    for ($i=1; $i<4; $i++) {
+        if (!isset($_POST['hotel_' . $i]) || !isset($_POST['pension_' . $i]) || !isset($_POST['activite_' . $i]) || !isset($_POST['participants_' . $i])) {
             $res = 0;
             break;
         }
     }
 
-    if(!isset($_POST['number_of_participants']) || !isset($_POST['transports']) || !isset($_SESSION['price_per_person']) || !isset($_SESSION['id'])) {
+    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports'])) {
         $res = 0;
     }
 
@@ -201,16 +201,54 @@ function displayNoResult() {
 }
 
 // Calculate the travel final price
-function priceCalc($price_pers, $total_price) {
+function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
+    $price_per_person = intval($trip['price_per_person']);
 
-    $total = intval($price_pers) * intval($total_price);
+    $total = intval($price_per_person) * intval($number_of_participants);
 
-    for($i=1; $i<$step_number; $i++) {
-        if($_POST['pension_' . $i] === "tout_inclus") {
-            $total += 50;
+    // Transport price
+    switch ($_POST['transports']) {
+        case "Aucun":
+            break;
+        case "Bâteau":
+            $total += 100 * $number_of_participants * $trip['dates']['length'];
+            break;
+        case "Vélo":
+            $total += 30 * $number_of_participants * $trip['dates']['length'];
+            break;
+        case "Voiture":
+            $total += 90 * $number_of_participants * $trip['dates']['length'];
+            break;
+        case "Chauffeur":
+            $total += 300 * $number_of_participants * $trip['dates']['length'];
+            break;
+        case "Hélicoptère":
+            $total += 900 * $number_of_participants * $trip['dates']['length'];
+            break;
+        default:
+            break;
+    }
+
+    // Meal price
+    for ($i=1; $i<$step_number; $i++) {
+        if($_POST['pension_' . $i] === "Tout inclus") {
+            $total += 50 * $number_of_participants * $trip['step_' . $i]['dates']['duration'];;
         }
     }
+
+    // If participants are added to the activity
+    for ($i=1; $i<$step_number; $i++) {
+        if($_POST['participants_' . $i] > $number_of_participants) {
+            $diff = intval($_POST['participants_' . $i]) - $number_of_participants;
+            $total += 130 * $diff;
+        }
+    }
+
+    // Discount if the member is VIP
+    /*if($_SESSION['user']['status'] == "VIP") {
+        $total *= 0.9;
+    }*/
 
     return $total;
 }

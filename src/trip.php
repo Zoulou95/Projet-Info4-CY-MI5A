@@ -15,6 +15,25 @@
     <link rel="stylesheet" type="text/css" href="../css/trip_style.css" />
 </head>
 <body>
+
+<?php
+    include("../includes/trip_functions.php");
+
+    // Get trip ID from URL
+    if (isset($_GET['id'])) {
+        $trip_id = $_GET['id'];
+    } else {
+        $trip_id = null;
+    }
+
+    $data_file = '../data/trip_data.json';
+    $decodedData = dataDecode($data_file);
+
+    $trip = tripFinder($decodedData, $trip_id);
+
+    $_SESSION['trip'] = $trip;
+?>
+
     <div class="container">
         <!-- Navigation bar -->
         <div class="headbar">
@@ -34,24 +53,6 @@
             </div>
         </div>
         <div class="separate"></div>
-
-    <?php
-        include("../includes/trip_functions.php");
-        // Get trip ID from URL
-        if (isset($_GET['id'])) {
-            $trip_id = $_GET['id'];
-        } else {
-            $trip_id = null;
-        }
-
-        $data_file = '../data/trip_data.json';
-        $decodedData = dataDecode($data_file);
-
-        $trip = tripFinder($decodedData, $trip_id);
-
-        $_SESSION['id'] = $trip['id'];
-        $_SESSION['price_per_person'] = $trip['price_per_person'];
-    ?>
 
         <div class="description">
             <h2><?php echo $trip['title'];?></h2>
@@ -139,7 +140,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>2 jours</td>
+                            <td><?php echo $trip['step_1']['dates']['duration']?> jours</td>
                             <td>
                                 <select name="hotel_1">
                                     <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
@@ -149,10 +150,10 @@
                             </td>
                             <td>
                                 <select name="pension_1">
-                                    <option value="demi_pension">Demi-pension (compris)</option>
-                                    <option value="tout_inclus">Tout inclus (+50€/pers)</option>
-                                    <option value="dejeuner">Déjeuner uniquement</option>
-                                    <option value="diner">Diner uniquement</option>
+                                    <option value="Demi-pension">Demi-pension (compris)</option>
+                                    <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
+                                    <option value="Déjeuner uniquement">Déjeuner uniquement</option>
+                                    <option value="Diner uniquement">Diner uniquement</option>
                                 </select>
                             </td>
                             <td>
@@ -164,11 +165,11 @@
                             </td>
                             <td>
                                 <select name="participants_1">
-                                    <option value="2_personnes">2 personnes</option>
-                                    <option value="3_personnes">3 personnes</option>
-                                    <option value="4_personnes">4 personnes</option>
-                                    <option value="4_personnes">5 personnes</option>
-                                    <option value="4_personnes">6 personnes</option>
+                                    <option value="2">2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6">6 personnes</option>
                                 </select>
                             </td>
                         </tr>
@@ -190,7 +191,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>3 jours</td>
+                            <td><?php echo $trip['step_2']['dates']['duration']?> jours</td>
                             <td>
                             <select name="hotel_2">
                                 <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
@@ -200,10 +201,10 @@
                             </td>
                             <td>
                                 <select name="pension_2">
-                                    <option value="petit_dejeuner">Demi-pension (compris)</option>
-                                    <option value="tout_inclus">Tout inclus (+50€/pers)</option>
-                                    <option value="dejeuner">Déjeuner uniquement</option>
-                                    <option value="demi_pension">Diner uniquement</option>
+                                <option value="Demi-pension">Demi-pension (compris)</option>
+                                    <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
+                                    <option value="Déjeuner uniquement">Déjeuner uniquement</option>
+                                    <option value="Diner uniquement">Diner uniquement</option>
                                 </select>
                             </td>
                             <td>
@@ -215,11 +216,11 @@
                             </td>
                             <td>
                                 <select name="participants_2">
-                                    <option value="2_personnes">2 personnes</option>
-                                    <option value="3_personnes">3 personnes</option>
-                                    <option value="4_personnes">4 personnes</option>
-                                    <option value="5_personnes">5 personnes</option>
-                                    <option value="6_personnes">6 personnes</option>
+                                    <option value="2">2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6">6 personnes</option>
                                 </select>
                             </td>
                         </tr>
@@ -241,7 +242,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>2 jours</td>
+                            <td><?php echo $trip['step_3']['dates']['duration']?> jours</td>
                             <td>
                             <select name="hotel_3">
                                     <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
@@ -250,10 +251,10 @@
                                 </select>
                             <td>
                                 <select name="pension_3">
-                                    <option value="petit_dejeuner">Demi-pension (compris)</option>
-                                    <option value="tout_inclus">Tout inclus (+50€/pers)</option>
-                                    <option value="dejeuner">Déjeuner uniquement</option>
-                                    <option value="demi_pension">Diner uniquement</option>
+                                <option value="Demi-pension">Demi-pension (compris)</option>
+                                    <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
+                                    <option value="Déjeuner uniquement">Déjeuner uniquement</option>
+                                    <option value="Diner uniquement">Diner uniquement</option>
                                 </select>
                             </td>
                             <td>
@@ -265,11 +266,11 @@
                             </td>
                             <td>
                                 <select name="participants_3">
-                                    <option value="2_personnes">2 personnes</option>
-                                    <option value="3_personnes">3 personnes</option>
-                                    <option value="4_personnes">4 personnes</option>
-                                    <option value="5_personnes">5 personnes</option>
-                                    <option value="6_personnes">6 personnes</option>
+                                    <option value="2">2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6">6 personnes</option>
                                 </select>
                             </td>
                         </tr>
@@ -302,23 +303,23 @@
                             <option value="2">2 personnes</option>
                             <option value="3">3 personnes</option>
                             <option value="4">4 personnes</option>
-                            <option value="4">5 personnes</option>
-                            <option value="4">6 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
                         </select>
                     </td>
                     <td>
                         <select name="transports">
-                            <option value="bâteau">Aucun</option>
-                            <option value="velo">Vélo (30€/J)</option>
-                            <option value="voityre">Voiture (90€/J)</option>
-                            <option value="bâteau">Bâteau (100€/J)</option>
-                            <option value="taxi">Chauffeur privé (500€/J)</option>
-                            <option value="hélicoptère">Hélicoptère (900€/J)</option>
+                            <option value="Aucun">Aucun</option>
+                            <option value="Vélo">Vélo (30€/pers/j)</option>
+                            <option value="Voiture">Voiture (90€/pers/j)</option>
+                            <option value="Bâteau">Bâteau (100€/pers/j)</option>
+                            <option value="Chauffeur">Chauffeur (300€/pers/j)</option>
+                            <option value="Hélicoptère">Hélicoptère (900€/pers/j)</option>
                         </select>
                     </td>
                     <td><?php echo $trip['price_per_person'];?>€</td>
                     <!-- Dynamic price will be set in JavaScript -->
-                    <td><?php echo $trip['total_price'];?>€</td>
+                    <td>€</td>
                 </tr>
             </tbody>
         </table>
@@ -331,7 +332,7 @@
         <div class="separate_footer"></div>
 
         <!-- Footer -->
-        <?php include('../includes/footer.php'); displayFooter();?>
+        <?php displayFooter();?>
 
     <!-- Script to browse a timeline and select steps when choosing a trip -->
     <script src="../includes/timelineBrowse.js"></script>

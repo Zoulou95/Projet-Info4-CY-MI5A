@@ -59,8 +59,9 @@
     }
 
 ?>
+</div>
     <!-- Footer -->
-    <div class="separate"></div>
-    <?php include('../includes/footer.php'); displayFooter();?>
+    <?php displayFooter();?>
+
 </body>
 </html>
