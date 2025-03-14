@@ -89,7 +89,7 @@
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
-            <form>
+            <form action="src/connexion.php" method="POST">
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Mot de passe" required>
                 <button type="submit">Se connecter</button>

@@ -15,26 +15,6 @@
     <link rel="stylesheet" type="text/css" href="../css/trip_style.css" />
 </head>
 <body>
-
-<?php
-    include("../includes/trip_functions.php");
-
-    // Get trip ID from URL
-    if (isset($_GET['id'])) {
-        $trip_id = $_GET['id'];
-    } else {
-        $trip_id = null;
-    }
-
-    $data_file = '../data/trip_data.json';
-    $decodedData = dataDecode($data_file);
-
-    $trip = tripFinder($decodedData, $trip_id);
-
-    $_SESSION['id'] = $trip['id'];
-    $_SESSION['price_per_person'] = $trip['price_per_person'];
-?>
-
     <div class="container">
         <!-- Navigation bar -->
         <div class="headbar">
@@ -54,6 +34,24 @@
             </div>
         </div>
         <div class="separate"></div>
+
+    <?php
+        include("../includes/trip_functions.php");
+        // Get trip ID from URL
+        if (isset($_GET['id'])) {
+            $trip_id = $_GET['id'];
+        } else {
+            $trip_id = null;
+        }
+
+        $data_file = '../data/trip_data.json';
+        $decodedData = dataDecode($data_file);
+
+        $trip = tripFinder($decodedData, $trip_id);
+
+        $_SESSION['id'] = $trip['id'];
+        $_SESSION['price_per_person'] = $trip['price_per_person'];
+    ?>
 
         <div class="description">
             <h2><?php echo $trip['title'];?></h2>
@@ -136,7 +134,7 @@
                             <th>Hôtel</th>
                             <th>Pension</th>
                             <th>Activité</th>
-                            <th>Participants</th>
+                            <th>Participants (+130€/invité)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -187,7 +185,7 @@
                             <th>Hôtel</th>
                             <th>Pension</th>
                             <th>Activité</th>
-                            <th>Participants</th>
+                            <th>Participants (+130€/invité)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -220,6 +218,8 @@
                                     <option value="2_personnes">2 personnes</option>
                                     <option value="3_personnes">3 personnes</option>
                                     <option value="4_personnes">4 personnes</option>
+                                    <option value="5_personnes">5 personnes</option>
+                                    <option value="6_personnes">6 personnes</option>
                                 </select>
                             </td>
                         </tr>
@@ -236,7 +236,7 @@
                             <th>Hôtel</th>
                             <th>Pension</th>
                             <th>Activité</th>
-                            <th>Participants</th>
+                            <th>Participants (+130€/invité)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -268,6 +268,8 @@
                                     <option value="2_personnes">2 personnes</option>
                                     <option value="3_personnes">3 personnes</option>
                                     <option value="4_personnes">4 personnes</option>
+                                    <option value="5_personnes">5 personnes</option>
+                                    <option value="6_personnes">6 personnes</option>
                                 </select>
                             </td>
                         </tr>

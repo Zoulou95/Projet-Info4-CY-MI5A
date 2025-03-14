@@ -43,7 +43,7 @@
         $price_per_pers = intval($_SESSION['price_per_person']);
         $number_of_participants = intval($_POST['number_of_participants']);
 
-        // aa
+        // Calculate the total price
         $total_price = priceCalc($price_per_pers, $number_of_participants);
 
         echo '<br> ID : ' . $id;

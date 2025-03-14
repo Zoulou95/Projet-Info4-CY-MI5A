@@ -89,13 +89,13 @@
                                         <input type="checkbox" name="travel_type" value="découverte" /> Voyage Découverte
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="travel_type" value="aventure" /> Voyage d'aventure
+                                        <input type="checkbox" name="travel_type" value="aventure" /> Voyage d'Aventure
                                     </label>
                                     <label>
                                         <input type="checkbox" name="travel_type" value="détente" /> Voyage Détente
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="travel_type" value="luxe" /> Séjour de luxe
+                                        <input type="checkbox" name="travel_type" value="luxe" /> Séjour de Luxe
                                     </label>
                                 </div>
                             </div>

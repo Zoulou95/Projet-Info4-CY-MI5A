@@ -101,7 +101,11 @@ To explore the site, you need to open a local server on your machine.
 
 - `confirmation.php`
 
-- `error_page.php`
+- `connexion.php`
+
+- `inscription.php`
+
+- `error.php`
 
 - `trip_functions.php` groups the various functions common to php pages and which will be useful for processing `.json` files containing site data (user data, trip data, etc.).
 

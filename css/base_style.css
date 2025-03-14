@@ -198,7 +198,7 @@
     margin-bottom: 5vh;
 }
 
-.result_text {
+.result_text, .invalid_page_text {
     font-size: 45px;
     text-align: center;
     margin-bottom: 2vh;
@@ -214,7 +214,7 @@
     margin-top: 5vh;
 }
 
-.back_to_search_button {
+.back_to_search_button, .back_to_index_button {
     display: block;
     margin: 7vh auto;
     width: 50%;
@@ -227,6 +227,10 @@
     margin-top: 10vh;
 }
 
+.back_to_index_button {
+    margin-top: 11.5vh;
+}
+
 .back_to_search_button:hover {
     background-color: #ff8c00;
     border: solid #ff8c00;
@@ -234,7 +238,7 @@
     cursor: pointer;
 }
 
-.back_to_search_text {
+.back_to_search_text, .back_to_index_text {
     color: #ffffff;
     font-size: 4vh;
     font-weight: bold;

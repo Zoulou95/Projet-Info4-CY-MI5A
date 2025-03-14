@@ -1,5 +1,5 @@
 <?php
-
+include('../src/error.php');
 // Function to retrieve useful data from 'trip_data.json file and display specific trip information
 function dataDecode($data_file) {
     // Read the 'trip_data.json' file and convert it into a PHP array
@@ -9,14 +9,12 @@ function dataDecode($data_file) {
     }  
     else
     {
-        header("Location: ../src/error_page.php");
-        exit();
+        displayError("data file missing.");
     }
 
     // Verification of data structure
     if (!isset($data['trip']) || !is_array($data['trip'])) {
-        header("Location: ../src/error_page.php");
-        exit();
+        displayError("data decode failed.");
     }
 
     return $data;
@@ -33,7 +31,7 @@ function tripFinder($data, $trip_id) {
         }
     }
     if ($trip === null) {
-        header("Location: ../src/error_page.php");
+        displayError("trip not found.");
         exit();
     }
     return $trip;
@@ -157,7 +155,7 @@ function displayCards($id_list, $data_file) {
     foreach ($id_list as $trip_id) {
         $trip = tripFinder($data, $trip_id);
         if(!$trip) {
-            header("Location: ../src/error_page.php?");
+            displayError("trip not found on cards display.");
         }
         echo
         '<div class="card">
@@ -202,8 +200,17 @@ function displayNoResult() {
     </button>';
 }
 
+// Calculate the travel final price
 function priceCalc($price_pers, $total_price) {
+    $step_number = 4;
+
     $total = intval($price_pers) * intval($total_price);
+
+    for($i=1; $i<$step_number; $i++) {
+        if($_POST['pension_' . $i] === "tout_inclus") {
+            $total += 50;
+        }
+    }
 
     return $total;
 }
