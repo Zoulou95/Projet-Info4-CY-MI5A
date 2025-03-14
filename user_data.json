@@ -1,0 +1,59 @@
+[
+    {
+        "Nom": "Dupont",
+        "Prenom": "Jean",
+        "Email": "jean.dupont@email.com",
+        "Telephone": "0612345678",
+        "MotDePasse": "$2y$10$abcdef"
+    },
+    {
+        "Nom": "Martin",
+        "Prenom": "Alice",
+        "Email": "alice.martin@email.com",
+        "Telephone": "0756781234",
+        "MotDePasse": "$2y$10$ghijkl"
+    },
+    {
+        "Nom": "Durand",
+        "Prenom": "Paul",
+        "Email": "paul.durand@email.com",
+        "Telephone": "0698123456",
+        "MotDePasse": "$2y$10$mnopqr"
+    },
+    {
+        "Nom": "ddd",
+        "Prenom": "dd",
+        "Email": "dddd@cyu.fr",
+        "Telephone": "0637412908",
+        "MotDePasse": "dadadada"
+    },
+    {
+        "Nom": "ddd",
+        "Prenom": "dd",
+        "Email": "dddd@cyu.fr",
+        "Telephone": "0637412908",
+        "MotDePasse": "dzddz"
+    },
+    {
+        "Nom": "dd",
+        "Prenom": "ddd",
+        "Email": "dd@gmail.com",
+        "Telephone": "063741920",
+        "MotDePasse": "Azerty"
+    },
+    {
+        "Nom": "Delpont",
+        "Prenom": "Marc",
+        "Email": "azerty@gmail.fr",
+        "Telephone": "0637412908",
+        "MotDePasse": "Azerty"
+    },
+    {
+        "Nom": "fzfzfz",
+        "Prenom": "ffzfzfz",
+        "Email": "fzfzfzf@gmail.com",
+        "Telephone": "060606060606",
+        "MotDePasse": "maison"
+    }
+]
+
