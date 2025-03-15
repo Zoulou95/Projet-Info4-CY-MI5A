@@ -1,0 +1,90 @@
+/* admin_panel_style.css */
+
+body {
+    background-color: #87c2e7;
+}
+
+/* Admin panel style */
+
+/* We use Flexbox for efficient and responsive element alignment */
+.user_container {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    width: 70%;
+    gap: 10vh;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: solid 3px #383838; /* anthracite color */
+    border-radius: 20px;
+    background-color: #ffffff; /* white color */
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    background-color: #21a9ff; /* light blue color */
+    padding: 25px;
+    border-radius: 50px;
+    gap: 7vh;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3.5vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user_informations {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.user_img {
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    outline: 1px solid #dddddd;
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+}
+
+.user_ban_button {
+    width: 10vw;
+    height: 8vh;
+    font-family: Arial;
+    background-color: #ff0000; /* red color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.user_ban_button:hover {
+    background-color: #8b0000;
+}
+
+.user_ban_button:active {
+    border: 2px solid #ffffff;
+}
+
+/* Dropdown menu style */
+
+.user_privilege_dropdown {
+    width: 12vw;
+    height: 3.5vh;
+    font-size: 2.25vh;
+}
+
+/* NOTE : We need javascript to make the colors differ on the dropdown menu according to the user's rank (red for admin, ...) */
+/* Text color */
+
+.admin_text {
+    color: #ff0000;
+}
+
+.vip_text {
+    color: #ffff00; /* yellow */
+}
