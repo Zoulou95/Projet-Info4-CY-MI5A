@@ -1,8 +1,0 @@
-Nom;Prenom;Email;Telephone;MotDePasse
-Dupont;Jean;jean.dupont@email.com;0612345678;$2y$10$abcdef
-Martin;Alice;alice.martin@email.com;0756781234;$2y$10$ghijkl
-Durand;Paul;paul.durand@email.com;0698123456;$2y$10$mnopqr
-ddd;dd;dddd@cyu.fr;0637412908;dadadada
-ddd;dd;dddd@cyu.fr;0637412908;dzddz
-dd;ddd;dd@gmail.com;063741920;Azerty
-Delpont;Marc;azerty@gmail.fr;0637412908;Azerty
