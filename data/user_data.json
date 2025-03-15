@@ -5,7 +5,8 @@
         "email": "jean.dupont@email.com",
         "telephone": "0612345678",
         "motdepasse": "$2y$10$abcdef",
-        "role": "vip"
+        "role": "vip",
+        "id": 1
     },
     {
         "nom": "martin",
@@ -13,7 +14,8 @@
         "email": "alice.martin@email.com",
         "telephone": "0756781234",
         "motdepasse": "$2y$10$ghijkl",
-        "role": "normal"
+        "role": "normal",
+        "id": 2
     },
     {
         "nom": "durand",
@@ -21,7 +23,8 @@
         "email": "paul.durand@email.com",
         "telephone": "0698123456",
         "motdepasse": "$2y$10$mnopqr",
-        "role": "normal"
+        "role": "normal",
+        "id": 3
     },
     {
         "nom": "leclerc",
@@ -29,7 +32,8 @@
         "email": "sophie.leclerc@email.com",
         "telephone": "0637412908",
         "motdepasse": "$2y$10$xyz123",
-        "role": "vip"
+        "role": "vip",
+        "id": 4
     },
     {
         "nom": "bernard",
@@ -37,7 +41,8 @@
         "email": "julien.bernard@email.com",
         "telephone": "0637412909",
         "motdepasse": "$2y$10$lmnopq",
-        "role": "normal"
+        "role": "normal",
+        "id": 5
     },
     {
         "nom": "morel",
@@ -45,7 +50,8 @@
         "email": "emilie.morel@email.com",
         "telephone": "0637419200",
         "motdepasse": "$2y$10$rstuvw",
-        "role": "normal"
+        "role": "normal",
+        "id": 6
     },
     {
         "nom": "perrin",
@@ -53,7 +59,8 @@
         "email": "marc.perrin@email.com",
         "telephone": "0637412907",
         "motdepasse": "$2y$10$abcdefg",
-        "role": "normal"
+        "role": "normal",
+        "id": 7
     },
     {
         "nom": "garcia",
@@ -61,7 +68,8 @@
         "email": "nathan.garcia@email.com",
         "telephone": "0622334455",
         "motdepasse": "$2y$10$qwerty",
-        "role": "vip"
+        "role": "vip",
+        "id": 8
     },
     {
         "nom": "robin",
@@ -69,7 +77,8 @@
         "email": "chloe.robin@email.com",
         "telephone": "0733445566",
         "motdepasse": "$2y$10$123123",
-        "role": "normal"
+        "role": "normal",
+        "id": 9
     },
     {
         "nom": "leroux",
@@ -77,7 +86,8 @@
         "email": "hugo.leroux@email.com",
         "telephone": "0644556677",
         "motdepasse": "$2y$10$admin",
-        "role": "normal"
+        "role": "normal",
+        "id": 10
     },
     {
         "nom": "fontaine",
@@ -85,7 +95,8 @@
         "email": "camille.fontaine@email.com",
         "telephone": "0688776655",
         "motdepasse": "$2y$10$letmein",
-        "role": "vip"
+        "role": "vip",
+        "id": 11
     },
     {
         "nom": "benoit",
@@ -93,7 +104,8 @@
         "email": "lea.benoit@email.com",
         "telephone": "0622334455",
         "motdepasse": "$2y$10$welcome",
-        "role": "normal"
+        "role": "normal",
+        "id": 12
     },
     {
         "nom": "renaud",
@@ -101,7 +113,8 @@
         "email": "matthieu.renaud@email.com",
         "telephone": "0677889900",
         "motdepasse": "$2y$10$123qwe",
-        "role": "normal"
+        "role": "normal",
+        "id": 13
     },
     {
         "nom": "marchand",
@@ -109,7 +122,8 @@
         "email": "julie.marchand@email.com",
         "telephone": "0699001122",
         "motdepasse": "$2y$10$000000",
-        "role": "normal"
+        "role": "normal",
+        "id": 14
     },
     {
         "nom": "andr\u00e9",
@@ -117,7 +131,8 @@
         "email": "florian.andre@email.com",
         "telephone": "0612345678",
         "motdepasse": "$2y$10$password",
-        "role": "vip"
+        "role": "vip",
+        "id": 15
     },
     {
         "nom": "blanchard",
@@ -125,7 +140,8 @@
         "email": "marie.blanchard@email.com",
         "telephone": "0623456789",
         "motdepasse": "$2y$10$123456",
-        "role": "admin"
+        "role": "admin",
+        "id": 16
     },
     {
         "nom": "chopin",
@@ -133,7 +149,8 @@
         "email": "lucas.chopin@email.com",
         "telephone": "0634567890",
         "motdepasse": "$2y$10$azerty",
-        "role": "normal"
+        "role": "normal",
+        "id": 17
     },
     {
         "nom": "esteban",
@@ -141,7 +158,8 @@
         "email": "elodie.esteban@email.com",
         "telephone": "0645678901",
         "motdepasse": "$2y$10$qwerty",
-        "role": "vip"
+        "role": "vip",
+        "id": 18
     },
     {
         "nom": "fernandez",
@@ -149,7 +167,8 @@
         "email": "nicolas.fernandez@email.com",
         "telephone": "0656789012",
         "motdepasse": "$2y$10$123123",
-        "role": "normal"
+        "role": "normal",
+        "id": 19
     },
     {
         "nom": "giraud",
@@ -157,7 +176,8 @@
         "email": "anais.giraud@email.com",
         "telephone": "0667890123",
         "motdepasse": "$2y$10$admin",
-        "role": "admin"
+        "role": "admin",
+        "id": 20
     },
     {
         "nom": "moulin",
@@ -165,7 +185,8 @@
         "email": "claire.moulin@email.com",
         "telephone": "0677889901",
         "motdepasse": "$2y$10$efgh5678",
-        "role": "vip"
+        "role": "vip",
+        "id": 21
     },
     {
         "nom": "renaud",
@@ -173,7 +194,8 @@
         "email": "thomas.renaud@email.com",
         "telephone": "0688990011",
         "motdepasse": "$2y$10$ijkl91011",
-        "role": "admin"
+        "role": "admin",
+        "id": 21
     },
     {
         "nom": "gomez",
@@ -181,7 +203,8 @@
         "email": "sandra.gomez@email.com",
         "telephone": "0644332211",
         "motdepasse": "$2y$10$mnop1213",
-        "role": "normal"
+        "role": "normal",
+        "id": 22
     },
     {
         "nom": "barbier",
@@ -189,34 +212,39 @@
         "email": "julien.barbier@email.com",
         "telephone": "0633221100",
         "motdepasse": "$2y$10$qrs1415",
-        "role": "vip"
+        "role": "vip",
+        "id": 23
     },
     {
         "prenom": "pepe",
         "nom": "chicken",
         "email": "pepechicken@gmail.com",
         "telephone": "0909090909",
-        "password": "pepe09"
+        "password": "pepe09",
+        "id": 24
     },
     {
         "prenom": "Bernard",
         "nom": "Fourmis",
         "email": "kongolesesousbbl@gmail.com",
         "telephone": "01901910",
-        "password": "test123"
+        "password": "test123",
+        "id": 25
     },
     {
         "prenom": "Bernard",
         "nom": "Fourmis",
         "email": "kongolesesousbbl@gmail.com",
         "telephone": "01901910",
-        "password": "test123"
+        "password": "test123",
+        "id": 26
     },
     {
         "prenom": "Thomas",
         "nom": "Barbade",
         "email": "thombarbade@mail.com",
         "telephone": "0000000",
-        "password": "hihi"
+        "password": "hihi",
+        "id": 27
     }
 ]

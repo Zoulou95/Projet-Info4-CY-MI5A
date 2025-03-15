@@ -27,7 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $data = []; 
         }
 
-     
+        // Generate a unique ID based on the number of existing users
+        $user_data['id'] = count($data) + 1;
+
         $data[] = $user_data;
 
         file_put_contents($data_file, json_encode($data, JSON_PRETTY_PRINT));
