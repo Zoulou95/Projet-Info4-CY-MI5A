@@ -48,6 +48,7 @@
 
         <div class="voyagebar">
     <?php
+    include('includes/logs.php');
     include('includes/trip_functions.php');
     $data_file = 'data/trip_data.json';
 
@@ -70,12 +71,12 @@
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
             <h2>Inscription</h2>
-            <form>
-                <input type="text" placeholder="Prénom" required>
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mot de passe" required>
-                <input type="tel" placeholder="Numéro de téléphone" required>
+            <form action="src/inscription.php" method="POST">
+                <input type="text" name="prenom" placeholder="Prénom" required>
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <input type="tel" name="tel" placeholder="Numéro de téléphone" required>
                 <button type="submit">S'inscrire</button>
                 <p class="switch_text">
                     Vous avez deja un compte ?
@@ -89,15 +90,15 @@
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
-            <form action="src/connexion.php" method="POST">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mot de passe" required>
-                <button type="submit">Se connecter</button>
-                <p class="switch_text">
-                    Vous n'avez pas de compte ?
-                    <a href="#" onclick="switchToSignUp()">S'inscrire</a>
-                </p>
-            </form>
+                <form action="src/connexion.php" method="POST">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Mot de passe" required>
+                    <button type="submit">Se connecter</button>
+                    <p class="switch_text">
+                        Vous n'avez pas de compte ?
+                        <a href="#" onclick="switchToSignUp()">S'inscrire</a>
+                    </p>
+                </form>
         </div>
     </div>
 

@@ -1,5 +1,6 @@
 <?php
-include('../src/error.php');
+include('../includes/footer.php');
+include('error.php');
 
 // Function to retrieve useful data from 'trip_data.json file and display specific trip information
 function dataDecode($data_file) {
@@ -10,7 +11,7 @@ function dataDecode($data_file) {
     }  
     else
     {
-        displayError("data file missing.");
+        displayError("'trip_data.json' file is missing.");
     }
 
     // Verification of data structure

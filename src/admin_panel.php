@@ -43,7 +43,7 @@
                         <label class="user_privilege">
                             Privilège :
                             <select name="Privilege" class="user_privilege_dropdown">
-                                <option value="Administrateur" selected>Administrateur</option>
+                                <option value="administrateur" selected>Administrateur</option>
                             </select>
                         </label>
                     </form>
@@ -59,9 +59,9 @@
                         <label class="user_privilege">
                             Privilège :
                             <select name="Privilege" class="user_privilege_dropdown">
-                                <option value="Administrateur">Administrateur</option>
-                                <option value="VIP" selected>VIP</option>
-                                <option value="Normal">Standard</option>
+                                <option value="administrateur">Administrateur</option>
+                                <option value="vip" selected>VIP</option>
+                                <option value="normal">Standard</option>
                             </select>
                         </label>
                     </form>
@@ -81,9 +81,9 @@
                         <label class="user_privilege">
                             Privilège :
                             <select name="Privilege" class="user_privilege_dropdown">
-                                <option value="Administrateur">Administrateur</option>
-                                <option value="VIP">VIP</option>
-                                <option value="Normal" selected>Standard</option>
+                                <option value="administrateur">Administrateur</option>
+                                <option value="vip">VIP</option>
+                                <option value="normal" selected>Standard</option>
                             </select>
                         </label>
                     </form>

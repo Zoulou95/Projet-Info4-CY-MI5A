@@ -1,58 +1,222 @@
 [
     {
-        "Nom": "Dupont",
-        "Prenom": "Jean",
-        "Email": "jean.dupont@email.com",
-        "Telephone": "0612345678",
-        "MotDePasse": "$2y$10$abcdef"
+        "nom": "dupont",
+        "prenom": "jean",
+        "email": "jean.dupont@email.com",
+        "telephone": "0612345678",
+        "motdepasse": "$2y$10$abcdef",
+        "role": "vip"
     },
     {
-        "Nom": "Martin",
-        "Prenom": "Alice",
-        "Email": "alice.martin@email.com",
-        "Telephone": "0756781234",
-        "MotDePasse": "$2y$10$ghijkl"
+        "nom": "martin",
+        "prenom": "alice",
+        "email": "alice.martin@email.com",
+        "telephone": "0756781234",
+        "motdepasse": "$2y$10$ghijkl",
+        "role": "normal"
     },
     {
-        "Nom": "Durand",
-        "Prenom": "Paul",
-        "Email": "paul.durand@email.com",
-        "Telephone": "0698123456",
-        "MotDePasse": "$2y$10$mnopqr"
+        "nom": "durand",
+        "prenom": "paul",
+        "email": "paul.durand@email.com",
+        "telephone": "0698123456",
+        "motdepasse": "$2y$10$mnopqr",
+        "role": "normal"
     },
     {
-        "Nom": "ddd",
-        "Prenom": "dd",
-        "Email": "dddd@cyu.fr",
-        "Telephone": "0637412908",
-        "MotDePasse": "dadadada"
+        "nom": "leclerc",
+        "prenom": "sophie",
+        "email": "sophie.leclerc@email.com",
+        "telephone": "0637412908",
+        "motdepasse": "$2y$10$xyz123",
+        "role": "vip"
     },
     {
-        "Nom": "ddd",
-        "Prenom": "dd",
-        "Email": "dddd@cyu.fr",
-        "Telephone": "0637412908",
-        "MotDePasse": "dzddz"
+        "nom": "bernard",
+        "prenom": "julien",
+        "email": "julien.bernard@email.com",
+        "telephone": "0637412909",
+        "motdepasse": "$2y$10$lmnopq",
+        "role": "normal"
     },
     {
-        "Nom": "dd",
-        "Prenom": "ddd",
-        "Email": "dd@gmail.com",
-        "Telephone": "063741920",
-        "MotDePasse": "Azerty"
+        "nom": "morel",
+        "prenom": "emilie",
+        "email": "emilie.morel@email.com",
+        "telephone": "0637419200",
+        "motdepasse": "$2y$10$rstuvw",
+        "role": "normal"
     },
     {
-        "Nom": "Delpont",
-        "Prenom": "Marc",
-        "Email": "azerty@gmail.fr",
-        "Telephone": "0637412908",
-        "MotDePasse": "Azerty"
+        "nom": "perrin",
+        "prenom": "marc",
+        "email": "marc.perrin@email.com",
+        "telephone": "0637412907",
+        "motdepasse": "$2y$10$abcdefg",
+        "role": "normal"
     },
     {
-        "Nom": "fzfzfz",
-        "Prenom": "ffzfzfz",
-        "Email": "fzfzfzf@gmail.com",
-        "Telephone": "060606060606",
-        "MotDePasse": "maison"
+        "nom": "garcia",
+        "prenom": "nathan",
+        "email": "nathan.garcia@email.com",
+        "telephone": "0622334455",
+        "motdepasse": "$2y$10$qwerty",
+        "role": "vip"
+    },
+    {
+        "nom": "robin",
+        "prenom": "chlo\u00e9",
+        "email": "chloe.robin@email.com",
+        "telephone": "0733445566",
+        "motdepasse": "$2y$10$123123",
+        "role": "normal"
+    },
+    {
+        "nom": "leroux",
+        "prenom": "hugo",
+        "email": "hugo.leroux@email.com",
+        "telephone": "0644556677",
+        "motdepasse": "$2y$10$admin",
+        "role": "normal"
+    },
+    {
+        "nom": "fontaine",
+        "prenom": "camille",
+        "email": "camille.fontaine@email.com",
+        "telephone": "0688776655",
+        "motdepasse": "$2y$10$letmein",
+        "role": "vip"
+    },
+    {
+        "nom": "benoit",
+        "prenom": "l\u00e9a",
+        "email": "lea.benoit@email.com",
+        "telephone": "0622334455",
+        "motdepasse": "$2y$10$welcome",
+        "role": "normal"
+    },
+    {
+        "nom": "renaud",
+        "prenom": "matthieu",
+        "email": "matthieu.renaud@email.com",
+        "telephone": "0677889900",
+        "motdepasse": "$2y$10$123qwe",
+        "role": "normal"
+    },
+    {
+        "nom": "marchand",
+        "prenom": "julie",
+        "email": "julie.marchand@email.com",
+        "telephone": "0699001122",
+        "motdepasse": "$2y$10$000000",
+        "role": "normal"
+    },
+    {
+        "nom": "andr\u00e9",
+        "prenom": "florian",
+        "email": "florian.andre@email.com",
+        "telephone": "0612345678",
+        "motdepasse": "$2y$10$password",
+        "role": "vip"
+    },
+    {
+        "nom": "blanchard",
+        "prenom": "marie",
+        "email": "marie.blanchard@email.com",
+        "telephone": "0623456789",
+        "motdepasse": "$2y$10$123456",
+        "role": "admin"
+    },
+    {
+        "nom": "chopin",
+        "prenom": "lucas",
+        "email": "lucas.chopin@email.com",
+        "telephone": "0634567890",
+        "motdepasse": "$2y$10$azerty",
+        "role": "normal"
+    },
+    {
+        "nom": "esteban",
+        "prenom": "\u00e9lodie",
+        "email": "elodie.esteban@email.com",
+        "telephone": "0645678901",
+        "motdepasse": "$2y$10$qwerty",
+        "role": "vip"
+    },
+    {
+        "nom": "fernandez",
+        "prenom": "nicolas",
+        "email": "nicolas.fernandez@email.com",
+        "telephone": "0656789012",
+        "motdepasse": "$2y$10$123123",
+        "role": "normal"
+    },
+    {
+        "nom": "giraud",
+        "prenom": "anais",
+        "email": "anais.giraud@email.com",
+        "telephone": "0667890123",
+        "motdepasse": "$2y$10$admin",
+        "role": "admin"
+    },
+    {
+        "nom": "moulin",
+        "prenom": "claire",
+        "email": "claire.moulin@email.com",
+        "telephone": "0677889901",
+        "motdepasse": "$2y$10$efgh5678",
+        "role": "vip"
+    },
+    {
+        "nom": "renaud",
+        "prenom": "thomas",
+        "email": "thomas.renaud@email.com",
+        "telephone": "0688990011",
+        "motdepasse": "$2y$10$ijkl91011",
+        "role": "admin"
+    },
+    {
+        "nom": "gomez",
+        "prenom": "sandra",
+        "email": "sandra.gomez@email.com",
+        "telephone": "0644332211",
+        "motdepasse": "$2y$10$mnop1213",
+        "role": "normal"
+    },
+    {
+        "nom": "barbier",
+        "prenom": "julien",
+        "email": "julien.barbier@email.com",
+        "telephone": "0633221100",
+        "motdepasse": "$2y$10$qrs1415",
+        "role": "vip"
+    },
+    {
+        "prenom": "pepe",
+        "nom": "chicken",
+        "email": "pepechicken@gmail.com",
+        "telephone": "0909090909",
+        "password": "pepe09"
+    },
+    {
+        "prenom": "Bernard",
+        "nom": "Fourmis",
+        "email": "kongolesesousbbl@gmail.com",
+        "telephone": "01901910",
+        "password": "test123"
+    },
+    {
+        "prenom": "Bernard",
+        "nom": "Fourmis",
+        "email": "kongolesesousbbl@gmail.com",
+        "telephone": "01901910",
+        "password": "test123"
+    },
+    {
+        "prenom": "Thomas",
+        "nom": "Barbade",
+        "email": "thombarbade@mail.com",
+        "telephone": "0000000",
+        "password": "hihi"
     }
 ]

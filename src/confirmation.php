@@ -43,7 +43,7 @@
 
         // Calculate the total price
         $total_price = priceCalc($trip, $number_of_participants);
-        $_SESSION['to_be_paid'] = $total_price;
+        $_SESSION['total_price'] = $total_price;
     } else {
         displayError("Invalid trip configuration.");
         exit;
@@ -83,7 +83,7 @@
                     <p><strong>Hôtel : </strong>' . $_POST['hotel_' . $i] . '</p>
                     <p><strong>Pension : </strong>' . $_POST['pension_' . $i] . '</p>
                     <p><strong>Activité choisie : </strong>' . $_POST['activite_' . $i] . '</p>
-                    <p><strong>Nombre de participants à l’activité : </strong>' . $_POST['participants_' . $i] . ' personnes</p>
+                    <p><strong>Participants à cette activité : </strong>' . $_POST['participants_' . $i] . ' personnes</p>
                 </div>
             </div>
             ';
@@ -91,12 +91,12 @@
     ?>
     </section>
 
-    <!-- Payement -->
+    <!-- Payment -->
     <section class="recap_payment">
         <h2>Paiement</h2>
         <div class="recap_payment_details">
             <p><b>Montant total à payer : </b><?php echo $total_price; ?>€</p>
-            <button class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>
+            <button class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
         </div>
     </section>
 

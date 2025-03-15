@@ -5,7 +5,7 @@
             <div class="footer_section">
                 <h3>À Propos</h3>
                 <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
-                    Passionnés d’évasion et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures
+                    Passionnés de voyages, et grâce à notre réseau de partenaires, nous sélectionnons pour vous les meilleures
                     adresses et activités exclusives.
                     Que ce soit un safari, un road trip ou un séjour bien-être, chaque voyage est pensé dans les moindres
                     détails. Votre aventure commence ici !

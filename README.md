@@ -107,6 +107,8 @@ To explore the site, you need to open a local server on your machine.
 
 - `error.php`
 
+- `order_confirmed.php`
+
 - `trip_functions.php` groups the various functions common to php pages and which will be useful for processing `.json` files containing site data (user data, trip data, etc.).
 
 - `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
@@ -116,6 +118,3 @@ To explore the site, you need to open a local server on your machine.
 - `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed, present in the `trip_data.json` file.
 
 - `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
-
-- `userpage_security.php` allows the user to modify his password.
-**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 3 (JavaScript).
