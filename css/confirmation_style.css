@@ -1,0 +1,134 @@
+.recap_header {
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+.recap_header h1, .recap_order h1 {
+    color: #21a9ff;
+    font-size: 3.5vw;
+    margin-top: 3.5vh;
+    margin-bottom: 1vh;
+}
+
+.recap_order h1 {
+    font-size: 4vw;
+}
+
+.recap_header p {
+    color: #303030;
+    font-size: 1.8vw;
+}
+
+.recap_order h1 {
+    font-size: 4.5vw;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.recap_order p {
+    color: #303030;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+
+.recap_general_info {
+    margin-bottom: 5vh;
+    font-size: 1.8vw;
+    width: 70vw;
+}
+
+.recap_general_info p {
+    margin-bottom: 4.5vh;
+}
+
+.recap_general_info h2 {
+    color: #21a9ff;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.recap_info_box {
+    padding: 2vw;
+    border-radius: 1.2vw;
+    box-shadow: 0px 0.3vw 0.5vw rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 20vh;
+    margin-bottom: 3vh;
+}
+
+.recap_trip_steps h2 {
+    color: #21a9ff;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.recap_step {
+    padding: 2vw;
+    margin-bottom: 4.5vh;
+    border-radius: 1.2vw;
+    box-shadow: 0px 0.3vw 0.5vw rgba(0, 0, 0, 0.1);
+    width: 70vw;
+    min-height: 20vh;
+}
+
+.recap_step h3 {
+    font-size: 2.2vw;
+    color: #333;
+    margin-bottom: 4.5vh;
+}
+
+.recap_step_details {
+    font-size: 1.8vw;
+}
+
+.recap_step_details p {
+    margin-bottom: 4.5vh;
+}
+
+.recap_payment {
+    margin-bottom: 2vh;
+}
+
+.recap_payment h2 {
+    color: #21a9ff;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.recap_payment_details {
+    box-shadow: 0px 0.3vw 0.5vw rgba(0, 0, 0, 0.1);
+    border-radius: 1.2vw;
+    font-size: 1.8vw;
+    margin-bottom: 5vh;
+    padding: 2vw;
+    text-align: center;
+    min-height: 20vh;
+    width: 70vw;
+}
+
+.recap_payment_details p {
+    margin-bottom: 1vh;
+}
+
+.recap_pay_now {
+    color: #ffffff;
+    border: solid #ffa500;
+    background-color: #ffa500;
+    font-size: 1.8vw;
+    padding: 1.8vh 3vw;
+    border: none;
+    border-radius: 1.2vw;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recap_pay_now:hover {
+    background-color: #ff8c00;
+}

@@ -1,0 +1,318 @@
+/* base_style.css */
+
+/* Main container and navigation bar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    width: 100%;
+}
+
+.headbar {
+    display: flex;
+    width: 100%; 
+    height: 9vh; 
+    padding: 0 1.5%; 
+    box-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    background-color: #21a9ff; 
+    z-index:1; /* Bring the navigation bar to the foreground */
+}
+
+.logo_img {
+    height: 9vh;
+}
+
+.secondbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 18vh; 
+    background-color: #21a9ff; 
+    padding: 0 1.5%;
+}
+
+.centerbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerbar_text {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+.headbar_left {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.headbar_rest {
+    display: flex;
+    flex: 8; /* The element will take up 8 shares of the available space */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6vw;
+    margin-left: 10vh;
+}
+
+.headbar_right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5vw;
+}
+
+.headbar_item {
+    color: #ffffff;
+    font-size: 2.7vh;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.headbar_item:hover {
+    text-decoration: underline;
+}
+
+.headbar_logo {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.separate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 18vh; 
+    padding: 0 1.5%;
+}
+
+/* If the user is logged in */
+
+.headbar_my_space {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.7vh;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.headbar_my_space:hover {
+    text-decoration: underline;
+}
+
+.user_img_nav {
+    max-width: 6.5vw;
+    max-height: 6.5vh;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    outline: 1px solid #dddddd;
+}
+
+.user_img_nav:active {
+    outline: 2px solid #000000;
+}
+
+/* Text display */
+
+.text_above {
+    width: 80%; 
+    padding: 8%;
+    color: white;
+    text-align: center;
+    font-size: 11vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Card presenting destinations (present on homepage.html and search.html)  */
+
+.card {
+    width: 350px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 18vh;
+    object-fit: cover;
+}
+
+.card_content {
+    padding: 20px;
+}
+
+.card h2 {
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.6vh;
+    color: #555;
+    margin: 10px 0;
+}
+
+.explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Result page style */
+
+.result_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 75%;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+
+.result_text, .invalid_page_text, .result_not_found {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 2vh;
+    color: #050552;
+    margin-top: 5vh;
+}
+
+.back_to_search_button, .back_to_index_button {
+    display: block;
+    margin: 7vh auto;
+    width: 50%;
+    height: 10vh;
+    border: solid #ffa500;
+    background-color: #ffa500;
+    border-radius: 10px;
+    text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.back_to_search_button:hover {
+    background-color: #ff8c00;
+    border: solid #ff8c00;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+}
+
+.back_to_search_text, .back_to_index_text {
+    color: #ffffff;
+    font-size: 4vh;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #21a9ff;
+    color: #ffffff;
+    padding: 20px 10%;
+    width:100%;
+    height: 40vh;
+    align-items: center;
+    box-shadow: 0px -0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    z-index:1;
+}
+
+.footer_section {
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 10px;
+    width: 25%;
+    height: 25vh;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 3);
+}
+
+.footer_section h3 {
+    margin-bottom: 20px;
+    font-size: 3vh;
+}
+
+.footer_section p, .footer_section ul {
+    font-size: 1.6vh;
+    color: #ffffff;
+}
+
+.footer_section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_section ul li {
+    margin-bottom: 10px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.partners img {
+    width: 4vw;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 2vh;
+}
+
+.other a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.other a:hover{
+    text-decoration: underline;
+}
+
+.footer_separation {
+    margin-top: 50vh;
+}
+
+/* Animation */
+
+/* Animate the quick search button */
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
