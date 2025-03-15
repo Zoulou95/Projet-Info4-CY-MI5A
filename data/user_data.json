@@ -62,6 +62,110 @@
         "Telephone": "060606060606",
         "MotDePasse": "maison",
         "Role": "Admin"
+    },
+    {
+        "Nom": "Garcia",
+        "Prenom": "Nathan",
+        "Email": "nathan@gmail.com",
+        "Telephone": "0622334455",
+        "MotDePasse": "qwerty",
+        "Role": "Vip"
+    },
+    {
+        "Nom": "Robin",
+        "Prenom": "Chloé",
+        "Email": "chloe@gmail.com",
+        "Telephone": "0733445566",
+        "MotDePasse": "123123",
+        "Role": "Normal"
+    },
+    {
+        "Nom": "Leroux",
+        "Prenom": "Hugo",
+        "Email": "hugo@gmail.com",
+        "Telephone": "0644556677",
+        "MotDePasse": "admin",
+        "Role": "Admin"
+    },
+    {
+        "Nom": "Fontaine",
+        "Prenom": "Camille",
+        "Email": "camille@gmail.com",
+        "Telephone": "0688776655",
+        "MotDePasse": "letmein",
+        "Role": "Vip"
+    },
+    {
+        "Nom": "Benoit",
+        "Prenom": "Léa",
+        "Email": "lea@gmail.com",
+        "Telephone": "0622334455",
+        "MotDePasse": "welcome",
+        "Role": "Normal"
+    },
+    {
+        "Nom": "Renaud",
+        "Prenom": "Matthieu",
+        "Email": "matthieu@gmail.com",
+        "Telephone": "0677889900",
+        "MotDePasse": "123qwe",
+        "Role": "Admin"
+    },
+    {
+        "Nom": "Marchand",
+        "Prenom": "Julie",
+        "Email": "julie@gmail.com",
+        "Telephone": "0699001122",
+        "MotDePasse": "000000",
+        "Role": "Normal"
+    },
+    {
+        "Nom": "aa",
+        "Prenom": "aaa",
+        "Email": "aa@gmail.com",
+        "Telephone": "0612345678",
+        "MotDePasse": "password",
+        "Role": "Vip"
+    },
+    {
+        "Nom": "bb",
+        "Prenom": "bbb",
+        "Email": "bb@gmail.com",
+        "Telephone": "0623456789",
+        "MotDePasse": "123456",
+        "Role": "Admin"
+    },
+    {
+        "Nom": "cc",
+        "Prenom": "ccc",
+        "Email": "cc@gmail.com",
+        "Telephone": "0634567890",
+        "MotDePasse": "azerty",
+        "Role": "Normal"
+    },
+    {
+        "Nom": "ee",
+        "Prenom": "eee",
+        "Email": "ee@gmail.com",
+        "Telephone": "0645678901",
+        "MotDePasse": "qwerty",
+        "Role": "Vip"
+    },
+    {
+        "Nom": "ff",
+        "Prenom": "fff",
+        "Email": "ff@gmail.com",
+        "Telephone": "0656789012",
+        "MotDePasse": "123123",
+        "Role": "Normal"
+    },
+    {
+        "Nom": "gg",
+        "Prenom": "ggg",
+        "Email": "gg@gmail.com",
+        "Telephone": "0667890123",
+        "MotDePasse": "admin",
+        "Role": "Admin"
     }
 ]
 
