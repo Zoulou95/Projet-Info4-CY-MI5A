@@ -4,55 +4,64 @@
         "Prenom": "Jean",
         "Email": "jean.dupont@email.com",
         "Telephone": "0612345678",
-        "MotDePasse": "$2y$10$abcdef"
+        "MotDePasse": "$2y$10$abcdef",
+        "Role": "Vip"
     },
     {
         "Nom": "Martin",
         "Prenom": "Alice",
         "Email": "alice.martin@email.com",
         "Telephone": "0756781234",
-        "MotDePasse": "$2y$10$ghijkl"
+        "MotDePasse": "$2y$10$ghijkl",
+        "Role": "Admin"
     },
     {
         "Nom": "Durand",
         "Prenom": "Paul",
         "Email": "paul.durand@email.com",
         "Telephone": "0698123456",
-        "MotDePasse": "$2y$10$mnopqr"
+        "MotDePasse": "$2y$10$mnopqr",
+        "Role": "Normal"
     },
     {
         "Nom": "ddd",
         "Prenom": "dd",
         "Email": "dddd@cyu.fr",
         "Telephone": "0637412908",
-        "MotDePasse": "dadadada"
+        "MotDePasse": "dadadada",
+        "Role": "Vip"
     },
     {
         "Nom": "ddd",
         "Prenom": "dd",
         "Email": "dddd@cyu.fr",
         "Telephone": "0637412908",
-        "MotDePasse": "dzddz"
+        "MotDePasse": "dzddz",
+        "Role": "Normal"
     },
     {
         "Nom": "dd",
         "Prenom": "ddd",
         "Email": "dd@gmail.com",
         "Telephone": "063741920",
-        "MotDePasse": "Azerty"
+        "MotDePasse": "Azerty",
+        "Role": "Normal"
     },
     {
         "Nom": "Delpont",
         "Prenom": "Marc",
         "Email": "azerty@gmail.fr",
         "Telephone": "0637412908",
-        "MotDePasse": "Azerty"
+        "MotDePasse": "Azerty",
+        "Role": "Normal"
     },
     {
         "Nom": "fzfzfz",
         "Prenom": "ffzfzfz",
         "Email": "fzfzfzf@gmail.com",
         "Telephone": "060606060606",
-        "MotDePasse": "maison"
+        "MotDePasse": "maison",
+        "Role": "Admin"
     }
 ]
+
