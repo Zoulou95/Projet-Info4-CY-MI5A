@@ -12,7 +12,6 @@ body {
     flex-direction: column;
     padding: 5%;
     width: 70%;
-    gap: 10vh;
     margin-top: 4%;
     margin-bottom: 4%;
     border: solid 3px #383838; /* anthracite color */
@@ -32,6 +31,7 @@ body {
     font-size: 3.5vh;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .user_informations {
