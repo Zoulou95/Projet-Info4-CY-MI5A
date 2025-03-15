@@ -73,7 +73,7 @@
     },
     {
         "Nom": "Robin",
-        "Prenom": "Chloé",
+        "Prenom": "Chlo\u00e9",
         "Email": "chloe@gmail.com",
         "Telephone": "0733445566",
         "MotDePasse": "123123",
@@ -97,7 +97,7 @@
     },
     {
         "Nom": "Benoit",
-        "Prenom": "Léa",
+        "Prenom": "L\u00e9a",
         "Email": "lea@gmail.com",
         "Telephone": "0622334455",
         "MotDePasse": "welcome",
@@ -166,5 +166,40 @@
         "Telephone": "0667890123",
         "MotDePasse": "admin",
         "Role": "Admin"
+    },
+    {
+        "prenom": "dzdz",
+        "nom": "dzdzdz",
+        "email": "dzde@gmail",
+        "telephone": "848484848",
+        "password": "fzfzf"
+    },
+    {
+        "prenom": "dzdz",
+        "nom": "dzdzdz",
+        "email": "dzde@gmail",
+        "telephone": "848484848",
+        "password": "fzfzf"
+    },
+    {
+        "prenom": "dzdzd",
+        "nom": "dzdzzd",
+        "email": "dzdzdz@gmail.com",
+        "telephone": "757575",
+        "password": "ddzdzdz"
+    },
+    {
+        "prenom": "dzdzd",
+        "nom": "dzdzzd",
+        "email": "dzdzdz@gmail.com",
+        "telephone": "757575ddd",
+        "password": "ddzdzdz"
+    },
+    {
+        "prenom": "dzdzd",
+        "nom": "dzdzdz",
+        "email": "dzdzdz@gmail.com",
+        "telephone": "dddzzdz",
+        "password": "ddzdzdz"
     }
 ]

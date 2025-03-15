@@ -1,22 +1,37 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = htmlspecialchars($_POST['nom']);
     $prenom = htmlspecialchars($_POST['prenom']);
+    $nom = htmlspecialchars($_POST['nom']);
     $email = htmlspecialchars($_POST['email']);
-    $telephone = htmlspecialchars($_POST['telephone']);
+    $telephone = htmlspecialchars($_POST['tel']);
     $password = htmlspecialchars($_POST['password']); 
 
-    // On pourrait mettre password_hash($_POST['password'], PASSWORD_DEFAULT); 
+    if (empty($prenom) || empty($nom) || empty($email) || empty($telephone) || empty($password)) {
+        echo "<script>alert('Veuillez remplir tous les champs');</script>";
+    } else {
+        $user_data = [
+            "prenom" => $prenom,
+            "nom" => $nom,
+            "email" => $email,
+            "telephone" => $telephone,
+            "password" => $password
+        ];
 
-    // Format des données à enregistrer
-    $ligne = "$nom;$prenom;$email;$telephone;$password\n";
+        $data_file = __DIR__ . '/../data/user_data.json';
 
-    // Écriture dans le fichier
-    $fichier = 'inscriptions.txt';
-    file_put_contents($fichier, $ligne, FILE_APPEND | LOCK_EX);
+        if (file_exists($data_file)) {
+            $json_data = file_get_contents($data_file);
+            $data = json_decode($json_data, true);
+        } else {
+            $data = []; 
+        }
 
-    header("Location: src/search.html");
-} else {
-    echo "Méthode non autorisée.";
+     
+        $data[] = $user_data;
+
+        file_put_contents($data_file, json_encode($data, JSON_PRETTY_PRINT));
+        header("Location: search.php");
+        exit;
+    }
 }
 ?>
