@@ -89,15 +89,15 @@
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
-            <form action="src/connexion.php" method="POST">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mot de passe" required>
-                <button type="submit">Se connecter</button>
-                <p class="switch_text">
-                    Vous n'avez pas de compte ?
-                    <a href="#" onclick="switchToSignUp()">S'inscrire</a>
-                </p>
-            </form>
+                <form action="src/connexion.php" method="POST">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Mot de passe" required>
+                    <button type="submit">Se connecter</button>
+                    <p class="switch_text">
+                        Vous n'avez pas de compte ?
+                        <a href="#" onclick="switchToSignUp()">S'inscrire</a>
+                    </p>
+                </form>
         </div>
     </div>
 

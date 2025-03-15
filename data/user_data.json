@@ -25,8 +25,8 @@
     },
     {
         "Nom": "ddd",
-        "Prenom": "dd",
-        "Email": "dddd@cyu.fr",
+        "Prenom": "dddd",
+        "Email": "dddddd@cyu.fr",
         "Telephone": "0637412908",
         "MotDePasse": "dadadada",
         "Role": "Vip"
@@ -168,4 +168,3 @@
         "Role": "Admin"
     }
 ]
-
