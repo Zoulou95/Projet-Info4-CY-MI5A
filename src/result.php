@@ -30,38 +30,37 @@
             </div>
         </div>
 
-<?php // Script to filter trips by a specific tag (quicksearch)
-    include("../includes/trip_functions.php");
+    <?php // Script to filter trips by a specific tag (quicksearch)
+        include("../includes/trip_functions.php");
 
-    $data_file = '../data/trip_data.json';
-    $data = dataDecode($data_file);
+        $data_file = '../data/trip_data.json';
+        $data = dataDecode($data_file);
 
-    // If the tag is included in the url, the result requested by the user is a quick search
-    if (!empty($_GET['tag'])) {
-        $tag = urldecode(trim($_GET['tag']));
-        $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters: XSS protection
-        $tag = strtolower($tag);
-        $tag = addslashes($tag);
-        $tag = str_replace(' ', '', $tag);
-    
-        $trip_number = getTripNumber($data, $tag);
-    
-        // Shows travel cards matching the search
-        displayByTag($data, $tag, $trip_number);
-    }
+        // If the tag is included in the url, the result requested by the user is a quick search
+        if (!empty($_GET['tag'])) {
+            $tag = urldecode(trim($_GET['tag']));
+            $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters: XSS protection
+            $tag = strtolower($tag);
+            $tag = addslashes($tag);
+            $tag = str_replace(' ', '', $tag);
+        
+            $trip_number = getTripNumber($data, $tag);
+        
+            // Shows travel cards matching the search
+            displayByTag($data, $tag, $trip_number);
+        }
 
-    // If the tag is not included in the url, the result requested by the user is a specific search
-    else if (isValidAdvancedSearch()) {
-        // Shows travel cards matching the search
-        displayByFilter($data);
-    } else {
-        displayNoResult();
-    }
+        // If the tag is not included in the url, the result requested by the user is a specific search
+        else if (isValidAdvancedSearch()) {
+            // Shows travel cards matching the search
+            displayByFilter($data);
+        } else {
+            displayNoResult();
+        }
+    ?>
+    </div>
 
-?>
-</div>
     <!-- Footer -->
     <?php displayFooter();?>
-
 </body>
 </html>

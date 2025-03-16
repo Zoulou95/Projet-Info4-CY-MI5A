@@ -67,10 +67,8 @@
 
         // We choose the ids of the trips we want to display on our page
         $id_list = array("13", "15", "8", "7", "6");
-        // id 13 => Séjour Tetiaroa
-        // id 15 => Exploration Sous-Marine
-        // id 8 => Séjour romantique Bora-Bora
-        // id 7 => Évasion à Fakarava
+        // id 13 => Séjour Tetiaroa ; id 8 => Séjour romantique Bora-Bora
+        // id 15 => Exploration Sous-Marine ; id 7 => Évasion à Fakarava
         // id 6 => Aventure à Taha'a
 
         displayCards($id_list, $data_file);

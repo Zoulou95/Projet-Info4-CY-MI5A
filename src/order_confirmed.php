@@ -43,9 +43,8 @@
         <a class="back_to_index_text" href="search.php">Cliquez ici pour retourner à la recherche</a>
     </button>
 
-    <?php
-        displayFooter();
-    ?>
+    <!-- Footer -->
+    <?php displayFooter(); ?>
 </div>
 </body>
 </html>

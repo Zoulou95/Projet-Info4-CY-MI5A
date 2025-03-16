@@ -58,7 +58,7 @@
 
     <!-- General informations -->
     <section class="recap_general_info">
-        <h2>Informations Générales</h2>
+        <h2><?php echo $trip['title']; ?></h2>
         <div class="recap_info_box">
             <p><strong>Nombre de participants : </strong><?php echo $number_of_participants; ?> personnes</p>
             <p><strong>Transport : </strong><?php echo $_POST['transports']; ?></p>
@@ -99,6 +99,7 @@
             ';
         }
     ?>
+    <button class="back_to_config" onclick="history.back();">Revoir ma configuration 🔄</button>
     </section>
 
     <!-- Payment -->

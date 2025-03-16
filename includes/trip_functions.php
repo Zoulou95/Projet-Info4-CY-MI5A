@@ -193,6 +193,7 @@ function isConfigValid() {
     return $res;
 }
 
+// Display a message if no result found
 function displayNoResult() {
     echo
     '<h3 class="result_not_found">Aucun voyage ne correspond à votre recherche</h3>
