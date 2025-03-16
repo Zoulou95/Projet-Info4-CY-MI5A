@@ -40,9 +40,9 @@ $users = json_decode($json_data, true);
             <?php foreach ($users as $user): ?>
                 <form class="users">
                     <div class="user">
-                        <img class="user_img" src="../assets/profile_pic/<?php echo $user['profile_pic']; ?>" />
+                    <img class="user_img" src="../assets/profile_pic/<?php echo isset($user['profile_pic']) && !empty($user['profile_pic']) ? $user['profile_pic'] : 'default_pic.jpg'; ?>" alt="Profile Picture" />
                         <div class="user_name">
-                            <p class="vip_text"><?php echo $user['name']; ?></p>
+                            <?php echo ucfirst(strtolower($user['prenom'])) . " " . ucfirst(strtolower($user['nom'])); ?>
                         </div>
                         <div class="user_privilege">
                             <label class="user_privilege">

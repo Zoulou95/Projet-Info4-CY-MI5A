@@ -81,10 +81,10 @@ body {
 /* NOTE : We need javascript to make the colors differ on the dropdown menu according to the user's rank (red for admin, ...) */
 /* Text color */
 
-.admin_text {
+/* .admin_text {
     color: #ff0000;
 }
 
 .vip_text {
-    color: #ffff00; /* yellow */
-}
+    color: #ffff00;
+} */
