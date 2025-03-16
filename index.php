@@ -64,7 +64,7 @@
 
     <!-- Footer -->
     <div class="separate"></div>
-    <?php include('includes/footer.php'); displayFooter();?>
+    <?php displayFooter();?>
 
     <!-- Signin and login overlay -->
     <div class="overlay" id="signupOverlay">

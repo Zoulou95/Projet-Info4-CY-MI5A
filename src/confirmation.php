@@ -66,6 +66,16 @@
             <p><strong>Prix par personne : </strong><?php echo $total_price / $number_of_participants; ?>€</p>
             <p><strong>Date de départ : </strong><?php echo $trip['dates']['start_date']; ?></p>
             <p><strong>Date de retour : </strong><?php echo $trip['dates']['end_date']; ?></p>
+            <p><strong>Réduction : </strong>
+            <?php
+            // $_SESSION['user']['status'] == "VIP" quand ce sera set
+            if(1 == 0) {
+                echo "-10% sur le prix total";
+            } else {
+                echo "Aucune";
+            }
+            ?>
+        </p>
         </div>
     </section>
 
@@ -95,7 +105,11 @@
     <section class="recap_payment">
         <h2>Paiement</h2>
         <div class="recap_payment_details">
-            <p><b>Montant total à payer : </b><?php echo $total_price; ?>€</p>
+            <p><b>Montant total à payer : </b>
+            <?php
+            $points = $total_price / 100;
+            echo $total_price . "€ (" . $points . " points fidelité)";
+            ?></p>
             <button class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
         </div>
     </section>

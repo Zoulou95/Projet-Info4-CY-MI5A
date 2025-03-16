@@ -1,5 +1,5 @@
 <?php
-include('../includes/footer.php');
+include('footer.php');
 include('error.php');
 
 // Function to retrieve useful data from 'trip_data.json file and display specific trip information
