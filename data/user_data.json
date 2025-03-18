@@ -195,7 +195,7 @@
         "telephone": "0688990011",
         "motdepasse": "$2y$10$ijkl91011",
         "role": "admin",
-        "id": 21
+        "id": 22
     },
     {
         "nom": "gomez",
@@ -204,7 +204,7 @@
         "telephone": "0644332211",
         "motdepasse": "$2y$10$mnop1213",
         "role": "normal",
-        "id": 22
+        "id": 23
     },
     {
         "nom": "barbier",
@@ -213,38 +213,6 @@
         "telephone": "0633221100",
         "motdepasse": "$2y$10$qrs1415",
         "role": "vip",
-        "id": 23
-    },
-    {
-        "prenom": "pepe",
-        "nom": "chicken",
-        "email": "pepechicken@gmail.com",
-        "telephone": "0909090909",
-        "password": "pepe09",
         "id": 24
-    },
-    {
-        "prenom": "Bernard",
-        "nom": "Fourmis",
-        "email": "kongolesesousbbl@gmail.com",
-        "telephone": "01901910",
-        "password": "test123",
-        "id": 25
-    },
-    {
-        "prenom": "Bernard",
-        "nom": "Fourmis",
-        "email": "kongolesesousbbl@gmail.com",
-        "telephone": "01901910",
-        "password": "test123",
-        "id": 26
-    },
-    {
-        "prenom": "Thomas",
-        "nom": "Barbade",
-        "email": "thombarbade@mail.com",
-        "telephone": "0000000",
-        "password": "hihi",
-        "id": 27
     }
 ]

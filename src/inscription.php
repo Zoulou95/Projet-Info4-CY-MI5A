@@ -8,14 +8,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim(htmlspecialchars($_POST['password'])); 
 
     if (empty($prenom) || empty($nom) || empty($email) || empty($telephone) || empty($password)) {
-        echo "<script>alert('Veuillez remplir tous les champs');</script>";
+        echo "<script>alert('Veuillez remplir tous les champs.');</script>";
     } else {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
         $user_data = [
-            "prenom" => $prenom,
-            "nom" => $nom,
+            "nom" => strtolower($nom),
+            "prenom" => strtolower($prenom),
             "email" => $email,
             "telephone" => $telephone,
-            "password" => $password
+            "password" => $hashed_password
         ];
 
         $data_file = __DIR__ . '/../data/user_data.json';
@@ -25,6 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $data = json_decode($json_data, true);
         } else {
             $data = []; 
+        }
+
+        // Check if the email or mobile number already exists
+        foreach ($data as $user) {
+            if ($user['email'] === $email) {
+                echo "<script>alert('Un compte avec cet email existe déjà.');</script>";
+                exit;
+            }
+            if ($user['telephone'] === $telephone) {
+                echo "<script>alert('Un compte avec ce numéro de téléphone existe déjà.');</script>";
+                exit;
+            }
         }
 
         // Generate a unique ID based on the number of existing users
