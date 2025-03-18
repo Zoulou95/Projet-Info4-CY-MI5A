@@ -58,7 +58,6 @@
             displayNoResult();
         }
     ?>
-    </div>
 
     <!-- Footer -->
     <?php displayFooter();?>

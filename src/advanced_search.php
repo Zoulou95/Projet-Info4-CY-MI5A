@@ -114,7 +114,7 @@
                                 <button type="button" class="dropdown_button duration_button">Durée</button>
                                 <div class="dropdown_content duration_content">
                                     <label>
-                                        <input type="number" name="travel_length" min="8" max="12" step="1" />
+                                        <input class="range" type="range" name="travel_length" min="8" max="12" step="1" />
                                     </label>
                                 </div>
                             </div>
@@ -192,11 +192,12 @@
 
                 // Updates the button when a number of days is entered
                 if (durationInput.value) {
-                    durationButton.textContent = durationInput.value + "J";
+                    durationButton.textContent = durationInput.value + " jours";
                 } else {
                     durationButton.textContent = "Durée";
                 }
             });
         });
     </script>
+    </body>
 </html>
