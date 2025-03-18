@@ -40,19 +40,12 @@ $users = json_decode($json_data, true);
             <?php foreach ($users as $user): ?>
                 <form class="users">
                     <div class="user">
-                    <img class="user_img" src="../assets/profile_pic/<?php echo isset($user['profile_pic']) && !empty($user['profile_pic']) ? $user['profile_pic'] : 'default_pic.jpg'; ?>" alt="Profile Picture" />
+                    <img class="user_img" src="../assets/profile_pic/<?php echo isset($user['profile_pic']) && !empty($user['profile_pic']) ? $user['profile_pic'] : 'default_pic.jpg'; ?>"/>
                         <div class="user_name">
                             <?php echo ucfirst(strtolower($user['prenom'])) . " " . ucfirst(strtolower($user['nom'])); ?>
                         </div>
                         <div class="user_privilege">
-                            <label class="user_privilege">
-                                Privilège :
-                                <select name="Privilege" class="user_privilege_dropdown">
-                                    <option value="administrateur" <?php echo $user['role'] === 'administrateur' ? 'selected' : ''; ?>>Administrateur</option>
-                                    <option value="vip" <?php echo $user['role'] === 'vip' ? 'selected' : ''; ?>>VIP</option>
-                                    <option value="normal" <?php echo $user['role'] === 'normal' ? 'selected' : ''; ?>>Standard</option>
-                                </select>
-                            </label>
+                            <?php echo "Privilège : " . ucfirst(strtolower($user['role'])); ?>
                         </div>
                         <div class="user_ban">
                             <button class="user_ban_button" type="submit">BANNIR</button>

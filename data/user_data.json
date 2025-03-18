@@ -6,6 +6,7 @@
         "telephone": "0612345678",
         "motdepasse": "$2y$10$abcdef",
         "role": "vip",
+        "profile_pic": "",
         "id": 1
     },
     {
@@ -154,7 +155,7 @@
     },
     {
         "nom": "esteban",
-        "prenom": "\u00e9lodie",
+        "prenom": "elodie",
         "email": "elodie.esteban@email.com",
         "telephone": "0645678901",
         "motdepasse": "$2y$10$qwerty",
