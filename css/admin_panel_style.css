@@ -50,8 +50,8 @@ body {
 }
 
 .user_ban_button {
-    width: 10vw;
-    height: 8vh;
+    width:7vw;
+    height: 6vh;
     font-family: Arial;
     background-color: #ff0000; /* red color */
     color: #ffffff;

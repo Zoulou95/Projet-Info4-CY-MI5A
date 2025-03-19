@@ -47,8 +47,21 @@ $users = json_decode($json_data, true);
                         <div class="user_privilege">
                             <?php echo "Privilège : " . ucfirst(strtolower($user['role'])); ?>
                         </div>
-                        <div class="user_ban">
-                            <button class="user_ban_button" type="submit">BANNIR</button>
+                        <div class="user_button user_status">
+                            <?php
+                                if($user['role'] == "normal"){
+                                    echo '<button class="user_status_button" type="submit">Promouvoir</button>';
+                                } else if($user['role'] == "vip"){
+                                    echo '<button class="user_status_button" type="submit">Rétrograder</button>';
+                                }
+                            ?>
+                        </div>
+                        <div class="user_button user_ban">
+                            <?php
+                                if ($user['role'] !== "admin") {
+                                    echo '<button class="user_ban_button" type="submit">BANNIR</button>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </form>
