@@ -114,7 +114,7 @@
                                 <button type="button" class="dropdown_button duration_button">10 jours</button>
                                 <div class="dropdown_content duration_content">
                                     <label>
-                                        <input class="range" type="range" name="travel_length" min="8" max="12" step="1" />
+                                        <input class="range" type="range" name="travel_length" min="8" max="12" step="1" value="" />
                                     </label>
                                 </div>
                             </div>
@@ -180,21 +180,9 @@
             durationInput.addEventListener("input", function () {
                 let value = parseInt(durationInput.value, 10);
 
-                // Check that the value is a number between 8 and 15
-                if (!isNaN(value)) {
-                    if (value < 8) {
-                        durationInput.value = 8;
-                    }
-                    else if (value > 12) {
-                        durationInput.value = 12;
-                    }
-                }
-
                 // Updates the button when a number of days is entered
                 if (durationInput.value) {
                     durationButton.textContent = durationInput.value + " jours";
-                } else {
-                    durationButton.textContent = "Durée";
                 }
             });
         });

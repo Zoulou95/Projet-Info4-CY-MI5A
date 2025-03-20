@@ -99,11 +99,29 @@ function displayByTag($data, $tag, $trip_number) {
 // Display a trip as a map according to a user's specific search request
 function displayByFilter($data) {
 
-    $destination = $_GET['destination'];
-    $price_range = $_GET['price_range'];
-    $travel_type = $_GET['travel_type'];
-    $date = $_GET['date'];
-    $travel_length = $_GET['travel_length'];
+    // Avoid undefined index errors if certain variables are not sent in the URL
+    $destination = htmlspecialchars($_GET['destination']) ?? 0;
+    $price_range = $_GET['price_range'] ?? 0;
+    $travel_type = $_GET['travel_type'] ?? 0;
+    $date = $_GET['date'] ?? 0;
+    $travel_length = $_GET['travel_length'] ?? 0;
+
+    // Input verification
+    if($travel_length != 0 && $travel_length < 8 || $travel_length > 12) {
+        displayError("Wrong travel length input.");
+    }
+
+    $valid_price_ranges = ["-2000", "2000-3000", "3000-4000", "4000-5000", "+5000"];
+
+    if ($price_range != 0 && !in_array($price_range, $valid_price_ranges)) {
+        displayError("Wrong price range input.");
+    }
+
+    $valid_travel_types = ["noces", "découverte", "aventure", "détente", "luxe"];
+
+    if ($travel_type != 0 && !in_array($travel_type, $valid_travel_types)) {
+        displayError("Wrong travel type input.");
+    }
 
     echo '<h2 class="result_text">Résultats pour votre recherche</h2>';
     echo '<div class="result_container">';
@@ -248,9 +266,9 @@ function priceCalc($trip, $number_of_participants) {
     }
 
     // Discount if the member is VIP
-    /*if($_SESSION['user']['status'] == "VIP") {
+    if($_SESSION['user']['role'] == "VIP") {
         $total *= 0.9;
-    }*/
+    }
 
     return $total;
 }

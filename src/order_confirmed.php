@@ -40,7 +40,7 @@
 
     <!-- Back to index button  -->
     <button class="back_to_index_button">
-        <a class="back_to_index_text" href="search.php">Cliquez ici pour retourner à la recherche</a>
+        <a class="back_to_index_text" href="userpage.php">Cliquez ici pour afficher vos voyages</a>
     </button>
 
     <!-- Footer -->

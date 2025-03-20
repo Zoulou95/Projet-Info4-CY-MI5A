@@ -18,8 +18,8 @@ if (file_exists($data_file)) {
 
 // Processing the login form
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = isset($_POST['email']) ? trim(strtolower($_POST['email'])) : ''; // Clean email
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $email = isset($_POST['email']) ? htmlspecialchars(trim(strtolower($_POST['email']))) : ''; // Clean email
+    $password = isset($_POST['password']) ? htmlspecialchars($_POST['password']) : '';
 
     $password = trim($password);
 

@@ -1,254 +1,199 @@
 [
     {
-        "name": "dupont",
-        "forename": "jean",
-        "email": "jean.dupont@email.com",
-        "telephone": "0612345678",
-        "motdepasse": "$2y$10$abcdef",
-        "role": "vip",
-        "id": 1
-    },
-    {
         "name": "martin",
-        "forename": "alice",
-        "email": "alice.martin@email.com",
-        "telephone": "0756781234",
-        "motdepasse": "$2y$10$ghijkl",
+        "forename": "lucas",
+        "email": "lucas.martin@email.com",
+        "telephone": "0730027127",
+        "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
         "role": "standard",
-        "id": 2
+        "points": 80,
+        "id": "67dc9dcab2e47"
     },
     {
-        "name": "durand",
-        "forename": "paul",
-        "email": "paul.durand@email.com",
-        "telephone": "0698123456",
-        "motdepasse": "$2y$10$mnopqr",
-        "role": "standard",
-        "id": 3
-    },
-    {
-        "name": "leclerc",
-        "forename": "sophie",
-        "email": "sophie.leclerc@email.com",
-        "telephone": "0637412908",
-        "motdepasse": "$2y$10$xyz123",
+        "name": "dupont",
+        "forename": "emma",
+        "email": "emma.dupont@email.com",
+        "telephone": "0638676646",
+        "password": "$2y$10$Hyjw2xSmzE6UmXEVlSFrGuZ4vrqAv\/hxVQQv6JJaWvkE0Qi7y7lvK",
         "role": "vip",
-        "id": 4
+        "points": 255,
+        "id": "67dc9dfc5978d"
     },
     {
-        "name": "bernard",
-        "forename": "julien",
-        "email": "julien.bernard@email.com",
-        "telephone": "0637412909",
-        "motdepasse": "$2y$10$lmnopq",
-        "role": "standard",
-        "id": 5
-    },
-    {
-        "name": "morel",
-        "forename": "emilie",
-        "email": "emilie.morel@email.com",
-        "telephone": "0637419200",
-        "motdepasse": "$2y$10$rstuvw",
-        "role": "standard",
-        "id": 6
-    },
-    {
-        "name": "perrin",
-        "forename": "marc",
-        "email": "marc.perrin@email.com",
-        "telephone": "0637412907",
-        "motdepasse": "$2y$10$abcdefg",
-        "role": "standard",
-        "id": 7
-    },
-    {
-        "name": "garcia",
+        "name": "leroy",
         "forename": "nathan",
-        "email": "nathan.garcia@email.com",
-        "telephone": "0622334455",
-        "motdepasse": "$2y$10$qwerty",
+        "email": "nathan.leroy@email.com",
+        "telephone": "0767708005",
+        "password": "$2y$10$cYY1.qBrz6rhKZRKx3AOVuhTdR3G0svePvo5.UjmpOy9.brXs.wWu",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9e124aa6d"
+    },
+    {
+        "name": "moreau",
+        "forename": "l\u00e9a",
+        "email": "lea.moreau@email.com",
+        "telephone": "0695615834",
+        "password": "$2y$10$n8\/H4kslP9WlirrFJBHHjeBk1Ht1FUNgpZCf\/AwYrUNjHSUFZAatK",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9e2da4621"
+    },
+    {
+        "name": "lambert",
+        "forename": "hugo",
+        "email": "hugo.lambert@email.com",
+        "telephone": "0659701868",
+        "password": "$2y$10$yx4WG0v.Hr23sPErK0PM\/uTtvwYAjed.aeO54mgpM3pvpNStSXoHm",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9edcb8622"
+    },
+    {
+        "name": "lefevre",
+        "forename": "chlo\u00e9",
+        "email": "chloe.lefevre@email.com",
+        "telephone": "0770429924",
+        "password": "$2y$10$ikmUU29k8nXHDI5Fxo2k9ujXI6a5OR1NoQuHpWjxz5h0oVODUX0XG",
         "role": "vip",
-        "id": 8
+        "points": 450,
+        "id": "67dc9eedf2ab1"
+    },
+    {
+        "name": "dubois",
+        "forename": "maxime",
+        "email": "maxime.dubois@email.com",
+        "telephone": "0772833904",
+        "password": "$2y$10$8zJzTFsNTahympxvEmR17udgw9IotlXYVgx8mm5GGcbXmfCHv4uwq",
+        "role": "vip",
+        "points": 200,
+        "id": "67dc9f03690e8"
+    },
+    {
+        "name": "fournier",
+        "forename": "manon",
+        "email": "manon.fournier@email.com",
+        "telephone": "0716170286",
+        "password": "$2y$10$j8D109BvECHMlipHmrBkv.b54KhojasEDXY5dClHulYl2\/O27dGXe",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f1498400"
+    },
+    {
+        "name": "girard",
+        "forename": "th\u00e9o",
+        "email": "theo.girard@email.com",
+        "telephone": "0691704314",
+        "password": "$2y$10$\/wVvLYy1NvtMAU0An3kvY.EKoSpDTjrf3yksxB.yRH2cu4xJ\/lgUG",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f2fa711c"
+    },
+    {
+        "name": "bonnet",
+        "forename": "camille",
+        "email": "camille.bonnet@email.com",
+        "telephone": "0797701165",
+        "password": "$2y$10$EyfDkN0vRAZ7KoqO77Ey1.ajTpOOnlLSvL8trSdwu4M6E3.00r8bO",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f417a452"
     },
     {
         "name": "robin",
-        "forename": "chlo\u00e9",
-        "email": "chloe.robin@email.com",
-        "telephone": "0733445566",
-        "motdepasse": "$2y$10$123123",
+        "forename": "antoine",
+        "email": "antoine.robin@email.com",
+        "telephone": "0669466393",
+        "password": "$2y$10$nJfXYMGxPixZWjxhkbTVMuwqCCFwUR0pHU8fNVCnTmqlNNK.qGGsm",
         "role": "standard",
-        "id": 9
+        "points": 110,
+        "id": "67dc9f5318e81"
     },
     {
-        "name": "leroux",
-        "forename": "hugo",
-        "email": "hugo.leroux@email.com",
-        "telephone": "0644556677",
-        "motdepasse": "$2y$10$admin",
-        "role": "standard",
-        "id": 10
-    },
-    {
-        "name": "fontaine",
-        "forename": "camille",
-        "email": "camille.fontaine@email.com",
-        "telephone": "0688776655",
-        "motdepasse": "$2y$10$letmein",
+        "name": "mercier",
+        "forename": "sarah",
+        "email": "sarah.mercier@email.com",
+        "telephone": "0682757329",
+        "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
         "role": "vip",
-        "id": 11
+        "points": 390,
+        "id": "67dc9f61a936d"
     },
     {
-        "name": "benoit",
-        "forename": "l\u00e9a",
-        "email": "lea.benoit@email.com",
-        "telephone": "0622334455",
-        "motdepasse": "$2y$10$welcome",
+        "name": "roussel",
+        "forename": "julien",
+        "email": "julien.roussel@email.com",
+        "telephone": "0770833002",
+        "password": "$2y$10$1Pi8KoRkfRVV0fd8hTo7i.GnqhfGr\/pIx1yreJj11uyBafrCMm4By",
         "role": "standard",
-        "id": 12
+        "points": 0,
+        "id": "67dc9f71a463f"
     },
     {
-        "name": "renaud",
-        "forename": "matthieu",
-        "email": "matthieu.renaud@email.com",
-        "telephone": "0677889900",
-        "motdepasse": "$2y$10$123qwe",
+        "name": "picard",
+        "forename": "laura",
+        "email": "laura.picard@email.com",
+        "telephone": "0796060942",
+        "password": "$2y$10$oUl3bU5zsnCB5gyloy7y\/etQkgR8LxGrzBXDdumrlJxDi0K9y8nFG",
         "role": "standard",
-        "id": 13
+        "points": 0,
+        "id": "67dc9f849a7ab"
     },
     {
-        "name": "marchand",
-        "forename": "julie",
-        "email": "julie.marchand@email.com",
-        "telephone": "0699001122",
-        "motdepasse": "$2y$10$000000",
-        "role": "standard",
-        "id": 14
-    },
-    {
-        "name": "andr\u00e9",
-        "forename": "florian",
-        "email": "florian.andre@email.com",
-        "telephone": "0612345678",
-        "motdepasse": "$2y$10$password",
+        "name": "perrot",
+        "forename": "alexis",
+        "email": "alexis.perrot@email.com",
+        "telephone": "0714934411",
+        "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
         "role": "vip",
-        "id": 15
-    },
-    {
-        "name": "blanchard",
-        "forename": "marie",
-        "email": "marie.blanchard@email.com",
-        "telephone": "0623456789",
-        "motdepasse": "$2y$10$123456",
-        "role": "admin",
-        "id": 16
-    },
-    {
-        "name": "chopin",
-        "forename": "lucas",
-        "email": "lucas.chopin@email.com",
-        "telephone": "0634567890",
-        "motdepasse": "$2y$10$azerty",
-        "role": "standard",
-        "id": 17
-    },
-    {
-        "name": "esteban",
-        "forename": "\u00e9lodie",
-        "email": "elodie.esteban@email.com",
-        "telephone": "0645678901",
-        "motdepasse": "$2y$10$qwerty",
-        "role": "vip",
-        "id": 18
-    },
-    {
-        "name": "fernandez",
-        "forename": "nicolas",
-        "email": "nicolas.fernandez@email.com",
-        "telephone": "0656789012",
-        "motdepasse": "$2y$10$123123",
-        "role": "standard",
-        "id": 19
-    },
-    {
-        "name": "giraud",
-        "forename": "anais",
-        "email": "anais.giraud@email.com",
-        "telephone": "0667890123",
-        "motdepasse": "$2y$10$admin",
-        "role": "admin",
-        "id": 20
-    },
-    {
-        "name": "moulin",
-        "forename": "claire",
-        "email": "claire.moulin@email.com",
-        "telephone": "0677889901",
-        "motdepasse": "$2y$10$efgh5678",
-        "role": "vip",
-        "id": 21
-    },
-    {
-        "name": "renaud",
-        "forename": "thomas",
-        "email": "thomas.renaud@email.com",
-        "telephone": "0688990011",
-        "motdepasse": "$2y$10$ijkl91011",
-        "role": "admin",
-        "id": 22
-    },
-    {
-        "name": "gomez",
-        "forename": "sandra",
-        "email": "sandra.gomez@email.com",
-        "telephone": "0644332211",
-        "motdepasse": "$2y$10$mnop1213",
-        "role": "standard",
-        "id": 23
+        "points": 130,
+        "id": "67dc9f97bc7c6"
     },
     {
         "name": "barbier",
-        "forename": "julien",
-        "email": "julien.barbier@email.com",
-        "telephone": "0633221100",
-        "motdepasse": "$2y$10$qrs1415",
+        "forename": "clara",
+        "email": "clara.barbier@email.com",
+        "telephone": "0636963499",
+        "password": "$2y$10$L1jR1r2fwSMcVa5vdLZ7POa3DGn5Q99Qcmpc6PC3wF8LvutYDllIe",
         "role": "standard",
-        "id": 24
+        "points": 0,
+        "id": "67dc9fa8268b7"
     },
     {
-        "name": "carlier",
-        "forename": "ferdinand",
-        "email": "ferdo444@gmail.com",
-        "telephone": "0878986761",
-        "password": "$2y$10$MPnnNOGlGsID4HtLFoRQl.JNKlCkXoq2if9FH8X2DNNXGgNjWlR9K",
-        "role": "vip",
-        "id": 25
+        "name": "giraud",
+        "forename": "valentin",
+        "email": "valentin.giraud@email.com",
+        "telephone": "0606924612",
+        "password": "$2y$10$jwQfQSDwIZ0rKE4dgUFfLO9KjSIM6tVkSZINce20Nqr5tk7HoPUgO",
+        "role": "standard",
+        "points": 50,
+        "id": "67dc9fb8b0e63"
     },
     {
-        "id": 26,
-        "name": "trevor",
-        "forename": "james",
-        "email": "test@mail",
-        "telephone": "test",
-        "password": "$2y$10$v3FULm86Ifp43GnakQPYH.mHFL8LEQKuB2RsUDOVVWyKQqC\/ENsaq",
-        "role": "admin"
-    },
-    {
-        "id": 27,
-        "name": "test2",
-        "forename": "test2",
-        "email": "test2@mail",
-        "telephone": "000000",
-        "password": "$2y$10$\/Y60fkhfvWdGOIHQaQqeCuGHw5YVgi.qoDftPudQfs0jwvNtyFNqO",
-        "role": "admin"
-    },
-    {
+        "name": "colin",
+        "forename": "elise",
+        "email": "elise.colin@email.com",
+        "telephone": "0660207905",
+        "password": "$2y$10$Ja8.K1RJ8lIXRetHEbhLOedO7XE36aDHC95KcZjMrFbv41oSTn1zG",
         "role": "admin",
-        "name": "test",
-        "forename": "test",
-        "email": "test@mail",
-        "telephone": "1234567891",
-        "password": "$2y$10$6NoSbpOq4DCWtCH5rJux6eJM9MYsHkKj6lbkB4M3bJH8.i1XhRSi2",
-        "id": 28
+        "id": "67dc9fcc33196"
+    },
+    {
+        "name": "Noel",
+        "forename": "Quentin",
+        "email": "quentin.noel@email.com",
+        "telephone": "0602044906",
+        "password": "$2y$10$asGWmC6\/nHtPJ18PNPk4uuj9lMq5n8LjasUzyw.PSH94clZI3Hv5e",
+        "role": "admin",
+        "id": "67dc9fdb032d5"
+    },
+    {
+        "name": "Blanchard",
+        "forename": "Justine",
+        "email": "justine.blanchard@email.com",
+        "telephone": "0626872452",
+        "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
+        "role": "admin",
+        "id": "67dc9feb99f64"
     }
 ]

@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Veuillez renseigner un numéro de téléphone valide (10 chiffres).'); window.history.back();</script>";
         exit;
     }
-    if (strlen($email) > 30 || strlen($email) > 5) {
+    if (strlen($email) > 30 || strlen($email) < 5) {
         echo "<script>alert('Veuillez renseigner un mail valide (5 à 30 caractères).'); window.history.back();</script>";
         exit;
     }
@@ -39,12 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $user_data = [
-            "role" => "standard",
             "name" => strtolower($name),
             "forename" => strtolower($forename),
             "email" => $email,
             "telephone" => $telephone,
-            "password" => $hashed_password
+            "password" => $hashed_password,
+            "role" => "standard",
+            "points" => 0
         ];
 
         $data_file = __DIR__ . '/../data/user_data.json';
@@ -68,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        // Generate a unique ID based on the number of existing users
-        $user_data['id'] = count($data) + 1;
+        // Generate a unique ID based on the real-time time-stamping
+        $user_data['id'] = uniqid();
 
         $data[] = $user_data;
 

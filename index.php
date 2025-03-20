@@ -77,7 +77,7 @@
                 <input type="text" name="forename" placeholder="Prénom" required>
                 <input type="text" name="name" placeholder="Nom" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Mot de passe" required>
+                <input type="password" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
                 <input type="tel" name="tel" placeholder="Numéro de téléphone" required>
                 <button type="submit">S'inscrire</button>
                 <p class="switch_text">
