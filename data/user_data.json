@@ -16,6 +16,7 @@
         "telephone": "0756781234",
         "motdepasse": "$2y$10$ghijkl",
         "role": "normal",
+        "profile_pic": "",
         "id": 2
     },
     {
@@ -25,6 +26,7 @@
         "telephone": "0698123456",
         "motdepasse": "$2y$10$mnopqr",
         "role": "normal",
+        "profile_pic": "",
         "id": 3
     },
     {
@@ -34,6 +36,7 @@
         "telephone": "0637412908",
         "motdepasse": "$2y$10$xyz123",
         "role": "vip",
+        "profile_pic": "",
         "id": 4
     },
     {
@@ -43,6 +46,7 @@
         "telephone": "0637412909",
         "motdepasse": "$2y$10$lmnopq",
         "role": "normal",
+        "profile_pic": "",
         "id": 5
     },
     {
@@ -52,6 +56,7 @@
         "telephone": "0637419200",
         "motdepasse": "$2y$10$rstuvw",
         "role": "normal",
+        "profile_pic": "",
         "id": 6
     },
     {
@@ -61,6 +66,7 @@
         "telephone": "0637412907",
         "motdepasse": "$2y$10$abcdefg",
         "role": "normal",
+        "profile_pic": "",
         "id": 7
     },
     {
@@ -70,6 +76,7 @@
         "telephone": "0622334455",
         "motdepasse": "$2y$10$qwerty",
         "role": "vip",
+        "profile_pic": "",
         "id": 8
     },
     {
@@ -79,6 +86,7 @@
         "telephone": "0733445566",
         "motdepasse": "$2y$10$123123",
         "role": "normal",
+        "profile_pic": "",
         "id": 9
     },
     {
@@ -88,6 +96,7 @@
         "telephone": "0644556677",
         "motdepasse": "$2y$10$admin",
         "role": "normal",
+        "profile_pic": "",
         "id": 10
     },
     {
@@ -97,6 +106,7 @@
         "telephone": "0688776655",
         "motdepasse": "$2y$10$letmein",
         "role": "vip",
+        "profile_pic": "",
         "id": 11
     },
     {
@@ -106,6 +116,7 @@
         "telephone": "0622334455",
         "motdepasse": "$2y$10$welcome",
         "role": "normal",
+        "profile_pic": "",
         "id": 12
     },
     {
@@ -115,6 +126,7 @@
         "telephone": "0677889900",
         "motdepasse": "$2y$10$123qwe",
         "role": "normal",
+        "profile_pic": "",
         "id": 13
     },
     {
@@ -124,6 +136,7 @@
         "telephone": "0699001122",
         "motdepasse": "$2y$10$000000",
         "role": "normal",
+        "profile_pic": "",
         "id": 14
     },
     {
@@ -133,6 +146,7 @@
         "telephone": "0612345678",
         "motdepasse": "$2y$10$password",
         "role": "vip",
+        "profile_pic": "",
         "id": 15
     },
     {
@@ -142,6 +156,7 @@
         "telephone": "0623456789",
         "motdepasse": "$2y$10$123456",
         "role": "admin",
+        "profile_pic": "",
         "id": 16
     },
     {
@@ -151,6 +166,7 @@
         "telephone": "0634567890",
         "motdepasse": "$2y$10$azerty",
         "role": "normal",
+        "profile_pic": "",
         "id": 17
     },
     {
@@ -160,6 +176,7 @@
         "telephone": "0645678901",
         "motdepasse": "$2y$10$qwerty",
         "role": "vip",
+        "profile_pic": "",
         "id": 18
     },
     {
@@ -169,6 +186,7 @@
         "telephone": "0656789012",
         "motdepasse": "$2y$10$123123",
         "role": "normal",
+        "profile_pic": "",
         "id": 19
     },
     {
@@ -178,6 +196,7 @@
         "telephone": "0667890123",
         "motdepasse": "$2y$10$admin",
         "role": "admin",
+        "profile_pic": "",
         "id": 20
     },
     {
@@ -187,6 +206,7 @@
         "telephone": "0677889901",
         "motdepasse": "$2y$10$efgh5678",
         "role": "vip",
+        "profile_pic": "",
         "id": 21
     },
     {
@@ -196,6 +216,7 @@
         "telephone": "0688990011",
         "motdepasse": "$2y$10$ijkl91011",
         "role": "admin",
+        "profile_pic": "",
         "id": 21
     },
     {
@@ -205,6 +226,7 @@
         "telephone": "0644332211",
         "motdepasse": "$2y$10$mnop1213",
         "role": "normal",
+        "profile_pic": "",
         "id": 22
     },
     {
@@ -214,6 +236,7 @@
         "telephone": "0633221100",
         "motdepasse": "$2y$10$qrs1415",
         "role": "vip",
+        "profile_pic": "",
         "id": 23
     },
     {
@@ -221,7 +244,9 @@
         "nom": "chicken",
         "email": "pepechicken@gmail.com",
         "telephone": "0909090909",
-        "password": "pepe09",
+        "motdepasse": "pepe09",
+        "role": "normal",
+        "profile_pic": "",
         "id": 24
     },
     {
@@ -229,7 +254,9 @@
         "nom": "Fourmis",
         "email": "kongolesesousbbl@gmail.com",
         "telephone": "01901910",
-        "password": "test123",
+        "motdepasse": "test123",
+        "role": "normal",
+        "profile_pic": "",
         "id": 25
     },
     {
@@ -237,7 +264,9 @@
         "nom": "Fourmis",
         "email": "kongolesesousbbl@gmail.com",
         "telephone": "01901910",
-        "password": "test123",
+        "motdepasse": "test123",
+        "role": "normal",
+        "profile_pic": "",
         "id": 26
     },
     {
@@ -245,7 +274,9 @@
         "nom": "Barbade",
         "email": "thombarbade@mail.com",
         "telephone": "0000000",
-        "password": "hihi",
+        "motdepasse": "hihi",
+        "role": "normal",
+        "profile_pic": "",
         "id": 27
     }
 ]
