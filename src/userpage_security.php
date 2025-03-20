@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!-- userpage_security.php : allow the user to modify his password -->
 <!-- NOTE : This page will be removed when we code in javascript to navigate between the various menus ("information" and "securité")
 and remain on a single page (userpage.php)-->

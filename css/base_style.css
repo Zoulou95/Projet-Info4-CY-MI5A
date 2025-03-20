@@ -198,12 +198,19 @@
     margin-bottom: 5vh;
 }
 
-.result_text, .invalid_page_text, .result_not_found {
+.result_text, .result_not_found {
     font-size: 45px;
     text-align: center;
     margin-bottom: 2vh;
     color: #050552;
     margin-top: 5vh;
+}
+
+.invalid_page_text {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 7.5vh;
+    color: #050552;
 }
 
 .back_to_search_button, .back_to_index_button {
@@ -218,7 +225,11 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-.back_to_search_button:hover {
+.back_to_index_button {
+    margin-top: 20vh;
+}
+
+.back_to_search_button:hover, .back_to_index_button:hover {
     background-color: #ff8c00;
     border: solid #ff8c00;
     animation: pulse 1.5s infinite;

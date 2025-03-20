@@ -1,20 +1,21 @@
 <?php
 include('../includes/logs.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $prenom = trim(htmlspecialchars($_POST['prenom']));
-    $nom = trim(htmlspecialchars($_POST['nom']));
+    $forename = trim(htmlspecialchars($_POST['forename']));
+    $name = trim(htmlspecialchars($_POST['name']));
     $email = trim(htmlspecialchars($_POST['email']));
     $telephone = trim(htmlspecialchars($_POST['tel']));
     $password = trim(htmlspecialchars($_POST['password'])); 
 
-    if (empty($prenom) || empty($nom) || empty($email) || empty($telephone) || empty($password)) {
+    if (empty($forename) || empty($name) || empty($email) || empty($telephone) || empty($password)) {
         echo "<script>alert('Veuillez remplir tous les champs.');</script>";
     } else {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $user_data = [
-            "nom" => strtolower($nom),
-            "prenom" => strtolower($prenom),
+            "role" => "Basique",
+            "name" => strtolower($name),
+            "forename" => strtolower($forename),
             "email" => $email,
             "telephone" => $telephone,
             "password" => $hashed_password

@@ -1,6 +1,12 @@
-<!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
+<?php
+    session_start();
 
-<?php session_start(); ?>
+    include("../includes/trip_functions.php");
+    $data_file = '../data/trip_data.json';
+    $decodedData = dataDecode($data_file);
+?>
+
+<!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,17 +23,12 @@
 <body>
 
 <?php
-    include("../includes/trip_functions.php");
-
     // Get trip ID from URL
     if (isset($_GET['id'])) {
         $trip_id = $_GET['id'];
     } else {
         $trip_id = null;
     }
-
-    $data_file = '../data/trip_data.json';
-    $decodedData = dataDecode($data_file);
 
     $trip = tripFinder($decodedData, $trip_id);
 

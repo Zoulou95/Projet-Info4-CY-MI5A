@@ -1,3 +1,10 @@
+<?php
+    include('../includes/error.php');
+    //include('../includes/header.php');
+    ('../includes/footer.php');
+    session_start();
+?>
+
 <!-- userpage.php : allow the user to see his personal informations and modify it -->
 
 <!DOCTYPE html>
@@ -30,18 +37,32 @@
                 <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
             </div>
         </div>
+
+        <?php
+        // Rajouter plus de vérifs
+        if(!isset($_SESSION['user'])) {
+            displayError("Account not logged in.");
+            displayFooter();
+        }
+        ?>      
         
         <div class="user_container">
             <div class="left_informations">
-                <h1>Bienvenue M. <b>Dupont</b> !</h1>
+                <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . "</b></h1>"; ?>
                 <!-- Upload a profile picture by clicking the actual user image -->
 
-                <input type="file" id="file_input" accept=".png, .jpg" style="display: none;">
+                <input type="file" id="file_input" accept=".jpg" style="display: none;">
                 <label for="file_input">
-                    <img class="user_img" src="../assets/profile_pic/example_pfp.jpg" />
+                    <?php
+                        if (file_exists('../assets/profile_pic/user' . $_SESSION['user']['id'] . '_profile_picture.jpg')) {
+                            echo '<img class="user_img" src="../assets/profile_pic/user' . $_SESSION['user']['id'] . '_profile_picture.jpg" />';
+                        } else {
+                            echo '<img class="user_img" src="../assets/profile_pic/base_profile_picture.jpg" />';
+                        }
+                    ?>
                 </label>
                 <p>Changer votre photo de profil</p>
-                <input type="file" accept=".png, .jpg, .jpeg" />
+                <input type="file" accept=".jpg" />
 
                 <!-- We will set image size limitations in JavaScript -->
                 <!-- We will code a JavaScript script to display a message when the file format is wrong (not png or jpg) -->
@@ -52,7 +73,7 @@
                         <td class="cell1">Statut</td>
                     </tr>
                     <tr>
-                        <td class="cell2">Administrateur</td>
+                        <td class="cell2"><?php echo ucfirst($_SESSION['user']['role']); ?></td>
                     </tr>
                 </table>
             </div>
@@ -67,21 +88,21 @@
                 <hr>
                 <form method="post" action="userpage.php">
                     <div>
-                        <label for="last_name">Nom</label><br><br>
-                        <input type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="Dupont" required />
+                        <label for="forename">Nom</label><br><br>
+                        <input name="forename" type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['name']); ?>" required />
                     </div>
                     <div>
-                        <label for="first_name">Prénom</label><br><br>
-                        <input type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="Jojo" required />
+                        <label for="name">Prénom</label><br><br>
+                        <input name="name" type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['forename']); ?>" required />
                     </div>
                     <div>
                         <label for="email">E-mail</label><br><br>
-                        <input type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="jojodupont@gmail.com" required />
+                        <input name="email" type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="<?php echo $_SESSION['user']['email']; ?>" required />
                     </div>
                     <div>
-                        <label for="tel_number">Numéro de téléphone</label><br><br>
+                        <label for="telephone">Numéro de téléphone</label><br><br>
                         <!-- To remove the ability to enter digits, we use a pattern attribute -->
-                        <input type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="0707070707" required /><br><br>
+                        <input name="telephone" type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="<?php echo $_SESSION['user']['telephone']; ?>" required /><br><br>
                     </div>
                     <div class="button_group">
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
@@ -93,6 +114,6 @@
     </div>
 
     <!-- Footer -->
-    <?php include('../includes/footer.php'); displayFooter();?>
+    <?php displayFooter(); ?>
 </body>
 </html>

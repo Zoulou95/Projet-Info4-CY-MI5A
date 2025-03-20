@@ -111,7 +111,7 @@
                         <!-- Duration selection -->
                         <td>
                             <div class="dropdown">
-                                <button type="button" class="dropdown_button duration_button">Durée</button>
+                                <button type="button" class="dropdown_button duration_button">10 jours</button>
                                 <div class="dropdown_content duration_content">
                                     <label>
                                         <input class="range" type="range" name="travel_length" min="8" max="12" step="1" />
@@ -129,7 +129,7 @@
         </div>
 
     <!-- Footer -->
-    <?php include('../includes/footer.php'); displayFooter();?>
+    <?php include('../includes/trip_functions.php'); displayFooter();?>
 
     <!-- Script to display drop-down lists -->
     <script>

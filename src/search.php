@@ -1,3 +1,8 @@
+<?php
+    include('../includes/trip_functions.php');
+    $data_file = '../data/trip_data.json';
+?>
+
 <!-- search.php : allow the user to search for a non-specific trip using a destination -->
 
 <!DOCTYPE html>
@@ -62,9 +67,6 @@
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
     <?php
-        include('../includes/trip_functions.php');
-        $data_file = '../data/trip_data.json';
-
         // We choose the ids of the trips we want to display on our page
         $id_list = array("13", "15", "8", "7", "6");
         // id 13 => Séjour Tetiaroa ; id 8 => Séjour romantique Bora-Bora

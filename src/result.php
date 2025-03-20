@@ -1,4 +1,13 @@
-<!-- result.php -->
+
+
+<?php
+    include("../includes/trip_functions.php");
+
+    $data_file = '../data/trip_data.json';
+    $data = dataDecode($data_file);
+?>
+
+<!-- result.php : result of a specific or non-specific search -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,12 +40,8 @@
         </div>
 
     <?php // Script to filter trips by a specific tag (quicksearch)
-        include("../includes/trip_functions.php");
 
-        $data_file = '../data/trip_data.json';
-        $data = dataDecode($data_file);
-
-        // If the tag is included in the url, the result requested by the user is a quick search
+        // If the tag is included in the url, the result requested by the user may be a quick search
         if (!empty($_GET['tag'])) {
             $tag = urldecode(trim($_GET['tag']));
             $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters: XSS protection
