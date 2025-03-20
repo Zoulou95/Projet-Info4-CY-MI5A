@@ -1,6 +1,14 @@
 <!-- confirmation.php -->
 
-<?php session_start(); ?>
+<?php
+    session_start();
+
+    // Users must be logged in to configure their trip
+    if(!isset($_SESSION['user'])) {
+        echo "<script>alert('Vous devez être connecté pour configurer votre voyage !'); window.location.href = '../index.php';</script>";
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="fr">

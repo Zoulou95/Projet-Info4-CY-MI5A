@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (empty($email)) {
         // If the email is empty, return an error
-        echo "<script>alert('L\'email est requis');</script>";
+        echo "<script>alert('L\'email est requis'); window.history.back();</script>";
         exit;
     }
 
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 exit;
             } else {
                 // Incorrect password
-                echo "<script>alert('Mot de passe incorrect.');</script>";
+                echo "<script>alert('Mot de passe incorrect.'); window.history.back();</script>";
                 exit;
             }
         }
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // If email not found in data : redirect to the login page
     if (!$user_found) {
-        echo "<script>alert('Email non trouvé.');</script>";
+        echo "<script>alert('Email non trouvé.'); window.history.back();</script>";
         exit;
     }
 } else {

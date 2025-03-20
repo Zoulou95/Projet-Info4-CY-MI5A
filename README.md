@@ -103,6 +103,8 @@ To explore the site, you need to open a local server on your machine.
 
 - `inscription.php` and `connexion.php` pages contain functions for managing user data and allowing a user to log in.
 
+- `payment.php`
+
 - `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
 
 - `search.php` includes an integrated quick-search field for sorting trips by a specific tag (e.g soleil, plongée, etc.).

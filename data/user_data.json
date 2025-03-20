@@ -241,5 +241,14 @@
         "telephone": "000000",
         "password": "$2y$10$\/Y60fkhfvWdGOIHQaQqeCuGHw5YVgi.qoDftPudQfs0jwvNtyFNqO",
         "role": "admin"
+    },
+    {
+        "role": "admin",
+        "name": "test",
+        "forename": "test",
+        "email": "test@mail",
+        "telephone": "1234567891",
+        "password": "$2y$10$6NoSbpOq4DCWtCH5rJux6eJM9MYsHkKj6lbkB4M3bJH8.i1XhRSi2",
+        "id": 28
     }
 ]

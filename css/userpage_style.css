@@ -8,16 +8,14 @@ body {
 
 .user_container {
     display: flex;
-    width: 70%;
+    min-width: 1000px;
     gap: 15vh;
-    justify-content: center;
-    align-self: center;
-    margin-top: 4%;
+    margin: 4% auto;
     border: solid 3px #383838;
     padding: 5%;
     border-radius: 20px;
     background-color: #ffffff;
-    margin-bottom: 4%;
+    max-width: 1700px;
 }
 
 .user_informations {
@@ -26,12 +24,12 @@ body {
     gap: 1.5vh;
 }
 
-form {
+.input_fields {
+    margin-top: 12%;
+    gap: 20px;
+    max-width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 600px;
-    margin: auto;
 }
 
 h1 {
@@ -60,7 +58,6 @@ h1 {
     height: 20vw;
     max-width: 250px;
     max-height: 250px;
-    cursor: pointer;
 }
 
 /* Menu to switch between "informations" and "security" page */

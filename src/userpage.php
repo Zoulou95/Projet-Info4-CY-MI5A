@@ -1,8 +1,14 @@
 <?php
-    include('../includes/error.php');
-    //include('../includes/header.php');
-    ('../includes/footer.php');
+    include('../includes/profile_manager.php');
     session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Upload a user's profile picture to the server
+        pictureUpload();
+
+        // Update a user's informations
+        updateInfo();
+    }
 ?>
 
 <!-- userpage.php : allow the user to see his personal informations and modify it -->
@@ -39,19 +45,18 @@
         </div>
 
         <?php
-        // Rajouter plus de vérifs
         if(!isset($_SESSION['user'])) {
-            displayError("Account not logged in.");
-            displayFooter();
+            echo "<script>alert('Vous devez être connecté pour afficher votre espace.'); window.location.href = '../index.php';</script>";
+            exit;
         }
         ?>      
         
+        <form method="post" action="userpage.php" enctype="multipart/form-data">
         <div class="user_container">
             <div class="left_informations">
                 <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . "</b></h1>"; ?>
-                <!-- Upload a profile picture by clicking the actual user image -->
 
-                <input type="file" id="file_input" accept=".jpg" style="display: none;">
+                <!-- Upload a profile picture -->
                 <label for="file_input">
                     <?php
                         if (file_exists('../assets/profile_pic/user' . $_SESSION['user']['id'] . '_profile_picture.jpg')) {
@@ -62,10 +67,7 @@
                     ?>
                 </label>
                 <p>Changer votre photo de profil</p>
-                <input type="file" accept=".jpg" />
-
-                <!-- We will set image size limitations in JavaScript -->
-                <!-- We will code a JavaScript script to display a message when the file format is wrong (not png or jpg) -->
+                <input name="profile_picture" type="file" accept="image/jpeg, image/png" />
 
                 <!-- Table showing user status (e.g. VIP, admin, etc.) -->
                 <table class="subscription_table">
@@ -83,21 +85,25 @@
                 <ul class="menu_navigation">
                     <li class="info_link" id="info_link"><a href="userpage.php">Informations</a></li>
                     <li class="security_link" id="security_link"><a href="userpage_security.php">Sécurité</a></li>
-                    <li class="admin_panel_link" id="admin_panel_link"><a href="admin_panel.php">Administration</a></li>
+                    <?php
+                        if($_SESSION['user']['role'] == "admin") {
+                            echo '<li class="admin_panel_link" id="admin_panel_link"><a href="admin_panel.php">Administration</a></li>';
+                        }
+                    ?>
                 </ul>
                 <hr>
-                <form method="post" action="userpage.php">
+                <div class="input_fields">
                     <div>
-                        <label for="forename">Nom</label><br><br>
-                        <input name="forename" type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['name']); ?>" required />
+                        <label for="name">Nom</label><br><br>
+                        <input name="name" type="text" id="last_name" placeholder="Entrez votre nom" minlength="2" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['name']); ?>" required />
                     </div>
                     <div>
-                        <label for="name">Prénom</label><br><br>
-                        <input name="name" type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['forename']); ?>" required />
+                        <label for="forename">Prénom</label><br><br>
+                        <input name="forename" type="text" id="first_name" placeholder="Entrez votre prénom" minlength="2" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['forename']); ?>" required />
                     </div>
                     <div>
                         <label for="email">E-mail</label><br><br>
-                        <input name="email" type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="<?php echo $_SESSION['user']['email']; ?>" required />
+                        <input name="email" type="email" id="email" placeholder="Entrez votre email" minlength="5" maxlength="30" value="<?php echo $_SESSION['user']['email']; ?>" required />
                     </div>
                     <div>
                         <label for="telephone">Numéro de téléphone</label><br><br>
@@ -108,6 +114,7 @@
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
                         <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
                     </div>
+                </div>
                 </form>
             </div>
         </div>
