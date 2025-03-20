@@ -40,28 +40,30 @@ $users = json_decode($json_data, true);
             <?php foreach ($users as $user): ?>
                 <form class="users">
                     <div class="user">
-                    <img class="user_img" src="../assets/profile_pic/<?php echo isset($user['profile_pic']) && !empty($user['profile_pic']) ? $user['profile_pic'] : 'default_pic.jpg'; ?>"/>
+                        <img class="user_img" src="../assets/profile_pic/<?php echo isset($user['profile_pic']) && !empty($user['profile_pic']) ? $user['profile_pic'] : 'default_pic.jpg'; ?>"/>
                         <div class="user_name">
                             <?php echo ucfirst(strtolower($user['prenom'])) . " " . ucfirst(strtolower($user['nom'])); ?>
                         </div>
                         <div class="user_privilege">
                             <?php echo "Privilège : " . ucfirst(strtolower($user['role'])); ?>
                         </div>
-                        <div class="user_button user_status">
-                            <?php
-                                if($user['role'] == "normal"){
-                                    echo '<button class="user_status_button" type="submit">Promouvoir</button>';
-                                } else if($user['role'] == "vip"){
-                                    echo '<button class="user_status_button" type="submit">Rétrograder</button>';
-                                }
-                            ?>
-                        </div>
-                        <div class="user_button user_ban">
-                            <?php
-                                if ($user['role'] !== "admin") {
-                                    echo '<button class="user_ban_button" type="submit">BANNIR</button>';
-                                }
-                            ?>
+                        <div class="user_button_container">
+                            <div class="user_status">
+                                <?php
+                                    if($user['role'] == "normal"){
+                                        echo '<button class="user_button user_status_button user_status_button_promote" type="submit">Promouvoir</button>';
+                                    } else if($user['role'] == "vip"){
+                                        echo '<button class="user_button user_status_button user_status_button_demote" type="submit">Rétrograder</button>';
+                                    }
+                                ?>
+                            </div>
+                            <div class="user_ban">
+                                <?php
+                                    if ($user['role'] !== "admin") {
+                                        echo '<button class="user_button user_ban_button" type="submit">BANNIR</button>';
+                                    }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </form>
