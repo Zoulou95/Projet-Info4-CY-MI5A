@@ -156,4 +156,28 @@
             displayError("Password modification failed.");
         }
     }
+
+    function standardToVip() {
+
+
+        $data_file = "../data/user_data.json";
+        $data = dataReader($data_file);
+
+        $user_id = $_SESSION['user']['id'];
+
+        // Find user and update information
+        foreach ($data as $key => $user) {
+            if ($user['id'] == $user_id) {
+                $data[$key]['role'] = "vip";
+            }
+        }
+
+        $_SESSION['user']['role'] == "vip";
+
+        // Save new data to JSON file
+        $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
+        if (!file_put_contents($data_file, $new_json_data)) {
+            displayError("Error updating user_data.json file.");
+        }
+    }
 ?>

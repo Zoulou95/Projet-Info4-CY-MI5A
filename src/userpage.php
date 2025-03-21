@@ -41,7 +41,7 @@
         <form method="post" action="userpage.php" enctype="multipart/form-data">
         <div class="user_container">
             <div class="left_informations">
-                <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . "</b></h1>"; ?>
+                <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . " 👋</b></h1>"; ?>
 
                 <!-- Upload a profile picture -->
                 <label for="file_input">
@@ -62,7 +62,25 @@
                         <td class="cell1">Statut</td>
                     </tr>
                     <tr>
-                        <td class="cell2"><?php echo ucfirst($_SESSION['user']['role']); ?></td>
+                        <td class="cell2">
+                            <?php
+                                // Change the user role to VIP if he has enough fidelity points
+                                if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
+                                    standardToVip();
+                                }
+                                switch ($_SESSION['user']['role']) {
+                                    case "vip":
+                                        echo '<p class=display_vip>' . strtoupper($_SESSION['user']['role']) . '</p>';
+                                        break;
+                                    case "admin":
+                                        echo '<p class=display_admin>' . ucfirst($_SESSION['user']['role']) . '</p>';
+                                        break;
+                                    case "standard":
+                                        echo '<p class=display_standard>' . ucfirst($_SESSION['user']['role']) . '</p>';
+                                        break;
+                                }
+                            ?>
+                        </td>
                     </tr>
                 </table>
             </div>

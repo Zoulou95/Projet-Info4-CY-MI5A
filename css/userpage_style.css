@@ -159,15 +159,15 @@ label {
 #logout_button {
     border: solid 1px #383838;
     background-color: #383838;
-    width: 7vw;
+    width: 8vw;
 }
 
-#save_button:active, #reset_button:active {
+#save_button:active, #reset_button:active, #logout_button:active {
     transform: scale(0.95);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-#save_button:active, #reset_button:active {
+#save_button:active, #reset_button:active, #logout_button:active {
     border: solid 10px #000000;
 }
 
@@ -185,4 +185,16 @@ label {
     display: flex;
     justify-content: center;
     gap: 5%;
+}
+
+.display_vip {
+    color: #92cc13;
+}
+
+.display_admin {
+    color: red;
+}
+
+.display_standard {
+    color: #383838;
 }

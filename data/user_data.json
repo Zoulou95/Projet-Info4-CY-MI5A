@@ -5,8 +5,8 @@
         "email": "lucas.martin@email.com",
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
-        "role": "standard",
-        "points": 80,
+        "role": "vip",
+        "points": 350,
         "id": "67dc9dcab2e47"
     },
     {
@@ -16,7 +16,7 @@
         "telephone": "0638676646",
         "password": "$2y$10$Hyjw2xSmzE6UmXEVlSFrGuZ4vrqAv\/hxVQQv6JJaWvkE0Qi7y7lvK",
         "role": "vip",
-        "points": 255,
+        "points": 355,
         "id": "67dc9dfc5978d"
     },
     {
@@ -56,7 +56,7 @@
         "telephone": "0770429924",
         "password": "$2y$10$ikmUU29k8nXHDI5Fxo2k9ujXI6a5OR1NoQuHpWjxz5h0oVODUX0XG",
         "role": "vip",
-        "points": 450,
+        "points": 700,
         "id": "67dc9eedf2ab1"
     },
     {
@@ -66,7 +66,7 @@
         "telephone": "0772833904",
         "password": "$2y$10$8zJzTFsNTahympxvEmR17udgw9IotlXYVgx8mm5GGcbXmfCHv4uwq",
         "role": "vip",
-        "points": 200,
+        "points": 300,
         "id": "67dc9f03690e8"
     },
     {
@@ -146,7 +146,7 @@
         "telephone": "0714934411",
         "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
         "role": "vip",
-        "points": 130,
+        "points": 330,
         "id": "67dc9f97bc7c6"
     },
     {
