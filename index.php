@@ -1,6 +1,10 @@
 <?php
+    session_start();
+
     include('includes/logs.php');
     include('includes/trip_functions.php');
+    include('includes/header.php');
+
     $data_file = 'data/trip_data.json';
 ?>
 
@@ -20,22 +24,7 @@
 <body>
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="index.php">
-                    <img class="logo_img" src="assets/visuals/cylanta_logo.png" alt="Logo created by MI-A team" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="index.php">Accueil</a>
-                <a class="headbar_item" href="src/search.php">Destinations</a>
-                <a class="headbar_item" href="src/advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_item" href="#" onclick="openSignInOverlay()">Connexion</a>
-                <a class="headbar_item" href="#" onclick="openSignUpOverlay()">S'inscrire</a>
-            </div>
-        </div>
+        <?php displayIndexHeader(); ?>
 
         <!-- Homepage -->
         <div class="image_container">
@@ -88,24 +77,7 @@
         </div>
     </div>
 
-    <div class="overlay" id="signinOverlay">
-        <div class="overlay_content">
-            <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
-            <h2>Connexion</h2>
-                <form action="src/connexion.php" method="POST">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Mot de passe" required>
-                    <button type="submit">Se connecter</button>
-                    <p class="switch_text">
-                        Vous n'avez pas de compte ?
-                        <a href="#" onclick="switchToSignUp()">S'inscrire</a>
-                    </p>
-                </form>
-        </div>
-    </div>
 
-    <!-- Functions for displaying the registration and login overlay -->
-    <script src="../includes/registration.js"></script>
     </div>
     </div>
 </body>

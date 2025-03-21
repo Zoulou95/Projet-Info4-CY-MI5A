@@ -1,5 +1,10 @@
 <!-- order_confirmed.php : give to the user a confirmation of his order -->
 
+<?php
+    session_start();
+    include('../includes/header.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,22 +20,7 @@
     <?php require('../includes/footer.php'); ?>
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="../index.php">
-                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="../index.php">Accueil</a>
-                <a class="headbar_item" href="search.php">Destinations</a>
-                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
-            </div>
-        </div>
+        <?php displayHeader(); ?>
 
     <!-- Order confirmed message -->
     <header class="recap_order">

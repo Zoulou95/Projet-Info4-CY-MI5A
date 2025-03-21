@@ -3,6 +3,8 @@
 <?php
     session_start();
 
+    include('../includes/header.php');
+
     // Users must be logged in to configure their trip
     if(!isset($_SESSION['user'])) {
         echo "<script>alert('Vous devez être connecté pour configurer votre voyage !'); window.history.back();</script>";
@@ -25,22 +27,7 @@
 <body>
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="../index.php">
-                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="../index.php">Accueil</a>
-                <a class="headbar_item" href="search.php">Destinations</a>
-                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
-            </div>
-        </div>
+        <?php displayHeader(); ?>
 
     <?php
     include('../includes/trip_functions.php');
