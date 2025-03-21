@@ -66,7 +66,7 @@ $total_pages = ceil(count($users) / $users_per_page);
                             </div>
                             <div class="user_ban">
                                 <?php
-                                    if ($user['role'] !== "admin") {
+                                    if ($user['role'] !== "admin" && $user['role'] !== "banni") {
                                         echo '<button class="user_button user_ban_button" type="submit" name="action" value="ban">BANNIR</button>';
                                     }
                                 ?>
@@ -75,20 +75,20 @@ $total_pages = ceil(count($users) / $users_per_page);
                     </div>
                 </form>
             <?php endforeach; ?>
+            <!-- Pagination links -->
+            <div class="pagination">
+                <?php
+                if ($page > 1) {
+                    echo '<a href="?page=' . ($page - 1) . '">Précédent</a>';
+                }
+                for ($i = 1; $i <= $total_pages; $i++) {
+                    echo '<a href="?page=' . $i . '">'.$i.'</a>';
+                }
+                if ($page < $total_pages) {
+                    echo '<a href="?page=' . ($page + 1) . '">Suivant</a>';
+                }
+                ?>
         </div>
-        <!-- Pagination links -->
-        <div class="pagination">
-            <?php
-            if ($page > 1) {
-                echo '<a href="?page=' . ($page - 1) . '">Précédent </a>';
-            }
-            for ($i = 1; $i <= $total_pages; $i++) {
-                echo '<a href="?page=' . $i . '">'.$i.' </a>';
-            }
-            if ($page < $total_pages) {
-                echo '<a href="?page=' . ($page + 1) . '">Suivant</a>';
-            }
-            ?>
         </div>
     </div>
 </body>

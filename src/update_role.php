@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } elseif ($action == 'demote') {
                 $user['role'] = 'normal';
             } elseif ($action == 'ban') {
-                $user['role'] = 'banned';
+                $user['role'] = 'banni';
             }
             break;
         }
