@@ -5,7 +5,7 @@
         "email": "lucas.martin@email.com",
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
-        "role": "vip",
+        "role": "standard",
         "points": 350,
         "id": "67dc9dcab2e47",
         "travel_history": [
@@ -21,7 +21,7 @@
         "email": "emma.dupont@email.com",
         "telephone": "0638676646",
         "password": "$2y$10$Hyjw2xSmzE6UmXEVlSFrGuZ4vrqAv\/hxVQQv6JJaWvkE0Qi7y7lvK",
-        "role": "vip",
+        "role": "standard",
         "points": 355,
         "id": "67dc9dfc5978d"
     },
@@ -121,7 +121,7 @@
         "email": "sarah.mercier@email.com",
         "telephone": "0682757329",
         "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
-        "role": "vip",
+        "role": "normal",
         "points": 390,
         "id": "67dc9f61a936d"
     },
