@@ -66,8 +66,10 @@ $total_pages = ceil(count($users) / $users_per_page);
                             </div>
                             <div class="user_ban">
                                 <?php
-                                    if ($user['role'] !== "admin" && $user['role'] !== "banni") {
+                                    if($user['role'] !== "admin" && $user['role'] !== "banni"){
                                         echo '<button class="user_button user_ban_button" type="submit" name="action" value="ban">BANNIR</button>';
+                                    } elseif($user['role'] !== "admin" && $user['role'] === "banni"){
+                                        echo '<button class="user_button user_ban_button" type="submit" name="action" value="unban">DEBANNIR</button>';
                                     }
                                 ?>
                             </div>

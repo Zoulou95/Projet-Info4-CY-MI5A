@@ -67,14 +67,14 @@ body {
 }
 
 .user_status_button {
-    width: 9vw;
+    width: auto;
     height: 6vh;
     background-color: #00318b; /* dark blue color */
     color: #ffffff;
 }
 
 .user_ban_button {
-    width: 7vw;
+    width: auto;
     height: 6vh;
     background-color: #ff0000; /* red color */
     color: #ffffff;

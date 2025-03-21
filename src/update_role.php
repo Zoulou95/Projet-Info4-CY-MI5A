@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $user['role'] = 'normal';
             } elseif ($action == 'ban') {
                 $user['role'] = 'banni';
+            } elseif ($action == 'unban'){
+                $user['role'] = 'normal';
             }
             break;
         }
