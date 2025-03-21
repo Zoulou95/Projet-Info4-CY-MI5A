@@ -1,71 +1,68 @@
 <?php
-// Fichier contenant les données utilisateur
+
+session_start();
+
+include('../includes/error.php');
+include('../includes/logs.php');
+
+// Processing the file containing user data
 $data_file = '../data/user_data.json';
 
-// Vérifier si le fichier existe
 if (file_exists($data_file)) {
     $json_data = file_get_contents($data_file);
     $data = json_decode($json_data, true);
 } else {
-    // Si le fichier n'existe pas, rediriger vers la page d'erreur
-    header("Location: src/error.php");
+    displayError("user_data.json file is missing.");
     exit;
 }
 
-// Traitement du formulaire de connexion
+// Processing the login form
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Récupérer les données du formulaire
-    $email = isset($_POST['email']) ? trim(strtolower($_POST['email'])) : ''; // Nettoyer l'email
-    $password = isset($_POST['password']) ? $_POST['password'] : ''; // Récupérer le mot de passe
+    $email = isset($_POST['email']) ? htmlspecialchars(trim(strtolower($_POST['email']))) : ''; // Clean email
+    $password = isset($_POST['password']) ? htmlspecialchars($_POST['password']) : '';
 
-    // Debug: afficher l'email saisi et vérifier s'il est bien récupéré
-    // echo "Email saisi: " . $email . "<br>"; // Décommenter pour tester
+    $password = trim($password);
 
     if (empty($email)) {
-        // Si l'email est vide, renvoyer une erreur
-        echo "<script>alert('L\'email est requis');</script>";
+        // If the email is empty, return an error
+        echo "<script>alert('L\'email est requis'); window.history.back();</script>";
         exit;
     }
 
-    // Vérifier si l'email existe dans les données
-    $user_found = false; // Variable pour savoir si l'utilisateur a été trouvé
+    // Check if the email exists in the data
+    $user_found = false;
 
-    // Parcours des utilisateurs
+    // Browse each user
     foreach ($data as $user) {
-        $user_email = trim(strtolower($user['Email'])); // Nettoyer l'email de l'utilisateur
+        $user_email = trim(strtolower($user['email']));
 
-        // Debug: afficher les emails des utilisateurs pour vérifier
-        // echo "Email utilisateur: " . $user_email . "<br>"; // Décommenter pour tester
-
-        // Vérifier si l'email correspond
+        // Check if email matches
         if ($user_email === $email) {
             $user_found = true;
-            // Vérifier le mot de passe (non sécurisé, mais simple pour cet exemple)
-            if ($user['MotDePasse'] === $password) {
-                // Connexion réussie, rediriger vers la page utilisateur
-                session_start();
-                $_SESSION['user'] = $user; // Stocker l'utilisateur dans la session
-                header("Location: userpage.html");
+            if (password_verify($password, $user['password'])) {
+                // Login successful, redirect to user page
+                $_SESSION['user'] = $user; // Store user in session
+
+                writeToServerLog($user['email'] . " has successfully logged in.");
+
+                header("Location: userpage.php");
                 exit;
             } else {
-                // Mot de passe incorrect
-                echo "<script>alert('Mot de passe incorrect.');</script>";
-                header("Location: src/connexion.php"); // Rediriger vers la page de connexion
+                // Incorrect password
+                echo "<script>alert('Mot de passe incorrect.'); window.history.back();</script>";
                 exit;
             }
         }
     }
 
-    // Si l'email n'a pas été trouvé dans les données
+    // If email not found in data : redirect to the login page
     if (!$user_found) {
-        echo "<script>alert('Email non trouvé.');</script>";
-        header("Location: src/connexion.php"); // Rediriger vers la page de connexion
+        echo "<script>alert('Email non trouvé.'); window.history.back();</script>";
         exit;
     }
 } else {
-    // Rediriger vers la page d'accueil si ce n'est pas une requête POST
+    // Redirect to home page if not a POST request
     header("Location: index.php");
     exit;
 }
 ?>
-

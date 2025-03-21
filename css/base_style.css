@@ -198,12 +198,19 @@
     margin-bottom: 5vh;
 }
 
-.result_text, .invalid_page_text, .result_not_found {
+.result_text, .result_not_found {
     font-size: 45px;
     text-align: center;
     margin-bottom: 2vh;
     color: #050552;
     margin-top: 5vh;
+}
+
+.invalid_page_text {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 7.5vh;
+    color: #050552;
 }
 
 .back_to_search_button, .back_to_index_button {
@@ -218,7 +225,11 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-.back_to_search_button:hover {
+.back_to_index_button {
+    margin-top: 20vh;
+}
+
+.back_to_search_button:hover, .back_to_index_button:hover {
     background-color: #ff8c00;
     border: solid #ff8c00;
     animation: pulse 1.5s infinite;
@@ -300,6 +311,45 @@ footer {
 
 .footer_separation {
     margin-top: 50vh;
+}
+
+/*Overlay*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay_content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 /* Animation */

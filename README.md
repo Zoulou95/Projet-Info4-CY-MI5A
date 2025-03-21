@@ -68,10 +68,8 @@ To explore the site, you need to open a local server on your machine.
 │   └── 🎬 video
 ├── 📂 css
 │   ├── 🎨 admin_panel_style.css
-│   ├── 🎨 trip.css
 │   └── 🎨 ...
 ├── 📂 data
-│   ├── 📊 bank_data.json
 │   ├── 📊 trip_data.json
 │   └── 📊 user_datajson
 ├── 📂 includes
@@ -83,39 +81,34 @@ To explore the site, you need to open a local server on your machine.
 │   ├── 📄 trip.php
 │   └── 📄 ...
 ├── 📄 CyLanta_Charte_Graphique.pdf
-├── 🏠 index.html
+├── 🏠 index.php
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
 ## Page overview
 
-- The page `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
+- The pages in the `/includes` folder contain the PHP and JavaScript functions used by all the code for page display and data processing.
 
-- `trip_style.css` is the default style sheet for all trips presentation pages.
+- The pages in the `/css` folder contain the style sheets used to decorate the website.
  
-- `index.php` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
+- `index.php` is the default home page when you arrive on the website and contains the website presentation. It contains a registration form and an account creation form.
 
 - `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
 - `advanced_search.php` is a travel search page with several filter fields (dates, locations, options, price, etc.).
 
-- `confirmation.php`
+- `confirmation.php` and `order_confirmed.php` pages respectively summarize a user's choice of a trip and display a message to indicate that the purchase was successful.
 
-- `connexion.php`
+- `error.php` displays an error in the server console and to the user in the event of an error.
 
-- `inscription.php`
+- `inscription.php` and `connexion.php` pages contain functions for managing user data and allowing a user to log in.
 
-- `error.php`
-
-- `trip_functions.php` groups the various functions common to php pages and which will be useful for processing `.json` files containing site data (user data, trip data, etc.).
+- `payment.php`
 
 - `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
 
 - `search.php` includes an integrated quick-search field for sorting trips by a specific tag (e.g soleil, plongée, etc.).
 
-- `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed, present in the `trip_data.json` file.
+- `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed.
 
 - `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
-
-- `userpage_security.php` allows the user to modify his password.
-**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 3 (JavaScript).

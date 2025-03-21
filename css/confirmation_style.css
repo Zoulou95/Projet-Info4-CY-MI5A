@@ -3,17 +3,35 @@
     margin-bottom: 6vh;
 }
 
-.recap_header h1 {
+.recap_header h1, .recap_order h1 {
     color: #21a9ff;
     font-size: 3.5vw;
     margin-top: 3.5vh;
     margin-bottom: 1vh;
 }
 
+.recap_order h1 {
+    font-size: 4vw;
+}
+
 .recap_header p {
     color: #303030;
     font-size: 1.8vw;
 }
+
+.recap_order h1 {
+    font-size: 4.5vw;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.recap_order p {
+    color: #303030;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
 
 .recap_general_info {
     margin-bottom: 5vh;
@@ -97,7 +115,7 @@
     margin-bottom: 1vh;
 }
 
-.recap_pay_now {
+.recap_pay_now, .back_to_config {
     color: #ffffff;
     border: solid #ffa500;
     background-color: #ffa500;
@@ -113,4 +131,10 @@
 
 .recap_pay_now:hover {
     background-color: #ff8c00;
+}
+
+.back_to_config {
+    transform: translate(52%, -50%);
+    margin-top: 6vh;
+    margin-bottom: 2vh;
 }

@@ -1,205 +1,199 @@
 [
     {
-        "Nom": "Dupont",
-        "Prenom": "Jean",
-        "Email": "jean.dupont@email.com",
-        "Telephone": "0612345678",
-        "MotDePasse": "$2y$10$abcdef",
-        "Role": "Vip"
+        "name": "Martin",
+        "forename": "Lucas",
+        "email": "lucas.martin@email.com",
+        "telephone": "0730027127",
+        "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
+        "role": "standard",
+        "points": 80,
+        "id": "67dc9dcab2e47"
     },
     {
-        "Nom": "Martin",
-        "Prenom": "Alice",
-        "Email": "alice.martin@email.com",
-        "Telephone": "0756781234",
-        "MotDePasse": "$2y$10$ghijkl",
-        "Role": "Admin"
+        "name": "dupont",
+        "forename": "emma",
+        "email": "emma.dupont@email.com",
+        "telephone": "0638676646",
+        "password": "$2y$10$Hyjw2xSmzE6UmXEVlSFrGuZ4vrqAv\/hxVQQv6JJaWvkE0Qi7y7lvK",
+        "role": "vip",
+        "points": 255,
+        "id": "67dc9dfc5978d"
     },
     {
-        "Nom": "Durand",
-        "Prenom": "Paul",
-        "Email": "paul.durand@email.com",
-        "Telephone": "0698123456",
-        "MotDePasse": "$2y$10$mnopqr",
-        "Role": "Normal"
+        "name": "leroy",
+        "forename": "nathan",
+        "email": "nathan.leroy@email.com",
+        "telephone": "0767708005",
+        "password": "$2y$10$cYY1.qBrz6rhKZRKx3AOVuhTdR3G0svePvo5.UjmpOy9.brXs.wWu",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9e124aa6d"
     },
     {
-        "Nom": "ddd",
-        "Prenom": "dddd",
-        "Email": "dddddd@cyu.fr",
-        "Telephone": "0637412908",
-        "MotDePasse": "dadadada",
-        "Role": "Vip"
+        "name": "moreau",
+        "forename": "l\u00e9a",
+        "email": "lea.moreau@email.com",
+        "telephone": "0695615834",
+        "password": "$2y$10$n8\/H4kslP9WlirrFJBHHjeBk1Ht1FUNgpZCf\/AwYrUNjHSUFZAatK",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9e2da4621"
     },
     {
-        "Nom": "ddd",
-        "Prenom": "dd",
-        "Email": "dddd@cyu.fr",
-        "Telephone": "0637412908",
-        "MotDePasse": "dzddz",
-        "Role": "Normal"
+        "name": "lambert",
+        "forename": "hugo",
+        "email": "hugo.lambert@email.com",
+        "telephone": "0659701868",
+        "password": "$2y$10$yx4WG0v.Hr23sPErK0PM\/uTtvwYAjed.aeO54mgpM3pvpNStSXoHm",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9edcb8622"
     },
     {
-        "Nom": "dd",
-        "Prenom": "ddd",
-        "Email": "dd@gmail.com",
-        "Telephone": "063741920",
-        "MotDePasse": "Azerty",
-        "Role": "Normal"
+        "name": "lefevre",
+        "forename": "chlo\u00e9",
+        "email": "chloe.lefevre@email.com",
+        "telephone": "0770429924",
+        "password": "$2y$10$ikmUU29k8nXHDI5Fxo2k9ujXI6a5OR1NoQuHpWjxz5h0oVODUX0XG",
+        "role": "vip",
+        "points": 450,
+        "id": "67dc9eedf2ab1"
     },
     {
-        "Nom": "Delpont",
-        "Prenom": "Marc",
-        "Email": "azerty@gmail.fr",
-        "Telephone": "0637412908",
-        "MotDePasse": "Azerty",
-        "Role": "Normal"
+        "name": "dubois",
+        "forename": "maxime",
+        "email": "maxime.dubois@email.com",
+        "telephone": "0772833904",
+        "password": "$2y$10$8zJzTFsNTahympxvEmR17udgw9IotlXYVgx8mm5GGcbXmfCHv4uwq",
+        "role": "vip",
+        "points": 200,
+        "id": "67dc9f03690e8"
     },
     {
-        "Nom": "fzfzfz",
-        "Prenom": "ffzfzfz",
-        "Email": "fzfzfzf@gmail.com",
-        "Telephone": "060606060606",
-        "MotDePasse": "maison",
-        "Role": "Admin"
+        "name": "fournier",
+        "forename": "manon",
+        "email": "manon.fournier@email.com",
+        "telephone": "0716170286",
+        "password": "$2y$10$j8D109BvECHMlipHmrBkv.b54KhojasEDXY5dClHulYl2\/O27dGXe",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f1498400"
     },
     {
-        "Nom": "Garcia",
-        "Prenom": "Nathan",
-        "Email": "nathan@gmail.com",
-        "Telephone": "0622334455",
-        "MotDePasse": "qwerty",
-        "Role": "Vip"
+        "name": "girard",
+        "forename": "th\u00e9o",
+        "email": "theo.girard@email.com",
+        "telephone": "0691704314",
+        "password": "$2y$10$\/wVvLYy1NvtMAU0An3kvY.EKoSpDTjrf3yksxB.yRH2cu4xJ\/lgUG",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f2fa711c"
     },
     {
-        "Nom": "Robin",
-        "Prenom": "Chlo\u00e9",
-        "Email": "chloe@gmail.com",
-        "Telephone": "0733445566",
-        "MotDePasse": "123123",
-        "Role": "Normal"
+        "name": "bonnet",
+        "forename": "camille",
+        "email": "camille.bonnet@email.com",
+        "telephone": "0797701165",
+        "password": "$2y$10$EyfDkN0vRAZ7KoqO77Ey1.ajTpOOnlLSvL8trSdwu4M6E3.00r8bO",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f417a452"
     },
     {
-        "Nom": "Leroux",
-        "Prenom": "Hugo",
-        "Email": "hugo@gmail.com",
-        "Telephone": "0644556677",
-        "MotDePasse": "admin",
-        "Role": "Admin"
+        "name": "robin",
+        "forename": "antoine",
+        "email": "antoine.robin@email.com",
+        "telephone": "0669466393",
+        "password": "$2y$10$nJfXYMGxPixZWjxhkbTVMuwqCCFwUR0pHU8fNVCnTmqlNNK.qGGsm",
+        "role": "standard",
+        "points": 110,
+        "id": "67dc9f5318e81"
     },
     {
-        "Nom": "Fontaine",
-        "Prenom": "Camille",
-        "Email": "camille@gmail.com",
-        "Telephone": "0688776655",
-        "MotDePasse": "letmein",
-        "Role": "Vip"
+        "name": "mercier",
+        "forename": "sarah",
+        "email": "sarah.mercier@email.com",
+        "telephone": "0682757329",
+        "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
+        "role": "vip",
+        "points": 390,
+        "id": "67dc9f61a936d"
     },
     {
-        "Nom": "Benoit",
-        "Prenom": "L\u00e9a",
-        "Email": "lea@gmail.com",
-        "Telephone": "0622334455",
-        "MotDePasse": "welcome",
-        "Role": "Normal"
+        "name": "roussel",
+        "forename": "julien",
+        "email": "julien.roussel@email.com",
+        "telephone": "0770833002",
+        "password": "$2y$10$1Pi8KoRkfRVV0fd8hTo7i.GnqhfGr\/pIx1yreJj11uyBafrCMm4By",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f71a463f"
     },
     {
-        "Nom": "Renaud",
-        "Prenom": "Matthieu",
-        "Email": "matthieu@gmail.com",
-        "Telephone": "0677889900",
-        "MotDePasse": "123qwe",
-        "Role": "Admin"
+        "name": "picard",
+        "forename": "laura",
+        "email": "laura.picard@email.com",
+        "telephone": "0796060942",
+        "password": "$2y$10$oUl3bU5zsnCB5gyloy7y\/etQkgR8LxGrzBXDdumrlJxDi0K9y8nFG",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f849a7ab"
     },
     {
-        "Nom": "Marchand",
-        "Prenom": "Julie",
-        "Email": "julie@gmail.com",
-        "Telephone": "0699001122",
-        "MotDePasse": "000000",
-        "Role": "Normal"
+        "name": "perrot",
+        "forename": "alexis",
+        "email": "alexis.perrot@email.com",
+        "telephone": "0714934411",
+        "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
+        "role": "vip",
+        "points": 130,
+        "id": "67dc9f97bc7c6"
     },
     {
-        "Nom": "aa",
-        "Prenom": "aaa",
-        "Email": "aa@gmail.com",
-        "Telephone": "0612345678",
-        "MotDePasse": "password",
-        "Role": "Vip"
+        "name": "barbier",
+        "forename": "clara",
+        "email": "clara.barbier@email.com",
+        "telephone": "0636963499",
+        "password": "$2y$10$L1jR1r2fwSMcVa5vdLZ7POa3DGn5Q99Qcmpc6PC3wF8LvutYDllIe",
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9fa8268b7"
     },
     {
-        "Nom": "bb",
-        "Prenom": "bbb",
-        "Email": "bb@gmail.com",
-        "Telephone": "0623456789",
-        "MotDePasse": "123456",
-        "Role": "Admin"
+        "name": "giraud",
+        "forename": "valentin",
+        "email": "valentin.giraud@email.com",
+        "telephone": "0606924612",
+        "password": "$2y$10$jwQfQSDwIZ0rKE4dgUFfLO9KjSIM6tVkSZINce20Nqr5tk7HoPUgO",
+        "role": "standard",
+        "points": 50,
+        "id": "67dc9fb8b0e63"
     },
     {
-        "Nom": "cc",
-        "Prenom": "ccc",
-        "Email": "cc@gmail.com",
-        "Telephone": "0634567890",
-        "MotDePasse": "azerty",
-        "Role": "Normal"
+        "name": "colin",
+        "forename": "elise",
+        "email": "elise.colin@email.com",
+        "telephone": "0660207905",
+        "password": "$2y$10$Ja8.K1RJ8lIXRetHEbhLOedO7XE36aDHC95KcZjMrFbv41oSTn1zG",
+        "role": "admin",
+        "id": "67dc9fcc33196"
     },
     {
-        "Nom": "ee",
-        "Prenom": "eee",
-        "Email": "ee@gmail.com",
-        "Telephone": "0645678901",
-        "MotDePasse": "qwerty",
-        "Role": "Vip"
+        "name": "Noel",
+        "forename": "Quentin",
+        "email": "quentin.noel@email.com",
+        "telephone": "0602044906",
+        "password": "$2y$10$asGWmC6\/nHtPJ18PNPk4uuj9lMq5n8LjasUzyw.PSH94clZI3Hv5e",
+        "role": "admin",
+        "id": "67dc9fdb032d5"
     },
     {
-        "Nom": "ff",
-        "Prenom": "fff",
-        "Email": "ff@gmail.com",
-        "Telephone": "0656789012",
-        "MotDePasse": "123123",
-        "Role": "Normal"
-    },
-    {
-        "Nom": "gg",
-        "Prenom": "ggg",
-        "Email": "gg@gmail.com",
-        "Telephone": "0667890123",
-        "MotDePasse": "admin",
-        "Role": "Admin"
-    },
-    {
-        "prenom": "dzdz",
-        "nom": "dzdzdz",
-        "email": "dzde@gmail",
-        "telephone": "848484848",
-        "password": "fzfzf"
-    },
-    {
-        "prenom": "dzdz",
-        "nom": "dzdzdz",
-        "email": "dzde@gmail",
-        "telephone": "848484848",
-        "password": "fzfzf"
-    },
-    {
-        "prenom": "dzdzd",
-        "nom": "dzdzzd",
-        "email": "dzdzdz@gmail.com",
-        "telephone": "757575",
-        "password": "ddzdzdz"
-    },
-    {
-        "prenom": "dzdzd",
-        "nom": "dzdzzd",
-        "email": "dzdzdz@gmail.com",
-        "telephone": "757575ddd",
-        "password": "ddzdzdz"
-    },
-    {
-        "prenom": "dzdzd",
-        "nom": "dzdzdz",
-        "email": "dzdzdz@gmail.com",
-        "telephone": "dddzzdz",
-        "password": "ddzdzdz"
+        "name": "Blanchard",
+        "forename": "Justine",
+        "email": "justine.blanchard@email.com",
+        "telephone": "0626872452",
+        "password": "dd",
+        "role": "admin",
+        "id": "67dc9feb99f64"
     }
 ]

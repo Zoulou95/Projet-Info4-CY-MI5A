@@ -1,6 +1,16 @@
 <!-- confirmation.php -->
 
-<?php session_start(); ?>
+<?php
+    session_start();
+
+    include('../includes/header.php');
+
+    // Users must be logged in to configure their trip
+    if(!isset($_SESSION['user'])) {
+        echo "<script>alert('Vous devez être connecté pour configurer votre voyage !'); window.history.back();</script>";
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,22 +27,7 @@
 <body>
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="../index.php">
-                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="../index.php">Accueil</a>
-                <a class="headbar_item" href="search.php">Destinations</a>
-                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
-            </div>
-        </div>
+        <?php displayHeader(); ?>
 
     <?php
     include('../includes/trip_functions.php');
@@ -43,7 +38,7 @@
 
         // Calculate the total price
         $total_price = priceCalc($trip, $number_of_participants);
-        $_SESSION['to_be_paid'] = $total_price;
+        $_SESSION['total_price'] = $total_price;
     } else {
         displayError("Invalid trip configuration.");
         exit;
@@ -58,7 +53,7 @@
 
     <!-- General informations -->
     <section class="recap_general_info">
-        <h2>Informations Générales</h2>
+        <h2><?php echo $trip['title']; ?></h2>
         <div class="recap_info_box">
             <p><strong>Nombre de participants : </strong><?php echo $number_of_participants; ?> personnes</p>
             <p><strong>Transport : </strong><?php echo $_POST['transports']; ?></p>
@@ -66,6 +61,16 @@
             <p><strong>Prix par personne : </strong><?php echo $total_price / $number_of_participants; ?>€</p>
             <p><strong>Date de départ : </strong><?php echo $trip['dates']['start_date']; ?></p>
             <p><strong>Date de retour : </strong><?php echo $trip['dates']['end_date']; ?></p>
+            <p><strong>Réduction : </strong>
+            <?php
+            // $_SESSION['user']['status'] == "VIP" quand ce sera set
+            if(1 == 0) {
+                echo "-10% sur le prix total";
+            } else {
+                echo "Aucune";
+            }
+            ?>
+        </p>
         </div>
     </section>
 
@@ -83,20 +88,25 @@
                     <p><strong>Hôtel : </strong>' . $_POST['hotel_' . $i] . '</p>
                     <p><strong>Pension : </strong>' . $_POST['pension_' . $i] . '</p>
                     <p><strong>Activité choisie : </strong>' . $_POST['activite_' . $i] . '</p>
-                    <p><strong>Nombre de participants à l’activité : </strong>' . $_POST['participants_' . $i] . ' personnes</p>
+                    <p><strong>Participants à cette activité : </strong>' . $_POST['participants_' . $i] . ' personnes</p>
                 </div>
             </div>
             ';
         }
     ?>
+    <button class="back_to_config" onclick="history.back();">Revoir ma configuration 🔄</button>
     </section>
 
-    <!-- Payement -->
+    <!-- Payment -->
     <section class="recap_payment">
         <h2>Paiement</h2>
         <div class="recap_payment_details">
-            <p><b>Montant total à payer : </b><?php echo $total_price; ?>€</p>
-            <button class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>
+            <p><b>Montant total à payer : </b>
+            <?php
+            $points = $total_price / 100;
+            echo $total_price . "€ (" . $points . " points fidelité)";
+            ?></p>
+            <button class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
         </div>
     </section>
 

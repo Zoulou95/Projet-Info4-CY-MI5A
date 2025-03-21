@@ -1,6 +1,14 @@
-<!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
+<?php
+    session_start();
 
-<?php session_start(); ?>
+    include("../includes/trip_functions.php");
+    include('../includes/header.php');
+
+    $data_file = '../data/trip_data.json';
+    $decodedData = dataDecode($data_file);
+?>
+
+<!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,17 +25,12 @@
 <body>
 
 <?php
-    include("../includes/trip_functions.php");
-
     // Get trip ID from URL
     if (isset($_GET['id'])) {
         $trip_id = $_GET['id'];
     } else {
         $trip_id = null;
     }
-
-    $data_file = '../data/trip_data.json';
-    $decodedData = dataDecode($data_file);
 
     $trip = tripFinder($decodedData, $trip_id);
 
@@ -36,22 +39,8 @@
 
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="../index.php">
-                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="../index.php">Accueil</a>
-                <a class="headbar_item" href="../src/search.php">Destinations</a>
-                <a class="headbar_item" href="../src/advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_my_space" href="../src/userpage.php">Mon espace</a>
-                <a href="../src/userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" /></a>
-            </div>
-        </div>
+        <?php displayHeader(); ?>
+        
         <div class="separate"></div>
 
         <div class="description">

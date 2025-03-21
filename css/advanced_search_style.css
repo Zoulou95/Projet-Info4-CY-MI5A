@@ -97,6 +97,18 @@ body {
     display: block;
 }
 
+.duration_button {
+    width: 9.8vw;
+}
+
+.type_button {
+    width: 14vw;
+}
+
+.price_button {
+    width: 10vw;
+}
+
 /* Style of labels and checkboxes */
 
 .dropdown_content label {
