@@ -4,12 +4,15 @@
     include('../includes/profile_manager.php');
     include('../includes/header.php');
 
+    $data = dataReader('../data/user_data.json');
+    updateInfo($data, '../data/user_data.json');
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Upload a user's profile picture to the server
         pictureUpload();
 
         // Update a user's informations
-        updateInfo();
+        editInfo($data, '../data/user_data.json');
     }
 ?>
 
@@ -64,10 +67,6 @@
                     <tr>
                         <td class="cell2">
                             <?php
-                                // Change the user role to VIP if he has enough fidelity points
-                                if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
-                                    standardToVip();
-                                }
                                 switch ($_SESSION['user']['role']) {
                                     case "vip":
                                         echo '<p class=display_vip>' . strtoupper($_SESSION['user']['role']) . '</p>';
@@ -89,6 +88,7 @@
             <div class="user_informations">
                 <ul class="menu_navigation">
                     <li class="info_link" id="info_link"><a href="userpage.php">Informations</a></li>
+                    <li class="security_link" id="security_link"><a href="history.php">Historique</a></li>
                     <li class="security_link" id="security_link"><a href="userpage_security.php">Sécurité</a></li>
                     <?php
                         if($_SESSION['user']['role'] == "admin") {

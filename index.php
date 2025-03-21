@@ -24,7 +24,7 @@
 <body>
     <div class="container">
         <!-- Navigation bar -->
-        <?php displayIndexHeader(); ?>
+        <?php displayHeader(); ?>
 
         <!-- Homepage -->
         <div class="image_container">
@@ -56,28 +56,6 @@
     <!-- Footer -->
     <div class="separate"></div>
     <?php displayFooter();?>
-
-    <!-- Signin and login overlay -->
-    <div class="overlay" id="signupOverlay">
-        <div class="overlay_content">
-            <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
-            <h2>Inscription</h2>
-            <form action="src/inscription.php" method="POST">
-                <input type="text" name="forename" placeholder="Prénom" required>
-                <input type="text" name="name" placeholder="Nom" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
-                <input type="tel" name="tel" placeholder="Numéro de téléphone" required>
-                <button type="submit">S'inscrire</button>
-                <p class="switch_text">
-                    Vous avez deja un compte ?
-                    <a href="#" onclick="switchToSignIn()">Se connecter</a>
-                </p>
-            </form>
-        </div>
-    </div>
-
-
     </div>
     </div>
 </body>

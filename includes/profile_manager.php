@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     include('../includes/error.php');
 
     // Read the 'user_data.json' file and convert it into a PHP array
@@ -18,6 +20,37 @@
         }
 
         return $data;
+    }
+
+    // Update account informations
+    function updateInfo($data, $data_file) {
+
+        // Change the user role to VIP if he has enough fidelity points
+        if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
+            $user_id = $_SESSION['user']['id'];
+
+            // Find user and update information
+            foreach ($data as $key => $user) {
+                if ($user['id'] == $user_id) {
+                    $data[$key]['role'] = "vip";
+                }
+            }
+    
+            $_SESSION['user']['role'] == "vip";
+    
+            // Save new data to JSON file
+            $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
+            if (!file_put_contents($data_file, $new_json_data)) {
+                displayError("Error updating user_data.json file.");
+            }
+        }
+
+        // Find user and update information
+        foreach ($data as $key => $user) {
+            if ($user['id'] == $_SESSION['user']['id']) {
+                $_SESSION['user']['travel_history'] = $data[$key]['travel_history'];
+            }
+        }
     }
 
     // Uploads a user's profile photo to the server
@@ -51,12 +84,9 @@
         }
     }
 
-    function updateInfo() {
+    function editInfo($data, $data_file) {
         
         if(isset($_POST['name']) || isset($_POST['forename']) || isset($_POST['email']) || isset($_POST['telephone'])) {
-
-            $data_file = "../data/user_data.json";
-            $data = dataReader($data_file);
 
             $user_id = $_SESSION['user']['id'];
 
@@ -157,27 +187,53 @@
         }
     }
 
-    function standardToVip() {
-
-
-        $data_file = "../data/user_data.json";
-        $data = dataReader($data_file);
-
-        $user_id = $_SESSION['user']['id'];
-
-        // Find user and update information
-        foreach ($data as $key => $user) {
-            if ($user['id'] == $user_id) {
-                $data[$key]['role'] = "vip";
+    // Find a trip with its id
+    function tripFinder($data, $trip_id) {
+        // Check that the trip match the ID in 'trip_data.json'
+        $trip = null;
+        foreach ($data['trip'] as $journey) {
+            if ($journey['id'] == $trip_id) {
+                $trip = $journey;
+                break;
             }
         }
-
-        $_SESSION['user']['role'] == "vip";
-
-        // Save new data to JSON file
-        $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
-        if (!file_put_contents($data_file, $new_json_data)) {
-            displayError("Error updating user_data.json file.");
+        if ($trip === null) {
+            displayError("trip not found.");
         }
+        return $trip;
+    }
+
+    // Display trip presentation cards according to id provided
+    function displayHistory($id_list, $data_file) {
+        $data = dataReader($data_file);
+    
+
+        
+        if(empty($id_list)) {
+            echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+            exit;
+        } else {
+            echo '<h1 class="history_text"><b>Historique de vos voyages</b></h1>';
+        }
+        
+        echo '<br /><br />';
+        echo '<div class="card-container">';
+
+        foreach ($id_list as $trip_id) {
+            $trip = tripFinder($data, $trip_id);
+            if (!$trip) {
+                displayError("Trip not found on cards display.");
+            }
+            echo
+            '<div class="card">
+                <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
+                <div class="card_content">
+                    <h2>' . $trip['presentation_title'] . '</h2>
+                    <a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Consulter ma réservation</a>
+                </div>
+            </div>';
+        }
+    
+        echo '</div>';
     }
 ?>
