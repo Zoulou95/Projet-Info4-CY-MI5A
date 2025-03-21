@@ -136,7 +136,7 @@ label {
     outline: none;
 }
 
-#save_button, #reset_button {
+#save_button, #reset_button, #logout_button {
     height: 50px;
     width: 50%;
     font-size: 18px;
@@ -156,6 +156,12 @@ label {
     background-color: #383838;
 }
 
+#logout_button {
+    border: solid 1px #383838;
+    background-color: #383838;
+    width: 7vw;
+}
+
 #save_button:active, #reset_button:active {
     transform: scale(0.95);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -170,7 +176,7 @@ label {
     border-color: #1a89ce;
 }
 
-#reset_button:hover {
+#reset_button:hover, #logout_button:hover {
     background-color: #282626;
     border-color: #282626;
 }
