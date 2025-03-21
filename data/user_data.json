@@ -7,7 +7,8 @@
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
         "role": "vip",
         "points": 350,
-        "id": "67dc9dcab2e47"
+        "id": "67dc9dcab2e47",
+        "travel_history": [8, 7]
     },
     {
         "name": "dupont",
