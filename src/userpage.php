@@ -100,6 +100,7 @@
                     <div class="button_group">
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
                         <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
+                        <a href="../includes/logout.php"><button type="button" id="logout_button">Déconnexion</button></a>
                     </div>
                 </div>
                 </form>

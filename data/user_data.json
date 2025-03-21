@@ -1,7 +1,7 @@
 [
     {
-        "name": "Martin",
-        "forename": "Lucas",
+        "name": "martin",
+        "forename": "lucas",
         "email": "lucas.martin@email.com",
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
@@ -192,7 +192,7 @@
         "forename": "Justine",
         "email": "justine.blanchard@email.com",
         "telephone": "0626872452",
-        "password": "dd",
+        "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
         "id": "67dc9feb99f64"
     }
