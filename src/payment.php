@@ -1,12 +1,13 @@
 <?php
 session_start();
-require('getapikey.php');
+require('../includes/getapikey.php');
 
 $transaction_id = uniqid(); 
-$montant = "100.00"; //  Pour l'instant c'est un faux montant
+$montant = $_SESSION['total_price'];
 $vendeur = "MI-5_A"; 
 
-$retour_url = "http://localhost/retour_paiement.php?session=" . session_id();
+
+$retour_url = "http://localhost:8000/src/retour_paiement.php?session=" . session_id();
 
 $api_key = getAPIKey($vendeur);
 if (!preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
