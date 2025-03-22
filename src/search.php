@@ -56,11 +56,15 @@
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
     <?php
-        // We choose the ids of the trips we want to display on our page
-        $id_list = array("13", "15", "8", "7", "6");
-        // id 13 => Séjour Tetiaroa ; id 8 => Séjour romantique Bora-Bora
-        // id 15 => Exploration Sous-Marine ; id 7 => Évasion à Fakarava
-        // id 6 => Aventure à Taha'a
+        // Trip presentations are displayed randomly
+        $id_list = [];
+
+        while (count($id_list) < 5) {
+            $num = rand(1, 15);
+            if (!in_array($num, $id_list)) {
+                $id_list[] = $num;
+            }
+        }
 
         displayCards($id_list, $data_file);
     ?>

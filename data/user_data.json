@@ -136,14 +136,18 @@
         "id": "67dc9f71a463f"
     },
     {
-        "name": "picard",
-        "forename": "laura",
+        "name": "Picard",
+        "forename": "Laura",
         "email": "laura.picard@email.com",
         "telephone": "0796060942",
         "password": "$2y$10$oUl3bU5zsnCB5gyloy7y\/etQkgR8LxGrzBXDdumrlJxDi0K9y8nFG",
         "role": "standard",
         "points": 0,
-        "id": "67dc9f849a7ab"
+        "id": "67dc9f849a7ab",
+        "travel_history": [
+            8,
+            2
+        ]
     },
     {
         "name": "perrot",

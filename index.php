@@ -43,13 +43,17 @@
 
         <div class="voyagebar">
     <?php
-    // We choose the ids of the trips we want to display on our page
-    $id_list = array("1", "10", "5", "9", "11", "12");
-    // id 1 => Lune de miel Bora-Bora ; id 10 => Aventure à Tahiti
-    // id 5 => Séjour en famille à Moorea ; id 9 => Expérience inédite à Huahine
-    // id 12 => Aventure éco-tourisme à Nuku Hiva
+        // Trip presentations are displayed randomly
+        $id_list = [];
 
-    displayCards($id_list, $data_file);
+        while (count($id_list) < 6) {
+            $num = rand(1, 15);
+            if (!in_array($num, $id_list)) {
+                $id_list[] = $num;
+            }
+        }
+
+        displayCards($id_list, $data_file);
     ?>
     </div>
 
