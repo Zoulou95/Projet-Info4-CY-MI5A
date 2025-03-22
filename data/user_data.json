@@ -5,7 +5,7 @@
         "email": "lucas.martin@email.com",
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
-        "role": "standard",
+        "role": "vip",
         "points": 350,
         "id": "67dc9dcab2e47",
         "travel_history": [
@@ -21,9 +21,13 @@
         "email": "emma.dupont@email.com",
         "telephone": "0638676646",
         "password": "$2y$10$Hyjw2xSmzE6UmXEVlSFrGuZ4vrqAv\/hxVQQv6JJaWvkE0Qi7y7lvK",
-        "role": "standard",
+        "role": "vip",
         "points": 355,
-        "id": "67dc9dfc5978d"
+        "id": "67dc9dfc5978d",
+        "travel_history": [
+            5,
+            2
+        ]
     },
     {
         "name": "leroy",
@@ -32,8 +36,14 @@
         "telephone": "0767708005",
         "password": "$2y$10$cYY1.qBrz6rhKZRKx3AOVuhTdR3G0svePvo5.UjmpOy9.brXs.wWu",
         "role": "standard",
-        "points": 0,
-        "id": "67dc9e124aa6d"
+        "points": 200,
+        "id": "67dc9e124aa6d",
+        "travel_history": [
+            12,
+            11,
+            3,
+            15
+        ]
     },
     {
         "name": "moreau",
@@ -63,7 +73,15 @@
         "password": "$2y$10$ikmUU29k8nXHDI5Fxo2k9ujXI6a5OR1NoQuHpWjxz5h0oVODUX0XG",
         "role": "vip",
         "points": 700,
-        "id": "67dc9eedf2ab1"
+        "id": "67dc9eedf2ab1",
+        "travel_history": [
+            12,
+            9,
+            4,
+            7,
+            6,
+            2
+        ]
     },
     {
         "name": "dubois",
@@ -73,7 +91,13 @@
         "password": "$2y$10$8zJzTFsNTahympxvEmR17udgw9IotlXYVgx8mm5GGcbXmfCHv4uwq",
         "role": "vip",
         "points": 300,
-        "id": "67dc9f03690e8"
+        "id": "67dc9f03690e8",
+        "travel_history": [
+            8,
+            7,
+            4,
+            1
+        ]
     },
     {
         "name": "fournier",
@@ -116,14 +140,20 @@
         "id": "67dc9f5318e81"
     },
     {
-        "name": "mercier",
-        "forename": "sarah",
+        "name": "Mercier",
+        "forename": "Sarah",
         "email": "sarah.mercier@email.com",
         "telephone": "0682757329",
         "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
-        "role": "normal",
+        "role": "vip",
         "points": 390,
-        "id": "67dc9f61a936d"
+        "id": "67dc9f61a936d",
+        "travel_history": [
+            5,
+            6,
+            7,
+            8
+        ]
     },
     {
         "name": "roussel",
@@ -143,11 +173,7 @@
         "password": "$2y$10$oUl3bU5zsnCB5gyloy7y\/etQkgR8LxGrzBXDdumrlJxDi0K9y8nFG",
         "role": "standard",
         "points": 0,
-        "id": "67dc9f849a7ab",
-        "travel_history": [
-            8,
-            2
-        ]
+        "id": "67dc9f849a7ab"
     },
     {
         "name": "perrot",
@@ -157,7 +183,12 @@
         "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
         "role": "vip",
         "points": 330,
-        "id": "67dc9f97bc7c6"
+        "id": "67dc9f97bc7c6",
+        "travel_history": [
+            8,
+            9,
+            10
+        ]
     },
     {
         "name": "barbier",
@@ -177,7 +208,10 @@
         "password": "$2y$10$jwQfQSDwIZ0rKE4dgUFfLO9KjSIM6tVkSZINce20Nqr5tk7HoPUgO",
         "role": "standard",
         "points": 50,
-        "id": "67dc9fb8b0e63"
+        "id": "67dc9fb8b0e63",
+        "travel_history": [
+            3
+        ]
     },
     {
         "name": "colin",

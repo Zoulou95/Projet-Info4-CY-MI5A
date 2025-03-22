@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     include('../includes/error.php');
 
     // Read the 'user_data.json' file and convert it into a PHP array
@@ -26,7 +24,7 @@
     function updateInfo($data, $data_file) {
 
         // Change the user role to VIP if he has enough fidelity points
-        if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
+        if($_SESSION['user']['role'] == "standard" && $_SESSION['user']['points'] >= 300) {
             $user_id = $_SESSION['user']['id'];
 
             // Find user and update information
@@ -36,7 +34,7 @@
                 }
             }
     
-            $_SESSION['user']['role'] == "vip";
+            $_SESSION['user']['role'] = "vip";
     
             // Save new data to JSON file
             $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
