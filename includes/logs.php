@@ -12,7 +12,7 @@
 
             $ip = $_SERVER['REMOTE_ADDR'];
 
-            $formattedMessage = "[" . date("Y-m-d H:i:s") . "] " . $message . "(" . $ip . ")\n";
+            $formattedMessage = "[" . date("Y-m-d H:i:s") . "] " . $message . " (" . $ip . ")\n";
 
             file_put_contents($log_path, $formattedMessage, FILE_APPEND);
         
