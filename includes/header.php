@@ -53,7 +53,7 @@ function displayHeader() {
                 <form action="'.$path_parent.'src/connexion.php" method="POST">
                     <input class="overlay_input" type="email" name="email" placeholder="Email" required>
                     <input class="overlay_input" type="password" name="password" placeholder="Mot de passe" required>
-                    <button class="overlay_button type="submit">Se connecter</button>
+                    <button class="overlay_button" type="submit">Se connecter</button>
                     <p class="switch_text">' .
                        "Vous n'avez pas de compte ?" . '
                         <a href="#" onclick="switchToSignUp()">S\'inscrire</a>
