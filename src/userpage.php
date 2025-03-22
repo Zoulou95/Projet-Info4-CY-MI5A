@@ -1,3 +1,21 @@
+<?php
+    session_start();
+
+    include('../includes/profile_manager.php');
+    include('../includes/header.php');
+
+    $data = dataReader('../data/user_data.json');
+    updateInfo($data, '../data/user_data.json');
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Upload a user's profile picture to the server
+        pictureUpload();
+
+        // Update a user's informations
+        editInfo($data, '../data/user_data.json');
+    }
+?>
+
 <!-- userpage.php : allow the user to see his personal informations and modify it -->
 
 <!DOCTYPE html>
@@ -14,37 +32,32 @@
 <body>
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="../index.php">
-                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="../index.php">Accueil</a>
-                <a class="headbar_item" href="search.php">Destinations</a>
-                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
-            </div>
-        </div>
+        <?php displayHeader(); ?>
+
+        <?php
+        if(!isset($_SESSION['user'])) {
+            echo "<script>alert('Vous devez être connecté pour afficher votre espace.'); window.location.href = '../index.php';</script>";
+            exit;
+        }
+        ?>      
         
+        <form method="post" action="userpage.php" enctype="multipart/form-data">
         <div class="user_container">
             <div class="left_informations">
-                <h1>Bienvenue M. <b>Dupont</b> !</h1>
-                <!-- Upload a profile picture by clicking the actual user image -->
+                <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . " 👋</b></h1>"; ?>
 
-                <input type="file" id="file_input" accept=".png, .jpg" style="display: none;">
+                <!-- Upload a profile picture -->
                 <label for="file_input">
-                    <img class="user_img" src="../assets/profile_pic/example_pfp.jpg" />
+                    <?php
+                        if (file_exists('../assets/profile_pic/user' . $_SESSION['user']['id'] . '_profile_picture.jpg')) {
+                            echo '<img class="user_img" src="../assets/profile_pic/user' . $_SESSION['user']['id'] . '_profile_picture.jpg" />';
+                        } else {
+                            echo '<img class="user_img" src="../assets/profile_pic/base_profile_picture.jpg" />';
+                        }
+                    ?>
                 </label>
                 <p>Changer votre photo de profil</p>
-                <input type="file" accept=".png, .jpg, .jpeg" />
-
-                <!-- We will set image size limitations in JavaScript -->
-                <!-- We will code a JavaScript script to display a message when the file format is wrong (not png or jpg) -->
+                <input name="profile_picture" type="file" accept="image/jpeg, image/png" />
 
                 <!-- Table showing user status (e.g. VIP, admin, etc.) -->
                 <table class="subscription_table">
@@ -52,7 +65,21 @@
                         <td class="cell1">Statut</td>
                     </tr>
                     <tr>
-                        <td class="cell2">Administrateur</td>
+                        <td class="cell2">
+                            <?php
+                                switch ($_SESSION['user']['role']) {
+                                    case "vip":
+                                        echo '<p class=display_vip>' . strtoupper($_SESSION['user']['role']) . '</p>';
+                                        break;
+                                    case "admin":
+                                        echo '<p class=display_admin>' . ucfirst($_SESSION['user']['role']) . '</p>';
+                                        break;
+                                    case "standard":
+                                        echo '<p class=display_standard>' . ucfirst($_SESSION['user']['role']) . '</p>';
+                                        break;
+                                }
+                            ?>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -61,38 +88,45 @@
             <div class="user_informations">
                 <ul class="menu_navigation">
                     <li class="info_link" id="info_link"><a href="userpage.php">Informations</a></li>
+                    <li class="security_link" id="security_link"><a href="history.php">Historique</a></li>
                     <li class="security_link" id="security_link"><a href="userpage_security.php">Sécurité</a></li>
-                    <li class="admin_panel_link" id="admin_panel_link"><a href="admin_panel.php">Administration</a></li>
+                    <?php
+                        if($_SESSION['user']['role'] == "admin") {
+                            echo '<li class="admin_panel_link" id="admin_panel_link"><a href="admin_panel.php">Administration</a></li>';
+                        }
+                    ?>
                 </ul>
                 <hr>
-                <form method="post" action="userpage.php">
+                <div class="input_fields">
                     <div>
-                        <label for="last_name">Nom</label><br><br>
-                        <input type="text" id="last_name" placeholder="Entrez votre nom" maxlength="20" value="Dupont" required />
+                        <label for="name">Nom</label><br><br>
+                        <input name="name" type="text" id="last_name" placeholder="Entrez votre nom" minlength="2" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['name']); ?>" required />
                     </div>
                     <div>
-                        <label for="first_name">Prénom</label><br><br>
-                        <input type="text" id="first_name" placeholder="Entrez votre prénom" maxlength="20" value="Jojo" required />
+                        <label for="forename">Prénom</label><br><br>
+                        <input name="forename" type="text" id="first_name" placeholder="Entrez votre prénom" minlength="2" maxlength="20" value="<?php echo ucfirst($_SESSION['user']['forename']); ?>" required />
                     </div>
                     <div>
                         <label for="email">E-mail</label><br><br>
-                        <input type="email" id="email" placeholder="Entrez votre email" maxlength="30" value="jojodupont@gmail.com" required />
+                        <input name="email" type="email" id="email" placeholder="Entrez votre email" minlength="5" maxlength="30" value="<?php echo $_SESSION['user']['email']; ?>" required />
                     </div>
                     <div>
-                        <label for="tel_number">Numéro de téléphone</label><br><br>
+                        <label for="telephone">Numéro de téléphone</label><br><br>
                         <!-- To remove the ability to enter digits, we use a pattern attribute -->
-                        <input type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="0707070707" required /><br><br>
+                        <input name="telephone" type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="<?php echo $_SESSION['user']['telephone']; ?>" required /><br><br>
                     </div>
                     <div class="button_group">
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
                         <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
+                        <a href="../includes/logout.php"><button type="button" id="logout_button">Déconnexion</button></a>
                     </div>
+                </div>
                 </form>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <?php include('../includes/footer.php'); displayFooter();?>
+    <?php displayFooter(); ?>
 </body>
 </html>

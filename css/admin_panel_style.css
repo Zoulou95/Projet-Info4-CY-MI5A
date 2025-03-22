@@ -120,3 +120,15 @@ body {
 .pagination a:hover {
     text-decoration: underline;
 }
+
+.color_vip {
+    color: yellow;
+}
+
+.color_admin {
+    color: red;
+}
+
+.color_standard {
+    color: #383838;
+}

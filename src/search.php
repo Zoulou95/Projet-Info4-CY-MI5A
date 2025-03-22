@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    
+    include('../includes/trip_functions.php');
+    include('../includes/header.php');
+
+    $data_file = '../data/trip_data.json';
+?>
+
 <!-- search.php : allow the user to search for a non-specific trip using a destination -->
 
 <!DOCTYPE html>
@@ -15,22 +24,7 @@
 <body>
     <div class="container">
         <!-- Navigation bar -->
-        <div class="headbar">
-            <div class="headbar_left">
-                <a href="../index.php">
-                    <img class="logo_img" src="../assets/visuals/cylanta_logo.png" alt="CyLanta Logo" />
-                </a>
-            </div>
-            <div class="headbar_rest">
-                <a class="headbar_item" href="../index.php">Accueil</a>
-                <a class="headbar_item" href="search.php">Destinations</a>
-                <a class="headbar_item" href="advanced_search.php">Rechercher un voyage</a>
-            </div>
-            <div class="headbar_right">
-                <a class="headbar_my_space" href="userpage.php">Mon espace</a>
-                <a href="userpage.php"><img class="user_img_nav" src="../assets/profile_pic/example_pfp.jpg" alt="User's profile picture" /></a>
-            </div>
-        </div>
+        <?php displayHeader(); ?>
 
         <!-- Quick search implementation -->
         <video autoplay muted loop id="background-video">
@@ -62,16 +56,15 @@
     <!-- Quick access to destinations -->
     <div class="whitebar_destination">
     <?php
-        include('../includes/trip_functions.php');
-        $data_file = '../data/trip_data.json';
+        // Trip presentations are displayed randomly
+        $id_list = [];
 
-        // We choose the ids of the trips we want to display on our page
-        $id_list = array("13", "15", "8", "7", "6");
-        // id 13 => Séjour Tetiaroa
-        // id 15 => Exploration Sous-Marine
-        // id 8 => Séjour romantique Bora-Bora
-        // id 7 => Évasion à Fakarava
-        // id 6 => Aventure à Taha'a
+        while (count($id_list) < 5) {
+            $num = rand(1, 15);
+            if (!in_array($num, $id_list)) {
+                $id_list[] = $num;
+            }
+        }
 
         displayCards($id_list, $data_file);
     ?>

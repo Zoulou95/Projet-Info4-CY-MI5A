@@ -94,45 +94,6 @@
     border: 2.5px solid #ffffff;
 }
 
-/*Overlay*/
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.overlay.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-.overlay_content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    text-align: center;
-    position: relative;
-}
-
-.close_btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
 input {
     width: 100%;
     padding: 8px;
@@ -146,16 +107,6 @@ input:focus {
     outline: none;
 }
 
-button {
-    background: #21a9ff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
 button:hover {
     background: #1a89ce;
 }
@@ -164,26 +115,7 @@ button:active {
     border: 1px solid #000000;
 }
 
-body.no-scroll {
-    overflow: hidden;
-}
-
 /* Script for login in sign in */
-
-.switch_text {
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.switch_text a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.switch_text a:hover {
-    text-decoration: underline;
-}
 
 .signin_radio {
     display: flex;

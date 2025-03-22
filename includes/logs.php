@@ -1,4 +1,5 @@
 <?php
+    // Tells administrators when an account has been created or a user has logged in
     function writeToServerLog($message) {
 
         $log_path = '../data/server.log';

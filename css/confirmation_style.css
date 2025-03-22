@@ -115,7 +115,7 @@
     margin-bottom: 1vh;
 }
 
-.recap_pay_now {
+.recap_pay_now, .back_to_config {
     color: #ffffff;
     border: solid #ffa500;
     background-color: #ffa500;
@@ -131,4 +131,10 @@
 
 .recap_pay_now:hover {
     background-color: #ff8c00;
+}
+
+.back_to_config {
+    transform: translate(52%, -50%);
+    margin-top: 6vh;
+    margin-bottom: 2vh;
 }

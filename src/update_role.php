@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($action == 'promote') {
                 $user['role'] = 'vip';
             } elseif ($action == 'demote') {
-                $user['role'] = 'normal';
+                $user['role'] = 'standard';
             } elseif ($action == 'ban') {
                 $user['role'] = 'banni';
             } elseif ($action == 'unban'){
-                $user['role'] = 'normal';
+                $user['role'] = 'standard';
             }
             break;
         }
