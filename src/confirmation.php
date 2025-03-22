@@ -63,9 +63,8 @@
             <p><strong>Date de retour : </strong><?php echo $trip['dates']['end_date']; ?></p>
             <p><strong>Réduction : </strong>
             <?php
-            // $_SESSION['user']['status'] == "VIP" quand ce sera set
-            if(1 == 0) {
-                echo "-10% sur le prix total";
+            if($_SESSION['user']['role'] == "vip") {
+                echo "-10% sur le prix total (VIP)";
             } else {
                 echo "Aucune";
             }
