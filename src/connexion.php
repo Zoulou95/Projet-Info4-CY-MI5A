@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 } else {
     // Redirect to home page if not a POST request
-    header("Location: index.php");
+    displayError("Failed to send log in data.");
     exit;
 }
 ?>
