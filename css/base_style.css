@@ -9,6 +9,10 @@
     font-family: Arial, sans-serif;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -350,6 +354,44 @@ footer {
     right: 15px;
     font-size: 18px;
     cursor: pointer;
+}
+
+.overlay_input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.overlay_input:focus {
+    border: 2px solid #21a9ff;
+    outline: none;
+}
+
+.overlay_button {
+    background: #21a9ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.switch_text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.switch_text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch_text a:hover {
+    text-decoration: underline;
 }
 
 /* Animation */

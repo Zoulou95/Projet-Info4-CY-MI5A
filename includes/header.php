@@ -51,9 +51,9 @@ function displayHeader() {
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
                 <form action="'.$path_parent.'src/connexion.php" method="POST">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Mot de passe" required>
-                    <button type="submit">Se connecter</button>
+                    <input class="overlay_input" type="email" name="email" placeholder="Email" required>
+                    <input class="overlay_input" type="password" name="password" placeholder="Mot de passe" required>
+                    <button class="overlay_button type="submit">Se connecter</button>
                     <p class="switch_text">' .
                        "Vous n'avez pas de compte ?" . '
                         <a href="#" onclick="switchToSignUp()">S\'inscrire</a>
@@ -65,13 +65,13 @@ function displayHeader() {
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
             <h2>Inscription</h2>
-            <form action="src/inscription.php" method="POST">
-                <input type="text" name="forename" placeholder="Prénom" required>
-                <input type="text" name="name" placeholder="Nom" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
-                <input type="tel" name="tel" placeholder="Numéro de téléphone" required>
-                <button type="submit">S\'inscrire</button>
+            <form action="'.$path_parent.'src/inscription.php" method="POST">
+                <input class="overlay_input" type="text" name="forename" placeholder="Prénom" required>
+                <input class="overlay_input" type="text" name="name" placeholder="Nom" required>
+                <input class="overlay_input" type="email" name="email" placeholder="Email" required>
+                <input class="overlay_input" type="password" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
+                <input class="overlay_input" type="tel" name="tel" placeholder="Numéro de téléphone" required>
+                <button class="overlay_button" "type="submit">S\'inscrire</button>
                 <p class="switch_text">
                     Vous avez déjà un compte ?
                     <a href="#" onclick="switchToSignIn()">Se connecter</a>
