@@ -126,12 +126,13 @@
         "telephone": "0797701165",
         "password": "$2y$10$EyfDkN0vRAZ7KoqO77Ey1.ajTpOOnlLSvL8trSdwu4M6E3.00r8bO",
         "role": "vip",
-        "points": 2142,
+        "points": 2184,
         "id": "67dc9f417a452",
         "travel_history": [
             "4",
             "13",
-            "13"
+            "13",
+            "12"
         ]
     },
     {
@@ -202,8 +203,11 @@
         "telephone": "0636963499",
         "password": "$2y$10$L1jR1r2fwSMcVa5vdLZ7POa3DGn5Q99Qcmpc6PC3wF8LvutYDllIe",
         "role": "standard",
-        "points": 0,
-        "id": "67dc9fa8268b7"
+        "points": 80,
+        "id": "67dc9fa8268b7",
+        "travel_history": [
+            "5"
+        ]
     },
     {
         "name": "giraud",
@@ -254,5 +258,15 @@
         "role": "standard",
         "points": 0,
         "id": "67deb96be9a79"
+    },
+    {
+        "name": "bernard",
+        "forename": "cauchy",
+        "email": "cauchybernard@mail.com",
+        "telephone": "0101256985",
+        "password": "$2y$10$j9Pqo04x7fznriUp49Bsguri31yYjeSqOK\/Hv07gWfpLPD1UO5eIG",
+        "role": "standard",
+        "points": 0,
+        "id": "67e01c18cca1e"
     }
 ]

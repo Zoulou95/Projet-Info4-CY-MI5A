@@ -1,7 +1,6 @@
 <?php
 session_start();
 require('../includes/getapikey.php');
-include('../includes/header.php');
 include('../includes/profile_manager.php');
 
 // Récupération des données envoyées par CYBank

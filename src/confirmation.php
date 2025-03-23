@@ -3,15 +3,27 @@
 <?php
     session_start();
 
-    include('../includes/header.php');
+    include('../includes/trip_functions.php');
     require('../includes/getapikey.php');
 
     // Users must be logged in to configure their trip
     if(!isset($_SESSION['user'])) {
-        echo "<script>alert('Vous devez être connecté pour configurer votre voyage !'); window.history.back();</script>";
+        echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
         exit;
     }
     
+    if (isConfigValid()) {
+        $trip = $_SESSION['trip'];
+        $number_of_participants = intval($_POST['number_of_participants']);
+
+        // Calculate the total price
+        $total_price = priceCalc($trip, $number_of_participants);
+        $_SESSION['total_price'] = $total_price;
+    } else {
+        displayError("Invalid trip configuration.");
+        exit;
+    }
+
     $transaction_id = uniqid(); 
     $montant = $_SESSION['total_price'];
     $vendeur = "MI-5_A";
@@ -44,22 +56,6 @@
     <div class="container">
         <!-- Navigation bar -->
         <?php displayHeader(); ?>
-
-    <?php
-    include('../includes/trip_functions.php');
-
-    if (isConfigValid()) {
-        $trip = $_SESSION['trip'];
-        $number_of_participants = intval($_POST['number_of_participants']);
-
-        // Calculate the total price
-        $total_price = priceCalc($trip, $number_of_participants);
-        $_SESSION['total_price'] = $total_price;
-    } else {
-        displayError("Invalid trip configuration.");
-        exit;
-    }
-    ?>
 
     <!-- Trip recapitulation -->
     <header class="recap_header">

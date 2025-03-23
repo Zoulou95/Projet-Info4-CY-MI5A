@@ -1,10 +1,12 @@
 <?php
 
-//include('../includes/header.php');
+include('header.php');
 include('footer.php');
 
 // Display error message
 function displayError($message) {
+
+    displayHeader();
 
     // Display error message in the console (for admins, in red color)
     error_log("\033[31mERROR : ". $message . "\033[0m");

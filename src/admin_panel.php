@@ -3,7 +3,7 @@
 
 session_start();
 
-include('../includes/header.php');
+include('../includes/error.php');
 
 $json_data = file_get_contents('../data/user_data.json');
 $users = json_decode($json_data, true);
@@ -15,7 +15,7 @@ $current_users = array_slice($users, $page_index, $users_per_page);
 $total_pages = ceil(count($users) / $users_per_page);
 
 // Rajouter plus de vérifs
-if(!isset($_SESSION['user'])) {
+if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
     displayError($_SESSION['user']['name'] . "is not an admin.");
     displayFooter();
 }
