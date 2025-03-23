@@ -21,6 +21,16 @@ body.no-scroll {
     width: 100%;
 }
 
+.order_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order_text {
+    font-size: 3vh;
+}
+
 .headbar {
     display: flex;
     width: 100%; 
@@ -230,7 +240,7 @@ body.no-scroll {
 }
 
 .back_to_index_button {
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .back_to_search_button:hover, .back_to_index_button:hover {

@@ -234,4 +234,40 @@
     
         echo '</div>';
     }
+
+    // Update a user's loyalty points and travel history
+    function confirmPurchaseUpdate() {
+        $data_file = "../data/user_data.json";
+        $data = dataReader($data_file);
+
+        $user_id = $_SESSION['user']['id'];
+        $user_found = 0;
+
+        // Find user and update information
+        foreach ($data as $key => $user) {
+            if ($user['id'] == $user_id) {
+                $_SESSION['user']['points'] += $_SESSION['points_win'];
+                $data[$key]['points'] = $_SESSION['user']['points'];
+
+                // Create an empty array if necessary
+                if (!isset($data[$key]['travel_history']) || !is_array($data[$key]['travel_history'])) {
+                    $data[$key]['travel_history'] = []; 
+                }
+
+                $data[$key]['travel_history'][] = $_SESSION['trip']['id'];
+
+                // Save new data to JSON file
+                $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
+                if (!file_put_contents($data_file, $new_json_data)) {
+                    displayError("Error updating user_data.json file.");
+                }
+
+                $user_found = 1;
+                break;
+            }
+        }
+        if($user_found == 0) {
+            displayError("User not found for update profile after purchase.");
+        }
+    }
 ?>

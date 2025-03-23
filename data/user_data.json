@@ -125,9 +125,14 @@
         "email": "camille.bonnet@email.com",
         "telephone": "0797701165",
         "password": "$2y$10$EyfDkN0vRAZ7KoqO77Ey1.ajTpOOnlLSvL8trSdwu4M6E3.00r8bO",
-        "role": "standard",
-        "points": 0,
-        "id": "67dc9f417a452"
+        "role": "vip",
+        "points": 2142,
+        "id": "67dc9f417a452",
+        "travel_history": [
+            "4",
+            "13",
+            "13"
+        ]
     },
     {
         "name": "robin",
@@ -239,5 +244,15 @@
         "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
         "id": "67dc9feb99f64"
+    },
+    {
+        "name": "Cauchy",
+        "forename": "John",
+        "email": "johncauchy@mail.com",
+        "telephone": "0901256589",
+        "password": "$2y$10$noNCgAUvFh9DGz04NRaIZOU3THps7NmYLli0M4eVFV6isVt.jhq\/m",
+        "role": "standard",
+        "points": 0,
+        "id": "67deb96be9a79"
     }
 ]
