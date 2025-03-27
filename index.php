@@ -3,7 +3,6 @@
 
     include('includes/logs.php');
     include('includes/trip_functions.php');
-    include('includes/header.php');
 
     $data_file = 'data/trip_data.json';
 ?>

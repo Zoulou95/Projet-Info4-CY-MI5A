@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // Login successful, redirect to user page
                 $_SESSION['user'] = $user; // Store user in session
 
-                writeToServerLog($user['email'] . " has successfully logged in.");
+                writeToServerLog($user['email'] . " has successfully logged in. (ID: ". $_SESSION['user']['id'] . ")");
 
                 header("Location: userpage.php");
                 exit;
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 } else {
     // Redirect to home page if not a POST request
-    header("Location: index.php");
+    displayError("Failed to send log in data.");
     exit;
 }
 ?>

@@ -3,14 +3,42 @@
 <?php
     session_start();
 
-    include('../includes/header.php');
+    include('../includes/trip_functions.php');
+    require('../includes/getapikey.php');
 
     // Users must be logged in to configure their trip
     if(!isset($_SESSION['user'])) {
-        echo "<script>alert('Vous devez être connecté pour configurer votre voyage !'); window.history.back();</script>";
+        echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
         exit;
     }
+    
+    if (isConfigValid()) {
+        $trip = $_SESSION['trip'];
+        $number_of_participants = intval($_POST['number_of_participants']);
+
+        // Calculate the total price
+        $total_price = priceCalc($trip, $number_of_participants);
+        $_SESSION['total_price'] = $total_price;
+    } else {
+        displayError("Invalid trip configuration.");
+        exit;
+    }
+
+    $transaction_id = uniqid(); 
+    $montant = $_SESSION['total_price'];
+    $vendeur = "MI-5_A";
+
+    $retour_url = "http://localhost:8000/src/order_confirmed.php?session=" . session_id();
+
+    $api_key = getAPIKey($vendeur);
+    if (!preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
+        die("Clé API invalide pour le vendeur spécifié.");
+    }
+
+    $control = md5($api_key . "#" . $transaction_id . "#" . $montant . "#" . $vendeur . "#" . $retour_url . "#");
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,22 +56,6 @@
     <div class="container">
         <!-- Navigation bar -->
         <?php displayHeader(); ?>
-
-    <?php
-    include('../includes/trip_functions.php');
-
-    if (isConfigValid()) {
-        $trip = $_SESSION['trip'];
-        $number_of_participants = intval($_POST['number_of_participants']);
-
-        // Calculate the total price
-        $total_price = priceCalc($trip, $number_of_participants);
-        $_SESSION['total_price'] = $total_price;
-    } else {
-        displayError("Invalid trip configuration.");
-        exit;
-    }
-    ?>
 
     <!-- Trip recapitulation -->
     <header class="recap_header">
@@ -104,8 +116,16 @@
             <?php
             $points = $total_price / 100;
             echo $total_price . "€ (" . $points . " points fidelité)";
+            $_SESSION['points_win'] = $points;
             ?></p>
-            <button class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
+            <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
+                <input type="hidden" name="transaction" value="<?php echo $transaction_id; ?>">
+                <input type="hidden" name="montant" value="<?php echo $montant; ?>">
+                <input type="hidden" name="vendeur" value="<?php echo $vendeur; ?>">
+                <input type="hidden" name="retour" value="<?php echo $retour_url; ?>">
+                <input type="hidden" name="control" value="<?php echo $control; ?>">
+                <button type="submit" class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
+            </form>
         </div>
     </section>
 

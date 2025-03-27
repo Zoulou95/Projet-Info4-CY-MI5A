@@ -2,7 +2,6 @@
     session_start();
 
     include('../includes/profile_manager.php');
-    include('../includes/header.php');
 
     $data = dataReader('../data/user_data.json');
     updateInfo($data, '../data/user_data.json');

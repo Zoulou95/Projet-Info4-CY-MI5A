@@ -4,7 +4,6 @@
     session_start();
     
     include("../includes/trip_functions.php");
-    include('../includes/header.php');
 
     $data_file = '../data/trip_data.json';
     $data = dataDecode($data_file);

@@ -2,7 +2,7 @@
 
 <?php
     session_start();
-    include('../includes/header.php');
+    include('../includes/trip_functions.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -118,7 +118,7 @@
         </div>
 
     <!-- Footer -->
-    <?php include('../includes/trip_functions.php'); displayFooter();?>
+    <?php displayFooter();?>
 
     <!-- Script to display drop-down lists -->
     <script>

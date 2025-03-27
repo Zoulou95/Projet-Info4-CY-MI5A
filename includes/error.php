@@ -1,13 +1,20 @@
-<!-- error_page.php -->
-
 <?php
 
+<<<<<<< HEAD
 //include('../includes/header.php');
+=======
+include('header.php');
+>>>>>>> Romain
 include('footer.php');
 
 // Display error message
 function displayError($message) {
 
+<<<<<<< HEAD
+=======
+    displayHeader();
+
+>>>>>>> Romain
     // Display error message in the console (for admins, in red color)
     error_log("\033[31mERROR : ". $message . "\033[0m");
 

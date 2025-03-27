@@ -11,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Inputs verification
-    if (strlen($telephone) != 10) {
-        echo "<script>alert('Veuillez renseigner un numéro de téléphone valide (10 chiffres).'); window.history.back();</script>";
+    if (!preg_match('/^[0-9]{10}$/', $telephone)) {
+        echo "<script>alert('Veuillez entrer un numéro de téléphone valide.'); window.history.back();</script>";
         exit;
     }
-    if (strlen($email) > 30 || strlen($email) < 5) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Veuillez renseigner un mail valide (5 à 30 caractères).'); window.history.back();</script>";
         exit;
     }
