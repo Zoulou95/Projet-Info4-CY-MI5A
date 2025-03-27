@@ -1,9 +1,4 @@
 <?php
-<<<<<<< HEAD
-    session_start();
-
-=======
->>>>>>> Romain
     include('../includes/error.php');
 
     // Read the 'user_data.json' file and convert it into a PHP array
@@ -29,11 +24,7 @@
     function updateInfo($data, $data_file) {
 
         // Change the user role to VIP if he has enough fidelity points
-<<<<<<< HEAD
-        if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
-=======
         if($_SESSION['user']['role'] == "standard" && $_SESSION['user']['points'] >= 300) {
->>>>>>> Romain
             $user_id = $_SESSION['user']['id'];
 
             // Find user and update information
@@ -43,11 +34,7 @@
                 }
             }
     
-<<<<<<< HEAD
-            $_SESSION['user']['role'] == "vip";
-=======
             $_SESSION['user']['role'] = "vip";
->>>>>>> Romain
     
             // Save new data to JSON file
             $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
@@ -247,8 +234,6 @@
     
         echo '</div>';
     }
-<<<<<<< HEAD
-=======
 
     // Update a user's loyalty points and travel history
     function confirmPurchaseUpdate() {
@@ -285,5 +270,4 @@
             displayError("User not found for update profile after purchase.");
         }
     }
->>>>>>> Romain
 ?>
