@@ -199,6 +199,11 @@ label {
     color: #383838;
 }
 
+.fidelity_text {
+    font-size: 3vh;
+    text-align: center;
+}
+
 /* Cards style */
 
 .card-container {

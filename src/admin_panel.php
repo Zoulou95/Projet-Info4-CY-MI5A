@@ -12,7 +12,7 @@ $total_pages = ceil(count($users) / $users_per_page);
 
 // Rajouter plus de vérifs
 if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
-    displayError($_SESSION['user']['name'] . "is not an admin.");
+    displayError("User is not an admin.");
     displayFooter();
 }
 ?>

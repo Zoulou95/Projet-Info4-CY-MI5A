@@ -305,7 +305,7 @@
                     </td>
                     <td><?php echo $trip['price_per_person'];?>€</td>
                     <!-- Dynamic price will be set in JavaScript -->
-                    <td>€</td>
+                    <td><script>€</script></td>
                 </tr>
             </tbody>
         </table>

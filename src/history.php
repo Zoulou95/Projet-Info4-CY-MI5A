@@ -2,7 +2,10 @@
     require_once('../includes/profile_manager.php');
 
     $data = dataReader('../data/user_data.json');
-    updateInfo($data, '../data/user_data.json');
+    if(isset($_SESSION["user"])) {
+        updateInfo($data, '../data/user_data.json');
+    }
+
 ?>
 
 <!-- history.php : allow the user to modify his password -->

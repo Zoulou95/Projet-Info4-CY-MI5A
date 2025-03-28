@@ -2,7 +2,10 @@
     require_once('../includes/profile_manager.php');
 
     $data = dataReader('../data/user_data.json');
-    updateInfo($data, '../data/user_data.json');
+
+    if(isset($_SESSION["user"])) {
+        updateInfo($data, '../data/user_data.json');
+    }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Upload a user's profile picture to the server

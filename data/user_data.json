@@ -106,7 +106,7 @@
         "email": "manon.fournier@email.com",
         "telephone": "0716170286",
         "password": "$2y$10$j8D109BvECHMlipHmrBkv.b54KhojasEDXY5dClHulYl2\/O27dGXe",
-        "role": "standard",
+        "role": "banni",
         "points": 0,
         "id": "67dc9f1498400"
     },
@@ -121,19 +121,20 @@
         "id": "67dc9f2fa711c"
     },
     {
-        "name": "bonnet",
-        "forename": "camille",
+        "name": "Bonnette",
+        "forename": "Camille",
         "email": "camille.bonnet@email.com",
         "telephone": "0797701165",
         "password": "$2y$10$EyfDkN0vRAZ7KoqO77Ey1.ajTpOOnlLSvL8trSdwu4M6E3.00r8bO",
         "role": "vip",
-        "points": 2184,
+        "points": 3348,
         "id": "67dc9f417a452",
         "travel_history": [
             "4",
             "13",
             "13",
-            "12"
+            "12",
+            "13"
         ]
     },
     {
@@ -218,10 +219,11 @@
         "telephone": "0606924612",
         "password": "$2y$10$jwQfQSDwIZ0rKE4dgUFfLO9KjSIM6tVkSZINce20Nqr5tk7HoPUgO",
         "role": "standard",
-        "points": 50,
+        "points": 104,
         "id": "67dc9fb8b0e63",
         "travel_history": [
-            3
+            3,
+            "4"
         ]
     },
     {
