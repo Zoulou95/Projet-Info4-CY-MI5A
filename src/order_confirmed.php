@@ -16,11 +16,6 @@ $control_calcule = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $v
 $verification = ($control_calcule === $control_recu);
 ?>
 
-<?php
-    session_start();
-    include('../includes/header.php');
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
