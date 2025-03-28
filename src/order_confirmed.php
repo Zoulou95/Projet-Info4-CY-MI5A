@@ -1,5 +1,4 @@
 <?php
-session_start();
 require('../includes/getapikey.php');
 require_once('../includes/profile_manager.php');
 

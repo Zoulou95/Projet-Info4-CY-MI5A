@@ -1,8 +1,4 @@
 <?php
-// Lire le fichier JSON
-
-session_start();
-
 require_once('../includes/error.php');
 
 $json_data = file_get_contents('../data/user_data.json');

@@ -1,7 +1,6 @@
 <!-- advanced_search.php : search for a trip based on specific characteristics -->
 
 <?php
-    session_start();
     require_once('../includes/trip_functions.php'); 
 ?>
 

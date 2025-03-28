@@ -1,8 +1,6 @@
 <!-- confirmation.php -->
 
 <?php
-    session_start();
-
     require_once('../includes/trip_functions.php');
     require('../includes/getapikey.php');
 

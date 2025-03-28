@@ -1,6 +1,8 @@
 <?php
 $current_file = $_SERVER['PHP_SELF'];
 
+require_once('session_start.php');
+
 if (basename($current_file) === 'index.php') {
     $path_parent = "";
     $path_src = "src/";

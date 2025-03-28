@@ -22,22 +22,6 @@ function dataDecode($data_file) {
     return $data;
 }
 
-// Find a trip with its id
-function tripFinder($data, $trip_id) {
-    // Check that the trip match the ID in 'trip_data.json'
-    $trip = null;
-    foreach ($data['trip'] as $journey) {
-        if ($journey['id'] == $trip_id) {
-            $trip = $journey;
-            break;
-        }
-    }
-    if ($trip === null) {
-        displayError("trip not found.");
-    }
-    return $trip;
-}
-
 // Retrieves the number of results found during a search (for aesthetic reasons)
 function getTripNumber($data, $tag) {
     $counter = 0;

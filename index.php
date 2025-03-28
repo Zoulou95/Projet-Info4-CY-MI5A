@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     include('includes/logs.php');
     require_once('includes/trip_functions.php');
 

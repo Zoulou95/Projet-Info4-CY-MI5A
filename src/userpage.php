@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     require_once('../includes/profile_manager.php');
 
     $data = dataReader('../data/user_data.json');

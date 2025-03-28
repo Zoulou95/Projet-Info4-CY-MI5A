@@ -1,8 +1,4 @@
-
-
 <?php
-    session_start();
-    
     require_once("../includes/trip_functions.php");
 
     $data_file = '../data/trip_data.json';
