@@ -1,0 +1,134 @@
+/* admin_panel_style.css */
+
+body {
+    background-color: #87c2e7;
+}
+
+/* Admin panel style */
+
+/* We use Flexbox for efficient and responsive element alignment */
+.user_container {
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    width: 70%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: solid 3px #383838; /* anthracite color */
+    border-radius: 20px;
+    background-color: #ffffff; /* white color */
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    background-color: #21a9ff;
+    padding: 25px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3.5vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.user_img {
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    outline: 1px solid #dddddd;
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+}
+
+.user_name {
+    margin-left: 30px;
+    margin-right: 30px; /* Pousse le nom vers la gauche */
+}
+
+.user_privilege {
+    margin-left: 5px; /* Espacement fixe pour aligner les privilèges */
+}
+
+.user_button_container {
+    display: flex;
+    gap: 15px; /* Espace uniforme entre les boutons */
+    margin-left: auto; /* Pousse les boutons vers la droite */
+}
+
+.user_button {
+    font-family: Arial;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.user_status_button {
+    width: auto;
+    height: 6vh;
+    background-color: #00318b; /* dark blue color */
+    color: #ffffff;
+}
+
+.user_ban_button {
+    width: auto;
+    height: 6vh;
+    background-color: #ff0000; /* red color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vh;
+    margin-right: 20px;
+}
+
+.user_ban_button:hover {
+    background-color: #8b0000;
+}
+
+.user_status_button:hover {
+    background-color: #00007a;
+}
+
+.user_button:active {
+    border: 2px solid #ffffff;
+}
+
+.pagination {
+    margin-top: 3%;
+    margin-bottom: -1%;
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3vh;
+    background-color: #21a9ff;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.color_vip {
+    color: yellow;
+}
+
+.color_admin {
+    color: red;
+}
+
+.color_standard {
+    color: #383838;
+}
