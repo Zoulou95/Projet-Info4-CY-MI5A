@@ -3,7 +3,7 @@
 
 session_start();
 
-include('../includes/error.php');
+require_once('../includes/error.php');
 
 $json_data = file_get_contents('../data/user_data.json');
 $users = json_decode($json_data, true);

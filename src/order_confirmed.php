@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('../includes/getapikey.php');
-include('../includes/profile_manager.php');
+require_once('../includes/profile_manager.php');
 
 // Récupération des données envoyées par CYBank
 $transaction = $_GET['transaction'] ?? '';

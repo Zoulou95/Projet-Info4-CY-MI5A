@@ -1,5 +1,5 @@
 <?php
-    include('../includes/error.php');
+    require_once('../includes/error.php');
 
     // Read the 'user_data.json' file and convert it into a PHP array
     function dataReader($data_file) {

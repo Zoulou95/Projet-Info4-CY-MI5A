@@ -1,6 +1,6 @@
 <?php
 
-include('error.php');
+require_once('error.php');
 
 // Function to retrieve useful data from 'trip_data.json file and display specific trip information
 function dataDecode($data_file) {

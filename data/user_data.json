@@ -22,11 +22,12 @@
         "telephone": "0638676646",
         "password": "$2y$10$Hyjw2xSmzE6UmXEVlSFrGuZ4vrqAv\/hxVQQv6JJaWvkE0Qi7y7lvK",
         "role": "vip",
-        "points": 355,
+        "points": 435,
         "id": "67dc9dfc5978d",
         "travel_history": [
             5,
-            2
+            2,
+            "5"
         ]
     },
     {

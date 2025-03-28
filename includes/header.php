@@ -79,7 +79,7 @@ function displayHeader() {
             </form>
         </div>
     </div>
-    <script src="'.$path_parent.'includes/registration.js"></script>';
+    <script src="'.$path_parent.'script/registration.js"></script>';
     }
 
     echo '</div>';

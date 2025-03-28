@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include("../includes/trip_functions.php");
+    require_once("../includes/trip_functions.php");
 
     $data_file = '../data/trip_data.json';
     $decodedData = dataDecode($data_file);
@@ -323,6 +323,6 @@
         <?php displayFooter();?>
 
     <!-- Script to browse a timeline and select steps when choosing a trip -->
-    <script src="../includes/timelineBrowse.js"></script>
+    <script src="../script/timelineBrowse.js"></script>
 </body>
 </html>

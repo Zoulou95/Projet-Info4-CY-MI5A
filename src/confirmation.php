@@ -3,7 +3,7 @@
 <?php
     session_start();
 
-    include('../includes/trip_functions.php');
+    require_once('../includes/trip_functions.php');
     require('../includes/getapikey.php');
 
     // Users must be logged in to configure their trip
