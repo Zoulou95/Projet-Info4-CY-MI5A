@@ -39,7 +39,10 @@
 
     // If the user is logged in, check if a trip is already purchased
     if(isset($_SESSION['user'])) {
-        isPurchased($_SESSION['trip']['id']);
+        if(isPurchased($_SESSION['trip']['id']) == true) {
+            echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
+            exit();
+        }
     }
 ?>
 

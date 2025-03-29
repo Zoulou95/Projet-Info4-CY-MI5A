@@ -196,6 +196,12 @@ body.no-scroll {
     text-decoration: none;
 }
 
+.purchased {
+    color: #ff8c00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .card:hover {
     transform: scale(1.05);
 }

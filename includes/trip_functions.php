@@ -46,10 +46,17 @@ function printCard($journey) {
             <p>'. $journey['subtitle'] . '</p>
             <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-            <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>
-            <a href="../src/trip.php?id=' . $journey['id'] . '" class="explore">➤ Découvrir</a>
-        </div>
-    </div>';
+            <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>';
+            if(isset($_SESSION['user']['travel_history']) && isPurchased($journey['id'])) {
+                echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
+            } else {
+                echo '<a href="../src/trip.php?id=' . $journey['id'] . '" class="explore">➤ Découvrir</a>';
+            }
+    echo
+    '
+    </div>
+    </div>
+    ';
 }
 
 // Display a trip as a map according to a user's quicksearch request
@@ -158,17 +165,25 @@ function displayCards($id_list, $data_file) {
     foreach ($id_list as $trip_id) {
         $trip = tripFinder($data, $trip_id);
         if (!$trip) {
-            displayError("trip not found on cards display.");
+            displayError('trip' . $trip_id . 'not found on cards display.');
         }
         echo
         '<div class="card">
             <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
             <div class="card_content">
                 <h2>' . $trip['presentation_title'] . '</h2>
-                <p>' . $trip['description'] . '</p>
-                <a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Découvrir</a>
-            </div>
-        </div>';
+                <p>' . $trip['description'] . '</p>';
+
+                if(isset($_SESSION['user']['travel_history']) && isPurchased($trip_id)) {
+                    echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
+                } else {
+                    echo '<a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Découvrir</a>';
+                }
+        echo
+        '
+        </div>
+        </div>
+        ';
     }
 }
 
@@ -208,10 +223,9 @@ function displayNoResult() {
 function isPurchased($trip_id) {
     $trip_id = (string) $trip_id;
     if (isset($_SESSION['user']['travel_history']) && in_array($trip_id, $_SESSION['user']['travel_history'])) {
-        echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
-        exit();
+        return true;
     } else {
-        return;
+        return false;
     }
 }
 
