@@ -270,4 +270,65 @@
             displayError("User not found for update profile after purchase.");
         }
     }
+    function savePurchaseDetails() {
+        // Vérifier si le fichier purchase_data.json existe, sinon le créer
+        $purchase_file = "../data/purchase_data.json";
+        if (file_exists($purchase_file)) {
+            $purchases = json_decode(file_get_contents($purchase_file), true);
+            if (!is_array($purchases)) {
+                $purchases = [];
+            }
+        } else {
+            $purchases = [];
+        }
+        
+        // Récupérer toutes les données de la transaction depuis la session et le GET
+        $purchase_data = [
+            "id" => uniqid('purchase_'),
+            "user_id" => $_SESSION['user']['id'],
+            "user_name" => $_SESSION['user']['name'] . ' ' . $_SESSION['user']['forename'],
+            "purchase_date" => date("Y-m-d H:i:s"),
+            "transaction_id" => $_GET['transaction'] ?? '',
+            "transaction_status" => $_GET['status'] ?? '',
+            "montant" => $_GET['montant'] ?? '',
+            "trip_id" => $_SESSION['trip']['id'],
+            "trip_title" => $_SESSION['trip']['title'],
+            "number_of_participants" => $_SESSION['number_of_participants'] ?? 0,
+            "start_date" => $_SESSION['trip']['dates']['start_date'],
+            "end_date" => $_SESSION['trip']['dates']['end_date'],
+            "steps" => [
+                "step_1" => [
+                    "title" => $_SESSION['trip']['step_1']['title'],
+                    "hotel" => $_SESSION['step_1_hotel'] ?? '',
+                    "pension" => $_SESSION['step_1_pension'] ?? '',
+                    "activity" => $_SESSION['step_1_activity'] ?? '',
+                    "participants" => $_SESSION['step_1_participants'] ?? ''
+                ],
+                "step_2" => [
+                    "title" => $_SESSION['trip']['step_2']['title'],
+                    "hotel" => $_SESSION['step_2_hotel'] ?? '',
+                    "pension" => $_SESSION['step_2_pension'] ?? '',
+                    "activity" => $_SESSION['step_2_activity'] ?? '',
+                    "participants" => $_SESSION['step_2_participants'] ?? ''
+                ],
+                "step_3" => [
+                    "title" => $_SESSION['trip']['step_3']['title'],
+                    "hotel" => $_SESSION['step_3_hotel'] ?? '',
+                    "pension" => $_SESSION['step_3_pension'] ?? '',
+                    "activity" => $_SESSION['step_3_activity'] ?? '',
+                    "participants" => $_SESSION['step_3_participants'] ?? ''
+                ]
+            ],
+            "transport" => $_SESSION['transport'] ?? '',
+            "points_earned" => $_SESSION['points_win'] ?? 0
+        ];
+        
+        // Ajouter les données d'achat au tableau
+        $purchases[] = $purchase_data;
+        
+        // Sauvegarder le fichier
+        file_put_contents($purchase_file, json_encode($purchases, JSON_PRETTY_PRINT));
+        
+        return $purchase_data['id'];
+    }
 ?>

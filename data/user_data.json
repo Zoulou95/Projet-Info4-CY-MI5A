@@ -247,7 +247,22 @@
         "telephone": "0626872452",
         "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
-        "id": "67dc9feb99f64"
+        "id": "67dc9feb99f64",
+        "points": 2446,
+        "travel_history": [
+            "11",
+            "7",
+            "6",
+            "3",
+            "3",
+            "3",
+            "3",
+            "6",
+            "8",
+            "2",
+            "2",
+            "2"
+        ]
     },
     {
         "name": "Cauchy",

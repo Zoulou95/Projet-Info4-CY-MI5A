@@ -42,12 +42,16 @@ $verification = ($control_calcule === $control_recu);
             <p class="order_text">Montant : <?php echo htmlspecialchars($montant); ?> €</p>
             <p class="order_text">Statut : <strong><?php echo htmlspecialchars($status); ?></strong></p>
             <?php if ($status === 'accepted'): ?>
-                <p class="order_text" style="color:green;">Paiement accepté. Merci pour votre achat !</p>
-                <?php
-                // Update a user's loyalty points and travel history
-                confirmPurchaseUpdate();
-                ?>
-            <?php else: ?>
+            <p class="order_text" style="color:green;">Paiement accepté. Merci pour votre achat !</p>
+            <?php
+            // Mettre à jour les points de fidélité et l'historique de l'utilisateur
+            confirmPurchaseUpdate();
+                    
+            // Enregistrer les détails complets de l'achat
+            $purchase_id = savePurchaseDetails();
+            ?>
+            <p class="order_text">Numéro de réservation: <strong><?php echo $purchase_id; ?></strong></p>
+        <?php else: ?>
                 <p class="order_text" style="color:red;">Paiement refusé. Veuillez réessayer.</p>
             <?php endif; ?>
         <?php else: ?>

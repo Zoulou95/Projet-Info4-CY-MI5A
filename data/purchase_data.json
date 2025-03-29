@@ -1,0 +1,158 @@
+[
+    {
+        "id": "purchase_67e84c4cbf23a",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-29 19:38:52",
+        "transaction_id": "67e84c4478e0a",
+        "transaction_status": "accepted",
+        "montant": "3800",
+        "trip_id": "2",
+        "trip_title": "Lune de Miel \u00e0 Huahine \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-07-20",
+        "end_date": "2025-07-27",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et d\u00e9tente",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "D\u00e9couverte de la nature",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Repos et retour",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 38
+    },
+    {
+        "id": "purchase_67e84ece4e044",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-29 19:49:34",
+        "transaction_id": "67e84c4478e0a",
+        "transaction_status": "accepted",
+        "montant": "3800",
+        "trip_id": "2",
+        "trip_title": "Lune de Miel \u00e0 Huahine \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-07-20",
+        "end_date": "2025-07-27",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et d\u00e9tente",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "D\u00e9couverte de la nature",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Repos et retour",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 38
+    },
+    {
+        "id": "purchase_67e84ed11cad0",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-29 19:49:37",
+        "transaction_id": "67e84c4478e0a",
+        "transaction_status": "accepted",
+        "montant": "3800",
+        "trip_id": "2",
+        "trip_title": "Lune de Miel \u00e0 Huahine \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-07-20",
+        "end_date": "2025-07-27",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et d\u00e9tente",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "D\u00e9couverte de la nature",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Repos et retour",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 38
+    },
+    {
+        "id": "purchase_67e84ed13fda3",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-29 19:49:37",
+        "transaction_id": "67e84c4478e0a",
+        "transaction_status": "accepted",
+        "montant": "3800",
+        "trip_id": "2",
+        "trip_title": "Lune de Miel \u00e0 Huahine \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-07-20",
+        "end_date": "2025-07-27",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et d\u00e9tente",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "D\u00e9couverte de la nature",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Repos et retour",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 38
+    }
+]
