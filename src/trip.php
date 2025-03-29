@@ -32,6 +32,15 @@
     $trip = tripFinder($decodedData, $trip_id);
 
     $_SESSION['trip'] = $trip;
+
+    if(empty($_SESSION['trip'])) {
+        displayError("Trip affectation failed.");
+    }
+
+    // If the user is logged in, check if a trip is already purchased
+    if(isset($_SESSION['user'])) {
+        isPurchased($_SESSION['trip']['id']);
+    }
 ?>
 
     <div class="container">
@@ -305,7 +314,7 @@
                     </td>
                     <td><?php echo $trip['price_per_person'];?>€</td>
                     <!-- Dynamic price will be set in JavaScript -->
-                    <td><script>€</script></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>

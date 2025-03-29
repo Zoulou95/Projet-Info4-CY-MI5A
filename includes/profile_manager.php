@@ -25,7 +25,7 @@ function dataReader($data_file) {
 function updateInfo($data, $data_file) {
 
     // Change the user role to VIP if he has enough fidelity points
-    if($_SESSION['user']['role'] == "standard" && $_SESSION['user']['points'] >= 300) {
+    if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
         $user_id = $_SESSION['user']['id'];
 
         // Find user and update information

@@ -5,7 +5,6 @@
     if(isset($_SESSION["user"])) {
         updateInfo($data, '../data/user_data.json');
     }
-
 ?>
 
 <!-- history.php : allow the user to modify his password -->

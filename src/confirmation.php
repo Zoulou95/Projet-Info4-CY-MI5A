@@ -36,8 +36,6 @@
     $control = md5($api_key . "#" . $transaction_id . "#" . $montant . "#" . $vendeur . "#" . $retour_url . "#");
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

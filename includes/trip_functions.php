@@ -204,6 +204,17 @@ function displayNoResult() {
     </button>';
 }
 
+// Check if a trip is already purchased by an user
+function isPurchased($trip_id) {
+    $trip_id = (string) $trip_id;
+    if (isset($_SESSION['user']['travel_history']) && in_array($trip_id, $_SESSION['user']['travel_history'])) {
+        echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
+        exit();
+    } else {
+        return;
+    }
+}
+
 // Calculate the travel final price
 function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
