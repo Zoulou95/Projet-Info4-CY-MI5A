@@ -22,7 +22,7 @@
         // Stocker toutes les données du formulaire dans la session pour les récupérer après paiement
         $_SESSION['number_of_participants'] = $number_of_participants;
         $_SESSION['transport'] = $_POST['transports'];
-            
+        $nb_steps = 4;
         // Stocker les données des étapes
         for($i=1; $i<$nb_steps; $i++) {
             $_SESSION['step_'.$i.'_hotel'] = $_POST['hotel_'.$i];
@@ -126,30 +126,15 @@
             $points = $total_price / 100;
             echo $total_price . "€ (" . $points . " points fidelité)";
             $_SESSION['points_win'] = $points;
-            ?></p>
+            ?>
+            </p>
             <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
                 <input type="hidden" name="transaction" value="<?php echo $transaction_id; ?>">
                 <input type="hidden" name="montant" value="<?php echo $montant; ?>">
                 <input type="hidden" name="vendeur" value="<?php echo $vendeur; ?>">
                 <input type="hidden" name="retour" value="<?php echo $retour_url; ?>">
                 <input type="hidden" name="control" value="<?php echo $control; ?>">
-                <input type="hidden" name="trip_title" value="<?php echo $trip['title']; ?>">
-                <input type="hidden" name="number_of_participants" value="<?php echo $number_of_participants; ?>">
-                <input type="hidden" name="transport" value="<?php echo $_POST['transports']; ?>">
-                <input type="hidden" name="total_price" value="<?php echo $total_price; ?>">
-                <input type="hidden" name="start_date" value="<?php echo $trip['dates']['start_date']; ?>">
-                <input type="hidden" name="end_date" value="<?php echo $trip['dates']['end_date']; ?>">
-                <input type="hidden" name="reduction" value="<?php echo ($_SESSION['user']['role'] == "vip") ? "10%" : "Aucune"; ?>">
-                <?php
-                    for($i=1; $i<$nb_steps; $i++) {
-                        echo '<input type="hidden" name="step_' . $i . '_title" value="' . $trip['step_' . $i]['title'] . '">';
-                        echo '<input type="hidden" name="step_' . $i . '_hotel" value="' . $_POST['hotel_' . $i] . '">';
-                        echo '<input type="hidden" name="step_' . $i . '_pension" value="' . $_POST['pension_' . $i] . '">';
-                        echo '<input type="hidden" name="step_' . $i . '_activite" value="' . $_POST['activite_' . $i] . '">';
-                        echo '<input type="hidden" name="step_' . $i . '_participants" value="' . $_POST['participants_' . $i] . '">';
-                    }
-                ?>
-                <button type="submit" class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
+                <button type="submit" class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>
             </form>
         </div>
     </section>

@@ -154,5 +154,356 @@
         },
         "transport": "Aucun",
         "points_earned": 38
+    },
+    {
+        "id": "purchase_67e8784b71e79",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-29 22:46:35",
+        "transaction_id": "67e8783e9ce33",
+        "transaction_status": "accepted",
+        "montant": "8200",
+        "trip_id": "11",
+        "trip_title": "Voyage culturel \u00e0 Raiatea \u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-09-25",
+        "end_date": "2025-10-05",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et immersion dans l'histoire",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "Exploration de l'\u00eele",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Repos et d\u00e9part",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 82
+    },
+    {
+        "id": "purchase_67e878b51ca3f",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-29 22:48:21",
+        "transaction_id": "67e8783e9ce33",
+        "transaction_status": "accepted",
+        "montant": "8200",
+        "trip_id": "11",
+        "trip_title": "Voyage culturel \u00e0 Raiatea \u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-09-25",
+        "end_date": "2025-10-05",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et immersion dans l'histoire",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "Exploration de l'\u00eele",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Repos et d\u00e9part",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 82
+    },
+    {
+        "id": "purchase_67e8d93e5bb5f",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:40:14",
+        "transaction_id": "67e8d935253b4",
+        "transaction_status": "accepted",
+        "montant": "30000",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 4,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "",
+                "pension": "",
+                "activity": "",
+                "participants": ""
+            }
+        },
+        "transport": "B\u00e2teau",
+        "points_earned": 300
+    },
+    {
+        "id": "purchase_67e8d9d6ae103",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:42:46",
+        "transaction_id": "67e8d9cedffef",
+        "transaction_status": "accepted",
+        "montant": "12930",
+        "trip_id": "10",
+        "trip_title": "S\u00e9jour d'aventure \u00e0 Tahiti \u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 4,
+        "start_date": "2025-09-05",
+        "end_date": "2025-09-15",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et exploration de Papeete",
+                "hotel": "Tahiti Pearl (4\u2b50)",
+                "pension": "Diner uniquement",
+                "activity": "D\u00e9gustation de fruits exotiques",
+                "participants": "5"
+            },
+            "step_2": {
+                "title": "Aventure au coeur de l'\u00eele",
+                "hotel": "Tahiti Pearl (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Randonn\u00e9e vers les cascades",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "D\u00e9tente et retour",
+                "hotel": "Tahiti Pearl (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Repos sur la plage",
+                "participants": "2"
+            }
+        },
+        "transport": "B\u00e2teau",
+        "points_earned": 129.3
+    },
+    {
+        "id": "purchase_67e8db30c788b",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:48:32",
+        "transaction_id": "67e8db273e39d",
+        "transaction_status": "accepted",
+        "montant": "93900",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 6,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Exploration des jardins de corail",
+                "participants": "6"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "H\u00e9licopt\u00e8re",
+        "points_earned": 939
+    },
+    {
+        "id": "purchase_67e8db3590345",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:48:37",
+        "transaction_id": "67e8db273e39d",
+        "transaction_status": "accepted",
+        "montant": "93900",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 6,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Exploration des jardins de corail",
+                "participants": "6"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "H\u00e9licopt\u00e8re",
+        "points_earned": 939
+    },
+    {
+        "id": "purchase_67e8db35bdad2",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:48:37",
+        "transaction_id": "67e8db273e39d",
+        "transaction_status": "accepted",
+        "montant": "93900",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 6,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Exploration des jardins de corail",
+                "participants": "6"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "H\u00e9licopt\u00e8re",
+        "points_earned": 939
+    },
+    {
+        "id": "purchase_67e8db4092d01",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:48:48",
+        "transaction_id": "67e8db273e39d",
+        "transaction_status": "accepted",
+        "montant": "93900",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 6,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Exploration des jardins de corail",
+                "participants": "6"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "H\u00e9licopt\u00e8re",
+        "points_earned": 939
+    },
+    {
+        "id": "purchase_67e8db5901014",
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "purchase_date": "2025-03-30 05:49:13",
+        "transaction_id": "67e8db4a06272",
+        "transaction_status": "accepted",
+        "montant": "93900",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 6,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Plong\u00e9e avec les raies mantas",
+                "participants": "6"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "H\u00e9licopt\u00e8re",
+        "points_earned": 939
     }
 ]
