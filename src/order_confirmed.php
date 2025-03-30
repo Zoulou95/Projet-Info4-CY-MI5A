@@ -32,8 +32,20 @@ $verification = ($control_calcule === $control_recu);
 
     <div class="order_container">
         <header class="recap_order">
-            <h1>Merci pour votre réservation !</h1>
-            <p>Votre voyage est confirmé</p>
+            <?php
+                if($status === 'accepted') {
+                    echo
+                    '
+                    <h1>Merci pour votre réservation !</h1>
+                    <p>Votre voyage est confirmé</p>
+                    ';
+                } else {
+                    echo
+                    '
+                    <h1>Échec de la réservation</h1>
+                    ';
+                }
+            ?>
         </header>
 
         <h2 class="order_text">Statut du paiement</h2>
