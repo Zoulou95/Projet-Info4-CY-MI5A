@@ -1,13 +1,13 @@
 <?php
-    require_once('../includes/profile_manager.php');
+    session_start();
+
+    include('../includes/profile_manager.php');
 
     $data = dataReader('../data/user_data.json');
-    if(isset($_SESSION["user"])) {
-        updateInfo($data, '../data/user_data.json');
-    }
+    updateInfo($data, '../data/user_data.json');
 ?>
 
-<!-- history.php : allow the user to modify his password -->
+<!-- history.php : allow the user to see his purchases -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -46,13 +46,11 @@
                 </ul>
             <hr>
 
-
             <!-- User travel history-->
             <?php
-                $id_list = $_SESSION['user']['travel_history'];
-                $data_file = '../data/trip_data.json';
-
-                displayHistory($id_list, $data_file);
+                $user_id = $_SESSION['user']['id'];
+                $purchase_file = '../data/purchase_data.json';
+                displayPurchaseHistory($user_id, $purchase_file);
             ?>
         </div>
     </div>

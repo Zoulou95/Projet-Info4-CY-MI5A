@@ -6,7 +6,6 @@ $transaction_id = uniqid();
 $montant = $_SESSION['total_price'];
 $vendeur = "MI-5_A"; 
 
-
 $retour_url = "http://localhost:8000/src/retour_paiement.php?session=" . session_id();
 
 $api_key = getAPIKey($vendeur);

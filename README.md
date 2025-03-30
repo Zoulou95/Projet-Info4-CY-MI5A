@@ -21,7 +21,7 @@ Our website is a travel agency website that allows you to book and pay for pseud
 
 ## Prerequisites
 
-- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
+- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, Edge, etc.).
 - PHP and a local server are required to run the project locally.
 
 ## Installation
@@ -33,7 +33,7 @@ To clone the repository, use the command `git clone https://github.com/Zoulou95/
 To explore the site, you need to open a local server on your machine.
 
 ### On Debian (or similar Linux distributions):
-1. Ensure PHP is installed. You can install PHP by running: `sudo apt install php`
+1. Ensure PHP is installed. You can install PHP by running: `sudo apt update` and `sudo apt install php`
 
 2. Navigate to the project folder in the terminal.
 
@@ -59,6 +59,12 @@ To explore the site, you need to open a local server on your machine.
 
 4. Open your web browser and go to http://localhost:8000 to view the project.
 
+## Usage
+
+We've created a file named `user_list.txt` in the `/data` folder for easy access to information (passwords are hashed in our database). You'll be able to retrieve user information and run tests according to their roles (standard, vip, admin, banned).
+
+**Please note**: this is not a database.
+
 ## Project structure
 
 ```
@@ -71,11 +77,14 @@ To explore the site, you need to open a local server on your machine.
 │   └── 🎨 ...
 ├── 📂 data
 │   ├── 📊 trip_data.json
-│   └── 📊 user_datajson
+│   └── 📊 ...
 ├── 📂 includes
 │   ├── 📄 header.php
-│   ├── 📄 timelineBrowse.js
 │   └── 📄 ...
+├── 📂 presentation_phase2
+├── 📂 script
+│   ├── 📄 timelineBrowse.js
+│   └── 📄 registration.js
 ├── 📂 src
 │   ├── 📄 admin_panel.php
 │   ├── 📄 trip.php
@@ -85,30 +94,61 @@ To explore the site, you need to open a local server on your machine.
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
-## Page overview
+## File overview
 
-- The pages in the `/includes` folder contain the PHP and JavaScript functions used by all the code for page display and data processing.
+## `/data` files
 
-- The pages in the `/css` folder contain the style sheets used to decorate the website.
- 
-- `index.php` is the default home page when you arrive on the website and contains the website presentation. It contains a registration form and an account creation form.
+`user_data.json` contains information on all users (name, email, hashed password, ID, etc.).
 
-- `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
+`trip_data.json` contains information on all trips (name, ID, price, tags, etc.).
 
-- `advanced_search.php` is a travel search page with several filter fields (dates, locations, options, price, etc.).
+`purchase_data.json` contains information on all purchases (ID, payment status, buyer, etc.).
 
-- `confirmation.php` and `order_confirmed.php` pages respectively summarize a user's choice of a trip and display a message to indicate that the purchase was successful.
+
+## `/includes` files
+
+The pages in the `/includes` folder contain the PHP functions used by all the code for page display and data processing.
 
 - `error.php` displays an error in the server console and to the user in the event of an error.
 
+- `header.php` and `footer.php` display the navigation bar and footer on all pages.
+
+- `logs.php` allows administrators to track website activity in the `server.log` file (login, registration, etc.).
+
+- `profile_manager.php` is the page used to retrieve profile information from our json database, and update it if necessary.
+
+- `trip_function.php` is the page for displaying and configuring trips.
+
+- The functions in `session_start.php` are used to check the existence of cookies or to create them, and to initialize session variables.
+
+## `/script` files
+
+- `timelineBrowse.js` lets you configure the stages of a journey using a timeline that displays a different table with each click, which is more comfortable.
+
+- `registration.js` is the login and registration overlay.
+
+## `/src` files
+ 
+- `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
+
+- `confirmation.php` and `order_confirmed.php` pages respectively summarize a user's choice of a trip and display a message to indicate that the purchase was successful.
+
 - `inscription.php` and `connexion.php` pages contain functions for managing user data and allowing a user to log in.
 
-- `payment.php`
+- `payment.php` is the page for retrieving trip purchase data.
+
+- `purchase_details.php` provides order information for a trip purchased by a user
 
 - `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
 
-- `search.php` includes an integrated quick-search field for sorting trips by a specific tag (e.g soleil, plongée, etc.).
+- `search.php` and `advanced_search.php` includes an integrated quick-search and specific field for sorting trips by a specific tag (e.g soleil, plongée, etc.) or a price, a date.
 
 - `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed.
 
-- `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
+- `update_role.php` allows you to change a user's role and ban a user.
+
+- `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, order history, password, etc.).
+
+---
+
+- `index.php` is the default home page when you arrive on the website and contains the website presentation. It contains a registration form and an account creation form.

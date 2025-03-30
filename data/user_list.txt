@@ -1,4 +1,5 @@
-Liste des mots de passe pour effectuer des tests
+Liste des mots de passe pour effectuer des tests plus facilement :
+
 Prénom | Nom | Email | Téléphone | Mot de passe | role
 ----------------------------------------------------------------------
 Lucas | Martin | lucas.martin@email.com | 0730027127 | 4WQs0PQ7TMTS

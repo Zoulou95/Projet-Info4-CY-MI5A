@@ -23,32 +23,34 @@ function dataReader($data_file) {
 
 // Update account informations
 function updateInfo($data, $data_file) {
+    if(isset($_SESSION['user'])) {
+        // Change the user role to VIP if he has enough fidelity points
+        if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
+            $user_id = $_SESSION['user']['id'];
 
-    // Change the user role to VIP if he has enough fidelity points
-    if($_SESSION['user']['role'] === "standard" && $_SESSION['user']['points'] >= 300) {
-        $user_id = $_SESSION['user']['id'];
+            // Find user and update information
+            foreach ($data as $key => $user) {
+                if ($user['id'] == $user_id) {
+                    $data[$key]['role'] = "vip";
+                }
+            }
 
-        // Find user and update information
-        foreach ($data as $key => $user) {
-            if ($user['id'] == $user_id) {
-                $data[$key]['role'] = "vip";
+            $_SESSION['user']['role'] = "vip";
+
+            // Update travel history
+            if(isset($data[$key]['travel_history'])) {
+                $_SESSION['user']['travel_history'] = $data[$key]['travel_history'];
+            }
+
+            // Save new data to JSON file
+            $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
+            if (!file_put_contents($data_file, $new_json_data)) {
+                displayError("Error updating user_data.json file.");
             }
         }
-
-        $_SESSION['user']['role'] = "vip";
-
-        // Save new data to JSON file
-        $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
-        if (!file_put_contents($data_file, $new_json_data)) {
-            displayError("Error updating user_data.json file.");
-        }
-    }
-
-    // Find user and update information
-    foreach ($data as $key => $user) {
-        if ($user['id'] == $_SESSION['user']['id']) {
-            $_SESSION['user']['travel_history'] = $data[$key]['travel_history'];
-        }
+    } else {
+        echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
+        exit;
     }
 }
 
@@ -131,6 +133,7 @@ function editInfo($data, $data_file) {
     }
 }
 
+// Update password
 function updatePassword() {
     if(isset($_POST['new_password']) && isset($_POST['password']) && isset($_POST['confirm_password'])) {
         $confirm_password = $_POST['confirm_password'];
@@ -202,42 +205,6 @@ function tripFinder($data, $trip_id) {
     return $trip;
 }
 
-// Display trip presentation cards according to id provided
-function displayHistory($id_list, $data_file) {
-    $data = dataReader($data_file);
-
-
-    
-    if(empty($id_list)) {
-        echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
-        exit;
-    } else {
-        echo '<h1 class="history_text"><b>Historique de vos voyages</b></h1>';
-    }
-
-    echo '<p class="fidelity_text">Points de fidelité  : <b>' . $_SESSION["user"]["points"] . '</b></p>';
-    
-    echo '<br /><br />';
-    echo '<div class="card-container">';
-
-    foreach ($id_list as $trip_id) {
-        $trip = tripFinder($data, $trip_id);
-        if (!$trip) {
-            displayError("Trip not found on cards display.");
-        }
-        echo
-        '<div class="card">
-            <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
-            <div class="card_content">
-                <h2>' . $trip['presentation_title'] . '</h2>
-                <a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Consulter ma réservation</a>
-            </div>
-        </div>';
-    }
-
-    echo '</div>';
-}
-
 // Update a user's loyalty points and travel history
 function confirmPurchaseUpdate() {
     $data_file = "../data/user_data.json";
@@ -271,6 +238,118 @@ function confirmPurchaseUpdate() {
     }
     if($user_found == 0) {
         displayError("User not found for update profile after purchase.");
+    }
+}
+
+// Save in 'purchase_data.json' all purchase details
+function savePurchaseDetails() {
+    // Check if the file purchase_data.json exists, if not create it
+    $purchase_file = "../data/purchase_data.json";
+    if (file_exists($purchase_file)) {
+        $purchases = json_decode(file_get_contents($purchase_file), true);
+        if (!is_array($purchases)) {
+            $purchases = [];
+        }
+    } else {
+        $purchases = [];
+    }
+    
+    // Retrieve all transaction data from the session and GET
+    $purchase_data = [
+        "id" => uniqid('purchase_'),
+        "user_id" => $_SESSION['user']['id'],
+        "user_name" => $_SESSION['user']['name'] . ' ' . $_SESSION['user']['forename'],
+        "purchase_date" => date("Y-m-d H:i:s"),
+        "transaction_id" => $_GET['transaction'] ?? '',
+        "transaction_status" => $_GET['status'] ?? '',
+        "montant" => $_GET['montant'] ?? '',
+        "trip_id" => $_SESSION['trip']['id'],
+        "trip_title" => $_SESSION['trip']['title'],
+        "number_of_participants" => $_SESSION['number_of_participants'] ?? 0,
+        "start_date" => $_SESSION['trip']['dates']['start_date'],
+        "end_date" => $_SESSION['trip']['dates']['end_date'],
+        "steps" => [
+            "step_1" => [
+                "title" => $_SESSION['trip']['step_1']['title'],
+                "hotel" => $_SESSION['step_1_hotel'] ?? '',
+                "pension" => $_SESSION['step_1_pension'] ?? '',
+                "activity" => $_SESSION['step_1_activity'] ?? '',
+                "participants" => $_SESSION['step_1_participants'] ?? ''
+            ],
+            "step_2" => [
+                "title" => $_SESSION['trip']['step_2']['title'],
+                "hotel" => $_SESSION['step_2_hotel'] ?? '',
+                "pension" => $_SESSION['step_2_pension'] ?? '',
+                "activity" => $_SESSION['step_2_activity'] ?? '',
+                "participants" => $_SESSION['step_2_participants'] ?? ''
+            ],
+            "step_3" => [
+                "title" => $_SESSION['trip']['step_3']['title'],
+                "hotel" => $_SESSION['step_3_hotel'] ?? '',
+                "pension" => $_SESSION['step_3_pension'] ?? '',
+                "activity" => $_SESSION['step_3_activity'] ?? '',
+                "participants" => $_SESSION['step_3_participants'] ?? ''
+            ]
+        ],
+        "transport" => $_SESSION['transport'] ?? '',
+        "points_earned" => $_SESSION['points_win'] ?? 0
+    ];
+    
+    // Add purchase data to table
+    $purchases[] = $purchase_data;
+    
+    // Save file
+    file_put_contents($purchase_file, json_encode($purchases, JSON_PRETTY_PRINT));
+    
+    return $purchase_data['id'];
+}
+
+// Displays trip history from purchase_data.json and trip_data.json files
+function displayPurchaseHistory($user_id, $purchase_file) {
+    if (file_exists($purchase_file)) {
+        $purchases = json_decode(file_get_contents($purchase_file), true);
+        $trip_data_file = '../data/trip_data.json';
+        $trip_data = dataReader($trip_data_file);
+
+        if (!is_array($purchases) || empty($purchases)) {
+            echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+            return;
+        }
+
+        // Filtrer les achats pour l'utilisateur courant
+        $user_purchases = array_filter($purchases, function($purchase) use ($user_id) {
+            return $purchase['user_id'] == $user_id;
+        });
+
+        if (empty($user_purchases)) {
+            echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+            return;
+        }
+
+        echo '<h1 class="history_text"><b>Historique de vos voyages</b></h1>';
+        echo '<p class="fidelity_text">Points de fidelité  : <b>' . $_SESSION["user"]["points"] . '</b></p>';
+        echo '<br /><br />';
+        echo '<div class="card-container">';
+
+        foreach ($user_purchases as $purchase) {
+        // Retrieve complete trip details from trip_data.json
+            $trip = tripFinder($trip_data, $purchase['trip_id']);
+
+            if ($trip) {
+                echo
+                '<div class="card">
+                    <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
+                    <div class="card_content">
+                        <h2>' . $purchase['trip_title'] . '</h2>
+                        <p>Date: ' . $purchase['start_date'] . ' au ' . $purchase['end_date'] . '</p>
+                        <a href="../src/purchase_details.php?id=' . $purchase['id'] . '" class="explore">➤ Consulter ma réservation</a>
+                    </div>
+                </div>';
+            }
+        }
+        echo '</div>';
+    } else {
+        displayError("Le fichier purchase_data.json est introuvable.");
     }
 }
 ?>

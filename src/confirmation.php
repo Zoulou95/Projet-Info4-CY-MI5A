@@ -1,7 +1,9 @@
 <!-- confirmation.php -->
 
 <?php
-    require_once('../includes/trip_functions.php');
+    session_start();
+
+    include('../includes/trip_functions.php');
     require('../includes/getapikey.php');
 
     // Users must be logged in to configure their trip
@@ -9,7 +11,15 @@
         echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
         exit;
     }
-    
+
+    // If the user is logged in, check if a trip is already purchased
+    if(isset($_SESSION['user'])) {
+        if(isPurchased($_SESSION['trip']['id']) == true) {
+            echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
+            exit();
+        }
+    }
+
     if (isConfigValid()) {
         $trip = $_SESSION['trip'];
         $number_of_participants = intval($_POST['number_of_participants']);
@@ -17,12 +27,23 @@
         // Calculate the total price
         $total_price = priceCalc($trip, $number_of_participants);
         $_SESSION['total_price'] = $total_price;
+        // Stocker toutes les données du formulaire dans la session pour les récupérer après paiement
+        $_SESSION['number_of_participants'] = $number_of_participants;
+        $_SESSION['transport'] = $_POST['transports'];
+        $nb_steps = 4;
+        // Stocker les données des étapes
+        for($i=1; $i<$nb_steps; $i++) {
+            $_SESSION['step_'.$i.'_hotel'] = $_POST['hotel_'.$i];
+            $_SESSION['step_'.$i.'_pension'] = $_POST['pension_'.$i];
+            $_SESSION['step_'.$i.'_activity'] = $_POST['activite_'.$i];
+            $_SESSION['step_'.$i.'_participants'] = $_POST['participants_'.$i];
+        }
     } else {
         displayError("Invalid trip configuration.");
         exit;
     }
 
-    $transaction_id = uniqid(); 
+    $transaction_id = uniqid();
     $montant = $_SESSION['total_price'];
     $vendeur = "MI-5_A";
 
@@ -66,7 +87,7 @@
             <p><strong>Nombre de participants : </strong><?php echo $number_of_participants; ?> personnes</p>
             <p><strong>Transport : </strong><?php echo $_POST['transports']; ?></p>
             <p><strong>Prix total : </strong><?php echo $total_price; ?>€</p>
-            <p><strong>Prix par personne : </strong><?php echo $total_price / $number_of_participants; ?>€</p>
+            <p><strong>Prix par personne : </strong><?php echo round($total_price / $number_of_participants); ?>€</p>
             <p><strong>Date de départ : </strong><?php echo $trip['dates']['start_date']; ?></p>
             <p><strong>Date de retour : </strong><?php echo $trip['dates']['end_date']; ?></p>
             <p><strong>Réduction : </strong>
@@ -113,14 +134,15 @@
             $points = $total_price / 100;
             echo $total_price . "€ (" . $points . " points fidelité)";
             $_SESSION['points_win'] = $points;
-            ?></p>
+            ?>
+            </p>
             <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
                 <input type="hidden" name="transaction" value="<?php echo $transaction_id; ?>">
                 <input type="hidden" name="montant" value="<?php echo $montant; ?>">
                 <input type="hidden" name="vendeur" value="<?php echo $vendeur; ?>">
                 <input type="hidden" name="retour" value="<?php echo $retour_url; ?>">
                 <input type="hidden" name="control" value="<?php echo $control; ?>">
-                <button type="submit" class="recap_pay_now" onclick="window.location.href='payment.php';">Payer maintenant (Sécurisé 🔒)</button>
+                <button type="submit" class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>
             </form>
         </div>
     </section>

@@ -4,8 +4,12 @@ session_start();
 require_once('profile_manager.php');
 require_once('error.php');
 
-if (isset($_SESSION["user"]["id"]) && isset($_COOKIE["identification"])) {
-    return;
+function banishment() {
+    echo "<script>alert('Vous êtes banni.'); window.location.href = 'https://google.com/';</script>";
+    session_unset();
+    session_destroy();
+    setcookie("identification", "", time() - 3600, "/");
+    exit();
 }
 
 // Recovering information from a json file
@@ -36,6 +40,15 @@ function recoverInfo($id) {
     }
 }
 
+if (isset($_SESSION["user"]["id"]) && isset($_COOKIE["identification"])) {
+    recoverInfo($_COOKIE["identification"]);
+    if($_SESSION["user"]["role"] === "banni") {
+        banishment();
+    } else {
+        return;
+    }
+}
+
 if (isset($_SESSION["user"]["id"])) {
     if (!isset($_COOKIE["identification"])) {
         setcookie("identification", $_SESSION["user"]["id"], time() + 30 * 24 * 60 * 60, "/"); // Store encrypted ID in the cookie
@@ -44,10 +57,8 @@ if (isset($_SESSION["user"]["id"])) {
     recoverInfo($_COOKIE["identification"]); // Restore the user ID from the cookie
 }
 
+// Prevent banned users from accessing the site at log in
 if (isset($_SESSION["user"]["role"]) && $_SESSION["user"]["role"] === "banni") {
-    echo "<script>alert('Vous êtes banni.'); window.location.href = 'https://cats.com/';</script>";
-    session_unset();
-    session_destroy();
-    exit();
+    banishment();
 }
 ?>

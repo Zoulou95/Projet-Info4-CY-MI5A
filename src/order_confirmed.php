@@ -1,8 +1,9 @@
 <?php
+session_start();
 require('../includes/getapikey.php');
-require_once('../includes/profile_manager.php');
+include('../includes/profile_manager.php');
 
-// Récupération des données envoyées par CYBank
+// Retrieve data sent by CYBank
 $transaction = $_GET['transaction'] ?? '';
 $montant = $_GET['montant'] ?? '';
 $vendeur = $_GET['vendeur'] ?? '';
@@ -41,12 +42,16 @@ $verification = ($control_calcule === $control_recu);
             <p class="order_text">Montant : <?php echo htmlspecialchars($montant); ?> €</p>
             <p class="order_text">Statut : <strong><?php echo htmlspecialchars($status); ?></strong></p>
             <?php if ($status === 'accepted'): ?>
-                <p class="order_text" style="color:green;">Paiement accepté. Merci pour votre achat !</p>
-                <?php
-                // Update a user's loyalty points and travel history
-                confirmPurchaseUpdate();
-                ?>
-            <?php else: ?>
+            <p class="order_text" style="color:green;">Paiement accepté. Merci pour votre achat !</p>
+            <?php
+            // Update loyalty points and user history
+            confirmPurchaseUpdate();
+                    
+            // Save complete purchase details
+            $purchase_id = savePurchaseDetails();
+            ?>
+            <p class="order_text">Numéro de réservation: <strong><?php echo $purchase_id; ?></strong></p>
+        <?php else: ?>
                 <p class="order_text" style="color:red;">Paiement refusé. Veuillez réessayer.</p>
             <?php endif; ?>
         <?php else: ?>
