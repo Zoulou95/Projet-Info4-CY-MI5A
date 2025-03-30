@@ -27,11 +27,11 @@
         // Calculate the total price
         $total_price = priceCalc($trip, $number_of_participants);
         $_SESSION['total_price'] = $total_price;
-        // Stocker toutes les données du formulaire dans la session pour les récupérer après paiement
+        // Store all form data in the session for retrieval after payment
         $_SESSION['number_of_participants'] = $number_of_participants;
         $_SESSION['transport'] = $_POST['transports'];
         $nb_steps = 4;
-        // Stocker les données des étapes
+        // Store stage data
         for($i=1; $i<$nb_steps; $i++) {
             $_SESSION['step_'.$i.'_hotel'] = $_POST['hotel_'.$i];
             $_SESSION['step_'.$i.'_pension'] = $_POST['pension_'.$i];

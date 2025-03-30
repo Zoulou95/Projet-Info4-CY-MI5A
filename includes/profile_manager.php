@@ -311,7 +311,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
             return;
         }
 
-        // Filtrer les achats pour l'utilisateur courant
+        // Filter purchases for current user
         $user_purchases = array_filter($purchases, function($purchase) use ($user_id) {
             return $purchase['user_id'] == $user_id;
         });

@@ -44,17 +44,17 @@ body {
 
 .user_name {
     margin-left: 30px;
-    margin-right: 30px; /* Pousse le nom vers la gauche */
+    margin-right: 30px; /* Push the name to the left */
 }
 
 .user_privilege {
-    margin-left: 5px; /* Espacement fixe pour aligner les privilèges */
+    margin-left: 5px; /* Fixed spacing to align privileges */
 }
 
 .user_button_container {
     display: flex;
-    gap: 15px; /* Espace uniforme entre les boutons */
-    margin-left: auto; /* Pousse les boutons vers la droite */
+    gap: 15px; /* Uniform spacing between buttons */
+    margin-left: auto; /* Push buttons to the right */
 }
 
 .user_button {
