@@ -201,40 +201,6 @@
         return $trip;
     }
 
-    // Display trip presentation cards according to id provided
-    function displayHistory($id_list, $data_file) {
-        $data = dataReader($data_file);
-    
-
-        
-        if(empty($id_list)) {
-            echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
-            exit;
-        } else {
-            echo '<h1 class="history_text"><b>Historique de vos voyages</b></h1>';
-        }
-        
-        echo '<br /><br />';
-        echo '<div class="card-container">';
-
-        foreach ($id_list as $trip_id) {
-            $trip = tripFinder($data, $trip_id);
-            if (!$trip) {
-                displayError("Trip not found on cards display.");
-            }
-            echo
-            '<div class="card">
-                <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
-                <div class="card_content">
-                    <h2>' . $trip['presentation_title'] . '</h2>
-                    <a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Consulter ma réservation</a>
-                </div>
-            </div>';
-        }
-    
-        echo '</div>';
-    }
-
     // Update a user's loyalty points and travel history
     function confirmPurchaseUpdate() {
         $data_file = "../data/user_data.json";
@@ -330,5 +296,54 @@
         file_put_contents($purchase_file, json_encode($purchases, JSON_PRETTY_PRINT));
         
         return $purchase_data['id'];
+    }
+
+    // Affiche l'historique des voyages à partir du fichier purchase_data.json et trip_data.json
+    function displayPurchaseHistory($user_id, $purchase_file) {
+        if (file_exists($purchase_file)) {
+            $purchases = json_decode(file_get_contents($purchase_file), true);
+            $trip_data_file = '../data/trip_data.json';
+            $trip_data = dataReader($trip_data_file);
+
+            if (!is_array($purchases) || empty($purchases)) {
+                echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+                return;
+            }
+
+            // Filtrer les achats pour l'utilisateur courant
+            $user_purchases = array_filter($purchases, function($purchase) use ($user_id) {
+                return $purchase['user_id'] == $user_id;
+            });
+
+            if (empty($user_purchases)) {
+                echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+                return;
+            }
+
+            echo '<h1 class="history_text"><b>Historique de vos voyages</b></h1>';
+            echo '<br /><br />';
+            echo '<div class="card-container">';
+
+            foreach ($user_purchases as $purchase) {
+                // Récupérer les détails complets du voyage depuis trip_data.json
+                $trip = tripFinder($trip_data, $purchase['trip_id']);
+
+                if ($trip) {
+                    echo
+                    '<div class="card">
+                        <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
+                        <div class="card_content">
+                            <h2>' . $purchase['trip_title'] . '</h2>
+                            <p>Date: ' . $purchase['start_date'] . ' au ' . $purchase['end_date'] . '</p>
+                            <a href="../src/purchase_details.php?id=' . $purchase['id'] . '" class="explore">➤ Consulter ma réservation</a>
+                        </div>
+                    </div>';
+                }
+            }
+
+            echo '</div>';
+        } else {
+            displayError("Le fichier purchase_data.json est introuvable.");
+        }
     }
 ?>

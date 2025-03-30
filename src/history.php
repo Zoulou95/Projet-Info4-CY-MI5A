@@ -49,10 +49,9 @@
 
             <!-- User travel history-->
             <?php
-                $id_list = $_SESSION['user']['travel_history'];
-                $data_file = '../data/trip_data.json';
-
-                displayHistory($id_list, $data_file);
+                $user_id = $_SESSION['user']['id'];
+                $purchase_file = '../data/purchase_data.json';
+                displayPurchaseHistory($user_id, $purchase_file);
             ?>
         </div>
     </div>
