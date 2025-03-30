@@ -21,7 +21,8 @@ Our website is a travel agency website that allows you to book and pay for pseud
 
 ## Prerequisites
 
-A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, ...).
+- A web browser that supports HTML5, CSS3 and JavaScript (Chrome, Firefox, Edge, etc.).
+- PHP and a local server are required to run the project locally.
 
 ## Installation
 
@@ -29,52 +30,125 @@ To clone the repository, use the command `git clone https://github.com/Zoulou95/
 
 ## Utilisation
 
-To explore the site, you can open `index.html`, which will redirect you to all the other pages.
+To explore the site, you need to open a local server on your machine.
+
+### On Debian (or similar Linux distributions):
+1. Ensure PHP is installed. You can install PHP by running: `sudo apt update` and `sudo apt install php`
+
+2. Navigate to the project folder in the terminal.
+
+3. Start the PHP built-in server with the command: `php -S localhost:8000`
+
+4. Open your web browser and go to http://localhost:8000 to view the project.
+
+### On Windows:
+1. Install PHP from the official website: https://www.php.net/downloads.php
+
+2. Navigate to the project folder in the terminal.
+
+3. Start the PHP built-in server with the command: `php -S localhost:8000`
+
+4. Open your web browser and go to http://localhost:8000 to view the project.
+
+### On macOS:
+1. Install PHP via Homebrew, use `brew install php`.
+
+2. Navigate to the project folder in the terminal.
+
+3. Start the PHP built-in server with the command: `php -S localhost:8000`
+
+4. Open your web browser and go to http://localhost:8000 to view the project.
+
+## Usage
+
+We've created a file named `user_list.txt` in the `/data` folder for easy access to information (passwords are hashed in our database). You'll be able to retrieve user information and run tests according to their roles (standard, vip, admin, banned).
+
+**Please note**: this is not a database.
 
 ## Project structure
 
 ```
+📦 CyLanta Project
 ├── 📂 assets
 │   ├── 🖼️ images
 │   └── 🎬 video
-├── 📂 destinations
-│   ├── 📄 presentation_bora.html
-│   └── ....
-├── 📂 src
-│   ├── 📄 admin_panel.html
-│   ├── 📄 advanced_search.html
-│   ├── 📄 search.html
-│   ├── 📄 presentation_style.css
-│   ├── 📄 userpage.html
-│   ├── 📄 userpage_security.html
+├── 📂 css
 │   ├── 🎨 admin_panel_style.css
-│   ├── 🎨 advanced_search_style.css
-│   ├── 🎨 base_style.css
-│   └── ...
-├── 📂 presentation_phase1
-│   └── 🖼️ screenshots
+│   └── 🎨 ...
+├── 📂 data
+│   ├── 📊 trip_data.json
+│   └── 📊 ...
+├── 📂 includes
+│   ├── 📄 header.php
+│   └── 📄 ...
+├── 📂 presentation_phase2
+├── 📂 script
+│   ├── 📄 timelineBrowse.js
+│   └── 📄 registration.js
+├── 📂 src
+│   ├── 📄 admin_panel.php
+│   ├── 📄 trip.php
+│   └── 📄 ...
 ├── 📄 CyLanta_Charte_Graphique.pdf
-├── 🏠 index.html
+├── 🏠 index.php
 ├── 📄 Rapport_Projet_Info_P2MI5-A.pdf
 ```
 
-## Overview
+## File overview
 
-- `base_style.css` is the default style sheet for all other pages: it defines their structure and the style of the navigation bar and footers.
+## `/data` files
 
-- `presentation_style.css` is the default style sheet for all presentation pages located in `/destination`.
+`user_data.json` contains information on all users (name, email, hashed password, ID, etc.).
+
+`trip_data.json` contains information on all trips (name, ID, price, tags, etc.).
+
+`purchase_data.json` contains information on all purchases (ID, payment status, buyer, etc.).
+
+
+## `/includes` files
+
+The pages in the `/includes` folder contain the PHP functions used by all the code for page display and data processing.
+
+- `error.php` displays an error in the server console and to the user in the event of an error.
+
+- `header.php` and `footer.php` display the navigation bar and footer on all pages.
+
+- `logs.php` allows administrators to track website activity in the `server.log` file (login, registration, etc.).
+
+- `profile_manager.php` is the page used to retrieve profile information from our json database, and update it if necessary.
+
+- `trip_function.php` is the page for displaying and configuring trips.
+
+- The functions in `session_start.php` are used to check the existence of cookies or to create them, and to initialize session variables.
+
+## `/script` files
+
+- `timelineBrowse.js` lets you configure the stages of a journey using a timeline that displays a different table with each click, which is more comfortable.
+
+- `registration.js` is the login and registration overlay.
+
+## `/src` files
  
-- The page `index.html` is the default home page when you arrive on the website. It contains the website presentation and redirects to more specific search pages. It contains a registration form and an account creation form.
+- `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
 
-- `admin_panel.html` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
+- `confirmation.php` and `order_confirmed.php` pages respectively summarize a user's choice of a trip and display a message to indicate that the purchase was successful.
 
-- `advanced_search.html` is a travel search page with several filter fields (dates, locations, options, price, etc.).
+- `inscription.php` and `connexion.php` pages contain functions for managing user data and allowing a user to log in.
 
-- `search.html` includes an integrated quick-search field for sorting trips by destination.
+- `payment.php` is the page for retrieving trip purchase data.
 
-- `userpage.html` displays a logged-in user's own profile with buttons for modifying the various fields (name, email, etc.).
+- `purchase_details.php` provides order information for a trip purchased by a user
 
-- `userpage_security.html` allows the user to modify his password.
-**NOTE** : this page is temporary, we will integrate the security page into `userpage.html` when we get to phase 2 (JavaScript).
+- `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
 
-- The presentations pages in the `/destinations` folder are used to display and present the various holidays available and their characteristics (price, user ratings, etc.).
+- `search.php` and `advanced_search.php` includes an integrated quick-search and specific field for sorting trips by a specific tag (e.g soleil, plongée, etc.) or a price, a date.
+
+- `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed.
+
+- `update_role.php` allows you to change a user's role and ban a user.
+
+- `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, order history, password, etc.).
+
+---
+
+- `index.php` is the default home page when you arrive on the website and contains the website presentation. It contains a registration form and an account creation form.
