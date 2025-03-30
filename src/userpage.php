@@ -57,7 +57,8 @@
                     ?>
                 </label>
                 <p>Changer votre photo de profil</p>
-                <input name="profile_picture" type="file" accept="image/jpeg, image/png" />
+                <p>(format jpg uniquement)</p>
+                <input name="profile_picture" type="file" accept="image/jpeg" />
 
                 <!-- Table showing user status (e.g. VIP, admin, etc.) -->
                 <table class="subscription_table">

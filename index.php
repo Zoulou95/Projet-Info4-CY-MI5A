@@ -49,7 +49,6 @@
                 $id_list[] = $num;
             }
         }
-
         displayCards($id_list, $data_file);
     ?>
     </div>

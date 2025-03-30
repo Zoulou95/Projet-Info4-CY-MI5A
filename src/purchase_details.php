@@ -2,13 +2,13 @@
 
 include('../includes/profile_manager.php');
 
-// Vérifiez que l'utilisateur est connecté
+// Check that the user is logged in
 if (!isset($_SESSION['user'])) {
     echo "<script>alert('Vous devez être connecté pour voir les détails de votre voyage !'); window.location.href='login.php';</script>";
     exit;
 }
 
-// Récupérer l'ID de la transaction ou un identifiant unique depuis l'URL
+// Retrieve transaction ID or unique identifier from URL
 $purchase_id = $_GET['id'] ?? null;
 
 if (!$purchase_id) {
@@ -16,11 +16,11 @@ if (!$purchase_id) {
     exit;
 }
 
-// Lire les données de purchase_data.json
+// Read data from purchase_data.json
 $purchase_data_file = '../data/purchase_data.json';
 $purchase_data = json_decode(file_get_contents($purchase_data_file), true);
 
-// Trouver les détails du voyage correspondant à l'ID
+// Find trip details corresponding to the ID
 $purchase_details = null;
 foreach ($purchase_data as $purchase) {
     if ($purchase['id'] == $purchase_id) {
