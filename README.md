@@ -35,7 +35,7 @@ To explore the site, you need to open a local server on your machine.
 ### On Debian (or similar Linux distributions):
 1. Ensure PHP is installed. You can install PHP by running: `sudo apt update` and `sudo apt install php`
 
-2. Navigate to the project folder in the terminal.
+2. Navigate in the project folder in the terminal (same directory as `index.php`).
 
 3. Start the PHP built-in server with the command: `php -S localhost:8000`
 
@@ -44,7 +44,7 @@ To explore the site, you need to open a local server on your machine.
 ### On Windows:
 1. Install PHP from the official website: https://www.php.net/downloads.php
 
-2. Navigate to the project folder in the terminal.
+2. Navigate in the project folder in the terminal (same directory as `index.php`).
 
 3. Start the PHP built-in server with the command: `php -S localhost:8000`
 
@@ -53,7 +53,7 @@ To explore the site, you need to open a local server on your machine.
 ### On macOS:
 1. Install PHP via Homebrew, use `brew install php`.
 
-2. Navigate to the project folder in the terminal.
+2. Navigate in the project folder in the terminal (same directory as `index.php`).
 
 3. Start the PHP built-in server with the command: `php -S localhost:8000`
 
@@ -62,6 +62,7 @@ To explore the site, you need to open a local server on your machine.
 ## Usage
 
 We've created a file named `user_list.txt` in the `/data` folder for easy access to information (passwords are hashed in our database). You'll be able to retrieve user information and run tests according to their roles (standard, vip, admin, banned).
+Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 
 **Please note**: this is not a database.
 
