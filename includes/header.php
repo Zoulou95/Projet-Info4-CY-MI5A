@@ -29,6 +29,7 @@ function displayHeader() {
     if (isset($_SESSION['user'])) {
         echo '
         <div class="headbar_right">
+            <a class="headbar_my_space" href="'.$path_src.'cart.php">Mon panier 🛒</a>
             <a class="headbar_my_space" href="'.$path_src.'userpage.php">Mon espace</a>
             <a href="'.$path_src.'userpage.php">
                 <img class="user_img_nav" src="'.$path_parent.'assets/profile_pic/';

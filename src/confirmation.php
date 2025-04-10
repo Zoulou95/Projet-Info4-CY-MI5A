@@ -8,7 +8,7 @@
 
     // Users must be logged in to configure their trip
     if(!isset($_SESSION['user'])) {
-        echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
+        echo "<script>alert('Vous devez être connecté pour ajouter ce voyage à votre panier !'); window.history.back();</script>";
         exit;
     }
 

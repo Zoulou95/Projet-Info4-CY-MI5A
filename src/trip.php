@@ -109,6 +109,9 @@
             </div>
         </div>
 
+        <h3>Détails du séjour</h3>
+        <hr class="underline_timeline line" />
+
         <h3>Configuration des étapes</h3>
         <hr class="underline_timeline line" />
         
@@ -122,7 +125,7 @@
             </div>
         </div>
 
-        <form action="confirmation.php" method="post">
+        <form action="cart.php" method="post">
             <!-- First board -->
             <div class="board steps_board">
                 <h3 class="legend">Étape 1: <?php echo $trip['step_1']['title'];?></h3>
@@ -323,7 +326,7 @@
         </table>
         </div>
             <button class="reservation_button" type="submit">
-                <p class="reservation_text">Réserver</p>
+                <p class="reservation_text">Ajouter au panier</p>
             </button>
         </form>
 

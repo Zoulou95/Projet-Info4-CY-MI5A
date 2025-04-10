@@ -138,3 +138,29 @@
     margin-top: 6vh;
     margin-bottom: 2vh;
 }
+
+/* Cart style */
+
+.cart_title {
+    color: #21a9ff;
+    font-size: 4vw;
+    margin-top: 3.5vh;
+    margin-bottom: 1vh;
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 6vh;
+}
+
+.cart_desc {
+    color: #303030;
+    font-size: 1.8vw;
+}
+
+.separate_empty_cart {
+    margin-top: 15%;
+}

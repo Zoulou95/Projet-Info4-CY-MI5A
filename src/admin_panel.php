@@ -37,7 +37,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
         <!-- Admin panel -->
         <div class="user_container">
             <?php foreach ($current_users as $user): ?>
-                <form class="users" method="post" action="update_role.php">
+                <form class="users" method="post" action="../includes/update_role.php">
                     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
                     <div class="user">
                     <?php

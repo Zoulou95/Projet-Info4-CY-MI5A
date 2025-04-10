@@ -281,4 +281,128 @@ function priceCalc($trip, $number_of_participants) {
 
     return $total;
 }
+
+//
+function cartArray($id) {
+    if(!isset($_SESSION['cart_list'])) {
+        $_SESSION['cart_list'] = [];
+    }
+    array_push($_SESSION['cart_list'], $id);
+}
+
+// Write user cart data in 'cart_history_data.json' in order to save it
+function cartToJson() {
+    $file = '../data/cart_history_data.json';
+
+    // Prepare data to write
+    $cart_data = [
+        'user_id' => $_SESSION['user']['id'],
+        'trip_id' => $_SESSION['trip']['id'],
+        'number_of_participants' => $_SESSION['number_of_participants'],
+        'transport' => $_SESSION['transport'],
+        'total_price' => $_SESSION['total_price'],
+        'steps' => []
+    ];
+
+    for ($i = 1; $i <= 3; $i++) {
+        $cart_data['steps'][] = [
+            'hotel' => $_SESSION['step_' . $i . '_hotel'],
+            'pension' => $_SESSION['step_' . $i . '_pension'],
+            'activity' => $_SESSION['step_' . $i . '_activity'],
+            'participants' => $_SESSION['step_' . $i . '_participants']
+        ];
+    }
+
+    // Load existing data
+    $existing_data = [];
+    if (file_exists($file)) {
+        $json_content = file_get_contents($file);
+        $existing_data = json_decode($json_content, true);
+    }
+
+    $updated = false;
+
+    // Check for existing trip to update
+    foreach ($existing_data as $key => $entry) {
+        if ($entry['user_id'] == $_SESSION['user']['id'] && $entry['trip_id'] == $_SESSION['trip']['id']) {
+            // Replace existing entry
+            $existing_data[$key] = $cart_data;
+            $updated = true;
+            break;
+        }
+    }
+
+    // If not found, add new cart
+    if (!$updated) {
+        $existing_data[] = $cart_data;
+    }
+
+    // Save updated content
+    $new_json = json_encode($existing_data, JSON_PRETTY_PRINT);
+    if (!file_put_contents($file, $new_json)) {
+        displayError("'cart_history_data.json' file is missing.");
+    } else {
+        cartArray($_SESSION['trip']['id']);
+    }
+
+    $temp = savePurchaseDetails();
+}
+
+// Displays trip history from purchase_data.json and trip_data.json files
+function displayCart($user_id, $data_file) {
+    global $is_empty;
+    $is_empty = 0;
+
+    if (file_exists($data_file)) {
+        $cart = json_decode(file_get_contents($data_file), true);
+        $trip_data_file = '../data/trip_data.json';
+        $trip_data = dataReader($trip_data_file);
+
+        if (!is_array($cart) || empty($cart)) {
+            echo '<h1 class="cart_title">Panier vide 🥹</h1>';
+            echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
+            $is_empty = 1;
+            return;
+        }
+
+        // Filter cart for current user
+        $user_cart = array_filter($cart, function($entry) use ($user_id) {
+            return $entry['user_id'] == $user_id;
+        });
+
+        if (empty($user_cart)) {
+            echo '<h1 class="cart_title">Panier vide 🥹</h1>';
+            echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
+            $is_empty = 1;
+            return;
+        }
+
+        echo '<h1 class="cart_title">Mon panier</h1>';
+        echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
+        echo '<br /><br />';
+        echo '<div class="card_container">';
+
+        foreach ($user_cart as $entry) {
+        
+            // Retrieve complete trip details from trip_data.json
+            $trip = tripFinder($trip_data, $entry['trip_id']);
+
+            if ($trip) {
+                echo
+                '<div class="card">
+                    <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
+                    <div class="card_content">
+                        <h2>' . $trip['title'] . '</h2>
+                        <p>Dates: <b>' . $trip['dates']['start_date'] . '</b> au <b>' . $trip['dates']['end_date'] . '</b></p>
+                        <p>Prix total: <b>' . $entry['total_price'] . '€</b></p>
+                        <a href="purchase_details.php?id=' . $trip['id'] . '" class="explore">➤ Voir les détails</a>
+                    </div>
+                </div>';
+            }
+        }
+        echo '</div>';
+    } else {
+        displayError('Le fichier ' . $data_file . ' est introuvable.');
+    }
+}
 ?>

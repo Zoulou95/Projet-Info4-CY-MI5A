@@ -388,5 +388,122 @@
         },
         "transport": "Aucun",
         "points_earned": 50
+    },
+    {
+        "id": "purchase_67f84680aafeb",
+        "user_id": "67dc9f61a936d",
+        "user_name": "Mercier Sarah",
+        "purchase_date": "2025-04-11 00:30:24",
+        "transaction_id": "67f8466588637",
+        "transaction_status": "accepted",
+        "montant": "5000",
+        "trip_id": "7",
+        "trip_title": "\u00c9vasion \u00e0 Fakarava \u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-07-20",
+        "end_date": "2025-07-27",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et exploration",
+                "hotel": "Fakarava Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Exploration de l'atoll",
+                "participants": "2"
+            },
+            "step_2": {
+                "title": "D\u00e9tente et nature pr\u00e9serv\u00e9e",
+                "hotel": "Fakarava Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans la passe",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "S\u00e9jour final et d\u00e9part",
+                "hotel": "Fakarava Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "D\u00e9tente sur la plage",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 50
+    },
+    {
+        "id": "purchase_67f851393dfb1",
+        "user_id": "67dc9f61a936d",
+        "user_name": "Mercier Sarah",
+        "purchase_date": "2025-04-11 01:16:09",
+        "transaction_id": "",
+        "transaction_status": "",
+        "montant": "",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e avec les raies mantas",
+                "participants": "2"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 0
+    },
+    {
+        "id": "purchase_67f8517c147cf",
+        "user_id": "67dc9f61a936d",
+        "user_name": "Mercier Sarah",
+        "purchase_date": "2025-04-11 01:17:16",
+        "transaction_id": "",
+        "transaction_status": "",
+        "montant": "",
+        "trip_id": "15",
+        "trip_title": "Exploration Sous-Marine en Polyn\u00e9sie \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "number_of_participants": 2,
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-25",
+        "steps": {
+            "step_1": {
+                "title": "Plong\u00e9e d'excellence",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e avec les raies mantas",
+                "participants": "2"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e dans le lagon bleu",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derni\u00e8re escale et retour",
+                "hotel": "Bora Lagoon Resort (5\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 130
     }
 ]

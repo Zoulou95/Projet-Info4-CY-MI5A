@@ -80,8 +80,9 @@ function pictureUpload() {
     }
 }
 
+// Update user info on 'userpage.php'
 function editInfo($data, $data_file) {
-    
+
     if(isset($_POST['name']) || isset($_POST['forename']) || isset($_POST['email']) || isset($_POST['telephone'])) {
 
         $user_id = $_SESSION['user']['id'];
@@ -336,7 +337,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
                     <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
                     <div class="card_content">
                         <h2>' . $purchase['trip_title'] . '</h2>
-                        <p>Date: ' . $purchase['start_date'] . ' au ' . $purchase['end_date'] . '</p>
+                        <p>Dates: ' . $purchase['start_date'] . ' au ' . $purchase['end_date'] . '</p>
                         <a href="../src/purchase_details.php?id=' . $purchase['id'] . '" class="explore">➤ Consulter ma réservation</a>
                     </div>
                 </div>';
