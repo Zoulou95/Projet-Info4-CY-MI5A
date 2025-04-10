@@ -57,10 +57,12 @@ function updateInfo($data, $data_file) {
 // Uploads a user's profile photo to the server
 function pictureUpload() {
     if(isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] == 0) {
-        $allowed_types = ['image/jpeg', 'image/png', 'image/jpg'];
+        $allowed_types = ['image/jpeg', 'image/jpg'];
         $max_size = 6 * 1024 * 1024;; // 6 Mo
         $file = $_FILES['profile_picture'];
 
+        // Prevents the user from sending anything other than an image to the server
+        // NOTE: we'll set the error redirection in phase 3 (JavaScript/DOM)
         if (!in_array($file['type'], $allowed_types)) {
             echo "<script>alert('Le format de l'image n'est pas supporté (doit être au format JPG ou PNG).'); window.history.back();</script>";
             exit;
@@ -71,14 +73,7 @@ function pictureUpload() {
             $filename = "user" . $_SESSION['user']['id'] . "_profile_picture.jpg";
             $destination = "../assets/profile_pic/" . $filename;
 
-            // Convert to JPG if required
-            if ($file['type'] == 'image/png') {
-                $image = imagecreatefrompng($file['tmp_name']); // Create image from PNG file
-                imagejpeg($image, $destination, 90); // Converts image to '.jpg' at 90% quality rate
-                imagedestroy($image);
-            } else {
-                move_uploaded_file($file['tmp_name'], $destination);
-            }
+            move_uploaded_file($file['tmp_name'], $destination);
         }
     } else {
         return;
@@ -316,7 +311,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
             return;
         }
 
-        // Filtrer les achats pour l'utilisateur courant
+        // Filter purchases for current user
         $user_purchases = array_filter($purchases, function($purchase) use ($user_id) {
             return $purchase['user_id'] == $user_id;
         });

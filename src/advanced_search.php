@@ -1,8 +1,8 @@
-<!-- advanced_search.php : search for a trip based on specific characteristics -->
-
 <?php
     require_once('../includes/trip_functions.php'); 
 ?>
+
+<!-- advanced_search.php : search for a trip based on specific characteristics -->
 
 <!DOCTYPE html>
 <html lang="fr">

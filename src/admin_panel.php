@@ -10,7 +10,7 @@ $page_index = ($page-1)*$users_per_page;
 $current_users = array_slice($users, $page_index, $users_per_page);
 $total_pages = ceil(count($users) / $users_per_page);
 
-// Rajouter plus de vérifs
+// Check if the user is an admin
 if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
     displayError("User is not an admin.");
     displayFooter();
