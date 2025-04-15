@@ -115,7 +115,7 @@
     margin-bottom: 1vh;
 }
 
-.recap_pay_now, .back_to_config {
+.back_to_config, .back_to_cart {
     color: #ffffff;
     border: solid #ffa500;
     background-color: #ffa500;
@@ -129,7 +129,21 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-.recap_pay_now:hover {
+.recap_pay_now {
+    color: #ffffff;
+    border: solid #ffa500;
+    background-color: #ffa500;
+    font-size: 2vw;
+    padding: 1.8vh 3vw;
+    border: none;
+    border-radius: 1.2vw;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recap_pay_now:hover, .back_to_config:hover, .back_to_cart:hover {
     background-color: #ff8c00;
 }
 
@@ -162,5 +176,39 @@
 }
 
 .separate_empty_cart {
-    margin-top: 15%;
+    margin-top: 17%;
+}
+
+/* Style for the bubble (remove button) */
+
+.remove_bubble {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff3b3b;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+    z-index: 1;
+}
+
+.remove_bubble:hover {
+    background-color: #ff0000;
+}
+
+.remove_cross {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card {
+    position: relative; /* AJOUTER CETTE LIGNE SEULEMENT */
 }

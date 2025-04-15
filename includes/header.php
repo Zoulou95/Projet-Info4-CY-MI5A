@@ -2,6 +2,8 @@
 $current_file = $_SERVER['PHP_SELF'];
 
 require_once('session_start.php');
+require_once('cart_functions.php');
+
 
 if (basename($current_file) === 'index.php') {
     $path_parent = "";
@@ -10,6 +12,7 @@ if (basename($current_file) === 'index.php') {
     $path_parent = "../";
     $path_src = "";
 }
+
 function displayHeader() {
     global $path_parent;
     global $path_src;
@@ -29,7 +32,15 @@ function displayHeader() {
     if (isset($_SESSION['user'])) {
         echo '
         <div class="headbar_right">
-            <a class="headbar_my_space" href="'.$path_src.'cart.php">Mon panier 🛒</a>
+            <a class="headbar_my_space" href="'.$path_src.'cart.php">Panier';
+
+            // Display the number of items in the user's cart on the navigation bar
+            $count = cartHeader($_SESSION['user']['id']);
+            if($count > 0) {
+                echo ' (' . $count . ')';
+            }
+
+            echo ' 🛒</a>
             <a class="headbar_my_space" href="'.$path_src.'userpage.php">Mon espace</a>
             <a href="'.$path_src.'userpage.php">
                 <img class="user_img_nav" src="'.$path_parent.'assets/profile_pic/';

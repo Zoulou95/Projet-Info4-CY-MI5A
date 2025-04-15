@@ -196,6 +196,12 @@ body.no-scroll {
     text-decoration: none;
 }
 
+.explore_details {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .purchased {
     color: #ff8c00;
     font-weight: bold;

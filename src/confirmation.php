@@ -42,19 +42,6 @@
         displayError("Invalid trip configuration.");
         exit;
     }
-
-    $transaction_id = uniqid();
-    $montant = $_SESSION['total_price'];
-    $vendeur = "MI-5_A";
-
-    $retour_url = "http://localhost:8000/src/order_confirmed.php?session=" . session_id();
-
-    $api_key = getAPIKey($vendeur);
-    if (!preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
-        die("Clé API invalide pour le vendeur spécifié.");
-    }
-
-    $control = md5($api_key . "#" . $transaction_id . "#" . $montant . "#" . $vendeur . "#" . $retour_url . "#");
 ?>
 
 <!DOCTYPE html>
@@ -127,7 +114,7 @@
 
     <!-- Payment -->
     <section class="recap_payment">
-        <h2>Paiement</h2>
+        <h2>Ajout au panier</h2>
         <div class="recap_payment_details">
             <p><b>Montant total à payer : </b>
             <?php
@@ -136,13 +123,9 @@
             $_SESSION['points_win'] = $points;
             ?>
             </p>
-            <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
-                <input type="hidden" name="transaction" value="<?php echo $transaction_id; ?>">
-                <input type="hidden" name="montant" value="<?php echo $montant; ?>">
-                <input type="hidden" name="vendeur" value="<?php echo $vendeur; ?>">
-                <input type="hidden" name="retour" value="<?php echo $retour_url; ?>">
-                <input type="hidden" name="control" value="<?php echo $control; ?>">
-                <button type="submit" class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>
+            <br />
+            <form action="cart.php" method="POST">
+                <button type="submit" class="recap_pay_now">Ajouter au panier</button>
             </form>
         </div>
     </section>

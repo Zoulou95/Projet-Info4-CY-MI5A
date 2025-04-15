@@ -7,10 +7,7 @@
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
         "role": "vip",
         "points": 480,
-        "id": "67dc9dcab2e47",
-        "travel_history": [
-            "15"
-        ]
+        "id": "67dc9dcab2e47"
     },
     {
         "name": "Dupont",
@@ -120,15 +117,7 @@
         "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
         "role": "vip",
         "points": 1114.3000000000002,
-        "id": "67dc9f61a936d",
-        "travel_history": [
-            "4",
-            "3",
-            "13",
-            "12",
-            "14",
-            "7"
-        ]
+        "id": "67dc9f61a936d"
     },
     {
         "name": "roussel",
@@ -158,10 +147,7 @@
         "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
         "role": "vip",
         "points": 610,
-        "id": "67dc9f97bc7c6",
-        "travel_history": [
-            "11"
-        ]
+        "id": "67dc9f97bc7c6"
     },
     {
         "name": "barbier",
@@ -209,11 +195,7 @@
         "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
         "id": "67dc9feb99f64",
-        "points": 655,
-        "travel_history": [
-            "6",
-            "3"
-        ]
+        "points": 0
     },
     {
         "name": "Cauchy",

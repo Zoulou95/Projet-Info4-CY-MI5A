@@ -8,47 +8,10 @@
         exit;
     }
 
-    // If the user is logged in, check if a trip is already purchased
-    if(isset($_SESSION['user'])) {
-        if(isPurchased($_SESSION['trip']['id']) == true) {
-            echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
-            exit();
-        }
-    }
-
-    if (isConfigValid()) {
-        $trip = $_SESSION['trip'];
-        $number_of_participants = intval($_POST['number_of_participants']);
-
-        // Calculate the total price
-        $total_price = priceCalc($trip, $number_of_participants);
-        $_SESSION['total_price'] = $total_price;
-        // Store all form data in the session for retrieval after payment
-        $_SESSION['number_of_participants'] = $number_of_participants;
-        $_SESSION['transport'] = $_POST['transports'];
-        $nb_steps = 4;
-        // Store stage data
-        for($i=1; $i<$nb_steps; $i++) {
-            $_SESSION['step_'.$i.'_hotel'] = $_POST['hotel_'.$i];
-            $_SESSION['step_'.$i.'_pension'] = $_POST['pension_'.$i];
-            $_SESSION['step_'.$i.'_activity'] = $_POST['activite_'.$i];
-            $_SESSION['step_'.$i.'_participants'] = $_POST['participants_'.$i];
-        }
+    //
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         cartToJson();
     }
-
-    $transaction_id = uniqid();
-    $montant = $_SESSION['total_price'];
-    $vendeur = "MI-5_A";
-
-    $retour_url = "http://localhost:8000/src/order_confirmed.php?session=" . session_id();
-
-    $api_key = getAPIKey($vendeur);
-    if (!preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
-        die("Clé API invalide pour le vendeur spécifié.");
-    }
-
-    $control = md5($api_key . "#" . $transaction_id . "#" . $montant . "#" . $vendeur . "#" . $retour_url . "#");
 ?>
 
 <!-- cart.php -->
@@ -68,10 +31,22 @@
 
 <body>
     <div class="container">
-        <!-- Navigation bar -->
         <?php
             displayHeader();
-            displayCart($_SESSION['user']['id'], '../data/cart_history_data.json');
+            $total = displayCart($_SESSION['user']['id'], '../data/cart_history_data.json');
+
+            $transaction_id = uniqid();
+            $montant = $total;
+            $vendeur = "MI-5_A";
+        
+            $retour_url = "http://localhost:8000/src/order_confirmed.php?session=" . session_id();
+        
+            $api_key = getAPIKey($vendeur);
+            if (!preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
+                die("Clé API invalide pour le vendeur spécifié.");
+            }
+        
+            $control = md5($api_key . "#" . $transaction_id . "#" . $montant . "#" . $vendeur . "#" . $retour_url . "#");
         ?>
 
         <!-- Payment -->
@@ -82,8 +57,8 @@
                 echo '<div class="recap_payment_details">';
                 echo '<p><b>Montant total à payer : </b>';
                 
-                $points = $total_price / 100;
-                echo $total_price . "€ (" . $points . " points fidelité)";
+                $points = $total / 100;
+                echo $total . "€ (" . $points . " points fidelité)";
                 $_SESSION['points_win'] = $points;
                 
                 echo '</p>';
@@ -92,8 +67,8 @@
                 echo '<input type="hidden" name="montant" value="' . $montant . '">';
                 echo '<input type="hidden" name="vendeur" value="' . $vendeur . '">';
                 echo '<input type="hidden" name="retour" value="' . $retour_url . '">';
-                echo '<input type="hidden" name="control" value="' . $control . '">';
-                echo '<button type="submit" class="recap_pay_now">Payer maintenant (Sécurisé 🔒)</button>';
+                echo '<input type="hidden" name="control" value="' . $control . '"><br />';
+                echo '<button type="submit" class="recap_pay_now">Payement sécurisé 🔒</button>';
                 echo '</form>';
                 echo '</div>';
                 echo '</section>';
