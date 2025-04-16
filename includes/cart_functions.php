@@ -108,6 +108,9 @@ function displayCart($user_id, $data_file) {
         if (!is_array($cart) || empty($cart)) {
             echo '<h1 class="cart_title">Votre panier est vide</h1>';
             echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
+            echo "<button class=\"back_to_index_button\" onclick=\"window.location.href='search.php'\">
+            <a class=\"back_to_index_text\" href=\"search.php\">Cliquez ici pour rechercher un voyage</a> 
+            </button>";
             $is_empty = 1;
             return;
         }
@@ -120,6 +123,9 @@ function displayCart($user_id, $data_file) {
         if (empty($user_cart)) {
             echo '<h1 class="cart_title">Votre panier est vide</h1>';
             echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
+            echo "<button class=\"back_to_index_button\" onclick=\"window.location.href='search.php'\">
+            <a class=\"back_to_index_text\" href=\"search.php\">Cliquez ici pour rechercher un voyage</a> 
+            </button>";
             $is_empty = 1;
             return;
         }
@@ -135,6 +141,7 @@ function displayCart($user_id, $data_file) {
             $trip = tripFinder($trip_data, $entry['trip_id']);
 
             if ($trip) {
+                // ICI IL FAUDRA DU AJAX
                 echo
                 '<div class="card">
                     <div class="remove_bubble">

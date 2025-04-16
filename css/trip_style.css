@@ -310,7 +310,7 @@ select, [type="date"]{
 
 .reservation_button {
     display: block;
-    margin: 7vh auto;
+    margin: 2vh auto;
     width: 50%;
     height: 10vh;
     border: solid #ffa500;
@@ -341,6 +341,14 @@ select, [type="date"]{
 .reservation_button:hover {
     background-color: #ff8c00;
     border: solid #ff8c00;
+}
+
+/* Other styles */
+
+.price {
+    color: #303030;
+    font-size: 1.8vw;
+    text-align: center;
 }
 
 /* Footer Section */

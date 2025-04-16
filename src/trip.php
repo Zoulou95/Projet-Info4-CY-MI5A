@@ -100,17 +100,18 @@
         <div class="voyage_info">
             <h4>Informations</h4>
             <ul class="info_list">
+                <li>Dates : <?php echo "<b>" . $trip['dates']['start_date'] . "</b> au <b>" . $trip['dates']['end_date'] . "</b>";?></li>
                 <li>Durée du séjour : <?php echo $trip['dates']['duration'];?></li>
                 <li>Spécificité : <?php echo $trip['special_features'][0];?></li>
                 <li><?php echo $trip['special_features'][1];?></li>
                 <li><?php echo $trip['special_features'][2];?></li>
-                <li><?php echo $trip['special_features'][3];?></li>
             </ul>
         </div>
     </div>
 
-    <h3>Détails du séjour</h3>
+    <h3>Planifiez votre voyage</h3>
     <hr class="underline_timeline line" />
+    <p>Mettre vol avec classe, compagnie, nombre participants, frais de service par personne et transports</p>
 
     <h3>Configuration des étapes</h3>
     <hr class="underline_timeline line" />
@@ -287,18 +288,13 @@
     <table>
         <thead>
             <tr>
-                <th>Début</th>
-                <th>Fin</th>
                 <th>Participants</th>
                 <th>Transports</th>
                 <th>Prix/pers</th>
-                <th>Prix total</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><b><?php echo $trip['dates']['start_date'];?></b></td>
-                <td><b><?php echo $trip['dates']['end_date'];?></b></td>
                 <td>
                     <select name="number_of_participants">
                         <option value="2">2 personnes</option>
@@ -319,11 +315,11 @@
                     </select>
                 </td>
                 <td><?php echo $trip['price_per_person'];?>€</td>
-                <td></td>
             </tr>
         </tbody>
     </table>
     </div>
+    <p class="price"><b>Prix total : <?php //echo $total_price?></b></p>
         <button class="reservation_button" type="submit">
             <p class="reservation_text">Confirmer ma sélection</p>
         </button>
