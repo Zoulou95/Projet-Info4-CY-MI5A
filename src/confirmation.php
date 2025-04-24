@@ -20,7 +20,7 @@
         }
     }
 
-    // Check if the user's trip configuration is valid
+    // Check if the user's trip configuration is valid isConfigValid()
     if (isConfigValid()) {
         $trip = $_SESSION['trip'];
         $number_of_participants = intval($_POST['number_of_participants']);
@@ -28,11 +28,14 @@
         // Calculate the total price
         $total_price = priceCalc($trip, $number_of_participants);
         $_SESSION['total_price'] = $total_price;
+
         // Store all form data in the session for retrieval after payment
         $_SESSION['number_of_participants'] = $number_of_participants;
         $_SESSION['transport'] = $_POST['transports'];
         $_SESSION['flight'] = $_POST['flight'];
+        $_SESSION['departure_city'] = $_POST['departure_city'];
         $nb_steps = 4;
+
         // Store stage data
         for($i=1; $i<$nb_steps; $i++) {
             $_SESSION['step_'.$i.'_hotel'] = $_POST['hotel_'.$i];
@@ -73,8 +76,9 @@
     <section class="recap_general_info">
         <h2><?php echo $trip['title']; ?></h2>
         <div class="recap_info_box">
-            <p><strong>Nombre de participants : </strong><?php echo $number_of_participants; ?> personnes</p>
-            <p><strong>Vol : </strong><?php echo $_POST['flight']; ?></p>
+            <p><strong>Voyageurs : </strong><?php echo $number_of_participants; ?> personnes</p>
+            <p><strong>Au départ de : </strong><?php echo $_POST['departure_city']; ?></p>
+            <p><strong>Classe de cabine : </strong><?php echo $_POST['flight']; ?></p>
             <p><strong>Transport : </strong><?php echo $_POST['transports']; ?></p>
             <p><strong>Prix total : </strong><?php echo $total_price; ?>€</p>
             <p><strong>Prix par personne : </strong><?php echo round($total_price / $number_of_participants); ?>€</p>

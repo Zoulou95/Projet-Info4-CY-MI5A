@@ -1,4 +1,5 @@
 /* General list style */
+
 .service_list {
     display: flex;
     justify-content: space-between;
@@ -37,11 +38,9 @@
 
 .overview {
     display: flex;
-    flex-direction: row;
     gap: 5vw;
     margin-bottom: 10vh;
-    margin-right: 6vw;
-    align-items: flex-start; /* Align items to the top */
+    margin-right: 7vw;
 }
 
 .info_list li {
@@ -102,6 +101,7 @@
 
 .underline_info {
     width: 15%;
+    margin-bottom: 4vh;
 }
 
 .underline_timeline {
@@ -111,7 +111,7 @@
 .underline_planification {
     width: 70%;
     margin: 0 auto;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 }
 
 /* Side Images Container */
@@ -143,13 +143,13 @@ h2 {
 
 h3 {
     font-size: 30px;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
     color: #050552;
 }
 
 h4 {
-    font-size: 30px;
     text-align: center;
+    font-size: 30px;
     margin-bottom: 5vh;
     color: #050552;
 }
@@ -185,49 +185,6 @@ h4 {
     text-align: center;
 }
 
-/* Board Style */
-
-.board {
-    display: block;
-    margin: 0 auto; 
-    background: #ffffff;
-    margin-bottom: 10vh;
-}
-
-/* Select and input fields */
-
-select, [type="date"]{
-    font-size:2.8vh;
-}
-
-/* Table in board */
-
-.board table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size:2.8vh;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.board th {
-    background-color: #21a9ff;
-    color: white;
-    padding: 10px;;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
-
-.board td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-
-.board tbody tr:hover {
-    background-color: rgba(0, 123, 255, 0.1);
-}
-
 /* Separators */
 
 .separate_presentation {
@@ -241,64 +198,6 @@ select, [type="date"]{
 
 .separate {
     height: 8.5vh;
-}
-
-/* Board select and input style */
-
-.board select, .board input {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* Dropdown Menu Style */
-
-.dropdown_button {
-    position: relative;
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.dropdown_button:hover, .dropdown_button:active {
-    border: solid 2px #ffffff;
-    outline: none;
-}
-
-.type_button::after, .price_button::after {
-    content: " ⏷"; /* Down arrow added to indicate that this is a drop-down list */
-    color: #ffffff;
-}
-
-.dropdown_content {
-    position: absolute;
-    top: 100%; /* Shift under the button */
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    display: none;
-    z-index: 10;
-    font-size: 2vh;
-}
-
-.dropdown:hover .dropdown_content {
-    display: block;
-}
-
-/* Style for Labels and Checkboxes */
-
-.dropdown_content label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    white-space: nowrap;
 }
 
 /* Reservation button style  */
@@ -359,36 +258,36 @@ select, [type="date"]{
 
 /* Steps configuration style */
 
-.step-card {
+.step_card {
     display: none; /* By default, panels are hidden */
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 20px auto;
-    width: 90%;
+    margin: 10px auto;
+    width: 50vw;
     max-width: 1000px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1.2vw;
+    box-shadow: 0px 0.3vw 0.5vw rgba(0, 0, 0, 0.1);
     margin-bottom: 5vh;
+    font-size: 24px;
 }
 
-.step-card.active {
+.step_card.active {
     display: block; /* Show active panel */
 }
 
-.step-card h4 {
-    font-size: 2.5vh;
+.step_card h4 {
     margin-bottom: 10px;
     color: #050552;
 }
 
-.step-card label {
+.step_card label {
     display: block;
     margin: 15px 0;
-    font-weight: 500;
+    color: #383838;
 }
 
-.step-card select, .step-card input[type="number"] {
+.step_card select, .step_card input[type="number"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -398,12 +297,12 @@ select, [type="date"]{
     background: white;
 }
 
-.step-card p {
+.step_card p {
     font-style: italic;
     color: #555;
 }
 
-.field-row {
+.field_row {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -411,24 +310,23 @@ select, [type="date"]{
     gap: 20px;
 }
 
-.select-label {
+.select_label {
     flex: 1;
 }
 
-.price-label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.price_label {
+    text-align: right;
+    padding: 1.5%;
     width: 30%;
 }
 
-.price-label span {
+.price_label span {
     font-size: 2.2vh;
-    color: #050552;
-    margin-bottom: 5px;
+    font-size: 24px;
+    color: #383838;
 }
 
-.price-display {
+.price_display {
     width: 100%;
     padding: 10px;
     background-color: #e9f3ff;
@@ -437,4 +335,77 @@ select, [type="date"]{
     font-size: 2.5vh;
     color: #050552;
     text-align: center;
+}
+
+/* Planification style */
+
+select {
+    cursor: pointer;
+    outline: none;
+    color: #383838;
+}
+
+select:focus, select:focus-visible {
+    border: 1px solid #21a9ff;
+}
+
+.step_container {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.step_number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #21a9ff;
+    color: #21a9ff;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.step_title {
+    display: inline-block;
+    font-size: 30px;
+    color: #050552;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.form_group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #383838;
+    font-size: 24px;
+}
+
+.form_control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
 }

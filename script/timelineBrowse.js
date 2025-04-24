@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const steps = document.querySelectorAll('.step');
-    const stepCards = document.querySelectorAll('.step-card');
+    const stepCards = document.querySelectorAll('.step_card');
 
     function showStep(stepNumber) {
 
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         steps.forEach(step => step.classList.remove('active'));
 
 
-        const activeCard = document.querySelector(`.step-card[data-step="${stepNumber}"]`);
+        const activeCard = document.querySelector(`.step_card[data-step="${stepNumber}"]`);
         const activeStep = document.querySelector(`.step[data-step="${stepNumber}"]`);
         
         if (activeCard && activeStep) {

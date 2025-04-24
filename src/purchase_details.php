@@ -77,8 +77,9 @@ if (!$purchase_details) {
         <section class="recap_general_info">
             <h2><?php echo $purchase_details['trip_title']; ?></h2>
             <div class="recap_info_box">
-                <p><strong>Nombre de participants : </strong><?php echo $purchase_details['number_of_participants']; ?> personnes</p>
-                <p><strong>Vol : </strong><?php echo $purchase_details['flight']; ?></p>
+                <p><strong>Voyageurs : </strong><?php echo $purchase_details['number_of_participants']; ?> personnes</p>
+                <p><strong>Au départ de : </strong><?php echo $purchase_details['departure_city']; ?></p>
+                <p><strong>Classe de cabine : </strong><?php echo $purchase_details['flight']; ?></p>
                 <p><strong>Transport : </strong><?php echo $purchase_details['transport']; ?></p>
                 <p><strong>Prix total : </strong><?php echo $purchase_details['price']; ?>€</p>
                 <p><strong>Prix par personne : </strong><?php echo round((int)$purchase_details['price'] / (int)$purchase_details['number_of_participants']); ?>€</p>

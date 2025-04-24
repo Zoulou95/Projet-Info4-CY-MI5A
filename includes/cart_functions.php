@@ -35,6 +35,7 @@ function cartToJson() {
         'start_date' => $_SESSION['trip']['dates']['start_date'],
         'end_date' => $_SESSION['trip']['dates']['end_date'],
         'flight' => $_SESSION['flight'],
+        'departure_city' => $_SESSION['departure_city'],
         'steps' => [
             'step_1' => [
                 'title' => $_SESSION['trip']['step_1']['title'],

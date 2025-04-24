@@ -2,41 +2,83 @@
     {
         "user_id": "67dc9feb99f64",
         "user_name": "Blanchard Justine",
-        "trip_id": "6",
-        "trip_title": "Aventure \u00e0 Taha'a \u2b50\u2b50\u2b50\u2b50\u2b50",
-        "price": 6000,
-        "number_of_participants": 2,
-        "start_date": "2025-07-05",
-        "end_date": "2025-07-12",
-        "flight": "Classe Confort",
+        "trip_id": "4",
+        "trip_title": "S\u00e9jour d\u00e9tente \u00e0 Rangiroa \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "price": 10800,
+        "number_of_participants": 4,
+        "start_date": "2025-08-22",
+        "end_date": "2025-09-02",
+        "flight": "Classe Affaires",
+        "departure_city": "Marseille",
         "steps": {
             "step_1": {
-                "title": "Arriv\u00e9e et immersion dans la nature",
-                "hotel": "Taha",
+                "title": "Arriv\u00e9e et d\u00e9tente sur le lagon",
+                "hotel": "Rangiroa Pearl (4\u2b50)",
                 "pension": "Demi-pension",
-                "activity": "Bain de soleil sur la plage",
+                "activity": "Snorkeling",
                 "participants": "2"
             },
             "step_2": {
-                "title": "S\u00e9jour priv\u00e9 et d\u00e9tente",
-                "hotel": "Taha",
+                "title": "Exploration sous-marine et \u00eelots",
+                "hotel": "Rangiroa Pearl (4\u2b50)",
                 "pension": "Demi-pension",
-                "activity": "D\u00e9tente au spa",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
                 "participants": "2"
             },
             "step_3": {
-                "title": "Derniers instants et retour",
-                "hotel": "Taha",
+                "title": "Journ\u00e9es relaxantes et retour",
+                "hotel": "Rangiroa Pearl (4\u2b50)",
                 "pension": "Demi-pension",
-                "activity": "Plong\u00e9e tranquille",
+                "activity": "Baignade dans le Lagon Bleu",
                 "participants": "2"
             }
         },
         "transport": "Aucun",
-        "points_earned": 60,
-        "id": "purchase_680a6daec59b5",
-        "purchase_date": "2025-04-24 18:58:22",
-        "transaction_id": "680a6da60bf7f",
+        "points_earned": 108,
+        "id": "purchase_680ab70aed2e9",
+        "purchase_date": "2025-04-25 00:11:22",
+        "transaction_id": "680ab6fc5d0e3",
+        "transaction_status": "accepted"
+    },
+    {
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "trip_id": "5",
+        "trip_title": "S\u00e9jour en famille \u00e0 Moorea \u2b50\u2b50\u2b50\u2b50",
+        "price": 16000,
+        "number_of_participants": 4,
+        "start_date": "2025-09-05",
+        "end_date": "2025-09-15",
+        "flight": "Classe Affaires",
+        "departure_city": "Marseille",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et installation",
+                "hotel": "Moorea Beach Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Baignade en famille",
+                "participants": "2"
+            },
+            "step_2": {
+                "title": "D\u00e9couverte de la faune et flore",
+                "hotel": "Moorea Beach Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Observation des baleines",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Repos et retour",
+                "hotel": "Moorea Beach Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plage tranquille",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 160,
+        "id": "purchase_680ab70aedf8a",
+        "purchase_date": "2025-04-25 00:11:22",
+        "transaction_id": "680ab6fc5d0e3",
         "transaction_status": "accepted"
     }
 ]
