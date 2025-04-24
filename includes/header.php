@@ -4,7 +4,6 @@ $current_file = $_SERVER['PHP_SELF'];
 require_once('session_start.php');
 require_once('cart_functions.php');
 
-
 if (basename($current_file) === 'index.php') {
     $path_parent = "";
     $path_src = "src/";
@@ -13,7 +12,10 @@ if (basename($current_file) === 'index.php') {
     $path_src = "";
 }
 
+echo '<script src="' . $path_parent . '/script/bubble.js"></script>';
+
 function displayHeader() {
+
     global $path_parent;
     global $path_src;
     echo '

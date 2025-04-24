@@ -30,10 +30,24 @@
         </video>
         <div class="text_above">L'aventure vous attend, où allons-nous ?</div>
         <div class="search_overlay">
-            <form class="search_form" action="result.php" method="get">
-                <input type="text" class="search_input" list="destinations" placeholder="Recherchez un mot clé (aventure, famille, ...) 🔎" name="tag" />
-                <button class="button_validate" type="submit">Rechercher</button>
-            </form>
+
+        <form id="search_form" class="search_form" action="result.php" method="get">
+            <input type="text" class="search_input" id="search_input" list="destinations" placeholder="Recherchez un mot clé (aventure, famille, ...) 🔎" name="tag" />
+
+            <div id="bubble" class="hidden"></div>
+
+            <script>
+                // Checks that the search field is not empty
+                document.getElementById('search_form').addEventListener('submit', function(event) {
+
+                let inputField = document.getElementById('search_input');
+                if (inputField.value.trim() === '') {
+                    displayBubble(event, 'Votre recherche est vide !');
+                }
+            });
+            </script>
+            <button class="button_validate" type="submit">Rechercher</button>
+        </form>
         </div>
     </div>
     

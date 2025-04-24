@@ -41,7 +41,7 @@
         }
         ?>      
         
-        <form method="post" action="userpage.php" enctype="multipart/form-data">
+        <form id="user_form" method="post" action="userpage.php" enctype="multipart/form-data">
         <div class="user_container">
             <div class="left_informations">
                 <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . " 👋</b></h1>"; ?>

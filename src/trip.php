@@ -258,7 +258,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix</span>
+                <span>Prix par personne</span>
                 <div class="price_display">-- €</div>
             </div>
         </div>
@@ -275,7 +275,6 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix</span>
                 <div class="price_display">-- €</div>
             </div>
         </div>
@@ -289,7 +288,6 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix</span>
                 <div class="price_display">-- €</div>
             </div>
         </div>
@@ -319,7 +317,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix</span>
+                <span>Prix par personne</span>
                 <div class="price_display">-- €</div>
             </div>
         </div>
@@ -336,7 +334,6 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix</span>
                 <div class="price_display">-- €</div>
             </div>
         </div>
@@ -350,7 +347,6 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix</span>
                 <div class="price_display">-- €</div>
             </div>
         </div>
@@ -376,8 +372,15 @@
         </div>
     </div>
     <p class="price"><b>Prix total : 0 €</b></p>
-    <button class="reservation_button" type="submit">
-        <p class="reservation_text">Confirmer ma sélection</p>
+    <?php
+        if(!isset($_SESSION['user'])) {
+            echo '<div id="bubble" class="hidden"></div>';
+            echo '<button class="reservation_button" onclick="displayBubble(event, \'Vous devez être connecté pour confirmer ce voyage !\')">';
+        } else {
+            echo '<button class="reservation_button" type="submit">';
+        }
+    ?>
+    <p class="reservation_text">Confirmer ma sélection</p>
     </button>
     </form>
 
@@ -386,6 +389,7 @@
 
     <!-- Script to browse a timeline and select steps when choosing a trip -->
     <script src="../script/timelineBrowse.js"></script>
+    <script src="../script/updateTrip.js"></script>
     <script src="../script/priceCalculator.js"></script>
 </body>
 </html>

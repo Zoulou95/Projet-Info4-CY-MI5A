@@ -430,3 +430,41 @@ footer {
         transform: scale(1.1);
     }
 }
+
+/* Bubble style */
+
+.hidden {
+    display: none;
+}
+
+#bubble {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4c4c;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    text-align: center;
+}
+
+@keyframes bubbleShow {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.hidden {
+    animation: bubbleShow 0.5s ease-out forwards;
+}

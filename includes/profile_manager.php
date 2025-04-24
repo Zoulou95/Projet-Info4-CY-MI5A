@@ -62,7 +62,7 @@ function pictureUpload() {
         $file = $_FILES['profile_picture'];
 
         // Prevents the user from sending anything other than an image to the server
-        // NOTE: we'll set the error redirection in phase 3 (JavaScript/DOM)
+        
         if (!in_array($file['type'], $allowed_types)) {
             echo "<script>alert('Le format de l'image n'est pas supporté (doit être au format JPG ou PNG).'); window.history.back();</script>";
             exit;
