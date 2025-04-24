@@ -25,6 +25,7 @@
         "price_per_person": 2500,
         "price_range": "2000-3000",
         "hotel": ["Lagoon Resort (4⭐)", "Oasis des Îles (5⭐)", "Étoile Bora (5⭐)"],
+        "hotel_price": [600, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente",
@@ -84,6 +85,7 @@
         "price_per_person": 1900,
         "price_range": "-2000",
         "hotel": ["Huahine Paradise (4⭐)", "Fare Maeva (5⭐)", "Moana Resort (5⭐)"],
+        "hotel_price": [600, 950, 1200],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente",
@@ -143,6 +145,7 @@
         "price_per_person": 1800,
         "price_range": "-2000",
         "hotel": ["Moorea Lodge (3⭐)", "Aventure Resort (4⭐)", "Blue Horizon (5⭐)"],
+        "hotel_price": [250, 390, 1150],
         "step_1": {
           "id": 1,
           "title": "Découverte de l'île et randonnées",
@@ -202,6 +205,7 @@
         "price_per_person": 2700,
         "price_range": "2000-3000",
         "hotel": ["Rangiroa Pearl (4⭐)", "Lagoon View (5⭐)", "Blue Reef (5⭐)"],
+        "hotel_price": [600, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente sur le lagon",
@@ -261,6 +265,7 @@
         "price_per_person": 4000,
         "price_range": "4000-5000",
         "hotel": ["Moorea Beach Resort (4⭐)", "Pearl Resort Moorea (5⭐)", "Luxe Moorea Resort (5⭐)"],
+        "hotel_price": [600, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation",
@@ -320,6 +325,7 @@
         "price_per_person": 3000,
         "price_range": "3000-4000",
         "hotel": ["Taha'a Resort (5⭐)", "Le Taha'a Island (5⭐)", "Vahine Island (5⭐)"],
+        "hotel_price": [980, 1000, 1990],
         "step_1": {
           "id": 1,
           "title": "Arrivée et immersion dans la nature",
@@ -379,6 +385,7 @@
         "price_per_person": 2500,
         "price_range": "2000-3000",
         "hotel": ["Fakarava Resort (4⭐)", "Atoll Paradise (5⭐)", "Pearl Beach Resort (5⭐)"],
+        "hotel_price": [600, 1000, 1200],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration",
@@ -438,6 +445,7 @@
         "price_per_person": 3500,
         "price_range": "3000-4000",
         "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St. Regis Bora Resort (5⭐)"],
+        "hotel_price": [850, 1200, 1600],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation",
@@ -497,6 +505,7 @@
         "price_per_person": 4900,
         "price_range": "4000-5000",
         "hotel": ["Lapita Village (4⭐)", "Royal Huahine (5⭐)", "Te Tiare Resort (5⭐)"],
+        "hotel_price": [500, 1000, 1300],
         "step_1": {
           "id": 1,
           "title": "Arrivée et découverte de l'île",
@@ -556,6 +565,7 @@
         "price_per_person": 2200,
         "price_range": "2000-3000",
         "hotel": ["Tahiti Pearl (4⭐)", "Le Meridien (5⭐)", "Tahiti Resort (5⭐)"],
+        "hotel_price": [500, 1000, 1900],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration de Papeete",
@@ -615,6 +625,7 @@
         "price_per_person": 4100,
         "price_range": "4000-5000",
         "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Taha'a Resort (5⭐)"],
+        "hotel_price": [450, 800, 970],
         "step_1": {
           "id": 1,
           "title": "Arrivée et immersion dans l'histoire",
@@ -673,7 +684,8 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2100,
         "price_range": "2000-3000",
-        "hotel": ["Nuku Hiva Keikahanui (4⭐)", "Hiva Oa Lodge (4⭐)", "Hotel Relais Hiva (5⭐)"],
+        "hotel": ["Maison traditionnelle (4⭐)", "Hiva Oa Lodge (4⭐)", "Éco-cabane de luxe (5⭐)"],
+        "hotel_price": [450, 470, 800],
         "step_1": {
           "id": 1,
           "title": "Arrivée et immersion dans la culture locale",
@@ -733,6 +745,7 @@
         "price_per_person": 8000,
         "price_range": "+5000",
         "hotel": ["The Brando Resort (6⭐)", "Polynesia hotel (5⭐)", "Atoll Paradise (5⭐)"],
+        "hotel_price": [11990, 9650, 10500],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation dans la villa",
@@ -792,6 +805,7 @@
         "price_per_person": 2500,
         "price_range": "2000-3000",
         "hotel": ["Moorea Pearl Resort (4⭐)", "Hilton Resort & Spa (5⭐)", "Sofitel Moorea (5⭐)"],
+        "hotel_price": [390, 750, 900],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration de la culture locale",
@@ -851,6 +865,7 @@
         "price_per_person": 6500,
         "price_range": "+5000",
         "hotel": ["Bora Lagoon Resort (5⭐)", "Le Méridien (5⭐)", "Moorea Pearl Resort (4⭐)"],
+        "hotel_price": [700, 800, 1000],
         "step_1": {
           "id": 1,
           "title": "Plongée d'excellence",

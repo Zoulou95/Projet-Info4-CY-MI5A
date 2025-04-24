@@ -34,6 +34,7 @@ function cartToJson() {
         'number_of_participants' => $_SESSION['number_of_participants'] ?? 0,
         'start_date' => $_SESSION['trip']['dates']['start_date'],
         'end_date' => $_SESSION['trip']['dates']['end_date'],
+        'flight' => $_SESSION['flight'],
         'steps' => [
             'step_1' => [
                 'title' => $_SESSION['trip']['step_1']['title'],
@@ -140,8 +141,9 @@ function displayCart($user_id, $data_file) {
             // Retrieve complete trip details from trip_data.json
             $trip = tripFinder($trip_data, $entry['trip_id']);
 
+            echo '<script src="../script/removeTripFromCart.js"></script>';
+
             if ($trip) {
-                // ICI IL FAUDRA DU AJAX
                 echo
                 '<div class="card">
                     <div class="remove_bubble">

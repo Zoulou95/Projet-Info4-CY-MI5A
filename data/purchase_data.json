@@ -1,0 +1,42 @@
+[
+    {
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "trip_id": "6",
+        "trip_title": "Aventure \u00e0 Taha'a \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "price": 6000,
+        "number_of_participants": 2,
+        "start_date": "2025-07-05",
+        "end_date": "2025-07-12",
+        "flight": "Classe Confort",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et immersion dans la nature",
+                "hotel": "Taha",
+                "pension": "Demi-pension",
+                "activity": "Bain de soleil sur la plage",
+                "participants": "2"
+            },
+            "step_2": {
+                "title": "S\u00e9jour priv\u00e9 et d\u00e9tente",
+                "hotel": "Taha",
+                "pension": "Demi-pension",
+                "activity": "D\u00e9tente au spa",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Derniers instants et retour",
+                "hotel": "Taha",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e tranquille",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 60,
+        "id": "purchase_680a6daec59b5",
+        "purchase_date": "2025-04-24 18:58:22",
+        "transaction_id": "680a6da60bf7f",
+        "transaction_status": "accepted"
+    }
+]

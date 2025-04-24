@@ -201,7 +201,7 @@ function isConfigValid() {
         }
     }
 
-    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports'])) {
+    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports']) || !isset($_POST['flight'])) {
         $res = 0;
     }
 
@@ -273,7 +273,7 @@ function priceCalc($trip, $number_of_participants) {
     }
 
     // Discount if the member is VIP
-    if($_SESSION['user']['role'] == "VIP") {
+    if($_SESSION['user']['role'] === "VIP") {
         $total *= 0.9;
     }
 

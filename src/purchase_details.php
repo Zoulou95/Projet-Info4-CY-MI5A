@@ -44,9 +44,8 @@ if (isset($_GET['from']) && $_GET['from'] === 'cart') {
 }
 
 // Retrieve transaction ID or unique identifier from URL
-
 if (!$purchase_details) {
-   // echo "<script>alert('Détails du voyage non trouvés !'); window.history.back();</script>";
+    echo "<script>alert('Détails du voyage non trouvés !'); window.history.back();</script>";
     exit;
 }
 ?>
@@ -79,6 +78,7 @@ if (!$purchase_details) {
             <h2><?php echo $purchase_details['trip_title']; ?></h2>
             <div class="recap_info_box">
                 <p><strong>Nombre de participants : </strong><?php echo $purchase_details['number_of_participants']; ?> personnes</p>
+                <p><strong>Vol : </strong><?php echo $purchase_details['flight']; ?></p>
                 <p><strong>Transport : </strong><?php echo $purchase_details['transport']; ?></p>
                 <p><strong>Prix total : </strong><?php echo $purchase_details['price']; ?>€</p>
                 <p><strong>Prix par personne : </strong><?php echo round((int)$purchase_details['price'] / (int)$purchase_details['number_of_participants']); ?>€</p>
@@ -86,7 +86,7 @@ if (!$purchase_details) {
                 <p><strong>Date de retour : </strong><?php echo $purchase_details['end_date']; ?></p>
                 <p><strong>Réduction : </strong>
                 <?php
-                if (isset($purchase_details['reduction']) && purchase_details['reduction'] === "10%") {
+                if (isset($purchase_details['reduction']) && $purchase_details['reduction'] === "10%") {
                     echo "-10% sur le prix total (VIP)";
                 } else {
                     echo "Aucune";

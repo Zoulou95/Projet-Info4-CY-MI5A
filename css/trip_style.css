@@ -63,13 +63,14 @@
 /* Step style in timeline */
 
 .step {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-color: #ddd;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -82,8 +83,8 @@
 /* Line between steps */
 
 .step_line {
-    width: 100px;
-    height: 5px;
+    width: 150px;
+    height: 10px;
     background-color: #ddd;
 }
 
@@ -99,12 +100,6 @@
 
 /* Underline Style */
 
-.line {
-    height: 1px;
-    background-color: #050552;
-    margin-bottom: 5vh;
-}
-
 .underline_info {
     width: 15%;
 }
@@ -114,7 +109,7 @@
 }
 
 .underline_planification {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 5vh;
 }
@@ -306,12 +301,13 @@ select, [type="date"]{
     white-space: nowrap;
 }
 
-/* Buttons style  */
+/* Reservation button style  */
 
 .reservation_button {
     display: block;
-    margin: 2vh auto;
-    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    width: 100%;
     height: 10vh;
     border: solid #ffa500;
     background-color: #ffa500;
@@ -324,8 +320,6 @@ select, [type="date"]{
     animation: pulse 1.5s infinite;
     cursor: pointer;
 }
-
-/* Reservation Button */
 
 .reservation_text {
     color: #ffffff;
@@ -361,4 +355,86 @@ select, [type="date"]{
     color: #ffffff;
     margin-bottom: 20px;
     font-size: 3vh;
+}
+
+/* Steps configuration style */
+
+.step-card {
+    display: none; /* By default, panels are hidden */
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5vh;
+}
+
+.step-card.active {
+    display: block; /* Show active panel */
+}
+
+.step-card h4 {
+    font-size: 2.5vh;
+    margin-bottom: 10px;
+    color: #050552;
+}
+
+.step-card label {
+    display: block;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.step-card select, .step-card input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 2.8vh;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.step-card p {
+    font-style: italic;
+    color: #555;
+}
+
+.field-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.select-label {
+    flex: 1;
+}
+
+.price-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+}
+
+.price-label span {
+    font-size: 2.2vh;
+    color: #050552;
+    margin-bottom: 5px;
+}
+
+.price-display {
+    width: 100%;
+    padding: 10px;
+    background-color: #e9f3ff;
+    border: 1px solid #b4d4ff;
+    border-radius: 6px;
+    font-size: 2.5vh;
+    color: #050552;
+    text-align: center;
 }

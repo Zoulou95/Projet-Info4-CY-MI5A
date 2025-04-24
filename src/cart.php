@@ -55,10 +55,10 @@
                 echo '<section class="recap_payment">';
                 echo '<h2>Paiement</h2>';
                 echo '<div class="recap_payment_details">';
-                echo '<p><b>Montant total à payer : </b>';
+                echo '<p><b>Montant total : </b>';
                 
                 $points = $total / 100;
-                echo $total . "€ (" . $points . " points fidelité)";
+                echo $total . "€ (" . $points . " points de fidelité)";
                 $_SESSION['points_win'] = $points;
                 
                 echo '</p>';

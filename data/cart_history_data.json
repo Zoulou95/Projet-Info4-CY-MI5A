@@ -1,0 +1,38 @@
+[
+    {
+        "user_id": "67dc9feb99f64",
+        "user_name": "Blanchard Justine",
+        "trip_id": "4",
+        "trip_title": "S\u00e9jour d\u00e9tente \u00e0 Rangiroa \u2b50\u2b50\u2b50\u2b50\u2b50",
+        "price": 5400,
+        "number_of_participants": 2,
+        "start_date": "2025-08-22",
+        "end_date": "2025-09-02",
+        "flight": "Classe \u00c9conomique",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et d\u00e9tente sur le lagon",
+                "hotel": "Rangiroa Pearl (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Snorkeling",
+                "participants": "2"
+            },
+            "step_2": {
+                "title": "Exploration sous-marine et \u00eelots",
+                "hotel": "Rangiroa Pearl (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plong\u00e9e \u00e0 la passe de Tiputa",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Journ\u00e9es relaxantes et retour",
+                "hotel": "Rangiroa Pearl (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Baignade dans le Lagon Bleu",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 54
+    }
+]

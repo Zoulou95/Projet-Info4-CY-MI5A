@@ -20,6 +20,7 @@
         }
     }
 
+    // Check if the user's trip configuration is valid
     if (isConfigValid()) {
         $trip = $_SESSION['trip'];
         $number_of_participants = intval($_POST['number_of_participants']);
@@ -30,6 +31,7 @@
         // Store all form data in the session for retrieval after payment
         $_SESSION['number_of_participants'] = $number_of_participants;
         $_SESSION['transport'] = $_POST['transports'];
+        $_SESSION['flight'] = $_POST['flight'];
         $nb_steps = 4;
         // Store stage data
         for($i=1; $i<$nb_steps; $i++) {
@@ -72,6 +74,7 @@
         <h2><?php echo $trip['title']; ?></h2>
         <div class="recap_info_box">
             <p><strong>Nombre de participants : </strong><?php echo $number_of_participants; ?> personnes</p>
+            <p><strong>Vol : </strong><?php echo $_POST['flight']; ?></p>
             <p><strong>Transport : </strong><?php echo $_POST['transports']; ?></p>
             <p><strong>Prix total : </strong><?php echo $total_price; ?>€</p>
             <p><strong>Prix par personne : </strong><?php echo round($total_price / $number_of_participants); ?>€</p>
@@ -119,7 +122,7 @@
             <p><b>Montant total à payer : </b>
             <?php
             $points = $total_price / 100;
-            echo $total_price . "€ (" . $points . " points fidelité)";
+            echo $total_price . "€ (" . $points . " points de fidelité)";
             $_SESSION['points_win'] = $points;
             ?>
             </p>
