@@ -25,7 +25,7 @@
         $trip = $_SESSION['trip'];
         $number_of_participants = intval($_POST['number_of_participants']);
 
-        // Calculate the total price
+        // Recalculate the total pric, it is more secure because the user can't manipulate it
         $total_price = priceCalc($trip, $number_of_participants);
         $_SESSION['total_price'] = $total_price;
 

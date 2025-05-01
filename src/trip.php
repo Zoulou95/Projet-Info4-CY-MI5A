@@ -380,7 +380,7 @@
     <span class="step_number">4</span>
     <span class="step_title">Confirmez votre voyage</span>
 
-    <p class="price"><b>Prix total : 0 €</b></p>
+    <p class="price"><b></b></p>
     <?php
         if(!isset($_SESSION['user'])) {
             echo '<div id="bubble" class="hidden"></div>';

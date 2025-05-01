@@ -1,6 +1,7 @@
 // priceCalculator.js : dynamically calculates trip prices
 
 document.addEventListener('DOMContentLoaded', function() {
+
     // Retrieve JSON data provided by PHP   
     const basePrice = tripData.price_per_person || 0;
     const hotelPrices = tripData.hotel_price || [0, 0, 0];
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const activityPrice = activitiesPrices[`step_${step}`][activityIndex] || 0;
             totalPrice += activityPrice * stepParticipants;
         }
-        
+
         return totalPrice;
     }
 });

@@ -230,50 +230,75 @@ function isPurchased($trip_id) {
 // Calculate the travel final price
 function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
-    $price_per_person = intval($trip['price_per_person']);
+    $tripDuration = intval($trip['dates']['duration']);
+    $service = intval($trip['price_per_person']);
+    $flightClass = $_POST['flight'];
+    $transportMode = $_POST['transports'];
 
-    $total = intval($price_per_person) * intval($number_of_participants);
+    // Initial total with base price
+    $total = $service * $number_of_participants;
 
-    // Transport price
-    switch ($_POST['transports']) {
-        case "Aucun":
+    // Add flight price
+    switch ($_POST['flight']) {
+        case "Classe Économique":
+            $flightPrice = 800;
             break;
-        case "Bâteau":
-            $total += 100 * $number_of_participants * $trip['dates']['length'];
+        case "Classe Confort":
+            $flightPrice = 1200;
             break;
-        case "Vélo":
-            $total += 30 * $number_of_participants * $trip['dates']['length'];
+        case "Classe Affaires":
+            $flightPrice = 1400;
             break;
-        case "Voiture":
-            $total += 90 * $number_of_participants * $trip['dates']['length'];
-            break;
-        case "Chauffeur":
-            $total += 300 * $number_of_participants * $trip['dates']['length'];
-            break;
-        case "Hélicoptère":
-            $total += 900 * $number_of_participants * $trip['dates']['length'];
+        case "Première Classe":
+            $flightPrice = 2000;
             break;
         default:
+            $flightPrice = 800;
             break;
     }
+    $total += $flightPrice * $number_of_participants;
 
-    // Meal price
-    for ($i=1; $i<$step_number; $i++) {
-        if($_POST['pension_' . $i] === "Tout inclus") {
-            $total += 50 * $number_of_participants * $trip['step_' . $i]['dates']['duration'];;
+    // Transport costs
+    $transportRates = [
+        "Aucun" => 0,
+        "Vélo" => 30,
+        "Voiture" => 90,
+        "Bâteau" => 100,
+        "Chauffeur" => 300,
+        "Hélicoptère" => 900
+    ];
+    $transportCost = $transportRates[$transportMode];
+    $total += $transportCost * $number_of_participants * $tripDuration;
+
+    // Steps 1 to 3
+    for ($i = 1; $i < $step_number; $i++) {
+        $stepKey = 'step_' . $i;
+        $stepDuration = $trip['step_' . $i]['dates']['duration'];
+        $participants = intval($_POST['participants_' . $i]);
+
+        // Hotel price
+        $hotelName = $_POST['hotel_' . $i];
+        $hotelIndex = array_search($hotelName, $trip['hotel']);
+        $hotelPrice = $trip['hotel_price'][$hotelIndex];
+        
+        $total += $hotelPrice * $participants * $stepDuration;
+
+        // Pension
+        $pension = $_POST['pension_' . $i];
+        if ($pension === "Tout inclus") {
+            $total += 50 * $participants * $stepDuration;
         }
+
+        // Activity price
+        $activityName = $_POST['activite_' . $i];
+        $activityIndex = array_search($activityName, $trip['step_' . $i]['activities']) ?? 0;
+        $activityPrice = $trip['step_' . $i]['activities_price'][$activityIndex];
+        
+        $total += $activityPrice * $participants;
     }
 
-    // If participants are added to the activity
-    for ($i=1; $i<$step_number; $i++) {
-        if($_POST['participants_' . $i] > $number_of_participants) {
-            $diff = intval($_POST['participants_' . $i]) - $number_of_participants;
-            $total += 130 * $diff;
-        }
-    }
-
-    // Discount if the member is VIP
-    if($_SESSION['user']['role'] === "VIP") {
+    // Apply VIP discount
+    if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
         $total *= 0.9;
     }
 
