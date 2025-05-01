@@ -25,7 +25,7 @@
         "price_per_person": 2500,
         "price_range": "2000-3000",
         "hotel": ["Lagoon Resort (4⭐)", "Oasis des Îles (5⭐)", "Étoile Bora (5⭐)"],
-        "hotel_price": [600, 1000, 1000],
+        "hotel_price": [400, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente",
@@ -35,7 +35,8 @@
             "duration": 2
           },
           "coordinates": "-16.5004127, -151.7444002",
-          "activities": ["Aucune", "Massage avec vue", "Randonnée en montagne"]
+          "activities": ["Plage privatisée", "Massage avec vue", "Randonnée en montagne"],
+          "activities_price": [600, 200, 150]
         },
         "step_2": {
           "id": 2,
@@ -46,7 +47,8 @@
             "duration": 2
           },
           "coordinates": "-16.5005001, -151.7450002",
-          "activities": ["Aucune", "Séance photo", "Croisière privée"]
+          "activities": ["Plage privatisée", "Séance photo", "Croisière privée"],
+          "activities_price": [600, 50, 890]
         },
         "step_3": {
           "id": 3,
@@ -57,7 +59,8 @@
             "duration": 4
           },
           "coordinates": "-16.5010002, -151.7465003",
-          "activities": ["Aucune", "Plongée sous-marine", "Voyage en hélicoptère"]
+          "activities": ["Plage privatisée", "Plongée sous-marine", "Voyage en hélicoptère"],
+          "activities_price": [600, 125, 500]
         }
       },
       {
@@ -95,7 +98,8 @@
             "duration": 2
           },
           "coordinates": "-16.7182002, -151.0142003",
-          "activities": ["Aucune", "Bain de soleil", "Snorkeling dans le lagon"]
+          "activities": ["Plage privatisée", "Bain de soleil", "Snorkeling dans le lagon"],
+          "activities_price": [600, 80, 90]
         },
         "step_2": {
           "id": 2,
@@ -106,7 +110,8 @@
             "duration": 2
           },
           "coordinates": "-16.7105001, -151.0195001",
-          "activities": ["Aucune", "Visite de la vallée de Faie", "Randonnée dans la forêt tropicale"]
+          "activities": ["Plage privatisée", "Visite de la vallée de Faie", "Randonnée dans la forêt tropicale"],
+          "activities_price": [600, 30, 50]
         },
         "step_3": {
           "id": 3,
@@ -117,7 +122,8 @@
             "duration": 4
         },
           "coordinates": "-16.7070002, -151.0337003",
-          "activities": ["Aucune", "Plongée avec les raies", "Croisière au coucher du soleil"]
+          "activities": ["Plage privatisée", "Plongée avec les raies", "Croisière au coucher du soleil"],
+          "activities_price": [600, 125, 250]
         }
       },
       {
@@ -155,7 +161,8 @@
             "duration": 2
           },
           "coordinates": "-17.5388, -149.8419",
-          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"]
+          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"],
+          "activities_price": [70, 55, 60]
         },
         "step_2": {
           "id": 2,
@@ -166,7 +173,8 @@
             "duration": 2
           },
           "coordinates": "-17.5500, -149.8500",
-          "activities": ["Visite d'un village local", "Plongée sous-marine", "Cours de danse traditionnelle"]
+          "activities": ["Visite d'un village local", "Plongée sous-marine", "Cours de danse traditionnelle"],
+          "activities_price": [50, 280, 100]
         },
         "step_3": {
           "id": 3,
@@ -177,7 +185,8 @@
             "duration": 6
           },
           "coordinates": "-17.5700, -149.8600",
-          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"]
+          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"],
+          "activities_price": [650, 25, 40]
         }
       },
       {
@@ -215,7 +224,8 @@
             "duration": 2
           },
           "coordinates": "-15.1196, -147.6615",
-          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"]
+          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"],
+          "activities_price": [150, 70, 90]
         },
         "step_2": {
           "id": 2,
@@ -226,7 +236,8 @@
             "duration": 2
           },
           "coordinates": "-15.1300, -147.6700",
-          "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"]
+          "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"],
+          "activities_price": [300, 200, 40]
         },
         "step_3": {
           "id": 3,
@@ -237,7 +248,8 @@
             "duration": 7
           },
           "coordinates": "-15.1400, -147.6800",
-          "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"]
+          "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"],
+          "activities_price": [50, 150, 80]
         }
       },
       {
@@ -275,7 +287,8 @@
             "duration": 2
           },
           "coordinates": "-17.4976, -149.8436",
-          "activities": ["Baignade en famille", "Visite d'un village traditionnel", "Plongée sous-marine"]
+          "activities": ["Baignade en famille", "Visite d'un village traditionnel", "Plongée sous-marine"],
+          "activities_price": [600, 200, 150]
         },
         "step_2": {
           "id": 2,
@@ -286,7 +299,8 @@
             "duration": 7
           },
           "coordinates": "-17.5050, -149.8390",
-          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"]
+          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"],
+          "activities_price": [90, 80, 150]
         },
         "step_3": {
           "id": 3,
@@ -297,7 +311,8 @@
             "duration": 7
           },
           "coordinates": "-17.5100, -149.8350",
-          "activities": ["Plage tranquille", "Dîner au coucher du soleil", "Balade en pirogue"]
+          "activities": ["Plage tranquille", "Dîner au coucher du soleil", "Balade en pirogue"],
+          "activities_price": [15, 200, 150]
         }
       },
       {
@@ -335,7 +350,8 @@
             "duration": 3
           },
           "coordinates": "-16.6936, -151.4496",
-          "activities": ["Bain de soleil sur la plage", "Promenade à pied autour de l'île", "Coucher de soleil en bateau"]
+          "activities": ["Bain de soleil sur la plage", "Promenade à pied autour de l'île", "Coucher de soleil en bateau"],
+          "activities_price": [25, 30, 200]
         },
         "step_2": {
           "id": 2,
@@ -346,7 +362,8 @@
             "duration": 2
           },
           "coordinates": "-16.7000, -151.4400",
-          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite d'une ferme perlière"]
+          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite d'une ferme perlière"],
+          "activities_price": [250, 70, 50]
         },
         "step_3": {
           "id": 3,
@@ -357,7 +374,8 @@
             "duration": 3
           },
           "coordinates": "-16.7100, -151.4500",
-          "activities": ["Plongée tranquille", "Dîner romantique", "Balade en vélo autour de l'île"]
+          "activities": ["Plongée tranquille", "Dîner romantique", "Balade en vélo autour de l'île"],
+          "activities_price": [300, 180, 40]
         }
       },
       {
@@ -395,7 +413,8 @@
             "duration": 3
           },
           "coordinates": "-16.0399, -145.5566",
-          "activities": ["Exploration de l'atoll", "Baignade dans le lagon", "Visite d'un site de surf"]
+          "activities": ["Exploration de l'atoll", "Baignade dans le lagon", "Visite d'un site de surf"],
+          "activities_price": [200, 25, 50]
         },
         "step_2": {
           "id": 2,
@@ -406,7 +425,8 @@
             "duration": 2
           },
           "coordinates": "-16.0500, -145.5500",
-          "activities": ["Plongée dans la passe", "Visite des îlots avoisinants", "Visite d'un village local"]
+          "activities": ["Plongée dans la passe", "Visite des îlots avoisinants", "Visite d'un village local"],
+          "activities_price": [290, 200, 20]
         },
         "step_3": {
           "id": 3,
@@ -417,7 +437,8 @@
             "duration": 3
           },
           "coordinates": "-16.0600, -145.5500",
-          "activities": ["Détente sur la plage", "Coucher du soleil sur l'océan", "Plongée avec les raies"]
+          "activities": ["Détente sur la plage", "Coucher du soleil sur l'océan", "Plongée avec les raies"],
+          "activities_price": [15, 10, 150]
         }
       },
       {
@@ -455,7 +476,8 @@
             "duration": 3
           },
           "coordinates": "-16.5004, -151.7415",
-          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"]
+          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"],
+          "activities_price": [20, 35, 100]
         },
         "step_2": {
           "id": 2,
@@ -466,7 +488,8 @@
             "duration": 3
           },
           "coordinates": "-16.5200, -151.7300",
-          "activities": ["Plongée dans le lagon", "Visite de l'île en 4x4", "Dégustation de vanille locale"]
+          "activities": ["Plongée dans le lagon", "Visite de l'île en 4x4", "Dégustation de vanille locale"],
+          "activities_price": [500, 200, 90]
         },
         "step_3": {
           "id": 3,
@@ -477,7 +500,8 @@
             "duration": 3
           },
           "coordinates": "-16.5400, -151.7500",
-          "activities": ["Coucher de soleil en bateau", "Dîner romantique sur l'eau", "Paddle sur le lagon"]
+          "activities": ["Coucher de soleil en bateau", "Dîner romantique sur l'eau", "Paddle sur le lagon"],
+          "activities_price": [300, 200, 50]
         }
       },
       {
@@ -515,7 +539,8 @@
             "duration": 4
           },
           "coordinates": "-16.7001, -151.0330",
-          "activities": ["Balade en vélo autour de l'île", "Visite d'un marae ancien", "Dégustation de vanille locale"]
+          "activities": ["Balade en vélo autour de l'île", "Visite d'un marae ancien", "Dégustation de vanille locale"],
+          "activities_price": [125, 80, 60]
         },
         "step_2": {
           "id": 2,
@@ -526,7 +551,8 @@
             "duration": 3
           },
           "coordinates": "-16.7100, -151.0200",
-          "activities": ["Kayak dans les lagons", "Visite de l'île en bateau", "Dégustation de vanille locale"]
+          "activities": ["Kayak dans les lagons", "Visite de l'île en bateau", "Dégustation de vanille locale"],
+          "activities_price": [50, 120, 60]
         },
         "step_3": {
           "id": 3,
@@ -537,7 +563,8 @@
             "duration": 5
           },
           "coordinates": "-16.7400, -151.0000",
-          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"]
+          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"],
+          "activities_price": [600, 450, 30]
         }
       },
       {
@@ -575,7 +602,8 @@
             "duration": 3
           },
           "coordinates": "-17.6509, -149.5660",
-          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"]
+          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"],
+          "activities_price": [10, 60, 25]
         },
         "step_2": {
           "id": 2,
@@ -586,7 +614,8 @@
             "duration": 3
           },
           "coordinates": "-17.6200, -149.5500",
-          "activities": ["Randonnée vers les cascades", "Visite d'un site de surf", "Visite d'un village local"]
+          "activities": ["Randonnée vers les cascades", "Visite d'un site de surf", "Visite d'un village local"],
+          "activities_price": [100, 50, 25]
         },
         "step_3": {
           "id": 3,
@@ -597,7 +626,8 @@
             "duration": 4
           },
           "coordinates": "-17.6700, -149.5700",
-          "activities": ["Repos sur la plage", "Bain de soleil", "Visite d'une ferme perlière"]
+          "activities": ["Repos sur la plage", "Bain de soleil", "Visite d'une ferme perlière"],
+          "activities_price": [35, 20, 35]
         }
       },
       {
@@ -635,7 +665,8 @@
             "duration": 3
           },
           "coordinates": "-16.7669, -151.5016",
-          "activities": ["Visite du marae Taputapuātea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"]
+          "activities": ["Visite du marae Taputapuātea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"],
+          "activities_price": [100, 40, 30]
         },
         "step_2": {
           "id": 2,
@@ -646,7 +677,8 @@
             "duration": 3
           },
           "coordinates": "-16.7700, -151.5100",
-          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"]
+          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"],
+          "activities_price": [125, 280, 60]
         },
         "step_3": {
           "id": 3,
@@ -657,7 +689,8 @@
             "duration": 5
           },
           "coordinates": "-16.7600, -151.4800",
-          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"]
+          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"],
+          "activities_price": [20, 40, 60]
         }
       },
       {
@@ -695,7 +728,8 @@
             "duration": 3
           },
           "coordinates": "-8.9288, -140.1006",
-          "activities": ["Visite des sites archéologiques", "Découverte des traditions", "Baignade en famille"]
+          "activities": ["Visite des sites archéologiques", "Découverte des traditions", "Baignade en famille"],
+          "activities_price": [80, 75, 20]
         },
         "step_2": {
           "id": 2,
@@ -706,7 +740,8 @@
             "duration": 3
           },
           "coordinates": "-8.9100, -140.1100",
-          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"]
+          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"],
+          "activities_price": [125, 80, 50]
         },
         "step_3": {
           "id": 3,
@@ -717,7 +752,8 @@
             "duration": 3
           },
           "coordinates": "-8.9300, -140.0900",
-          "activities": ["Bain de soleil sur la plage", "Relaxation au bord de l'eau", "Balade en bâteau"]
+          "activities": ["Bain de soleil sur la plage", "Relaxation au bord de l'eau", "Balade en bâteau"],
+          "activities_price": [40, 30, 210]
         }
       },
       {
@@ -755,7 +791,8 @@
             "duration": 4
           },
           "coordinates": "-17.5150, -149.5740",
-          "activities": ["Jetski sur le lagon", "Détente sur la plage", "Découverte des traditions"]
+          "activities": ["Jetski sur le lagon", "Détente sur la plage", "Découverte des traditions"],
+          "activities_price": [700, 250, 290]
         },
         "step_2": {
           "id": 2,
@@ -766,7 +803,8 @@
             "duration": 3
           },
           "coordinates": "-17.5200, -149.5600",
-          "activities": ["Plongée dans le lagon", "Visite de l'île privée", "Détente à la plage"]
+          "activities": ["Plongée dans le lagon", "Visite de l'île privée", "Détente à la plage"],
+          "activities_price": [950, 1200, 250]
         },
         "step_3": {
           "id": 3,
@@ -777,7 +815,8 @@
             "duration": 5
           },
           "coordinates": "-17.5300, -149.5700",
-          "activities": ["Massage au spa", "Dîner privé sur la plage", "Dégustation de vanille locale"]
+          "activities": ["Massage au spa", "Dîner privé sur la plage", "Dégustation de vanille locale"],
+          "activities_price": [400, 225, 80]
         }
       },
       {
@@ -815,7 +854,8 @@
             "duration": 3
           },
           "coordinates": "-17.5407, -149.8221",
-          "activities": ["Visite du centre culturel", "Découverte de l'artisanat local", "Visite d'un village traditionnel"]
+          "activities": ["Visite du centre culturel", "Découverte de l'artisanat local", "Visite d'un village traditionnel"],
+          "activities_price": [25, 80, 40]
         },
         "step_2": {
           "id": 2,
@@ -826,7 +866,8 @@
             "duration": 3
           },
           "coordinates": "-17.5500, -149.8100",
-          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"]
+          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"],
+          "activities_price": [130, 200, 30]
         },
         "step_3": {
           "id": 3,
@@ -837,7 +878,8 @@
             "duration": 5
           },
           "coordinates": "-17.5600, -149.8200",
-          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"]
+          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"],
+          "activities_price": [25, 50, 150]
         }
       },
       {
@@ -875,7 +917,8 @@
             "duration": 3
           },
           "coordinates": "-17.5000, -149.6000",
-          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"]
+          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"],
+          "activities_price": [420, 315, 510]
         },
         "step_2": {
           "id": 2,
@@ -886,7 +929,8 @@
             "duration": 3
           },
           "coordinates": "-16.5000, -151.7000",
-          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"]
+          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"],
+          "activities_price": [400, 300, 350]
         },
         "step_3": {
           "id": 3,
@@ -897,7 +941,8 @@
             "duration": 4
           },
           "coordinates": "-17.5407, -149.8221",
-          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"]
+          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"],
+          "activities_price": [600, 200, 600]
         }
       }
     ]

@@ -1,3 +1,5 @@
+// timelineBrowse.js : dynamic step changes
+
 document.addEventListener("DOMContentLoaded", function () {
     const steps = document.querySelectorAll('.step');
     const stepCards = document.querySelectorAll('.step_card');

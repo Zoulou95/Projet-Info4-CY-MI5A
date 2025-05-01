@@ -46,6 +46,11 @@
     }
 ?>
 
+<script>
+    // Retrieve data from the json file for JavaScript functions
+    const tripData = <?php echo json_encode($trip);?>;
+</script>
+
 <div class="container">
     <!-- Navigation bar -->
     <?php displayHeader(); ?>
@@ -170,11 +175,11 @@
                     <div class="select_wrapper">
                         <select name="transports" class="form_control">
                             <option value="Aucun" selected>Aucun</option>
-                            <option value="Vélo">Vélo (30€/pers/j)</option>
-                            <option value="Voiture">Voiture (90€/pers/j)</option>
-                            <option value="Bâteau">Bâteau (100€/pers/j)</option>
-                            <option value="Chauffeur">Chauffeur (300€/pers/j)</option>
-                            <option value="Hélicoptère">Hélicoptère (900€/pers/j)</option>
+                            <option value="Vélo">Vélo (30€/pers/jour)</option>
+                            <option value="Voiture">Voiture (90€/pers/jour)</option>
+                            <option value="Bâteau">Bâteau (100€/pers/jour)</option>
+                            <option value="Chauffeur">Chauffeur (300€/pers/jour)</option>
+                            <option value="Hélicoptère">Hélicoptère (900€/pers/jour)</option>
                         </select>
                     </div>
                 </div>
@@ -188,7 +193,7 @@
     <!-- Step 1 -->
     <div class="step_card active" data-step="1">
         <h4>Étape 1 : <?php echo $trip['step_1']['title'];?></h4>
-        <p>Durée : <?php echo $trip['step_1']['dates']['duration']?> jours</p>
+        <p>Durée : <?php echo $trip['step_1']['dates']['duration'];?> jours</p>
 
         <div class="field_row">
             <div class="select_label">
@@ -199,8 +204,8 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix par personne</span>
-                <div class="price_display">-- €</div>
+                <span>Prix/personne/jour</span>
+                <div class="price_display"> €</div>
             </div>
         </div>
 
@@ -209,7 +214,7 @@
                 <label>Pension
                     <select name="pension_1" class="dynamic_input" data_price="pension">
                         <option value="Demi-pension">Demi-pension (compris)</option>
-                        <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
+                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
                         <option value="Déjeuner uniquement">Déjeuner uniquement</option>
                         <option value="Diner uniquement">Diner uniquement</option>
                     </select>
@@ -229,7 +234,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <div class="price_display">-- €</div>
+                <div class="price_display"> €</div>
             </div>
         </div>
 
@@ -259,7 +264,7 @@
             </div>
             <div class="price_label">
                 <span>Prix par personne</span>
-                <div class="price_display">-- €</div>
+                <div class="price_display"> €</div>
             </div>
         </div>
 
@@ -268,7 +273,7 @@
                 <label>Pension
                     <select name="pension_2" class="dynamic_input" data_price="pension">
                         <option value="Demi-pension">Demi-pension (compris)</option>
-                        <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
+                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
                         <option value="Déjeuner uniquement">Déjeuner uniquement</option>
                         <option value="Diner uniquement">Diner uniquement</option>
                     </select>
@@ -288,7 +293,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <div class="price_display">-- €</div>
+                <div class="price_display"> €</div>
             </div>
         </div>
 
@@ -318,7 +323,7 @@
             </div>
             <div class="price_label">
                 <span>Prix par personne</span>
-                <div class="price_display">-- €</div>
+                <div class="price_display"> €</div>
             </div>
         </div>
 
@@ -327,7 +332,7 @@
                 <label>Pension
                     <select name="pension_3" class="dynamic_input" data_price="pension">
                         <option value="Demi-pension">Demi-pension (compris)</option>
-                        <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
+                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
                         <option value="Déjeuner uniquement">Déjeuner uniquement</option>
                         <option value="Diner uniquement">Diner uniquement</option>
                     </select>
@@ -347,7 +352,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <div class="price_display">-- €</div>
+                <div class="price_display"> €</div>
             </div>
         </div>
 
@@ -371,6 +376,10 @@
             <div class="step" data-step="3">3</div>
         </div>
     </div>
+
+    <span class="step_number">4</span>
+    <span class="step_title">Confirmez votre voyage</span>
+
     <p class="price"><b>Prix total : 0 €</b></p>
     <?php
         if(!isset($_SESSION['user'])) {
@@ -389,7 +398,6 @@
 
     <!-- Script to browse a timeline and select steps when choosing a trip -->
     <script src="../script/timelineBrowse.js"></script>
-    <script src="../script/updateTrip.js"></script>
     <script src="../script/priceCalculator.js"></script>
 </body>
 </html>

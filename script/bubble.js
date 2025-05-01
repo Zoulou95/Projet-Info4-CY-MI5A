@@ -1,16 +1,11 @@
-function displayBubble(event, message) {
+// bubble.js : function for displaying dialog boxes in the event of an error
 
-    event.preventDefault();
+function displayBubble(event = null, message) {
 
-    const bubble = document.getElementById('bubble');
-    bubble.style.display = 'block';
-
-    bubble.textContent = message;
-  
-    setTimeout(() => bubble.style.display = 'none', 4000);
-}
-
-function showBubble(message) {
+    // Cancels current event only if passed as argument
+    if (event) {
+        event.preventDefault();
+    }
 
     const bubble = document.getElementById('bubble');
     bubble.style.display = 'block';
