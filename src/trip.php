@@ -40,8 +40,8 @@
     // If the user is logged in, check if a trip is already purchased
     if(isset($_SESSION['user'])) {
         if(isPurchased($_SESSION['trip']['id']) == true) {
-            echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
-            exit();
+            header("Location: history.php");
+            exit;
         }
     }
 ?>
@@ -191,7 +191,7 @@
     <span class="step_title">Composez les étapes de votre voyage</span>
 
     <!-- Step 1 -->
-    <div class="step_card active" data-step="1">
+    <div class="step_card active" data_step="1">
         <h4>Étape 1 : <?php echo $trip['step_1']['title'];?></h4>
         <p>Durée : <?php echo $trip['step_1']['dates']['duration'];?> jours</p>
 
@@ -250,7 +250,7 @@
     </div>
 
     <!-- Step 2 -->
-    <div class="step_card active" data-step="2">
+    <div class="step_card active" data_step="2">
         <h4>Étape 2 : <?php echo $trip['step_2']['title'];?></h4>
         <p>Durée : <?php echo $trip['step_2']['dates']['duration']?> jours</p>
 
@@ -309,7 +309,7 @@
     </div>
 
     <!-- Step 3 -->
-    <div class="step_card active" data-step="3">
+    <div class="step_card active" data_step="3">
         <h4>Étape 3 : <?php echo $trip['step_3']['title'];?></h4>
         <p>Durée : <?php echo $trip['step_3']['dates']['duration']?> jours</p>
 
@@ -369,11 +369,11 @@
 
     <div class="steps">
         <div class="timeline">
-            <div class="step active" data-step="1">1</div>
+            <div class="step active" data_step="1">1</div>
             <div class="step_line"></div>
-            <div class="step" data-step="2">2</div>
+            <div class="step" data_step="2">2</div>
             <div class="step_line"></div>
-            <div class="step" data-step="3">3</div>
+            <div class="step" data_step="3">3</div>
         </div>
     </div>
 

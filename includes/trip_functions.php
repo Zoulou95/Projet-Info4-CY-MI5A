@@ -292,14 +292,18 @@ function priceCalc($trip, $number_of_participants) {
         $activityIndex = array_search($activityName, $trip['step_' . $i]['activities']) ?? 0;
         $activityPrice = $trip['step_' . $i]['activities_price'][$activityIndex];
         
+        error_log("=========================");
+        error_log($activityIndex);
+        error_log("=========================");
         $total += $activityPrice * $participants;
     }
 
     // Apply VIP discount
-    if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
+    /*if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
         $total *= 0.9;
-    }
-
+    }*/
+    error_log($total);
+    error_log(" ");
     return $total;
 }
 ?>

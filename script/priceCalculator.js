@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateIndividualPrices() {
         dynamicInputs.forEach((input, index) => {
             const priceType = input.getAttribute('data_price');
-            const stepNumber = input.closest('.step_card')?.getAttribute('data-step');
+            const stepNumber = input.closest('.step_card')?.getAttribute('data_step');
             const priceDisplay = input.closest('.field_row').querySelector('.price_display');
             
             if (priceDisplay) {
@@ -112,12 +112,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Service charge
         let totalPrice = basePrice * nbParticipants;
+        console.log('  ' + totalPrice);
         
         // Flight price
         totalPrice += flightPrice * nbParticipants;
+        console.log('  ' + totalPrice);
         
         // Transportation costs (per day)
         totalPrice += transportPrice * nbParticipants * tripDuration;
+        console.log('  ' + totalPrice);
         
         // Calculate the price of hotels and activities for each stage
         for (let i=1; i<=3; i++) {
@@ -129,12 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const hotelIndex = Array.from(hotelSelect.options).findIndex(option => option.selected);
             const hotelPrice = hotelPrices[hotelIndex] || 0;
             totalPrice += hotelPrice * stepParticipants * stepDuration;
+            console.log('  ' + totalPrice);
             
             // Pension
             const pensionSelect = document.querySelector(`select[name="pension_${i}"]`);
             const pensionValue = pensionSelect.value;
             if (pensionValue === "Tout inclus") {
                 totalPrice += 50 * stepParticipants * stepDuration;
+                console.log('  ' + totalPrice);
             }
             
             // Activity
@@ -142,8 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const activityIndex = Array.from(activitySelect.options).findIndex(option => option.selected);
             const activityPrice = activitiesPrices[`step_${i}`][activityIndex] || 0;
             totalPrice += activityPrice * stepParticipants;
+            console.log('  ' + totalPrice);
         }
-
+        console.log('  ' + totalPrice);
+        console.log('  ');
         return totalPrice;
     }
 });

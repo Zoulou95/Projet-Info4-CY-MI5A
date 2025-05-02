@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
         steps.forEach(step => step.classList.remove('active'));
 
 
-        const activeCard = document.querySelector(`.step_card[data-step="${stepNumber}"]`);
-        const activeStep = document.querySelector(`.step[data-step="${stepNumber}"]`);
+        const activeCard = document.querySelector(`.step_card[data_step="${stepNumber}"]`);
+        const activeStep = document.querySelector(`.step[data_step="${stepNumber}"]`);
         
         if (activeCard && activeStep) {
             activeCard.classList.add('active');
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     steps.forEach(step => {
         step.addEventListener('click', function () {
-            const stepNumber = step.getAttribute('data-step');
+            const stepNumber = step.getAttribute('data_step');
             showStep(stepNumber);
         });
     });
