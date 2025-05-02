@@ -1,0 +1,34 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionner tous les formulaires d'utilisateurs
+    const userForms = document.querySelectorAll('.users');
+    
+    userForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            // Empêcher l'envoi immédiat du formulaire
+            e.preventDefault();
+            
+            // Récupérer l'ID de l'utilisateur et l'action
+            const userId = this.querySelector('input[name="user_id"]').value;
+            const action = document.activeElement.value; // Le bouton sur lequel on a cliqué
+            
+            // Désactiver tous les boutons dans ce formulaire utilisateur
+            const buttons = this.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.disabled = true;
+                button.classList.add('disabled');
+            });
+            
+            // Afficher un message de chargement à côté du bouton cliqué
+            const clickedButton = document.activeElement;
+            const loadingSpan = document.createElement('span');
+            loadingSpan.textContent = ' ...';
+            loadingSpan.className = 'loading-text';
+            clickedButton.parentNode.appendChild(loadingSpan);
+            
+            // Attendre 2 secondes avant d'envoyer le formulaire
+            setTimeout(() => {
+                this.submit(); // Envoyer le formulaire après le délai
+            }, 2000);
+        });
+    });
+});

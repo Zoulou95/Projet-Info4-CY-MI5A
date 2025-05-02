@@ -28,6 +28,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/admin_panel_style.css" />
+    <script src="../script/admin_panel_buttons.js"></script>
 </head>
 <body>
     <div class="container">
