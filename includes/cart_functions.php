@@ -26,6 +26,7 @@ function cartToJson() {
 
     // Prepare data to write
     $cart_data = [
+        'cart_id' => 'cart_' . uniqid() . '_' . time(),
         'user_id' => $_SESSION['user']['id'],
         'user_name' => $_SESSION['user']['name'] . ' ' . $_SESSION['user']['forename'],
         'trip_id' => $_SESSION['trip']['id'],
@@ -93,6 +94,15 @@ function cartToJson() {
     }
 }
 
+// Displays empty cart
+function displayEmptyCart() {
+    echo '<h1 class="cart_title">Votre panier est vide</h1>';
+    echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
+    echo "<button class=\"back_to_index_button\" onclick=\"window.location.href='search.php'\">
+    <a class=\"back_to_index_text\" href=\"search.php\">Cliquez ici pour rechercher un voyage</a> 
+    </button>";
+}
+
 // Displays user cart
 function displayCart($user_id, $data_file) {
     global $is_empty;
@@ -108,11 +118,7 @@ function displayCart($user_id, $data_file) {
         $_SESSION['user_choice'] = [];
 
         if (!is_array($cart) || empty($cart)) {
-            echo '<h1 class="cart_title">Votre panier est vide</h1>';
-            echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
-            echo "<button class=\"back_to_index_button\" onclick=\"window.location.href='search.php'\">
-            <a class=\"back_to_index_text\" href=\"search.php\">Cliquez ici pour rechercher un voyage</a> 
-            </button>";
+            displayEmptyCart();
             $is_empty = 1;
             return;
         }
@@ -123,14 +129,12 @@ function displayCart($user_id, $data_file) {
         });
 
         if (empty($user_cart)) {
-            echo '<h1 class="cart_title">Votre panier est vide</h1>';
-            echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
-            echo "<button class=\"back_to_index_button\" onclick=\"window.location.href='search.php'\">
-            <a class=\"back_to_index_text\" href=\"search.php\">Cliquez ici pour rechercher un voyage</a> 
-            </button>";
+            displayEmptyCart();
             $is_empty = 1;
             return;
         }
+
+        echo '<div id="cart_container">';
 
         echo '<h1 class="cart_title">Mon panier 🛒</h1>';
         echo '<p class="cart_desc">Retrouvez ici les voyages que vous avez configuré</p>';
@@ -142,13 +146,11 @@ function displayCart($user_id, $data_file) {
             // Retrieve complete trip details from trip_data.json
             $trip = tripFinder($trip_data, $entry['trip_id']);
 
-            echo '<script src="../script/removeTripFromCart.js"></script>';
-
             if ($trip) {
                 echo
-                '<div class="card">
+                '<div class="card" id="card_'. $entry['cart_id'] . '">
                     <div class="remove_bubble">
-                        <span class="remove_cross" onclick="removeTripFromCart(' . $entry['trip_id'] . ')">🗑️</span>
+                        <span class="remove_cross" onclick="removeCart(\'' . $entry['cart_id'] . '\')">🗑️</span>
                     </div>
                     <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
                     <div class="card_content">
@@ -173,6 +175,7 @@ function displayCart($user_id, $data_file) {
     } else {
         displayError($data_file . 'is missing.');
     }
+
     return $total;
 }
 

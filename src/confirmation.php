@@ -132,6 +132,7 @@
             </p>
             <br />
             <form action="cart.php" method="POST">
+                <input type="hidden" name="action" value="add_to_cart">
                 <button type="submit" class="recap_pay_now">Ajouter au panier</button>
             </form>
         </div>

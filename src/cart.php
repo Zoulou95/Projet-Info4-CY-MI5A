@@ -8,9 +8,14 @@
         exit;
     }
 
-    //
+    // If a data entry is detected, a new shopping cart entry is created in the JSON file
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        cartToJson();
+        if (isset($_POST['action']) && $_POST['action'] === 'add_to_cart') {
+            // Reload page to avoid writing conflicts when adding a trip to the cart
+            cartToJson();
+            header("Location: cart.php");
+            exit;
+        }
     }
 ?>
 
@@ -75,10 +80,18 @@
             } else {
                 echo '<div class="separate_empty_cart">';
             }
+
+            echo '</div>';
         ?>
 
     <!-- Footer -->
     <?php displayFooter();?>
 </div>
+
+<?php
+    // Load shopping cart removal script 
+    echo '<script src="../script/removeCart.js"></script>';
+?>
+
 </body>
 </html>
