@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const nbParticipants = parseInt(participantsSelect.value) || 2;
         const flightPrice = flightPrices[flightSelect.value] || 800;
         const transportPrice = transportPrices[transportSelect.value] || 0;
+        const tripDuration = tripData.dates.length;
         
         // Service charge
         let totalPrice = basePrice * nbParticipants;
@@ -116,33 +117,30 @@ document.addEventListener('DOMContentLoaded', function() {
         totalPrice += flightPrice * nbParticipants;
         
         // Transportation costs (per day)
-        const tripDuration = tripData.dates.length || 7;
-        if (transportPrice > 0) {
-            totalPrice += transportPrice * nbParticipants * tripDuration;
-        }
+        totalPrice += transportPrice * nbParticipants * tripDuration;
         
         // Calculate the price of hotels and activities for each stage
-        for (let step = 1; step <= 3; step++) {
-            const stepDuration = tripData[`step_${step}`].dates.duration || 1;
-            const stepParticipants = parseInt(document.querySelector(`select[name="participants_${step}"]`).value) || 2;
+        for (let i=1; i<=3; i++) {
+            const stepDuration = tripData[`step_${i}`].dates.duration;
+            const stepParticipants = parseInt(document.querySelector(`select[name="participants_${i}"]`).value);
             
             // Hotel
-            const hotelSelect = document.querySelector(`select[name="hotel_${step}"]`);
+            const hotelSelect = document.querySelector(`select[name="hotel_${i}"]`);
             const hotelIndex = Array.from(hotelSelect.options).findIndex(option => option.selected);
             const hotelPrice = hotelPrices[hotelIndex] || 0;
             totalPrice += hotelPrice * stepParticipants * stepDuration;
             
             // Pension
-            const pensionSelect = document.querySelector(`select[name="pension_${step}"]`);
+            const pensionSelect = document.querySelector(`select[name="pension_${i}"]`);
             const pensionValue = pensionSelect.value;
             if (pensionValue === "Tout inclus") {
                 totalPrice += 50 * stepParticipants * stepDuration;
             }
             
             // Activity
-            const activitySelect = document.querySelector(`select[name="activite_${step}"]`);
+            const activitySelect = document.querySelector(`select[name="activite_${i}"]`);
             const activityIndex = Array.from(activitySelect.options).findIndex(option => option.selected);
-            const activityPrice = activitiesPrices[`step_${step}`][activityIndex] || 0;
+            const activityPrice = activitiesPrices[`step_${i}`][activityIndex] || 0;
             totalPrice += activityPrice * stepParticipants;
         }
 

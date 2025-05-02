@@ -44,7 +44,7 @@ function printCard($journey) {
             <p>'. $journey['subtitle'] . '</p>
             <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-            <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>';
+            <p>Frais de services : <b>' . $journey['price_per_person'] . '€</b></p>';
             if(isset($_SESSION['user']['travel_history']) && isPurchased($journey['id'])) {
                 echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
             } else {
@@ -232,7 +232,6 @@ function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
     $tripDuration = intval($trip['dates']['duration']);
     $service = intval($trip['price_per_person']);
-    $flightClass = $_POST['flight'];
     $transportMode = $_POST['transports'];
 
     // Initial total with base price
@@ -272,7 +271,6 @@ function priceCalc($trip, $number_of_participants) {
 
     // Steps 1 to 3
     for ($i = 1; $i < $step_number; $i++) {
-        $stepKey = 'step_' . $i;
         $stepDuration = $trip['step_' . $i]['dates']['duration'];
         $participants = intval($_POST['participants_' . $i]);
 

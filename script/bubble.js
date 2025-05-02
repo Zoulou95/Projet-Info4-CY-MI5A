@@ -2,7 +2,7 @@
 
 function displayBubble(event = null, message) {
 
-    // Cancels current event only if passed as argument
+    // Cancels current event (like button submit) only if passed as argument
     if (event) {
         event.preventDefault();
     }
