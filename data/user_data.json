@@ -5,8 +5,8 @@
         "email": "lucas.martin@email.com",
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
-        "role": "vip",
-        "points": 480,
+        "role": "standard",
+        "points": 0,
         "id": "67dc9dcab2e47"
     },
     {
@@ -26,7 +26,7 @@
         "telephone": "0767708005",
         "password": "$2y$10$cYY1.qBrz6rhKZRKx3AOVuhTdR3G0svePvo5.UjmpOy9.brXs.wWu",
         "role": "standard",
-        "points": 200,
+        "points": 0,
         "id": "67dc9e124aa6d"
     },
     {
@@ -115,8 +115,8 @@
         "email": "sarah.mercier@email.com",
         "telephone": "0682757329",
         "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
-        "role": "vip",
-        "points": 1114.3000000000002,
+        "role": "standard",
+        "points": 0,
         "id": "67dc9f61a936d"
     },
     {
@@ -145,8 +145,8 @@
         "email": "alexis.perrot@email.com",
         "telephone": "0714934411",
         "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
-        "role": "vip",
-        "points": 610,
+        "role": "standard",
+        "points": 0,
         "id": "67dc9f97bc7c6"
     },
     {
@@ -176,6 +176,7 @@
         "telephone": "0660207905",
         "password": "$2y$10$Ja8.K1RJ8lIXRetHEbhLOedO7XE36aDHC95KcZjMrFbv41oSTn1zG",
         "role": "admin",
+        "points": 0,
         "id": "67dc9fcc33196"
     },
     {
@@ -195,12 +196,7 @@
         "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
         "id": "67dc9feb99f64",
-        "points": 1355.15,
-        "travel_history": [
-            "15",
-            "6",
-            "9"
-        ]
+        "points": 0
     },
     {
         "name": "Cauchy",
