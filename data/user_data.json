@@ -195,7 +195,12 @@
         "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
         "id": "67dc9feb99f64",
-        "points": 328
+        "points": 1355.15,
+        "travel_history": [
+            "15",
+            "6",
+            "9"
+        ]
     },
     {
         "name": "Cauchy",

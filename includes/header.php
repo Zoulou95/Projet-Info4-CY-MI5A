@@ -34,7 +34,7 @@ function displayHeader() {
     if (isset($_SESSION['user'])) {
         echo '
         <div class="headbar_right">
-            <a class="headbar_my_space" href="'.$path_src.'cart.php">Panier';
+            <a id="cart_display" class="headbar_my_space" href="'.$path_src.'cart.php">Panier';
 
             // Display the number of items in the user's cart on the navigation bar
             $count = cartHeader($_SESSION['user']['id']);

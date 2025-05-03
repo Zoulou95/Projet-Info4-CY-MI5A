@@ -32,6 +32,7 @@
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/confirmation_style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js"></script>
 </head>
 
 <body>
@@ -50,6 +51,12 @@
             if (!preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
                 die("Clé API invalide pour le vendeur spécifié.");
             }
+
+            // Prepare data to dynamically allocate a control key in the event of deletion from the basket
+            echo '<script>';
+            echo 'const apiKey = "' . $api_key . '";';
+            echo "const retourUrl = 'http://localhost:8000/src/order_confirmed.php?session=" . session_id() . "';";
+            echo '</script>';
         
             $control = md5($api_key . "#" . $transaction_id . "#" . $montant . "#" . $vendeur . "#" . $retour_url . "#");
         ?>
@@ -61,18 +68,22 @@
                 echo '<h2>Paiement</h2>';
                 echo '<div class="recap_payment_details">';
                 echo '<p><b>Montant total : </b>';
-                
+
+                echo '<div id="price_display">';
+            
                 $points = $total / 100;
-                echo $total . "€ (" . $points . " points de fidelité)";
+                echo $total . "€ (" . floor($points) . " points de fidelité)";
                 $_SESSION['points_win'] = $points;
+
+                echo '</div>';
                 
                 echo '</p>';
                 echo '<form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">';
-                echo '<input type="hidden" name="transaction" value="' . $transaction_id . '">';
-                echo '<input type="hidden" name="montant" value="' . $montant . '">';
-                echo '<input type="hidden" name="vendeur" value="' . $vendeur . '">';
-                echo '<input type="hidden" name="retour" value="' . $retour_url . '">';
-                echo '<input type="hidden" name="control" value="' . $control . '"><br />';
+                echo '<input id="transaction" type="hidden" name="transaction" value="' . $transaction_id . '">';
+                echo '<input id="montant" type="hidden" name="montant" value="' . $montant . '">';
+                echo '<input id="vendeur" type="hidden" name="vendeur" value="' . $vendeur . '">';
+                echo '<input id="retour_url" type="hidden" name="retour" value="' . $retour_url . '">';
+                echo '<input id="control" type="hidden" name="control" value="' . $control . '"><br />';
                 echo '<button type="submit" class="recap_pay_now">Payement sécurisé 🔒</button>';
                 echo '</form>';
                 echo '</div>';

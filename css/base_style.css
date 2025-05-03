@@ -239,7 +239,7 @@ body.no-scroll {
     color: #050552;
 }
 
-.back_to_search_button, .back_to_index_button {
+.empty_cart_button, .back_to_search_button, .back_to_index_button {
     display: block;
     margin: 8.1vh auto;
     width: 50%;
@@ -251,11 +251,11 @@ body.no-scroll {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-.back_to_index_button {
+.empty_cart_button, .back_to_index_button {
     margin-top: 18.5vh;
 }
 
-.back_to_search_button:hover, .back_to_index_button:hover {
+.empty_cart_button:hover, .back_to_search_button:hover, .back_to_index_button:hover {
     background-color: #ff8c00;
     border: solid #ff8c00;
     animation: pulse 1.5s infinite;
@@ -267,6 +267,10 @@ body.no-scroll {
     font-size: 4vh;
     font-weight: bold;
     text-decoration: none;
+}
+
+.empty_cart_button {
+    width: 49.72vw;
 }
 
 /* Footer */

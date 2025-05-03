@@ -126,7 +126,7 @@
             <p><b>Montant total à payer : </b>
             <?php
             $points = $total_price / 100;
-            echo $total_price . "€ (" . $points . " points de fidelité)";
+            echo $total_price . "€ (" . floor($points) . " points de fidelité)";
             $_SESSION['points_win'] = $points;
             ?>
             </p>

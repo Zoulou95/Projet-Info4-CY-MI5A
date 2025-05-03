@@ -28,16 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "Hélicoptère": 900
     };
 
-    const pensionPrices = {
-        "Demi-pension": 0,
-        "Tout inclus": 50,
-        "Déjeuner uniquement": 0,
-        "Diner uniquement": 0
-    };
-
     // Retrieve all dynamic elements
     const dynamicInputs = document.querySelectorAll('.dynamic_input');
-    const priceDisplays = document.querySelectorAll('.price_display');
     const totalPriceElement = document.querySelector('.price b');
     
     const participantsSelect = document.querySelector('select[name="number_of_participants"]');
@@ -78,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (priceDisplay) {
                 let price = 0;
-                
+
                 if (priceType === 'hotel') {
                     const hotelIndex = Array.from(input.options).findIndex(option => option.selected);
                     price = hotelPrices[hotelIndex] || 0;
@@ -110,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const transportPrice = transportPrices[transportSelect.value] || 0;
         const tripDuration = tripData.dates.length;
         
-        // Service charge
+        // Service charge per person
         let totalPrice = basePrice * nbParticipants;
         
         // Flight price
@@ -125,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const stepParticipants = parseInt(document.querySelector(`select[name="participants_${i}"]`).value);
             
             // Hotel
+            // We find the index corresponding to the hotel chosen for the user (0, 1, 2) in the json, to find its corresponding price
             const hotelSelect = document.querySelector(`select[name="hotel_${i}"]`);
             const hotelIndex = Array.from(hotelSelect.options).findIndex(option => option.selected);
             const hotelPrice = hotelPrices[hotelIndex] || 0;

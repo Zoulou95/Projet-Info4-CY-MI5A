@@ -148,7 +148,7 @@ function displayCart($user_id, $data_file) {
 
             if ($trip) {
                 echo
-                '<div class="card" id="card_'. $entry['cart_id'] . '">
+                '<div class="card" id="card_'. $entry['cart_id'] . '" data-price="' . $entry['price'] . '" data-fidelite="' . $entry['price'] / 100 . '">
                     <div class="remove_bubble">
                         <span class="remove_cross" onclick="removeCart(\'' . $entry['cart_id'] . '\')">🗑️</span>
                     </div>
