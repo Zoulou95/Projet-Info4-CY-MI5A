@@ -5,7 +5,7 @@
         "email": "lucas.martin@email.com",
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
-        "role": "standard",
+        "role": "vip",
         "points": 0,
         "id": "67dc9dcab2e47"
     },
@@ -45,7 +45,7 @@
         "email": "hugo.lambert@email.com",
         "telephone": "0659701868",
         "password": "$2y$10$yx4WG0v.Hr23sPErK0PM\/uTtvwYAjed.aeO54mgpM3pvpNStSXoHm",
-        "role": "standard",
+        "role": "banni",
         "points": 0,
         "id": "67dc9edcb8622"
     },
@@ -75,7 +75,7 @@
         "email": "manon.fournier@email.com",
         "telephone": "0716170286",
         "password": "$2y$10$j8D109BvECHMlipHmrBkv.b54KhojasEDXY5dClHulYl2\/O27dGXe",
-        "role": "banni",
+        "role": "standard",
         "points": 0,
         "id": "67dc9f1498400"
     },

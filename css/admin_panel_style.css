@@ -132,3 +132,18 @@ body {
 .color_standard {
     color: #383838;
 }
+
+/* Dans admin_panel_style.css, ajoutez: */
+.user_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #999999 !important;
+}
+
+.user_status_button.disabled {
+    background-color: #666666 !important;
+}
+
+.user_ban_button.disabled {
+    background-color: #990000 !important;
+}
