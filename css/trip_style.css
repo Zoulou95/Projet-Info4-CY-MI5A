@@ -354,3 +354,63 @@ select, [type="date"]{
     margin-bottom: 20px;
     font-size: 3vh;
 }
+
+
+/* dark mode */
+
+.dark-mode .info_list li {
+    font-size: 20px;
+    padding-bottom: 25px;
+    color: #ffffff;
+}
+
+.dark-mode h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 2vh;
+    color:#ffffff;
+}
+
+.dark-mode h3 {
+    font-size: 30px;
+    margin-bottom: 2vh;
+    color: #ffffff;
+}
+
+.dark-mode h4 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: #ffffff;
+}
+
+
+.dark-mode .line {
+    height: 1px;
+    background-color: #ffffff;
+    margin-bottom: 5vh;
+}
+
+.dark-mode .step.active {
+    background-color: #21a9ff;
+    color: black;
+}
+
+.dark-mode .step {
+    width: 50px;
+    height: 50px;
+    background-color: #1f1f1f;;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dark-mode .board {
+    display: block;
+    margin: 0 auto; 
+    background: #1f1f1f;
+    margin-bottom: 10vh;
+}

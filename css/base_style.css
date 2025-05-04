@@ -418,3 +418,64 @@ footer {
         transform: scale(1.1);
     }
 }
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .headbar,
+.dark-mode .secondbar,
+.dark-mode footer {
+    background-color: #1f1f1f;
+    box-shadow: none;
+}
+
+.dark-mode .card {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .card h2 {
+    color: #ffffff;
+}
+
+.dark-mode .card p {
+    color: #cccccc;
+}
+
+.dark-mode .headbar_item,
+.dark-mode .headbar_logo,
+.dark-mode .headbar_my_space {
+    color: #ffffff;
+}
+
+.dark-mode .back_to_search_button,
+.dark-mode .back_to_index_button {
+    background-color: #333333;
+    border: solid #888888;
+}
+
+.dark-mode .back_to_search_text,
+.dark-mode .back_to_index_text {
+    color: #ffffff;
+}
+
+.dark-mode .footer_section {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .overlay_content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .overlay_input {
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    color: #ffffff;
+}
+
+.dark-mode .overlay_button {
+    background-color: #444;
+}

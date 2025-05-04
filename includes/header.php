@@ -22,6 +22,11 @@ function displayHeader() {
             <a class="headbar_item" href="'.$path_parent.'index.php">Accueil</a>
             <a class="headbar_item" href="'.$path_src.'search.php">Destinations</a>
             <a class="headbar_item" href="'.$path_src.'advanced_search.php">Rechercher un voyage</a>
+            <button id="darkModeToggle" style="background: none; border: none; font-size: 2.5vh; color: white; cursor: pointer;">
+            🌙 Mode Sombre
+            </button>
+
+
         </div>';
 
     if (isset($_SESSION['user'])) {
@@ -79,7 +84,9 @@ function displayHeader() {
             </form>
         </div>
     </div>
+    <script src="'.$path_parent.'includes/darkmode.js"></script>
     <script src="'.$path_parent.'includes/registration.js"></script>';
+
     }
 
     echo '</div>';
