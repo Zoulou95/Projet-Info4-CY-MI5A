@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../includes/logs.php');
+include_once('../includes/logs.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $forename = trim(htmlspecialchars($_POST['forename']));

@@ -1,9 +1,5 @@
 <?php
-// Lire le fichier JSON
-
-session_start();
-
-include('../includes/error.php');
+require_once('../includes/error.php');
 
 $json_data = file_get_contents('../data/user_data.json');
 $users = json_decode($json_data, true);
@@ -14,9 +10,9 @@ $page_index = ($page-1)*$users_per_page;
 $current_users = array_slice($users, $page_index, $users_per_page);
 $total_pages = ceil(count($users) / $users_per_page);
 
-// Rajouter plus de vérifs
+// Check if the user is an admin
 if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
-    displayError($_SESSION['user']['name'] . "is not an admin.");
+    displayError("User is not an admin.");
     displayFooter();
 }
 ?>
@@ -32,6 +28,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/admin_panel_style.css" />
+    <script src="../script/adminPanelButtons.js"></script>
 </head>
 <body>
     <div class="container">

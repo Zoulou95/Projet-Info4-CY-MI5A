@@ -1,10 +1,11 @@
 <?php
-    session_start();
-
-    include('../includes/profile_manager.php');
+    require_once('../includes/profile_manager.php');
 
     $data = dataReader('../data/user_data.json');
-    updateInfo($data, '../data/user_data.json');
+
+    if(isset($_SESSION["user"])) {
+        updateInfo($data, '../data/user_data.json');
+    }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Upload a user's profile picture to the server
@@ -27,6 +28,8 @@
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/userpage_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/userpage_edit_style.css" />
+    <script src="../script/userpage.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -56,7 +59,8 @@
                     ?>
                 </label>
                 <p>Changer votre photo de profil</p>
-                <input name="profile_picture" type="file" accept="image/jpeg, image/png" />
+                <p>(format jpg uniquement)</p>
+                <input name="profile_picture" type="file" accept="image/jpeg" />
 
                 <!-- Table showing user status (e.g. VIP, admin, etc.) -->
                 <table class="subscription_table">

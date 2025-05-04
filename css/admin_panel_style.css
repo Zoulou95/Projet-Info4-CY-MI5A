@@ -44,17 +44,17 @@ body {
 
 .user_name {
     margin-left: 30px;
-    margin-right: 30px; /* Pousse le nom vers la gauche */
+    margin-right: 30px; /* Push the name to the left */
 }
 
 .user_privilege {
-    margin-left: 5px; /* Espacement fixe pour aligner les privilèges */
+    margin-left: 5px; /* Fixed spacing to align privileges */
 }
 
 .user_button_container {
     display: flex;
-    gap: 15px; /* Espace uniforme entre les boutons */
-    margin-left: auto; /* Pousse les boutons vers la droite */
+    gap: 15px; /* Uniform spacing between buttons */
+    margin-left: auto; /* Push buttons to the right */
 }
 
 .user_button {
@@ -131,4 +131,19 @@ body {
 
 .color_standard {
     color: #383838;
+}
+
+/* Dans admin_panel_style.css, ajoutez: */
+.user_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #999999 !important;
+}
+
+.user_status_button.disabled {
+    background-color: #666666 !important;
+}
+
+.user_ban_button.disabled {
+    background-color: #990000 !important;
 }

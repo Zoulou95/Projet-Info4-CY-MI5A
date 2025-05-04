@@ -1,8 +1,6 @@
 <?php
-    session_start();
-
     include('includes/logs.php');
-    include('includes/trip_functions.php');
+    require_once('includes/trip_functions.php');
 
     $data_file = 'data/trip_data.json';
 ?>
@@ -51,7 +49,6 @@
                 $id_list[] = $num;
             }
         }
-
         displayCards($id_list, $data_file);
     ?>
     </div>

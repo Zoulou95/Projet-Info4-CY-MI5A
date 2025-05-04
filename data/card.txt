@@ -1,0 +1,6 @@
+Carte bancaire d’essai
+Le système accepte le paiement pour la carte bancaire suivante :
+• Titulaire : n’importe quelle valeur
+• Numéro de carte : 5555 1234 5678 9000
+• Cryptogramme : 555
+• Date d’expiration : n’importe quelle valeur

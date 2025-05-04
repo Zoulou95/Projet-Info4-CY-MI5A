@@ -1,0 +1,45 @@
+/* Style pour les fonctionnalités d'édition des champs */
+
+/* Style des champs désactivés */
+input:disabled {
+    background-color: #f7f7f7;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Style du bouton Modifier */
+#edit_button {
+    height: 50px;
+    width: 8vw;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #21a9ff;
+    border: solid 1px #21a9ff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover et active effects pour le bouton Modifier */
+#edit_button:hover {
+    background-color: #1a89ce;
+    border-color: #1a89ce;
+}
+
+#edit_button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Uniformiser les boutons dans la button_group */
+
+.button_group {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    flex-direction: row;
+}
+
+/* Adapter les boutons Save et Reset pour qu'ils s'accordent avec le design */
+#save_button, #reset_button {
+    display: none; /* Masqués par défaut */
+}

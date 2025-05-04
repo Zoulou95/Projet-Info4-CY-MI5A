@@ -1,6 +1,6 @@
 <?php
 
-include('error.php');
+require_once('error.php');
 
 // Function to retrieve useful data from 'trip_data.json file and display specific trip information
 function dataDecode($data_file) {
@@ -11,31 +11,13 @@ function dataDecode($data_file) {
     }  
     else
     {
-        displayError("'trip_data.json' file is missing.");
+        //displayError("'trip_data.json' file is missing."); --> à faire
+        error_log($data_file ." is missing.");
     }
 
-    // Verification of data structure
-    if (!isset($data['trip']) || !is_array($data['trip'])) {
-        displayError("data decode failed.");
-    }
+    // Verification of data structure --> à faire
 
-    return $data;
-}
-
-// Find a trip with its id
-function tripFinder($data, $trip_id) {
-    // Check that the trip match the ID in 'trip_data.json'
-    $trip = null;
-    foreach ($data['trip'] as $journey) {
-        if ($journey['id'] == $trip_id) {
-            $trip = $journey;
-            break;
-        }
-    }
-    if ($trip === null) {
-        displayError("trip not found.");
-    }
-    return $trip;
+    return $data; 
 }
 
 // Retrieves the number of results found during a search (for aesthetic reasons)
@@ -62,10 +44,17 @@ function printCard($journey) {
             <p>'. $journey['subtitle'] . '</p>
             <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-            <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>
-            <a href="../src/trip.php?id=' . $journey['id'] . '" class="explore">➤ Découvrir</a>
-        </div>
-    </div>';
+            <p>Frais de services : <b>' . $journey['price_per_person'] . '€</b></p>';
+            if(isset($_SESSION['user']['travel_history']) && isPurchased($journey['id'])) {
+                echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
+            } else {
+                echo '<a href="../src/trip.php?id=' . $journey['id'] . '" class="explore">➤ Découvrir</a>';
+            }
+    echo
+    '
+    </div>
+    </div>
+    ';
 }
 
 // Display a trip as a map according to a user's quicksearch request
@@ -174,17 +163,25 @@ function displayCards($id_list, $data_file) {
     foreach ($id_list as $trip_id) {
         $trip = tripFinder($data, $trip_id);
         if (!$trip) {
-            displayError("trip not found on cards display.");
+            displayError('trip' . $trip_id . 'not found on cards display.');
         }
         echo
         '<div class="card">
             <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
             <div class="card_content">
                 <h2>' . $trip['presentation_title'] . '</h2>
-                <p>' . $trip['description'] . '</p>
-                <a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Découvrir</a>
-            </div>
-        </div>';
+                <p>' . $trip['description'] . '</p>';
+
+                if(isset($_SESSION['user']['travel_history']) && isPurchased($trip_id)) {
+                    echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
+                } else {
+                    echo '<a href="../src/trip.php?id=' . $trip['id'] . '" class="explore">➤ Découvrir</a>';
+                }
+        echo
+        '
+        </div>
+        </div>
+        ';
     }
 }
 
@@ -204,7 +201,7 @@ function isConfigValid() {
         }
     }
 
-    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports'])) {
+    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports']) || !isset($_POST['flight'])) {
         $res = 0;
     }
 
@@ -220,56 +217,93 @@ function displayNoResult() {
     </button>';
 }
 
+// Check if a trip is already purchased by an user
+function isPurchased($trip_id) {
+    $trip_id = (string) $trip_id;
+    if (isset($_SESSION['user']['travel_history']) && in_array($trip_id, $_SESSION['user']['travel_history'])) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // Calculate the travel final price
 function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
-    $price_per_person = intval($trip['price_per_person']);
+    $tripDuration = intval($trip['dates']['duration']);
+    $service = intval($trip['price_per_person']);
+    $transportMode = $_POST['transports'];
 
-    $total = intval($price_per_person) * intval($number_of_participants);
+    // Initial total with base price
+    $total = $service * $number_of_participants;
 
-    // Transport price
-    switch ($_POST['transports']) {
-        case "Aucun":
+    // Add flight price
+    switch ($_POST['flight']) {
+        case "Classe Économique":
+            $flightPrice = 800;
             break;
-        case "Bâteau":
-            $total += 100 * $number_of_participants * $trip['dates']['length'];
+        case "Classe Confort":
+            $flightPrice = 1200;
             break;
-        case "Vélo":
-            $total += 30 * $number_of_participants * $trip['dates']['length'];
+        case "Classe Affaires":
+            $flightPrice = 1400;
             break;
-        case "Voiture":
-            $total += 90 * $number_of_participants * $trip['dates']['length'];
-            break;
-        case "Chauffeur":
-            $total += 300 * $number_of_participants * $trip['dates']['length'];
-            break;
-        case "Hélicoptère":
-            $total += 900 * $number_of_participants * $trip['dates']['length'];
+        case "Première Classe":
+            $flightPrice = 2000;
             break;
         default:
+            $flightPrice = 800;
             break;
     }
+    $total += $flightPrice * $number_of_participants;
 
-    // Meal price
-    for ($i=1; $i<$step_number; $i++) {
-        if($_POST['pension_' . $i] === "Tout inclus") {
-            $total += 50 * $number_of_participants * $trip['step_' . $i]['dates']['duration'];;
+    // Transport costs
+    $transportRates = [
+        "Aucun" => 0,
+        "Vélo" => 30,
+        "Voiture" => 90,
+        "Bâteau" => 100,
+        "Chauffeur" => 300,
+        "Hélicoptère" => 900
+    ];
+    $transportCost = $transportRates[$transportMode];
+    $total += $transportCost * $number_of_participants * $tripDuration;
+
+    // Steps 1 to 3
+    for ($i = 1; $i < $step_number; $i++) {
+        $stepDuration = $trip['step_' . $i]['dates']['duration'];
+        $participants = intval($_POST['participants_' . $i]);
+
+        // Hotel price
+        $hotelName = $_POST['hotel_' . $i];
+        $hotelIndex = array_search($hotelName, $trip['hotel']);
+        $hotelPrice = $trip['hotel_price'][$hotelIndex];
+        
+        $total += $hotelPrice * $participants * $stepDuration;
+
+        // Pension
+        $pension = $_POST['pension_' . $i];
+        if ($pension === "Tout inclus") {
+            $total += 50 * $participants * $stepDuration;
         }
+
+        // Activity price
+        $activityName = $_POST['activite_' . $i];
+        $activityIndex = array_search($activityName, $trip['step_' . $i]['activities']) ?? 0;
+        $activityPrice = $trip['step_' . $i]['activities_price'][$activityIndex];
+        
+        error_log("=========================");
+        error_log($activityIndex);
+        error_log("=========================");
+        $total += $activityPrice * $participants;
     }
 
-    // If participants are added to the activity
-    for ($i=1; $i<$step_number; $i++) {
-        if($_POST['participants_' . $i] > $number_of_participants) {
-            $diff = intval($_POST['participants_' . $i]) - $number_of_participants;
-            $total += 130 * $diff;
-        }
-    }
-
-    // Discount if the member is VIP
-    if($_SESSION['user']['role'] == "VIP") {
+    // Apply VIP discount
+    /*if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
         $total *= 0.9;
-    }
-
+    }*/
+    error_log($total);
+    error_log(" ");
     return $total;
 }
 ?>

@@ -1,9 +1,10 @@
 <?php
 session_start();
-require('../includes/getapikey.php');
-include('../includes/profile_manager.php');
+require_once('../includes/getapikey.php');
+include_once('../includes/profile_manager.php');
+include_once('../includes/cart_functions.php');
 
-// Récupération des données envoyées par CYBank
+// Retrieve data sent by CYBank
 $transaction = $_GET['transaction'] ?? '';
 $montant = $_GET['montant'] ?? '';
 $vendeur = $_GET['vendeur'] ?? '';
@@ -28,12 +29,29 @@ $verification = ($control_calcule === $control_recu);
     <link rel="stylesheet" type="text/css" href="../css/confirmation_style.css" />
 </head>
 <body>
-    <?php displayHeader(); ?>
+    <?php
+        if ($status === 'accepted') {
+            deleteCart();
+        }
+        displayHeader();
+    ?>
 
     <div class="order_container">
         <header class="recap_order">
-            <h1>Merci pour votre réservation !</h1>
-            <p>Votre voyage est confirmé</p>
+            <?php
+                if($status === 'accepted') {
+                    echo
+                    '
+                    <h1>Merci pour votre réservation !</h1>
+                    <p>Votre voyage est confirmé</p>
+                    ';
+                } else {
+                    echo
+                    '
+                    <h1>Échec de la réservation</h1>
+                    ';
+                }
+            ?>
         </header>
 
         <h2 class="order_text">Statut du paiement</h2>
@@ -42,13 +60,17 @@ $verification = ($control_calcule === $control_recu);
             <p class="order_text">Montant : <?php echo htmlspecialchars($montant); ?> €</p>
             <p class="order_text">Statut : <strong><?php echo htmlspecialchars($status); ?></strong></p>
             <?php if ($status === 'accepted'): ?>
-                <p class="order_text" style="color:green;">Paiement accepté. Merci pour votre achat !</p>
-                <?php
-                // Update a user's loyalty points and travel history
-                confirmPurchaseUpdate();
-                ?>
-            <?php else: ?>
-                <p class="order_text" style="color:red;">Paiement refusé. Veuillez réessayer.</p>
+            <p class="order_text" style="color:green;">Paiement accepté. Merci pour votre achat !</p>
+            <?php
+            // Update loyalty points and user history
+            confirmPurchaseUpdate();
+                    
+            // Save complete purchase details
+            $purchase_id = savePurchaseDetails();
+            ?>
+            <p class="order_text">Numéro de réservation: <strong><?php echo $purchase_id; ?></strong></p>
+        <?php else: ?>
+            <p class="order_text" style="color:red;">Paiement refusé. Veuillez réessayer.</p>
             <?php endif; ?>
         <?php else: ?>
             <p class="order_text" style="color:red;">Erreur : les données de retour sont invalides (contrôle échoué).</p>
@@ -59,6 +81,12 @@ $verification = ($control_calcule === $control_recu);
         </button>
     </div>
 
-    <?php displayFooter(); ?>
+    <?php
+        // Clear the user's cart from session
+        if(isset($_SESSION['user_choice'])) {
+            unset($_SESSION['user_choice']);
+        }
+        displayFooter();
+    ?>
 </body>
 </html>

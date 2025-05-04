@@ -2,8 +2,8 @@
 
 session_start();
 
-include('../includes/error.php');
-include('../includes/logs.php');
+require_once('../includes/error.php');
+require_once('../includes/logs.php');
 
 // Processing the file containing user data
 $data_file = '../data/user_data.json';

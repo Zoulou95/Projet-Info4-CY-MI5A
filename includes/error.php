@@ -1,7 +1,6 @@
 <?php
-
-include('header.php');
-include('footer.php');
+require_once('header.php');
+require_once('footer.php');
 
 // Display error message
 function displayError($message) {
@@ -16,7 +15,7 @@ function displayError($message) {
     "
     <link rel=\"stylesheet\" type=\"text/css\" href=\"../css/base_style.css\" />
     <h3 class=\"invalid_page_text\">Page web non disponible</h3>
-    <button class=\"back_to_index_button\" onclick=\"window.location.href='advanced_search.php'\">
+    <button class=\"back_to_index_button\" onclick=\"window.location.href='../index.php'\">
         <a class=\"back_to_index_text\" href=\"../index.php\">Cliquez ici pour retourner à l'accueil</a> 
     </button>";
 
