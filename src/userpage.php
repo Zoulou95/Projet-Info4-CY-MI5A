@@ -28,6 +28,8 @@
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/userpage_style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/userpage_edit_style.css" />
+    <script src="../script/userpage.js" defer></script>
 </head>
 <body>
     <div class="container">

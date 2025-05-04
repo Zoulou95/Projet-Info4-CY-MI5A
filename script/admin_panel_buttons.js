@@ -1,57 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner tous les formulaires d'utilisateurs
-    const userForms = document.querySelectorAll('.users');
+    // Sélectionner tous les boutons
+    const allButtons = document.querySelectorAll('.user_button');
     
-    userForms.forEach(form => {
-        // Récupérer tous les boutons dans le formulaire
-        const buttons = form.querySelectorAll('button');
-        
-        buttons.forEach(button => {
-            // Ajouter un écouteur d'événement sur chaque bouton plutôt que sur le formulaire
-            button.addEventListener('click', function(e) {
-                // Empêcher le comportement par défaut du bouton
-                e.preventDefault();
-                
-                // Récupérer le formulaire parent du bouton
-                const currentForm = this.closest('form');
-                
-                // Récupérer l'action du bouton
-                const action = this.value;
-                
-                // Désactiver tous les boutons dans ce formulaire utilisateur
-                const allButtons = currentForm.querySelectorAll('button');
-                allButtons.forEach(btn => {
-                    btn.disabled = true;
-                    btn.classList.add('disabled');
-                });
-                
-                // Afficher un message de chargement à côté du bouton cliqué
-                const loadingSpan = document.createElement('span');
-                loadingSpan.textContent = ' ...';
-                loadingSpan.className = 'loading-text';
-                this.parentNode.appendChild(loadingSpan);
-                                
-                // Stocker une référence au bouton cliqué pour pouvoir soumettre le formulaire avec la bonne action
-                const clickedButton = this;
-                
-                // Attendre 2 secondes avant d'envoyer le formulaire
-                setTimeout(() => {
-                    // Créer un champ caché pour l'action si nécessaire
-                    let actionInput = currentForm.querySelector('input[name="action"]');
-                    if (!actionInput) {
-                        actionInput = document.createElement('input');
-                        actionInput.type = 'hidden';
-                        actionInput.name = 'action';
-                        currentForm.appendChild(actionInput);
-                    }
-                    
-                    // Définir la valeur de l'action (celle du bouton cliqué)
-                    actionInput.value = action;
-                    
-                    // Soumettre le formulaire
-                    currentForm.submit();
-                }, 2000);
+    allButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Empêcher le comportement par défaut du bouton
+            e.preventDefault();
+            
+            // Récupérer le formulaire parent
+            const currentForm = this.closest('form');
+            
+            // Récupérer l'action et l'ID utilisateur
+            const action = this.value;
+            const userId = currentForm.querySelector('input[name="user_id"]').value;
+            
+            // Désactiver tous les boutons de la page
+            allButtons.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('disabled');
             });
+            
+            // Créer un formulaire temporaire
+            const tempForm = document.createElement('form');
+            tempForm.method = 'POST';
+            tempForm.action = 'update_role.php';
+            tempForm.style.display = 'none';
+            
+            // Ajouter les champs nécessaires
+            const userIdInput = document.createElement('input');
+            userIdInput.type = 'hidden';
+            userIdInput.name = 'user_id';
+            userIdInput.value = userId;
+            
+            const actionInput = document.createElement('input');
+            actionInput.type = 'hidden';
+            actionInput.name = 'action';
+            actionInput.value = action;
+            
+            // Ajouter les champs au formulaire
+            tempForm.appendChild(userIdInput);
+            tempForm.appendChild(actionInput);
+            
+            // Ajouter le formulaire au document
+            document.body.appendChild(tempForm);
+            
+            // Attendre 2 secondes puis soumettre le formulaire
+            setTimeout(() => {
+                tempForm.submit();
+            }, 2000);
         });
     });
 });
