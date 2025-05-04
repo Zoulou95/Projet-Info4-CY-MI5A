@@ -472,3 +472,48 @@ footer {
 .hidden {
     animation: bubbleShow 0.5s ease-out forwards;
 }
+
+
+
+
+
+body.dark-mode {
+    background-color: #1f2937; 
+    color: #e0e0e0;
+}
+
+.dark-mode .card {
+    width: 350px;
+    background: #2e3f57;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.dark-mode .card h2 {
+    margin: 0;
+    color: white;
+}
+
+.dark-mode .card p {
+    font-size: 1.6vh;
+    color: white;
+    margin: 10px 0;
+}
+
+.dark-mode .explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dark-mode .explore_details {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.dark-mode .overlay_content{
+    background-color : #1f2937;
+}

@@ -114,3 +114,17 @@ input:focus {
     justify-content: center;
     gap: 5%;
 }
+
+
+.dark-mode .user_container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 4%;
+    border: solid 3px #383838;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    margin-bottom: 4%;
+}

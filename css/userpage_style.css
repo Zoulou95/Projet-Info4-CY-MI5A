@@ -213,3 +213,14 @@ label {
     margin-top: 20px;
 }
 
+
+.dark-mode .user_container {
+    display: flex;
+    min-width: 1000px;
+    gap: 15vh;
+    margin: 4% auto;
+    border: solid 3px #383838;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+}

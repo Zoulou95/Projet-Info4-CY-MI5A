@@ -147,3 +147,15 @@ body {
 .user_ban_button.disabled {
     background-color: #990000 !important;
 }
+
+.dark-mode .user_container {
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    width: 70%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: solid 3px #383838; /* anthracite color */
+    border-radius: 20px;
+    background-color: #1e1e1e;    /* white color */
+}
