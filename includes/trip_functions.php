@@ -37,14 +37,18 @@ function getTripNumber($data, $tag) {
 function printCard($journey) {
     echo
     '
-    <div class="card">
+    <div class="card" 
+        data-price="' . $journey['price_per_person'] . '" 
+        data-date="' . $journey['dates']['start_date'] . '" 
+        data-duration="' . $journey['dates']['length'] . '" 
+        data-steps="' . count($journey['special_features']) . '">
         <img src="../assets/presentation/' . $journey['presentation_img_1'] . '" alt="Card presentation image" />
         <div class="card_content">
             <h2>'. $journey['title'] . '</h2>
             <p>'. $journey['subtitle'] . '</p>
-            <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
+            <p>Date : <b><span class="date_value">' . $journey['dates']['start_date'] . '</span></b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-            <p>Frais de services : <b>' . $journey['price_per_person'] . '€</b></p>';
+            <p>Frais de services : <b><span class="price_value">' . $journey['price_per_person'] . '</span>€</b></p>';
             if(isset($_SESSION['user']['travel_history']) && isPurchased($journey['id'])) {
                 echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
             } else {
@@ -57,9 +61,9 @@ function printCard($journey) {
     ';
 }
 
+
 // Display a trip as a map according to a user's quicksearch request
 function displayByTag($data, $tag, $trip_number) {
-
     // Manage display when only one result is obtained
     if ($trip_number > 1) {
         $plural = 's';
@@ -70,7 +74,7 @@ function displayByTag($data, $tag, $trip_number) {
     echo '<h2 class="result_text">Résultat' . $plural . ' pour "' . $tag . '" (' . $trip_number . ' voyage' . $plural . ' trouvé' . $plural . ')</h2>';
 
     if ($trip_number != 0) {
-        echo '<div class="result_container">';
+        echo '<div class="trip_cards_container">'; // Conteneur pour le tri
         foreach ($data['trip'] as $journey) {
             foreach ($journey['tags'] as $keyword) {
                 if ($keyword == $tag) {
@@ -79,7 +83,7 @@ function displayByTag($data, $tag, $trip_number) {
                 }
             }
         }
-        echo '</div>';
+        echo '</div>'; // Fermer le conteneur
     } else {
         displayNoResult();
     }
@@ -87,16 +91,15 @@ function displayByTag($data, $tag, $trip_number) {
 
 // Display a trip as a map according to a user's specific search request
 function displayByFilter($data) {
-
     // Avoid undefined index errors if certain variables are not sent in the URL
-    $destination = htmlspecialchars($_GET['destination']) ?? 0;
+    $destination = htmlspecialchars($_GET['destination'] ?? '');
     $price_range = $_GET['price_range'] ?? 0;
     $travel_type = $_GET['travel_type'] ?? 0;
     $date = $_GET['date'] ?? 0;
     $travel_length = $_GET['travel_length'] ?? 0;
 
     // Input verification
-    if($travel_length != 0 && $travel_length < 8 || $travel_length > 12) {
+    if($travel_length != 0 && ($travel_length < 8 || $travel_length > 12)) {
         displayError("Wrong travel length input.");
     }
 
@@ -113,7 +116,9 @@ function displayByFilter($data) {
     }
 
     echo '<h2 class="result_text">Résultats pour votre recherche</h2>';
-    echo '<div class="result_container">';
+
+    // Ajout du conteneur pour le tri
+    echo '<div class="trip_cards_container">';
 
     $found = false;
     foreach ($data['trip'] as $journey) {
@@ -149,7 +154,8 @@ function displayByFilter($data) {
             $found = true;
         }
     }
-    echo '</div>';
+    echo '</div>'; // Fermer le conteneur
+
     if ($found == false) {
         displayNoResult();
     }
