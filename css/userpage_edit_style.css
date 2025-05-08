@@ -31,11 +31,12 @@ input:disabled {
 }
 
 /* Uniformiser les boutons dans la button_group */
+
 .button_group {
     display: flex;
     justify-content: center;
     gap: 5%;
-    align-items: center;
+    flex-direction: row;
 }
 
 /* Adapter les boutons Save et Reset pour qu'ils s'accordent avec le design */

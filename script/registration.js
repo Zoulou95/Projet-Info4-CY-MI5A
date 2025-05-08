@@ -1,4 +1,4 @@
-// Functions for displaying the registration and login overlay
+// registration.js : functions for displaying the registration and login overlay
 
 function openSignUpOverlay(event) {
     if (event) event.preventDefault(); // Prevents page change

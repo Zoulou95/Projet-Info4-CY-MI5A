@@ -62,7 +62,7 @@ function pictureUpload() {
         $file = $_FILES['profile_picture'];
 
         // Prevents the user from sending anything other than an image to the server
-        // NOTE: we'll set the error redirection in phase 3 (JavaScript/DOM)
+        
         if (!in_array($file['type'], $allowed_types)) {
             echo "<script>alert('Le format de l'image n'est pas supporté (doit être au format JPG ou PNG).'); window.history.back();</script>";
             exit;
@@ -80,8 +80,9 @@ function pictureUpload() {
     }
 }
 
+// Update user info on 'userpage.php'
 function editInfo($data, $data_file) {
-    
+
     if(isset($_POST['name']) || isset($_POST['forename']) || isset($_POST['email']) || isset($_POST['telephone'])) {
 
         $user_id = $_SESSION['user']['id'];
@@ -195,7 +196,8 @@ function tripFinder($data, $trip_id) {
         }
     }
     if ($trip === null) {
-        displayError("trip not found.");
+        echo "<script>alert('Erreur lors de la réception des données'); window.history.back();</script>";
+        error_log("ERROR: trip not found.");
     }
     return $trip;
 }
@@ -219,7 +221,9 @@ function confirmPurchaseUpdate() {
                 $data[$key]['travel_history'] = []; 
             }
 
-            $data[$key]['travel_history'][] = $_SESSION['trip']['id'];
+            for ($i = 0; $i < count($_SESSION['user_choice']); $i++) {
+                $data[$key]['travel_history'][] = $_SESSION['user_choice'][$i]['trip_id'];
+            }
 
             // Save new data to JSON file
             $new_json_data = json_encode($data, JSON_PRETTY_PRINT);
@@ -248,55 +252,25 @@ function savePurchaseDetails() {
     } else {
         $purchases = [];
     }
-    
+
     // Retrieve all transaction data from the session and GET
-    $purchase_data = [
-        "id" => uniqid('purchase_'),
-        "user_id" => $_SESSION['user']['id'],
-        "user_name" => $_SESSION['user']['name'] . ' ' . $_SESSION['user']['forename'],
-        "purchase_date" => date("Y-m-d H:i:s"),
-        "transaction_id" => $_GET['transaction'] ?? '',
-        "transaction_status" => $_GET['status'] ?? '',
-        "montant" => $_GET['montant'] ?? '',
-        "trip_id" => $_SESSION['trip']['id'],
-        "trip_title" => $_SESSION['trip']['title'],
-        "number_of_participants" => $_SESSION['number_of_participants'] ?? 0,
-        "start_date" => $_SESSION['trip']['dates']['start_date'],
-        "end_date" => $_SESSION['trip']['dates']['end_date'],
-        "steps" => [
-            "step_1" => [
-                "title" => $_SESSION['trip']['step_1']['title'],
-                "hotel" => $_SESSION['step_1_hotel'] ?? '',
-                "pension" => $_SESSION['step_1_pension'] ?? '',
-                "activity" => $_SESSION['step_1_activity'] ?? '',
-                "participants" => $_SESSION['step_1_participants'] ?? ''
-            ],
-            "step_2" => [
-                "title" => $_SESSION['trip']['step_2']['title'],
-                "hotel" => $_SESSION['step_2_hotel'] ?? '',
-                "pension" => $_SESSION['step_2_pension'] ?? '',
-                "activity" => $_SESSION['step_2_activity'] ?? '',
-                "participants" => $_SESSION['step_2_participants'] ?? ''
-            ],
-            "step_3" => [
-                "title" => $_SESSION['trip']['step_3']['title'],
-                "hotel" => $_SESSION['step_3_hotel'] ?? '',
-                "pension" => $_SESSION['step_3_pension'] ?? '',
-                "activity" => $_SESSION['step_3_activity'] ?? '',
-                "participants" => $_SESSION['step_3_participants'] ?? ''
-            ]
-        ],
-        "transport" => $_SESSION['transport'] ?? '',
-        "points_earned" => $_SESSION['points_win'] ?? 0
-    ];
-    
-    // Add purchase data to table
-    $purchases[] = $purchase_data;
-    
-    // Save file
-    file_put_contents($purchase_file, json_encode($purchases, JSON_PRETTY_PRINT));
-    
-    return $purchase_data['id'];
+    for ($i = 0; $i < count($_SESSION['user_choice']); $i++) {
+
+        $purchase_data = $_SESSION['user_choice'][$i];
+
+        $purchase_data['id'] = uniqid('purchase_');
+        $purchase_data['purchase_date'] = date("Y-m-d H:i:s");
+        $purchase_data['transaction_id'] = $_GET['transaction'] ?? '';
+        $purchase_data['transaction_status'] = $_GET['status'] ?? '';
+        
+        // Add purchase data to table
+        $purchases[] = $purchase_data;
+        
+        // Save file
+        file_put_contents($purchase_file, json_encode($purchases, JSON_PRETTY_PRINT));
+    }
+
+    return $purchase_data['id'] ?? null;
 }
 
 // Displays trip history from purchase_data.json and trip_data.json files
@@ -307,7 +281,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
         $trip_data = dataReader($trip_data_file);
 
         if (!is_array($purchases) || empty($purchases)) {
-            echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+            echo '<h1 class="history_text"><b>Aucun voyage réservé 😭</b></h1>';
             return;
         }
 
@@ -317,7 +291,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
         });
 
         if (empty($user_purchases)) {
-            echo '<h1 class="history_text"><b>Aucun voyage réservé 🥹</b></h1>';
+            echo '<h1 class="history_text"><b>Aucun voyage réservé 😭</b></h1>';
             return;
         }
 
@@ -336,7 +310,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
                     <img src="../assets/presentation/' . $trip['presentation_img_1'] . '" alt="Trip image" />
                     <div class="card_content">
                         <h2>' . $purchase['trip_title'] . '</h2>
-                        <p>Date: ' . $purchase['start_date'] . ' au ' . $purchase['end_date'] . '</p>
+                        <p><b>Dates: </b>' . $purchase['start_date'] . ' au ' . $purchase['end_date'] . '</p>
                         <a href="../src/purchase_details.php?id=' . $purchase['id'] . '" class="explore">➤ Consulter ma réservation</a>
                     </div>
                 </div>';

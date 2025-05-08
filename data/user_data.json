@@ -6,11 +6,8 @@
         "telephone": "0730027127",
         "password": "$2y$10$kWpYWOrDf1Ni.RjBilxEkOOnRvt0SdQc2fID\/LL.X0ectv28sdEW2",
         "role": "vip",
-        "points": 480,
-        "id": "67dc9dcab2e47",
-        "travel_history": [
-            "15"
-        ]
+        "points": 0,
+        "id": "67dc9dcab2e47"
     },
     {
         "name": "Dupont",
@@ -29,7 +26,7 @@
         "telephone": "0767708005",
         "password": "$2y$10$cYY1.qBrz6rhKZRKx3AOVuhTdR3G0svePvo5.UjmpOy9.brXs.wWu",
         "role": "standard",
-        "points": 200,
+        "points": 0,
         "id": "67dc9e124aa6d"
     },
     {
@@ -48,7 +45,7 @@
         "email": "hugo.lambert@email.com",
         "telephone": "0659701868",
         "password": "$2y$10$yx4WG0v.Hr23sPErK0PM\/uTtvwYAjed.aeO54mgpM3pvpNStSXoHm",
-        "role": "standard",
+        "role": "banni",
         "points": 0,
         "id": "67dc9edcb8622"
     },
@@ -78,7 +75,7 @@
         "email": "manon.fournier@email.com",
         "telephone": "0716170286",
         "password": "$2y$10$j8D109BvECHMlipHmrBkv.b54KhojasEDXY5dClHulYl2\/O27dGXe",
-        "role": "banni",
+        "role": "standard",
         "points": 0,
         "id": "67dc9f1498400"
     },
@@ -118,16 +115,9 @@
         "email": "sarah.mercier@email.com",
         "telephone": "0682757329",
         "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
-        "role": "vip",
-        "points": 1064.3000000000002,
-        "id": "67dc9f61a936d",
-        "travel_history": [
-            "4",
-            "3",
-            "13",
-            "12",
-            "14"
-        ]
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f61a936d"
     },
     {
         "name": "roussel",
@@ -155,12 +145,9 @@
         "email": "alexis.perrot@email.com",
         "telephone": "0714934411",
         "password": "$2y$10$.ZhHlge2XgLXn3PKMQsWresTV4qsS4kV7byIFJnU1Nfq2XRJW.nKe",
-        "role": "vip",
-        "points": 610,
-        "id": "67dc9f97bc7c6",
-        "travel_history": [
-            "11"
-        ]
+        "role": "standard",
+        "points": 0,
+        "id": "67dc9f97bc7c6"
     },
     {
         "name": "barbier",
@@ -189,6 +176,7 @@
         "telephone": "0660207905",
         "password": "$2y$10$Ja8.K1RJ8lIXRetHEbhLOedO7XE36aDHC95KcZjMrFbv41oSTn1zG",
         "role": "admin",
+        "points": 0,
         "id": "67dc9fcc33196"
     },
     {
@@ -208,11 +196,7 @@
         "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
         "role": "admin",
         "id": "67dc9feb99f64",
-        "points": 655,
-        "travel_history": [
-            "6",
-            "3"
-        ]
+        "points": 0
     },
     {
         "name": "Cauchy",
