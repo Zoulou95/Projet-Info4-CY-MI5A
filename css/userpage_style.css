@@ -154,11 +154,13 @@ label {
 #save_button {
     border: solid 1px #21a9ff;
     background-color: #21a9ff;
+    width: 8vw;
 }
 
 #reset_button {
     border: solid 1px #383838;
     background-color: #383838;
+    width: 8vw;
 }
 
 #logout_button {
@@ -179,12 +181,6 @@ label {
 #reset_button:hover, #logout_button:hover {
     background-color: #282626;
     border-color: #282626;
-}
-
-.button_group {
-    display: flex;
-    justify-content: center;
-    gap: 5%;
 }
 
 .display_vip {
@@ -213,3 +209,55 @@ label {
     margin-top: 20px;
 }
 
+/* Style pour les fonctionnalités d'édition des champs */
+
+/* Style des champs désactivés */
+input:disabled {
+    background-color: #f7f7f7;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Style du bouton Modifier */
+#edit_button {
+    height: 50px;
+    width: 8vw;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #21a9ff;
+    border: solid 1px #21a9ff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover et active effects pour le bouton Modifier */
+#edit_button:hover {
+    background-color: #1a89ce;
+    border-color: #1a89ce;
+}
+
+#edit_button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.button_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit_buttons_group {
+    display: flex;
+    justify-content: left;
+    gap: 5%;
+}
+
+.logout_button_group {
+    display: flex;
+}
+
+/* Adapter les boutons Save et Reset pour qu'ils s'accordent avec le design */
+#save_button, #reset_button {
+    display: none; /* Masqués par défaut */
+}
