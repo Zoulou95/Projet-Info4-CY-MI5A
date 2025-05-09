@@ -107,14 +107,6 @@ input:focus {
     outline: none;
 }
 
-button:hover {
-    background: #1a89ce;
-}
-
-button:active {
-    border: 1px solid #000000;
-}
-
 /* Script for login in sign in */
 
 .signin_radio {
@@ -219,37 +211,4 @@ button:active {
     .input_wrapper input[type="password"] ~ .char_counter {
         right: 10px;
     }
-}
-
-/* Input style */
-
-.input-container {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.counter-container {
-    display: block;
-    text-align: right;
-    font-size: 12px;
-    color: #666;
-    margin-top: 2px;
-}
-
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #007bff;
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-}
-
-.toggle-password:hover {
-    text-decoration: underline;
 }

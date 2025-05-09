@@ -1,24 +1,30 @@
-// Display or hide
+// formFeature.js : functions on form functionalities and security
+
+// Display or hide the password input
+
 function togglePassword(inputId, btn) {
     const input = document.getElementById(inputId);
     const img = btn.querySelector('img') || document.createElement('img');
     
     if (input.type === "password") {
         input.type = "text";
-        img.src = "path/to/eye_open.png";
+        img.src = "../assets/visuals/eye_open.png";
         img.alt = "Cacher le mot de passe";
+        img.class = "eye_image";
     } else {
         input.type = "password";
-        img.src = "path/to/eye_closed.png";
+        img.src = "../assets/visuals/eye_close.png";
         img.alt = "Afficher le mot de passe";
+        img.class = "eye_image";
     }
     
-    // Si l'image n'existe pas encore dans le bouton, l'ajouter
+    // If the image doesn't already exist in the button, add it
     if (!btn.querySelector('img')) {
-        btn.textContent = ''; // Effacer le texte existant
+        btn.textContent = '';
         btn.appendChild(img);
     }
 }
+
 // Fonction pour mettre à jour les compteurs de caractères
 function updateCounter(inputId, counterId, maxLength) {
     const input = document.getElementById(inputId);
@@ -46,8 +52,8 @@ function updateCounter(inputId, counterId, maxLength) {
 // Initialisation des compteurs au chargement de la page
 document.addEventListener("DOMContentLoaded", function() {
     // Connexion
-    updateCounter("emailco", "emailCounterLogin", 50);
-    updateCounter("passwordco", "passwordCounterLogin", 30);
+    updateCounter("emailInputLogin", "emailCounterLogin", 50);
+    updateCounter("passwordInputLogin", "passwordCounterLogin", 30);
 
     // Inscription
     updateCounter("forenameInput", "forenameCounter", 50);

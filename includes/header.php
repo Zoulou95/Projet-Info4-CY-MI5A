@@ -73,18 +73,18 @@ function displayHeader() {
             <h2>Connexion</h2>
                 <form action="'.$path_parent.'src/connexion.php" method="POST">
                     <div class="input-container">
-                        <input class="overlay_input" type="email" id="emailInputLogin" name="email" placeholder="Email" required>
+                        <input class="overlay_input" type="email" id="emailInputLogin" name="email" placeholder="Email" maxlength="50" required>
                         <div class="counter-container">
                             <span id="emailCounterLogin">0 / 50</span>
                         </div>
                     </div>
                     
                     <div class="input-container">
-                        <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" required>
+                        <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" maxlength="30" required>
                         <div class="counter-container">
                             <span id="passwordCounterLogin">0 / 30</span>
                         </div>
-                        <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputLogin\', this)">Afficher</button>
+                        <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputLogin\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_open.png" /></button>
                     </div>
                     
                     <button class="overlay_button" type="submit">Se connecter</button>
@@ -101,28 +101,28 @@ function displayHeader() {
             <h2>Inscription</h2>
             <form action="'.$path_parent.'src/inscription.php" method="POST">
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="forenameInput" name="forename" placeholder="Prénom" required>
+                    <input class="overlay_input" type="text" id="forenameInput" name="forename" placeholder="Prénom" maxlength="50" required>
                     <div class="counter-container">
                         <span id="forenameCounter">0 / 50</span>
                     </div>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="nameInput" name="name" placeholder="Nom" required>
+                    <input class="overlay_input" type="text" id="nameInput" name="name" placeholder="Nom" maxlength="50" required>
                     <div class="counter-container">
                         <span id="nameCounter">0 / 50</span>
                     </div>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="email" id="emailInputSignup" name="email" placeholder="Email" required>
+                    <input class="overlay_input" type="email" id="emailInputSignup" name="email" placeholder="Email" maxlength="50" required>
                     <div class="counter-container">
                         <span id="emailCounterSignup">0 / 50</span>
                     </div>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="password" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
+                    <input class="overlay_input" type="password" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" minlength="8" maxlength="30" required>
                     <div class="counter-container">
                         <span id="passwordCounterSignup">0 / 30</span>
                     </div>
@@ -130,7 +130,7 @@ function displayHeader() {
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="tel" id="telInput" name="tel" placeholder="Numéro de téléphone" required>
+                    <input class="overlay_input" type="tel" id="telInput" name="tel" placeholder="Numéro de téléphone"  maxlength="15" required>
                     <div class="counter-container">
                         <span id="telCounter">0 / 15</span>
                     </div>
