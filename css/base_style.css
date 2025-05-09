@@ -619,3 +619,14 @@ body.dark-mode {
     padding-bottom: 50%;
     outline: none;
 }
+
+/* Prevents automatic eye for hiding and displaying password on some browsers (Edge for example) */
+
+input[type="password"]::-ms-reveal, input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button, input[type="password"]::-webkit-password-toggle-button {
+    display: none;
+    appearance: none;
+}
