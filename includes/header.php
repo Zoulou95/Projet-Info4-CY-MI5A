@@ -72,8 +72,21 @@ function displayHeader() {
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
                 <form action="'.$path_parent.'src/connexion.php" method="POST">
-                    <input class="overlay_input" type="email" name="email" placeholder="Email" required>
-                    <input class="overlay_input" type="password" name="password" placeholder="Mot de passe" required>
+                    <div class="input-container">
+                        <input class="overlay_input" type="email" id="emailInputLogin" name="email" placeholder="Email" required>
+                        <div class="counter-container">
+                            <span id="emailCounterLogin">0 / 50</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" required>
+                        <div class="counter-container">
+                            <span id="passwordCounterLogin">0 / 30</span>
+                        </div>
+                        <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputLogin\', this)">Afficher</button>
+                    </div>
+                    
                     <button class="overlay_button" type="submit">Se connecter</button>
                     <p class="switch_text">' .
                        "Vous n'avez pas de compte ?" . '
@@ -87,12 +100,43 @@ function displayHeader() {
             <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
             <h2>Inscription</h2>
             <form action="'.$path_parent.'src/inscription.php" method="POST">
-                <input class="overlay_input" type="text" name="forename" placeholder="Prénom" required>
-                <input class="overlay_input" type="text" name="name" placeholder="Nom" required>
-                <input class="overlay_input" type="email" name="email" placeholder="Email" required>
-                <input class="overlay_input" type="password" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
-                <input class="overlay_input" type="tel" name="tel" placeholder="Numéro de téléphone" required>
-                <button class="overlay_button" "type="submit">S\'inscrire</button>
+                <div class="input-container">
+                    <input class="overlay_input" type="text" id="forenameInput" name="forename" placeholder="Prénom" required>
+                    <div class="counter-container">
+                        <span id="forenameCounter">0 / 50</span>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input class="overlay_input" type="text" id="nameInput" name="name" placeholder="Nom" required>
+                    <div class="counter-container">
+                        <span id="nameCounter">0 / 50</span>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input class="overlay_input" type="email" id="emailInputSignup" name="email" placeholder="Email" required>
+                    <div class="counter-container">
+                        <span id="emailCounterSignup">0 / 50</span>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input class="overlay_input" type="password" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
+                    <div class="counter-container">
+                        <span id="passwordCounterSignup">0 / 30</span>
+                    </div>
+                    <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputSignup\', this)">Afficher</button>
+                </div>
+                
+                <div class="input-container">
+                    <input class="overlay_input" type="tel" id="telInput" name="tel" placeholder="Numéro de téléphone" required>
+                    <div class="counter-container">
+                        <span id="telCounter">0 / 15</span>
+                    </div>
+                </div>
+                
+                <button class="overlay_button" type="submit">S\'inscrire</button>
                 <p class="switch_text">
                     Vous avez déjà un compte ?
                     <a href="#" onclick="switchToSignIn()">Se connecter</a>
