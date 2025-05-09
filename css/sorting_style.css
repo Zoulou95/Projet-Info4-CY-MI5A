@@ -89,3 +89,13 @@
         max-width: 250px;
     }
 }
+
+.trip_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    width: 80%;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}

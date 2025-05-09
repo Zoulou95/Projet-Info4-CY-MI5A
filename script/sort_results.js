@@ -32,9 +32,7 @@ function createSortingInterface() {
         { id: 'sort-date-asc', text: 'Date (plus proche)', field: 'date', order: 'asc' },
         { id: 'sort-date-desc', text: 'Date (plus lointaine)', field: 'date', order: 'desc' },
         { id: 'sort-duration-asc', text: 'Durée (courte à longue)', field: 'duration', order: 'asc' },
-        { id: 'sort-duration-desc', text: 'Durée (longue à courte)', field: 'duration', order: 'desc' },
-        { id: 'sort-steps-asc', text: 'Nombre d\'étapes (croissant)', field: 'steps', order: 'asc' },
-        { id: 'sort-steps-desc', text: 'Nombre d\'étapes (décroissant)', field: 'steps', order: 'desc' }
+        { id: 'sort-duration-desc', text: 'Durée (longue à courte)', field: 'duration', order: 'desc' }
     ];
     
     // Create buttons container
