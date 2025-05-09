@@ -154,11 +154,13 @@ label {
 #save_button {
     border: solid 1px #21a9ff;
     background-color: #21a9ff;
+    width: 8vw;
 }
 
 #reset_button {
     border: solid 1px #383838;
     background-color: #383838;
+    width: 8vw;
 }
 
 #logout_button {
@@ -298,7 +300,7 @@ input:disabled {
     color: #21a9ff;
 }
 
-.dark-mode li a {
+.dark-mode .menu_navigation li a {
     color: #21a9ff;
     text-decoration: none;
 }

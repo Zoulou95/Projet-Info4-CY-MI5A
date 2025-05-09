@@ -51,14 +51,33 @@ function updateCounter(inputId, counterId, maxLength) {
 
 // Initialisation des compteurs au chargement de la page
 document.addEventListener("DOMContentLoaded", function() {
-    // Connexion
-    updateCounter("emailInputLogin", "emailCounterLogin", 50);
-    updateCounter("passwordInputLogin", "passwordCounterLogin", 30);
+    // Login
+    if(typeof emailInputLogin !== 'undefined') {
+        updateCounter("emailInputLogin", "emailCounterLogin", 50);
+    }
 
-    // Inscription
-    updateCounter("forenameInput", "forenameCounter", 50);
-    updateCounter("nameInput", "nameCounter", 50);
-    updateCounter("emailInputSignup", "emailCounterSignup", 50);
-    updateCounter("passwordInputSignup", "passwordCounterSignup", 30);
-    updateCounter("telInput", "telCounter", 15);
+    if(typeof passwordInputLogin !== 'undefined') {
+        updateCounter("passwordInputLogin", "passwordCounterLogin", 30);
+    }
+
+    if(typeof forenameInput !== 'undefined') {
+        updateCounter("forenameInput", "forenameCounter", 50);
+    }
+
+    if(typeof nameInput !== 'undefined') {
+        updateCounter("nameInput", "nameCounter", 50);
+    }
+
+    // Sign up
+    if(typeof emailInputSignup !== 'undefined') {
+        updateCounter("emailInputSignup", "emailCounterSignup", 50);
+    }
+
+    if(typeof passwordInputSignup !== 'undefined') {
+        updateCounter("passwordInputSignup", "passwordCounterSignup", 30);
+    }
+
+    if(typeof telInput !== 'undefined') {
+        updateCounter("telInput", "telCounter", 15);
+    }
 });

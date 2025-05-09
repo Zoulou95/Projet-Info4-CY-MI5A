@@ -45,7 +45,7 @@
         "email": "hugo.lambert@email.com",
         "telephone": "0659701868",
         "password": "$2y$10$yx4WG0v.Hr23sPErK0PM\/uTtvwYAjed.aeO54mgpM3pvpNStSXoHm",
-        "role": "banni",
+        "role": "standard",
         "points": 0,
         "id": "67dc9edcb8622"
     },
@@ -100,8 +100,8 @@
         "id": "67dc9f417a452"
     },
     {
-        "name": "robin",
-        "forename": "antoine",
+        "name": "Robin",
+        "forename": "Antoinee",
         "email": "antoine.robin@email.com",
         "telephone": "0669466393",
         "password": "$2y$10$nJfXYMGxPixZWjxhkbTVMuwqCCFwUR0pHU8fNVCnTmqlNNK.qGGsm",

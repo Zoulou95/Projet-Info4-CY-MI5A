@@ -27,7 +27,7 @@
                     <tr>
                         <!-- Search bar -->
                         <td>
-                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une île... 🔎" name="destination" />
+                            <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une île... 🔎" name="tag" />
                             <datalist id="destinations">
                                 <option value="Tahiti"></option>
                                 <option value="Bora-Bora"></option>

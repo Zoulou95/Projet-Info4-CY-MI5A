@@ -1,5 +1,5 @@
 <?php
-    // remove_from_cart.php : Deletes an item from the cart, modifies the JSON file in consequence
+    // remove_from_cart.php : deletes an item from the cart, modifies the JSON file in consequence
 
     require_once('error.php');
     require_once('cart_functions.php');
