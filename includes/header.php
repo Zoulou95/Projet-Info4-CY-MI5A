@@ -1,4 +1,6 @@
 <?php
+// header.php : navigation bar code
+
 $current_file = $_SERVER['PHP_SELF'];
 
 require_once('session_start.php');

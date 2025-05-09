@@ -1,4 +1,4 @@
-// userpage.js - Script pour gérer l'édition des champs du profil utilisateur
+// userpage.js : script pour gérer l'édition des champs du profil utilisateur
 
 document.addEventListener('DOMContentLoaded', function() {
     // Sélectionner tous les champs de saisie
@@ -78,6 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 hasChanges = true;
             }
         });
+
+        const fileInput = document.getElementById('profile_picture_input');
+        if (fileInput.files.length > 0) {
+            hasChanges = true;
+        }
         
         // Si des modifications ont été faites, soumettre le formulaire
         if (hasChanges) {

@@ -122,17 +122,15 @@ The pages in the `/includes` folder contain the PHP functions used by all the co
 
 - `trip_function.php` is the page for displaying and configuring trips.
 
+- `trip_function.php` is the page for displaying and configuring trips.
+
 - The functions in `session_start.php` are used to check the existence of cookies or to create them, and to initialize session variables.
-
-## `/script` files
-
-- `timelineBrowse.js` lets you configure the stages of a journey using a timeline that displays a different table with each click, which is more comfortable.
-
-- `registration.js` is the login and registration overlay.
 
 ## `/src` files
  
 - `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
+
+- `cart.php` allows you to place several trips in a shopping cart and then purchase them together.
 
 - `confirmation.php` and `order_confirmed.php` pages respectively summarize a user's choice of a trip and display a message to indicate that the purchase was successful.
 

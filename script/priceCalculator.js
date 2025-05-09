@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const flightSelect = document.querySelector('select[name="flight"]');
     const transportSelect = document.querySelector('select[name="transports"]');
     
-    // Initialize prices displayed on loading
+    // Initialize prices displayed
     updateAllPrices();
     
     dynamicInputs.forEach(input => {

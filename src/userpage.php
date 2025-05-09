@@ -6,14 +6,6 @@
     if(isset($_SESSION["user"])) {
         updateInfo($data, '../data/user_data.json');
     }
-
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Upload a user's profile picture to the server
-        pictureUpload();
-
-        // Update a user's informations
-        editInfo($data, '../data/user_data.json');
-    }
 ?>
 
 <!-- userpage.php : allow the user to see his personal informations and modify it -->
@@ -42,7 +34,7 @@
         }
         ?>      
         
-        <form method="post" action="userpage.php" enctype="multipart/form-data">
+        <form id="profile_form" method="post" action="userpage.php" enctype="multipart/form-data">
         <div class="user_container">
             <div class="left_informations">
                 <?php echo "<h1>Bienvenue M. <b>" . ucfirst($_SESSION['user']['name']) . " 👋</b></h1>"; ?>
@@ -57,9 +49,10 @@
                         }
                     ?>
                 </label>
+                
                 <p>Changer votre photo de profil</p>
                 <p><b>(format jpg uniquement)</b></p>
-                <input name="profile_picture" type="file" accept="image/jpeg" />
+                <input id="profile_picture_input" name="profile_picture" type="file" accept="image/jpeg" />
 
                 <!-- Table showing user status (e.g. VIP, admin, etc.) -->
                 <table class="subscription_table">
@@ -120,6 +113,7 @@
                 </div>
                 <div class="button_container">
                     <div class="edit_buttons_group">
+                        <input type="hidden" name="user_id" value="<?php echo $_SESSION['user']['id']; ?>" />
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
                         <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
                     </div>
@@ -134,5 +128,7 @@
 
     <!-- Footer -->
     <?php displayFooter(); ?>
+
+    <script src="../script/profileUpdate.js"></script>
 </body>
 </html>

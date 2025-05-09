@@ -1,4 +1,4 @@
-// Remove a shopping cart trip visually and in the database (JSON) using AJAX
+// removeCart.js : remove a shopping cart trip visually and in the database (JSON) using AJAX
 
 // Dynamically generate a new control key for the paymenet
 function updateControl(montant) {
@@ -70,6 +70,7 @@ function displayEmptyCartUI() {
 // Deletes an item from the cart, server- and client-side (visual)
 function removeCart(cart_id) {
 
+    // Create and configure AJAX request
     if (window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
     }
@@ -77,12 +78,12 @@ function removeCart(cart_id) {
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     
-    // Send the request using AJAX
     xhr.open("POST", "../includes/remove_from_cart.php", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    // Manage response
+    // Handle server response
     xhr.onload = function() {
+        // Check if the request was successful
         if (xhr.status == 200) {
             var card = document.getElementById('card_' + cart_id);
             if (card) {
@@ -105,6 +106,7 @@ function removeCart(cart_id) {
             }
 
         } else {
+            // Handle HTTP error
             console.log("ERROR : trip cancellation failure.");
         }
     };
