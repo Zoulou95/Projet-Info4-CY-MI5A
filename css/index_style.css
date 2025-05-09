@@ -138,6 +138,7 @@ button:active {
     }
 }
 
+/* Dark mode style */
 
 .dark-mode .voyagebar {
     min-width: 77.5%;
@@ -149,7 +150,7 @@ button:active {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Display in 3 equal columns */
-    gap: 4vh; /* Block spacing */
+    gap: 4vh;
 
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -167,32 +168,25 @@ button:active {
     padding: 0 1.5%;
 }
 
-
-
-    
-/* Style pour les wrappers de champs */
 .input_wrapper {
     position: relative;
     margin-bottom: 15px;
     width: 100%;
 }
 
-/* Style pour les champs de saisie */
 .overlay_input {
     width: 100%;
-    padding: 10px 45px 10px 10px; /* Espace à droite pour le compteur */
+    padding: 10px 45px 10px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     box-sizing: border-box;
 }
 
-/* Style spécifique pour les champs avec bouton toggle_password */
 .input_wrapper input[type="password"] {
-    padding-right: 100px; /* Espace pour le compteur ET le bouton */
+    padding-right: 100px;
 }
 
-/* Style pour les compteurs de caractères */
 .char_counter {
     position: absolute;
     right: 10px;
@@ -200,13 +194,12 @@ button:active {
     transform: translateY(-50%);
     font-size: 12px;
     color: #777;
-    pointer-events: none; /* Pour éviter de bloquer les clics sur le champ */
+    pointer-events: none;
 }
 
-/* Style pour les boutons toggle_password */
 .toggle_password {
     position: absolute;
-    right: 45px; /* Position à droite mais avant le compteur */
+    right: 45px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 12px;
@@ -215,15 +208,13 @@ button:active {
     color: #2962ff;
     cursor: pointer;
     padding: 0;
-    z-index: 2; /* Pour s'assurer qu'il est au-dessus du champ */
+    z-index: 2;
 }
 
-/* Ajustement du compteur pour les champs avec bouton */
 .input_wrapper:has(button.toggle_password) .char_counter {
     right: 10px;
 }
 
-/* Support pour les navigateurs qui ne supportent pas :has */
 @supports not (selector(:has(*))) {
     .input_wrapper input[type="password"] ~ .char_counter {
         right: 10px;

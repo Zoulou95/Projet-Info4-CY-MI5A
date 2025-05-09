@@ -195,7 +195,6 @@ footer {
 }
 
 
-
 .dark-mode .dropdown_button {
     height: 65px;
     padding: 0 30px;
@@ -218,13 +217,12 @@ footer {
     text-align: center;
     background-color: #1f2937;
     color: white;
-    cursor: pointer; /* Adds an interactive cursor */
+    cursor: pointer;
 }
-
 
 .dark-mode .dropdown_content {
     position: absolute;
-    top: 10vh; /* Shift under the button */
+    top: 10vh;
     left: 0;
     background-color: #1f2937;
     border-radius: 5px;

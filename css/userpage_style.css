@@ -213,7 +213,6 @@ label {
     margin-top: 20px;
 }
 
-
 .dark-mode .user_container {
     display: flex;
     min-width: 1000px;
@@ -223,4 +222,64 @@ label {
     padding: 5%;
     border-radius: 20px;
     background-color: #1e1e1e;
+}
+
+/* Edition button style */
+
+/* Disabled buttons style */
+
+input:disabled {
+    background-color: #f7f7f7;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#edit_button {
+    height: 50px;
+    width: 8vw;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #21a9ff;
+    border: solid 1px #21a9ff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons effect */
+
+#edit_button:hover {
+    background-color: #1a89ce;
+    border-color: #1a89ce;
+}
+
+#edit_button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.button_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit_buttons_group {
+    display: flex;
+    justify-content: left;
+    gap: 5%;
+}
+
+.logout_button_group {
+    display: flex;
+}
+
+#save_button, #reset_button {
+    display: none;
+}
+
+.dark-mode .history_text {
+    margin-top: 3vh;
+    font-size: 3vw;
+    text-align: center;
+    color: #ffffff;
 }

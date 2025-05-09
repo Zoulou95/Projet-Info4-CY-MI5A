@@ -1,3 +1,5 @@
+// darkmode.js
+
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('darkModeToggle');
 

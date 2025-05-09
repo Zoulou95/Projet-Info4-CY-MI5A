@@ -22,18 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
     editButton.id = 'edit_button';
     editButton.innerText = 'Modifier';
     
-    // Insérer le bouton "Modifier" avant le bouton "Déconnexion"
-    logoutButton.parentNode.insertBefore(editButton, logoutButton);
+    // Insérer le bouton "Modifier" avant le bouton "Sauvegarder"
+    saveButton.parentNode.insertBefore(editButton, saveButton);
     
     // Masquer initialement les boutons "Sauvegarder" et "Réinitialiser"
     saveButton.style.display = 'none';
     resetButton.style.display = 'none';
     
+    // Stocker les valeurs originales initiales
+    function updateOriginalValues() {
+        inputFields.forEach(function(field) {
+            originalValues[field.id] = field.value;
+        });
+    }
+    
+    // Initialiser les valeurs originales
+    updateOriginalValues();
+    
     // Désactiver tous les champs par défaut
     inputFields.forEach(function(field) {
         field.disabled = true;
-        // Stocker la valeur originale
-        originalValues[field.id] = field.value;
     });
     
     // Mode édition
@@ -63,23 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Empêcher la soumission du formulaire pour le moment
         event.preventDefault();
         
-        // Désactiver tous les champs mais ne pas ajouter l'attribut "disabled" 
-        // pour pouvoir envoyer les valeurs lors de la soumission du formulaire
-        inputFields.forEach(function(field) {
-            field.readOnly = true;
-            field.style.backgroundColor = '#f7f7f7';
-            field.style.color = '#666';
-            field.style.cursor = 'not-allowed';
-        });
-        
-        // Masquer les boutons "Sauvegarder" et "Réinitialiser" et afficher le bouton "Modifier"
-        saveButton.style.display = 'none';
-        resetButton.style.display = 'none';
-        editButton.style.display = 'inline-block';
-        
-        // Désactiver le mode édition
-        isEditMode = false;
-        
         // Vérifier si des modifications ont été effectuées
         let hasChanges = false;
         inputFields.forEach(function(field) {
@@ -102,7 +93,27 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Supprimer le bouton après utilisation
             form.removeChild(submitBtn);
+            
+            // Mémoriser qu'une soumission a eu lieu
+            localStorage.setItem('formSubmitted', 'true');
+        } 
+        else {
+            // Si aucune modification, simplement mettre à jour les valeurs originales
+            updateOriginalValues();
         }
+        
+        // Dans tous les cas, désactiver les champs
+        inputFields.forEach(function(field) {
+            field.disabled = true;
+        });
+        
+        // Masquer les boutons "Sauvegarder" et "Réinitialiser" et afficher le bouton "Modifier"
+        saveButton.style.display = 'none';
+        resetButton.style.display = 'none';
+        editButton.style.display = 'inline-block';
+        
+        // Désactiver le mode édition
+        isEditMode = false;
     });
     
     // Gérer le clic sur le bouton "Réinitialiser"
@@ -138,4 +149,12 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         }
     });
+    
+    // Vérifier si une soumission réussie a eu lieu lors d'une visite précédente
+    if (localStorage.getItem('formSubmitted') === 'true') {
+        // Réinitialiser l'indicateur
+        localStorage.removeItem('formSubmitted');
+        // Mettre à jour les valeurs originales
+        updateOriginalValues();
+    }
 });

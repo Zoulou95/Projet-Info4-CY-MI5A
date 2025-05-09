@@ -28,7 +28,6 @@
     <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
     <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/userpage_style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/userpage_edit_style.css" />
     <script src="../script/userpage.js" defer></script>
 </head>
 <body>
@@ -118,9 +117,13 @@
                         <!-- To remove the ability to enter digits, we use a pattern attribute -->
                         <input name="telephone" type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="<?php echo $_SESSION['user']['telephone']; ?>" required /><br><br>
                     </div>
-                    <div class="button_group">
+                </div>
+                <div class="button_container">
+                    <div class="edit_buttons_group">
                         <button type="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
                         <button type="reset" id="reset_button" value="Réinitialiser">Réinitialiser</button>
+                    </div>
+                    <div class="logout_button_group">
                         <a href="../includes/logout.php"><button type="button" id="logout_button">Déconnexion</button></a>
                     </div>
                 </div>

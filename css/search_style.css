@@ -163,8 +163,7 @@
     }
 }
 
-
-
+/* Dark mode style */
 
 .dark-mode .whitebar_destination {
     display: flex;
@@ -177,7 +176,6 @@
     gap: 5vh;
 }
 
-
 .dark-mode .advanced_search_block {
     display: flex;
     position: relative;
@@ -189,7 +187,6 @@
     z-index: 1;
 }
 
-
 .dark-mode .advanced_search_button {
     width: 80%;
     height: 30%;
@@ -199,5 +196,3 @@
     padding: 1vh;
     border-radius: 10px;
 }
-
-#2e3f57;

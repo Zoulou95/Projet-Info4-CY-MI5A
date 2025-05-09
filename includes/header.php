@@ -28,11 +28,12 @@ function displayHeader() {
         <div class="headbar_rest">
             <a class="headbar_item" href="'.$path_parent.'index.php">Accueil</a>
             <a class="headbar_item" href="'.$path_src.'search.php">Destinations</a>
-            <a class="headbar_item" href="'.$path_src.'advanced_search.php">Rechercher un voyage</a>
-            <button id="darkModeToggle" style="background: none; border: none; font-size: 2.5vh; color: white; cursor: pointer;">
-             🌙 Mode Sombre
-             </button>
-              <script src="'.$path_parent.'script/darkmode.js"></script>
+            <a class="headbar_item" href="'.$path_src.'advanced_search.php">Rechercher</a>
+            <button id="darkModeToggle" style="header_dark_mode">
+            🌙 Mode Sombre
+            </button>
+            <script src="'.$path_parent.'script/darkmode.js"></script>
+            <script src="'.$path_parent.'script/formFeatures.js"></script>
         </div>';
 
     if (isset($_SESSION['user'])) {
@@ -104,4 +105,4 @@ function displayHeader() {
 
     echo '</div>';
 }
-    ?>
+?>

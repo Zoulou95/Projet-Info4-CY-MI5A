@@ -32,7 +32,6 @@
     margin-bottom: 8vh;
 }
 
-
 .recap_general_info {
     margin-bottom: 5vh;
     font-size: 1.8vw;
@@ -206,10 +205,18 @@
 }
 
 .card {
-    position: relative; /* AJOUTER CETTE LIGNE SEULEMENT */
+    position: relative;
 }
 
+/* Dark mode style */
 
+.dark-modecart_title {
+    color: #21a9ff;
+    font-size: 4vw;
+    margin-top: 3.5vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
 
 .dark-mode .cart_desc {
     color: white;
@@ -246,4 +253,11 @@
     font-size: 2.2vw;
     color: white;
     margin-bottom: 4.5vh;
+}
+
+.dark-mode .recap_order p {
+    color: #ffffff;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 8vh;
 }
