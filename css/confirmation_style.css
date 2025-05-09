@@ -32,7 +32,6 @@
     margin-bottom: 8vh;
 }
 
-
 .recap_general_info {
     margin-bottom: 5vh;
     font-size: 1.8vw;
@@ -206,5 +205,59 @@
 }
 
 .card {
-    position: relative; /* AJOUTER CETTE LIGNE SEULEMENT */
+    position: relative;
+}
+
+/* Dark mode style */
+
+.dark-modecart_title {
+    color: #21a9ff;
+    font-size: 4vw;
+    margin-top: 3.5vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.dark-mode .cart_desc {
+    color: white;
+    font-size: 1.8vw;
+    text-align: center;
+}
+
+.dark-mode .recap_header p {
+    color: white;
+    font-size: 1.8vw;
+}
+
+.dark-mode .recap_info_box {
+    padding: 2vw;
+    border-radius: 1.2vw;
+    box-shadow: 0px 0.3vw 0.5vw rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 20vh;
+    margin-bottom: 3vh;
+    background-color: #1e1e1e;
+}
+
+.dark-mode .recap_step {
+    padding: 2vw;
+    margin-bottom: 4.5vh;
+    border-radius: 1.2vw;
+    box-shadow: 0px 0.3vw 0.5vw rgba(0, 0, 0, 0.1);
+    width: 70vw;
+    min-height: 20vh;
+    background-color: #1e1e1e;
+}
+
+.dark-mode .recap_step h3 {
+    font-size: 2.2vw;
+    color: white;
+    margin-bottom: 4.5vh;
+}
+
+.dark-mode .recap_order p {
+    color: #ffffff;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 8vh;
 }
