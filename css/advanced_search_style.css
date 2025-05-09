@@ -74,11 +74,6 @@ body {
     outline: none;
 }
 
-.type_button::after, .price_button::after {
-    content: " ⏷"; /* Down arrow added to indicate that this is a drop-down list */
-    color: #ffffff;
-}
-
 .dropdown_content {
     position: absolute;
     top: 10vh; /* Shift under the button */
@@ -194,7 +189,6 @@ footer {
     }
 }
 
-
 .dark-mode .dropdown_button {
     height: 65px;
     padding: 0 30px;
@@ -206,7 +200,6 @@ footer {
     cursor: pointer;
     white-space: nowrap;
 }
-
 
 .dark-mode .date_input {
     width: 100%;

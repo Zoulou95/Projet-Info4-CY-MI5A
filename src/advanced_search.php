@@ -45,7 +45,7 @@
                         <!-- Drop-down list to select a trip -->
                         <td>
                             <div class="dropdown">
-                                <button type="button" class="dropdown_button price_button">Prix/pers</button>
+                                <button type="button" class="dropdown_button price_button">Prix/pers ⏷</button>
                                 <div class="dropdown_content price_content">
                                     <label>
                                         <input type="checkbox" name="price_range" value="-2000" /> Moins de 2000€

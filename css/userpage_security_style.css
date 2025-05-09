@@ -32,7 +32,7 @@ li a {
     text-decoration: none;
 }
 
-.info_link:hover, .security_link:hover {
+.info_link:hover, .security_link:hover, .admin_panel_link:hover {
     text-decoration: underline;
     color: #10689f;
 }
@@ -128,4 +128,9 @@ input:focus {
     border-radius: 20px;
     background-color: #1e1e1e;
     margin-bottom: 4%;
+}
+
+.dark-mode li a {
+    color: #21a9ff;
+    text-decoration: none;
 }

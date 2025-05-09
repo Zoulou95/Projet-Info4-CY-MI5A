@@ -1,4 +1,4 @@
-// darkmode.js
+// darkmode.js : display dark mode
 
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('darkModeToggle');

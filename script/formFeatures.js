@@ -1,15 +1,24 @@
-// Fonction pour afficher/masquer le mot de passe
+// Display or hide
 function togglePassword(inputId, btn) {
     const input = document.getElementById(inputId);
+    const img = btn.querySelector('img') || document.createElement('img');
+    
     if (input.type === "password") {
         input.type = "text";
-        btn.textContent = "Cacher";
+        img.src = "path/to/eye_open.png";
+        img.alt = "Cacher le mot de passe";
     } else {
         input.type = "password";
-        btn.textContent = "Afficher";
+        img.src = "path/to/eye_closed.png";
+        img.alt = "Afficher le mot de passe";
+    }
+    
+    // Si l'image n'existe pas encore dans le bouton, l'ajouter
+    if (!btn.querySelector('img')) {
+        btn.textContent = ''; // Effacer le texte existant
+        btn.appendChild(img);
     }
 }
-
 // Fonction pour mettre à jour les compteurs de caractères
 function updateCounter(inputId, counterId, maxLength) {
     const input = document.getElementById(inputId);
@@ -37,8 +46,8 @@ function updateCounter(inputId, counterId, maxLength) {
 // Initialisation des compteurs au chargement de la page
 document.addEventListener("DOMContentLoaded", function() {
     // Connexion
-    updateCounter("emailInputLogin", "emailCounterLogin", 50);
-    updateCounter("passwordInputLogin", "passwordCounterLogin", 30);
+    updateCounter("emailco", "emailCounterLogin", 50);
+    updateCounter("passwordco", "passwordCounterLogin", 30);
 
     // Inscription
     updateCounter("forenameInput", "forenameCounter", 50);

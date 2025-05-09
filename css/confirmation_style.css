@@ -261,3 +261,15 @@
     text-align: center;
     margin-bottom: 8vh;
 }
+
+.dark-mode .recap_payment_details {
+    box-shadow: 0 0 0.5vw 0.5vw rgba(0, 0, 0, 0.2);
+    border: 1px solid #000000;
+    border-radius: 1.2vw;
+    font-size: 1.8vw;
+    margin-bottom: 5vh;
+    padding: 2vw;
+    text-align: center;
+    min-height: 20vh;
+    width: 70vw;
+}

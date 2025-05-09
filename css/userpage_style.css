@@ -277,9 +277,28 @@ input:disabled {
     display: none;
 }
 
+/* Dark mode style */
+
 .dark-mode .history_text {
     margin-top: 3vh;
     font-size: 3vw;
     text-align: center;
     color: #ffffff;
+}
+
+.dark-mode .subscription_table td {
+    text-align: center;
+    padding: 8%;
+    color: black;
+}
+
+.dark-mode h1 {
+    font-weight: 100;
+    font-size: 1.9vw;
+    color: #21a9ff;
+}
+
+.dark-mode li a {
+    color: #21a9ff;
+    text-decoration: none;
 }

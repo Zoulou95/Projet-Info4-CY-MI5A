@@ -263,7 +263,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix par personne</span>
+                <span>Prix/personne/jour</span>
                 <div class="price_display"> €</div>
             </div>
         </div>
@@ -322,7 +322,7 @@
                 </label>
             </div>
             <div class="price_label">
-                <span>Prix par personne</span>
+                <span>Prix/personne/jour</span>
                 <div class="price_display"> €</div>
             </div>
         </div>
