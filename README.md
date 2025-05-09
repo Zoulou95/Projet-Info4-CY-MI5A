@@ -99,6 +99,8 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 
 ## `/data` files
 
+`cart_history_data.json` is used to retrieve users' shopping cart histories.
+
 `user_data.json` contains information on all users (name, email, hashed password, ID, etc.).
 
 `trip_data.json` contains information on all trips (name, ID, price, tags, etc.).
@@ -136,8 +138,6 @@ The pages in the `/includes` folder contain the PHP functions used by all the co
 
 - `inscription.php` and `connexion.php` pages contain functions for managing user data and allowing a user to log in.
 
-- `payment.php` is the page for retrieving trip purchase data.
-
 - `purchase_details.php` provides order information for a trip purchased by a user
 
 - `result.php` provides the user with the results of a quick trip search or a more specific search. This page takes you back to the search page if no trip is found.
@@ -145,8 +145,6 @@ The pages in the `/includes` folder contain the PHP functions used by all the co
 - `search.php` and `advanced_search.php` includes an integrated quick-search and specific field for sorting trips by a specific tag (e.g soleil, plongée, etc.) or a price, a date.
 
 - `trip.php` is the display page for trips and their characteristics. This page allows users to plan their trip and modify each stage to select activities and hotels. The display of this page depends on the id of the trip to be displayed.
-
-- `update_role.php` allows you to change a user's role and ban a user.
 
 - `userpage.php` displays a logged-in user's own profile with buttons for modifying the various fields (name, order history, password, etc.).
 
