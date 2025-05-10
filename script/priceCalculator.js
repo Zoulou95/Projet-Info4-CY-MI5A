@@ -1,14 +1,14 @@
-// priceCalculator.js : dynamically calculates trip prices
+// priceCalculator.js : dynamically calculates trip final price (client side)
 
 document.addEventListener('DOMContentLoaded', function() {
 
     // Retrieve JSON data provided by PHP   
-    const basePrice = tripData.price_per_person || 0;
-    const hotelPrices = tripData.hotel_price || [0, 0, 0];
+    const basePrice = tripData.price_per_person;
+    const hotelPrices = tripData.hotel_price;
     const activitiesPrices = {
-        step_1: tripData.step_1.activities_price || [0, 0, 0],
-        step_2: tripData.step_2.activities_price || [0, 0, 0],
-        step_3: tripData.step_3.activities_price || [0, 0, 0]
+        step_1: tripData.step_1.activities_price,
+        step_2: tripData.step_2.activities_price,
+        step_3: tripData.step_3.activities_price
     };
 
     // Price of different options
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const totalPrice = calculateTotalPrice();
         
+        // Display total price
         totalPriceElement.textContent = `Prix total : ${totalPrice.toLocaleString()} €`;
     }
     
@@ -71,18 +72,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (priceDisplay) {
                 let price = 0;
 
+                // Hotel
+                // We find the index corresponding to the hotel chosen for the user (0, 1, 2) in the json, to find its corresponding price
                 if (priceType === 'hotel') {
                     const hotelIndex = Array.from(input.options).findIndex(option => option.selected);
-                    price = hotelPrices[hotelIndex] || 0;
+                    price = hotelPrices[hotelIndex];
                     priceDisplay.textContent = `${price} €`;
                 } 
+
+                // Activity
                 else if (priceType === 'activity') {
                     const activityIndex = Array.from(input.options).findIndex(option => option.selected);
                     if (stepNumber && activitiesPrices[`step_${stepNumber}`]) {
-                        price = activitiesPrices[`step_${stepNumber}`][activityIndex] || 0;
+                        price = activitiesPrices[`step_${stepNumber}`][activityIndex];
                     }
                     priceDisplay.textContent = `${price} €`;
                 }
+
+                // Pension
                 else if (priceType === 'pension') {
                     const pensionValue = input.value;
                     if (pensionValue === "Tout inclus") {
@@ -97,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Calculate the total price of the trip
     function calculateTotalPrice() {
-        const nbParticipants = parseInt(participantsSelect.value) || 2;
-        const flightPrice = flightPrices[flightSelect.value] || 800;
-        const transportPrice = transportPrices[transportSelect.value] || 0;
+        const nbParticipants = parseInt(participantsSelect.value);
+        const flightPrice = flightPrices[flightSelect.value];
+        const transportPrice = transportPrices[transportSelect.value];
         const tripDuration = tripData.dates.length;
         
         // Service charge per person
@@ -120,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // We find the index corresponding to the hotel chosen for the user (0, 1, 2) in the json, to find its corresponding price
             const hotelSelect = document.querySelector(`select[name="hotel_${i}"]`);
             const hotelIndex = Array.from(hotelSelect.options).findIndex(option => option.selected);
-            const hotelPrice = hotelPrices[hotelIndex] || 0;
+            const hotelPrice = hotelPrices[hotelIndex];
             totalPrice += hotelPrice * stepParticipants * stepDuration;
             
             // Pension
@@ -133,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Activity
             const activitySelect = document.querySelector(`select[name="activite_${i}"]`);
             const activityIndex = Array.from(activitySelect.options).findIndex(option => option.selected);
-            const activityPrice = activitiesPrices[`step_${i}`][activityIndex] || 0;
+            const activityPrice = activitiesPrices[`step_${i}`][activityIndex];
             totalPrice += activityPrice * stepParticipants;
         }
 
-        // Apply VIP discount
+        // Apply VIP discount if the user is VIP
         if (typeof isVIP !== "undefined" && isVIP === true) {
             totalPrice *= 0.9;
         }

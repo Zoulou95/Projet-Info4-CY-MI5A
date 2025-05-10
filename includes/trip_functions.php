@@ -233,7 +233,7 @@ function isPurchased($trip_id) {
     }
 }
 
-// Calculate the travel final price
+// Calculate the travel final price (server side)
 function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
     $tripDuration = intval($trip['dates']['duration']);
@@ -276,13 +276,17 @@ function priceCalc($trip, $number_of_participants) {
     $total += $transportCost * $number_of_participants * $tripDuration;
 
     // Steps 1 to 3
-    for ($i = 1; $i < $step_number; $i++) {
+    for ($i=1; $i<$step_number; $i++) {
         $stepDuration = $trip['step_' . $i]['dates']['duration'];
         $participants = intval($_POST['participants_' . $i]);
 
         // Hotel price
         $hotelName = $_POST['hotel_' . $i];
-        $hotelIndex = array_search($hotelName, $trip['hotel']);
+        error_log("=====================================");
+        error_log($hotelName);
+        $hotelIndex = array_search($hotelName, $trip['hotel']) ?? 0; // Default to index 0
+        error_log("=====================================");
+        error_log($hotelIndex);
         $hotelPrice = $trip['hotel_price'][$hotelIndex];
         
         $total += $hotelPrice * $participants * $stepDuration;

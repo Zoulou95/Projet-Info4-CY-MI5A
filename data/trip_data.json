@@ -339,7 +339,7 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 3000,
         "price_range": "3000-4000",
-        "hotel": ["Taha'a Resort (5⭐)", "Le Taha'a Island (5⭐)", "Vahine Island (5⭐)"],
+        "hotel": ["Tahaa Resort (5⭐)", "Le Tahaa Island (5⭐)", "Vahine Island (5⭐)"],
         "hotel_price": [980, 1000, 1990],
         "step_1": {
           "id": 1,
@@ -465,7 +465,7 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 3500,
         "price_range": "3000-4000",
-        "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St. Regis Bora Resort (5⭐)"],
+        "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St Regis Bora Resort (5⭐)"],
         "hotel_price": [850, 1200, 1600],
         "step_1": {
           "id": 1,
@@ -654,7 +654,7 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 4100,
         "price_range": "4000-5000",
-        "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Taha'a Resort (5⭐)"],
+        "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Tahaa Resort (5⭐)"],
         "hotel_price": [450, 800, 970],
         "step_1": {
           "id": 1,
@@ -717,7 +717,7 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2100,
         "price_range": "2000-3000",
-        "hotel": ["Maison traditionnelle (4⭐)", "Hiva Oa Lodge (4⭐)", "Éco-cabane de luxe (5⭐)"],
+        "hotel": ["Maison traditionnelle (4⭐)", "Hiva Oa Lodge (4⭐)", "Écocabane de luxe (5⭐)"],
         "hotel_price": [450, 470, 800],
         "step_1": {
           "id": 1,

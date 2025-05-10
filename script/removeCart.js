@@ -108,12 +108,14 @@ function removeCart(cart_id) {
         } else {
             // Handle HTTP error
             console.log("ERROR : trip cancellation failure.");
+            displayBubble("⚠️ Impossible de supprimer le voyage");
         }
     };
 
     // Handle errors
     xhr.onerror = function() {
         console.log("ERROR : Network error while deleting cart item.");
+        displayBubble("⚠️ Connexion au serveur impossible");
     };
 
     // Send data in JSON format to remove_from_cart.php
