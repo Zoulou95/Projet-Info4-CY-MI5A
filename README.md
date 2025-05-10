@@ -120,7 +120,7 @@ The pages in the `/includes` folder contain the PHP functions used by all the co
 
 - `profile_manager.php` is the page used to retrieve profile information from our json database, and update it if necessary.
 
-- `trip_function.php` is the page for displaying and configuring trips.
+- `profile_update.php` and `remove_from_cart.php` use AJAX to communicate with the server and update profile and cart information in the database, without reloading.
 
 - `trip_function.php` is the page for displaying and configuring trips.
 

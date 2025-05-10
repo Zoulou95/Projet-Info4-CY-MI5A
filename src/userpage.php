@@ -89,12 +89,12 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div>
                     <label for="email">E-mail</label><br><br>
-                    <input name="email" type="email" id="email" placeholder="Entrez votre email" minlength="5" maxlength="30" value="<?php echo $_SESSION['user']['email']; ?>" required />
+                    <input name="email" type="text" id="email" placeholder="Entrez votre email" minlength="5" maxlength="30" value="<?php echo $_SESSION['user']['email']; ?>" required />
                 </div>
                 <div>
                     <label for="telephone">Numéro de téléphone</label><br><br>
                     <!-- To remove the ability to enter digits, we use a pattern attribute -->
-                    <input name="telephone" type="tel" id="tel_number" pattern="[0-9]{10}" placeholder="Entrez votre mobile" maxlength="10" value="<?php echo $_SESSION['user']['telephone']; ?>" required /><br><br>
+                    <input name="telephone" type="text" id="tel_number" placeholder="Entrez votre mobile" maxlength="10" value="<?php echo $_SESSION['user']['telephone']; ?>" required /><br><br>
                 </div>
             </div>
             <div class="button_container">

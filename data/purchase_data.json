@@ -166,5 +166,131 @@
         "purchase_date": "2025-05-10 01:04:06",
         "transaction_id": "681e89d725f37",
         "transaction_status": "accepted"
+    },
+    {
+        "cart_id": "cart_681ea800643fe_1746839552",
+        "user_id": "67dc9f61a936d",
+        "user_name": "Mercier Sarah",
+        "trip_id": "10",
+        "trip_title": "S\u00e9jour d'aventure \u00e0 Tahiti \u2b50\u2b50\u2b50\u2b50",
+        "price": 75150,
+        "number_of_participants": 6,
+        "start_date": "2025-09-05",
+        "end_date": "2025-09-15",
+        "flight": "Classe Affaires",
+        "departure_city": "Bordeaux",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et exploration de Papeete",
+                "hotel": "Le Meridien (5\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "D\u00e9gustation de fruits exotiques",
+                "participants": "4"
+            },
+            "step_2": {
+                "title": "Aventure au coeur de l'\u00eele",
+                "hotel": "Tahiti Pearl (4\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Randonn\u00e9e vers les cascades",
+                "participants": "6"
+            },
+            "step_3": {
+                "title": "D\u00e9tente et retour",
+                "hotel": "Le Meridien (5\u2b50)",
+                "pension": "D\u00e9jeuner uniquement",
+                "activity": "Visite de fermes perli\u00e8res",
+                "participants": "6"
+            }
+        },
+        "transport": "B\u00e2teau",
+        "points_earned": 751.5,
+        "id": "purchase_681f47b00152d",
+        "purchase_date": "2025-05-10 14:33:52",
+        "transaction_id": "681f47a436b77",
+        "transaction_status": "accepted"
+    },
+    {
+        "cart_id": "cart_681ea80e29dee_1746839566",
+        "user_id": "67dc9f61a936d",
+        "user_name": "Mercier Sarah",
+        "trip_id": "5",
+        "trip_title": "S\u00e9jour en famille \u00e0 Moorea \u2b50\u2b50\u2b50\u2b50",
+        "price": 43210,
+        "number_of_participants": 4,
+        "start_date": "2025-09-05",
+        "end_date": "2025-09-15",
+        "flight": "Classe Confort",
+        "departure_city": "Au d\u00e9part de Paris",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et installation",
+                "hotel": "Moorea Beach Resort (4\u2b50)",
+                "pension": "D\u00e9jeuner uniquement",
+                "activity": "Plong\u00e9e sous-marine",
+                "participants": "4"
+            },
+            "step_2": {
+                "title": "D\u00e9couverte de la faune et flore",
+                "hotel": "Moorea Beach Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Observation des baleines",
+                "participants": "2"
+            },
+            "step_3": {
+                "title": "Repos et retour",
+                "hotel": "Moorea Beach Resort (4\u2b50)",
+                "pension": "Demi-pension",
+                "activity": "Plage tranquille",
+                "participants": "2"
+            }
+        },
+        "transport": "Aucun",
+        "points_earned": 432.1,
+        "id": "purchase_681f47b005274",
+        "purchase_date": "2025-05-10 14:33:52",
+        "transaction_id": "681f47a436b77",
+        "transaction_status": "accepted"
+    },
+    {
+        "cart_id": "cart_681ea83ff2d54_1746839615",
+        "user_id": "67dc9f61a936d",
+        "user_name": "Mercier Sarah",
+        "trip_id": "7",
+        "trip_title": "\u00c9vasion \u00e0 Fakarava \u2b50\u2b50\u2b50\u2b50",
+        "price": 41600,
+        "number_of_participants": 3,
+        "start_date": "2025-07-20",
+        "end_date": "2025-07-27",
+        "flight": "Classe \u00c9conomique",
+        "departure_city": "Lyon",
+        "steps": {
+            "step_1": {
+                "title": "Arriv\u00e9e et exploration",
+                "hotel": "Fakarava Resort (4\u2b50)",
+                "pension": "D\u00e9jeuner uniquement",
+                "activity": "Exploration des atolls",
+                "participants": "4"
+            },
+            "step_2": {
+                "title": "D\u00e9tente et nature pr\u00e9serv\u00e9e",
+                "hotel": "Fakarava Resort (4\u2b50)",
+                "pension": "Tout inclus",
+                "activity": "Visite des ilots avoisinants",
+                "participants": "6"
+            },
+            "step_3": {
+                "title": "S\u00e9jour final et d\u00e9part",
+                "hotel": "Atoll Paradise (5\u2b50)",
+                "pension": "Diner uniquement",
+                "activity": "Plong\u00e9e avec les raies",
+                "participants": "4"
+            }
+        },
+        "transport": "B\u00e2teau",
+        "points_earned": 416,
+        "id": "purchase_681f47b007715",
+        "purchase_date": "2025-05-10 14:33:52",
+        "transaction_id": "681f47a436b77",
+        "transaction_status": "accepted"
     }
 ]

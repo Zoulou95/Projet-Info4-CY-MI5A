@@ -12,9 +12,9 @@ document.getElementById("profile_form").addEventListener("submit", function (eve
 
     // We use regexes to ensure that the data sent to the server is correct
     // We used https://regexr.com/ to generate custom regex
-    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\- ]{2,20}$/; // Letters only, between 2 and 20 characters
+    const nameRegex = /^[A-Za-z\- ]{2,20}$/; // Letters only, between 2 and 20 characters
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valid email format (example: user@cylanta.com)
-    const phoneRegex = /^[0-9]{10}$/; // Digits only, 10-digit
+    const phoneRegex = /^[0-9]{10}$/; // 10 digit
 
     // Verifications
     if (!nameRegex.test(name)) {
