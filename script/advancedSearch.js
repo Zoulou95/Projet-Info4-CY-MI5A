@@ -42,18 +42,11 @@ document.addEventListener("DOMContentLoaded", function() {
     setupDropdown("duration_button", "duration_content");
 });
 
-// Script for entering a valid travel time
-document.addEventListener("DOMContentLoaded", function() {
-    const durationInput = document.querySelector('input[name="travel_length"]');
-    const durationButton = document.querySelector('.duration_button');
+// Prevent empty search
+document.getElementById("signin_form").addEventListener("submit", function (event) {
+    // Prevent default submission by clicking on the submit button
+    event.preventDefault();
 
-    // Updates the button with the selected duration
-    durationInput.addEventListener("input", function() {
-        let value = parseInt(durationInput.value, 10);
-
-        // Updates the display when a number of days is entered
-        if (durationInput.value) {
-            durationButton.textContent = durationInput.value + " jours";
-        }
-    });
+    // Submit form
+    this.submit();
 });

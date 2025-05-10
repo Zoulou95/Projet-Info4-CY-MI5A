@@ -72,12 +72,24 @@ require_once('../includes/trip_functions.php');
                 <!-- Duration selection -->
                 <td>
                     <div class="dropdown">
-                        <button type="button" class="dropdown_button duration_button">10 jours</button>
-                        <div class="dropdown_content duration_content">
-                            <label>
-                                <input class="range" type="range" name="travel_length" min="8" max="12" step="1" value="" />
-                            </label>
-                        </div>
+                    <button type="button" class="dropdown_button duration_button">Durée</button>
+                    <div class="dropdown_content duration_content">
+                        <label>
+                            <input type="radio" name="travel_length" value="8" /> 8 jours
+                        </label>
+                        <label>
+                            <input type="radio" name="travel_length" value="9" /> 9 jours
+                        </label>
+                        <label>
+                            <input type="radio" name="travel_length" value="10" /> 10 jours
+                        </label>
+                        <label>
+                            <input type="radio" name="travel_length" value="11" /> 11 jours
+                        </label>
+                        <label>
+                            <input type="radio" name="travel_length" value="12" /> 12 jours
+                        </label>
+                    </div>
                     </div>
                 </td>
                 <!-- Submit button -->
@@ -94,6 +106,7 @@ require_once('../includes/trip_functions.php');
 
 <!-- Script to display drop-down lists -->
 <script src="../script/advancedSearch.js"></script>
+<div id="bubble" class="hidden"></div>
 </body>
 
 </html>
