@@ -106,7 +106,7 @@ function displayHeader() {
             <a class="headbar_item" href="#" onclick="openSignInOverlay()">Connexion</a>
             <a class="headbar_item" href="#" onclick="openSignUpOverlay()">S\'inscrire</a>
         </div>
-            <div class="overlay" id="signinOverlay">
+            <div class="overlay" id="signin_overlay">
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignInOverlay()">&times;</span>
             <h2>Connexion</h2>
@@ -134,7 +134,7 @@ function displayHeader() {
                 </form>
         </div>
     </div>
-    <div class="overlay" id="signupOverlay">
+    <div class="overlay" id="signup_overlay">
         <div class="overlay_content">
             <span class="close_btn" onclick="closeSignUpOverlay()">&times;</span>
             <h2>Inscription</h2>
@@ -165,7 +165,7 @@ function displayHeader() {
                     <div class="counter-container">
                         <span id="passwordCounterSignup">0 / 30</span>
                     </div>
-                    <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputSignup\', this)">Afficher</button>
+                    <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputSignup\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_close.png" /></button>
                 </div>
                 
                 <div class="input-container">

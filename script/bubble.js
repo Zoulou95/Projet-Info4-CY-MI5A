@@ -1,8 +1,8 @@
-// bubble.js : function for displaying dialog boxes in the event of an error
+// bubble.js : displaying dialog boxes in the event of an error
 
 function displayBubble(event = null, message) {
 
-    // Cancels current event (like button submit) only if passed as argument
+    // Cancel current event (like form submission) only if passed as argument
     if (event) {
         event.preventDefault();
     }
@@ -12,5 +12,6 @@ function displayBubble(event = null, message) {
 
     bubble.textContent = message;
   
+    // Display bubble for 4 seconds
     setTimeout(() => bubble.style.display = 'none', 4000);
 }

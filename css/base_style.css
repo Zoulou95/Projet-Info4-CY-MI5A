@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
 }
 
-body.no-scroll {
+body.no_scroll {
     overflow: hidden;
 }
 

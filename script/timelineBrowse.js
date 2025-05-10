@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const steps = document.querySelectorAll('.step');
     const stepCards = document.querySelectorAll('.step_card');
 
-    // Function to show the active step and its corresponding card
+    // Show the active step and its corresponding card
     function showStep(stepNumber) {
 
-        // Remove 'active' class from all steps by default
+        // Remove 'active' class from steps by default
         stepCards.forEach(card => card.classList.remove('active'));
         steps.forEach(step => step.classList.remove('active'));
 

@@ -13,7 +13,7 @@ require_once('../includes/trip_functions.php');
             <tr>
                 <!-- Search bar -->
                 <td>
-                    <input class="search_bar_input" list="destinations" placeholder="Sélectionnez une île... 🔎" name="tag" />
+                    <input class="search_bar_input" list="destinations" placeholder="Mot clé (aventure, famille, ...) 🔎" name="tag" />
                     <datalist id="destinations">
                         <option value="Tahiti"></option>
                         <option value="Bora-Bora"></option>
@@ -106,61 +106,7 @@ require_once('../includes/trip_functions.php');
 <?php displayFooter(); ?>
 
 <!-- Script to display drop-down lists -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Function to manage the display of drop-down lists
-        function setupDropdown(buttonClass, contentClass) {
-            const dropdownButton = document.querySelector(`.${buttonClass}`);
-            const dropdownContent = document.querySelector(`.${contentClass}`);
-
-            if (dropdownButton && dropdownContent) {
-                dropdownButton.addEventListener("click", function(event) {
-                    event.stopPropagation(); // Prevents immediate closing
-                    const isVisible = dropdownContent.style.display === "block";
-                    closeAllDropdowns(); // Closes all other menus
-                    dropdownContent.style.display = isVisible ? "none" : "block"; // Toggle display
-                });
-
-                dropdownContent.addEventListener("click", function(event) {
-                    event.stopPropagation(); // Prevents closing on internal click
-                });
-            }
-        }
-
-        // Function to close all dropdowns
-        function closeAllDropdowns() {
-            document.querySelectorAll(".dropdown_content").forEach(content => {
-                content.style.display = "none";
-            });
-        }
-
-        // Close menus when clicked elsewhere
-        document.addEventListener("click", closeAllDropdowns);
-
-        // Initialize dropdowns
-        setupDropdown("price_button", "price_content");
-        setupDropdown("type_button", "type_content");
-        setupDropdown("duration_button", "duration_content");
-    });
-</script>
-
-<!-- Script for entering a valid travel time -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const durationInput = document.querySelector('input[name="travel_length"]');
-        const durationButton = document.querySelector('.duration_button');
-
-        // Updates the button with the selected duration
-        durationInput.addEventListener("input", function() {
-            let value = parseInt(durationInput.value, 10);
-
-            // Updates the button when a number of days is entered
-            if (durationInput.value) {
-                durationButton.textContent = durationInput.value + " jours";
-            }
-        });
-    });
-</script>
+<script src="../script/advancedSearch.js"></script>
 </body>
 
 </html>

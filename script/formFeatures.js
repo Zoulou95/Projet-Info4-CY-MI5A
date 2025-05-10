@@ -1,7 +1,6 @@
-// formFeature.js : functions on form functionalities and security
+// formFeature.js : form functionalities and security
 
 // Display or hide the password input
-
 function togglePassword(inputId, btn) {
     const input = document.getElementById(inputId);
     const img = btn.querySelector('img') || document.createElement('img');

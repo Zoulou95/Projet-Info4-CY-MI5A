@@ -232,5 +232,15 @@
         "role": "standard",
         "points": 0,
         "id": "681ea65d8bb0f"
+    },
+    {
+        "name": "laink",
+        "forename": "terracid",
+        "email": "terracid@mail.com",
+        "telephone": "0708090708",
+        "password": "$2y$10$2kdgDPIN7EQSSYcOyNT7AeGyPUQFry8NLU44Yc8k.uYbAgmDXprDS",
+        "role": "standard",
+        "points": 0,
+        "id": "681f53467a3d8"
     }
 ]

@@ -34,7 +34,7 @@ function updateTotal() {
 
     updateControl(total);
 
-    // Update total price display (client-side)
+    // Update total price display (client side)
     const priceDisplay = document.getElementById('price_display');
     if(priceDisplay) {
         priceDisplay.innerHTML = `${total} € (` + parseInt(fidelity) + ` points de fidelité)`;
@@ -67,7 +67,7 @@ function displayEmptyCartUI() {
     }
 }
 
-// Deletes an item from the cart, server- and client-side (visual)
+// Deletes an item from the cart, server and client-side
 function removeCart(cart_id) {
 
     // Create and configure AJAX request
@@ -79,7 +79,7 @@ function removeCart(cart_id) {
     }
     
     xhr.open("POST", "../includes/remove_from_cart.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8"); // Required to transfer JSON
 
     // Handle server response
     xhr.onload = function() {
