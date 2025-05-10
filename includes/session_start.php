@@ -5,7 +5,7 @@ require_once('profile_manager.php');
 require_once('error.php');
 
 function banishment() {
-    echo "<script>alert('Vous êtes banni.'); window.location.href = 'https://google.com/';</script>";
+    echo "<script>alert('Vous êtes banni de CyLanta.'); window.location.href = 'https://google.com/';</script>";
     session_unset();
     session_destroy();
     setcookie("identification", "", time() - 3600, "/");

@@ -1,0 +1,110 @@
+/* history_style.css */
+
+body {
+    background-color: #87c2e7;
+}
+
+/* Userpage informations */
+
+.user_container {
+    display: flex;
+    min-width: 1000px;
+    gap: 15vh;
+    margin: 4% auto;
+    border: solid 3px #383838;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 1.9vw;
+    color: #10689f;
+}
+
+.history_text {
+    margin-top: 3vh;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.fidelity_text {
+    font-size: 3vh;
+    text-align: center;
+}
+
+/* Menu to switch between "Informations" page, "Sécurité", etc. */
+
+.menu_navigation {
+    display: flex;
+    list-style: none;
+    gap: 2vh;
+}
+
+.info_link, .security_link, .admin_panel_link {
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+
+li a {
+    color: #10689f;
+    text-decoration: none;
+}
+
+.info_link:hover, .security_link:hover, .admin_panel_link:hover {
+    text-decoration: underline;
+    color: #10689f;
+}
+
+/* Cards style */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dark-mode .user_container {
+    display: flex;
+    min-width: 1000px;
+    gap: 15vh;
+    margin: 4% auto;
+    border: solid 3px #383838;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+}
+
+/* Separate the menu and the input fields */
+
+hr {
+    border: 1.5px solid #21a9ff;
+}
+
+/* Dark mode style */
+
+.dark-mode .history_text {
+    margin-top: 3vh;
+    font-size: 3vw;
+    text-align: center;
+    color: #ffffff;
+}
+
+.dark-mode .subscription_table td {
+    text-align: center;
+    padding: 8%;
+    color: black;
+}
+
+.dark-mode h1 {
+    font-weight: 100;
+    font-size: 1.9vw;
+    color: #21a9ff;
+}
+
+.dark-mode .menu_navigation li a {
+    color: #21a9ff;
+    text-decoration: none;
+}

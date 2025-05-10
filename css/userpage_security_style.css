@@ -32,7 +32,7 @@ li a {
     text-decoration: none;
 }
 
-.info_link:hover, .security_link:hover {
+.info_link:hover, .security_link:hover, .admin_panel_link:hover {
     text-decoration: underline;
     color: #10689f;
 }
@@ -113,4 +113,24 @@ input:focus {
     display: flex;
     justify-content: center;
     gap: 5%;
+}
+
+/* Dark mode style */
+
+.dark-mode .user_container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 4%;
+    border: solid 3px #383838;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    margin-bottom: 4%;
+}
+
+.dark-mode li a {
+    color: #21a9ff;
+    text-decoration: none;
 }

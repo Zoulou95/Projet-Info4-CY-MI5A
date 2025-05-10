@@ -23,9 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $password = trim($password);
 
+    // We wil code verification at Phase #4 with AJAX (server side)
     if (empty($email)) {
         // If the email is empty, return an error
-        echo "<script>alert('L\'email est requis'); window.history.back();</script>";
+        echo '<script src="../script/bubble.js"></script>';
+        echo '<script>displayBubble(event, "Un email est requis");</script>';
         exit;
     }
 

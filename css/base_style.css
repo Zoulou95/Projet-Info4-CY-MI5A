@@ -1,4 +1,4 @@
-/* base_style.css */
+/* base_style.css : common to all php files */
 
 /* Main container and navigation bar */
 
@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
 }
 
-body.no-scroll {
+body.no_scroll {
     overflow: hidden;
 }
 
@@ -79,7 +79,7 @@ body.no-scroll {
 
 .headbar_rest {
     display: flex;
-    flex: 8; /* The element will take up 8 shares of the available space */
+    flex: 8; /* The element take 8 shares of the available space */
     justify-content: flex-start;
     align-items: center;
     gap: 6vw;
@@ -159,7 +159,7 @@ body.no-scroll {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Card presenting destinations (present on homepage.html and search.html)  */
+/* Card presenting destinations */
 
 .card {
     width: 350px;
@@ -192,6 +192,12 @@ body.no-scroll {
 
 .explore {
     color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.explore_details {
+    color: #333;
     font-weight: bold;
     text-decoration: none;
 }
@@ -233,7 +239,7 @@ body.no-scroll {
     color: #050552;
 }
 
-.back_to_search_button, .back_to_index_button {
+.empty_cart_button, .back_to_search_button, .back_to_index_button, .back_to_home_button {
     display: block;
     margin: 8.1vh auto;
     width: 50%;
@@ -245,15 +251,19 @@ body.no-scroll {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-.back_to_index_button {
+.empty_cart_button, .back_to_index_button {
     margin-top: 18.5vh;
 }
 
-.back_to_search_button:hover, .back_to_index_button:hover {
+.empty_cart_button:hover, .back_to_search_button:hover, .back_to_index_button:hover {
     background-color: #ff8c00;
     border: solid #ff8c00;
     animation: pulse 1.5s infinite;
     cursor: pointer;
+}
+
+.back_to_home_button {
+    width: 70%;
 }
 
 .back_to_search_text, .back_to_index_text {
@@ -333,7 +343,7 @@ footer {
     margin-top: 50vh;
 }
 
-/*Overlay*/
+/* Overlay style (sign in, sign up) */
 
 .overlay {
     position: fixed;
@@ -393,6 +403,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    margin-top: 8.5px;
 }
 
 .switch_text {
@@ -423,4 +434,200 @@ footer {
     100% {
         transform: scale(1.1);
     }
+}
+
+/* Bubble style */
+
+.hidden {
+    display: none;
+}
+
+#bubble {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4c4c;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    text-align: center;
+}
+
+@keyframes bubbleShow {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.hidden {
+    animation: bubbleShow 0.5s ease-out forwards;
+}
+
+/* Dark mode style */
+
+body.dark-mode {
+    background-color: #1f2937; 
+    color: #e0e0e0;
+}
+
+.dark-mode .card {
+    width: 350px;
+    background: #2e3f57;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.dark-mode .card h2 {
+    margin: 0;
+    color: white;
+}
+
+.dark-mode .card p {
+    font-size: 1.6vh;
+    color: white;
+    margin: 10px 0;
+}
+
+.dark-mode .explore {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dark-mode .explore_details {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.dark-mode .overlay_content{
+    background-color : #1f2937;
+}
+
+.dark-mode .headbar {
+    display: flex;
+    width: 100%; 
+    height: 9vh; 
+    padding: 0 1.5%; 
+    box-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    background-color: #181f2b;
+    z-index:1;
+}
+
+.dark-mode .secondbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 18vh; 
+    background-color:#181f2b;
+    padding: 0 1.5%;
+}
+
+.dark-mode footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #181f2b;
+    color: #ffffff;
+    padding: 20px 10%;
+    width:100%;
+    height: 40vh;
+    align-items: center;
+    box-shadow: 0px -0.5vh 0.75vh rgba(0, 0, 0, 0.4);
+    z-index:1;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 2.7vh;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#darkModeToggle:hover {
+    text-decoration: underline;
+}
+
+.dark-mode .result_not_found {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 2vh;
+    color: #ffffff;
+    margin-top: 5vh;
+}
+
+.dark-mode .result_text {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 2vh;
+    color: #ffffff;
+    margin-top: 5vh;
+}
+
+/* Input style */
+
+.counter-container {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.overlay_input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.eye_image {
+    width: 30px;
+    height: 40px;
+    display: block;
+    padding-bottom: 50%;
+    outline: none;
+}
+
+/* Prevents automatic eye for hiding and displaying password on some browsers (Edge for example) */
+
+input[type="password"]::-ms-reveal, input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button, input[type="password"]::-webkit-password-toggle-button {
+    display: none;
+    appearance: none;
 }

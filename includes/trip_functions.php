@@ -11,15 +11,13 @@ function dataDecode($data_file) {
     }  
     else
     {
-        displayError("'trip_data.json' file is missing.");
+        //displayError("'trip_data.json' file is missing."); --> à faire
+        error_log($data_file ." is missing.");
     }
 
-    // Verification of data structure
-    if (!isset($data['trip']) || !is_array($data['trip'])) {
-        displayError("data decode failed.");
-    }
+    // Verification of data structure --> à faire
 
-    return $data;
+    return $data; 
 }
 
 // Retrieves the number of results found during a search (for aesthetic reasons)
@@ -36,17 +34,22 @@ function getTripNumber($data, $tag) {
     return $counter;
 }
 
+// Display a card with useful informations
 function printCard($journey) {
     echo
     '
-    <div class="card">
+    <div class="card" 
+        data-price="' . $journey['price_per_person'] . '" 
+        data-date="' . $journey['dates']['start_date'] . '" 
+        data-duration="' . $journey['dates']['length'] . '" 
+        data-steps="' . count($journey['special_features']) . '">
         <img src="../assets/presentation/' . $journey['presentation_img_1'] . '" alt="Card presentation image" />
         <div class="card_content">
             <h2>'. $journey['title'] . '</h2>
             <p>'. $journey['subtitle'] . '</p>
-            <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
+            <p>Date : <b><span class="date_value">' . $journey['dates']['start_date'] . '</span></b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-            <p>Prix/personne : <b>' . $journey['price_per_person'] . '€</b></p>';
+            <p>Frais de prestation : <b><span class="price_value">' . $journey['price_per_person'] . '</span>€</b></p>';
             if(isset($_SESSION['user']['travel_history']) && isPurchased($journey['id'])) {
                 echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
             } else {
@@ -58,6 +61,7 @@ function printCard($journey) {
     </div>
     ';
 }
+
 
 // Display a trip as a map according to a user's quicksearch request
 function displayByTag($data, $tag, $trip_number) {
@@ -89,70 +93,95 @@ function displayByTag($data, $tag, $trip_number) {
 
 // Display a trip as a map according to a user's specific search request
 function displayByFilter($data) {
-
     // Avoid undefined index errors if certain variables are not sent in the URL
-    $destination = htmlspecialchars($_GET['destination']) ?? 0;
-    $price_range = $_GET['price_range'] ?? 0;
-    $travel_type = $_GET['travel_type'] ?? 0;
-    $date = $_GET['date'] ?? 0;
-    $travel_length = $_GET['travel_length'] ?? 0;
+    $tag = isset($_GET['tag']) && !empty($_GET['tag']) ? htmlspecialchars($_GET['tag']) : null;
+    $price_range = isset($_GET['price_range']) ? intval($_GET['price_range']) : null;
+    $travel_type = isset($_GET['travel_type']) ? $_GET['travel_type'] : null;
+    $date = isset($_GET['date']) && !empty($_GET['date']) ? $_GET['date'] : null;
+    $travel_length = isset($_GET['travel_length']) ? intval($_GET['travel_length']) : null;
 
     // Input verification
-    if($travel_length != 0 && $travel_length < 8 || $travel_length > 12) {
-        displayError("Wrong travel length input.");
-    }
-
-    $valid_price_ranges = ["-2000", "2000-3000", "3000-4000", "4000-5000", "+5000"];
-
-    if ($price_range != 0 && !in_array($price_range, $valid_price_ranges)) {
-        displayError("Wrong price range input.");
-    }
-
     $valid_travel_types = ["noces", "découverte", "aventure", "détente", "luxe"];
+    
+    if($travel_length !== null && ($travel_length < 8 || $travel_length > 12)) {
+        displayError("Wrong travel length input.");
+        return;
+    }
 
-    if ($travel_type != 0 && !in_array($travel_type, $valid_travel_types)) {
+    if ($travel_type !== null && !in_array($travel_type, $valid_travel_types)) {
         displayError("Wrong travel type input.");
+        return;
     }
 
     echo '<h2 class="result_text">Résultats pour votre recherche</h2>';
     echo '<div class="result_container">';
 
     $found = false;
+    
     foreach ($data['trip'] as $journey) {
-        $match = true;
-
-        // Check island (destination)
-        if ($destination && strtolower($journey['destination']) != strtolower($destination)) {
-            $match = false;
+        $match = true; // Assume match until proven otherwise
+        
+        // Check tag if provided
+        if ($tag !== null) {
+            $tag_match = false;
+            foreach ($journey['tags'] as $journey_tag) {
+                if (strtolower($tag) === strtolower($journey_tag)) {
+                    $tag_match = true;
+                    break;
+                }
+            }
+            if (!$tag_match) {
+                $match = false;
+            }
         }
-
-        // Check price_range
-        if ($price_range && $journey['price_range'] != $price_range) {
-            $match = false;
+        
+        // Check price range if provided
+        if ($match && $price_range !== null) {
+            if ($price_range === 5001) {
+                // "Plus de 5000€" option
+                if ($journey['price_per_person'] <= 5000) {
+                    $match = false;
+                }
+            } else {
+                // Other price ranges
+                $min_range = $price_range - 1000;
+                if ($journey['price_per_person'] < $min_range || $journey['price_per_person'] >= $price_range) {
+                    $match = false;
+                }
+            }
         }
-
-        // Check trip type
-        if ($travel_type && $journey['specificity'] != $travel_type) {
-            $match = false;
+        
+        // Check travel type if provided
+        if ($match && $travel_type !== null) {
+            if ($journey['specificity'] !== $travel_type) {
+                $match = false;
+            }
         }
-
-        // Check date
-        if ($date && $journey['dates']['start_date'] != $date) {
-            $match = false;
+        
+        // Check date if provided (uncomment if needed)
+        if ($match && $date !== null) {
+            if ($journey['dates']['start_date'] !== $date) {
+                $match = false;
+            }
         }
-
-        // Check duration
-        if ($travel_length && $journey['dates']['length'] != $travel_length) {
-            $match = false;
+        
+        // Check travel length if provided (uncomment if needed)
+        if ($match && $travel_length !== null) {
+            if ($journey['dates']['length'] !== $travel_length) {
+                $match = false;
+            }
         }
-
+        
+        // Display the journey if it matches all criteria
         if ($match) {
-            printCard($journey);
             $found = true;
+            printCard($journey);
         }
     }
+    
     echo '</div>';
-    if ($found == false) {
+    
+    if (!$found) {
         displayNoResult();
     }
 }
@@ -203,7 +232,7 @@ function isConfigValid() {
         }
     }
 
-    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports'])) {
+    if (!isset($_POST['number_of_participants']) || !isset($_POST['transports']) || !isset($_POST['flight'])) {
         $res = 0;
     }
 
@@ -229,56 +258,82 @@ function isPurchased($trip_id) {
     }
 }
 
-// Calculate the travel final price
+// Calculate the travel final price (server side)
 function priceCalc($trip, $number_of_participants) {
     $step_number = 4;
-    $price_per_person = intval($trip['price_per_person']);
+    $tripDuration = intval($trip['dates']['duration']);
+    $service = intval($trip['price_per_person']);
+    $transportMode = $_POST['transports'];
 
-    $total = intval($price_per_person) * intval($number_of_participants);
+    // Initial total with base price
+    $total = $service * $number_of_participants;
 
-    // Transport price
-    switch ($_POST['transports']) {
-        case "Aucun":
+    // Add flight price
+    switch ($_POST['flight']) {
+        case "Classe Économique":
+            $flightPrice = 800;
             break;
-        case "Bâteau":
-            $total += 100 * $number_of_participants * $trip['dates']['length'];
+        case "Classe Confort":
+            $flightPrice = 1200;
             break;
-        case "Vélo":
-            $total += 30 * $number_of_participants * $trip['dates']['length'];
+        case "Classe Affaires":
+            $flightPrice = 1400;
             break;
-        case "Voiture":
-            $total += 90 * $number_of_participants * $trip['dates']['length'];
-            break;
-        case "Chauffeur":
-            $total += 300 * $number_of_participants * $trip['dates']['length'];
-            break;
-        case "Hélicoptère":
-            $total += 900 * $number_of_participants * $trip['dates']['length'];
+        case "Première Classe":
+            $flightPrice = 2000;
             break;
         default:
+            $flightPrice = 800;
             break;
     }
+    $total += $flightPrice * $number_of_participants;
 
-    // Meal price
+    // Transport costs
+    $transportRates = [
+        "Aucun" => 0,
+        "Vélo" => 30,
+        "Voiture" => 90,
+        "Bâteau" => 100,
+        "Chauffeur" => 300,
+        "Hélicoptère" => 900
+    ];
+    $transportCost = $transportRates[$transportMode];
+    $total += $transportCost * $number_of_participants * $tripDuration;
+
+    // Steps 1 to 3
     for ($i=1; $i<$step_number; $i++) {
-        if($_POST['pension_' . $i] === "Tout inclus") {
-            $total += 50 * $number_of_participants * $trip['step_' . $i]['dates']['duration'];;
+        $stepDuration = $trip['step_' . $i]['dates']['duration'];
+        $participants = intval($_POST['participants_' . $i]);
+
+        // Hotel price
+        $hotelName = $_POST['hotel_' . $i];
+        error_log("=====================================");
+        error_log($hotelName);
+        $hotelIndex = array_search($hotelName, $trip['hotel']) ?? 0; // Default to index 0
+        error_log("=====================================");
+        error_log($hotelIndex);
+        $hotelPrice = $trip['hotel_price'][$hotelIndex];
+        
+        $total += $hotelPrice * $participants * $stepDuration;
+
+        // Pension
+        $pension = $_POST['pension_' . $i];
+        if ($pension === "Tout inclus") {
+            $total += 50 * $participants * $stepDuration;
         }
+
+        // Activity price
+        $activityName = $_POST['activite_' . $i];
+        $activityIndex = array_search($activityName, $trip['step_' . $i]['activities']) ?? 0;
+        $activityPrice = $trip['step_' . $i]['activities_price'][$activityIndex];
+        
+        $total += $activityPrice * $participants;
     }
 
-    // If participants are added to the activity
-    for ($i=1; $i<$step_number; $i++) {
-        if($_POST['participants_' . $i] > $number_of_participants) {
-            $diff = intval($_POST['participants_' . $i]) - $number_of_participants;
-            $total += 130 * $diff;
-        }
-    }
-
-    // Discount if the member is VIP
-    if($_SESSION['user']['role'] == "VIP") {
+    // Apply VIP discount
+    if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
         $total *= 0.9;
     }
-
     return $total;
 }
 ?>

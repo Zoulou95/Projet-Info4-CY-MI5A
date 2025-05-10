@@ -1,338 +1,390 @@
 <?php
-    require_once("../includes/trip_functions.php");
+require_once("../includes/trip_functions.php");
 
-    $data_file = '../data/trip_data.json';
-    $decodedData = dataDecode($data_file);
+$data_file = '../data/trip_data.json';
+$decodedData = dataDecode($data_file);
+
+// Get trip ID from URL
+if (isset($_GET['id'])) {
+    $trip_id = $_GET['id'];
+} else {
+    $trip_id = null;
+}
+
+$trip = tripFinder($decodedData, $trip_id);
+
+$_SESSION['trip'] = $trip;
+
+if (empty($_SESSION['trip'])) {
+    displayError("Trip affectation failed.");
+}
+
+// If the user is logged in, check if a trip is already purchased
+if (isset($_SESSION['user'])) {
+    if (isPurchased($_SESSION['trip']['id']) == true) {
+        header("Location: history.php");
+        exit;
+    }
+}
 ?>
+
+<script>
+    // Retrieve data from the json file for JavaScript functions
+    const tripData = <?php echo json_encode($trip); ?>;
+
+    // Checks if the user has the “VIP” role
+    const isVIP = <?php echo isset($_SESSION['user']) && $_SESSION['user']['role'] === 'VIP' ? 'true' : 'false'; ?>;
+</script>
 
 <!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>CyLanta</title>
-    <meta charset="utf-8" />
-    <meta name="description" content="CyLanta travel agency website" />
-    <meta name="author" content="Developped by MI5-A TEAM" />
-    <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
-    <link rel="icon" type="image/png" href="../assets/visuals/ico_island.png" />
-    <link rel="stylesheet" type="text/css" href="../css/base_style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/trip_style.css" />
-</head>
-<body>
+<!-- Header display -->
+<?php displayHeader(); ?>
 
-<?php
-    // Get trip ID from URL
-    if (isset($_GET['id'])) {
-        $trip_id = $_GET['id'];
-    } else {
-        $trip_id = null;
-    }
+<div class="separate"></div>
 
-    $trip = tripFinder($decodedData, $trip_id);
+<div class="description">
+    <h2><?php echo $trip['title']; ?></h2>
+    <h3><?php echo $trip['subtitle']; ?></h3>
+    <br>
+</div>
 
-    $_SESSION['trip'] = $trip;
+<div class="image_container">
+    <img class="presentation_img" src="../assets/presentation/<?php echo $trip['presentation_img_1']; ?>" alt="<?php echo $trip['presentation_img_1']; ?>" />
+    <div class="side_images">
+        <img class="small_img bottom_img" src="../assets/presentation/<?php echo $trip['presentation_img_2']; ?>" alt="<?php echo $trip['presentation_img_2']; ?>" />
+        <img class="small_img top_img" src="../assets/presentation/<?php echo $trip['presentation_img_3']; ?>" alt="<?php echo $trip['presentation_img_3']; ?>" />
+    </div>
+</div>
 
-    if(empty($_SESSION['trip'])) {
-        displayError("Trip affectation failed.");
-    }
+<h3>Aperçu</h3>
+<hr class="underline_info" />
 
-    // If the user is logged in, check if a trip is already purchased
-    if(isset($_SESSION['user'])) {
-        if(isPurchased($_SESSION['trip']['id']) == true) {
-            echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
-            exit();
-        }
-    }
-?>
-
-    <div class="container">
-        <!-- Navigation bar -->
-        <?php displayHeader(); ?>
-        
-        <div class="separate"></div>
-
-        <div class="description">
-            <h2><?php echo $trip['title'];?></h2>
-            <h3><?php echo $trip['subtitle'];?></h3>
-            <br>
-        </div>
-
-        <div class="image_container">
-            <img class="presentation_img" src="../assets/presentation/<?php echo $trip['presentation_img_1'];?>" alt="<?php echo $trip['presentation_img_1'];?>" />
-            <div class="side_images">
-                <img class="small_img bottom_img" src="../assets/presentation/<?php echo $trip['presentation_img_2'];?>" alt="<?php echo $trip['presentation_img_2'];?>" />
-                <img class="small_img top_img" src="../assets/presentation/<?php echo $trip['presentation_img_3'];?>" alt="<?php echo $trip['presentation_img_3'];?>" />
+<div class="overview">
+    <div class="service_info">
+        <h4>Prestations</h4>
+        <!-- List of services -->
+        <ul class="service_list">
+            <div class="left_column">
+                <li><img class="service_icon" src="../assets/visuals/pres_wifi_icon.png" alt="icon1" />WIFI</li>
+                <li><img class="service_icon" src="../assets/visuals/pres_sport_icon.png" alt="icon2" />Salle de sport</li>
+                <li><img class="service_icon" src="../assets/visuals/pres_love_icon.png" alt="icon3" />Décoration romantique</li>
             </div>
-        </div>
+            <div class="right_column">
+                <li><img class="service_icon" src="../assets/visuals/pres_pool_icon.png" alt="icon4" />Piscine</li>
+                <li><img class="service_icon" src="../assets/visuals/pres_spa_icon.png" alt="icon5" />Spa et bien-être</li>
+                <li><img class="service_icon" src="../assets/visuals/pres_key_icon.png" alt="icon6" />Conciergerie personnelle</li>
+            </div>
+        </ul>
+    </div>
 
-        <h3>Aperçu</h3>
-        <hr class="underline_info line" />
+    <div class="location_info">
+        <h4>Emplacement</h4>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=<?php echo $trip['trip_location']; ?>"
+            width="400"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
 
-        <div class="overview">
-            <div class="service_info">
-                <h4>Prestations</h4>
-                <!-- List of services -->
-                <ul class="service_list">
-                    <div class="left_column">
-                        <li><img class="service_icon" src="../assets/visuals/pres_wifi_icon.png" alt="icon1" />WIFI</li>
-                        <li><img class="service_icon" src="../assets/visuals/pres_sport_icon.png" alt="icon2" />Salle de sport</li>
-                        <li><img class="service_icon" src="../assets/visuals/pres_love_icon.png" alt="icon3" />Décoration romantique</li>
+    <div class="voyage_info">
+        <h4>Informations</h4>
+        <ul class="info_list">
+            <li>Dates : <?php echo "<b>" . $trip['dates']['start_date'] . "</b> au <b>" . $trip['dates']['end_date'] . "</b>"; ?></li>
+            <li>Durée du séjour : <?php echo $trip['dates']['duration']; ?></li>
+            <li>Frais de prestation: <?php echo '<b>' . $trip['price_per_person'] . '€</b> par personne'; ?></li>
+            <li>Spécificité : <?php echo $trip['special_features'][0]; ?></li>
+            <li>Le plus : <?php echo $trip['special_features'][1]; ?></li>
+        </ul>
+    </div>
+</div>
+
+<form action="confirmation.php" method="post">
+    <h3 class="planification_text">Planifiez votre voyage</h3>
+    <hr class="underline_planification line" />
+
+    <div class="reservation-container">
+        <div class="step_container">
+            <span class="step_number">1</span>
+            <span class="step_title">Configurez votre vol</span>
+
+            <div class="form_row">
+                <div class="form_group">
+                    <label for="departure_city">Ville de départ</label>
+                    <div class="select_wrapper">
+                        <select name="departure_city" class="form_control">
+                            <option selected>Au départ de Paris</option>
+                            <option value="Lyon">Au départ de Lyon</option>
+                            <option value="Marseille">Au départ de Marseille</option>
+                            <option value="Bordeaux">Au départ de Bordeaux</option>
+                        </select>
                     </div>
-                    <div class="right_column">
-                        <li><img class="service_icon" src="../assets/visuals/pres_pool_icon.png" alt="icon4" />Piscine</li>
-                        <li><img class="service_icon" src="../assets/visuals/pres_spa_icon.png" alt="icon5" />Spa et bien-être</li>
-                        <li><img class="service_icon" src="../assets/visuals/pres_key_icon.png" alt="icon6" />Conciergerie personnelle</li>
+                </div>
+
+                <div class="form_group">
+                    <label for="flight">Classe de cabine</label>
+                    <div class="select_wrapper">
+                        <select name="flight" class="form_control">
+                            <option value="Classe Économique" selected>Économique (800€/pers)</option>
+                            <option value="Classe Confort">Classe confort (1200€/pers)</option>
+                            <option value="Classe Affaires">Classe affaires (1400€/pers)</option>
+                            <option value="Première Classe">Première classe (2000€/pers)</option>
+                        </select>
                     </div>
-                </ul>
-            </div>
-            <div class="location_info">
-                <h4>Emplacement</h4>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=<?php echo $trip['trip_location'];?>"
-                    width="400"
-                    height="250"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
-            </div>
-            <div class="voyage_info">
-                <h4>Informations</h4>
-                <ul class="info_list">
-                    <li>Durée du séjour : <?php echo $trip['dates']['duration'];?></li>
-                    <li>Spécificité : <?php echo $trip['special_features'][0];?></li>
-                    <li><?php echo $trip['special_features'][1];?></li>
-                    <li><?php echo $trip['special_features'][2];?></li>
-                    <li><?php echo $trip['special_features'][3];?></li>
-                </ul>
+                </div>
             </div>
         </div>
 
-        <h3>Configuration des étapes</h3>
-        <hr class="underline_timeline line" />
-        
-        <div class="steps">
-            <div class="timeline">
-                <div class="step active">1</div>
-                <div class="step_line"></div>
-                <div class="step">2</div>
-                <div class="step_line"></div>
-                <div class="step">3</div>
-            </div>
-        </div>
+        <div class="step_container">
+            <span class="step_number">2</span>
+            <span class="step_title">Personnalisez votre séjour</span>
 
-        <form action="confirmation.php" method="post">
-            <!-- First board -->
-            <div class="board steps_board">
-                <h3 class="legend">Étape 1: <?php echo $trip['step_1']['title'];?></h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Durée de l'étape</th>
-                            <th>Hôtel</th>
-                            <th>Pension</th>
-                            <th>Activité</th>
-                            <th>Participants (+130€/invité)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><?php echo $trip['step_1']['dates']['duration']?> jours</td>
-                            <td>
-                                <select name="hotel_1">
-                                    <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
-                                    <option value="<?php echo $trip['hotel'][1];?>"><?php echo $trip['hotel'][1];?></option>
-                                    <option value="<?php echo $trip['hotel'][2];?>"><?php echo $trip['hotel'][2];?></option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="pension_1">
-                                    <option value="Demi-pension">Demi-pension (compris)</option>
-                                    <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
-                                    <option value="Déjeuner uniquement">Déjeuner uniquement</option>
-                                    <option value="Diner uniquement">Diner uniquement</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="activite_1">
-                                <option value="<?php echo $trip['step_1']['activities'][0];?>"><?php echo $trip['step_1']['activities'][0];?></option>
-                                    <option value="<?php echo $trip['step_1']['activities'][1];?>"><?php echo $trip['step_1']['activities'][1];?></option>
-                                    <option value="<?php echo $trip['step_1']['activities'][2];?>"><?php echo $trip['step_1']['activities'][2];?></option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="participants_1">
-                                    <option value="2">2 personnes</option>
-                                    <option value="3">3 personnes</option>
-                                    <option value="4">4 personnes</option>
-                                    <option value="5">5 personnes</option>
-                                    <option value="6">6 personnes</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Second board -->
-            <div class="board steps_board">
-                <h3 class="legend">Étape 2: <?php echo $trip['step_2']['title'];?></h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Durée de l'étape</th>
-                            <th>Hôtel</th>
-                            <th>Pension</th>
-                            <th>Activité</th>
-                            <th>Participants (+130€/invité)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><?php echo $trip['step_2']['dates']['duration']?> jours</td>
-                            <td>
-                            <select name="hotel_2">
-                                <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
-                                <option value="<?php echo $trip['hotel'][1];?>"><?php echo $trip['hotel'][1];?></option>
-                                <option value="<?php echo $trip['hotel'][2];?>"><?php echo $trip['hotel'][2];?></option>
-                            </select>
-                            </td>
-                            <td>
-                                <select name="pension_2">
-                                <option value="Demi-pension">Demi-pension (compris)</option>
-                                    <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
-                                    <option value="Déjeuner uniquement">Déjeuner uniquement</option>
-                                    <option value="Diner uniquement">Diner uniquement</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="activite_2">
-                                    <option value="<?php echo $trip['step_2']['activities'][0];?>"><?php echo $trip['step_2']['activities'][0];?></option>
-                                    <option value="<?php echo $trip['step_2']['activities'][1];?>"><?php echo $trip['step_2']['activities'][1];?></option>
-                                    <option value="<?php echo $trip['step_2']['activities'][2];?>"><?php echo $trip['step_2']['activities'][2];?></option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="participants_2">
-                                    <option value="2">2 personnes</option>
-                                    <option value="3">3 personnes</option>
-                                    <option value="4">4 personnes</option>
-                                    <option value="5">5 personnes</option>
-                                    <option value="6">6 personnes</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Third board -->
-            <div class="board steps_board">
-                <h3 class="legend">Étape 3: <?php echo $trip['step_3']['title'];?></h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Durée de l'étape</th>
-                            <th>Hôtel</th>
-                            <th>Pension</th>
-                            <th>Activité</th>
-                            <th>Participants (+130€/invité)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><?php echo $trip['step_3']['dates']['duration']?> jours</td>
-                            <td>
-                            <select name="hotel_3">
-                                    <option value="<?php echo $trip['hotel'][0];?>"><?php echo $trip['hotel'][0];?></option>
-                                    <option value="<?php echo $trip['hotel'][1];?>"><?php echo $trip['hotel'][1];?></option>
-                                    <option value="<?php echo $trip['hotel'][2];?>"><?php echo $trip['hotel'][2];?></option>
-                                </select>
-                            <td>
-                                <select name="pension_3">
-                                <option value="Demi-pension">Demi-pension (compris)</option>
-                                    <option value="Tout inclus">Tout inclus (+50€/pers/j)</option>
-                                    <option value="Déjeuner uniquement">Déjeuner uniquement</option>
-                                    <option value="Diner uniquement">Diner uniquement</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="activite_3">
-                                    <option value="<?php echo $trip['step_3']['activities'][0];?>"><?php echo $trip['step_3']['activities'][0];?></option>
-                                    <option value="<?php echo $trip['step_3']['activities'][1];?>"><?php echo $trip['step_3']['activities'][1];?></option>
-                                    <option value="<?php echo $trip['step_3']['activities'][2];?>"><?php echo $trip['step_3']['activities'][2];?></option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="participants_3">
-                                    <option value="2">2 personnes</option>
-                                    <option value="3">3 personnes</option>
-                                    <option value="4">4 personnes</option>
-                                    <option value="5">5 personnes</option>
-                                    <option value="6">6 personnes</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        <h3 class="planification_text">Planifiez votre voyage</h3>
-        <hr class="underline_planification line" />
-
-        <!-- Planification board -->
-        <div class="board">
-        <table>
-            <thead>
-                <tr>
-                    <th>Début</th>
-                    <th>Fin</th>
-                    <th>Participants</th>
-                    <th>Transports</th>
-                    <th>Prix/pers</th>
-                    <th>Prix total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b><?php echo $trip['dates']['start_date'];?></b></td>
-                    <td><b><?php echo $trip['dates']['end_date'];?></b></td>
-                    <td>
-                        <select name="number_of_participants">
+            <div class="form_row">
+                <div class="form_group">
+                    <label for="number_of_participants">Nombre de voyageurs</label>
+                    <div class="select_wrapper">
+                        <select name="number_of_participants" class="form_control">
                             <option value="2">2 personnes</option>
                             <option value="3">3 personnes</option>
                             <option value="4">4 personnes</option>
                             <option value="5">5 personnes</option>
                             <option value="6">6 personnes</option>
                         </select>
-                    </td>
-                    <td>
-                        <select name="transports">
-                            <option value="Aucun">Aucun</option>
-                            <option value="Vélo">Vélo (30€/pers/j)</option>
-                            <option value="Voiture">Voiture (90€/pers/j)</option>
-                            <option value="Bâteau">Bâteau (100€/pers/j)</option>
-                            <option value="Chauffeur">Chauffeur (300€/pers/j)</option>
-                            <option value="Hélicoptère">Hélicoptère (900€/pers/j)</option>
+                    </div>
+                </div>
+
+                <div class="form_group">
+                    <label for="formula">Transports sur place</label>
+                    <div class="select_wrapper">
+                        <select name="transports" class="form_control">
+                            <option value="Aucun" selected>Aucun</option>
+                            <option value="Vélo">Vélo (30€/pers/jour)</option>
+                            <option value="Voiture">Voiture (90€/pers/jour)</option>
+                            <option value="Bâteau">Bâteau (100€/pers/jour)</option>
+                            <option value="Chauffeur">Chauffeur (300€/pers/jour)</option>
+                            <option value="Hélicoptère">Hélicoptère (900€/pers/jour)</option>
                         </select>
-                    </td>
-                    <td><?php echo $trip['price_per_person'];?>€</td>
-                    <!-- Dynamic price will be set in JavaScript -->
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-            <button class="reservation_button" type="submit">
-                <p class="reservation_text">Réserver</p>
-            </button>
-        </form>
+    </div>
 
-        <div class="separate_footer"></div>
+    <span class="step_number">3</span>
+    <span class="step_title">Composez les étapes de votre voyage</span>
 
-        <!-- Footer -->
-        <?php displayFooter();?>
+    <!-- Step 1 -->
+    <div class="step_card active" data_step="1">
+        <h4>Étape 1 : <?php echo $trip['step_1']['title']; ?></h4>
+        <p>Durée : <?php echo $trip['step_1']['dates']['duration']; ?> jours</p>
 
-    <!-- Script to browse a timeline and select steps when choosing a trip -->
-    <script src="../script/timelineBrowse.js"></script>
+        <div class="field_row">
+            <div class="select_label">
+                <label>Hôtel
+                    <select name="hotel_1" class="dynamic_input" data_price="hotel">
+                        <?php foreach ($trip['hotel'] as $hotel) echo "<option value='$hotel'>$hotel</option>"; ?>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <span>Prix/personne/jour</span>
+                <div class="price_display"> €</div>
+            </div>
+        </div>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Pension
+                    <select name="pension_1" class="dynamic_input" data_price="pension">
+                        <option value="Demi-pension">Demi-pension (compris)</option>
+                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
+                        <option value="Déjeuner uniquement">Déjeuner uniquement</option>
+                        <option value="Diner uniquement">Diner uniquement</option>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <div class="price_display">-- €</div>
+            </div>
+        </div>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Activité
+                    <select name="activite_1" class="dynamic_input" data_price="activity">
+                        <?php foreach ($trip['step_1']['activities'] as $activity) echo "<option value='$activity'>$activity</option>"; ?>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <div class="price_display"> €</div>
+            </div>
+        </div>
+
+        <label>Nombre de participants
+            <select name="participants_1">
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step_card active" data_step="2">
+        <h4>Étape 2 : <?php echo $trip['step_2']['title']; ?></h4>
+        <p>Durée : <?php echo $trip['step_2']['dates']['duration'] ?> jours</p>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Hôtel
+                    <select name="hotel_2" class="dynamic_input" data_price="hotel">
+                        <?php foreach ($trip['hotel'] as $hotel) echo "<option value='$hotel'>$hotel</option>"; ?>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <span>Prix/personne/jour</span>
+                <div class="price_display"> €</div>
+            </div>
+        </div>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Pension
+                    <select name="pension_2" class="dynamic_input" data_price="pension">
+                        <option value="Demi-pension">Demi-pension (compris)</option>
+                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
+                        <option value="Déjeuner uniquement">Déjeuner uniquement</option>
+                        <option value="Diner uniquement">Diner uniquement</option>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <div class="price_display">-- €</div>
+            </div>
+        </div>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Activité
+                    <select name="activite_2" class="dynamic_input" data_price="activity">
+                        <?php foreach ($trip['step_2']['activities'] as $activity) echo "<option value='$activity'>$activity</option>"; ?>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <div class="price_display"> €</div>
+            </div>
+        </div>
+
+        <label>Nombre de participants
+            <select name="participants_2">
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step_card active" data_step="3">
+        <h4>Étape 3 : <?php echo $trip['step_3']['title']; ?></h4>
+        <p>Durée : <?php echo $trip['step_3']['dates']['duration'] ?> jours</p>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Hôtel
+                    <select name="hotel_3" class="dynamic_input" data_price="hotel">
+                        <?php foreach ($trip['hotel'] as $hotel) echo "<option value='$hotel'>$hotel</option>"; ?>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <span>Prix/personne/jour</span>
+                <div class="price_display"> €</div>
+            </div>
+        </div>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Pension
+                    <select name="pension_3" class="dynamic_input" data_price="pension">
+                        <option value="Demi-pension">Demi-pension (compris)</option>
+                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
+                        <option value="Déjeuner uniquement">Déjeuner uniquement</option>
+                        <option value="Diner uniquement">Diner uniquement</option>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <div class="price_display">-- €</div>
+            </div>
+        </div>
+
+        <div class="field_row">
+            <div class="select_label">
+                <label>Activité
+                    <select name="activite_3" class="dynamic_input" data_price="activity">
+                        <?php foreach ($trip['step_3']['activities'] as $activity) echo "<option value='$activity'>$activity</option>"; ?>
+                    </select>
+                </label>
+            </div>
+            <div class="price_label">
+                <div class="price_display"> €</div>
+            </div>
+        </div>
+
+        <label>Nombre de participants
+            <select name="participants_3">
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="steps">
+        <div class="timeline">
+            <div class="step active" data_step="1">1</div>
+            <div class="step_line"></div>
+            <div class="step" data_step="2">2</div>
+            <div class="step_line"></div>
+            <div class="step" data_step="3">3</div>
+        </div>
+    </div>
+
+    <span class="step_number">4</span>
+    <span class="step_title">Confirmez votre voyage</span>
+
+    <p class="price"><b></b></p>
+    <?php
+    if (!isset($_SESSION['user'])) {
+        echo '<div id="bubble" class="hidden"></div>';
+        echo '<button class="reservation_button" onclick="displayBubble(event, \'Vous devez être connecté pour confirmer ce voyage !\')">';
+    } else {
+        echo '<button class="reservation_button" type="submit">';
+    }
+    ?>
+    <p class="reservation_text">Confirmer ma sélection</p>
+    </button>
+</form>
+
+<!-- Footer -->
+<?php displayFooter(); ?>
+
+<!-- Script to browse a timeline and select steps when choosing a trip -->
+<script src="../script/timelineBrowse.js"></script>
+<script src="../script/priceCalculator.js"></script>
 </body>
+
 </html>

@@ -4,7 +4,7 @@
         "id": "1",
         "title": "Lune de Miel à Bora Bora ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Bora-Bora",
-        "presentation_title": "Lune de Miel à Bora Bora",
+        "presentation_title": "Lune de Miel",
         "destination" : "Bora-Bora",
         "description": "Immergez-vous dans un havre de paix, entre cocotiers et lagons turquoise.",
         "specificity": "noces",
@@ -24,7 +24,8 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2500,
         "price_range": "2000-3000",
-        "hotel": ["Lagoon Resort (4⭐)", "Oasis des Îles (5⭐)", "Étoile Bora (5⭐)"],
+        "hotel": ["Lagoon Resort (4⭐)", "Oasis des iles (5⭐)", "Étoile Bora (5⭐)"],
+        "hotel_price": [400, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente",
@@ -34,7 +35,8 @@
             "duration": 2
           },
           "coordinates": "-16.5004127, -151.7444002",
-          "activities": ["Aucune", "Massage avec vue", "Randonnée en montagne"]
+          "activities": ["Plage privatisée", "Massage avec vue", "Randonnée en montagne"],
+          "activities_price": [600, 200, 150]
         },
         "step_2": {
           "id": 2,
@@ -45,7 +47,8 @@
             "duration": 2
           },
           "coordinates": "-16.5005001, -151.7450002",
-          "activities": ["Aucune", "Séance photo", "Croisière privée"]
+          "activities": ["Plage privatisée", "Séance photo", "Croisière privée"],
+          "activities_price": [600, 50, 890]
         },
         "step_3": {
           "id": 3,
@@ -56,14 +59,15 @@
             "duration": 4
           },
           "coordinates": "-16.5010002, -151.7465003",
-          "activities": ["Aucune", "Plongée sous-marine", "Voyage en hélicoptère"]
+          "activities": ["Plage privatisée", "Plongée sous-marine", "Voyage en hélicoptère"],
+          "activities_price": [600, 125, 500]
         }
       },
       {
         "id": "2",
         "title": "Lune de Miel à Huahine ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Huahine",
-        "presentation_title": "Lune de Miel à Huahine",
+        "presentation_title": "Séjour amoureux",
         "destination" : "Huahine",
         "description": "Vivez une escapade romantique entre plages de sable blanc et eaux cristallines.",
         "specificity": "noces",
@@ -84,6 +88,7 @@
         "price_per_person": 1900,
         "price_range": "-2000",
         "hotel": ["Huahine Paradise (4⭐)", "Fare Maeva (5⭐)", "Moana Resort (5⭐)"],
+        "hotel_price": [600, 950, 1200],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente",
@@ -93,7 +98,8 @@
             "duration": 2
           },
           "coordinates": "-16.7182002, -151.0142003",
-          "activities": ["Aucune", "Bain de soleil", "Snorkeling dans le lagon"]
+          "activities": ["Plage privatisée", "Bain de soleil", "Snorkeling dans le lagon"],
+          "activities_price": [600, 80, 90]
         },
         "step_2": {
           "id": 2,
@@ -104,7 +110,8 @@
             "duration": 2
           },
           "coordinates": "-16.7105001, -151.0195001",
-          "activities": ["Aucune", "Visite de la vallée de Faie", "Randonnée dans la forêt tropicale"]
+          "activities": ["Plage privatisée", "Visite de la vallée de Faie", "Randonnée dans la foret tropicale"],
+          "activities_price": [600, 30, 50]
         },
         "step_3": {
           "id": 3,
@@ -115,7 +122,8 @@
             "duration": 4
         },
           "coordinates": "-16.7070002, -151.0337003",
-          "activities": ["Aucune", "Plongée avec les raies", "Croisière au coucher du soleil"]
+          "activities": ["Plage privatisée", "Plongée avec les raies", "Croisière au coucher du soleil"],
+          "activities_price": [600, 125, 250]
         }
       },
       {
@@ -143,6 +151,7 @@
         "price_per_person": 1800,
         "price_range": "-2000",
         "hotel": ["Moorea Lodge (3⭐)", "Aventure Resort (4⭐)", "Blue Horizon (5⭐)"],
+        "hotel_price": [250, 390, 1150],
         "step_1": {
           "id": 1,
           "title": "Découverte de l'île et randonnées",
@@ -152,7 +161,8 @@
             "duration": 2
           },
           "coordinates": "-17.5388, -149.8419",
-          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"]
+          "activities": ["Randonnée au Belvédère", "Exploration des cascades", "Kayak dans le lagon"],
+          "activities_price": [70, 55, 60]
         },
         "step_2": {
           "id": 2,
@@ -163,7 +173,8 @@
             "duration": 2
           },
           "coordinates": "-17.5500, -149.8500",
-          "activities": ["Visite d'un village local", "Plongée sous-marine", "Cours de danse traditionnelle"]
+          "activities": ["Visite de villages", "Plongée sous-marine", "Cours de danse traditionnelle"],
+          "activities_price": [50, 280, 100]
         },
         "step_3": {
           "id": 3,
@@ -174,14 +185,15 @@
             "duration": 6
           },
           "coordinates": "-17.5700, -149.8600",
-          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"]
+          "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"],
+          "activities_price": [650, 25, 40]
         }
       },
       {
         "id": "4",
         "title": "Séjour détente à Rangiroa ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, atoll de Rangiroa",
-        "presentation_title": "Séjour détente à Rangiro",
+        "presentation_title": "Séjour Détente",
         "destination" : "Rangiroa",
         "description": "Laissez-vous bercer par la douceur du lagon infini et des plages sereines.",
         "specificity": "détente",
@@ -202,6 +214,7 @@
         "price_per_person": 2700,
         "price_range": "2000-3000",
         "hotel": ["Rangiroa Pearl (4⭐)", "Lagoon View (5⭐)", "Blue Reef (5⭐)"],
+        "hotel_price": [600, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente sur le lagon",
@@ -211,7 +224,8 @@
             "duration": 2
           },
           "coordinates": "-15.1196, -147.6615",
-          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"]
+          "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"],
+          "activities_price": [150, 70, 90]
         },
         "step_2": {
           "id": 2,
@@ -222,7 +236,8 @@
             "duration": 2
           },
           "coordinates": "-15.1300, -147.6700",
-          "activities": ["Plongée à la passe de Tiputa", "Excursion aux îlots sauvages", "Pêche traditionnelle"]
+          "activities": ["Plongée à la passe de Tiputa", "Excursion aux ilots sauvages", "Peche traditionnelle"],
+          "activities_price": [300, 200, 40]
         },
         "step_3": {
           "id": 3,
@@ -233,14 +248,15 @@
             "duration": 7
           },
           "coordinates": "-15.1400, -147.6800",
-          "activities": ["Baignade dans le Lagon Bleu", "Dîner romantique sur la plage", "Balade en pirogue"]
+          "activities": ["Baignade dans le Lagon Bleu", "Diner romantique sur la plage", "Balade en pirogue"],
+          "activities_price": [50, 150, 80]
         }
       },
       {
         "id": "5",
         "title": "Séjour en famille à Moorea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Moorea",
-        "presentation_title": "Séjour en famille",
+        "presentation_title": "Séjour en Famille",
         "destination" : "Moorea",
         "description": "Explorez en famille un îlot préservé sur l'île de Moorea.",
         "specificity": "famille",
@@ -261,6 +277,7 @@
         "price_per_person": 4000,
         "price_range": "4000-5000",
         "hotel": ["Moorea Beach Resort (4⭐)", "Pearl Resort Moorea (5⭐)", "Luxe Moorea Resort (5⭐)"],
+        "hotel_price": [600, 1000, 1000],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation",
@@ -270,7 +287,8 @@
             "duration": 2
           },
           "coordinates": "-17.4976, -149.8436",
-          "activities": ["Baignade en famille", "Visite d'un village traditionnel", "Plongée sous-marine"]
+          "activities": ["Baignade en famille", "Visite de villages traditionnels", "Plongée sous-marine"],
+          "activities_price": [600, 200, 150]
         },
         "step_2": {
           "id": 2,
@@ -281,7 +299,8 @@
             "duration": 7
           },
           "coordinates": "-17.5050, -149.8390",
-          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"]
+          "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"],
+          "activities_price": [90, 80, 150]
         },
         "step_3": {
           "id": 3,
@@ -292,7 +311,8 @@
             "duration": 7
           },
           "coordinates": "-17.5100, -149.8350",
-          "activities": ["Plage tranquille", "Dîner au coucher du soleil", "Balade en pirogue"]
+          "activities": ["Plage tranquille", "Diner au coucher du soleil", "Balade en pirogue"],
+          "activities_price": [15, 200, 150]
         }
       },
       {
@@ -319,7 +339,8 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 3000,
         "price_range": "3000-4000",
-        "hotel": ["Taha'a Resort (5⭐)", "Le Taha'a Island (5⭐)", "Vahine Island (5⭐)"],
+        "hotel": ["Tahaa Resort (5⭐)", "Le Tahaa Island (5⭐)", "Vahine Island (5⭐)"],
+        "hotel_price": [980, 1000, 1990],
         "step_1": {
           "id": 1,
           "title": "Arrivée et immersion dans la nature",
@@ -329,7 +350,8 @@
             "duration": 3
           },
           "coordinates": "-16.6936, -151.4496",
-          "activities": ["Bain de soleil sur la plage", "Promenade à pied autour de l'île", "Coucher de soleil en bateau"]
+          "activities": ["Bain de soleil sur la plage", "Promenade guidée", "Coucher de soleil en bateau"],
+          "activities_price": [25, 30, 200]
         },
         "step_2": {
           "id": 2,
@@ -340,7 +362,8 @@
             "duration": 2
           },
           "coordinates": "-16.7000, -151.4400",
-          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite d'une ferme perlière"]
+          "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite de fermes perlières"],
+          "activities_price": [250, 70, 50]
         },
         "step_3": {
           "id": 3,
@@ -351,7 +374,8 @@
             "duration": 3
           },
           "coordinates": "-16.7100, -151.4500",
-          "activities": ["Plongée tranquille", "Dîner romantique", "Balade en vélo autour de l'île"]
+          "activities": ["Plongée tranquille", "Diner romantique", "Balade en vélo"],
+          "activities_price": [300, 180, 40]
         }
       },
       {
@@ -362,7 +386,7 @@
         "destination" : "Fakarava",
         "description": "Évadez-vous dans un atoll préservé aux eaux cristallines.",
         "specificity": "découverte",
-        "tags": ["mer", "soleil", "fakarava", "évasion", "sérénité", "paradis", "lagon", "îlot", "nature", "authenticité", "exotisme", "calme", "bleu"],
+        "tags": ["mer", "soleil", "fakarava", "évasion", "sérénité", "paradis", "lagon", "ilot", "nature", "authenticité", "exotisme", "calme", "bleu"],
         "presentation_img_1": "pres_fakarava_img_1.jpg",
         "presentation_img_2": "pres_fakarava_img_2.jpg",
         "presentation_img_3": "pres_fakarava_img_3.jpg",
@@ -379,6 +403,7 @@
         "price_per_person": 2500,
         "price_range": "2000-3000",
         "hotel": ["Fakarava Resort (4⭐)", "Atoll Paradise (5⭐)", "Pearl Beach Resort (5⭐)"],
+        "hotel_price": [600, 1000, 1200],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration",
@@ -388,7 +413,8 @@
             "duration": 3
           },
           "coordinates": "-16.0399, -145.5566",
-          "activities": ["Exploration de l'atoll", "Baignade dans le lagon", "Visite d'un site de surf"]
+          "activities": ["Exploration des atolls", "Baignade dans le lagon", "Visite de sites de surf"],
+          "activities_price": [200, 25, 50]
         },
         "step_2": {
           "id": 2,
@@ -399,7 +425,8 @@
             "duration": 2
           },
           "coordinates": "-16.0500, -145.5500",
-          "activities": ["Plongée dans la passe", "Visite des îlots avoisinants", "Visite d'un village local"]
+          "activities": ["Plongée dans la passe", "Visite des ilots avoisinants", "Visite de village locaux"],
+          "activities_price": [290, 200, 20]
         },
         "step_3": {
           "id": 3,
@@ -410,18 +437,19 @@
             "duration": 3
           },
           "coordinates": "-16.0600, -145.5500",
-          "activities": ["Détente sur la plage", "Coucher du soleil sur l'océan", "Plongée avec les raies"]
+          "activities": ["Détente sur la plage", "Croisière nocturne", "Plongée avec les raies"],
+          "activities_price": [15, 10, 150]
         }
       },
       {
         "id": "8",
         "title": "Séjour romantique à Bora Bora ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Bora Bora",
-        "presentation_title": "Séjour romantique",
+        "presentation_title": "Séjour Romantique",
         "destination" : "Bora-Bora",
         "description": "Vivez une escapade romantique à Bora Bora.",
         "specificity": "noces",
-        "tags": ["mer", "plage", "plages", "soleil", "borabora", "romantique", "lagon", "intimité", "coucher de soleil", "paradis", "calme", "exclusif", "évasion", "idyllique", "bungalow sur leau", "bien être", "vue imprenable", "tropical", "raffiné", "plongée", "degustation"],
+        "tags": ["plage", "plages", "soleil", "borabora", "romantique", "lagon", "intimité", "coucher de soleil", "paradis", "calme", "exclusif", "évasion", "idyllique", "bungalow sur leau", "bien être", "vue imprenable", "tropical", "raffiné", "plongée", "degustation"],
         "presentation_img_1": "pres_bora-bora_img_4.jpg",
         "presentation_img_2": "pres_bora-bora_img_5.jpg",
         "presentation_img_3": "pres_bora-bora_img_6.jpg",
@@ -437,7 +465,8 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 3500,
         "price_range": "3000-4000",
-        "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St. Regis Bora Resort (5⭐)"],
+        "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St Regis Bora Resort (5⭐)"],
+        "hotel_price": [850, 1200, 1600],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation",
@@ -447,7 +476,8 @@
             "duration": 3
           },
           "coordinates": "-16.5004, -151.7415",
-          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"]
+          "activities": ["Détente sur la plage", "Bain de soleil", "Exploration des environs"],
+          "activities_price": [20, 35, 100]
         },
         "step_2": {
           "id": 2,
@@ -458,7 +488,8 @@
             "duration": 3
           },
           "coordinates": "-16.5200, -151.7300",
-          "activities": ["Plongée dans le lagon", "Visite de l'île en 4x4", "Dégustation de vanille locale"]
+          "activities": ["Plongée dans le lagon", "Visite des iles en 4x4", "Dégustation de vanille locale"],
+          "activities_price": [500, 200, 90]
         },
         "step_3": {
           "id": 3,
@@ -469,21 +500,22 @@
             "duration": 3
           },
           "coordinates": "-16.5400, -151.7500",
-          "activities": ["Coucher de soleil en bateau", "Dîner romantique sur l'eau", "Paddle sur le lagon"]
+          "activities": ["Coucher de soleil en bateau", "Diner romantique en mer", "Paddle sur le lagon"],
+          "activities_price": [300, 200, 50]
         }
       },
       {
         "id": "9",
         "title": "Expérience inédite à Huahine ⭐⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Huahine",
-        "presentation_title": "Expérience inédite",
+        "presentation_title": "Expérience Inédite",
         "destination" : "Huahine",
         "description": "Vivez une expérience culturelle inédite à Huahine.",
         "specificity": "découverte",
         "presentation_img_1": "pres_huahine_img_4.jpg",
         "presentation_img_2": "pres_huahine_img_5.jpg",
         "presentation_img_3": "pres_huahine_img_6.jpg",
-        "tags": ["mer", "soleil", "plongée", "huahine", "authenticité", "nature", "culture", "tradition", "lagon", "paix", "sérénité", "déconnexion", "secret", "préservé", "exotique", "évasion", "île perdue", "unique"],
+        "tags": ["soleil", "plongée", "huahine", "authenticité", "nature", "culture", "tradition", "lagon", "paix", "sérénité", "déconnexion", "secret", "préservé", "exotique", "évasion", "île perdue", "unique"],
         "trip_location": "!1m14!1m8!1m3!1d13091.380342812002!2d-151.0330!3d-16.7001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76b95f02d85a0981%3A0x4c5a5eae51fdadd!2sHuahine%2C%20Polyn%C3%A9sie%20fran%C3%A7aise!5e0!3m2!1sfr!2sfr!4v1616342960900!5m2!1sfr!2sfr",
         "dates": {
           "start_date": "2025-08-22",
@@ -497,6 +529,7 @@
         "price_per_person": 4900,
         "price_range": "4000-5000",
         "hotel": ["Lapita Village (4⭐)", "Royal Huahine (5⭐)", "Te Tiare Resort (5⭐)"],
+        "hotel_price": [500, 1000, 1300],
         "step_1": {
           "id": 1,
           "title": "Arrivée et découverte de l'île",
@@ -506,7 +539,8 @@
             "duration": 4
           },
           "coordinates": "-16.7001, -151.0330",
-          "activities": ["Balade en vélo autour de l'île", "Visite d'un marae ancien", "Dégustation de vanille locale"]
+          "activities": ["Balades en vélo", "Visite de marae anciens", "Dégustation de vanille locale"],
+          "activities_price": [125, 80, 60]
         },
         "step_2": {
           "id": 2,
@@ -517,7 +551,8 @@
             "duration": 3
           },
           "coordinates": "-16.7100, -151.0200",
-          "activities": ["Kayak dans les lagons", "Visite de l'île en bateau", "Dégustation de vanille locale"]
+          "activities": ["Kayak dans les lagons", "Visite des iles en bateau", "Dégustation de vanille locale"],
+          "activities_price": [50, 120, 60]
         },
         "step_3": {
           "id": 3,
@@ -528,7 +563,8 @@
             "duration": 5
           },
           "coordinates": "-16.7400, -151.0000",
-          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"]
+          "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"],
+          "activities_price": [600, 450, 30]
         }
       },
       {
@@ -539,7 +575,7 @@
         "destination" : "Tahiti",
         "description": "Découvrez un écrin de beauté au cœur de Tahiti et ses environs.",
         "specificity": "aventure",
-        "tags": ["mer", "plage", "plages", "soleil", "randonnée", "village", "tahiti", "aventure", "montagnes", "volcan", "sauvage", "exploration", "nature", "trekking", "lagon", "plages", "surf", "cascades", "découverte", "exotisme"],
+        "tags": ["plage", "plages", "soleil", "randonnée", "village", "tahiti", "aventure", "montagnes", "volcan", "sauvage", "exploration", "nature", "trekking", "lagon", "plages", "surf", "cascades", "découverte", "exotisme"],
         "presentation_img_1": "pres_tahiti_img_1.jpg",
         "presentation_img_2": "pres_tahiti_img_2.jpg",
         "presentation_img_3": "pres_tahiti_img_3.jpg",
@@ -556,6 +592,7 @@
         "price_per_person": 2200,
         "price_range": "2000-3000",
         "hotel": ["Tahiti Pearl (4⭐)", "Le Meridien (5⭐)", "Tahiti Resort (5⭐)"],
+        "hotel_price": [500, 1000, 1900],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration de Papeete",
@@ -565,7 +602,8 @@
             "duration": 3
           },
           "coordinates": "-17.6509, -149.5660",
-          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"]
+          "activities": ["Visite du marché de Papeete", "Dégustation de fruits exotiques", "Baignade en famille"],
+          "activities_price": [10, 60, 25]
         },
         "step_2": {
           "id": 2,
@@ -576,7 +614,8 @@
             "duration": 3
           },
           "coordinates": "-17.6200, -149.5500",
-          "activities": ["Randonnée vers les cascades", "Visite d'un site de surf", "Visite d'un village local"]
+          "activities": ["Randonnée vers les cascades", "Visite de sites de surf", "Visite de villages locaux"],
+          "activities_price": [100, 50, 25]
         },
         "step_3": {
           "id": 3,
@@ -587,18 +626,19 @@
             "duration": 4
           },
           "coordinates": "-17.6700, -149.5700",
-          "activities": ["Repos sur la plage", "Bain de soleil", "Visite d'une ferme perlière"]
+          "activities": ["Repos sur la plage", "Bain de soleil", "Visite de fermes perlières"],
+          "activities_price": [35, 20, 35]
         }
       },
       {
         "id": "11",
         "title": "Voyage culturel à Raiatea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Raiatea",
-        "presentation_title": "Voyage culturel",
+        "presentation_title": "Voyage Vulturel",
         "destination" : "Raiatea",
         "description": "Plongez dans l'histoire de Raiatea, entre traditions vivantes et paysages.",
         "specificity": "découverte",
-        "tags": ["mer", "soleil", "raiatea", "culture", "histoire", "tradition", "temples", "polynésie", "exploration", "archéologie", "légendes", "authenticité", "découverte", "sites historiques", "nature", "paysages", "art"],
+        "tags": ["soleil", "raiatea", "culture", "histoire", "tradition", "temples", "polynésie", "exploration", "archéologie", "légendes", "authenticité", "découverte", "sites historiques", "nature", "paysages", "art"],
         "presentation_img_1": "pres_raiatea_img_1.jpg",
         "presentation_img_2": "pres_raiatea_img_2.jpg",
         "presentation_img_3": "pres_raiatea_img_3.jpg",
@@ -614,17 +654,19 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 4100,
         "price_range": "4000-5000",
-        "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Taha'a Resort (5⭐)"],
+        "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Tahaa Resort (5⭐)"],
+        "hotel_price": [450, 800, 970],
         "step_1": {
           "id": 1,
-          "title": "Arrivée et immersion dans l'histoire",
+          "title": "Arrivée et immersion",
           "dates": {
             "arrival": "2025-09-25",
             "departure": "2025-09-27",
             "duration": 3
           },
           "coordinates": "-16.7669, -151.5016",
-          "activities": ["Visite du marae Taputapuātea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"]
+          "activities": ["Visite du marae Taputapuatea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"],
+          "activities_price": [100, 40, 30]
         },
         "step_2": {
           "id": 2,
@@ -635,7 +677,8 @@
             "duration": 3
           },
           "coordinates": "-16.7700, -151.5100",
-          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"]
+          "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"],
+          "activities_price": [125, 280, 60]
         },
         "step_3": {
           "id": 3,
@@ -646,18 +689,19 @@
             "duration": 5
           },
           "coordinates": "-16.7600, -151.4800",
-          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"]
+          "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"],
+          "activities_price": [20, 40, 60]
         }
       },
       {
         "id": "12",
         "title": "Aventure éco-tourisme à Nuku Hiva ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Nuku Hiva",
-        "presentation_title": "Aventure éco-tourisme",
+        "presentation_title": "Eco-tourisme",
         "destination" : "Nuku Hiva",
         "description": "Explorez un havre de biodiversité où nature et aventure se rencontrent.",
         "specificity": "aventure",
-        "tags": ["mer", "famille", "soleil", "nuku Hiva", "éco-tourisme", "éco tourisme", "écologie", "ecologie", "ecolo", "vert", "aventure", "nature", "exploration", "randonnée", "faune", "flore", "écologie", "paysages", "îles Marquises", "culture locale", "écosystème", "voyage responsable", "découverte"],
+        "tags": ["famille", "soleil", "nuku Hiva", "éco-tourisme", "éco tourisme", "écologie", "ecologie", "ecolo", "vert", "aventure", "nature", "exploration", "randonnée", "faune", "flore", "écologie", "paysages", "îles Marquises", "culture locale", "écosystème", "voyage responsable", "découverte"],
         "presentation_img_1": "pres_nuku_hiva_img_1.jpg",
         "presentation_img_2": "pres_nuku_hiva_img_2.jpg",
         "presentation_img_3": "pres_nuku_hiva_img_3.jpg",
@@ -673,7 +717,8 @@
         "guests": ["Personne 1", "Personne 2"],
         "price_per_person": 2100,
         "price_range": "2000-3000",
-        "hotel": ["Nuku Hiva Keikahanui (4⭐)", "Hiva Oa Lodge (4⭐)", "Hotel Relais Hiva (5⭐)"],
+        "hotel": ["Maison traditionnelle (4⭐)", "Hiva Oa Lodge (4⭐)", "Écocabane de luxe (5⭐)"],
+        "hotel_price": [450, 470, 800],
         "step_1": {
           "id": 1,
           "title": "Arrivée et immersion dans la culture locale",
@@ -683,7 +728,8 @@
             "duration": 3
           },
           "coordinates": "-8.9288, -140.1006",
-          "activities": ["Visite des sites archéologiques", "Découverte des traditions", "Baignade en famille"]
+          "activities": ["Visite des sites archéologiques", "Découverte des traditions", "Baignade en famille"],
+          "activities_price": [80, 75, 20]
         },
         "step_2": {
           "id": 2,
@@ -694,7 +740,8 @@
             "duration": 3
           },
           "coordinates": "-8.9100, -140.1100",
-          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"]
+          "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"],
+          "activities_price": [125, 80, 50]
         },
         "step_3": {
           "id": 3,
@@ -705,7 +752,8 @@
             "duration": 3
           },
           "coordinates": "-8.9300, -140.0900",
-          "activities": ["Bain de soleil sur la plage", "Relaxation au bord de l'eau", "Balade en bâteau"]
+          "activities": ["Bain de soleil sur la plage", "Séance de relaxation", "Balade en bâteau"],
+          "activities_price": [40, 30, 210]
         }
       },
       {
@@ -716,7 +764,7 @@
         "destination" : "Tetiaroa",
         "description": "Vivez l'exception, un séjour de luxe entre îles privées et paysages paradisiaques.",
         "specificity": "luxe",
-        "tags": ["jetski", "mer", "plages", "plage", "soleil", "tetiaroa", "luxe", "détente", "plageprivée", "privée", "borabora", "exclusivité", "villas", "prestige", "paradis", "calme", "riche", "relaxation", "îles polynésiennes", "5 étoiles", "haut de gamme"],
+        "tags": ["jetski", "plages", "plage", "soleil", "tetiaroa", "luxe", "détente", "plageprivée", "privée", "borabora", "exclusivité", "villas", "prestige", "paradis", "calme", "riche", "relaxation", "îles polynésiennes", "5 étoiles", "haut de gamme"],
         "presentation_img_1": "pres_tetiaroa_img_1.jpg",
         "presentation_img_2": "pres_tetiaroa_img_2.jpg",
         "presentation_img_3": "pres_tetiaroa_img_3.jpg",
@@ -733,6 +781,7 @@
         "price_per_person": 8000,
         "price_range": "+5000",
         "hotel": ["The Brando Resort (6⭐)", "Polynesia hotel (5⭐)", "Atoll Paradise (5⭐)"],
+        "hotel_price": [11990, 9650, 10500],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation dans la villa",
@@ -742,7 +791,8 @@
             "duration": 4
           },
           "coordinates": "-17.5150, -149.5740",
-          "activities": ["Jetski sur le lagon", "Détente sur la plage", "Découverte des traditions"]
+          "activities": ["Jetski sur le lagon", "Détente sur la plage", "Découverte des traditions"],
+          "activities_price": [700, 250, 290]
         },
         "step_2": {
           "id": 2,
@@ -753,7 +803,8 @@
             "duration": 3
           },
           "coordinates": "-17.5200, -149.5600",
-          "activities": ["Plongée dans le lagon", "Visite de l'île privée", "Détente à la plage"]
+          "activities": ["Plongée dans le lagon", "Visite des iles privées", "Détente à la plage"],
+          "activities_price": [950, 1200, 250]
         },
         "step_3": {
           "id": 3,
@@ -764,14 +815,15 @@
             "duration": 5
           },
           "coordinates": "-17.5300, -149.5700",
-          "activities": ["Massage au spa", "Dîner privé sur la plage", "Dégustation de vanille locale"]
+          "activities": ["Massage au spa", "Diner privé sur la plage", "Dégustation de vanille locale"],
+          "activities_price": [400, 225, 80]
         }
       },
       {
         "id": "14",
         "title": "Découverte culturelle à Moorea ⭐⭐⭐⭐",
         "subtitle": "Polynésie française, île de Moorea",
-        "presentation_title": "Voyage découverte",
+        "presentation_title": "Voyage Découverte",
         "destination" : "Moorea",
         "description": "Plongez au cœur des traditions polynésiennes.",
         "specificity": "découverte",
@@ -792,6 +844,7 @@
         "price_per_person": 2500,
         "price_range": "2000-3000",
         "hotel": ["Moorea Pearl Resort (4⭐)", "Hilton Resort & Spa (5⭐)", "Sofitel Moorea (5⭐)"],
+        "hotel_price": [390, 750, 900],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration de la culture locale",
@@ -801,7 +854,8 @@
             "duration": 3
           },
           "coordinates": "-17.5407, -149.8221",
-          "activities": ["Visite du centre culturel", "Découverte de l'artisanat local", "Visite d'un village traditionnel"]
+          "activities": ["Visite du centre culturel", "Découverte d'artisants locaux", "Visite de villages traditionnels"],
+          "activities_price": [25, 80, 40]
         },
         "step_2": {
           "id": 2,
@@ -812,7 +866,8 @@
             "duration": 3
           },
           "coordinates": "-17.5500, -149.8100",
-          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"]
+          "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"],
+          "activities_price": [130, 200, 30]
         },
         "step_3": {
           "id": 3,
@@ -823,7 +878,8 @@
             "duration": 5
           },
           "coordinates": "-17.5600, -149.8200",
-          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"]
+          "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"],
+          "activities_price": [25, 50, 150]
         }
       },
       {
@@ -851,6 +907,7 @@
         "price_per_person": 6500,
         "price_range": "+5000",
         "hotel": ["Bora Lagoon Resort (5⭐)", "Le Méridien (5⭐)", "Moorea Pearl Resort (4⭐)"],
+        "hotel_price": [700, 800, 1000],
         "step_1": {
           "id": 1,
           "title": "Plongée d'excellence",
@@ -860,7 +917,8 @@
             "duration": 3
           },
           "coordinates": "-17.5000, -149.6000",
-          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"]
+          "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"],
+          "activities_price": [420, 315, 510]
         },
         "step_2": {
           "id": 2,
@@ -871,7 +929,8 @@
             "duration": 3
           },
           "coordinates": "-16.5000, -151.7000",
-          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"]
+          "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"],
+          "activities_price": [400, 300, 350]
         },
         "step_3": {
           "id": 3,
@@ -882,7 +941,8 @@
             "duration": 4
           },
           "coordinates": "-17.5407, -149.8221",
-          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"]
+          "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"],
+          "activities_price": [600, 200, 600]
         }
       }
     ]

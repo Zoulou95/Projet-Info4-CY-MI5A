@@ -82,7 +82,8 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 ├── 📂 includes
 │   ├── 📄 header.php
 │   └── 📄 ...
-├── 📂 presentation_phase2
+├── 📂 logs
+├── 📂 presentation_phase_3
 ├── 📂 script
 │   ├── 📄 timelineBrowse.js
 │   └── 📄 registration.js
@@ -107,7 +108,6 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 
 `purchase_data.json` contains information on all purchases (ID, payment status, buyer, etc.).
 
-
 ## `/includes` files
 
 The pages in the `/includes` folder contain the PHP functions used by all the code for page display and data processing.
@@ -120,19 +120,17 @@ The pages in the `/includes` folder contain the PHP functions used by all the co
 
 - `profile_manager.php` is the page used to retrieve profile information from our json database, and update it if necessary.
 
+- `profile_update.php` and `remove_from_cart.php` use AJAX to communicate with the server and update profile and cart information in the database, without reloading.
+
 - `trip_function.php` is the page for displaying and configuring trips.
 
 - The functions in `session_start.php` are used to check the existence of cookies or to create them, and to initialize session variables.
 
-## `/script` files
-
-- `timelineBrowse.js` lets you configure the stages of a journey using a timeline that displays a different table with each click, which is more comfortable.
-
-- `registration.js` is the login and registration overlay.
-
 ## `/src` files
  
 - `admin_panel.php` is used to manage user accounts. It presents a list of registered users and buttons to modify a property of each user (e.g. VIP customer, banning of the customer who would no longer be able to buy trips, etc.).
+
+- `cart.php` allows you to place several trips in a shopping cart and then purchase them together.
 
 - `confirmation.php` and `order_confirmed.php` pages respectively summarize a user's choice of a trip and display a message to indicate that the purchase was successful.
 
