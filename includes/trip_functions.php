@@ -34,17 +34,22 @@ function getTripNumber($data, $tag) {
     return $counter;
 }
 
+// Display a card with useful informations
 function printCard($journey) {
     echo
     '
-    <div class="card">
+    <div class="card" 
+        data-price="' . $journey['price_per_person'] . '" 
+        data-date="' . $journey['dates']['start_date'] . '" 
+        data-duration="' . $journey['dates']['length'] . '" 
+        data-steps="' . count($journey['special_features']) . '">
         <img src="../assets/presentation/' . $journey['presentation_img_1'] . '" alt="Card presentation image" />
         <div class="card_content">
             <h2>'. $journey['title'] . '</h2>
             <p>'. $journey['subtitle'] . '</p>
-            <p>Date : <b>' . $journey['dates']['start_date'] . '</b> au <b>' . $journey['dates']['end_date'] . '</b></p>
+            <p>Date : <b><span class="date_value">' . $journey['dates']['start_date'] . '</span></b> au <b>' . $journey['dates']['end_date'] . '</b></p>
             <p>Spécificité : ' . $journey['special_features'][0] . '</p>
-            <p>Frais de services : <b>' . $journey['price_per_person'] . '€</b></p>';
+            <p>Frais de prestation : <b><span class="price_value">' . $journey['price_per_person'] . '</span>€</b></p>';
             if(isset($_SESSION['user']['travel_history']) && isPurchased($journey['id'])) {
                 echo '<a href="../src/history.php" class="purchased">➤ Voyage acheté</a>';
             } else {
@@ -56,6 +61,7 @@ function printCard($journey) {
     </div>
     ';
 }
+
 
 // Display a trip as a map according to a user's quicksearch request
 function displayByTag($data, $tag, $trip_number) {
@@ -292,18 +298,13 @@ function priceCalc($trip, $number_of_participants) {
         $activityIndex = array_search($activityName, $trip['step_' . $i]['activities']) ?? 0;
         $activityPrice = $trip['step_' . $i]['activities_price'][$activityIndex];
         
-        error_log("=========================");
-        error_log($activityIndex);
-        error_log("=========================");
         $total += $activityPrice * $participants;
     }
 
     // Apply VIP discount
-    /*if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
+    if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
         $total *= 0.9;
-    }*/
-    error_log($total);
-    error_log(" ");
+    }
     return $total;
 }
 ?>

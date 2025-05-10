@@ -55,6 +55,7 @@ function updateInfo($data, $data_file) {
 }
 
 // Update password
+// We will update this function with AJAX at Phase #4
 function updatePassword() {
     if(isset($_POST['new_password']) && isset($_POST['password']) && isset($_POST['confirm_password'])) {
         $confirm_password = $_POST['confirm_password'];
@@ -206,7 +207,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
         $trip_data = dataReader($trip_data_file);
 
         if (!is_array($purchases) || empty($purchases)) {
-            echo '<h1 class="history_text"><b>Aucun voyage réservé 😭</b></h1>';
+            echo '<h1 class="history_text"><b>Aucun voyage réservé :(</b></h1>';
             return;
         }
 
@@ -216,7 +217,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
         });
 
         if (empty($user_purchases)) {
-            echo '<h1 class="history_text"><b>Aucun voyage réservé 😭</b></h1>';
+            echo '<h1 class="history_text"><b>Aucun voyage réservé :(</b></h1>';
             return;
         }
 
@@ -225,8 +226,8 @@ function displayPurchaseHistory($user_id, $purchase_file) {
         echo '<br /><br />';
         echo '<div class="card-container">';
 
-        foreach ($user_purchases as $purchase) {
         // Retrieve complete trip details from trip_data.json
+        foreach ($user_purchases as $purchase) {
             $trip = tripFinder($trip_data, $purchase['trip_id']);
 
             if ($trip) {
@@ -243,7 +244,7 @@ function displayPurchaseHistory($user_id, $purchase_file) {
         }
         echo '</div>';
     } else {
-        displayError("Le fichier purchase_data.json est introuvable.");
+        displayError("'purchase_data.json' file cannot be found.");
     }
 }
 ?>

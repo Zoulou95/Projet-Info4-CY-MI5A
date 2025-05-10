@@ -1,25 +1,62 @@
 <?php
-// header.php : navigation bar code
-
-$current_file = $_SERVER['PHP_SELF'];
+// header.php : navigation bar and header code
 
 require_once('session_start.php');
 require_once('cart_functions.php');
 
-if (basename($current_file) === 'index.php') {
-    $path_parent = "";
-    $path_src = "src/";
-} else {
-    $path_parent = "../";
-    $path_src = "";
-}
-
-echo '<script src="' . $path_parent . '/script/bubble.js"></script>';
-
+// Display <head> and navigation bar
 function displayHeader() {
 
-    global $path_parent;
-    global $path_src;
+    $current_file = $_SERVER['PHP_SELF'];
+
+    // Reading files according to our position in the directory
+    if (basename($current_file) === 'index.php') {
+    $path_parent = "";
+    $path_src = "src/";
+    } else {
+        $path_parent = "../";
+        $path_src = "";
+    }
+
+    // Load error handle script
+    echo '<script src="' . $path_parent . 'script/bubble.js"></script>';
+
+    // Display dark mode or bright mode by default
+    $dark_mode_class = '';
+
+    if (isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true') {
+        $dark_mode_class = 'dark-mode';
+    }
+
+    $current_file = $_SERVER['PHP_SELF'];
+
+    // Get current page name without extension
+    $page_name = pathinfo(basename($current_file), PATHINFO_FILENAME);
+    // Define the CSS linked to the page you are on
+    $optional_css = $path_parent . 'css/' . $page_name . '_style.css';
+
+    // Display <head> section
+    echo '
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <title>CyLanta</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="CyLanta travel agency website" />
+        <meta name="author" content="Developped by MI5-A TEAM" />
+        <meta name="keywords" content="voyage, agence de voyage, séjour, escapade, vacances, rechercher une destination" />
+        <link rel="icon" type="image/png" href="' . $path_parent . 'assets/visuals/ico_island.png" />
+        <link rel="stylesheet" type="text/css" href="' . $path_parent . 'css/base_style.css" />';
+
+    if ($optional_css) {
+        echo '<link rel="stylesheet" type="text/css" href="' . $optional_css . '" />';
+    }
+
+    echo '</head>';
+
+    echo '<body class="' . $dark_mode_class . '">';
+    echo '<div class="container">';
+
     echo '
     <div class="headbar">
         <div class="headbar_left">
@@ -34,7 +71,7 @@ function displayHeader() {
             <button id="darkModeToggle" style="header_dark_mode">
             🌙 Mode Sombre
             </button>
-            <script src="'.$path_parent.'script/darkmode.js"></script>
+            <script src="'.$path_parent.'script/darkMode.js"></script>
             <script src="'.$path_parent.'script/formFeatures.js"></script>
         </div>';
 

@@ -1,21 +1,20 @@
-// darkmode.js : display dark mode
+// darkMode.js : display dark mode using only cookies
 
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('darkModeToggle');
 
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-        toggleButton.textContent = '☀️ Mode Clair';
-    }
+    // Determines whether dark mode is active, by reading the DOM
+    const isDarkMode = document.body.classList.contains('dark-mode');
+
+    toggleButton.textContent = isDarkMode ? '☀️ Mode Clair' : '🌙 Mode Sombre';
 
     toggleButton.addEventListener('click', function () {
         document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
+        const enabled = document.body.classList.contains('dark-mode');
 
-     
-        toggleButton.textContent = isDarkMode ? '☀️ Mode Clair' : '🌙 Mode Sombre';
+        toggleButton.textContent = enabled ? '☀️ Mode Clair' : '🌙 Mode Sombre';
 
-    
-        localStorage.setItem('dark-mode', isDarkMode);
+        // Update cookie
+        document.cookie = "dark-mode=" + enabled + "; path=/; max-age=31536000";
     });
 });

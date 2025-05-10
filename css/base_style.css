@@ -1,4 +1,4 @@
-/* base_style.css */
+/* base_style.css : common to all php files */
 
 /* Main container and navigation bar */
 
@@ -79,7 +79,7 @@ body.no-scroll {
 
 .headbar_rest {
     display: flex;
-    flex: 8; /* The element will take up 8 shares of the available space */
+    flex: 8; /* The element take 8 shares of the available space */
     justify-content: flex-start;
     align-items: center;
     gap: 6vw;
@@ -159,7 +159,7 @@ body.no-scroll {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Card presenting destinations (present on homepage.html and search.html)  */
+/* Card presenting destinations */
 
 .card {
     width: 350px;
@@ -239,7 +239,7 @@ body.no-scroll {
     color: #050552;
 }
 
-.empty_cart_button, .back_to_search_button, .back_to_index_button {
+.empty_cart_button, .back_to_search_button, .back_to_index_button, .back_to_home_button {
     display: block;
     margin: 8.1vh auto;
     width: 50%;
@@ -262,15 +262,15 @@ body.no-scroll {
     cursor: pointer;
 }
 
+.back_to_home_button {
+    width: 70%;
+}
+
 .back_to_search_text, .back_to_index_text {
     color: #ffffff;
     font-size: 4vh;
     font-weight: bold;
     text-decoration: none;
-}
-
-.empty_cart_button {
-    width: 49.72vw;
 }
 
 /* Footer */
@@ -343,7 +343,7 @@ footer {
     margin-top: 50vh;
 }
 
-/*Overlay*/
+/* Overlay style (sign in, sign up) */
 
 .overlay {
     position: fixed;
@@ -523,7 +523,7 @@ body.dark-mode {
     padding: 0 1.5%; 
     box-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
     background-color: #181f2b;
-    z-index:1; /* Bring the navigation bar to the foreground */
+    z-index:1;
 }
 
 .dark-mode .secondbar {

@@ -13,7 +13,7 @@ Manon | Fournier | manon.fournier@email.com | 0716170286 | IZ2r2e5Ny2qL | banni
 Théo | Girard | theo.girard@email.com | 0691704314 | gl0OGcUbYb3Y
 Camille | Bonnet | camille.bonnet@email.com | 0797701165 | eMbqUrg5409Y
 Antoine | Robin | antoine.robin@email.com | 0669466393 | SxG7zUskCZCX
-Sarah | Mercier | sarah.mercier@email.com | 0682757329 | tfaeY3MZJVDj | vip
+Sarah | Mercier | sarah.mercier@email.com | 0682757329 | tfaeY3MZJVDj | VIP
 Julien | Roussel | julien.roussel@email.com | 0770833002 | 1K2Wqo76Qa1l
 Laura | Picard | laura.picard@email.com | 0796060942 | VTmy54VKmZkV
 Alexis | Perrot | alexis.perrot@email.com | 0714934411 | jIOfKayBPGXk
@@ -21,4 +21,4 @@ Clara | Barbier | clara.barbier@email.com | 0636963499 | 8IjUx4WKNMLr
 Valentin | Giraud | valentin.giraud@email.com | 0606924612 | RHrYGAk6sEvr
 Elise | Colin | elise.colin@email.com | 0660207905 | yf3J5GhyhW7s
 Quentin | Noel | quentin.noel@email.com | 0602044906 | simW4Pjn8P4V
-Justine | Blanchard | justine.blanchard@email.com | 0626872452 | gUeInnV3uP5B | admin
+Justine | Blanchard | justine.blanchard@email.com | 0626872452 | gUeInnV3uP5B | administrateur

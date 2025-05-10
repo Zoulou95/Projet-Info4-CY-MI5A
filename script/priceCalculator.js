@@ -136,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const activityPrice = activitiesPrices[`step_${i}`][activityIndex] || 0;
             totalPrice += activityPrice * stepParticipants;
         }
+
+        // Apply VIP discount
+        if (typeof isVIP !== "undefined" && isVIP === true) {
+            totalPrice *= 0.9;
+        }
+
         return totalPrice;
     }
 });

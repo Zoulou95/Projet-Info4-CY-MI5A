@@ -76,7 +76,7 @@ body {
 
 .dropdown_content {
     position: absolute;
-    top: 10vh; /* Shift under the button */
+    top: 10vh;
     left: 0;
     background-color: #ffffff;
     border-radius: 5px;
@@ -116,7 +116,7 @@ body {
     white-space: nowrap;
 }
 
-/* "Search" button */
+/* Search button */
 
 .search_bar_submit {
     height: 65px;
@@ -166,7 +166,7 @@ body {
     text-align: center;
     background-color: #21a9ff;
     color: white;
-    cursor: pointer; /* Adds an interactive cursor */
+    cursor: pointer;
 }
 
 /* Footer */

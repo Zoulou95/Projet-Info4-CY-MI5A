@@ -281,13 +281,6 @@ input:disabled {
 
 /* Dark mode style */
 
-.dark-mode .history_text {
-    margin-top: 3vh;
-    font-size: 3vw;
-    text-align: center;
-    color: #ffffff;
-}
-
 .dark-mode .subscription_table td {
     text-align: center;
     padding: 8%;
@@ -303,4 +296,21 @@ input:disabled {
 .dark-mode .menu_navigation li a {
     color: #21a9ff;
     text-decoration: none;
+}
+
+.dark-mode .cell1 {
+    background-color: #ad9c9c;
+}
+
+.dark-mode .cell2 {
+    background-color: rgb(207, 203, 203);
+}
+
+.dark-mode .subscription_table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid #ad9c9c;
+    width: 15vw;
+    font-size: large;
+    overflow: visible;
 }

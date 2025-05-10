@@ -82,7 +82,7 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 ├── 📂 includes
 │   ├── 📄 header.php
 │   └── 📄 ...
-├── 📂 presentation_phase2
+├── 📂 presentation_phase_3
 ├── 📂 script
 │   ├── 📄 timelineBrowse.js
 │   └── 📄 registration.js

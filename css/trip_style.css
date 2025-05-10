@@ -1,4 +1,4 @@
-/* General list style */
+/* trip_style.css */
 
 .service_list {
     display: flex;
@@ -523,4 +523,12 @@ select:focus, select:focus-visible {
 body.dark-mode {
     background-color: #1f2937;
     color: #181f2b;
+}
+
+.dark-mode .right_column li {
+    color: #ffffff;
+}
+
+.dark-mode .left_column li {
+    color: #ffffff;
 }

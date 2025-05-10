@@ -141,20 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isEditMode = false;
     });
     
-    // Empêcher la soumission du formulaire par défaut
-    document.querySelector('form').addEventListener('submit', function(event) {
-        // Si c'est le bouton de déconnexion, laisser passer
-        if (event.submitter && event.submitter.id === 'logout_button') {
-            return true;
-        }
-        
-        // Si ce n'est pas une soumission intentionnelle du formulaire (après édition),
-        // empêcher la soumission
-        if (!isEditMode && !event.isTrusted) {
-            event.preventDefault();
-        }
-    });
-    
     // Vérifier si une soumission réussie a eu lieu lors d'une visite précédente
     if (localStorage.getItem('formSubmitted') === 'true') {
         // Réinitialiser l'indicateur

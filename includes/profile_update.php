@@ -20,10 +20,18 @@ if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] ===
 
     // Prevents the user from sending anything other than an image to the server
     if (!in_array($file['type'], $allowed_types)) {
-        echo "<script>alert('Le format de l'image n'est pas supporté (doit être au format JPG ou PNG).'); window.history.back();</script>";
+        $response = [
+            'success' => false,
+            'message' => "Le format de l'image n'est pas supporté (JPG uniquement)."
+        ];
+        echo json_encode($response);
         exit;
-    } elseif ($file['size'] > $max_size) {
-        echo "<script>alert('Votre image est trop grande (maximum: 6 Mo).'); window.history.back();</script>";
+    } else if ($file['size'] > $max_size) {
+        $response = [
+            'success' => false,
+            'message' => "Votre image est trop lourde (maximum: 6 Mo)."
+        ];
+        echo json_encode($response);
         exit;
     } else {
         $filename = "user" . $_SESSION['user']['id'] . "_profile_picture.jpg";
@@ -72,11 +80,11 @@ foreach ($data as $key => $user) {
 // Save updated data
 if (file_put_contents($data_file, json_encode($data, JSON_PRETTY_PRINT))) {
     echo json_encode([
-        "status" => "success",
+        "success" => "true",
     ]);
 } else {
     echo json_encode([
-        "status" => "error",
+        "success" => false,
     ]);
 }
 ?>
