@@ -43,10 +43,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Prevent empty search
-document.getElementById("signin_form").addEventListener("submit", function (event) {
-    // Prevent default submission by clicking on the submit button
-    event.preventDefault();
+document.querySelector('.search_bar_form').addEventListener('submit', function(event) {
+    const form = this;
+    const textInput = form.querySelector('input[name="tag"]');
+    const radios = form.querySelectorAll('input[type="radio"]');
+    const dateInput = form.querySelector('input[name="date"]');
 
-    // Submit form
-    this.submit();
+    let isFilled = false;
+
+    // Checks the text and date field
+    if (textInput.value.trim() !== '' || dateInput.value !== '') {
+        isFilled = true;
+    }
+
+    // Checks if a radio button is selected
+    radios.forEach(radio => {
+        if (radio.checked) {
+            isFilled = true;
+        }
+    });
+
+    // If no field is filled, prevent form submit
+    if (!isFilled) {
+        displayBubble(event, "❌ Votre recherche est vide !");
+    }
 });

@@ -1,7 +1,6 @@
 // formFeature.js : functions on form functionalities and security
 
 // Display or hide the password input
-
 function togglePassword(inputId, btn) {
     const input = document.getElementById(inputId);
     const img = btn.querySelector('img') || document.createElement('img');
@@ -18,40 +17,39 @@ function togglePassword(inputId, btn) {
         img.class = "eye_image";
     }
     
-    // If the image doesn't already exist in the button, add it
+    // Add image if itdoesn't already exist
     if (!btn.querySelector('img')) {
         btn.textContent = '';
         btn.appendChild(img);
     }
 }
 
-// Fonction pour mettre à jour les compteurs de caractères
+// Update character counters
 function updateCounter(inputId, counterId, maxLength) {
     const input = document.getElementById(inputId);
     const counter = document.getElementById(counterId);
     
     if (!input || !counter) {
-        console.error(`Élément non trouvé: input=${inputId}, counter=${counterId}`);
+        console.error(`ERROR: item not found (input=${inputId}, counter=${counterId})`);
         return;
     }
 
-    // Mise à jour du compteur à chaque changement dans le champ
+    // Update counter each time a field is changed
     const update = () => {
         const length = input.value.length;
         counter.textContent = `${length} / ${maxLength}`;
     };
 
-    // Ajout de l'écouteur d'événement pour mettre à jour le compteur en temps réel
+    // Update counter in real time
     input.addEventListener("input", update);
 
-    // Mise à jour initiale au chargement de la page
     update();
 }
 
 
-// Initialisation des compteurs au chargement de la page
+// Initialize counters on page load
 document.addEventListener("DOMContentLoaded", function() {
-    // Login
+    // Login inputs
     if(typeof emailInputLogin !== 'undefined') {
         updateCounter("emailInputLogin", "emailCounterLogin", 50);
     }
@@ -68,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCounter("nameInput", "nameCounter", 50);
     }
 
-    // Sign up
+    // Sign up inputs
     if(typeof emailInputSignup !== 'undefined') {
         updateCounter("emailInputSignup", "emailCounterSignup", 50);
     }

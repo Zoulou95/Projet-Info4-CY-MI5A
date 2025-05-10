@@ -1,7 +1,7 @@
 // sortResult.js : sort trip results without page reload
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Check if we're on the results page (has trip cards)
+    // Check if we are on the results page (has trip cards)
     const tripCards = document.querySelectorAll('.card');
     if (tripCards.length === 0) return;
 
@@ -12,22 +12,20 @@ document.addEventListener("DOMContentLoaded", function() {
     initSortingListeners();
 });
 
-/**
- * Creates and adds the sorting interface to the page
- */
+// Create the sorting interface to the page
 function createSortingInterface() {
-    // Create the sorting bar container
+    // Sorting bar container
     const sortingContainer = document.createElement('div');
     sortingContainer.className = 'sorting_container';
     
-    // Add title
+    // Title
     const sortingTitle = document.createElement('h3');
     sortingTitle.textContent = 'Trier les résultats par:';
     sortingContainer.appendChild(sortingTitle);
     
-    // Create sorting buttons
+    // Sorting buttons
     const sortingOptions = [
-        { id: 'sort-price-asc', text: 'Prix croissant', field: 'price', order: 'asc' },
+        { id: 'sort-price-asc', text: 'Prix croissant', field: 'price', order: 'asc' }, // 'asc' = ascending order
         { id: 'sort-price-desc', text: 'Prix décroissant', field: 'price', order: 'desc' },
         { id: 'sort-date-asc', text: 'Date (plus proche)', field: 'date', order: 'asc' },
         { id: 'sort-date-desc', text: 'Date (plus lointaine)', field: 'date', order: 'desc' },
@@ -35,7 +33,7 @@ function createSortingInterface() {
         { id: 'sort-duration-desc', text: 'Durée (longue à courte)', field: 'duration', order: 'desc' }
     ];
     
-    // Create buttons container
+    // Buttons container
     const buttonsContainer = document.createElement('div');
     buttonsContainer.className = 'sorting_buttons';
     
@@ -52,22 +50,20 @@ function createSortingInterface() {
     
     sortingContainer.appendChild(buttonsContainer);
     
-    // Insert sorting container after the result_text heading and before the result_container
+    // Insert sorting container beetween 'result_text' and 'result_container'
     const resultText = document.querySelector('.result_text');
     if (resultText) {
         resultText.insertAdjacentElement('afterend', sortingContainer);
     }
 }
 
-/**
- * Initializes the event listeners for sorting buttons
- */
+// Initializes the event listeners for sorting buttons
 function initSortingListeners() {
     const sortButtons = document.querySelectorAll('.sort_button');
     
     sortButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
+            // Remove active class from buttons
             sortButtons.forEach(btn => btn.classList.remove('active'));
             
             // Add active class to clicked button
@@ -83,11 +79,7 @@ function initSortingListeners() {
     });
 }
 
-/**
- * Sorts the trip cards based on the selected criteria
- * @param {string} field - The field to sort by (price, date, duration, steps)
- * @param {string} order - The sort order (asc or desc)
- */
+// Filtre cards display with price, date, etc.
 function sortTripCards(field, order) {
     const tripCardsContainer = document.querySelector('.result_container');
     if (!tripCardsContainer) return;
@@ -130,7 +122,7 @@ function sortTripCards(field, order) {
         }
         
         // Compare values based on order
-        if (order === 'asc') {
+        if (order === 'asc') { // 'asc' = ascending order
             return valueA - valueB;
         } else {
             return valueB - valueA;
@@ -151,21 +143,13 @@ function sortTripCards(field, order) {
     animateSorting();
 }
 
-/**
- * Extracts numeric value from a string
- * @param {string} str - The string containing a numeric value
- * @returns {number} - The extracted numeric value
- */
+// Extracts numeric value from a string
 function extractNumericValue(str) {
-    // Remove non-numeric characters and convert to number
+    // Removes non-numeric characters, replaces commas with periods and converts to a float
     return parseFloat(str.replace(/[^\d.,]/g, '').replace(',', '.'));
 }
 
-/**
- * Converts a French date format (DD/MM/YYYY) to a Date object
- * @param {string} dateStr - Date string in format DD/MM/YYYY
- * @returns {Date} - Date object
- */
+// Converts a French date format (DD/MM/YYYY) to a Date object
 function convertFrenchDateToDate(dateStr) {
     // Handle different date formats
     if (dateStr.includes('/')) {
@@ -181,19 +165,17 @@ function convertFrenchDateToDate(dateStr) {
     }
 }
 
-/**
- * Animates the sorting process
- */
+// Animate the sorting process
 function animateSorting() {
     const tripCards = document.querySelectorAll('.card');
     
     // Add animation class to each card
     tripCards.forEach((card, index) => {
-        // Delay the animation for each card
+        // Delay the animation
         setTimeout(() => {
             card.classList.add('sort_animation');
             
-            // Remove animation class after it completes
+            // Remove animation class after completion
             setTimeout(() => {
                 card.classList.remove('sort_animation');
             }, 500);

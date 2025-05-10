@@ -82,6 +82,7 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 ├── 📂 includes
 │   ├── 📄 header.php
 │   └── 📄 ...
+├── 📂 logs
 ├── 📂 presentation_phase_3
 ├── 📂 script
 │   ├── 📄 timelineBrowse.js
@@ -106,7 +107,6 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
 `trip_data.json` contains information on all trips (name, ID, price, tags, etc.).
 
 `purchase_data.json` contains information on all purchases (ID, payment status, buyer, etc.).
-
 
 ## `/includes` files
 

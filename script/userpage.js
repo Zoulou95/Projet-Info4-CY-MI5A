@@ -1,77 +1,71 @@
-// userpage.js : script pour gérer l'édition des champs du profil utilisateur
+// userpage.js : manage editing of user profile fields
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner tous les champs de saisie
+    // Select all input fields
     const inputFields = document.querySelectorAll('#last_name, #first_name, #email, #tel_number');
     
-    // Stockage des valeurs originales
+    // Store original values
     const originalValues = {};
     
-    // Référencer les boutons existants
     const saveButton = document.getElementById('save_button');
     const resetButton = document.getElementById('reset_button');
-    const logoutButton = document.getElementById('logout_button');
     
-    // S'assurer que les boutons ne soumettent pas le formulaire par défaut
     saveButton.type = 'button';
     resetButton.type = 'button';
     
-    // Créer le bouton "Modifier"
+    // Create the "Modifier" button
     const editButton = document.createElement('button');
     editButton.type = 'button';
     editButton.id = 'edit_button';
     editButton.innerText = 'Modifier';
     
-    // Insérer le bouton "Modifier" avant le bouton "Sauvegarder"
+    // Insert the button before the "Sauvegarder" button
     saveButton.parentNode.insertBefore(editButton, saveButton);
     
-    // Masquer initialement les boutons "Sauvegarder" et "Réinitialiser"
+    // Initially hide the "Sauvegarder" and "Réinitialiser" buttons
     saveButton.style.display = 'none';
     resetButton.style.display = 'none';
     
-    // Stocker les valeurs originales initiales
+    // Store original values
     function updateOriginalValues() {
         inputFields.forEach(function(field) {
             originalValues[field.id] = field.value;
         });
     }
     
-    // Initialiser les valeurs originales
     updateOriginalValues();
     
-    // Désactiver tous les champs par défaut
+    // Disable all default fields
     inputFields.forEach(function(field) {
         field.disabled = true;
     });
     
-    // Mode édition
     let isEditMode = false;
     
-    // Gérer le clic sur le bouton "Modifier"
+    // Manage the click on the "Modify" button
     editButton.addEventListener('click', function(event) {
-        // Empêcher tout comportement par défaut
+        // Prevent default event by clicking on the button
         event.preventDefault();
         
-        // Activer tous les champs
+        // Activate all fields
         inputFields.forEach(function(field) {
             field.disabled = false;
         });
         
-        // Masquer le bouton "Modifier" et afficher les boutons "Sauvegarder" et "Réinitialiser"
+        // Hide the "Modify" button and display the "Save" and "Reset" buttons
         editButton.style.display = 'none';
         saveButton.style.display = 'inline-block';
         resetButton.style.display = 'inline-block';
         
-        // Activer le mode édition
         isEditMode = true;
     });
     
-    // Gérer le clic sur le bouton "Sauvegarder"
+    // Manage the click on the "Sauvegarder" button
     saveButton.addEventListener('click', function(event) {
-        // Empêcher la soumission du formulaire pour le moment
+        // Prevent default event by clicking on the button
         event.preventDefault();
         
-        // Vérifier si des modifications ont été effectuées
+        // Check if changes have been made
         let hasChanges = false;
         inputFields.forEach(function(field) {
             if (field.value !== originalValues[field.id]) {
@@ -84,68 +78,64 @@ document.addEventListener('DOMContentLoaded', function() {
             hasChanges = true;
         }
         
-        // Si des modifications ont été faites, soumettre le formulaire
+        // If changes have been made, submit form
         if (hasChanges) {
-            // Créer un bouton de soumission temporaire
+            // Create a temporary submit button
             const submitBtn = document.createElement('input');
             submitBtn.type = 'submit';
             submitBtn.style.display = 'none';
             
-            // Ajouter le bouton au formulaire et cliquer dessus
+            // Add the button to the form
             const form = document.querySelector('form');
             form.appendChild(submitBtn);
             submitBtn.click();
             
-            // Supprimer le bouton après utilisation
+            // Delete button after use
             form.removeChild(submitBtn);
             
-            // Mémoriser qu'une soumission a eu lieu
             localStorage.setItem('formSubmitted', 'true');
         } 
         else {
-            // Si aucune modification, simplement mettre à jour les valeurs originales
+            // If no change, simply update original values
             updateOriginalValues();
         }
         
-        // Dans tous les cas, désactiver les champs
+        // Disable all fields
         inputFields.forEach(function(field) {
             field.disabled = true;
         });
         
-        // Masquer les boutons "Sauvegarder" et "Réinitialiser" et afficher le bouton "Modifier"
+        // Hide the "Save" and "Reset" buttons and display the "Modify" button
         saveButton.style.display = 'none';
         resetButton.style.display = 'none';
         editButton.style.display = 'inline-block';
         
-        // Désactiver le mode édition
+
         isEditMode = false;
     });
     
-    // Gérer le clic sur le bouton "Réinitialiser"
+    // Manage clicks on the "Reset" button
     resetButton.addEventListener('click', function(event) {
-        // Empêcher la soumission du formulaire
+        // Prevent default submission by clicking on the submit button
         event.preventDefault();
         
-        // Réinitialiser tous les champs à leur valeur d'origine
+        // Reset all fields to their original values
         inputFields.forEach(function(field) {
             field.value = originalValues[field.id];
             field.disabled = true;
         });
         
-        // Masquer les boutons "Sauvegarder" et "Réinitialiser" et afficher le bouton "Modifier"
+        // Hide the "Save" and "Reset" buttons and display the "Modify" button
         saveButton.style.display = 'none';
         resetButton.style.display = 'none';
         editButton.style.display = 'inline-block';
         
-        // Désactiver le mode édition
         isEditMode = false;
     });
     
-    // Vérifier si une soumission réussie a eu lieu lors d'une visite précédente
+    // Check whether a successful submission was made during a previous visit
     if (localStorage.getItem('formSubmitted') === 'true') {
-        // Réinitialiser l'indicateur
         localStorage.removeItem('formSubmitted');
-        // Mettre à jour les valeurs originales
         updateOriginalValues();
     }
 });

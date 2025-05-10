@@ -21,19 +21,19 @@ require_once('../includes/trip_functions.php');
                         <button type="button" class="dropdown_button price_button">Prix/pers ⏷</button>
                         <div class="dropdown_content price_content">
                             <label>
-                                <input type="radio" name="price_range" value="2000" /> Moins de 2000€
+                                <input type="radio" name="price_range" value="2000" /> 0 à 1999 €
                             </label>
                             <label>
-                                <input type="radio" name="price_range" value="3000" /> 2000€ - 3000€
+                                <input type="radio" name="price_range" value="3000" /> 2000 € à 2999 €
                             </label>
                             <label>
-                                <input type="radio" name="price_range" value="4000" /> 3000€ - 4000€
+                                <input type="radio" name="price_range" value="4000" /> 3000 € - 3999 €
                             </label>
                             <label>
-                                <input type="radio" name="price_range" value="5000" /> 4000€ - 5000€
+                                <input type="radio" name="price_range" value="5000" /> 4000 € - 4999 €
                             </label>
                             <label>
-                                <input type="radio" name="price_range" value="5001" /> Plus de 5000€
+                                <input type="radio" name="price_range" value="5001" /> Plus de 5000 €
                             </label>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ require_once('../includes/trip_functions.php');
                 <!-- Type of trip selection -->
                 <td>
                     <div class="dropdown">
-                        <button type="button" class="dropdown_button type_button">Type de voyage</button>
+                        <button type="button" class="dropdown_button type_button">Type de voyage ⏷</button>
                         <div class="dropdown_content type_content">
                             <label>
                                 <input type="radio" name="travel_type" value="noces" /> Voyage de Noces
@@ -72,7 +72,7 @@ require_once('../includes/trip_functions.php');
                 <!-- Duration selection -->
                 <td>
                     <div class="dropdown">
-                    <button type="button" class="dropdown_button duration_button">Durée</button>
+                    <button type="button" class="dropdown_button duration_button">Durée ⏷</button>
                     <div class="dropdown_content duration_content">
                         <label>
                             <input type="radio" name="travel_length" value="8" /> 8 jours

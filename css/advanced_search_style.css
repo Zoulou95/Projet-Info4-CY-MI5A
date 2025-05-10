@@ -189,6 +189,8 @@ footer {
     }
 }
 
+/* Dark mode */
+
 .dark-mode .dropdown_button {
     height: 65px;
     padding: 0 30px;
@@ -225,4 +227,9 @@ footer {
     z-index: 10;
     font-size: 2vh;
     color: white;
+}
+
+.dark-mode .dropdown_button:hover, .dropdown_button:active {
+    border: solid 2px #ffffff;
+    outline: none;
 }
