@@ -93,70 +93,95 @@ function displayByTag($data, $tag, $trip_number) {
 
 // Display a trip as a map according to a user's specific search request
 function displayByFilter($data) {
-
     // Avoid undefined index errors if certain variables are not sent in the URL
-    $destination = htmlspecialchars($_GET['destination']) ?? 0;
-    $price_range = $_GET['price_range'] ?? 0;
-    $travel_type = $_GET['travel_type'] ?? 0;
-    $date = $_GET['date'] ?? 0;
-    $travel_length = $_GET['travel_length'] ?? 0;
+    $tag = isset($_GET['tag']) && !empty($_GET['tag']) ? htmlspecialchars($_GET['tag']) : null;
+    $price_range = isset($_GET['price_range']) ? intval($_GET['price_range']) : null;
+    $travel_type = isset($_GET['travel_type']) ? $_GET['travel_type'] : null;
+    $date = isset($_GET['date']) && !empty($_GET['date']) ? $_GET['date'] : null;
+    $travel_length = isset($_GET['travel_length']) ? intval($_GET['travel_length']) : null;
 
     // Input verification
-    if($travel_length != 0 && $travel_length < 8 || $travel_length > 12) {
-        displayError("Wrong travel length input.");
-    }
-
-    $valid_price_ranges = ["-2000", "2000-3000", "3000-4000", "4000-5000", "+5000"];
-
-    if ($price_range != 0 && !in_array($price_range, $valid_price_ranges)) {
-        displayError("Wrong price range input.");
-    }
-
     $valid_travel_types = ["noces", "découverte", "aventure", "détente", "luxe"];
+    
+    if($travel_length !== null && ($travel_length < 8 || $travel_length > 12)) {
+        displayError("Wrong travel length input.");
+        return;
+    }
 
-    if ($travel_type != 0 && !in_array($travel_type, $valid_travel_types)) {
+    if ($travel_type !== null && !in_array($travel_type, $valid_travel_types)) {
         displayError("Wrong travel type input.");
+        return;
     }
 
     echo '<h2 class="result_text">Résultats pour votre recherche</h2>';
     echo '<div class="result_container">';
 
     $found = false;
+    
     foreach ($data['trip'] as $journey) {
-        $match = true;
-
-        // Check island (destination)
-        if ($destination && strtolower($journey['destination']) != strtolower($destination)) {
-            $match = false;
+        $match = true; // Assume match until proven otherwise
+        
+        // Check tag if provided
+        if ($tag !== null) {
+            $tag_match = false;
+            foreach ($journey['tags'] as $journey_tag) {
+                if (strtolower($tag) === strtolower($journey_tag)) {
+                    $tag_match = true;
+                    break;
+                }
+            }
+            if (!$tag_match) {
+                $match = false;
+            }
         }
-
-        // Check price_range
-        if ($price_range && $journey['price_range'] != $price_range) {
-            $match = false;
+        
+        // Check price range if provided
+        if ($match && $price_range !== null) {
+            if ($price_range === 5001) {
+                // "Plus de 5000€" option
+                if ($journey['price_per_person'] <= 5000) {
+                    $match = false;
+                }
+            } else {
+                // Other price ranges
+                $min_range = $price_range - 1000;
+                if ($journey['price_per_person'] < $min_range || $journey['price_per_person'] >= $price_range) {
+                    $match = false;
+                }
+            }
         }
-
-        // Check trip type
-        if ($travel_type && $journey['specificity'] != $travel_type) {
-            $match = false;
+        
+        // Check travel type if provided
+        if ($match && $travel_type !== null) {
+            if ($journey['specificity'] !== $travel_type) {
+                $match = false;
+            }
         }
-
-        // Check date
-        if ($date && $journey['dates']['start_date'] != $date) {
-            $match = false;
+        
+        // Check date if provided (uncomment if needed)
+        if ($match && $date !== null) {
+            if ($journey['dates']['start_date'] !== $date) {
+                $match = false;
+            }
         }
-
-        // Check duration
-        if ($travel_length && $journey['dates']['length'] != $travel_length) {
-            $match = false;
+        
+        // Check travel length if provided (uncomment if needed)
+        if ($match && $travel_length !== null) {
+            if ($journey['dates']['length'] !== $travel_length) {
+                $match = false;
+            }
         }
-
+        
+        // Display the journey if it matches all criteria
         if ($match) {
-            printCard($journey);
             $found = true;
+            printCard($journey);
         }
     }
+    
     echo '</div>';
-    if ($found == false) {
+    
+    if (!$found) {
         displayNoResult();
     }
 }

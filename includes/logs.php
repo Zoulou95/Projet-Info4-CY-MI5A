@@ -2,7 +2,7 @@
 // Tells administrators when an account has been created or a user has logged in
 function writeToServerLog($message) {
 
-    $log_path = '../data/server.log';
+    $log_path = '../logs/server.log';
     
     if(!file_exists($log_path)) {
         touch($log_path);

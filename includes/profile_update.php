@@ -1,5 +1,5 @@
 <?php
-// picture_update.php : update user's personal profile
+// profile_update.php : update user's personal profile
 
 require_once('error.php');
 require_once('trip_functions.php'); // For dataReader() usage
@@ -22,19 +22,19 @@ if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] ===
     if (!in_array($file['type'], $allowed_types)) {
         $response = [
             'success' => false,
-            'message' => "Le format de l'image n'est pas supporté (JPG uniquement)."
+            'message' => "❌ Le format de l'image n'est pas supporté (JPG uniquement)"
         ];
         echo json_encode($response);
         exit;
     } else if ($file['size'] > $max_size) {
         $response = [
             'success' => false,
-            'message' => "Votre image est trop lourde (maximum: 6 Mo)."
+            'message' => "❌ Votre image est trop lourde (maximum: 6 Mo)"
         ];
         echo json_encode($response);
         exit;
     } else {
-        $filename = "user" . $_SESSION['user']['id'] . "_profile_picture.jpg";
+        $filename = "user" . $user_id . "_profile_picture.jpg";
         $destination = "../assets/profile_pic/" . $filename;
 
         move_uploaded_file($file['tmp_name'], $destination);
@@ -88,3 +88,4 @@ if (file_put_contents($data_file, json_encode($data, JSON_PRETTY_PRINT))) {
     ]);
 }
 ?>
+

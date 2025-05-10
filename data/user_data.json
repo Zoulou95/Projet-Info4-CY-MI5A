@@ -242,5 +242,15 @@
         "role": "standard",
         "points": 0,
         "id": "681f53467a3d8"
+    },
+    {
+        "name": "Blanc",
+        "forename": "Victor",
+        "email": "victorblanc@mail.com",
+        "telephone": "0682547859",
+        "password": "$2y$10$0RfkRmmro8aNcGIRWgB16.sBi\/0u7y.TdaIDyFoQonN8J613gyddG",
+        "role": "standard",
+        "points": 0,
+        "id": "681f6020a9782"
     }
 ]

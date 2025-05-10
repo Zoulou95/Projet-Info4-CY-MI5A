@@ -12,8 +12,11 @@ $data = dataDecode($data_file);
 
 // Script to filter trips by a specific tag (quicksearch)
 
-// If the tag is included in the url, the result requested by the user may be a quick search
-if (!empty($_GET['tag'])) {
+
+if (isValidAdvancedSearch()) {
+    // Shows travel cards matching the search
+    displayByFilter($data);
+} else if (!empty($_GET['tag'])) {
     $tag = urldecode(trim($_GET['tag']));
     $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters: XSS protection
     $tag = strtolower($tag);
@@ -23,14 +26,6 @@ if (!empty($_GET['tag'])) {
 
     // Shows travel cards matching the search
     displayByTag($data, $tag, $trip_number);
-}
-
-// If the tag is not included in the url, the result requested by the user is a specific search
-else if (isValidAdvancedSearch()) {
-    // Shows travel cards matching the search
-    displayByFilter($data);
-} else {
-    displayNoResult();
 }
 ?>
 

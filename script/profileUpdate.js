@@ -61,9 +61,9 @@ document.getElementById("profile_form").addEventListener("submit", function (eve
                 if (!response.success) {
                     // Handle file upload error
                     if (response.message.includes("format")) {
-                        displayBubble(event, "❌ Le format de l'image non supporté (doit être au format JPG)");
+                        displayBubble(event, response.message);
                     } else if (response.message.includes("trop lourde")) {
-                        displayBubble(event, "❌ Votre image est trop lourdre (maximum: 6 Mo)");
+                        displayBubble(event, response.message);
                     }
                     return;
                 }

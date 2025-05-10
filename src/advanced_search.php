@@ -13,20 +13,7 @@ require_once('../includes/trip_functions.php');
             <tr>
                 <!-- Search bar -->
                 <td>
-                    <input class="search_bar_input" list="destinations" placeholder="Mot clé (aventure, famille, ...) 🔎" name="tag" />
-                    <datalist id="destinations">
-                        <option value="Tahiti"></option>
-                        <option value="Bora-Bora"></option>
-                        <option value="Moorea"></option>
-                        <option value="Huahine"></option>
-                        <option value="Raiatea"></option>
-                        <option value="Taha'a"></option>
-                        <option value="Rangiroa"></option>
-                        <option value="Fakarava"></option>
-                        <option value="Nuku Hiva"></option>
-                        <option value="Rangiroa"></option>
-                        <option value="Tetiaroa"></option>
-                    </datalist>
+                    <input type="text" id="search_bar_input" class="search_bar_input" list="destinations" placeholder="Mot clé (aventure, famille, ...) 🔎" name="tag" />
                 </td>
                 <!-- Drop-down list to select a trip -->
                 <td>
@@ -34,19 +21,19 @@ require_once('../includes/trip_functions.php');
                         <button type="button" class="dropdown_button price_button">Prix/pers ⏷</button>
                         <div class="dropdown_content price_content">
                             <label>
-                                <input type="checkbox" name="price_range" value="-2000" /> Moins de 2000€
+                                <input type="radio" name="price_range" value="2000" /> Moins de 2000€
                             </label>
                             <label>
-                                <input type="checkbox" name="price_range" value="2000-3000" /> 2000€ - 3000€
+                                <input type="radio" name="price_range" value="3000" /> 2000€ - 3000€
                             </label>
                             <label>
-                                <input type="checkbox" name="price_range" value="3000-4000" /> 3000€ - 4000€
+                                <input type="radio" name="price_range" value="4000" /> 3000€ - 4000€
                             </label>
                             <label>
-                                <input type="checkbox" name="price_range" value="4000-5000" /> 4000€ - 5000€
+                                <input type="radio" name="price_range" value="5000" /> 4000€ - 5000€
                             </label>
                             <label>
-                                <input type="checkbox" name="price_range" value="+5000" /> Plus de 5000€
+                                <input type="radio" name="price_range" value="5001" /> Plus de 5000€
                             </label>
                         </div>
                     </div>
@@ -57,19 +44,19 @@ require_once('../includes/trip_functions.php');
                         <button type="button" class="dropdown_button type_button">Type de voyage</button>
                         <div class="dropdown_content type_content">
                             <label>
-                                <input type="checkbox" name="travel_type" value="noces" /> Voyage de Noces
+                                <input type="radio" name="travel_type" value="noces" /> Voyage de Noces
                             </label>
                             <label>
-                                <input type="checkbox" name="travel_type" value="découverte" /> Voyage Découverte
+                                <input type="radio" name="travel_type" value="découverte" /> Voyage Découverte
                             </label>
                             <label>
-                                <input type="checkbox" name="travel_type" value="aventure" /> Voyage d'Aventure
+                                <input type="radio" name="travel_type" value="aventure" /> Voyage d'Aventure
                             </label>
                             <label>
-                                <input type="checkbox" name="travel_type" value="détente" /> Voyage Détente
+                                <input type="radio" name="travel_type" value="détente" /> Voyage Détente
                             </label>
                             <label>
-                                <input type="checkbox" name="travel_type" value="luxe" /> Séjour de Luxe
+                                <input type="radio" name="travel_type" value="luxe" /> Séjour de Luxe
                             </label>
                         </div>
                     </div>

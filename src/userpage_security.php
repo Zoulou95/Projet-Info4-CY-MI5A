@@ -6,11 +6,6 @@ $data = dataReader('../data/user_data.json');
 if (isset($_SESSION["user"])) {
     updateInfo($data, '../data/user_data.json');
 }
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Update a user's password
-    updatePassword();
-}
 ?>
 
 <!-- Header display -->
@@ -38,21 +33,20 @@ if (!isset($_SESSION['user'])) {
         <hr>
 
         <!-- User security menu (password) -->
-        <!-- We will set AJAX in Phase #4 -->
         <div class="user_security_menu">
             <div class="password_fields">
-                <form method="post" action="userpage_security.php">
+                <form id="security_form" method="post" action="userpage_security.php">
                     <div>
                         <label for="current_password">Mot de passe actuel</label><br><br>
-                        <input type="password" name="password" id="current_password" maxlength="30" required />
+                        <input type="text" name="password" id="current_password" maxlength="20" required />
                     </div>
                     <div>
                         <label for="new_password">Nouveau mot de passe</label><br><br>
-                        <input type="password" name="new_password" id="new_password" maxlength="30" required />
+                        <input type="text" name="new_password" id="new_password" maxlength="20" required />
                     </div>
                     <div>
                         <label for="confirmation_password">Confirmer le mot de passe</label><br><br>
-                        <input type="password" name="confirm_password" id="confirmation_password" maxlength="30" required />
+                        <input type="text" name="confirm_password" id="confirmation_password" maxlength= "20" required />
                     </div>
                     <div class="button_group">
                         <button type="submit" name="submit" id="save_button" value="Sauvegarder">Sauvegarder</button>
