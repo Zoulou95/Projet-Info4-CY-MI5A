@@ -71,7 +71,7 @@ function displayHeader() {
             <button id="darkModeToggle" style="header_dark_mode">
             🌙 Mode Sombre
             </button>
-            <script src="'.$path_parent.'script/darkMode.js"></script>
+            <script src="'.$path_parent.'script/darkmode.js"></script>
         </div>';
 
     if (isset($_SESSION['user'])) {
