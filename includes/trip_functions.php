@@ -7,15 +7,21 @@ function dataDecode($data_file) {
     // Read the 'trip_data.json' file and convert it into a PHP array
     if (file_exists($data_file)) {
         $json_data = file_get_contents($data_file);
-        $data = json_decode($json_data, true); 
-    }  
-    else
-    {
-        //displayError("'trip_data.json' file is missing."); --> à faire
-        error_log($data_file ." is missing.");
-    }
 
-    // Verification of data structure --> à faire
+        if ($json_data === false) {
+            displayError("unable to read " . $data_file);
+        }
+
+        $data = json_decode($json_data, true); 
+
+        if ($data === null) {
+            displayError("JSON decode error for " . $data_file);
+        }
+
+    }  
+    else {
+        displayError($data_file ." is missing.");
+    }
 
     return $data; 
 }
@@ -61,7 +67,6 @@ function printCard($journey) {
     </div>
     ';
 }
-
 
 // Display a trip as a map according to a user's quicksearch request
 function displayByTag($data, $tag, $trip_number) {
@@ -307,11 +312,7 @@ function priceCalc($trip, $number_of_participants) {
 
         // Hotel price
         $hotelName = $_POST['hotel_' . $i];
-        error_log("=====================================");
-        error_log($hotelName);
-        $hotelIndex = array_search($hotelName, $trip['hotel']) ?? 0; // Default to index 0
-        error_log("=====================================");
-        error_log($hotelIndex);
+        $hotelIndex = array_search($hotelName, $trip['hotel']) ?? 0; // Default to index 0 ; we use array_search() to find the hotel price according to the user input
         $hotelPrice = $trip['hotel_price'][$hotelIndex];
         
         $total += $hotelPrice * $participants * $stepDuration;
