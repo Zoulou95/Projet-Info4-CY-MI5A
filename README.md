@@ -74,7 +74,7 @@ Here is a selection of useful identifiers :
 
 Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases :
 
-| Owner           | Card number       | Cryptogra | Expiration date   |
+| Owner           | Card number       | Cryptogram | Expiration date   |
 |----------------------|-----------------------|--------------|----------------------|
 | n’importe quelle valeur | 5555 1234 5678 9000 | 555          | n’importe quelle valeur |
 
