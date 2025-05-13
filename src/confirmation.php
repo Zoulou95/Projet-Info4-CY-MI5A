@@ -25,9 +25,12 @@ if (isConfigValid()) {
     $trip = $_SESSION['trip'];
     $number_of_participants = intval($_POST['number_of_participants']);
 
-    // Recalculate the total pric, it is more secure because the user can't manipulate it
-    $total_price = priceCalc($trip, $number_of_participants);
-    $_SESSION['total_price'] = $total_price;
+    // Recalculate the total price, it is more secure because the user can't manipulate it
+    if(isset($_SESSION['total_price'])) {
+        $total_price = $_SESSION['total_price'];
+    } else {
+        displayError("Invalid trip selection data.");
+    }
 
     // Store all form data in the session for retrieval after payment
     $_SESSION['number_of_participants'] = $number_of_participants;
