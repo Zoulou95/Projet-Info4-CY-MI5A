@@ -76,7 +76,7 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases :
 
 | Owner           | Card number       | Cryptogram | Expiration date   |
 |----------------------|-----------------------|--------------|----------------------|
-| n’importe quelle valeur | 5555 1234 5678 9000 | 555          | n’importe quelle valeur |
+| Any value | 5555 1234 5678 9000 | 555          | Any value |
 
 ## Project structure
 
