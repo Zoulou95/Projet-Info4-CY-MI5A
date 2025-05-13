@@ -21,6 +21,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
 <?php displayHeader(); ?>
 
 <!-- Admin panel -->
+<script src="../script/adminPanelButtons.js"></script>
 <div class="user_container">
     <?php foreach ($current_users as $user): ?>
         <form class="users" method="post" action="update_role.php">

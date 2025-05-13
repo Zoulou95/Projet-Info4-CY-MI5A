@@ -580,6 +580,13 @@ body.dark-mode {
     margin-top: 5vh;
 }
 
+.dark-mode .invalid_page_text {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 7.5vh;
+    color: #ffffff;
+}
+
 /* Input style */
 
 .counter-container {

@@ -65,8 +65,7 @@ function tripFinder($data, $trip_id) {
         }
     }
     if ($trip === null) {
-        echo "<script>alert('Erreur lors de la réception des données'); window.history.back();</script>";
-        error_log("ERROR: trip not found.");
+        displayError("ERROR: trip not found.");
     }
     return $trip;
 }

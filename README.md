@@ -61,10 +61,22 @@ To explore the site, you need to open a local server on your machine.
 
 ## Usage
 
-We've created a file named `user_list.txt` in the `/data` folder for easy access to information (passwords are hashed in our database). You'll be able to retrieve user information and run tests according to their roles (standard, vip, admin, banned).
-Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases.
+We've created a file named `user_list.txt` in the `/data` folder for easy access to information (passwords are hashed in our database).
 
-**Please note**: this is not a database.
+Here is a selection of useful identifiers :
+
+| Name Forename           | Email                         | Password     | Role           |
+|----------------------|-------------------------------|------------------|----------------|
+| Leroy Nathan         | nathan.leroy@email.com        | mXH0lxKm2Xmv     | Standard       |
+| Mercier Sarah        | sarah.mercier@email.com       | tfaeY3MZJVDj     | VIP            |
+| Blanchard Justine    | justine.blanchard@email.com   | gUeInnV3uP5B     | Administrateur |
+| Fournier Manon       | manon.fournier@email.com      | IZ2r2e5Ny2qL     | Banni          |
+
+Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases :
+
+| Owner           | Card number       | Cryptogram | Expiration date   |
+|----------------------|-----------------------|--------------|----------------------|
+| n’importe quelle valeur | 5555 1234 5678 9000 | 555          | n’importe quelle valeur |
 
 ## Project structure
 
