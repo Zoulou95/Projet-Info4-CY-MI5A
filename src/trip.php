@@ -268,7 +268,7 @@ if (isset($_SESSION['user'])) {
     <!-- Step 3 -->
     <div class="step_card active" data_step="3">
         <h4>Étape 3 : <?php echo $trip['step_3']['title']; ?></h4>
-        <p>Durée : <?php echo $trip['step_3']['dates']['duration']; ?> jours</p>
+        <p>Durée : <?php echo $trip['step_3']['dates']['duration'] ?> jours</p>
 
         <div class="field_row">
             <div class="select_label">

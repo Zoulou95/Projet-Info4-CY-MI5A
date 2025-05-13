@@ -1,12 +1,12 @@
 // priceCalculator.js : dynamically calculates trip final price using fetch
 
 function sendRequest() {
-    // Get values from the form
+    // Retrieve values from the form
     const data = {
         flight: document.querySelector('select[name="flight"]').value,
         transport: document.querySelector('select[name="transports"]').value,
         number_of_participants: parseInt(document.querySelector('select[name="number_of_participants"]').value),
-        participants: [ // For each activity
+        participants: [ // Participants for each activity
             parseInt(document.querySelector('select[name="participants_1"]')?.value || 1),
             parseInt(document.querySelector('select[name="participants_2"]')?.value || 1),
             parseInt(document.querySelector('select[name="participants_3"]')?.value || 1)
@@ -29,16 +29,10 @@ function sendRequest() {
         trip_id: new URLSearchParams(window.location.search).get('id')
     };
 
-    // Check if all required values are present
+    // Check if the trip id is present
     if (!data.trip_id) {
-        console.error('Trip ID is missing');
+        console.error('ERROR: trip ID is missing.');
         return;
-    }
-
-    // Add error handling for missing form elements
-    if (!data.number_of_participants) {
-        console.warn('Number of participants not found, defaulting to 1');
-        data.number_of_participants = 1;
     }
 
     // Send data to PHP using fetch
@@ -49,23 +43,27 @@ function sendRequest() {
         },
         body: JSON.stringify(data)
     })
+
+    // Handle errors
     .then(res => {
         if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
+            throw new Error(`HTTP error : status: ${res.status}`);
         }
         return res.json();
     })
+
     .then(response => {
         if (response.error) {
-            console.error('Price calculation failed:', response.error);
+            console.error('ERROR: price calculation failed:', response.error);
             return;
         }
+
         // Update the total price in the UI
         const totalPriceElement = document.querySelector('.price b');
         if (totalPriceElement) {
             totalPriceElement.textContent = response.total_price + ' €';
         } else {
-            console.error('Price element not found in the DOM');
+            console.error('ERROR: price element not found in the DOM.');
         }
     })
     .catch(error => {
@@ -78,7 +76,7 @@ document.querySelectorAll('select').forEach(select => {
     select.addEventListener('change', sendRequest);
 });
 
-// Call on page load once everything is ready
+// Load the page when everything is ready
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(sendRequest, 100); // Small delay to ensure all elements are properly loaded
+    setTimeout(sendRequest, 100); // We put a delay to ensure that all elements are loaded
 });

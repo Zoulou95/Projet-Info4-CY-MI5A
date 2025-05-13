@@ -21,7 +21,7 @@ function fillSelect(selectName, options) {
 
 // Load and fill dynamically <select> tag
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../data/trip_data.json') // Path to the trip data
+    fetch('../data/trip_data.json')
         .then(response => response.json())
         .then(data => {
 
