@@ -22,7 +22,7 @@
         "special_features": ["Voyage de noces", "Vue imprenable sur le lagon", "Climat tropical doux et ensoleillé", "Ambiance intime et privée", "plongée", "helicoptere"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 2500,
+        "price_per_person": 400,
         "price_range": "2000-3000",
         "hotel": ["Lagoon Resort (4⭐)", "Oasis des iles (5⭐)", "Étoile Bora (5⭐)"],
         "hotel_price": [400, 1000, 1000],
@@ -36,7 +36,7 @@
           },
           "coordinates": "-16.5004127, -151.7444002",
           "activities": ["Plage privatisée", "Massage avec vue", "Randonnée en montagne"],
-          "activities_price": [600, 200, 150]
+          "activities_price": [100, 100, 30]
         },
         "step_2": {
           "id": 2,
@@ -48,7 +48,7 @@
           },
           "coordinates": "-16.5005001, -151.7450002",
           "activities": ["Plage privatisée", "Séance photo", "Croisière privée"],
-          "activities_price": [600, 50, 890]
+          "activities_price": [100, 50, 500]
         },
         "step_3": {
           "id": 3,
@@ -60,7 +60,7 @@
           },
           "coordinates": "-16.5010002, -151.7465003",
           "activities": ["Plage privatisée", "Plongée sous-marine", "Voyage en hélicoptère"],
-          "activities_price": [600, 125, 500]
+          "activities_price": [100, 125, 200]
         }
       },
       {
@@ -85,10 +85,10 @@
         "special_features": ["Voyage de noces", "Plages immaculées", "Climat tropical et calme", "Ambiance détendue et romantique"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 1900,
+        "price_per_person": 550,
         "price_range": "-2000",
         "hotel": ["Huahine Paradise (4⭐)", "Fare Maeva (5⭐)", "Moana Resort (5⭐)"],
-        "hotel_price": [600, 950, 1200],
+        "hotel_price": [400, 950, 1200],
         "step_1": {
           "id": 1,
           "title": "Arrivée et détente",
@@ -99,7 +99,7 @@
           },
           "coordinates": "-16.7182002, -151.0142003",
           "activities": ["Plage privatisée", "Bain de soleil", "Snorkeling dans le lagon"],
-          "activities_price": [600, 80, 90]
+          "activities_price": [100, 30, 50]
         },
         "step_2": {
           "id": 2,
@@ -111,7 +111,7 @@
           },
           "coordinates": "-16.7105001, -151.0195001",
           "activities": ["Plage privatisée", "Visite de la vallée de Faie", "Randonnée dans la foret tropicale"],
-          "activities_price": [600, 30, 50]
+          "activities_price": [100, 30, 20]
         },
         "step_3": {
           "id": 3,
@@ -123,7 +123,7 @@
         },
           "coordinates": "-16.7070002, -151.0337003",
           "activities": ["Plage privatisée", "Plongée avec les raies", "Croisière au coucher du soleil"],
-          "activities_price": [600, 125, 250]
+          "activities_price": [100, 110, 200]
         }
       },
       {
@@ -148,7 +148,7 @@
         "special_features": ["Exploration de la nature", "Activités sportives", "Rencontre avec la culture locale", "Climat tropical"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 1800,
+        "price_per_person": 400,
         "price_range": "-2000",
         "hotel": ["Moorea Lodge (3⭐)", "Aventure Resort (4⭐)", "Blue Horizon (5⭐)"],
         "hotel_price": [250, 390, 1150],
@@ -174,7 +174,7 @@
           },
           "coordinates": "-17.5500, -149.8500",
           "activities": ["Visite de villages", "Plongée sous-marine", "Cours de danse traditionnelle"],
-          "activities_price": [50, 280, 100]
+          "activities_price": [50, 180, 50]
         },
         "step_3": {
           "id": 3,
@@ -186,7 +186,7 @@
           },
           "coordinates": "-17.5700, -149.8600",
           "activities": ["Détente sur une plage privée", "Cocktails au coucher du soleil", "Paddle sur le lagon"],
-          "activities_price": [650, 25, 40]
+          "activities_price": [200, 25, 40]
         }
       },
       {
@@ -211,7 +211,7 @@
         "special_features": ["Relaxation", "Plongée d'exception", "Expérience en bungalow sur pilotis", "Climat tropical"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 2700,
+        "price_per_person": 500,
         "price_range": "2000-3000",
         "hotel": ["Rangiroa Pearl (4⭐)", "Lagoon View (5⭐)", "Blue Reef (5⭐)"],
         "hotel_price": [600, 1000, 1000],
@@ -225,7 +225,7 @@
           },
           "coordinates": "-15.1196, -147.6615",
           "activities": ["Snorkeling", "Massage polynésien", "Observation des dauphins"],
-          "activities_price": [150, 70, 90]
+          "activities_price": [50, 70, 40]
         },
         "step_2": {
           "id": 2,
@@ -237,7 +237,7 @@
           },
           "coordinates": "-15.1300, -147.6700",
           "activities": ["Plongée à la passe de Tiputa", "Excursion aux ilots sauvages", "Peche traditionnelle"],
-          "activities_price": [300, 200, 40]
+          "activities_price": [200, 100, 30]
         },
         "step_3": {
           "id": 3,
@@ -249,7 +249,7 @@
           },
           "coordinates": "-15.1400, -147.6800",
           "activities": ["Baignade dans le Lagon Bleu", "Diner romantique sur la plage", "Balade en pirogue"],
-          "activities_price": [50, 150, 80]
+          "activities_price": [30, 150, 80]
         }
       },
       {
@@ -274,7 +274,7 @@
         "special_features": ["Voyage familial", "Plages à couper le souffle", "Riche culture locale", "Récifs coralliens protégés"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2", "Enfant 1", "Enfant 2"],
-        "price_per_person": 4000,
+        "price_per_person": 250,
         "price_range": "4000-5000",
         "hotel": ["Moorea Beach Resort (4⭐)", "Pearl Resort Moorea (5⭐)", "Luxe Moorea Resort (5⭐)"],
         "hotel_price": [600, 1000, 1000],
@@ -288,7 +288,7 @@
           },
           "coordinates": "-17.4976, -149.8436",
           "activities": ["Baignade en famille", "Visite de villages traditionnels", "Plongée sous-marine"],
-          "activities_price": [600, 200, 150]
+          "activities_price": [15, 50, 100]
         },
         "step_2": {
           "id": 2,
@@ -300,7 +300,7 @@
           },
           "coordinates": "-17.5050, -149.8390",
           "activities": ["Observation des baleines", "Randonnée dans la vallée", "Balade en bâteau"],
-          "activities_price": [90, 80, 150]
+          "activities_price": [40, 30, 150]
         },
         "step_3": {
           "id": 3,
@@ -312,7 +312,7 @@
           },
           "coordinates": "-17.5100, -149.8350",
           "activities": ["Plage tranquille", "Diner au coucher du soleil", "Balade en pirogue"],
-          "activities_price": [15, 200, 150]
+          "activities_price": [15, 50, 80]
         }
       },
       {
@@ -337,7 +337,7 @@
         "special_features": ["Exclusivité de l'île", "Vie marine riche", "Plages tranquilles", "Un séjour intime et paisible"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 3000,
+        "price_per_person": 470,
         "price_range": "3000-4000",
         "hotel": ["Tahaa Resort (5⭐)", "Le Tahaa Island (5⭐)", "Vahine Island (5⭐)"],
         "hotel_price": [980, 1000, 1990],
@@ -351,7 +351,7 @@
           },
           "coordinates": "-16.6936, -151.4496",
           "activities": ["Bain de soleil sur la plage", "Promenade guidée", "Coucher de soleil en bateau"],
-          "activities_price": [25, 30, 200]
+          "activities_price": [25, 30, 70]
         },
         "step_2": {
           "id": 2,
@@ -363,7 +363,7 @@
           },
           "coordinates": "-16.7000, -151.4400",
           "activities": ["Détente au spa", "Dégustation de vanille locale", "Visite de fermes perlières"],
-          "activities_price": [250, 70, 50]
+          "activities_price": [90, 70, 50]
         },
         "step_3": {
           "id": 3,
@@ -375,7 +375,7 @@
           },
           "coordinates": "-16.7100, -151.4500",
           "activities": ["Plongée tranquille", "Diner romantique", "Balade en vélo"],
-          "activities_price": [300, 180, 40]
+          "activities_price": [100, 90, 40]
         }
       },
       {
@@ -400,7 +400,7 @@
         "special_features": ["Exploration", "Lagons cristallins", "Île isolée", "Bungalows sur l'eau"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 2500,
+        "price_per_person": 340,
         "price_range": "2000-3000",
         "hotel": ["Fakarava Resort (4⭐)", "Atoll Paradise (5⭐)", "Pearl Beach Resort (5⭐)"],
         "hotel_price": [600, 1000, 1200],
@@ -414,7 +414,7 @@
           },
           "coordinates": "-16.0399, -145.5566",
           "activities": ["Exploration des atolls", "Baignade dans le lagon", "Visite de sites de surf"],
-          "activities_price": [200, 25, 50]
+          "activities_price": [100, 25, 30]
         },
         "step_2": {
           "id": 2,
@@ -426,7 +426,7 @@
           },
           "coordinates": "-16.0500, -145.5500",
           "activities": ["Plongée dans la passe", "Visite des ilots avoisinants", "Visite de village locaux"],
-          "activities_price": [290, 200, 20]
+          "activities_price": [130, 100, 20]
         },
         "step_3": {
           "id": 3,
@@ -438,7 +438,7 @@
           },
           "coordinates": "-16.0600, -145.5500",
           "activities": ["Détente sur la plage", "Croisière nocturne", "Plongée avec les raies"],
-          "activities_price": [15, 10, 150]
+          "activities_price": [15, 10, 90]
         }
       },
       {
@@ -463,7 +463,7 @@
         "special_features": ["Voyage romantique", "Vue imprenable sur le mont Otemanu", "Eaux turquoise", "Atmosphère intime et romantique"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 3500,
+        "price_per_person": 250,
         "price_range": "3000-4000",
         "hotel": ["Bora Bora Resort (5⭐)", "Four Seasons Bora (5⭐)", "St Regis Bora Resort (5⭐)"],
         "hotel_price": [850, 1200, 1600],
@@ -489,7 +489,7 @@
           },
           "coordinates": "-16.5200, -151.7300",
           "activities": ["Plongée dans le lagon", "Visite des iles en 4x4", "Dégustation de vanille locale"],
-          "activities_price": [500, 200, 90]
+          "activities_price": [80, 40, 20]
         },
         "step_3": {
           "id": 3,
@@ -501,7 +501,7 @@
           },
           "coordinates": "-16.5400, -151.7500",
           "activities": ["Coucher de soleil en bateau", "Diner romantique en mer", "Paddle sur le lagon"],
-          "activities_price": [300, 200, 50]
+          "activities_price": [150, 80, 50]
         }
       },
       {
@@ -526,7 +526,7 @@
         "special_features": ["Immersion culturelle", "Plages de sable blanc", "Découverte de la culture locale", "Végétation luxuriante"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 4900,
+        "price_per_person": 400,
         "price_range": "4000-5000",
         "hotel": ["Lapita Village (4⭐)", "Royal Huahine (5⭐)", "Te Tiare Resort (5⭐)"],
         "hotel_price": [500, 1000, 1300],
@@ -540,7 +540,7 @@
           },
           "coordinates": "-16.7001, -151.0330",
           "activities": ["Balades en vélo", "Visite de marae anciens", "Dégustation de vanille locale"],
-          "activities_price": [125, 80, 60]
+          "activities_price": [20, 30, 20]
         },
         "step_2": {
           "id": 2,
@@ -552,7 +552,7 @@
           },
           "coordinates": "-16.7100, -151.0200",
           "activities": ["Kayak dans les lagons", "Visite des iles en bateau", "Dégustation de vanille locale"],
-          "activities_price": [50, 120, 60]
+          "activities_price": [15, 120, 20]
         },
         "step_3": {
           "id": 3,
@@ -564,7 +564,7 @@
           },
           "coordinates": "-16.7400, -151.0000",
           "activities": ["Plage privée", "Relaxation au spa", "Découverte des traditions marquisiennes"],
-          "activities_price": [600, 450, 30]
+          "activities_price": [100, 90, 30]
         }
       },
       {
@@ -589,7 +589,7 @@
         "special_features": ["Voyage d'aventure", "Volcans majestueux", "Plages de sable noir", "Accès aux cascades"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 2200,
+        "price_per_person": 300,
         "price_range": "2000-3000",
         "hotel": ["Tahiti Pearl (4⭐)", "Le Meridien (5⭐)", "Tahiti Resort (5⭐)"],
         "hotel_price": [500, 1000, 1900],
@@ -652,7 +652,7 @@
         "special_features": ["Immersion culturelle", "Visite de marae", "Tranquillité de l'île", "Culture locale préservée"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 4100,
+        "price_per_person": 355,
         "price_range": "4000-5000",
         "hotel": ["Raiatea Hotel (4⭐)", "Raiatea Resort (5⭐)", "Le Tahaa Resort (5⭐)"],
         "hotel_price": [450, 800, 970],
@@ -666,7 +666,7 @@
           },
           "coordinates": "-16.7669, -151.5016",
           "activities": ["Visite du marae Taputapuatea", "Découverte des traditions polynésiennes", "Bain de soleil et relaxation"],
-          "activities_price": [100, 40, 30]
+          "activities_price": [20, 40, 30]
         },
         "step_2": {
           "id": 2,
@@ -678,7 +678,7 @@
           },
           "coordinates": "-16.7700, -151.5100",
           "activities": ["Randonnée dans les montagnes", "Visite des lagons", "Dégustation de vanille locale"],
-          "activities_price": [125, 280, 60]
+          "activities_price": [20, 50, 20]
         },
         "step_3": {
           "id": 3,
@@ -690,7 +690,7 @@
           },
           "coordinates": "-16.7600, -151.4800",
           "activities": ["Détente à la plage", "Bain de soleil et relaxation", "Dégustation de fruits exotiques"],
-          "activities_price": [20, 40, 60]
+          "activities_price": [15, 20, 20]
         }
       },
       {
@@ -715,7 +715,7 @@
         "special_features": ["Éco-voyage", "Faune et flore exceptionnelles", "Montagnes imposantes", "Vieilles traditions marquisiennes"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 2100,
+        "price_per_person": 390,
         "price_range": "2000-3000",
         "hotel": ["Maison traditionnelle (4⭐)", "Hiva Oa Lodge (4⭐)", "Écocabane de luxe (5⭐)"],
         "hotel_price": [450, 470, 800],
@@ -729,7 +729,7 @@
           },
           "coordinates": "-8.9288, -140.1006",
           "activities": ["Visite des sites archéologiques", "Découverte des traditions", "Baignade en famille"],
-          "activities_price": [80, 75, 20]
+          "activities_price": [80, 50, 20]
         },
         "step_2": {
           "id": 2,
@@ -741,7 +741,7 @@
           },
           "coordinates": "-8.9100, -140.1100",
           "activities": ["Randonnée dans les montagnes", "Observation de la faune locale", "Cocktails BIO au coucher du soleil"],
-          "activities_price": [125, 80, 50]
+          "activities_price": [70, 80, 50]
         },
         "step_3": {
           "id": 3,
@@ -753,7 +753,7 @@
           },
           "coordinates": "-8.9300, -140.0900",
           "activities": ["Bain de soleil sur la plage", "Séance de relaxation", "Balade en bâteau"],
-          "activities_price": [40, 30, 210]
+          "activities_price": [40, 30, 100]
         }
       },
       {
@@ -778,10 +778,10 @@
         "special_features": ["Île privée et exclusive", "Plages immaculées", "Service de luxe personnalisé", "Séjour en villa sur pilotis"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 8000,
+        "price_per_person": 1300,
         "price_range": "+5000",
         "hotel": ["The Brando Resort (6⭐)", "Polynesia hotel (5⭐)", "Atoll Paradise (5⭐)"],
-        "hotel_price": [11990, 9650, 10500],
+        "hotel_price": [1900, 1250, 1300],
         "step_1": {
           "id": 1,
           "title": "Arrivée et installation dans la villa",
@@ -792,7 +792,7 @@
           },
           "coordinates": "-17.5150, -149.5740",
           "activities": ["Jetski sur le lagon", "Détente sur la plage", "Découverte des traditions"],
-          "activities_price": [700, 250, 290]
+          "activities_price": [125, 40, 50]
         },
         "step_2": {
           "id": 2,
@@ -804,7 +804,7 @@
           },
           "coordinates": "-17.5200, -149.5600",
           "activities": ["Plongée dans le lagon", "Visite des iles privées", "Détente à la plage"],
-          "activities_price": [950, 1200, 250]
+          "activities_price": [100, 150, 20]
         },
         "step_3": {
           "id": 3,
@@ -816,7 +816,7 @@
           },
           "coordinates": "-17.5300, -149.5700",
           "activities": ["Massage au spa", "Diner privé sur la plage", "Dégustation de vanille locale"],
-          "activities_price": [400, 225, 80]
+          "activities_price": [75, 70, 20]
         }
       },
       {
@@ -841,10 +841,10 @@
         "special_features": ["Île aux paysages époustouflants", "Vues imprenables sur le lagon", "Culture locale authentique", "Héritage polynésien préservé"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 2500,
+        "price_per_person": 300,
         "price_range": "2000-3000",
         "hotel": ["Moorea Pearl Resort (4⭐)", "Hilton Resort & Spa (5⭐)", "Sofitel Moorea (5⭐)"],
-        "hotel_price": [390, 750, 900],
+        "hotel_price": [400, 750, 900],
         "step_1": {
           "id": 1,
           "title": "Arrivée et exploration de la culture locale",
@@ -855,7 +855,7 @@
           },
           "coordinates": "-17.5407, -149.8221",
           "activities": ["Visite du centre culturel", "Découverte d'artisants locaux", "Visite de villages traditionnels"],
-          "activities_price": [25, 80, 40]
+          "activities_price": [25, 30, 40]
         },
         "step_2": {
           "id": 2,
@@ -867,7 +867,7 @@
           },
           "coordinates": "-17.5500, -149.8100",
           "activities": ["Randonnée au belvédère de Moorea", "Exploration des baies", "Bain de soleil sur la plage"],
-          "activities_price": [130, 200, 30]
+          "activities_price": [20, 90, 30]
         },
         "step_3": {
           "id": 3,
@@ -879,7 +879,7 @@
           },
           "coordinates": "-17.5600, -149.8200",
           "activities": ["Relaxation sur la plage", "Bain de soleil", "Balade en pirogue"],
-          "activities_price": [25, 50, 150]
+          "activities_price": [25, 15, 80]
         }
       },
       {
@@ -904,7 +904,7 @@
         "special_features": ["Plongée d'exception", "Rencontre avec des requins", "Biodiversité marine exceptionnelle", "Accès direct à des spots de plongée"],
         "status": "en cours de modification",
         "guests": ["Personne 1", "Personne 2"],
-        "price_per_person": 6500,
+        "price_per_person": 500,
         "price_range": "+5000",
         "hotel": ["Bora Lagoon Resort (5⭐)", "Le Méridien (5⭐)", "Moorea Pearl Resort (4⭐)"],
         "hotel_price": [700, 800, 1000],
@@ -918,7 +918,7 @@
           },
           "coordinates": "-17.5000, -149.6000",
           "activities": ["Plongée avec les raies mantas", "Exploration des jardins de corail", "Plongée en apnée"],
-          "activities_price": [420, 315, 510]
+          "activities_price": [90, 125, 70]
         },
         "step_2": {
           "id": 2,
@@ -930,7 +930,7 @@
           },
           "coordinates": "-16.5000, -151.7000",
           "activities": ["Plongée dans le lagon bleu", "Rencontre avec les requins de récif", "Plongée nocturne"],
-          "activities_price": [400, 300, 350]
+          "activities_price": [90, 150, 200]
         },
         "step_3": {
           "id": 3,
@@ -942,7 +942,7 @@
           },
           "coordinates": "-17.5407, -149.8221",
           "activities": ["Plongée à la passe de Tiputa", "Exploration des récifs", "Rencontre avec les dauphins"],
-          "activities_price": [600, 200, 600]
+          "activities_price": [100, 125, 95]
         }
       }
     ]

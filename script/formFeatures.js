@@ -81,9 +81,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Sign up verification
-document.getElementById("signup_form").addEventListener("submit", function (event) {
-    // Prevent default submission by clicking on the submit button
-    event.preventDefault();
+const signupForm = document.getElementById("signup_form");
+if (signupForm) {
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
     // Retrieve input values
     const name = document.getElementById('nameInput').value.trim();
@@ -127,12 +128,14 @@ document.getElementById("signup_form").addEventListener("submit", function (even
 
     // Submit form
     this.submit();
-});
+    });
+}
 
 // Sign in verification
-document.getElementById("signin_form").addEventListener("submit", function (event) {
-    // Prevent default submission by clicking on the submit button
-    event.preventDefault();
+const signinForm = document.getElementById("signin_form");
+if (signinForm) {
+    signinForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
     // Retrieve input values
     const email = document.getElementById('emailInputLogin').value.trim();
@@ -154,4 +157,5 @@ document.getElementById("signin_form").addEventListener("submit", function (even
 
     // Submit form
     this.submit();
-});
+    });
+}
