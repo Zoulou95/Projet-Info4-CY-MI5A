@@ -252,5 +252,15 @@
         "role": "standard",
         "points": 0,
         "id": "681f6020a9782"
+    },
+    {
+        "name": "sinclair",
+        "forename": "paul",
+        "email": "paulsinclair@mail.com",
+        "telephone": "0609372673",
+        "password": "$2y$10$vZFhkk1NL1k722J9TARiC.GE1MiA4jlwAzMSwXhrzc6ya1oW1H6Uu",
+        "role": "standard",
+        "points": 0,
+        "id": "6824e2f7e4bcb"
     }
 ]

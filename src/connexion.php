@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // Login successful, redirect to user page
                 $_SESSION['user'] = $user; // Store user in session
 
-                writeToServerLog($user['email'] . " has successfully logged in. (ID: ". $_SESSION['user']['id'] . ")");
+                writeToLog($user['email'] . " has successfully logged in. (ID: ". $_SESSION['user']['id'] . ")");
 
                 header("Location: userpage.php");
                 exit;

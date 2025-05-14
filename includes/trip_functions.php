@@ -2,7 +2,7 @@
 
 require_once('error.php');
 
-// Function to retrieve useful data from 'trip_data.json file and display specific trip information
+// Function to retrieve useful data from 'trip_data.json file
 function dataDecode($data_file) {
     // Read the 'trip_data.json' file and convert it into a PHP array
     if (file_exists($data_file)) {
