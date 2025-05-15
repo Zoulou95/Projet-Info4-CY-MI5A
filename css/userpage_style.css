@@ -183,6 +183,12 @@ label {
     border-color: #282626;
 }
 
+.button_group {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
 .display_vip {
     color: #92cc13;
 }
@@ -209,16 +215,27 @@ label {
     margin-top: 20px;
 }
 
-/* Style pour les fonctionnalités d'édition des champs */
+.dark-mode .user_container {
+    display: flex;
+    min-width: 1000px;
+    gap: 15vh;
+    margin: 4% auto;
+    border: solid 3px #383838;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+}
 
-/* Style des champs désactivés */
+/* Edition button style */
+
+/* Disabled buttons style */
+
 input:disabled {
     background-color: #f7f7f7;
     color: #666;
     cursor: not-allowed;
 }
 
-/* Style du bouton Modifier */
 #edit_button {
     height: 50px;
     width: 8vw;
@@ -231,7 +248,8 @@ input:disabled {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover et active effects pour le bouton Modifier */
+/* Buttons effect */
+
 #edit_button:hover {
     background-color: #1a89ce;
     border-color: #1a89ce;
@@ -257,7 +275,42 @@ input:disabled {
     display: flex;
 }
 
-/* Adapter les boutons Save et Reset pour qu'ils s'accordent avec le design */
 #save_button, #reset_button {
-    display: none; /* Masqués par défaut */
+    display: none;
+}
+
+/* Dark mode style */
+
+.dark-mode .subscription_table td {
+    text-align: center;
+    padding: 8%;
+    color: black;
+}
+
+.dark-mode h1 {
+    font-weight: 100;
+    font-size: 1.9vw;
+    color: #21a9ff;
+}
+
+.dark-mode .menu_navigation li a {
+    color: #21a9ff;
+    text-decoration: none;
+}
+
+.dark-mode .cell1 {
+    background-color: #ad9c9c;
+}
+
+.dark-mode .cell2 {
+    background-color: rgb(207, 203, 203);
+}
+
+.dark-mode .subscription_table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid #ad9c9c;
+    width: 15vw;
+    font-size: large;
+    overflow: visible;
 }

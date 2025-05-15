@@ -1,32 +1,34 @@
+// adminPanelButtons.js : ban, demote and upgrade users
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner tous les boutons
+    // Select all buttons
     const allButtons = document.querySelectorAll('.user_button');
     
     allButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            // Empêcher le comportement par défaut du bouton
+            // Prevent default button behavior
             e.preventDefault();
             
-            // Récupérer le formulaire parent
+            // Retrieve parent form
             const currentForm = this.closest('form');
             
-            // Récupérer l'action et l'ID utilisateur
+            // Retrieve action and user ID
             const action = this.value;
             const userId = currentForm.querySelector('input[name="user_id"]').value;
             
-            // Désactiver tous les boutons de la page
+            // Disable all page buttons
             allButtons.forEach(btn => {
                 btn.disabled = true;
                 btn.classList.add('disabled');
             });
             
-            // Créer un formulaire temporaire
+            // Temporary form
             const tempForm = document.createElement('form');
             tempForm.method = 'POST';
             tempForm.action = 'update_role.php';
             tempForm.style.display = 'none';
             
-            // Ajouter les champs nécessaires
+            // Add the necessary fields
             const userIdInput = document.createElement('input');
             userIdInput.type = 'hidden';
             userIdInput.name = 'user_id';
@@ -37,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
             actionInput.name = 'action';
             actionInput.value = action;
             
-            // Ajouter les champs au formulaire
+            // Add fields to the form
             tempForm.appendChild(userIdInput);
             tempForm.appendChild(actionInput);
             
-            // Ajouter le formulaire au document
+            // Add form to document
             document.body.appendChild(tempForm);
             
-            // Attendre 2 secondes puis soumettre le formulaire
+            // Wait 2 seconds, then submit the form (intentional delay for cognitive purpose)
             setTimeout(() => {
                 tempForm.submit();
             }, 2000);

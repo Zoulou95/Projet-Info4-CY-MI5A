@@ -45,7 +45,7 @@
         "email": "hugo.lambert@email.com",
         "telephone": "0659701868",
         "password": "$2y$10$yx4WG0v.Hr23sPErK0PM\/uTtvwYAjed.aeO54mgpM3pvpNStSXoHm",
-        "role": "banni",
+        "role": "standard",
         "points": 0,
         "id": "67dc9edcb8622"
     },
@@ -75,7 +75,7 @@
         "email": "manon.fournier@email.com",
         "telephone": "0716170286",
         "password": "$2y$10$j8D109BvECHMlipHmrBkv.b54KhojasEDXY5dClHulYl2\/O27dGXe",
-        "role": "standard",
+        "role": "banni",
         "points": 0,
         "id": "67dc9f1498400"
     },
@@ -100,8 +100,8 @@
         "id": "67dc9f417a452"
     },
     {
-        "name": "robin",
-        "forename": "antoine",
+        "name": "Robin",
+        "forename": "Antoinee",
         "email": "antoine.robin@email.com",
         "telephone": "0669466393",
         "password": "$2y$10$nJfXYMGxPixZWjxhkbTVMuwqCCFwUR0pHU8fNVCnTmqlNNK.qGGsm",
@@ -115,9 +115,14 @@
         "email": "sarah.mercier@email.com",
         "telephone": "0682757329",
         "password": "$2y$10$9fsGnkAW7W3pGTSPGjCdrOK7gRqXH5DAB\/1DmGQldnp5hr7frr\/8u",
-        "role": "standard",
-        "points": 0,
-        "id": "67dc9f61a936d"
+        "role": "vip",
+        "points": 1599.6,
+        "id": "67dc9f61a936d",
+        "travel_history": [
+            "10",
+            "5",
+            "7"
+        ]
     },
     {
         "name": "roussel",
@@ -193,7 +198,7 @@
         "forename": "Justine",
         "email": "justine.blanchard@email.com",
         "telephone": "0626872452",
-        "password": "$2y$10$gjnC2F9HTFcox5WjQUwecebmcJPcK.a5bOkulvbmVxsBHDuG2HMOa",
+        "password": "$2y$10$GAQhK0xAnCuzoVKDZMfo0eotQKFQ5cSUoPa569i9xDiA8NC7oZp3K",
         "role": "admin",
         "id": "67dc9feb99f64",
         "points": 0
@@ -217,5 +222,35 @@
         "role": "standard",
         "points": 0,
         "id": "67e01c18cca1e"
+    },
+    {
+        "name": "lacostetn",
+        "forename": "bernard",
+        "email": "BernardLacostetn@gmail.com",
+        "telephone": "0912458695",
+        "password": "$2y$10$qF6pgPKRirQpTb7TtUWIEezlU3KHUwJ8SaM4QbKUwb..OPfQDpT6y",
+        "role": "standard",
+        "points": 0,
+        "id": "681ea65d8bb0f"
+    },
+    {
+        "name": "laink",
+        "forename": "terracid",
+        "email": "terracid@mail.com",
+        "telephone": "0708090708",
+        "password": "$2y$10$2kdgDPIN7EQSSYcOyNT7AeGyPUQFry8NLU44Yc8k.uYbAgmDXprDS",
+        "role": "standard",
+        "points": 0,
+        "id": "681f53467a3d8"
+    },
+    {
+        "name": "Blanc",
+        "forename": "Victor",
+        "email": "victorblanc@mail.com",
+        "telephone": "0682547859",
+        "password": "$2y$10$0RfkRmmro8aNcGIRWgB16.sBi\/0u7y.TdaIDyFoQonN8J613gyddG",
+        "role": "standard",
+        "points": 0,
+        "id": "681f6020a9782"
     }
 ]

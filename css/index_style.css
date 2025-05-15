@@ -1,8 +1,8 @@
-/* inedx_style.css */
+/* index_style.css */
 
 /* Voyage style */
 
-.whitebar {
+.whitebar, .dark-mode .whitebar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     padding: 0 1.5%;
 }
 
-.voyagebar {
+.voyagebar, .dark-mode .voyagebar {
     min-width: 77.5%;
     max-width: 1200px;
     background-color: #21a9ff; 
@@ -107,14 +107,6 @@ input:focus {
     outline: none;
 }
 
-button:hover {
-    background: #1a89ce;
-}
-
-button:active {
-    border: 1px solid #000000;
-}
-
 /* Script for login in sign in */
 
 .signin_radio {
@@ -136,4 +128,14 @@ button:active {
         transform: translate(-50%, -50%);
         opacity: 1;
     }
+}
+
+/* Dark mode style */
+
+.dark-mode .voyagebar {
+    background-color: #1f2937; 
+}
+
+.dark-mode .whitebar {
+    background-color: #1f2937; 
 }

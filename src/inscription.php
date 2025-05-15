@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telephone = trim(htmlspecialchars($_POST['tel']));
     $password = trim(htmlspecialchars($_POST['password'])); 
 
-
+    /* We will code this at Phase #4 (AJAX)
     // Inputs verification
     if (!preg_match('/^[0-9]{10}$/', $telephone)) {
         echo "<script>alert('Veuillez entrer un numéro de téléphone valide.'); window.history.back();</script>";
@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Votre mot de passe doit contenir au moins 8 caractères.'); window.history.back();</script>";
         exit;
     }
+    */
 
     if (empty($forename) || empty($name) || empty($email) || empty($telephone) || empty($password)) {
         echo "<script>alert('Veuillez remplir tous les champs.'); window.history.back();</script>";
