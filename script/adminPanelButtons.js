@@ -22,34 +22,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.classList.add('disabled');
             });
             
-            // Temporary form
-            const tempForm = document.createElement('form');
-            tempForm.method = 'POST';
-            tempForm.action = 'update_role.php';
-            tempForm.style.display = 'none';
+            const data = {
+                action: action,
+                user_id: userId
+            };
             
-            // Add the necessary fields
-            const userIdInput = document.createElement('input');
-            userIdInput.type = 'hidden';
-            userIdInput.name = 'user_id';
-            userIdInput.value = userId;
-            
-            const actionInput = document.createElement('input');
-            actionInput.type = 'hidden';
-            actionInput.name = 'action';
-            actionInput.value = action;
-            
-            // Add fields to the form
-            tempForm.appendChild(userIdInput);
-            tempForm.appendChild(actionInput);
-            
-            // Add form to document
-            document.body.appendChild(tempForm);
-            
-            // Wait 2 seconds, then submit the form (intentional delay for cognitive purpose)
-            setTimeout(() => {
-                tempForm.submit();
-            }, 2000);
+            // Send data to PHP using fetch
+            fetch('update_role.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            // Handle errors
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error: status ${res.status}`);
+                }
+                return res.json();
+            })
+            .then(data => {
+                if (data.error) {
+                    console.error('ERROR:', data.error);
+                    throw new Error(data.error);
+                }
+                return;
+            })
+            .catch(error => {
+                console.error('Action failed:', error);
+            });
         });
     });
 });

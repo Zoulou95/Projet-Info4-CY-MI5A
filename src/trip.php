@@ -311,7 +311,7 @@ if (isset($_SESSION['user'])) {
 
     <div class="steps">
         <div class="timeline">
-            <div class="step active" data_step="1">1</div>
+            <a href="#step3"><div class="step active" data_step="1">1</div></a>
             <div class="step_line"></div>
             <div class="step" data_step="2">2</div>
             <div class="step_line"></div>
