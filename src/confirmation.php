@@ -26,8 +26,11 @@ if (isConfigValid()) {
     $number_of_participants = intval($_POST['number_of_participants']);
 
     // Recalculate the total pric, it is more secure because the user can't manipulate it
-    $total_price = priceCalc($trip, $number_of_participants);
-    $_SESSION['total_price'] = $total_price;
+    if(isset($_SESSION['total_price'])) {
+        $total_price = $_SESSION['total_price']; 
+    } else {
+        //
+    }
 
     // Store all form data in the session for retrieval after payment
     $_SESSION['number_of_participants'] = $number_of_participants;

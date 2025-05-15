@@ -2,7 +2,7 @@
 
 require_once('error.php');
 
-// Function to retrieve useful data from 'trip_data.json file and display specific trip information
+// Function to retrieve useful data from 'trip_data.json file
 function dataDecode($data_file) {
     // Read the 'trip_data.json' file and convert it into a PHP array
     if (file_exists($data_file)) {
@@ -261,80 +261,5 @@ function isPurchased($trip_id) {
     } else {
         return false;
     }
-}
-
-// Calculate the travel final price (server side)
-function priceCalc($trip, $number_of_participants) {
-    $step_number = 4;
-    $tripDuration = intval($trip['dates']['duration']);
-    $service = intval($trip['price_per_person']);
-    $transportMode = $_POST['transports'];
-
-    // Initial total with base price
-    $total = $service * $number_of_participants;
-
-    // Add flight price
-    switch ($_POST['flight']) {
-        case "Classe Économique":
-            $flightPrice = 800;
-            break;
-        case "Classe Confort":
-            $flightPrice = 1200;
-            break;
-        case "Classe Affaires":
-            $flightPrice = 1400;
-            break;
-        case "Première Classe":
-            $flightPrice = 2000;
-            break;
-        default:
-            $flightPrice = 800;
-            break;
-    }
-    $total += $flightPrice * $number_of_participants;
-
-    // Transport costs
-    $transportRates = [
-        "Aucun" => 0,
-        "Vélo" => 30,
-        "Voiture" => 90,
-        "Bâteau" => 100,
-        "Chauffeur" => 300,
-        "Hélicoptère" => 900
-    ];
-    $transportCost = $transportRates[$transportMode];
-    $total += $transportCost * $number_of_participants * $tripDuration;
-
-    // Steps 1 to 3
-    for ($i=1; $i<$step_number; $i++) {
-        $stepDuration = $trip['step_' . $i]['dates']['duration'];
-        $participants = intval($_POST['participants_' . $i]);
-
-        // Hotel price
-        $hotelName = $_POST['hotel_' . $i];
-        $hotelIndex = array_search($hotelName, $trip['hotel']) ?? 0; // Default to index 0 ; we use array_search() to find the hotel price according to the user input
-        $hotelPrice = $trip['hotel_price'][$hotelIndex];
-        
-        $total += $hotelPrice * $participants * $stepDuration;
-
-        // Pension
-        $pension = $_POST['pension_' . $i];
-        if ($pension === "Tout inclus") {
-            $total += 50 * $participants * $stepDuration;
-        }
-
-        // Activity price
-        $activityName = $_POST['activite_' . $i];
-        $activityIndex = array_search($activityName, $trip['step_' . $i]['activities']) ?? 0;
-        $activityPrice = $trip['step_' . $i]['activities_price'][$activityIndex];
-        
-        $total += $activityPrice * $participants;
-    }
-
-    // Apply VIP discount
-    if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {
-        $total *= 0.9;
-    }
-    return $total;
 }
 ?>

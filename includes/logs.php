@@ -1,10 +1,17 @@
 <?php
-// Tells administrators when an account has been created or a user has logged in
-function writeToServerLog($message) {
+// logs.php : tells administrators when an account has been created or a user has logged in
+function writeToLog($message) {
 
+    $log_dir = '../logs';
     $log_path = '../logs/server.log';
     
-    if(!file_exists($log_path)) {
+    // Create logs folder if it doesn't exist
+    if (!file_exists($log_dir)) {
+        mkdir($log_dir, 0777, true); // 0777 is the writing and reading permission ; true to create the folder recursively
+    }
+
+    // Create log file if it doesn't exist
+    if (!file_exists($log_path)) {
         touch($log_path);
     }
 

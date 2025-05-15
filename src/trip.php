@@ -184,9 +184,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Hôtel
-                    <select name="hotel_1" class="dynamic_input" data_price="hotel">
-                        <?php foreach ($trip['hotel'] as $hotel) echo "<option value='$hotel'>$hotel</option>"; ?>
-                    </select>
+                    <select name="hotel_1" class="dynamic_input" data_price="hotel"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -198,12 +196,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Pension
-                    <select name="pension_1" class="dynamic_input" data_price="pension">
-                        <option value="Demi-pension">Demi-pension (compris)</option>
-                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
-                        <option value="Déjeuner uniquement">Déjeuner uniquement</option>
-                        <option value="Diner uniquement">Diner uniquement</option>
-                    </select>
+                    <select name="pension_1" class="dynamic_input" data_price="pension"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -215,7 +208,6 @@ if (isset($_SESSION['user'])) {
             <div class="select_label">
                 <label>Activité
                     <select name="activite_1" class="dynamic_input" data_price="activity">
-                        <?php foreach ($trip['step_1']['activities'] as $activity) echo "<option value='$activity'>$activity</option>"; ?>
                     </select>
                 </label>
             </div>
@@ -225,13 +217,7 @@ if (isset($_SESSION['user'])) {
         </div>
 
         <label>Nombre de participants
-            <select name="participants_1">
-                <option value="2">2 personnes</option>
-                <option value="3">3 personnes</option>
-                <option value="4">4 personnes</option>
-                <option value="5">5 personnes</option>
-                <option value="6">6 personnes</option>
-            </select>
+            <select name="participants_1"></select>
         </label>
     </div>
 
@@ -243,9 +229,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Hôtel
-                    <select name="hotel_2" class="dynamic_input" data_price="hotel">
-                        <?php foreach ($trip['hotel'] as $hotel) echo "<option value='$hotel'>$hotel</option>"; ?>
-                    </select>
+                    <select name="hotel_2" class="dynamic_input" data_price="hotel"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -257,12 +241,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Pension
-                    <select name="pension_2" class="dynamic_input" data_price="pension">
-                        <option value="Demi-pension">Demi-pension (compris)</option>
-                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
-                        <option value="Déjeuner uniquement">Déjeuner uniquement</option>
-                        <option value="Diner uniquement">Diner uniquement</option>
-                    </select>
+                    <select name="pension_2" class="dynamic_input" data_price="pension"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -273,9 +252,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Activité
-                    <select name="activite_2" class="dynamic_input" data_price="activity">
-                        <?php foreach ($trip['step_2']['activities'] as $activity) echo "<option value='$activity'>$activity</option>"; ?>
-                    </select>
+                    <select name="activite_2" class="dynamic_input" data_price="activity"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -284,13 +261,7 @@ if (isset($_SESSION['user'])) {
         </div>
 
         <label>Nombre de participants
-            <select name="participants_2">
-                <option value="2">2 personnes</option>
-                <option value="3">3 personnes</option>
-                <option value="4">4 personnes</option>
-                <option value="5">5 personnes</option>
-                <option value="6">6 personnes</option>
-            </select>
+            <select name="participants_2"></select>
         </label>
     </div>
 
@@ -302,9 +273,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Hôtel
-                    <select name="hotel_3" class="dynamic_input" data_price="hotel">
-                        <?php foreach ($trip['hotel'] as $hotel) echo "<option value='$hotel'>$hotel</option>"; ?>
-                    </select>
+                    <select name="hotel_3" class="dynamic_input" data_price="hotel"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -316,12 +285,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Pension
-                    <select name="pension_3" class="dynamic_input" data_price="pension">
-                        <option value="Demi-pension">Demi-pension (compris)</option>
-                        <option value="Tout inclus">Tout inclus (+50€/pers/jour)</option>
-                        <option value="Déjeuner uniquement">Déjeuner uniquement</option>
-                        <option value="Diner uniquement">Diner uniquement</option>
-                    </select>
+                    <select name="pension_3" class="dynamic_input" data_price="pension"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -332,9 +296,7 @@ if (isset($_SESSION['user'])) {
         <div class="field_row">
             <div class="select_label">
                 <label>Activité
-                    <select name="activite_3" class="dynamic_input" data_price="activity">
-                        <?php foreach ($trip['step_3']['activities'] as $activity) echo "<option value='$activity'>$activity</option>"; ?>
-                    </select>
+                    <select name="activite_3" class="dynamic_input" data_price="activity"></select>
                 </label>
             </div>
             <div class="price_label">
@@ -343,13 +305,7 @@ if (isset($_SESSION['user'])) {
         </div>
 
         <label>Nombre de participants
-            <select name="participants_3">
-                <option value="2">2 personnes</option>
-                <option value="3">3 personnes</option>
-                <option value="4">4 personnes</option>
-                <option value="5">5 personnes</option>
-                <option value="6">6 personnes</option>
-            </select>
+            <select name="participants_3"></select>
         </label>
     </div>
 
@@ -384,7 +340,10 @@ if (isset($_SESSION['user'])) {
 
 <!-- Script to browse a timeline and select steps when choosing a trip -->
 <script src="../script/timelineBrowse.js"></script>
+
+<!-- Script to dynamically display options and calculate price  -->
 <script src="../script/priceCalculator.js"></script>
+<script src="../script/optionsLoader.js"></script>
 </body>
 
 </html>
