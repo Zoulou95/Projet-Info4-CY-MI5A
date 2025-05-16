@@ -59,6 +59,10 @@ To explore the site, you need to open a local server on your machine.
 
 4. Open your web browser and go to http://localhost:8000 to view the project.
 
+## ⚠️ Important
+
+When launching the site, if the page is not found, you must delete the cookies linked to the site.
+
 ## Usage
 
 We've created a file named `user_list.txt` in the `/data` folder for easy access to information (passwords are hashed in our database).
