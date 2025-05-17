@@ -13,19 +13,23 @@ if (!empty($post_data)) {
     $action = $post_data['action'];
     
     // Initialize response
-    $response = ['success' => true];
+    $response = ['success' => true, 'action' => $action];
     
     // Update user role
     foreach ($users as &$user) {
         if ($user['id'] == $user_id) {
             if ($action == 'promote') {
                 $user['role'] = 'vip';
+                $response['new_role'] = 'vip';
             } elseif ($action == 'demote') {
                 $user['role'] = 'standard';
+                $response['new_role'] = 'standard';
             } elseif ($action == 'ban') {
                 $user['role'] = 'banni';
+                $response['new_role'] = 'banni';
             } elseif ($action == 'unban'){
                 $user['role'] = 'standard';
+                $response['new_role'] = 'standard';
             }
             break;
         }
@@ -34,7 +38,7 @@ if (!empty($post_data)) {
     // Save changes to file
     file_put_contents('../data/user_data.json', json_encode($users, JSON_PRETTY_PRINT));
     
-    // 2 seconds delay
+    // 2 seconds delay to simulate latency
     sleep(2);
     
     // Return JSON response
