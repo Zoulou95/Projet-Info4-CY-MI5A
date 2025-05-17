@@ -640,15 +640,3 @@ body.dark-mode {
 .dark-mode .step_line_1.active, .dark-mode .step_line_2.active {
     background-color: #21a9ff;
 }
-
-/* Responsive pour mobile */
-@media (max-width: 768px) {
-    .steps_button {
-        width: 90%;
-    }
-    
-    .previous_button, .next_button {
-        padding: 10px 15px;
-        font-size: 16px;
-    }
-}
