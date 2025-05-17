@@ -7,12 +7,12 @@ function togglePassword(inputId, btn) {
     
     if (input.type === "password") {
         input.type = "text";
-        img.src = "../assets/visuals/eye_open.png";
+        img.src = "../assets/visuals/eye_close.png";
         img.alt = "Cacher le mot de passe";
         img.class = "eye_image";
     } else {
         input.type = "password";
-        img.src = "../assets/visuals/eye_close.png";
+        img.src = "../assets/visuals/eye_open.png";
         img.alt = "Afficher le mot de passe";
         img.class = "eye_image";
     }
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if(typeof passwordInputLogin !== 'undefined') {
-        updateCounter("passwordInputLogin", "passwordCounterLogin", 30);
+        updateCounter("passwordInputLogin", "passwordCounterLogin", 20);
     }
 
     if(typeof forenameInput !== 'undefined') {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if(typeof passwordInputSignup !== 'undefined') {
-        updateCounter("passwordInputSignup", "passwordCounterSignup", 30);
+        updateCounter("passwordInputSignup", "passwordCounterSignup", 20);
     }
 
     if(typeof telInput !== 'undefined') {
@@ -81,9 +81,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Sign up verification
-document.getElementById("signup_form").addEventListener("submit", function (event) {
-    // Prevent default submission by clicking on the submit button
-    event.preventDefault();
+const signupForm = document.getElementById("signup_form");
+if (signupForm) {
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
     // Retrieve input values
     const name = document.getElementById('nameInput').value.trim();
@@ -127,12 +128,14 @@ document.getElementById("signup_form").addEventListener("submit", function (even
 
     // Submit form
     this.submit();
-});
+    });
+}
 
 // Sign in verification
-document.getElementById("signin_form").addEventListener("submit", function (event) {
-    // Prevent default submission by clicking on the submit button
-    event.preventDefault();
+const signinForm = document.getElementById("signin_form");
+if (signinForm) {
+    signinForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
     // Retrieve input values
     const email = document.getElementById('emailInputLogin').value.trim();
@@ -154,4 +157,5 @@ document.getElementById("signin_form").addEventListener("submit", function (even
 
     // Submit form
     this.submit();
-});
+    });
+}

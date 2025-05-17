@@ -49,7 +49,7 @@ if (!$purchase_details) {
 }
 ?>
 
-<!-- purchase_details.php -->
+<!-- purchase_details.php : provides travel booking information-->
 
 <!-- Header display -->
 <?php displayHeader(); ?>
@@ -90,28 +90,33 @@ if (!$purchase_details) {
     $i = 0;
     foreach ($purchase_details['steps'] as $step) {
         $i++;
-        echo '
-                <div class="recap_step">
-                    <h3>Étape ' . $i . ' : ' . $step['title'] . '</h3>
-                    <div class="recap_step_details">
-                        <p><strong>Hôtel : </strong>' . $step['hotel'] . '</p>
-                        <p><strong>Pension : </strong>' . $step['pension'] . '</p>
-                        <p><strong>Activité choisie : </strong>' . $step['activity'] . '</p>
-                        <p><strong>Participants à cette activité : </strong>' . $step['participants'] . ' personnes</p>
-                    </div>
-                </div>
-                ';
+        echo
+        '
+        <div class="recap_step">
+            <h3>Étape ' . $i . ' : ' . $step['title'] . '</h3>
+            <div class="recap_step_details">
+                <p><strong>Hôtel : </strong>' . $step['hotel'] . '</p>
+                <p><strong>Pension : </strong>' . $step['pension'] . '</p>
+                <p><strong>Activité choisie : </strong>' . $step['activity'] . '</p>
+                <p><strong>Participants à cette activité : </strong>' . $step['participants'] . ' personnes</p>
+            </div>
+        </div>
+        ';
     }
     ?>
 </section>
+
 <?php
+// If the trip has not yet been paid for, we propose a return to the basket page
 if (isset($_GET['from']) && $_GET['from'] === 'cart') {
     echo '<button class="back_to_cart" onclick="history.back();">Retour au panier 🛒</button>';
     echo '<br /><br />';
 }
 ?>
+
 <!-- Footer -->
 <?php displayFooter(); ?>
+
 </div>
 </body>
 

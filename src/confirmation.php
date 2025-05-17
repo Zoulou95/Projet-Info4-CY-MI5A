@@ -8,26 +8,29 @@ require('../includes/getapikey.php');
 
 // Users must be logged in to configure their trip
 if (!isset($_SESSION['user'])) {
-    echo "<script>alert('Vous devez être connecté pour ajouter ce voyage à votre panier !'); window.history.back();</script>";
+    displayError("User is not logged in.");
     exit;
 }
 
 // If the user is logged in, check if a trip is already purchased
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['trip'])) {
     if (isPurchased($_SESSION['trip']['id']) == true) {
         echo "<script>alert('Vous avez déjà acheté ce voyage.'); window.history.back();</script>";
         exit();
     }
 }
 
-// Check if the user's trip configuration is valid isConfigValid()
+// Check if the user's trip configuration is valid
 if (isConfigValid()) {
     $trip = $_SESSION['trip'];
     $number_of_participants = intval($_POST['number_of_participants']);
 
-    // Recalculate the total pric, it is more secure because the user can't manipulate it
-    $total_price = priceCalc($trip, $number_of_participants);
-    $_SESSION['total_price'] = $total_price;
+    // Get the total price of the selected trip
+    if(isset($_SESSION['total_price'])) {
+        $total_price = $_SESSION['total_price']; 
+    } else {
+        displayError("Trip informations not found");
+    }
 
     // Store all form data in the session for retrieval after payment
     $_SESSION['number_of_participants'] = $number_of_participants;
@@ -105,7 +108,7 @@ if (isConfigValid()) {
     <button class="back_to_config" onclick="history.back();">Revoir ma configuration 🔄</button>
 </section>
 
-<!-- Payment -->
+<!-- Cart button -->
 <section class="recap_payment">
     <h2>Ajout au panier</h2>
     <div class="recap_payment_details">

@@ -1,4 +1,5 @@
 <?php
+//cart_functions.php : manage user's shopping cart
 
 require_once('error.php');
 require_once('trip_functions.php');
@@ -20,7 +21,7 @@ function cartHeader($id) {
     return $count;
 }
 
-// Write user cart data in 'cart_history_data.json' in order to save it
+// Write user cart data in 'cart_history_data.json' to save it
 function cartToJson() {
     $file = '../data/cart_history_data.json';
 
@@ -173,7 +174,7 @@ function displayCart($user_id, $data_file) {
         }
         echo '</div>';
     } else {
-        displayError($data_file . 'is missing.');
+        displayError($data_file . 'file is missing.');
     }
 
     return $total;

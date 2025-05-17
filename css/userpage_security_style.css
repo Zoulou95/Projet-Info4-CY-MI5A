@@ -129,8 +129,3 @@ input:focus {
     background-color: #1e1e1e;
     margin-bottom: 4%;
 }
-
-.dark-mode li a {
-    color: #21a9ff;
-    text-decoration: none;
-}

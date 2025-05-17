@@ -1,4 +1,6 @@
 <?php
+// error.php : display error message
+
 require_once('header.php');
 require_once('footer.php');
 

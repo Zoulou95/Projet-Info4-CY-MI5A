@@ -9,31 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telephone = trim(htmlspecialchars($_POST['tel']));
     $password = trim(htmlspecialchars($_POST['password'])); 
 
-    /* We will code this at Phase #4 (AJAX)
-    // Inputs verification
-    if (!preg_match('/^[0-9]{10}$/', $telephone)) {
-        echo "<script>alert('Veuillez entrer un numéro de téléphone valide.'); window.history.back();</script>";
-        exit;
-    }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "<script>alert('Veuillez renseigner un mail valide (5 à 30 caractères).'); window.history.back();</script>";
-        exit;
-    }
-    if (strlen($name) > 20 || strlen($name) < 2) {
-        echo "<script>alert('Veuillez renseigner nom valide (2 à 20 caractères).'); window.history.back();</script>";
-        exit;
-    }
-
-    if (strlen($forename) > 20 || strlen($forename) < 2) {
-        echo "<script>alert('Veuillez renseigner un prénom valide (2 à 20 caractères).'); window.history.back();</script>";
-        exit;
-    }
-    if (strlen($password) < 8) {
-        echo "<script>alert('Votre mot de passe doit contenir au moins 8 caractères.'); window.history.back();</script>";
-        exit;
-    }
-    */
-
     if (empty($forename) || empty($name) || empty($email) || empty($telephone) || empty($password)) {
         echo "<script>alert('Veuillez remplir tous les champs.'); window.history.back();</script>";
     } else {
@@ -79,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['user'] = $user_data;
 
-        writeToServerLog($user_data['email'] . " has successfully registered.");
+        writeToLog($user_data['email'] . " has successfully registered.");
 
         header("Location: search.php");
         exit;

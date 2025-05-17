@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
     $user_id = $_SESSION['user']['id'];
 }
 
-// Handle profile picture upload ONLY if a file was submitted --> NON FONCTIONNEL
+// Handle profile picture upload ONLY if a file was submitted
 if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
     $allowed_types = ['image/jpeg', 'image/jpg'];
     $max_size = 6 * 1024 * 1024;; // 6 Mo

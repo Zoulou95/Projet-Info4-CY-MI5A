@@ -34,6 +34,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
                     echo '<img class="user_img" src="../assets/profile_pic/base_profile_picture.jpg" />';
                 }
                 ?>
+                <!-- Username -->
                 <div class="user_name">
                     <?php
                     switch ($user['role']) {
@@ -44,7 +45,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
                             echo '<p class=color_vip>' . ucfirst(strtolower($user['forename'])) . " " . ucfirst(strtolower($user['name'])) . '</p>';
                             break;
                         default:
-                            echo ucfirst(strtolower($user['forename'])) . " " . ucfirst(strtolower($user['name']));
+                            echo '<p class=color_standard>' . ucfirst(strtolower($user['forename'])) . " " . ucfirst(strtolower($user['name'])) . '</p>';
                             break;
                     }
                     ?>
@@ -52,24 +53,29 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
                 <div class="user_privilege">
                     <?php echo "Privilège : " . ucfirst(strtolower($user['role'])); ?>
                 </div>
-                <div class="user_button_container">
-                    <div class="user_status">
-                        <?php
-                        if ($user['role'] == "standard") {
-                            echo '<button class="user_button user_status_button user_status_button_promote" type="submit" name="action" value="promote">Promouvoir</button>';
-                        } else if ($user['role'] == "vip") {
-                            echo '<button class="user_button user_status_button user_status_button_demote" type="submit" name="action" value="demote">Rétrograder</button>';
-                        }
-                        ?>
-                    </div>
-                    <div class="user_ban">
-                        <?php
-                        if ($user['role'] !== "admin" && $user['role'] !== "banni") {
-                            echo '<button class="user_button user_ban_button" type="submit" name="action" value="ban">BANNIR</button>';
-                        } else if ($user['role'] !== "admin" && $user['role'] === "banni") {
-                            echo '<button class="user_button user_ban_button" type="submit" name="action" value="unban">DEBANNIR</button>';
-                        }
-                        ?>
+                <div class="user_actions">
+                    <!-- Loading indicator -->
+                    <div class="loader" id="loader-<?php echo $user['id']; ?>"></div>
+                    <!-- Buttons -->
+                    <div class="user_button_container">
+                        <div class="user_status">
+                            <?php
+                            if ($user['role'] == "standard") {
+                                echo '<button class="user_button user_status_button user_status_button_promote" type="submit" name="action" value="promote">Promouvoir</button>';
+                            } else if ($user['role'] == "vip") {
+                                echo '<button class="user_button user_status_button user_status_button_demote" type="submit" name="action" value="demote">Rétrograder</button>';
+                            }
+                            ?>
+                        </div>
+                        <div class="user_ban">
+                            <?php
+                            if ($user['role'] !== "admin" && $user['role'] !== "banni") {
+                                echo '<button class="user_button user_ban_button" type="submit" name="action" value="ban">BANNIR</button>';
+                            } else if ($user['role'] !== "admin" && $user['role'] === "banni") {
+                                echo '<button class="user_button user_ban_button" type="submit" name="action" value="unban">DEBANNIR</button>';
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
