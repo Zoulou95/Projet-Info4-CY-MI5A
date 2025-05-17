@@ -30,6 +30,12 @@ function attachButtonEventListeners() {
             const action = this.value;
             const userId = currentForm.querySelector('input[name="user_id"]').value;
             
+            // Show loader for this specific user
+            const loader = currentForm.querySelector('.loader');
+            if (loader) {
+                loader.style.display = 'block';
+            }
+            
             // Disable all buttons on the page
             const allPageButtons = document.querySelectorAll('.user_button');
             allPageButtons.forEach(btn => {
@@ -65,6 +71,11 @@ function attachButtonEventListeners() {
                 // Update interface after success
                 updateButtonsBasedOnAction(currentForm, action);
                 
+                // Hide loader
+                if (loader) {
+                    loader.style.display = 'none';
+                }
+                
                 // Reattach event listeners to all buttons (including new ones)
                 attachButtonEventListeners();
                 
@@ -77,6 +88,11 @@ function attachButtonEventListeners() {
             })
             .catch(error => {
                 console.error('Action failed:', error);
+                
+                // Hide loader
+                if (loader) {
+                    loader.style.display = 'none';
+                }
                 
                 // Reactivate all buttons
                 const allPageButtons = document.querySelectorAll('.user_button');
