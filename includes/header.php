@@ -123,7 +123,7 @@ function displayHeader() {
                         <div class="counter-container">
                             <span id="passwordCounterLogin">0 / 20</span>
                         </div>
-                        <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputLogin\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_open.png" /></button>
+                        <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputLogin\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_close.png" /></button>
                     </div>
                     
                     <button class="overlay_button" type="submit">Se connecter</button>
@@ -165,7 +165,7 @@ function displayHeader() {
                     <div class="counter-container">
                         <span id="passwordCounterSignup">0 / 20</span>
                     </div>
-                    <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputSignup\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_open.png" /></button>
+                    <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputSignup\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_close.png" /></button>
                 </div>
                 
                 <div class="input-container">
