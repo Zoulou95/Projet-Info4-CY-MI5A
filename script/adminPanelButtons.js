@@ -1,10 +1,24 @@
 // adminPanelButtons.js : ban, demote and upgrade users
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Attach event listeners to initial buttons
+    attachButtonEventListeners();
+});
+
+// Function to attach event listeners to all buttons
+function attachButtonEventListeners() {
     // Select all buttons
     const allButtons = document.querySelectorAll('.user_button');
     
     allButtons.forEach(button => {
+        // Remove any existing listeners to prevent duplicates
+        button.replaceWith(button.cloneNode(true));
+    });
+    
+    // Select all buttons again after cloning
+    const refreshedButtons = document.querySelectorAll('.user_button');
+    
+    refreshedButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             // Prevent default button behavior
             e.preventDefault();
@@ -16,8 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const action = this.value;
             const userId = currentForm.querySelector('input[name="user_id"]').value;
             
-            // Disable all buttons
-            allButtons.forEach(btn => {
+            // Disable all buttons on the page
+            const allPageButtons = document.querySelectorAll('.user_button');
+            allPageButtons.forEach(btn => {
                 btn.disabled = true;
                 btn.classList.add('disabled');
             });
@@ -50,8 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Update interface after success
                 updateButtonsBasedOnAction(currentForm, action);
                 
+                // Reattach event listeners to all buttons (including new ones)
+                attachButtonEventListeners();
+                
                 // Reactivate all buttons
-                allButtons.forEach(btn => {
+                const allPageButtons = document.querySelectorAll('.user_button');
+                allPageButtons.forEach(btn => {
                     btn.disabled = false;
                     btn.classList.remove('disabled');
                 });
@@ -60,15 +79,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Action failed:', error);
                 
                 // Reactivate all buttons
-                allButtons.forEach(btn => {
+                const allPageButtons = document.querySelectorAll('.user_button');
+                allPageButtons.forEach(btn => {
                     btn.disabled = false;
                     btn.classList.remove('disabled');
                 });
             });
         });
     });
-    
-    // Function to update buttons according to the action performed
+}
+
+// Function to update buttons according to the action performed
 function updateButtonsBasedOnAction(form, action) {
     // Retrieve button containers
     const statusButtonContainer = form.querySelector('.user_status');
@@ -107,69 +128,4 @@ function updateButtonsBasedOnAction(form, action) {
             console.error('Unknown action:', action);
             break;
     }
-    
-    // Add event listeners to new buttons
-    const newButtons = form.querySelectorAll('.user_button');
-    newButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const form = this.closest('form');
-            const action = this.value;
-            const userId = form.querySelector('input[name="user_id"]').value;
-            
-            // Check if the action is valid for the current role
-            const privilegeDiv = form.querySelector('.user_privilege');
-            const currentRole = privilegeDiv.textContent.split(':')[1].trim().toLowerCase();
-        
-            // Prevent impossible actions
-            if ((action === 'promote' && currentRole === 'vip') ||
-                (action === 'demote' && currentRole === 'standard') ||
-                (action === 'ban' && currentRole === 'banni') ||
-                (action === 'unban' && currentRole !== 'banni')) {
-                console.log('Invalid action:', action, 'for a user with role', currentRole);
-                return; // Do nothing and exit the function
-            }
-            
-            // Diable all buttons
-            const allButtons = document.querySelectorAll('.user_button');
-            allButtons.forEach(btn => {
-                btn.disabled = true;
-                btn.classList.add('disabled');
-            });
-            
-            const data = {
-                action: action,
-                user_id: userId
-            };
-            
-            fetch('update_role.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(res => res.json())
-            .then(data => {
-                updateButtonsBasedOnAction(form, action);
-                
-                // Reactivate all buttons
-                allButtons.forEach(btn => {
-                    btn.disabled = false;
-                    btn.classList.remove('disabled');
-                });
-            })
-            .catch(error => {
-                console.error('Action failed:', error);
-                
-                // Reactivate all buttons
-                allButtons.forEach(btn => {
-                    btn.disabled = false;
-                    btn.classList.remove('disabled');
-                });
-            });
-        });
-    });
 }
-});
