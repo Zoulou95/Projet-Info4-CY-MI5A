@@ -44,7 +44,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
                             echo '<p class=color_vip>' . ucfirst(strtolower($user['forename'])) . " " . ucfirst(strtolower($user['name'])) . '</p>';
                             break;
                         default:
-                            echo ucfirst(strtolower($user['forename'])) . " " . ucfirst(strtolower($user['name']));
+                            echo '<p class=color_standard>' . ucfirst(strtolower($user['forename'])) . " " . ucfirst(strtolower($user['name'])) . '</p>';
                             break;
                     }
                     ?>
