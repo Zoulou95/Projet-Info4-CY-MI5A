@@ -52,17 +52,11 @@ $transportPrices = [
 // Service charges
 $total = $base_price * $participants;
 
-error_log($total);
-
 // Flight price
 $total += ($flightPrices[$input['flight']]) * $participants;
 
-error_log($total);
-
 // Transport price
 $total += ($transportPrices[$input['transport']]) * $participants * $tripDuration;
-
-error_log($total);
 
 // Step calculation
 for ($i=0; $i<3; $i++) {
@@ -74,11 +68,12 @@ for ($i=0; $i<3; $i++) {
 
     // Hotel
     $hotelName = $input['hotel_choices'][$i];
+
+    // In the json, prices are stored in an array. Each iteration of the price array corresponds to the iteration of the hotel array
     $hotelIndex = array_search($hotelName, $trip['hotel']) ?? 0;
+    
     $hotelPrice = $trip['hotel_price'][$hotelIndex];
     $total += $hotelPrice * $stepParticipants * $stepDuration;
-
-    error_log($total);
 
     // Pension
     $pension = $input['pension_choices'][$i];
@@ -91,10 +86,7 @@ for ($i=0; $i<3; $i++) {
     $activityIndex = array_search($activityName, $step['activities']) ?? 0;
     $activityPrice = $step['activities_price'][$activityIndex];
     $total += $activityPrice * $stepParticipants;
-    error_log($total);
 }
-
-error_log($total);
 
 // VIP discount
 if (isset($_SESSION['user']) && $_SESSION['user']['role'] === "VIP") {

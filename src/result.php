@@ -18,7 +18,7 @@ if (isValidAdvancedSearch()) {
     displayByFilter($data);
 } else if (!empty($_GET['tag'])) {
     $tag = urldecode(trim($_GET['tag']));
-    $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters: XSS protection
+    $tag = htmlspecialchars($tag, ENT_QUOTES, 'UTF-8'); // Escape special characters (XSS protection)
     $tag = strtolower($tag);
     $tag = addslashes($tag);
 

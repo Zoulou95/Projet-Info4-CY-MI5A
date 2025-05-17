@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
         </ul>
         <hr>
 
-        <!-- User travel history-->
+        <!-- Display travel history-->
         <?php
         $user_id = $_SESSION['user']['id'];
         $purchase_file = '../data/purchase_data.json';

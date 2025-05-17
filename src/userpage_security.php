@@ -10,12 +10,12 @@ if (isset($_SESSION["user"])) {
 
 <!-- Header display -->
 <?php
-displayHeader();
-
 if (!isset($_SESSION['user'])) {
     displayError("Account not logged in.");
     displayFooter();
 }
+
+displayHeader();
 ?>
 
 <div class="user_container">

@@ -13,7 +13,6 @@ $total_pages = ceil(count($users) / $users_per_page);
 // Check if the user is an admin
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
     displayError("User is not an admin.");
-    displayFooter();
 }
 ?>
 
@@ -75,6 +74,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
             </div>
         </form>
     <?php endforeach; ?>
+
     <!-- Pagination links -->
     <div class="pagination">
         <?php
@@ -89,6 +89,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== "admin") {
         }
         ?>
     </div>
+    
 </div>
 </div>
 </body>

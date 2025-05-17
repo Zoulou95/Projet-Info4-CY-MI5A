@@ -1,5 +1,5 @@
 <?php
-// password_update.php : update user's password
+// password_update.php : update user's password using AJAX
 
 require_once('error.php');
 require_once('trip_functions.php'); // For dataReader() usage

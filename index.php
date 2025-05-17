@@ -1,5 +1,4 @@
 <?php
-include('includes/logs.php');
 require_once('includes/trip_functions.php');
 
 $data_file = 'data/trip_data.json';
@@ -45,6 +44,7 @@ $data_file = 'data/trip_data.json';
 <?php displayFooter(); ?>
 </div>
 </div>
+
 </body>
 
 </html>

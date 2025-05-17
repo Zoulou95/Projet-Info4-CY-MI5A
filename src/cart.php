@@ -4,7 +4,7 @@ require('../includes/getapikey.php');
 
 // Users must be logged in to configure their trip
 if (!isset($_SESSION['user'])) {
-    echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
+    displayError("User is not logged in.");
     exit;
 }
 
@@ -22,13 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!-- cart.php : display user's cart -->
 
 <?php
-// Load the js-md5 library to enable md5 hashing in JavaScript
+// Load the js-md5 library to enable md5 hashing in JavaScript from a CDN
 echo '<script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>';
 
 // Header display
 displayHeader();
-$total = displayCart($_SESSION['user']['id'], '../data/cart_history_data.json');
 
+// Prepare payment
+$total = displayCart($_SESSION['user']['id'], '../data/cart_history_data.json');
 $transaction_id = uniqid();
 $montant = $total;
 $vendeur = "MI-5_A";

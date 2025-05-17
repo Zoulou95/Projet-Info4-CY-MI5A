@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if(typeof passwordInputLogin !== 'undefined') {
-        updateCounter("passwordInputLogin", "passwordCounterLogin", 30);
+        updateCounter("passwordInputLogin", "passwordCounterLogin", 20);
     }
 
     if(typeof forenameInput !== 'undefined') {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if(typeof passwordInputSignup !== 'undefined') {
-        updateCounter("passwordInputSignup", "passwordCounterSignup", 30);
+        updateCounter("passwordInputSignup", "passwordCounterSignup", 20);
     }
 
     if(typeof telInput !== 'undefined') {

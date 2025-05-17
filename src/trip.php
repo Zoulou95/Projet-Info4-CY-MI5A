@@ -15,6 +15,7 @@ $trip = tripFinder($decodedData, $trip_id);
 
 $_SESSION['trip'] = $trip;
 
+// Affect the trip in the session variable
 if (empty($_SESSION['trip'])) {
     displayError("Trip affectation failed.");
 }
@@ -36,7 +37,7 @@ if (isset($_SESSION['user'])) {
     const isVIP = <?php echo isset($_SESSION['user']) && $_SESSION['user']['role'] === 'VIP' ? 'true' : 'false'; ?>;
 </script>
 
-<!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' data file -->
+<!-- trip.php : presentation page for a trip whose values change according to the 'trip_data.json' file -->
 
 <!-- Header display -->
 <?php displayHeader(); ?>
@@ -103,6 +104,8 @@ if (isset($_SESSION['user'])) {
 </div>
 
 <form action="confirmation.php" method="post">
+
+    <!-- Selection of travel options -->
     <h3 class="planification_text">Planifiez votre voyage</h3>
     <hr class="underline_planification line" />
 
@@ -176,6 +179,7 @@ if (isset($_SESSION['user'])) {
     <span class="step_number">3</span>
     <span class="step_title">Composez les étapes de votre voyage</span>
 
+    <!-- Step display -->
     <!-- Step 1 -->
     <div class="step_card active" data_step="1">
         <h4>Étape 1 : <?php echo $trip['step_1']['title']; ?></h4>
@@ -344,6 +348,7 @@ if (isset($_SESSION['user'])) {
 <!-- Script to dynamically display options and calculate price  -->
 <script src="../script/priceCalculator.js"></script>
 <script src="../script/optionsLoader.js"></script>
+
 </body>
 
 </html>

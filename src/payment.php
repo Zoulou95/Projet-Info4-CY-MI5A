@@ -1,4 +1,6 @@
 <?php
+// payment.php : handle payment with CyBank
+
 session_start();
 require('../includes/getapikey.php');
 

@@ -1,4 +1,6 @@
 <?php
+// profile_manager.php : manage user's profile (purchase history, private informations, etc.)
+
 require_once('error.php');
 require_once('session_start.php');
 
@@ -49,7 +51,7 @@ function updateInfo($data, $data_file) {
             }
         }
     } else {
-        echo "<script>alert('Vous devez être connecté pour réserver votre voyage !'); window.history.back();</script>";
+        displayError("User is not logged in.");
         exit;
     }
 }

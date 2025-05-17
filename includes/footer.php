@@ -1,7 +1,10 @@
 <?php
+// footer.php : display footer
+
 function displayFooter() {
     echo
-    '    <footer>
+    '   
+    <footer>
         <div class="footer_section">
             <h3>À Propos</h3>
             <p>Chez CyLanta, nous concevons des voyages sur mesure, uniques et adaptés à vos envies.
@@ -27,6 +30,7 @@ function displayFooter() {
                 <a href="https://www.cergy.fr/accueil/" target="_blank"><img src="../assets/visuals/cergy_ville.jpg" alt="Partenaire 3" /></a>
             </div>
         </div>
-    </footer>';
+    </footer>
+    ';
 }
 ?>

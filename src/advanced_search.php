@@ -106,6 +106,7 @@ require_once('../includes/trip_functions.php');
 
 <!-- Script to display drop-down lists -->
 <script src="../script/advancedSearch.js"></script>
+
 <div id="bubble" class="hidden"></div>
 </body>
 

@@ -1,31 +1,46 @@
-// priceCalculator.js : dynamically calculates trip final price using fetch
+// priceCalculator.js : dynamically calculates trip final price using fetch and saves choices to localStorage
 
+// Function to save user choices to localStorage
+// localStorage is an API for storing data locally in the browser
+function saveToLocalStorage(data) {
+    try {
+        localStorage.setItem(`trip_choices_${data.trip_id}`, JSON.stringify(data));
+    } catch (e) {
+        console.error('Error while saving to localStorage:', e);
+    }
+}
+
+// Send data to PHP using fetch for price calculation
 function sendRequest() {
-    // Retrieve values from the form
+
+    // Retrieve values from the form ; ?.value safely gets the value only if the element exists
     const data = {
-        flight: document.querySelector('select[name="flight"]').value,
-        transport: document.querySelector('select[name="transports"]').value,
-        number_of_participants: parseInt(document.querySelector('select[name="number_of_participants"]').value),
+        flight: document.querySelector('select[name="flight"]')?.value,
+        transport: document.querySelector('select[name="transports"]')?.value,
+        departure_city: document.querySelector('select[name="departure_city"]')?.value,
+        number_of_participants: parseInt(document.querySelector('select[name="number_of_participants"]')?.value || 0),
         participants: [ // Participants for each activity
-            parseInt(document.querySelector('select[name="participants_1"]')?.value || 1),
-            parseInt(document.querySelector('select[name="participants_2"]')?.value || 1),
-            parseInt(document.querySelector('select[name="participants_3"]')?.value || 1)
+            parseInt(document.querySelector('select[name="participants_1"]')?.value || 2),
+            parseInt(document.querySelector('select[name="participants_2"]')?.value || 2),
+            parseInt(document.querySelector('select[name="participants_3"]')?.value || 2)
         ],
         hotel_choices: [
-            document.querySelector('select[name="hotel_1"]').value,
-            document.querySelector('select[name="hotel_2"]').value,
-            document.querySelector('select[name="hotel_3"]').value
+            document.querySelector('select[name="hotel_1"]')?.value,
+            document.querySelector('select[name="hotel_2"]')?.value,
+            document.querySelector('select[name="hotel_3"]')?.value
         ],
         pension_choices: [
-            document.querySelector('select[name="pension_1"]').value,
-            document.querySelector('select[name="pension_2"]').value,
-            document.querySelector('select[name="pension_3"]').value
+            document.querySelector('select[name="pension_1"]')?.value,
+            document.querySelector('select[name="pension_2"]')?.value,
+            document.querySelector('select[name="pension_3"]')?.value
         ],
         activity_choices: [
-            document.querySelector('select[name="activite_1"]').value,
-            document.querySelector('select[name="activite_2"]').value,
-            document.querySelector('select[name="activite_3"]').value
+            document.querySelector('select[name="activite_1"]')?.value,
+            document.querySelector('select[name="activite_2"]')?.value,
+            document.querySelector('select[name="activite_3"]')?.value
         ],
+
+        // Get the id of the trip from the URL (after ?id={number})
         trip_id: new URLSearchParams(window.location.search).get('id')
     };
 
@@ -35,7 +50,9 @@ function sendRequest() {
         return;
     }
 
-    // Send data to PHP using fetch
+    // Save the choices to localStorage
+    saveToLocalStorage(data);
+
     fetch('../includes/price_calculator.php', {
         method: 'POST',
         headers: {
@@ -78,5 +95,5 @@ document.querySelectorAll('select').forEach(select => {
 
 // Load the page when everything is ready
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(sendRequest, 100); // We put a delay to ensure that all elements are loaded
+    setTimeout(sendRequest, 300); // We put a delay to ensure that all elements are loaded
 });

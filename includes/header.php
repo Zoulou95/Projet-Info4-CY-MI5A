@@ -4,7 +4,7 @@
 require_once('session_start.php');
 require_once('cart_functions.php');
 
-// Display <head> and navigation bar
+// Display <head> tag and navigation bar
 function displayHeader() {
 
     $current_file = $_SERVER['PHP_SELF'];
@@ -21,9 +21,10 @@ function displayHeader() {
     // Load error handle script
     echo '<script src="' . $path_parent . 'script/bubble.js"></script>';
 
-    // Display dark mode or bright mode by default
+    // Display bright mode by default
     $dark_mode_class = '';
 
+    // Display dark mode if found in cookie
     if (isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true') {
         $dark_mode_class = 'dark-mode';
     }
@@ -118,9 +119,9 @@ function displayHeader() {
                     </div>
                     
                     <div class="input-container">
-                        <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" maxlength="30" required>
+                        <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" maxlength="20" required>
                         <div class="counter-container">
-                            <span id="passwordCounterLogin">0 / 30</span>
+                            <span id="passwordCounterLogin">0 / 20</span>
                         </div>
                         <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputLogin\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_open.png" /></button>
                     </div>
@@ -139,36 +140,36 @@ function displayHeader() {
             <h2>Inscription</h2>
             <form id="signup_form" action="'.$path_parent.'src/inscription.php" method="POST">
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="forenameInput" name="forename" placeholder="Prénom" required>
+                    <input class="overlay_input" type="text" id="forenameInput" name="forename" placeholder="Prénom" maxlength="50" required>
                     <div class="counter-container">
                         <span id="forenameCounter">0 / 50</span>
                     </div>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="nameInput" name="name" placeholder="Nom" required>
+                    <input class="overlay_input" type="text" id="nameInput" name="name" placeholder="Nom" maxlength="50" required>
                     <div class="counter-container">
                         <span id="nameCounter">0 / 50</span>
                     </div>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="emailInputSignup" name="email" placeholder="Email" required>
+                    <input class="overlay_input" type="text" id="emailInputSignup" name="email" placeholder="Email" maxlength="50" required>
                     <div class="counter-container">
                         <span id="emailCounterSignup">0 / 50</span>
                     </div>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="password" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
+                    <input class="overlay_input" type="password" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" maxlength="20" required>
                     <div class="counter-container">
-                        <span id="passwordCounterSignup">0 / 30</span>
+                        <span id="passwordCounterSignup">0 / 20</span>
                     </div>
                     <button type="button" class="toggle-password" onclick="togglePassword(\'passwordInputSignup\', this)"><img class="eye_image" src="'.$path_parent.'/assets/visuals/eye_open.png" /></button>
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="telInput" name="tel" placeholder="Numéro de téléphone" required>
+                    <input class="overlay_input" type="text" id="telInput" name="tel" placeholder="Numéro de téléphone" maxlength="15" required>
                     <div class="counter-container">
                         <span id="telCounter">0 / 15</span>
                     </div>
@@ -187,7 +188,7 @@ function displayHeader() {
 
     echo '</div>';
 
-    // Bubble display
+    // Error bubble display
     echo '<div id="bubble" class="hidden"></div>';
 
     echo '<script src="'.$path_parent.'script/formFeatures.js"></script>';

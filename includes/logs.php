@@ -1,5 +1,6 @@
 <?php
 // logs.php : tells administrators when an account has been created or a user has logged in
+
 function writeToLog($message) {
 
     $log_dir = '../logs';
@@ -19,7 +20,7 @@ function writeToLog($message) {
 
         $ip = $_SERVER['REMOTE_ADDR'];
 
-        $formattedMessage = "[" . date("Y-m-d H:i:s") . "] " . $message . " (" . $ip . ")\n"; // Display date and IP
+        $formattedMessage = "[" . date("Y-m-d H:i:s") . "] " . $message . " (" . $ip . ")\n"; // Display date and user's IP
 
         file_put_contents($log_path, $formattedMessage, FILE_APPEND);
     

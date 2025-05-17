@@ -1,10 +1,9 @@
 <?php
 require_once('../includes/trip_functions.php');
-
 $data_file = '../data/trip_data.json';
 ?>
 
-<!-- search.php : allow the user to search for a non-specific trip using a destination -->
+<!-- search.php : search for a non-specific trip using a destination -->
 
 <!-- Header display -->
 <?php displayHeader(); ?>
@@ -69,6 +68,7 @@ $data_file = '../data/trip_data.json';
 
 <!-- Footer -->
 <?php displayFooter(); ?>
+
 </body>
 
 </html>
