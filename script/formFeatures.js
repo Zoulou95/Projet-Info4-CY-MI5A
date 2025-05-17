@@ -7,12 +7,12 @@ function togglePassword(inputId, btn) {
     
     if (input.type === "password") {
         input.type = "text";
-        img.src = "../assets/visuals/eye_open.png";
+        img.src = "../assets/visuals/eye_close.png";
         img.alt = "Cacher le mot de passe";
         img.class = "eye_image";
     } else {
         input.type = "password";
-        img.src = "../assets/visuals/eye_close.png";
+        img.src = "../assets/visuals/eye_open.png";
         img.alt = "Afficher le mot de passe";
         img.class = "eye_image";
     }

@@ -118,7 +118,7 @@ function displayHeader() {
                     </div>
                     
                     <div class="input-container">
-                        <input class="overlay_input" type="text" id="passwordInputLogin" name="password" placeholder="Mot de passe" maxlength="30" required>
+                        <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" maxlength="30" required>
                         <div class="counter-container">
                             <span id="passwordCounterLogin">0 / 30</span>
                         </div>
@@ -160,7 +160,7 @@ function displayHeader() {
                 </div>
                 
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
+                    <input class="overlay_input" type="password" id="passwordInputSignup" name="password" placeholder="Mot de passe (8 caractères minimum)" required>
                     <div class="counter-container">
                         <span id="passwordCounterSignup">0 / 30</span>
                     </div>
