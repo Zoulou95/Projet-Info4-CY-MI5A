@@ -1,5 +1,4 @@
 .dist/
 .vscode/
 .git/
-.logs/
-.logs/server.log
+logs/
