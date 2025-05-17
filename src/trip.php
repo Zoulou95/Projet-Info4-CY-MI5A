@@ -176,7 +176,7 @@ if (isset($_SESSION['user'])) {
         </div>
     </div>
 
-    <span class="step_number">3</span>
+    <span class="step_number" id="steps">3</span>
     <span class="step_title">Composez les étapes de votre voyage</span>
 
     <!-- Step display -->
@@ -313,12 +313,17 @@ if (isset($_SESSION['user'])) {
         </label>
     </div>
 
+    <div class="steps_button">
+        <a href="#steps"><button class="previous_button" type="button" id="previous_step">Étape précédente</button></a>
+        <a href="#steps"><button class="next_button" type="button" id="next_step">Étape suivante</button></a>
+    </div>
+
     <div class="steps">
         <div class="timeline">
             <div class="step active" data_step="1">1</div>
-            <div class="step_line"></div>
+            <div class="step_line_1"></div>
             <div class="step" data_step="2">2</div>
-            <div class="step_line"></div>
+            <div class="step_line_2"></div>
             <div class="step" data_step="3">3</div>
         </div>
     </div>
