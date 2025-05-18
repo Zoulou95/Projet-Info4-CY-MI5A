@@ -113,7 +113,7 @@ function togglePassword(inputId, btn) {
     }
 }
 
-// Fonction pour mettre à jour les compteurs de caractères
+// Character counter update function
 function updateCounter(inputId, counterId, maxLength) {
     const input = document.getElementById(inputId);
     const counter = document.getElementById(counterId);
@@ -123,21 +123,21 @@ function updateCounter(inputId, counterId, maxLength) {
         return;
     }
 
-    // Mise à jour du compteur à chaque changement dans le champ
+    // Counter updated every time field is changed
     const update = () => {
         const length = input.value.length;
         counter.textContent = `${length} / ${maxLength}`;
     };
 
-    // Ajout de l'écouteur d'événement pour mettre à jour le compteur en temps réel
+    // Add event listener to update counter in real time
     input.addEventListener("input", update);
 
-    // Mise à jour initiale au chargement de la page
+    // Initial update on page load
     update();
 }
 
 
-// Initialisation des compteurs au chargement de la page
+// Initialize counters on page load
 document.addEventListener("DOMContentLoaded", function() {
     // Login
     if(typeof current_password !== 'undefined') {

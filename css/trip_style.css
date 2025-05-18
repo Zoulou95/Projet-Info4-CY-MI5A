@@ -595,24 +595,20 @@ body.dark-mode {
     transition: background-color 0.3s ease;
 }
 
-/* Étape active - allumée en bleu */
 .step.active {
     background-color: #21a9ff;
     color: white;
 }
 
-/* Étape complétée - également allumée en bleu */
 .step.completed {
     background-color: #21a9ff;
     color: white;
 }
 
-/* Ligne active - allumée en bleu */
 .step_line_1.active, .step_line_2.active {
     background-color: #21a9ff;
 }
 
-/* Style pour le mode sombre */
 .dark-mode .previous_button, .dark-mode .next_button {
     background-color: #21a9ff;
     color: white;
