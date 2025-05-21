@@ -30,7 +30,7 @@ To clone the repository, use the command `git clone https://github.com/Zoulou95/
 
 ## Utilisation
 
-To explore the site, you need to open a local server on your machine.
+To explore the site, you need php v**8.0** to open a local server on your machine.
 
 ### On Debian (or similar Linux distributions):
 1. Ensure PHP is installed. You can install PHP by running: `sudo apt update` and `sudo apt install php`
@@ -99,7 +99,7 @@ Futhermore, you can find a dummy bank card in `/data/card.txt` for purchases :
 │   ├── 📄 header.php
 │   └── 📄 ...
 ├── 📂 logs
-├── 📂 presentation_phase_3
+├── 📂 presentation_phase_4
 ├── 📂 script
 │   ├── 📄 timelineBrowse.js
 │   └── 📄 registration.js
